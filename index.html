@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nieruchomości Costa Blanca | Inwestycje, działki i budowa domów w Hiszpanii</title>
+  <meta name="description" content="Nieruchomości na Costa Blanca: nowe inwestycje od deweloperów, działki pod budowę oraz kompleksowa realizacja domów. Selekcja ofert pod życie i inwestycję." />
+  <meta name="keywords" content="Costa Blanca nieruchomości, inwestycje Hiszpania, apartamenty Alicante, wille Costa Blanca, działki Hiszpania, budowa domów Hiszpania" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Nieruchomości i inwestycje na Costa Blanca" />
+  <meta property="og:description" content="Apartamenty, wille, działki i budowa domów w Hiszpanii. Sprawdzone lokalizacje i realny potencjał inwestycyjny." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #296c76;
+      --primary-dark: #1f545c;
+      --primary-pale: #f8fcfe;
+      --accent: #e28743;
+      --accent-dark: #c8742f;
+      --blue: #296c76;
+      --green: #4b8a3d;
+      --terra: #9a5a3c;
+      --text: #1f2933;
+      --text-soft: #5f6b76;
+      --muted: #97a3ad;
+      --white: #ffffff;
+      --line: rgba(15, 23, 42, 0.06);
+      --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+      --shadow-lux: 0 30px 80px rgba(15,23,42,0.12);
+      --radius: 24px;
+      --container: 1280px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(41,108,118,0.12), transparent 40%),
+        radial-gradient(circle at 90% 0%, rgba(226,135,67,0.08), transparent 40%),
+        linear-gradient(180deg, #ffffff 0%, #eef6f8 50%, #fdf7ef 100%);
+      line-height: 1.72;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { margin: 0 0 14px; line-height: 1.08; }
+    p { margin: 0 0 14px; color: var(--text-soft); }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .section { padding: 88px 0; }
+    .section-sm { padding: 64px 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(41,108,118,0.06);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(15,23,42,0.05);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2,
+    .hero-copy h1,
+    .cta-box h2 {
+      color: var(--primary-dark);
+      letter-spacing: -.03em;
+      text-wrap: balance;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      max-width: 760px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-head h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 70px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 999px;
+    }
+
+    .btn-row,
+    .cta-actions,
+    .contact-list,
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .28s ease, box-shadow .28s ease, filter .28s ease, background .28s ease, border-color .28s ease;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(226,135,67,0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 22px 38px rgba(200,116,47,0.30);
+      filter: saturate(1.08) brightness(1.02);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.92);
+      color: var(--primary);
+      border: 1px solid rgba(226,135,67,0.22);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px) scale(1.01);
+      background: rgba(41,108,118,0.04);
+      box-shadow: 0 16px 30px rgba(41,108,118,0.10);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 10px 40px rgba(15,23,42,0.08);
+    }
+
+    .topbar-inner {
+      min-height: 86px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      color: var(--primary-dark);
+    }
+
+    .brand::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: 0 0 0 6px rgba(41,108,118,0.08);
+      flex: 0 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      position: relative;
+      font-size: 15px;
+      color: var(--text-soft);
+      font-weight: 700;
+      transition: color .22s ease;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+
+    .nav a:hover { color: var(--primary-dark); }
+    .nav a:hover::after { transform: scaleX(1); }
+
+    .hero { padding: 34px 0 64px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-visual,
+    .info-card,
+    .category-card,
+    .project-card,
+    .seo-box,
+    .cta-box,
+    .footer-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: var(--shadow-lux);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 620px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      margin-top: 18px;
+      max-width: 780px;
+    }
+
+    .hero-copy p {
+      font-size: 18px;
+      max-width: 640px;
+      text-wrap: pretty;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      padding: 18px 18px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(226,135,67,0.18);
+      background: linear-gradient(180deg, #fff 0%, #fff7ef 100%);
+      box-shadow: 0 8px 24px rgba(0,0,0,.04);
+      text-align: center;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px rgba(226,135,67,0.12);
+      border-color: rgba(226,135,67,0.34);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(20px, 2.6vw, 28px);
+      margin-bottom: 6px;
+      color: var(--accent-dark);
+      letter-spacing: -.02em;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 14px;
+      color: var(--text-soft);
+      font-weight: 700;
+      text-wrap: balance;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 620px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.22)),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      isolation: isolate;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent, rgba(15,23,42,0.12));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .floating-note {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(15,23,42,0.05);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .floating-note strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 18px;
+      color: var(--primary-dark);
+    }
+
+    .info-grid,.category-grid,.project-grid,.seo-grid { display:grid; gap:22px; }
+    .info-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .category-card {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      min-height: 360px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lux);
+      transition: transform .28s ease, box-shadow .28s ease;
+      background: #fff;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 70px rgba(15,23,42,0.12);
+    }
+
+    .category-media {
+      min-height: 360px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .category-card::after {
+      display: none;
+    }
+
+    .category-body {
+      position: relative;
+      z-index: 2;
+      padding: 34px 32px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--text);
+      background: transparent;
+      margin-top: 0;
+    }
+
+    .category-card.blue .category-body {
+      background: linear-gradient(180deg, #eef7fa 0%, #f7fbfc 100%);
+    }
+
+    .category-card.green .category-body {
+      background: linear-gradient(180deg, #faf2ec 0%, #fdf8f4 100%);
+    }
+
+    .category-card.terra .category-body {
+      background: linear-gradient(180deg, #f1f7ee 0%, #f8fbf6 100%);
+    }
+
+    .category-body h3 {
+      font-size: clamp(28px, 3vw, 36px);
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .category-card.blue .category-body h3,
+    .category-card.blue .category-link { color: var(--blue); }
+
+    .category-card.green .category-body h3,
+    .category-card.green .category-link { color: var(--terra); }
+
+    .category-card.terra .category-body h3,
+    .category-card.terra .category-link { color: var(--green); }
+
+    .category-copy {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .category-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+      font-weight: 800;
+      font-size: 15px;
+      opacity: 1;
+    }
+
+    .category-link:hover {
+      text-decoration: none;
+      transform: translateX(2px);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      backdrop-filter: none;
+      border: 1px solid transparent;
+    }
+
+    .category-card.blue .chip {
+      background: rgba(41,108,118,0.08);
+      color: var(--blue);
+      border-color: rgba(41,108,118,0.12);
+    }
+
+    .category-card.green .chip {
+      background: rgba(154,90,60,0.10);
+      color: var(--terra);
+      border-color: rgba(154,90,60,0.14);
+    }
+
+    .category-card.terra .chip {
+      background: rgba(75,138,61,0.09);
+      color: var(--green);
+      border-color: rgba(75,138,61,0.14);
+    }
+
+    .seo-grid { grid-template-columns: 1.1fr .9fr; }
+
+    .info-card,
+    .seo-box,
+    .project-card,
+    .category-body {
+      margin-top: 28px;
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, var(--primary-pale) 100%);
+    }
+
+    .cta-box {
+      margin-top: 28px;
+      padding: 42px 32px 38px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(247,249,250,0.98) 100%);
+      border: 1px solid rgba(15,23,42,0.06);
+      box-shadow: 0 18px 48px rgba(15,23,42,0.06);
+      border-radius: 28px;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 12px;
+      color: var(--primary-dark);
+      font-size: clamp(30px, 4.2vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .cta-box p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: #6a7480;
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .cta-box .phone-line {
+      margin: 18px 0 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #5f6b76;
+    }
+
+    .cta-box .phone-line a { color: inherit; }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: nowrap;
+      margin-top: 24px;
+    }
+
+    .btn-main,
+    .btn-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease, color .22s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(226,135,67,0.18);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(200,116,47,0.22);
+    }
+
+    .btn-light {
+      background: rgba(255,255,255,0.9);
+      color: var(--primary-dark);
+      border-color: rgba(15,23,42,0.08);
+      box-shadow: 0 6px 16px rgba(15,23,42,0.04);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      box-shadow: 0 12px 22px rgba(41,108,118,0.08);
+    }
+
+    
+
+    
+
+    
+
+    
+    
+
+    .footer {
+      padding: 8px 0 54px;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .footer-card {
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(15,23,42,0.06);
+      box-shadow: 0 18px 48px rgba(15,23,42,0.06);
+      border-radius: 28px;
+      padding: 26px 30px;
+      text-align: left;
+    }
+
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 920px;
+    }
+
+    .footer-bottom {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(15,23,42,0.06);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,.seo-grid,.info-grid,.project-grid { grid-template-columns: 1fr; }
+      .hero-copy,.hero-visual { min-height: auto; }
+      .hero-visual { min-height: 420px; }
+      .category-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .category-media { min-height: 260px; }
+    }
+      .hero-copy,.hero-visual { min-height: auto; }
+      .hero-visual { min-height: 420px; }
+      .category-card { grid-template-columns: 1fr; }
+      .category-media { min-height: 260px; }
+    }
+      .hero-copy,.hero-visual { min-height: auto; }
+      .hero-visual { min-height: 420px; }
+      .category-card { grid-template-columns: 1fr; }
+      .category-media { min-height: 260px; }
+      .footer-card { grid-template-columns: 1fr; }
+      .footer-right { justify-items: start; }
+      .footer-links { justify-content: flex-start; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 14px; }
+      .topbar-inner {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 14px 0;
+      }
+      .nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .section { padding: 64px 0; }
+      .section-sm { padding: 48px 0; }
+      .hero { padding: 20px 0 48px; }
+      .hero-copy,
+      .info-card,
+      .seo-box,
+      .project-card,
+      .category-body,
+      .cta-box,
+      .footer-card { padding: 24px; }
+      .hero-stats,
+      .info-grid,
+      .project-grid,
+      .seo-grid { grid-template-columns: 1fr; }
+      .floating-note { left: 16px; right: 16px; bottom: 16px; padding: 18px; }
+      .btn-row { flex-direction: column; }
+      .btn { width: 100%; }
+      .cta-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn-main,
+      .btn-light {
+        width: auto;
+        min-width: 0;
+      }
+      .cta-box h2 { font-size: clamp(28px, 7vw, 38px); }
+      .cta-box p,
+      .cta-box .phone-line { font-size: 16px; }
+      .sticky-contact { display: block; }
+      body { padding-bottom: 88px; }
+    }
+      .btn,
+      .btn-main,
+      .btn-light { width: 100%; min-width: 0; }
+      .cta-box h2 { font-size: clamp(32px, 8vw, 46px); }
+      .cta-box p { font-size: 18px; }
+      .cta-box .phone-line { font-size: 18px; }
+      .sticky-contact { display: block; }
+      body { padding-bottom: 88px; }
+    }
+      .topbar-inner {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 14px 0;
+      }
+      .nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .section { padding: 64px 0; }
+      .section-sm { padding: 48px 0; }
+      .hero { padding: 20px 0 48px; }
+      .hero-copy,
+      .info-card,
+      .seo-box,
+      .project-card,
+      .category-body,
+      .cta-box,
+      .footer-card { padding: 24px; }
+      .hero-stats,
+      .info-grid,
+      .project-grid,
+      .seo-grid { grid-template-columns: 1fr; }
+      .floating-note { left: 16px; right: 16px; bottom: 16px; padding: 18px; }
+      .btn-row,
+      .cta-actions,
+      .contact-list,
+      .footer-links { flex-direction: column; }
+      .btn,
+      .contact-item,
+      .footer-link { width: 100%; }
+    }
+
+    @media (max-width: 560px) {
+      .container { padding: 0 10px; }
+      .hero-copy h1 { font-size: clamp(32px, 9vw, 42px); }
+      .section-head h2,
+      .cta-box h2 { font-size: clamp(26px, 8vw, 34px); }
+      .hero-copy p,
+      .category-copy { font-size: 16px; }
+      .brand { font-size: 16px; }
+    }
+      .cities {
+      position: relative;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(41,108,118,0.08), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(226,135,67,0.08), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(246,250,251,0.98) 100%);
+    }
+
+    .cities::before {
+      content: "";
+      display: block;
+      width: 86px;
+      height: 3px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+
+    .cities p {
+      margin: 0;
+      line-height: 2.45;
+      letter-spacing: .01em;
+    }
+
+    .cities span {
+      display: inline-block;
+      transition: transform .22s ease, color .22s ease, text-shadow .22s ease, opacity .22s ease;
+      cursor: default;
+    }
+
+    .cities span:hover {
+      transform: translateY(-2px) scale(1.06);
+      color: var(--primary-dark);
+      text-shadow: 0 12px 28px rgba(41,108,118,0.18);
+      opacity: 1;
+    }
+
+    /* ZONY KOLORÓW */
+    .zone-north { color: #2c6f7a; }
+    .zone-center { color: #3e7c68; }
+    .zone-south { color: #8a5a3c; }
+
+    .zone-north:hover { color: #1f545c; }
+    .zone-center:hover { color: #2f6b54; }
+    .zone-south:hover { color: #6e432c; }
+
+    .city-lg {
+      font-size: 25px;
+      color: var(--primary-dark);
+      letter-spacing: -.02em;
+    }
+
+    .city-lg strong {
+      font-weight: 900;
+    }
+
+    .city-md {
+      font-size: 19px;
+      opacity: .92;
+      color: #31414f;
+    }
+
+    .city-sm {
+      font-size: 15px;
+      opacity: .68;
+      color: #55636f;
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand">Costa Blanca Invest</a>
+    <nav class="nav">
+      <a href="#categories">Kategorie</a>
+      <a href="#why-us">Dlaczego my</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Costa Blanca · nieruchomości premium</span>
+      <h1>Inwestycje, działki i budowa domów w Hiszpanii — wybór, który ma sens</h1>
+      <p>
+        Pomagamy kupować nieruchomości na Costa Blanca świadomie — pod styl życia, wynajem i wzrost wartości. 
+        Selekcjonujemy tylko sprawdzone lokalizacje i projekty: od apartamentów deweloperskich po działki i budowę domu od podstaw.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#categories">Zobacz ofertę</a>
+        <a class="btn btn-secondary" href="#kontakt">Konsultacja</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="floating-note">
+        <strong>Rynek Costa Blanca</strong>
+        <span>Połączenie lifestyle + inwestycja + bezpieczeństwo kapitału</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" id="why-us">
+  <div class="container info-grid">
+    <div class="info-card">
+      <h3>Sprawdzone lokalizacje</h3>
+      <p>Wybieramy miejsca z realnym popytem: blisko morza, infrastruktury i najmu.</p>
+    </div>
+    <div class="info-card">
+      <h3>Kompleksowa obsługa</h3>
+      <p>Od wyboru nieruchomości po budowę domu — wszystko w jednym miejscu.</p>
+    </div>
+    <div class="info-card">
+      <h3>Strategia zakupu</h3>
+      <p>Pomagamy dobrać nieruchomość pod Twój cel: życie, inwestycja lub wynajem.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <h2>3 kierunki inwestowania na Costa Blanca</h2>
+      <p>Wybierz model zakupu dopasowany do Twojego celu.</p>
+    </div>
+
+    <div class="category-grid">
+      <article class="category-card blue">
+        <div class="category-media" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80')"></div>
+        <div class="category-body">
+          <div class="chip">Inwestycje</div>
+          <h3>Nowe inwestycje od deweloperów</h3>
+          <p class="category-copy">Apartamenty, penthouse’y i wille w najlepszych lokalizacjach Costa Blanca. Kierunek dla klientów, którzy szukają nowoczesnego produktu pod życie, wynajem i wzrost wartości.</p>
+          <a href="https://oczernyszenko.github.io/developerzy--p2/" class="category-link">Zobacz inwestycje →</a>
+        </div>
+      </article>
+
+      <article class="category-card green">
+        <div class="category-media" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80')"></div>
+        <div class="category-body">
+          <div class="chip">Eco plots</div>
+          <h3>Działki pod inwestycję i budowę</h3>
+          <p class="category-copy">Grunty na Costa Blanca dla klientów, którzy chcą budować dom prywatny, wejść w development albo zacząć projekt od właściwie dobranej lokalizacji i potencjału działki.</p>
+          <a href="https://oczernyszenko.github.io/plots/" class="category-link">Zobacz działki →</a>
+        </div>
+      </article>
+
+      <article class="category-card terra">
+        <div class="category-media" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80')"></div>
+        <div class="category-body">
+          <div class="chip">Build & design</div>
+          <h3>Budowa domów w Hiszpanii</h3>
+          <p class="category-copy">Kompleksowa realizacja domu: działka, projekt, technologia drewniana, prefabrykowana, szkieletowa lub Thermochip, fundamenty i premium wykończenie pod klucz.</p>
+          <a href="https://oczernyszenko.github.io/ecodom-p2/" class="category-link">Zobacz budowę domów →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="section-head">
+      <h2>Kluczowe lokalizacje Costa Blanca</h2>
+    </div>
+
+    <div class="info-card cities">
+      <p>
+        <span class="city-lg zone-center"><strong>Alicante</strong></span> ·
+        <span class="city-md zone-center">El Campello</span> ·
+        <span class="city-lg zone-center"><strong>Benidorm</strong></span> ·
+        <span class="city-sm zone-center">Gran Alacant</span> ·
+        <span class="city-lg zone-north"><strong>Altea</strong></span> ·
+        <span class="city-md zone-center">Finestrat</span> ·
+        <span class="city-lg zone-south"><strong>Torrevieja</strong></span> ·
+        <span class="city-sm zone-center">Mutxamel</span> ·
+        <span class="city-lg zone-north"><strong>Jávea</strong></span> ·
+        <span class="city-md zone-center">Villajoyosa</span> ·
+        <span class="city-lg zone-north"><strong>Moraira</strong></span> ·
+        <span class="city-sm zone-center">Santa Pola</span> ·
+        <span class="city-md zone-center">San Juan</span> ·
+        <span class="city-md zone-south">Orihuela Costa</span> ·
+        <span class="city-sm zone-south">Pilar de la Horadada</span> ·
+        <span class="city-lg zone-center"><strong>Elche</strong></span> ·
+        <span class="city-lg zone-north"><strong>Denia</strong></span> ·
+        <span class="city-lg zone-north"><strong>Calpe</strong></span> ·
+        <span class="city-md zone-south">Guardamar del Segura</span> ·
+        <span class="city-md zone-center">La Nucía</span> ·
+        <span class="city-md zone-center">Polop</span> ·
+        <span class="city-md zone-north">Benissa</span> ·
+        <span class="city-md zone-south">San Fulgencio</span> ·
+        <span class="city-md zone-north">Albir</span> ·
+        <span class="city-md zone-south">La Mata</span> ·
+        <span class="city-md zone-south">Cabo Roig</span> ·
+        <span class="city-md zone-south">Dehesa de Campoamor</span> ·
+        <span class="city-md zone-south">La Zenia</span> ·
+        <span class="city-md zone-south">Mil Palmeras</span> ·
+        <span class="city-sm zone-south">Algorfa</span> ·
+        <span class="city-sm zone-south">Rojales</span> ·
+        <span class="city-sm zone-south">Los Montesinos</span> ·
+        <span class="city-sm zone-south">La Marina</span> ·
+        <span class="city-sm zone-south">Ciudad Quesada</span> ·
+        <span class="city-sm zone-south">Dolores</span> ·
+        <span class="city-sm zone-center">Catral</span> ·
+        <span class="city-sm zone-center">Cox</span> ·
+        <span class="city-sm zone-center">Aspe</span> ·
+        <span class="city-sm zone-center">Novelda</span> ·
+        <span class="city-sm zone-center">Monforte del Cid</span> ·
+        <span class="city-sm zone-center">Busot</span> ·
+        <span class="city-sm zone-center">La Vila Joiosa</span> ·
+        <span class="city-sm zone-north">Els Poblets</span> ·
+        <span class="city-sm zone-north">Benitachell</span> ·
+        <span class="city-sm zone-north">Teulada</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Zapytaj o nowe inwestycje</h2>
+      <p>Skontaktuj się, aby otrzymać aktualną dostępność, planowania i szczegóły inwestycji.</p>
+      <div class="phone-line">Telefon: <a href="tel:+34604158859">+34 604 15 88 59</a></div>
+      <div class="cta-actions">
+        <a href="tel:+34604158859" class="btn-main">Zadzwoń teraz</a>
+        <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="btn-light">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-card">
+      <div class="footer-brand">Costa Blanca Invest</div>
+      <p class="footer-copy">Nowe inwestycje deweloperskie na Costa Blanca — apartamenty, penthouse’y i wille w najlepszych lokalizacjach pod życie, drugi dom w Hiszpanii i wynajem.</p>
+      <div class="footer-bottom">© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii</div>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+
+</body>
+</html>
