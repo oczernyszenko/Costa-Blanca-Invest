@@ -181,7 +181,12 @@
     .section-card,
     .cta-box,
     .seo-block,
-    .footer-card { padding: 26px 30px; text-align: center; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .footer-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.30);
+      box-shadow: var(--shadow-lux);
+      overflow: hidden;
+    }
 
     .hero-card,
     .section-card,
@@ -278,7 +283,6 @@
     .contact-inline-wrap,
     .cta-actions,
     .footer-links,
-      justify-content: center;
     .inline-list {
       display: flex;
       flex-wrap: wrap;
@@ -621,7 +625,7 @@
 
     .footer { padding: 8px 0 54px; margin-top: 34px; font-size: 14px; color: var(--text-soft); }
     .footer .container { padding-top: 0; }
-    .footer-card { padding: 26px 30px; text-align: left; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .footer-card { padding: 26px 30px; text-align: center; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
     .footer-brand { margin-bottom: 8px; font-size: 22px; font-weight: 900; color: var(--primary-dark); text-align: center; letter-spacing: -.02em; }
     .footer-copy { max-width: 920px; margin: 0 auto; font-size: 14px; line-height: 1.7; color: var(--text-soft); text-align: center; }
     .footer-expert { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; text-align: center; }
@@ -704,7 +708,7 @@
     }
 
     @media (max-width: 560px) {
-      .footer-links { flex-direction: column; align-items: flex-start; }
+      .footer-links { flex-direction: column; align-items: center; }
       .footer-links a { width: 100%; }
       .container { padding: 0 10px; }
       .hero-card, .section-card, .cta-box, .seo-block, .footer-card { border-radius: 18px; }
@@ -717,7 +721,7 @@
       .hero-image, .hero-image img { min-height: 220px; }
       .contact-links a { font-size: 16px; }
       .footer-links { gap: 14px 18px; }
-      .footer-expert { align-items: flex-start; }
+      .footer-expert { align-items: center; }
       .footer-expert img { width: 56px; height: 56px; }
       .footer-bottom { font-size: 11px; }
       .btn, .contact-inline, .sticky-btn { width: 100%; }
