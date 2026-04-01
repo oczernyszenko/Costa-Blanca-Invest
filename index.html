@@ -907,57 +907,98 @@
 
       .topbar-inner {
         grid-template-columns: 1fr;
-        gap: 14px;
-        padding: 14px 0;
+        gap: 12px;
+        padding: 12px 0;
       }
 
       .nav {
         justify-content: flex-start;
-        gap: 18px;
+        gap: 16px;
         overflow-x: auto;
-        padding-bottom: 4px;
+        padding-bottom: 6px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
       }
 
-      .section { padding: 64px 0; }
-      .section-sm { padding: 48px 0; }
-      .section-map { padding-bottom: 32px; }
-      .hero { padding: 20px 0 48px; }
-
-      .hero-visual {
-        min-height: 420px;
-        padding: 22px;
+      .nav a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        white-space: nowrap;
       }
 
-      .hero-avatar {
-        left: 22px;
-        bottom: 22px;
-        width: 82px;
-        height: 82px;
-      }
-
-      .hero-badge {
-        left: 116px;
-        right: 18px;
-        bottom: 26px;
-        min-width: 0;
-        padding: 12px 14px;
-      }
-
-      .hero-badge strong { font-size: 14px; }
-      .hero-badge span { font-size: 11px; }
+      .section { padding: 56px 0; }
+      .section-sm { padding: 42px 0; }
+      .section-map { padding-bottom: 26px; }
+      .hero { padding: 16px 0 40px; }
 
       .hero-copy,
       .info-card,
       .seo-box,
       .category-body,
       .cta-box,
-      .footer-card { padding: 24px; }
+      .footer-card { padding: 22px; }
+
+      .hero-copy h1 {
+        font-size: clamp(30px, 8vw, 44px);
+        max-width: 100%;
+      }
+
+      .hero-copy p {
+        font-size: 16px;
+        max-width: 100%;
+      }
+
+      .section-head h2 {
+        font-size: clamp(28px, 7vw, 40px);
+        max-width: 100%;
+      }
+
+      .section-head p {
+        font-size: 15px;
+        max-width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 400px;
+        padding: 20px;
+        background-position: center;
+      }
+
+      .hero-avatar {
+        left: 20px;
+        bottom: 20px;
+        width: 80px;
+        height: 80px;
+      }
+
+      .hero-badge {
+        left: 110px;
+        right: 16px;
+        bottom: 22px;
+        min-width: 0;
+        padding: 11px 13px;
+        border-radius: 16px;
+      }
+
+      .hero-badge strong { font-size: 13px; }
+      .hero-badge span { font-size: 10.5px; }
 
       .info-grid,
       .seo-grid { grid-template-columns: 1fr; }
 
-      .btn-row { flex-direction: column; }
-      .btn { width: 100%; }
+      .category-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .category-media { min-height: 230px; }
+      .category-body { padding: 22px; }
+      .category-body h3 { font-size: clamp(24px, 6vw, 30px); }
+      .category-copy { font-size: 15px; }
+
+      .cta-box h2 { font-size: clamp(28px, 7vw, 38px); }
+      .cta-box p,
+      .phone-line { font-size: 16px; }
 
       .cta-actions {
         flex-wrap: wrap;
@@ -970,32 +1011,150 @@
         width: auto;
       }
 
-      .cta-box h2 { font-size: clamp(28px, 7vw, 38px); }
-      .cta-box p,
-      .phone-line { font-size: 16px; }
-
-      .cb-map { min-height: 760px; }
-
-      .cb-map__coast {
-        left: 48%;
-        width: 20%;
+      .cb-map {
+        min-height: 860px;
+        background-position: 58% center;
       }
 
-      .cb-map__point { gap: 8px; }
+      .cb-map__coast {
+        left: 56%;
+        width: 18%;
+      }
+
+      .cb-map__point { gap: 6px; }
 
       .cb-map__label {
-        padding: 0 10px;
-        font-size: 12px;
+        padding: 0 9px;
+        font-size: 11px;
+        min-height: 30px;
       }
 
       .cb-map__cities {
-        width: 220px;
-        padding: 16px;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: none;
+        padding: 16px 16px 18px;
+        justify-content: flex-end;
+        background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.74) 22%, rgba(255,255,255,0.9) 100%);
+      }
+
+      .cb-map__cities-title {
+        margin-bottom: 10px;
+        font-size: 11px;
       }
 
       .cb-map__cities p {
-        max-width: 188px;
-        line-height: 1.95;
+        max-width: 100%;
+        line-height: 1.75;
+      }
+
+      .city-lg { font-size: 20px; }
+      .city-md { font-size: 16px; }
+      .city-sm { font-size: 13px; }
+
+      .footer-links {
+        gap: 14px 18px;
+      }
+
+      .footer-expert {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container { padding: 0 10px; }
+
+      .hero-copy,
+      .info-card,
+      .seo-box,
+      .category-body,
+      .cta-box,
+      .footer-card { padding: 18px; }
+
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: .1em;
+        padding: 7px 11px;
+      }
+
+      .hero-visual {
+        min-height: 340px;
+        padding: 16px;
+      }
+
+      .hero-avatar {
+        left: 16px;
+        bottom: 16px;
+        width: 68px;
+        height: 68px;
+      }
+
+      .hero-badge {
+        left: 92px;
+        right: 12px;
+        bottom: 16px;
+        padding: 10px 12px;
+      }
+
+      .hero-badge strong { font-size: 12px; }
+      .hero-badge span { font-size: 10px; }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+
+      .section-head h2::after {
+        width: 56px;
+      }
+
+      .category-media { min-height: 190px; }
+      .chip { font-size: 10px; }
+      .category-link { font-size: 14px; }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .btn-main,
+      .btn-light {
+        width: 100%;
+      }
+
+      .cb-map {
+        min-height: 780px;
+      }
+
+      .cb-map__point {
+        transform: scale(.94);
+        transform-origin: left center;
+      }
+
+      .cb-map__label {
+        font-size: 10px;
+        min-height: 28px;
+      }
+
+      .cb-map__cities p {
+        line-height: 1.6;
+      }
+
+      .city-lg { font-size: 18px; }
+      .city-md { font-size: 14px; }
+      .city-sm { font-size: 12px; }
+
+      .footer-expert img {
+        width: 56px;
+        height: 56px;
+      }
+
+      .footer-bottom {
+        font-size: 11px;
       }
     }
   </style>
