@@ -159,6 +159,12 @@
       -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,0.28);
       box-shadow: 0 10px 40px rgba(15,23,42,0.06);
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+
+    .topbar.hide {
+      transform: translateY(-100%);
     }
 
     .topbar-inner {
@@ -255,16 +261,27 @@
     }
 
     .hero-copy h1 {
-      max-width: 980px;
+      max-width: 100%;
+      width: 100%;
       margin-top: 18px;
       font-size: clamp(38px, 6vw, 64px);
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
     }
 
     .hero-copy p {
-      max-width: 900px;
+      max-width: 100%;
+      width: 100%;
       font-size: 18px;
       text-wrap: pretty;
       text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
     }
 
     .hero-visual {
@@ -360,6 +377,10 @@
       gap: 20px;
       max-width: none;
       margin: 0 auto;
+    }
+
+    .info-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .text-left,
@@ -823,6 +844,7 @@
     }
 
     .sticky-wa {
+      position: relative;
       min-width: 132px;
       height: 52px;
       min-height: 52px;
@@ -830,9 +852,51 @@
       border-radius: 999px;
       color: #fff;
       background: linear-gradient(135deg, rgba(37,211,102,0.96) 0%, rgba(20,158,72,1) 100%);
-      border-color: rgba(255,255,255,0.18);
-      box-shadow: 0 12px 26px rgba(37,211,102,0.25), 0 0 24px rgba(37,211,102,0.16);
+      border: 1px solid rgba(255,255,255,0.24);
+      box-shadow: 0 14px 34px rgba(37,211,102,0.25), 0 0 0 1px rgba(255,255,255,0.10) inset;
       gap: 10px;
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease, filter .25s ease;
+    }
+
+    .sticky-wa::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.06));
+      opacity: .78;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sticky-wa::after {
+      content: "";
+      position: absolute;
+      top: -140%;
+      left: -30%;
+      width: 55%;
+      height: 320%;
+      transform: rotate(24deg);
+      background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.42), rgba(255,255,255,0));
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity .25s ease, transform .55s ease;
+    }
+
+    .sticky-wa > * { position: relative; z-index: 2; }
+
+    .sticky-wa:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 22px 48px rgba(37,211,102,0.35), 0 0 30px rgba(37,211,102,0.20);
+      filter: saturate(1.05);
+    }
+
+    .sticky-wa:hover::after {
+      opacity: 1;
+      transform: translateX(150%) rotate(24deg);
     }
 
     .fade-up {
@@ -859,7 +923,8 @@
     }
 
     @media (max-width: 1100px) {
-      .seo-grid, .info-grid { grid-template-columns: 1fr; }
+      .seo-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
       .hero-visual { min-height: 460px; }
       .hero-avatar { left: 28px; bottom: 28px; width: 98px; height: 98px; }
       .hero-badge { left: 140px; bottom: 34px; min-width: 240px; }
@@ -1270,6 +1335,10 @@
       const heroBadge = document.querySelector('.hero-badge');
       const animatedCards = document.querySelectorAll('.fade-up');
       const contactForm = document.getElementById('contact-form');
+      const header = document.querySelector('.topbar');
+      let lastScroll = window.pageYOffset;
+      let accumulatedUp = 0;
+      let accumulatedDown = 0;
 
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -1285,6 +1354,29 @@
       } else {
         animatedCards.forEach((el) => el.classList.add('show'));
       }
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        const delta = currentScroll - lastScroll;
+
+        if (Math.abs(delta) < 4) return;
+
+        if (delta > 0) {
+          accumulatedDown += delta;
+          accumulatedUp = 0;
+          if (currentScroll > 120 && accumulatedDown > 24 && header) {
+            header.classList.add('hide');
+          }
+        } else {
+          accumulatedUp += Math.abs(delta);
+          accumulatedDown = 0;
+          if ((accumulatedUp > 42 || currentScroll < 40) && header) {
+            header.classList.remove('hide');
+          }
+        }
+
+        lastScroll = currentScroll;
+      }, { passive: true });
 
       if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
