@@ -123,6 +123,7 @@
     }
 
     .section-head h2 {
+      text-align: center;
       position: relative;
       max-width: 760px;
       padding-bottom: 12px;
@@ -287,7 +288,7 @@
       object-fit: cover;
       box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
       opacity: 0;
-      transform: translateY(20px) scale(.95) rotate(0deg);
+      transform: translateY(20px) scale(.95);
       animation: avatar-fade 1.2s ease forwards;
       transition: transform .7s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, filter .35s ease;
       transform-origin: center center;
@@ -295,9 +296,25 @@
     }
 
     .hero-avatar:hover {
-      transform: translateY(0) scale(1.1) rotate(8deg);
-      box-shadow: 0 30px 56px rgba(0, 0, 0, 0.28);
-      filter: saturate(1.06);
+      transform: scale(1.15) rotate(360deg) !important;
+      box-shadow: 0 34px 64px rgba(0, 0, 0, 0.32);
+      filter: saturate(1.1);
+    }
+
+    .hero-avatar::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.6), transparent 60%);
+      opacity: 0;
+      transition: opacity .4s ease, transform .6s ease;
+      z-index: -1;
+    }
+
+    .hero-avatar:hover::after {
+      opacity: .9;
+      transform: scale(1.2);
     }
 
     .hero-badge {
@@ -425,13 +442,7 @@
     .category-media-build { background-image: url('/Costa-Blanca-Invest/pl/build-house/images/build-house-hero.jpg'); }
 
     .category-body {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 38px 34px;
-      text-align: left;
+      text-align: center;
     }
 
     .category-body::before {
@@ -1148,29 +1159,32 @@
           <a href="/Costa-Blanca-Invest/pl/new-developments/" class="category-card blue fade-up" aria-label="Nowe inwestycje od deweloperów na Costa Blanca">
             <div class="category-media category-media-dev"></div>
             <div class="category-body">
-              <div class="chip">Inwestycje</div>
+              
               <h3>Nowe inwestycje od deweloperów na Costa Blanca</h3>
-              <p class="category-copy">Apartamenty, penthou
+              <p class="category-copy">Apartamenty, penthouse’y i wille w najlepszych lokalizacjach Costa Blanca od Alicante do Benidormu. Kierunek dla klientów, którzy szukają nowej inwestycji w Hiszpanii pod życie, wynajem i wzrost wartości.</p>
+              <span class="category-link">Zobacz inwestycje →</span>
+            </div>
+          </a>
 
-          <article class="category-card green fade-up">
+          <a href="/Costa-Blanca-Invest/pl/plots/" class="category-card green fade-up" aria-label="Działki budowlane na Costa Blanca">
             <div class="category-media category-media-plot"></div>
             <div class="category-body">
-              <div class="chip">Plots</div>
+              
               <h3>Działki budowlane na Costa Blanca</h3>
               <p class="category-copy">Działki na Costa Blanca dla klientów, którzy chcą kupić grunt w Hiszpanii pod dom prywatny, projekt inwestycyjny albo wejście w development.</p>
-              <a href="/Costa-Blanca-Invest/pl/plots/" class="category-link">Zobacz działki →</a>
+              <span class="category-link">Zobacz działki →</span>
             </div>
-          </article>
+          </a>
 
-          <article class="category-card terra fade-up">
+          <a href="/Costa-Blanca-Invest/pl/build-house/" class="category-card terra fade-up" aria-label="Szybka budowa domu w Hiszpanii">
             <div class="category-media category-media-build"></div>
             <div class="category-body">
-              <div class="chip">Build &amp; design</div>
+              
               <h3>Szybka budowa domu w Hiszpanii</h3>
               <p class="category-copy">Kompleksowa budowa domu w Hiszpanii: działka, projekt, technologia drewniana, prefabrykowana, szkieletowa lub Thermochip, fundamenty i premium wykończenie pod klucz.</p>
-              <a href="/Costa-Blanca-Invest/pl/build-house/" class="category-link">Zobacz budowę domów →</a>
+              <span class="category-link">Zobacz budowę domów →</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -1310,7 +1324,7 @@
       <div class="footer-card">
         <div class="footer-brand">Costa Blanca Invest</div>
         <p class="footer-copy">Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.</p>
-        <p class="footer-copy">Kod oraz koncepcja strony zostały opracowane osobiście przez specjalistę Olgę Chernyshenko i stanowią jej własność intelektualną.</p>
+        
         <div class="footer-links">
           <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
           <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
@@ -1347,6 +1361,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const hero = document.querySelector('.hero-visual');
       const mapPoints = document.querySelectorAll('.cb-map__point[data-city]');
       const cityItems = document.querySelectorAll('.cities [data-city]');
       const animatedCards = document.querySelectorAll('.fade-up');
@@ -1395,6 +1410,21 @@
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened = window.open(url, '_blank', 'noopener');
           if (!opened) window.location.href = url;
+        });
+      }
+          if (hero) {
+        hero.addEventListener('mousemove', (e) => {
+          const rect = hero.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          const avatar = hero.querySelector('.hero-avatar');
+          if (avatar) {
+            avatar.style.transform = `translate(${x * 10}px, ${y * 10}px) scale(1.05) rotate(0deg)`;
+          }
+        });
+        hero.addEventListener('mouseleave', () => {
+          const avatar = hero.querySelector('.hero-avatar');
+          if (avatar) avatar.style.transform = '';
         });
       }
     });
