@@ -132,9 +132,14 @@
     }
 
     .section-head h2 {
-      text-align: center;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
       position: relative;
-      max-width: 760px;
+      max-width: 100%;
+      width: 100%;
       padding-bottom: 12px;
       font-size: clamp(30px, 4vw, 52px);
     }
@@ -384,7 +389,6 @@
     }
 
     .text-left,
-    .section-head,
     .section-head p,
     .seo-box,
     .seo-box h2,
@@ -586,8 +590,7 @@
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
     }
 
-    .sticky-wa::before,
-    .sticky-wa::after { display: none; }
+    /* keep glass layers enabled for WhatsApp buttons */
 
     .btn::before,
     .sticky-btn::before {
@@ -656,6 +659,62 @@
       transform: translateY(-2px);
       background: #fff;
       box-shadow: 0 12px 22px rgba(41, 108, 118, 0.08);
+    }
+
+    .cta-actions .sticky-wa {
+      position: relative;
+      min-width: 132px;
+      height: 52px;
+      min-height: 52px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(37,211,102,0.96) 0%, rgba(20,158,72,1) 100%);
+      border: 1px solid rgba(255,255,255,0.24);
+      box-shadow: 0 14px 34px rgba(37,211,102,0.25), 0 0 0 1px rgba(255,255,255,0.10) inset;
+      gap: 10px;
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease, filter .25s ease;
+    }
+
+    .cta-actions .sticky-wa::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.06));
+      opacity: .78;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cta-actions .sticky-wa::after {
+      content: "";
+      position: absolute;
+      top: -140%;
+      left: -30%;
+      width: 55%;
+      height: 320%;
+      transform: rotate(24deg);
+      background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.42), rgba(255,255,255,0));
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity .25s ease, transform .55s ease;
+    }
+
+    .cta-actions .sticky-wa > * { position: relative; z-index: 2; }
+
+    .cta-actions .sticky-wa:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 22px 48px rgba(37,211,102,0.35), 0 0 30px rgba(37,211,102,0.20);
+      filter: saturate(1.05);
+    }
+
+    .cta-actions .sticky-wa:hover::after {
+      opacity: 1;
+      transform: translateX(150%) rotate(24deg);
     }
 
     .contact-box {
@@ -1419,6 +1478,7 @@
           if (!rafId) rafId = requestAnimationFrame(animateAvatar);
         };
 
+        // DESKTOP HOVER
         hero.addEventListener('mouseenter', () => {
           if (avatar) avatar.classList.add('is-hovered');
           startAnimation();
@@ -1428,10 +1488,6 @@
           const rect = hero.getBoundingClientRect();
           targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
           targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
-
-          if (heroBadge) {
-            heroBadge.style.boxShadow = '0 18px 36px rgba(15, 23, 42, 0.12)';
-          }
           startAnimation();
         });
 
@@ -1439,11 +1495,16 @@
           targetX = 0;
           targetY = 0;
           if (avatar) avatar.classList.remove('is-hovered');
-          if (heroBadge) {
-            heroBadge.style.boxShadow = '0 14px 34px rgba(15, 23, 42, 0.10)';
-          }
           startAnimation();
         });
+
+        // MOBILE TOUCH EFFECT (always active subtle float)
+        if ('ontouchstart' in window) {
+          if (avatar) avatar.classList.add('is-hovered');
+          targetX = 3;
+          targetY = 3;
+          startAnimation();
+        }
       }
     });
   </script>
