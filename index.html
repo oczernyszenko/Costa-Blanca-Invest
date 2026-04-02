@@ -54,6 +54,8 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    html { hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
     body {
       margin: 0;
       font-family: Inter, Arial, sans-serif;
@@ -76,8 +78,11 @@
     .seo-box li,
     main section:last-of-type p,
     main section:last-of-type li {
-      text-align: center;
-      text-justify: auto;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
     }
 
     .container {
@@ -177,7 +182,7 @@
       width: 12px;
       height: 12px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
+      background: var(--primary);
       box-shadow: 0 0 0 6px rgba(41,108,118,0.08);
       flex: 0 0 auto;
     }
@@ -255,6 +260,7 @@
       max-width: 900px;
       font-size: 18px;
       text-wrap: pretty;
+      text-align: justify;
     }
 
     .hero-visual {
@@ -288,38 +294,11 @@
       z-index: 3;
       width: 112px;
       height: 112px;
-      border: none;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
-      opacity: 0;
-      transform: translateY(20px) scale(.95) rotate(0deg);
-      animation: avatar-fade 1.2s ease forwards;
-      transition: transform 1.15s cubic-bezier(.22,1,.22,1), box-shadow .45s ease, filter .45s ease;
-      transform-origin: center center;
-      will-change: transform;
-    }
 
     .hero-avatar.is-hovered {
       transform: translate3d(var(--avatar-x, 0px), var(--avatar-y, 0px), 0) scale(1.14) rotate(380deg);
       box-shadow: 0 34px 64px rgba(0, 0, 0, 0.32);
       filter: saturate(1.1);
-    }
-
-    .hero-avatar::after {
-      content: "";
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.6), transparent 60%);
-      opacity: 0;
-      transition: opacity .4s ease, transform .6s ease;
-      z-index: -1;
-    }
-
-    .hero-avatar.is-hovered::after {
-      opacity: .9;
-      transform: scale(1.2);
     }
 
     .hero-badge {
@@ -502,25 +481,7 @@
     }
 
     .category-card.blue .category-body h3,
-    .category-card.blue .category-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 2px;
-      font-size: 15px;
-      font-weight: 800;
-      text-align: center;
-      width: 100%;
-      transition: transform .25s ease, letter-spacing .25s ease, opacity .25s ease;
-    }
-
-    .category-card:hover .category-link {
-      transform: translateX(6px);
-      letter-spacing: .01em;
-    }
-
-    .category-link:hover { transform: translateX(2px); }
+    .category-card.blue .category-link { color: var(--blue); }
     .category-card.green .category-body h3,
     .category-card.green .category-link { color: var(--terra); }
     .category-card.terra .category-body h3,
@@ -542,6 +503,11 @@
       font-size: 15px;
       font-weight: 800;
       transition: transform .25s ease, letter-spacing .25s ease, opacity .25s ease;
+    }
+
+    .category-card:hover .category-link {
+      transform: translateX(6px);
+      letter-spacing: .01em;
     }
 
     .chip {
@@ -585,9 +551,7 @@
     }
 
     .sticky-wa::before,
-    .sticky-wa::after {
-      display: none;
-    }
+    .sticky-wa::after { display: none; }
 
     .btn::before,
     .sticky-btn::before {
@@ -656,126 +620,6 @@
       transform: translateY(-2px);
       background: #fff;
       box-shadow: 0 12px 22px rgba(41, 108, 118, 0.08);
-    }
-
-    .cities span {
-      display: inline-block;
-      cursor: default;
-      transition: transform .22s ease, color .22s ease, text-shadow .22s ease, opacity .22s ease;
-    }
-
-    .cities span:hover {
-      transform: translateY(-4px) scale(1.12);
-      opacity: 1;
-      z-index: 2;
-      color: var(--primary-dark);
-      text-shadow: 0 18px 40px rgba(41, 108, 118, 0.25);
-    }
-
-    .zone-north { color: #2c6f7a; }
-    .zone-center { color: #3e7c68; }
-    .zone-south { color: #8a5a3c; }
-    .city-lg { font-size: 24px; letter-spacing: -.02em; }
-    .city-md { font-size: 18px; opacity: .92; }
-    .city-sm { font-size: 15px; opacity: .72; }
-
-    .cb-map {
-      position: relative;
-      min-height: 720px;
-      background:
-        linear-gradient(180deg, rgba(248, 251, 252, 0.58) 0%, rgba(238, 245, 247, 0.64) 100%),
-        url('https://upload.wikimedia.org/wikipedia/commons/3/34/Mapa_de_la_Costa_Blanca.svg') center/cover no-repeat;
-      isolation: isolate;
-      overflow: hidden;
-    }
-
-    .cb-map__surface {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      opacity: .72;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(41, 108, 118, 0.08), transparent 26%),
-        radial-gradient(circle at 82% 14%, rgba(226, 135, 67, 0.08), transparent 24%),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
-    }
-
-    .cb-map__coast {
-      position: absolute;
-      top: 8%;
-      left: 42%;
-      width: 18%;
-      height: 84%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .cb-map__coast path {
-      fill: none;
-      stroke: rgba(31, 84, 92, 0.28);
-      stroke-width: 3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .cb-map__zone {
-      position: absolute;
-      right: 10%;
-      width: 26%;
-      border-radius: 999px;
-      filter: blur(18px);
-      opacity: .14;
-      z-index: 0;
-    }
-
-    .cb-map__zone--north { top: 8%; height: 22%; background: #2f7c88; }
-    .cb-map__zone--center { top: 38%; height: 24%; background: #4b8a3d; }
-    .cb-map__zone--south { top: 72%; height: 18%; background: #9a5a3c; }
-
-    .cb-map__point {
-      position: absolute;
-      z-index: 3;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: transform .22s ease;
-    }
-
-    .cb-map__dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      flex: 0 0 auto;
-      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.72), 0 10px 18px rgba(15, 23, 42, 0.10);
-    }
-
-    .cb-map__dot--north { background: #2f7c88; }
-    .cb-map__dot--center { background: #4b8a3d; }
-    .cb-map__dot--south { background: #9a5a3c; }
-
-    .cb-map__label {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 0 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.78);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
-      white-space: nowrap;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--primary-dark);
-    }
-
-    .cb-map__point.is-active { transform: translateY(-2px) scale(1.03); }
-    .cb-map__cities-title {
-      margin: 0 0 18px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(31, 84, 92, 0.78);
     }
 
     .contact-box {
@@ -919,6 +763,9 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+      opacity: 0;
+      transform: translateY(20px) scale(.9) rotate(-180deg);
+      animation: avatar-fade 1.2s ease forwards;
     }
 
     .footer-expert-name { font-weight: 800; color: var(--primary-dark); }
@@ -953,13 +800,6 @@
       display: none;
     }
 
-    .sticky-call {
-      display: none;
-    }
-
-    .sticky-call span {
-      display: none;
-    }
     .sticky-wa {
       min-width: 132px;
       height: 52px;
@@ -973,13 +813,6 @@
       gap: 10px;
     }
 
-    .sticky-wa span {
-      display: inline;
-      font-size: 14px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -988,7 +821,11 @@
 
     .fade-up.show { opacity: 1; transform: translateY(0); }
 
-    @keyframes avatar-fade { to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes avatar-fade {
+      0% { opacity: 0; transform: translateY(30px) scale(.9) rotate(-180deg); }
+      60% { transform: translateY(-4px) scale(1.03) rotate(20deg); }
+      100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+    }
     @keyframes badge-fade { to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 1100px) {
@@ -1026,9 +863,7 @@
         width: 100%;
       }
       .container { padding: 0 14px; }
-      .topbar {
-        overflow: hidden;
-      }
+      .topbar { overflow: hidden; }
       .topbar-inner {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -1036,10 +871,7 @@
         min-height: auto;
         justify-items: center;
       }
-      .brand {
-        justify-self: center;
-        text-align: center;
-      }
+      .brand { justify-self: center; text-align: center; }
       .nav {
         justify-content: center;
         align-items: center;
@@ -1087,7 +919,7 @@
       body { padding-bottom: 74px; }
       .footer-links { gap: 14px 18px; }
       .footer-expert { align-items: center; }
-        }
+    }
 
     @media (max-width: 560px) {
       .container { padding: 0 10px; }
@@ -1109,7 +941,7 @@
       .sticky-contact { right: 10px; bottom: 10px; }
       .sticky-btn { min-height: 48px; font-size: 13px; padding: 0 16px; }
       .sticky-btn svg { width: 20px; height: 20px; }
-        }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -1204,15 +1036,15 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#top" class="brand">Costa Blanca Invest</a>
+      <a href="/Costa-Blanca-Invest/#top" class="brand">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/" aria-current="page">Strona główna</a>
-        <a href="#categories">Kategorie</a>
+        <a href="/Costa-Blanca-Invest/" aria-current="page">Strona główna</a>
+        <a href="/Costa-Blanca-Invest/#categories">Kategorie</a>
         <a href="/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
         <a href="/Costa-Blanca-Invest/pl/plots/">Działki</a>
         <a href="/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
-        <a href="#why-us">Dlaczego my</a>
-        <a href="#contact">Kontakt</a>
+        <a href="/Costa-Blanca-Invest/#why-us">Dlaczego my</a>
+        <a href="/Costa-Blanca-Invest/#contact">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -1229,7 +1061,7 @@
         </div>
 
         <div class="hero-copy">
-          <span class="eyebrow">Costa Blanca · projekty inwestycyjne</span>
+          <span class="eyebrow" style="display:block; text-align:center;">Costa Blanca · projekty inwestycyjne</span>
           <h1>Inwestycje na Costa Blanca od Alicante do Benidormu — nowe inwestycje, działki i budowa domu w Hiszpanii</h1>
           <p>Dobieramy projekty inwestycyjne precyzyjnie: pod ROI, wynajem i styl życia. Specjalizacja Alicante–Benidorm — nowe inwestycje, działki budowlane i szybka budowa domu. Bez chaosu, bez ryzyka, z jasną strategią zakupu.</p>
         </div>
@@ -1274,7 +1106,7 @@
             <div class="category-media category-media-plot"></div>
             <div class="category-body">
               <h3>Działki budowlane na Costa Blanca</h3>
-              <p class="category-copy">Działki na Costa Blanca dla klientów, którzy chcą kupić grunt w Hiszpanii pod dom prywatny, projekt inwestycyjny albo wejście w development.</p>
+              <p class="category-copy">Działki na Costa Blanca dla klientów, którzy chcą kupić grunt w Hiszpanii pod dom prywatny, projekt inwestycyjny albo wejść w development.</p>
               <span class="category-link">Zobacz działki →</span>
             </div>
           </a>
@@ -1316,7 +1148,7 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2>Inwestycje Costa Blanca — jak kupić działkę, nową inwestycję lub zbudować dom w Hiszpanii</h2>
+          <h2 style="text-align: justify;">Inwestycje Costa Blanca — jak kupić działkę, nową inwestycję lub zbudować dom w Hiszpanii</h2>
         </div>
         <p>Inwestycje na Costa Blanca od Alicante do Benidormu należą do najbardziej dynamicznie rozwijających się segmentów rynku nieruchomości w Hiszpanii. Region przyciąga inwestorów z całej Europy dzięki stabilnemu popytowi, całorocznemu klimatowi oraz rosnącej wartości nieruchomości.</p>
         <p>Największym zainteresowaniem cieszą się lokalizacje takie jak Alicante, El Campello, San Juan, Finestrat, Villajoyosa oraz Benidorm. To właśnie tutaj koncentrują się nowe inwestycje, apartamenty inwestycyjne oraz działki z potencjałem wzrostu wartości.</p>
@@ -1373,15 +1205,15 @@
         <p class="footer-copy">Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.</p>
         
         <div class="footer-links">
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#categories">Kategorie inwestycji</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#why-us">Strategia inwestycyjna</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#contact">Kontakt</a>
+          <a href="/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
+          <a href="/Costa-Blanca-Invest/pl/plots/">Działki</a>
+          <a href="/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
+          <a href="/Costa-Blanca-Invest/#categories">Kategorie inwestycji</a>
+          <a href="/Costa-Blanca-Invest/#why-us">Strategia inwestycyjna</a>
+          <a href="/Costa-Blanca-Invest/#contact">Kontakt</a>
         </div>
         <div class="footer-expert">
-          <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
+          <img src="/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
           <div>
             <div class="footer-expert-name">Olga Chernyshenko</div>
             <div class="footer-expert-role">Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm</div>
@@ -1405,26 +1237,8 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('.hero-visual');
-      const mapPoints = document.querySelectorAll('.cb-map__point[data-city]');
-      const cityItems = document.querySelectorAll('.cities [data-city]');
       const animatedCards = document.querySelectorAll('.fade-up');
       const contactForm = document.getElementById('contact-form');
-
-      const clearActive = () => {
-        mapPoints.forEach((el) => el.classList.remove('is-active'));
-        cityItems.forEach((el) => el.classList.remove('is-active'));
-      };
-
-      const activate = (city) => {
-        clearActive();
-        document.querySelectorAll(`[data-city="${city}"]`).forEach((el) => el.classList.add('is-active'));
-      };
-
-      [...mapPoints, ...cityItems].forEach((el) => {
-        el.addEventListener('mouseenter', () => activate(el.dataset.city));
-        el.addEventListener('mouseleave', clearActive);
-        el.addEventListener('touchstart', () => activate(el.dataset.city), { passive: true });
-      });
 
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -1455,6 +1269,7 @@
           if (!opened) window.location.href = url;
         });
       }
+
       if (hero) {
         const avatar = hero.querySelector('.hero-avatar');
         let rafId = null;
@@ -1504,4 +1319,3 @@
   </script>
 </body>
 </html>
-
