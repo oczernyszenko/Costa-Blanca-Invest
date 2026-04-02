@@ -53,8 +53,12 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    html { hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+    html {
+      scroll-behavior: smooth;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
 
     body {
       margin: 0;
@@ -78,6 +82,15 @@
     .seo-box li,
     main section:last-of-type p,
     main section:last-of-type li {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+
+    main section:nth-of-type(4) p,
+    main section:nth-of-type(4) li {
       text-align: justify;
       text-justify: inter-word;
       hyphens: auto;
@@ -777,13 +790,18 @@
       object-fit: cover;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
       opacity: 0;
-      transform: translateY(14px) scale(.96);
-      animation: avatar-fade-footer .85s ease forwards;
-      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+      transform: translateY(20px) scale(.94) rotate(-120deg);
+      transition: transform .45s ease, box-shadow .35s ease, filter .35s ease;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .footer-expert.show img {
+      animation: avatar-fade-hero .95s cubic-bezier(.22,1,.22,1) forwards;
     }
 
     .footer-expert:hover img {
-      transform: translateY(-2px) scale(1.03);
+      transform: translateY(-2px) scale(1.03) rotate(0deg);
       box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18);
       filter: saturate(1.03);
     }
@@ -879,7 +897,7 @@
 
     .cta-actions .sticky-wa {
       min-height: 44px;
-      height: auto;
+      height: 44px;
       padding: 0 14px;
       font-size: 14px;
       font-weight: 800;
@@ -977,7 +995,10 @@
       .hero { padding: 16px 0 40px; }
       .hero-copy, .info-card, .seo-box, .category-body, .contact-box, .footer-card { padding: 22px; }
       .hero-copy h1 {
-      text-align: center; font-size: clamp(30px, 8vw, 44px); max-width: 100%; }
+        text-align: center;
+        font-size: clamp(30px, 8vw, 44px);
+        max-width: 100%;
+      }
       .hero-copy p { font-size: 16px; max-width: 100%; }
       .section-head { justify-content: center; align-items: center; }
       .section-head h2 { font-size: clamp(28px, 7vw, 40px); max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -1321,7 +1342,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('.hero-visual');
-            const animatedCards = document.querySelectorAll('.fade-up');
+      const animatedCards = document.querySelectorAll('.fade-up, .footer-expert');
       const contactForm = document.getElementById('contact-form');
       const header = document.querySelector('.topbar');
       let lastScroll = window.pageYOffset;
@@ -1415,7 +1436,6 @@
           if (!rafId) rafId = requestAnimationFrame(animateAvatar);
         };
 
-        // DESKTOP HOVER
         hero.addEventListener('mouseenter', () => {
           if (avatar) avatar.classList.add('is-hovered');
           startAnimation();
@@ -1435,7 +1455,6 @@
           startAnimation();
         });
 
-        // MOBILE TOUCH EFFECT (always active subtle float)
         if ('ontouchstart' in window) {
           if (avatar) avatar.classList.add('is-hovered');
           targetX = 3;
