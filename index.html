@@ -288,15 +288,15 @@
       object-fit: cover;
       box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
       opacity: 0;
-      transform: translateY(20px) scale(.95);
+      transform: translateY(20px) scale(.95) rotate(0deg);
       animation: avatar-fade 1.2s ease forwards;
-      transition: transform .7s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, filter .35s ease;
+      transition: transform 1.15s cubic-bezier(.22,1,.22,1), box-shadow .45s ease, filter .45s ease;
       transform-origin: center center;
       will-change: transform;
     }
 
-    .hero-avatar:hover {
-      transform: scale(1.15) rotate(360deg) !important;
+    .hero-avatar.is-hovered {
+      transform: translate3d(var(--avatar-x, 0px), var(--avatar-y, 0px), 0) scale(1.14) rotate(380deg);
       box-shadow: 0 34px 64px rgba(0, 0, 0, 0.32);
       filter: saturate(1.1);
     }
@@ -312,7 +312,7 @@
       z-index: -1;
     }
 
-    .hero-avatar:hover::after {
+    .hero-avatar.is-hovered::after {
       opacity: .9;
       transform: scale(1.2);
     }
@@ -356,15 +356,11 @@
     .category-grid,
     .contact-form-grid,
     .sticky-contact .wrap {
-      display: grid;
-      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      max-width: none;
+      margin: 0 auto;
     }
-
-    .info-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .seo-grid { grid-template-columns: 1.1fr .9fr; }
-    .category-grid { grid-template-columns: 1fr; }
-    .contact-form-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .sticky-contact .wrap { grid-template-columns: 1fr 1fr; gap: 10px; max-width: 1200px; margin: 0 auto; }
 
     .info-card,
     .seo-box {
@@ -528,17 +524,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 50px;
-      padding: 0 22px;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 14px;
       border-radius: 999px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       white-space: nowrap;
       border: 1px solid rgba(255,255,255,0.35);
       background: var(--glass-medium);
       color: var(--primary-dark);
-      box-shadow: 0 12px 28px rgba(15,23,42,0.10);
+      box-shadow: 0 10px 22px rgba(15,23,42,0.08);
       overflow: hidden;
       isolation: isolate;
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
@@ -891,16 +887,20 @@
 
     .sticky-contact {
       position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      right: auto;
+      bottom: 14px;
       z-index: 1200;
-      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-      background: var(--glass-light);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-top: 1px solid rgba(255,255,255,0.24);
-      box-shadow: 0 -10px 28px rgba(15,23,42,0.08);
+      width: calc(100% - 28px);
+      max-width: 360px;
+      padding: 8px;
+      background: rgba(255,255,255,0.58);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.38);
+      box-shadow: 0 14px 34px rgba(15,23,42,0.10);
+      border-radius: 18px;
       display: none;
     }
 
@@ -968,8 +968,8 @@
       .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
       .btn-main, .btn-light, .sticky-btn { min-width: 0; width: 100%; }
       .contact-form-grid, .sticky-contact .wrap { grid-template-columns: 1fr; }
-      .sticky-contact { display: block; }
-      body { padding-bottom: 88px; }
+      .sticky-contact { display: block; max-width: 240px; width: calc(100% - 36px); bottom: 10px; padding: 6px; }
+      body { padding-bottom: 54px; }
       .cb-map { min-height: 860px; background-position: 58% center; }
       .cb-map__coast { left: 56%; width: 18%; }
       .cb-map__point { gap: 6px; }
@@ -1004,6 +1004,9 @@
       .city-sm { font-size: 12px; }
       .footer-expert img { width: 56px; height: 56px; }
       .footer-bottom { font-size: 11px; }
+      .sticky-contact { max-width: 220px; width: calc(100% - 30px); bottom: 8px; }
+      .sticky-btn { min-height: 40px; font-size: 13px; padding: 0 12px; }
+      .sticky-btn svg { width: 16px; height: 16px; }
     }
   </style>
 
@@ -1413,18 +1416,48 @@
         });
       }
           if (hero) {
+        const avatar = hero.querySelector('.hero-avatar');
+        let rafId = null;
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        const animateAvatar = () => {
+          currentX += (targetX - currentX) * 0.12;
+          currentY += (targetY - currentY) * 0.12;
+          if (avatar) {
+            avatar.style.setProperty('--avatar-x', `${currentX}px`);
+            avatar.style.setProperty('--avatar-y', `${currentY}px`);
+          }
+          if (Math.abs(targetX - currentX) > 0.08 || Math.abs(targetY - currentY) > 0.08) {
+            rafId = requestAnimationFrame(animateAvatar);
+          } else {
+            rafId = null;
+          }
+        };
+
+        const startAnimation = () => {
+          if (!rafId) rafId = requestAnimationFrame(animateAvatar);
+        };
+
+        hero.addEventListener('mouseenter', () => {
+          if (avatar) avatar.classList.add('is-hovered');
+          startAnimation();
+        });
+
         hero.addEventListener('mousemove', (e) => {
           const rect = hero.getBoundingClientRect();
-          const x = (e.clientX - rect.left) / rect.width - 0.5;
-          const y = (e.clientY - rect.top) / rect.height - 0.5;
-          const avatar = hero.querySelector('.hero-avatar');
-          if (avatar) {
-            avatar.style.transform = `translate(${x * 10}px, ${y * 10}px) scale(1.05) rotate(0deg)`;
-          }
+          targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
+          targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
+          startAnimation();
         });
+
         hero.addEventListener('mouseleave', () => {
-          const avatar = hero.querySelector('.hero-avatar');
-          if (avatar) avatar.style.transform = '';
+          targetX = 0;
+          targetY = 0;
+          if (avatar) avatar.classList.remove('is-hovered');
+          startAnimation();
         });
       }
     });
