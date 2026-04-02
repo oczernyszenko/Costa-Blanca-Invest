@@ -74,9 +74,10 @@
 
     .seo-box p,
     .seo-box li,
-    main section:last-of-type p {
-      text-align: justify;
-      text-justify: inter-word;
+    main section:last-of-type p,
+    main section:last-of-type li {
+      text-align: center;
+      text-justify: auto;
     }
 
     .container {
@@ -283,7 +284,7 @@
       z-index: 3;
       width: 112px;
       height: 112px;
-      border: 3px solid rgba(255, 255, 255, 0.92);
+      border: none;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
@@ -356,10 +357,42 @@
     .category-grid,
     .contact-form-grid,
     .sticky-contact .wrap {
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 20px;
       max-width: none;
       margin: 0 auto;
+    }
+
+    .text-left,
+    .section-head,
+    .section-head p,
+    .seo-box,
+    .seo-box h2,
+    .seo-box h3,
+    .seo-box ul,
+    .seo-box li,
+    .category-body,
+    .category-copy,
+    .contact-box,
+    .contact-links,
+    .footer-card,
+    .footer-copy,
+    .footer-links,
+    .footer-expert,
+    .footer-bottom,
+    main section:last-of-type,
+    main section:last-of-type h2,
+    main section:last-of-type h3,
+    main section:last-of-type p,
+    main section:last-of-type ul {
+      text-align: center;
+    }
+
+    .seo-box ul,
+    main section:last-of-type ul {
+      list-style-position: inside;
+      padding-left: 0;
     }
 
     .info-card,
@@ -438,6 +471,11 @@
     .category-media-build { background-image: url('/Costa-Blanca-Invest/pl/build-house/images/build-house-hero.jpg'); }
 
     .category-body {
+      position: relative;
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
     }
 
@@ -463,10 +501,13 @@
     .category-card.blue .category-link {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      margin-top: 6px;
+      margin-top: 2px;
       font-size: 15px;
       font-weight: 800;
+      text-align: center;
+      width: 100%;
       transition: transform .25s ease, letter-spacing .25s ease, opacity .25s ease;
     }
 
@@ -496,9 +537,8 @@
       margin-top: 2px;
       font-size: 15px;
       font-weight: 800;
+      transition: transform .25s ease, letter-spacing .25s ease, opacity .25s ease;
     }
-
-    .category-link:hover { transform: translateX(2px); }
 
     .chip {
       display: inline-flex;
@@ -538,6 +578,11 @@
       overflow: hidden;
       isolation: isolate;
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
+    }
+
+    .sticky-wa::before,
+    .sticky-wa::after {
+      display: none;
     }
 
     .btn::before,
@@ -887,29 +932,52 @@
 
     .sticky-contact {
       position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      right: auto;
+      right: 14px;
+      left: auto;
+      transform: none;
       bottom: 14px;
       z-index: 1200;
-      width: calc(100% - 28px);
-      max-width: 360px;
-      padding: 8px;
-      background: rgba(255,255,255,0.58);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.38);
-      box-shadow: 0 14px 34px rgba(15,23,42,0.10);
-      border-radius: 18px;
+      width: 64px;
+      height: 64px;
+      padding: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 50%;
       display: none;
     }
 
-    .sticky-call { color: var(--primary-dark); }
-    .sticky-wa {
+    .sticky-call {
+      width: 64px;
+      height: 64px;
+      min-height: 64px;
+      padding: 0;
+      border-radius: 50%;
       color: #fff;
-      background: linear-gradient(135deg, rgba(37,211,102,0.92) 0%, rgba(20,158,72,1) 100%);
+      background: linear-gradient(135deg, rgba(41,108,118,0.95) 0%, rgba(31,84,92,1) 100%);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 12px 26px rgba(41,108,118,0.25), 0 0 24px rgba(41,108,118,0.16);
+    }
+
+    .sticky-call span {
+      display: none;
+    }
+    .sticky-wa {
+      width: 64px;
+      height: 64px;
+      min-height: 64px;
+      padding: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(37,211,102,0.96) 0%, rgba(20,158,72,1) 100%);
       border-color: rgba(255,255,255,0.18);
       box-shadow: 0 12px 26px rgba(37,211,102,0.25), 0 0 24px rgba(37,211,102,0.16);
+    }
+
+    .sticky-wa span {
+      display: none;
     }
 
     .fade-up {
@@ -946,12 +1014,13 @@
       .nav a { flex: 0 0 auto; scroll-snap-align: start; white-space: nowrap; }
       .section { padding: 56px 0; }
       .section-sm { padding: 42px 0; }
-      .section-map { padding-bottom: 26px; }
       .hero { padding: 16px 0 40px; }
       .hero-copy, .info-card, .seo-box, .category-body, .contact-box, .footer-card { padding: 22px; }
       .hero-copy h1 { font-size: clamp(30px, 8vw, 44px); max-width: 100%; }
       .hero-copy p { font-size: 16px; max-width: 100%; }
-      .section-head h2 { font-size: clamp(28px, 7vw, 40px); max-width: 100%; }
+      .section-head { justify-content: center; align-items: center; }
+      .section-head h2 { font-size: clamp(28px, 7vw, 40px); max-width: 100%; margin-left: auto; margin-right: auto; }
+      .section-head h2::after { left: 50%; transform: translateX(-50%); }
       .section-head p { font-size: 15px; max-width: 100%; }
       .hero-visual { min-height: 400px; padding: 20px; background-position: center; }
       .hero-avatar { left: 20px; bottom: 20px; width: 80px; height: 80px; }
@@ -962,23 +1031,17 @@
       .category-media { min-height: 230px; }
       .category-body { padding: 22px; }
       .category-body h3 { font-size: clamp(24px, 6vw, 30px); }
-      .category-copy { font-size: 15px; }
+      .category-copy { font-size: 15px; margin-left: auto; margin-right: auto; }
       .contact-box h2 { font-size: clamp(28px, 7vw, 38px); }
       .contact-box p { font-size: 16px; }
       .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
       .btn-main, .btn-light, .sticky-btn { min-width: 0; width: 100%; }
       .contact-form-grid, .sticky-contact .wrap { grid-template-columns: 1fr; }
-      .sticky-contact { display: block; max-width: 240px; width: calc(100% - 36px); bottom: 10px; padding: 6px; }
-      body { padding-bottom: 54px; }
-      .cb-map { min-height: 860px; background-position: 58% center; }
-      .cb-map__coast { left: 56%; width: 18%; }
-      .cb-map__point { gap: 6px; }
-      .cb-map__label { padding: 0 9px; font-size: 11px; min-height: 30px; }
-      .city-lg { font-size: 20px; }
-      .city-md { font-size: 16px; }
-      .city-sm { font-size: 13px; }
+      .sticky-contact { display: block; width: 56px; height: 56px; right: 12px; bottom: 12px; }
+      body { padding-bottom: 0; }
       .footer-links { gap: 14px 18px; }
       .footer-expert { align-items: center; }
+    }
     }
 
     @media (max-width: 560px) {
@@ -996,17 +1059,12 @@
       .category-media { min-height: 190px; }
       .chip { font-size: 10px; }
       .category-link { font-size: 14px; }
-      .cb-map { min-height: 780px; }
-      .cb-map__point { transform: scale(.94); transform-origin: left center; }
-      .cb-map__label { font-size: 10px; min-height: 28px; }
-      .city-lg { font-size: 18px; }
-      .city-md { font-size: 14px; }
-      .city-sm { font-size: 12px; }
       .footer-expert img { width: 56px; height: 56px; }
       .footer-bottom { font-size: 11px; }
-      .sticky-contact { max-width: 220px; width: calc(100% - 30px); bottom: 8px; }
-      .sticky-btn { min-height: 40px; font-size: 13px; padding: 0 12px; }
-      .sticky-btn svg { width: 16px; height: 16px; }
+      .sticky-contact { width: 52px; height: 52px; right: 10px; bottom: 10px; }
+      .sticky-btn { min-height: 52px; width: 52px; font-size: 13px; padding: 0; }
+      .sticky-btn svg { width: 22px; height: 22px; }
+    }
     }
   </style>
 
@@ -1162,7 +1220,6 @@
           <a href="/Costa-Blanca-Invest/pl/new-developments/" class="category-card blue fade-up" aria-label="Nowe inwestycje od deweloperów na Costa Blanca">
             <div class="category-media category-media-dev"></div>
             <div class="category-body">
-              
               <h3>Nowe inwestycje od deweloperów na Costa Blanca</h3>
               <p class="category-copy">Apartamenty, penthouse’y i wille w najlepszych lokalizacjach Costa Blanca od Alicante do Benidormu. Kierunek dla klientów, którzy szukają nowej inwestycji w Hiszpanii pod życie, wynajem i wzrost wartości.</p>
               <span class="category-link">Zobacz inwestycje →</span>
@@ -1172,7 +1229,6 @@
           <a href="/Costa-Blanca-Invest/pl/plots/" class="category-card green fade-up" aria-label="Działki budowlane na Costa Blanca">
             <div class="category-media category-media-plot"></div>
             <div class="category-body">
-              
               <h3>Działki budowlane na Costa Blanca</h3>
               <p class="category-copy">Działki na Costa Blanca dla klientów, którzy chcą kupić grunt w Hiszpanii pod dom prywatny, projekt inwestycyjny albo wejście w development.</p>
               <span class="category-link">Zobacz działki →</span>
@@ -1182,7 +1238,6 @@
           <a href="/Costa-Blanca-Invest/pl/build-house/" class="category-card terra fade-up" aria-label="Szybka budowa domu w Hiszpanii">
             <div class="category-media category-media-build"></div>
             <div class="category-body">
-              
               <h3>Szybka budowa domu w Hiszpanii</h3>
               <p class="category-copy">Kompleksowa budowa domu w Hiszpanii: działka, projekt, technologia drewniana, prefabrykowana, szkieletowa lub Thermochip, fundamenty i premium wykończenie pod klucz.</p>
               <span class="category-link">Zobacz budowę domów →</span>
@@ -1210,61 +1265,6 @@
             <li><strong>Profil klienta:</strong> Europa Zachodnia, inwestorzy, kupujący działki i klienci budujący dom</li>
           </ul>
           <p>Dzięki ograniczonej podaży nowych inwestycji, dużemu zainteresowaniu kupnem działek i rosnącemu popytowi na budowę domu, Costa Blanca pozostaje jednym z najbardziej perspektywicznych rynków inwestycyjnych w Hiszpanii.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-map">
-      <div class="container">
-        <div class="section-head">
-          <h2>Gdzie inwestujemy na Costa Blanca</h2>
-          <p>Kluczowe lokalizacje projektów inwestycyjnych w północnej, centralnej i południowej części wybrzeża.</p>
-        </div>
-
-        <div class="info-card fade-up map-card">
-          <div class="cb-map">
-            <svg class="cb-map__coast" viewBox="0 0 120 600" aria-hidden="true">
-              <path d="M78 8 C86 40, 84 62, 76 92 C69 120, 68 142, 73 171 C80 205, 77 236, 66 270 C58 294, 56 320, 61 350 C67 387, 63 420, 52 456 C45 479, 41 506, 43 534 C45 558, 40 578, 31 592" />
-              <path d="M78 8 C86 40, 84 62, 76 92 C69 120, 68 142, 73 171 C80 205, 77 236, 66 270 C58 294, 56 320, 61 350 C67 387, 63 420, 52 456 C45 479, 41 506, 43 534 C45 558, 40 578, 31 592" />
-            </svg>
-            <div class="cb-map__surface"></div>
-            <div class="cb-map__zone cb-map__zone--north"></div>
-            <div class="cb-map__zone cb-map__zone--center"></div>
-            <div class="cb-map__zone cb-map__zone--south"></div>
-
-            <div class="cb-map__point" data-city="denia" style="top:12%; left:54%;"><span class="cb-map__dot cb-map__dot--north"></span><span class="cb-map__label">Denia</span></div>
-            <div class="cb-map__point" data-city="javea" style="top:18%; left:53.5%;"><span class="cb-map__dot cb-map__dot--north"></span><span class="cb-map__label">Jávea</span></div>
-            <div class="cb-map__point" data-city="moraira" style="top:25%; left:52.5%;"><span class="cb-map__dot cb-map__dot--north"></span><span class="cb-map__label">Moraira</span></div>
-            <div class="cb-map__point" data-city="altea" style="top:32%; left:51%;"><span class="cb-map__dot cb-map__dot--north"></span><span class="cb-map__label">Calpe · Altea</span></div>
-            <div class="cb-map__point" data-city="benidorm" style="top:41%; left:48.5%;"><span class="cb-map__dot cb-map__dot--center"></span><span class="cb-map__label">Benidorm</span></div>
-            <div class="cb-map__point" data-city="campello" style="top:50%; left:45.5%;"><span class="cb-map__dot cb-map__dot--center"></span><span class="cb-map__label">El Campello</span></div>
-            <div class="cb-map__point" data-city="alicante" style="top:57%; left:43%;"><span class="cb-map__dot cb-map__dot--center"></span><span class="cb-map__label">Alicante</span></div>
-            <div class="cb-map__point" data-city="santapola" style="top:66%; left:40%;"><span class="cb-map__dot cb-map__dot--center"></span><span class="cb-map__label">Santa Pola</span></div>
-            <div class="cb-map__point" data-city="guardamar" style="top:76%; left:37%;"><span class="cb-map__dot cb-map__dot--south"></span><span class="cb-map__label">Guardamar</span></div>
-            <div class="cb-map__point" data-city="torrevieja" style="top:83%; left:35%;"><span class="cb-map__dot cb-map__dot--south"></span><span class="cb-map__label">Torrevieja</span></div>
-            <div class="cb-map__point" data-city="orihuela" style="top:90%; left:33%;"><span class="cb-map__dot cb-map__dot--south"></span><span class="cb-map__label">Orihuela Costa</span></div>
-          </div>
-        </div>
-
-        <div class="info-card fade-up" style="margin-top:20px;">
-          <div class="cb-map__cities-title">Kluczowe lokalizacje Costa Blanca</div>
-          <p class="cities">
-            <span class="city-lg zone-north" data-city="denia">Denia</span> ·
-            <span class="city-lg zone-north" data-city="javea">Jávea</span> ·
-            <span class="city-md zone-north" data-city="moraira">Moraira</span> ·
-            <span class="city-md zone-north">Calpe</span> ·
-            <span class="city-sm zone-north" data-city="altea">Altea</span>
-            <br><br>
-            <span class="city-lg zone-center" data-city="benidorm">Benidorm</span> ·
-            <span class="city-md zone-center">Finestrat</span> ·
-            <span class="city-lg zone-center" data-city="alicante">Alicante</span> ·
-            <span class="city-md zone-center" data-city="campello">El Campello</span>
-            <br><br>
-            <span class="city-md zone-center" data-city="santapola">Santa Pola</span> ·
-            <span class="city-md zone-south" data-city="guardamar">Guardamar</span> ·
-            <span class="city-lg zone-south" data-city="torrevieja">Torrevieja</span> ·
-            <span class="city-md zone-south" data-city="orihuela">Orihuela Costa</span>
-          </p>
         </div>
       </div>
     </section>
@@ -1351,12 +1351,12 @@
 
   <div class="sticky-contact" aria-label="Szybki kontakt">
     <div class="wrap">
-      <a href="tel:+34604158859" class="sticky-btn sticky-call">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        <span>Zadzwoń teraz</span>
+      <a href="tel:+34604158859" class="sticky-btn sticky-call" aria-label="Zadzwoń">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>Zadzwoń</span>
       </a>
-      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="sticky-btn sticky-wa">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.56 0 .26 5.29.26 11.8c0 2.08.54 4.1 1.58 5.88L0 24l6.52-1.71a11.8 11.8 0 0 0 5.55 1.41h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.1-3.36-8.42Zm-8.45 18.2h-.01a9.84 9.84 0 0 1-5-1.36l-.36-.21-3.87 1.01 1.03-3.77-.24-.39a9.8 9.8 0 0 1-1.5-5.17c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.96c0 5.43-4.42 9.85-9.85 9.85Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.35.23-.65.08-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.92 1.23 3.12.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="sticky-btn sticky-wa" aria-label="WhatsApp">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.56 0 .26 5.29.26 11.8c0 2.08.54 4.1 1.58 5.88L0 24l6.52-1.71a11.8 11.8 0 0 0 5.55 1.41h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.1-3.36-8.42Zm-8.45 18.2h-.01a9.84 9.84 0 0 1-5-1.36l-.36-.21-3.87 1.01 1.03-3.77-.24-.39a9.8 9.8 0 0 1-1.5-5.17c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.96c0 5.43-4.42 9.85-9.85 9.85Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.35.23-.65.08-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.92 1.23 3.12.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
         <span>WhatsApp</span>
       </a>
     </div>
@@ -1415,7 +1415,7 @@
           if (!opened) window.location.href = url;
         });
       }
-          if (hero) {
+      if (hero) {
         const avatar = hero.querySelector('.hero-avatar');
         let rafId = null;
         let targetX = 0;
