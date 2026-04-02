@@ -9,6 +9,12 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#5ec6e8">
+  <meta name="application-name" content="Costa Blanca Invest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Costa Blanca Invest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#5ec6e8">
   <meta name="format-detection" content="telephone=no">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
@@ -20,10 +26,22 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm">
   <meta property="og:url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:secure_url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/hero-sea-palm.jpg">
+  <meta property="article:publisher" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta name="twitter:description" content="Apartamenty, penthouse’y i wille na Costa Blanca z potencjałem inwestycyjnym, wynajmu i wzrostu wartości.">
   <meta name="twitter:image" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/hero-sea-palm.jpg">
+  <meta name="twitter:image:alt" content="Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm">
+  <meta name="twitter:url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/apple-touch-icon.png">
+  <link rel="shortcut icon" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/favicon.ico">
+  <link rel="manifest" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/site.webmanifest">
+  <link rel="alternate" hreflang="pl" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">
+  <link rel="alternate" hreflang="x-default" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -40,13 +58,14 @@
       --text-soft: #5f6b76;
       --muted: #97a3ad;
       --line: rgba(94,198,232,0.18);
-      --shadow-soft: 0 8px 20px rgba(15, 23, 42, 0.04);
-      --shadow-lux: 0 18px 40px rgba(15, 23, 42, 0.06);
-      --radius: 12px;
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+      --shadow-lux: 0 30px 80px rgba(15, 23, 42, 0.12);
+      --radius: 20px;
       --container: 1280px;
-      --glass-light: rgba(255, 255, 255, 0.55);
-      --glass-medium: rgba(255, 255, 255, 0.70);
-      --glass-strong: rgba(255, 255, 255, 0.88);
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: rgba(255, 255, 255, 0.94);
+      --glass-light: rgba(255,255,255,0.72);
+      --glass-medium: rgba(255,255,255,0.82);
       --maxw: 1200px;
     }
 
@@ -56,7 +75,10 @@
       margin: 0;
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #ffffff 0%, #f7fcfe 60%, #ffffff 100%);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(94, 198, 232, 0.12), transparent 40%),
+        radial-gradient(circle at 90% 0%, rgba(31, 111, 133, 0.08), transparent 40%),
+        linear-gradient(180deg, #ffffff 0%, #eef9fd 50%, #ffffff 100%);
       line-height: 1.72;
       overflow-x: hidden;
     }
@@ -67,8 +89,8 @@
     p {
       margin: 0 0 14px;
       color: var(--text-soft);
-      text-align: justify;
-      text-justify: inter-word;
+      text-align: center;
+      text-wrap: pretty;
       max-width: 100%;
       hyphens: auto;
       word-break: break-word;
@@ -90,6 +112,12 @@
       -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,0.28);
       box-shadow: 0 10px 40px rgba(15,23,42,0.06);
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+
+    .topbar.hide {
+      transform: translateY(-100%);
     }
 
     .topbar-inner {
@@ -98,6 +126,7 @@
       align-items: center;
       gap: 24px;
       min-height: 86px;
+      width: 100%;
     }
 
     .brand {
@@ -116,7 +145,7 @@
       height: 12px;
       border-radius: 999px;
       background: linear-gradient(135deg, var(--accent), var(--primary));
-      box-shadow: 0 0 0 6px rgba(41,108,118,0.08);
+      box-shadow: 0 0 0 6px rgba(94,198,232,0.10);
       flex: 0 0 auto;
     }
 
@@ -125,6 +154,9 @@
       align-items: center;
       justify-content: center;
       gap: 28px;
+      min-width: 0;
+      width: 100%;
+      flex-wrap: wrap;
     }
 
     .nav a {
@@ -161,6 +193,7 @@
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
+      justify-content: center;
       margin: 0 0 18px;
       color: var(--muted);
       font-size: 14px;
@@ -171,25 +204,24 @@
       color: var(--primary-dark);
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--glass-medium);
+      background: rgba(255,255,255,0.78);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.24);
+      border: 1px solid rgba(255,255,255,0.32);
+      box-shadow: 0 6px 18px rgba(15,23,42,0.05);
     }
 
     .hero-card,
     .section-card,
     .cta-box,
-    .seo-block,
-    .footer-card { padding: 26px 30px; text-align: center; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-
-    .hero-card,
-    .section-card,
-    .cta-box,
-    .seo-block {
-      background: var(--glass-medium);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+    .seo-article,
+    .footer-card {
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: var(--radius);
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-lux);
+      overflow: hidden;
     }
 
     .hero-card {
@@ -200,11 +232,12 @@
     }
 
     .hero-copy {
-      padding: 34px 36px;
+      padding: 34px 36px 38px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0;
+      align-items: center;
+      text-align: center;
     }
 
     .eyebrow {
@@ -213,7 +246,7 @@
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(41,108,118,0.06);
+      background: rgba(94,198,232,0.08);
       color: var(--primary-dark);
       font-size: 12px;
       font-weight: 800;
@@ -227,10 +260,11 @@
     h1,
     .section-card h2,
     .cta-box h2,
-    .seo-block h2 {
+    .seo-article h2 {
       color: var(--primary-dark);
       letter-spacing: -.03em;
       text-wrap: balance;
+      text-align: center;
     }
 
     h1 {
@@ -239,11 +273,12 @@
       max-width: 100%;
     }
 
-    .subtitle {
-      margin-bottom: 18px;
+    .subtitle,
+    .lead {
+      margin-left: auto;
+      margin-right: auto;
       font-size: 17px;
       max-width: 100%;
-      text-wrap: balance;
     }
 
     .hero-image {
@@ -257,7 +292,9 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(15,23,42,0.02) 0%, rgba(15,23,42,0.16) 72%, rgba(15,23,42,0.24) 100%);
+      background:
+        linear-gradient(180deg, rgba(15,23,42,0.02) 0%, rgba(15,23,42,0.16) 72%, rgba(15,23,42,0.24) 100%),
+        radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.18), transparent 24%);
       z-index: 1;
       pointer-events: none;
     }
@@ -278,18 +315,16 @@
     .contact-inline-wrap,
     .cta-actions,
     .footer-links,
-      justify-content: center;
     .inline-list {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .contact-inline-wrap {
-      margin: 0 0 18px;
-    }
-
-    .cta-actions { justify-content: center; margin-top: 24px; }
+    .contact-inline-wrap { margin: 6px 0 18px; }
+    .cta-actions { margin-top: 24px; }
     .inline-list { margin-top: 18px; }
 
     .contact-inline,
@@ -308,10 +343,8 @@
       white-space: nowrap;
       border: 1px solid rgba(255,255,255,0.35);
       background: var(--glass-medium);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
       color: var(--primary-dark);
-      box-shadow: 0 12px 28px rgba(15,23,42,0.10);
+      box-shadow: 0 10px 22px rgba(15,23,42,0.08);
       overflow: hidden;
       isolation: isolate;
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
@@ -324,8 +357,8 @@
       position: absolute;
       inset: 1px;
       border-radius: inherit;
-      background: linear-gradient(180deg, rgba(255,255,255,0.38), rgba(255,255,255,0.08));
-      opacity: .7;
+      background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.06));
+      opacity: .78;
       pointer-events: none;
       z-index: 0;
     }
@@ -353,7 +386,7 @@
 
     .contact-inline:first-child,
     .btn-main {
-      background: linear-gradient(135deg, rgba(226,135,67,0.78), rgba(200,116,47,0.88));
+      background: linear-gradient(135deg, rgba(226,135,67,0.92), rgba(200,116,47,1));
       color: #fff;
       border: 1px solid rgba(255,255,255,0.24);
       box-shadow: 0 14px 34px rgba(200,116,47,0.25), 0 0 0 1px rgba(255,255,255,0.10) inset;
@@ -361,10 +394,10 @@
 
     .contact-inline:last-child,
     .btn-light {
-      background: var(--glass-light);
-      color: var(--primary-dark);
-      border: 1px solid rgba(255,255,255,0.35);
-      box-shadow: 0 8px 22px rgba(15,23,42,0.06), 0 0 0 1px rgba(255,255,255,0.10) inset;
+      background: linear-gradient(135deg, rgba(37,211,102,0.96) 0%, rgba(20,158,72,1) 100%);
+      color: #fff;
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 12px 26px rgba(37,211,102,0.25), 0 0 24px rgba(37,211,102,0.16);
     }
 
     .contact-inline:hover,
@@ -384,12 +417,8 @@
 
     .btn-main:hover {
       box-shadow: 0 22px 48px rgba(200,116,47,0.35), 0 0 30px rgba(226,135,67,0.20);
-      background: linear-gradient(135deg, rgba(226,135,67,0.95), rgba(200,116,47,1));
+      background: linear-gradient(135deg, rgba(226,135,67,0.98), rgba(200,116,47,1));
     }
-
-    .contact-inline:active,
-    .btn:active,
-    .sticky-btn:active { transform: translateY(-1px) scale(0.99); }
 
     .why-grid,
     .projects-grid,
@@ -416,7 +445,7 @@
     }
 
     .contact-form-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .sticky-contact .wrap { grid-template-columns: 1fr 1fr; gap: 10px; max-width: var(--maxw); margin: 0 auto; }
+    .sticky-contact .wrap { grid-template-columns: 1fr; gap: 10px; max-width: var(--maxw); margin: 0 auto; }
 
     .why-item,
     .project-card,
@@ -425,60 +454,69 @@
     .location-card,
     .faq-card {
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.28);
-      background: var(--glass-light);
+      border: 1px solid rgba(255,255,255,0.38);
+      background: rgba(255,255,255,0.82);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       box-shadow: var(--shadow-soft);
+      overflow: hidden;
     }
+
     .why-item,
     .step-card,
     .location-card,
-    .faq-card { padding: 28px; }
+    .faq-card {
+      padding: 28px;
+      text-align: center;
+    }
 
     .project-card .card-body,
     .category-card .card-body {
       padding: 24px 26px;
+      text-align: center;
     }
 
     .project-card,
     .category-card {
       color: inherit;
-      overflow: hidden;
       position: relative;
-      border: 1px solid rgba(94,198,232,0.18);
       transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
     }
 
     .project-card:hover,
     .category-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(15,23,42,0.08);
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 34px 80px rgba(15, 23, 42, 0.16);
     }
 
     .project-card img {
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: cover;
+      transition: transform .9s ease, filter .45s ease;
     }
 
-    .project-card .card-body {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 24px 26px 26px;
+    .project-card:hover img {
+      transform: scale(1.03);
+      filter: saturate(1.03);
     }
 
-    .project-card h3 {
-      margin: 0;
+    .project-card h3,
+    .category-card h3 {
+      margin: 0 0 10px;
       font-size: 22px;
       color: var(--primary-dark);
       letter-spacing: -.02em;
+      text-align: center;
+      text-wrap: balance;
     }
 
-    .project-card p {
-      margin: 0;
-      text-align: left;
+    .project-card p,
+    .category-card p,
+    .project-card .card-meta,
+    .project-card .card-price,
+    .project-card .card-link {
+      text-align: center;
     }
 
     .project-card .card-meta {
@@ -506,19 +544,15 @@
       color: var(--primary-dark);
     }
 
-    .category-card:first-child {
-      border-color: rgba(154,90,60,0.45);
-    }
-
-    .category-card:last-child {
-      border-color: rgba(75,138,61,0.45);
-    }
+    .category-card:first-child { border-color: rgba(154,90,60,0.30); }
+    .category-card:last-child { border-color: rgba(75,138,61,0.30); }
 
     .chip {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       width: fit-content;
-      margin-bottom: 6px;
+      margin: 0 auto 10px;
       padding: 7px 12px;
       border-radius: 999px;
       font-size: 11px;
@@ -530,29 +564,30 @@
       border: 1px solid rgba(94,198,232,0.16);
     }
 
-    .lead {
-      font-size: 16px;
-      max-width: 100%;
-      text-align: justify;
-    }
-
     .section-card,
-    .cta-box { margin-top: 28px; padding: 36px; }
+    .cta-box {
+      margin-top: 28px;
+      padding: 36px;
+      text-align: center;
+    }
 
     .section-card h2,
     .cta-box h2,
-    .seo-block h2 {
+    .seo-article h2 {
       position: relative;
       padding-bottom: 12px;
       font-size: clamp(30px, 4vw, 42px);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .section-card h2::after,
     .cta-box h2::after,
-    .seo-block h2::after {
+    .seo-article h2::after {
       content: "";
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: 0;
       width: 70px;
       height: 3px;
@@ -565,7 +600,7 @@
       align-items: center;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(41,108,118,0.07);
+      background: rgba(94,198,232,0.07);
       color: var(--primary-dark);
       font-weight: 700;
       font-size: 14px;
@@ -576,153 +611,313 @@
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      padding: 0 24px;
+      padding: 36px 30px;
+      text-align: center;
     }
 
-    .seo-article h2 {
+    .seo-article h3 {
       color: var(--primary-dark);
-      font-size: clamp(30px,4vw,42px);
-      margin-bottom: 16px;
-      letter-spacing: -.03em;
-      text-wrap: balance;
-      max-width: 900px;
+      margin-top: 18px;
+      text-align: center;
     }
-    .contact-box { text-align: center; background: var(--glass-strong); }
+
+    .contact-box {
+      margin-top: 28px;
+      padding: 42px 32px 38px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(247, 249, 250, 0.98) 100%);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+    }
+
     .contact-links { display: grid; gap: 12px; margin: 20px 0 18px; }
     .contact-links a { font-weight: 700; color: #6b7280; font-size: 18px; }
-    .contact-form { display: grid; gap: 14px; text-align: left; margin-top: 24px; }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      text-align: left;
+      margin-top: 24px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .contact-form input,
     .contact-form textarea {
       width: 100%;
       padding: 15px 16px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.28);
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(94,198,232,0.20);
+      background: rgba(255, 255, 255, 0.88);
       color: var(--text);
       outline: none;
       font-family: inherit;
       font-size: 16px;
-      transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
-      appearance: none;
-      -webkit-appearance: none;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.55) inset;
+      transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease, background .22s ease;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--muted);
     }
 
     .contact-form textarea { min-height: 130px; resize: vertical; }
 
     .contact-form input:focus,
     .contact-form textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(41,108,118,0.12);
+      border-color: rgba(94,198,232,0.50);
+      box-shadow: 0 0 0 4px rgba(94,198,232,0.12), 0 0 0 1px rgba(255,255,255,0.72) inset;
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .footer {
+      padding: 8px 0 54px;
+      margin-top: 34px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .footer-card {
+      padding: 34px 34px 28px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(94,198,232,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,251,0.98) 100%);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .footer-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+    }
+
+    .footer-brand {
+      margin-bottom: 12px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      color: var(--primary-dark);
+      text-align: center;
+    }
+
+    .footer-copy {
+      max-width: 980px;
+      margin: 0 auto 10px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-top: 22px;
+      gap: 14px 20px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      transition: color .22s ease, transform .22s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-dark);
       transform: translateY(-1px);
     }
 
-    .footer { padding: 8px 0 54px; margin-top: 34px; font-size: 14px; color: var(--text-soft); }
-    .footer .container { padding-top: 0; }
-    .footer-card { padding: 26px 30px; text-align: left; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-    .footer-brand { margin-bottom: 8px; font-size: 22px; font-weight: 900; color: var(--primary-dark); text-align: center; letter-spacing: -.02em; }
-    .footer-copy { max-width: 920px; margin: 0 auto; font-size: 14px; line-height: 1.7; color: var(--text-soft); text-align: center; }
-    .footer-expert { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; text-align: center; }
-    .footer-expert img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .footer-expert {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .footer-expert img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+    }
+
     .footer-expert-name { font-weight: 800; color: var(--primary-dark); }
     .footer-expert-role { font-size: 13px; color: var(--text-soft); }
     .footer-expert-meta { margin-top: 4px; font-size: 12px; color: var(--muted); }
-    .footer-bottom { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(15,23,42,0.06); font-size: 12px; color: var(--muted); text-align: center; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 14px; }
-    .footer-links a { line-height: 1.5; text-align: center; }
+
+    .footer-bottom {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
 
     .sticky-contact {
       position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      right: 14px;
+      left: auto;
+      transform: none;
+      bottom: 14px;
       z-index: 1200;
-      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-      background: var(--glass-medium);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-top: 1px solid rgba(255,255,255,0.24);
-      box-shadow: 0 -10px 28px rgba(15,23,42,0.08);
+      width: auto;
+      height: auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
       display: none;
     }
 
-    .sticky-call { color: var(--primary-dark); }
     .sticky-wa {
+      min-width: 132px;
+      height: 52px;
+      min-height: 52px;
+      padding: 0 18px;
+      border-radius: 999px;
       color: #fff;
-      background: linear-gradient(135deg, rgba(37,211,102,0.84) 0%, rgba(20,158,72,0.96) 100%);
+      background: linear-gradient(135deg, rgba(37,211,102,0.96) 0%, rgba(20,158,72,1) 100%);
       border-color: rgba(255,255,255,0.18);
       box-shadow: 0 12px 26px rgba(37,211,102,0.25), 0 0 24px rgba(37,211,102,0.16);
+      gap: 10px;
+      white-space: nowrap;
     }
 
-    @media (max-width: 1100px) {
-      .hero-card {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
+    .sticky-wa::before,
+    .sticky-wa::after,
+    .sticky-call { display: none; }
 
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s cubic-bezier(.2, .6, .2, 1), transform .8s cubic-bezier(.2, .6, .2, 1);
+    }
+
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1100px) {
+      .hero-card { grid-template-columns: 1fr; }
       .why-grid,
       .projects-grid,
       .categories-grid,
       .steps-grid,
       .locations-grid,
-      .faq-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image,
-      .hero-image img {
-        min-height: 420px;
-      }
+      .faq-grid { grid-template-columns: 1fr; }
+      .hero-image, .hero-image img { min-height: 420px; }
     }
 
     @media (max-width: 768px) {
-      .container { padding: 0 14px; }
-      .topbar-inner { grid-template-columns: 1fr; gap: 12px; padding: 12px 0; }
-
-      .nav {
-        justify-content: flex-start;
-        gap: 16px;
-        overflow-x: auto;
-        padding-bottom: 6px;
-        scroll-snap-type: x proximity;
-        -webkit-overflow-scrolling: touch;
+      .container,
+      .hero-copy,
+      .section-card,
+      .cta-box,
+      .seo-article,
+      .footer-card,
+      .hero-copy h1,
+      .subtitle,
+      .lead,
+      .section-card h2,
+      .section-card p,
+      .seo-article h2,
+      .seo-article h3,
+      .seo-article p,
+      .footer-copy {
+        max-width: 100%;
+        width: 100%;
       }
 
-      .nav a { flex: 0 0 auto; scroll-snap-align: start; }
+      .container { padding: 0 14px; }
+      .topbar-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 12px 0;
+        min-height: auto;
+        justify-items: center;
+      }
+
+      .brand { justify-self: center; text-align: center; }
+
+      .nav {
+        justify-content: center;
+        align-items: center;
+        gap: 10px 14px;
+        overflow-x: visible;
+        padding: 0;
+        scroll-snap-type: none;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        flex: 0 1 auto;
+        white-space: normal;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+
       .page { padding: 14px 0 56px; }
-      .hero-copy, .section-card, .cta-box, .seo-block, .footer-card { padding: 22px; }
+      .hero-copy, .section-card, .cta-box, .seo-article, .footer-card, .contact-box { padding: 22px; }
       .hero-card { gap: 0; }
       .hero-image, .hero-image img { min-height: 300px; }
-      h1 { max-width: none; }
-      .subtitle { max-width: none; }
-      .contact-form-grid, .sticky-contact .wrap { grid-template-columns: 1fr; }
+      .contact-form-grid,
+      .projects-grid,
+      .categories-grid,
+      .why-grid,
+      .steps-grid,
+      .locations-grid,
+      .faq-grid { grid-template-columns: 1fr; }
+      .contact-inline-wrap,
+      .cta-actions { flex-direction: column; }
       .cta-actions { gap: 10px; }
-      .sticky-contact { display: block; }
-      body { padding-bottom: 88px; }
+      .btn, .contact-inline { width: 100%; }
+      .sticky-contact { display: block; right: 12px; bottom: 12px; }
+      body { padding-bottom: 74px; }
     }
 
     @media (max-width: 560px) {
-      .footer-links { flex-direction: column; align-items: flex-start; }
-      .footer-links a { width: 100%; }
       .container { padding: 0 10px; }
-      .hero-card, .section-card, .cta-box, .seo-block, .footer-card { border-radius: 18px; }
+      .hero-card, .section-card, .cta-box, .seo-article, .footer-card, .contact-box { border-radius: 18px; }
+      .hero-copy, .section-card, .cta-box, .seo-article, .footer-card, .contact-box { padding: 18px; }
       h1 { font-size: clamp(28px, 8.5vw, 36px); }
       .subtitle, .lead, p { font-size: 15px; }
       .eyebrow { font-size: 10px; letter-spacing: .1em; padding: 7px 11px; }
       .nav { gap: 14px; }
       .nav a { font-size: 14px; }
-      .hero-copy, .section-card, .cta-box, .seo-block, .footer-card { padding: 18px; }
       .hero-image, .hero-image img { min-height: 220px; }
       .contact-links a { font-size: 16px; }
-      .footer-links { gap: 14px 18px; }
-      .footer-expert { align-items: flex-start; }
+      .footer-links { flex-direction: column; align-items: center; }
       .footer-expert img { width: 56px; height: 56px; }
       .footer-bottom { font-size: 11px; }
-      .btn, .contact-inline, .sticky-btn { width: 100%; }
-      .cta-actions, .contact-inline-wrap { flex-direction: column; }
-      .sticky-contact { padding-left: 10px; padding-right: 10px; }
+      .sticky-contact { right: 10px; bottom: 10px; }
+      .sticky-btn { min-height: 48px; font-size: 13px; padding: 0 16px; }
+      .sticky-wa { min-width: 116px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -734,8 +929,8 @@
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Strona główna</a>
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#categories">Kategorie</a>
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
-        <a href="https://oczernyszenko.github.io/plots/">Działki</a>
-        <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domu</a>
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#why-us">Dlaczego my</a>
         <a href="#contact">Kontakt</a>
       </nav>
@@ -769,7 +964,7 @@
         </div>
       </section>
 
-      <section class="section-card">
+      <section class="section-card fade-up">
         <h2>Dlaczego warto inwestować w nowe inwestycje Costa Blanca Alicante–Benidorm</h2>
         <div class="why-grid">
           <div class="why-item">
@@ -787,34 +982,10 @@
         </div>
       </section>
 
-      <section class="section-card" id="projects">
+      <section class="section-card fade-up" id="projects">
         <h2>Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów</h2>
         <p>Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.</p>
         <div class="projects-grid">
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <div class="card-body">
-              <div class="chip">Premium · Golf & Lifestyle</div>
-              <h3>Bonalba Golf Hills</h3>
-              <div class="card-meta">Mutxamel koło Alicante</div>
-              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
-              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <div class="card-body">
-              <div class="chip">Premium · Golf & Lifestyle</div>
-              <h3>Bonalba Golf Hills</h3>
-              <div class="card-meta">Mutxamel koło Alicante</div>
-              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
-              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-
           <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
             <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
             <div class="card-body">
@@ -865,7 +1036,7 @@
         </div>
       </section>
 
-      <section class="section-card" id="process">
+      <section class="section-card fade-up" id="process">
         <h2>Jak wybieramy new developments Alicante Spain i Costa Blanca</h2>
         <div class="steps-grid">
           <div class="step-card">
@@ -883,7 +1054,7 @@
         </div>
       </section>
 
-      <section class="section-card" id="locations">
+      <section class="section-card fade-up" id="locations">
         <h2>Najlepsze lokalizacje: nowe mieszkania Alicante i property for sale Benidorm new build</h2>
         <p>Alicante, Finestrat, Benidorm i Torre de la Horadada należą do najczęściej wybieranych kierunków dla klientów szukających nowej nieruchomości w Hiszpanii.</p>
         <div class="locations-grid">
@@ -911,7 +1082,7 @@
         </div>
       </section>
 
-      <section class="section-card" id="faq">
+      <section class="section-card fade-up" id="faq">
         <h2>FAQ — nowe inwestycje na Costa Blanca</h2>
         <div class="faq-grid">
           <div class="faq-card">
@@ -929,17 +1100,17 @@
         </div>
       </section>
 
-      <section class="section-card">
+      <section class="section-card fade-up">
         <h2>Inne główne kategorie</h2>
         <div class="categories-grid">
-          <a href="https://oczernyszenko.github.io/plots/" class="category-card">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/" class="category-card">
             <div class="card-body">
               <h3>Działki</h3>
               <p>Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.</p>
             </div>
           </a>
 
-          <a href="https://oczernyszenko.github.io/ecodom-p2/" class="category-card">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/" class="category-card">
             <div class="card-body">
               <h3>Budowa domu</h3>
               <p>Kompleksowa realizacja domu w Hiszpanii — od działki po wykończenie pod klucz.</p>
@@ -948,7 +1119,7 @@
         </div>
       </section>
 
-      <section id="seo-content" class="seo-article">
+      <section id="seo-content" class="seo-article fade-up">
         <h2>Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm</h2>
         <h3>Rynek nowych inwestycji w Hiszpanii</h3>
         <p>Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.</p>
@@ -960,7 +1131,7 @@
         <p>W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.</p>
       </section>
 
-      <section class="cta-box contact-box" id="contact">
+      <section class="cta-box contact-box fade-up" id="contact">
         <h2>Zapytaj o aktualne inwestycje</h2>
         <p>Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.</p>
         <div class="contact-links">
@@ -969,7 +1140,7 @@
         </div>
         <div class="cta-actions">
           <a class="btn btn-main" href="tel:+34604158859">Zadzwoń</a>
-          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener">Napisz na WhatsApp</a>
+          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener">💬 Napisz</a>
         </div>
         <form class="contact-form" id="contact-form" action="#" method="post">
           <div class="contact-form-grid">
@@ -993,12 +1164,11 @@
           <a href="#projects">Wybrane inwestycje</a>
           <a href="#locations">Lokalizacje</a>
           <a href="#faq">FAQ</a>
-          <a href="https://oczernyszenko.github.io/plots/">Działki</a>
-          <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domu</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
           <a href="#contact">Kontakt</a>
         </div>
 
-        
         <div class="footer-expert">
           <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
           <div>
@@ -1014,24 +1184,74 @@
 
   <div class="sticky-contact" aria-label="Szybki kontakt">
     <div class="wrap">
-      <a href="tel:+34604158859" class="sticky-btn sticky-call">Zadzwoń teraz</a>
-      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="sticky-btn sticky-wa">💬 WhatsApp</a>
+      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="sticky-btn sticky-wa">💬 Napisz</a>
     </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const contactForm = document.getElementById('contact-form');
+      const animatedCards = document.querySelectorAll('.fade-up');
+      const header = document.querySelector('.topbar');
+      let lastScroll = window.pageYOffset;
+      let accumulatedUp = 0;
+      let accumulatedDown = 0;
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        animatedCards.forEach((el) => observer.observe(el));
+      } else {
+        animatedCards.forEach((el) => el.classList.add('show'));
+      }
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        const delta = currentScroll - lastScroll;
+
+        if (Math.abs(delta) < 4) return;
+
+        if (delta > 0) {
+          accumulatedDown += delta;
+          accumulatedUp = 0;
+          if (currentScroll > 120 && accumulatedDown > 24 && header) {
+            header.classList.add('hide');
+          }
+        } else {
+          accumulatedUp += Math.abs(delta);
+          accumulatedDown = 0;
+          if ((accumulatedUp > 42 || currentScroll < 40) && header) {
+            header.classList.remove('hide');
+          }
+        }
+
+        lastScroll = currentScroll;
+      }, { passive: true });
+
       if (!contactForm) return;
 
       contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const formData = new FormData(contactForm);
-        const name = formData.get('name') || '';
-        const phone = formData.get('phone') || '';
-        const email = formData.get('email') || '';
-        const message = formData.get('message') || '';
-        const text = `Nowe zapytanie ze strony Nowe inwestycje:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+        const name = (formData.get('name') || '').toString().trim();
+        const phone = (formData.get('phone') || '').toString().trim();
+        const email = (formData.get('email') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+        const text = `Nowe zapytanie ze strony Nowe inwestycje:
+
+Imię: ${name}
+Telefon: ${phone}
+Email: ${email}
+
+Wiadomość:
+${message}`;
         const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
         const opened = window.open(url, '_blank', 'noopener');
         if (!opened) window.location.href = url;
@@ -1047,8 +1267,16 @@
         "@type": "Organization",
         "name": "Costa Blanca Invest",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/",
+        "logo": "https://oczernyszenko.github.io/Costa-Blanca-Invest/apple-touch-icon.png",
+        "image": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/hero-sea-palm.jpg",
         "email": "o.czernyszenko@gmail.com",
         "telephone": "+34604158859"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Costa Blanca Invest",
+        "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/",
+        "inLanguage": "pl"
       },
       {
         "@type": "WebPage",
@@ -1056,6 +1284,10 @@
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/",
         "description": "Nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille od deweloperów w rejonie Alicante–Benidorm.",
         "inLanguage": "pl",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/hero-sea-palm.jpg"
+        },
         "isPartOf": {
           "@type": "WebSite",
           "name": "Costa Blanca Invest",
