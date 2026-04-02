@@ -64,7 +64,6 @@
     h1, h2, h3 { margin: 0 0 14px; line-height: 1.08; }
     p { margin: 0 0 14px; color: var(--text-soft); }
 
-    /* SEO text alignment */
     .seo-box p,
     .seo-box li,
     main section:last-of-type p {
@@ -717,21 +716,6 @@
       box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
     }
 
-    .cb-map__cities {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 300px;
-      padding: 24px;
-      background: transparent;
-      pointer-events: none;
-    }
-
     .cb-map__cities-title {
       margin: 0 0 18px;
       font-size: 12px;
@@ -739,20 +723,6 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       color: rgba(31, 84, 92, 0.78);
-    }
-
-    .cb-map__cities p {
-      max-width: 260px;
-      margin: 0;
-      letter-spacing: .01em;
-      line-height: 2.15;
-    }
-
-    .cities span[data-city].is-active {
-      transform: translateY(-3px) scale(1.14);
-      opacity: 1;
-      z-index: 3;
-      text-shadow: 0 20px 44px rgba(41, 108, 118, 0.28);
     }
 
     .footer {
@@ -1037,27 +1007,6 @@
         min-height: 30px;
       }
 
-      .cb-map__cities {
-        top: auto;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        max-width: none;
-        padding: 16px 16px 18px;
-        justify-content: flex-end;
-        background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.74) 22%, rgba(255,255,255,0.9) 100%);
-      }
-
-      .cb-map__cities-title {
-        margin-bottom: 10px;
-        font-size: 11px;
-      }
-
-      .cb-map__cities p {
-        max-width: 100%;
-        line-height: 1.75;
-      }
-
       .city-lg { font-size: 20px; }
       .city-md { font-size: 16px; }
       .city-sm { font-size: 13px; }
@@ -1148,10 +1097,6 @@
         min-height: 28px;
       }
 
-      .cb-map__cities p {
-        line-height: 1.6;
-      }
-
       .city-lg { font-size: 18px; }
       .city-md { font-size: 14px; }
       .city-sm { font-size: 12px; }
@@ -1229,13 +1174,13 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#top" class="brand">Costa Blanca Invest</a>
+      <a href="/Costa-Blanca-Invest/" class="brand">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="./">Strona główna</a>
+        <a href="/Costa-Blanca-Invest/">Strona główna</a>
         <a href="#categories">Kategorie</a>
-        <a href="https://oczernyszenko.github.io/developerzy--p2/">Nowe inwestycje</a>
-        <a href="https://oczernyszenko.github.io/plots/">Działki</a>
-        <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domu</a>
+        <a href="/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
+        <a href="/Costa-Blanca-Invest/pl/plots/">Działki</a>
+        <a href="/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
         <a href="#why-us">Dlaczego my</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -1292,7 +1237,7 @@
               <div class="chip">Inwestycje</div>
               <h3>Nowe inwestycje od deweloperów na Costa Blanca</h3>
               <p class="category-copy">Apartamenty, penthouse’y i wille w najlepszych lokalizacjach Costa Blanca od Alicante do Benidormu. Kierunek dla klientów, którzy szukają nowej inwestycji w Hiszpanii pod życie, wynajem i wzrost wartości.</p>
-              <a href="https://oczernyszenko.github.io/developerzy--p2/" class="category-link">Zobacz inwestycje →</a>
+              <a href="/Costa-Blanca-Invest/pl/new-developments/" class="category-link">Zobacz inwestycje →</a>
             </div>
           </article>
 
@@ -1302,7 +1247,7 @@
               <div class="chip">Plots</div>
               <h3>Działki budowlane na Costa Blanca</h3>
               <p class="category-copy">Działki na Costa Blanca dla klientów, którzy chcą kupić grunt w Hiszpanii pod dom prywatny, projekt inwestycyjny albo wejście w development. Wybór działki zaczynamy od lokalizacji, planu urbanistycznego i potencjału wzrostu.</p>
-              <a href="https://oczernyszenko.github.io/plots/" class="category-link">Zobacz działki →</a>
+              <a href="/Costa-Blanca-Invest/pl/plots/" class="category-link">Zobacz działki →</a>
             </div>
           </article>
 
@@ -1312,7 +1257,7 @@
               <div class="chip">Build &amp; design</div>
               <h3>Szybka budowa domu w Hiszpanii</h3>
               <p class="category-copy">Kompleksowa budowa domu w Hiszpanii: działka, projekt, technologia drewniana, prefabrykowana, szkieletowa lub Thermochip, fundamenty i premium wykończenie pod klucz. Rozwiązanie dla klientów, którzy chcą budować szybciej i przewidywalnie.</p>
-              <a href="https://oczernyszenko.github.io/ecodom-p2/" class="category-link">Zobacz budowę domów →</a>
+              <a href="/Costa-Blanca-Invest/pl/build-house/" class="category-link">Zobacz budowę domów →</a>
             </div>
           </article>
         </div>
@@ -1435,7 +1380,7 @@
           <div class="phone-line">Telefon: <a href="tel:+34604158859">+34 604 15 88 59</a></div>
           <div class="cta-actions">
             <a href="tel:+34604158859" class="btn btn-main">Zadzwoń teraz</a>
-            <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="btn btn-light">💬 WhatsApp</a>
+            <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener" class="btn btn-light">💬 WhatsApp</a>
           </div>
         </div>
       </div>
@@ -1481,9 +1426,9 @@
         <p class="footer-copy">Inwestycje Costa Blanca od Alicante do Benidormu — nowe inwestycje deweloperskie, działki budowlane i budowa domu w Hiszpanii pod wzrost wartości, wynajem i drugi dom.</p>
 
         <div class="footer-links">
-          <a href="https://oczernyszenko.github.io/developerzy--p2/">Nowe inwestycje</a>
-          <a href="https://oczernyszenko.github.io/plots/">Działki</a>
-          <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domów</a>
+          <a href="/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
+          <a href="/Costa-Blanca-Invest/pl/plots/">Działki</a>
+          <a href="/Costa-Blanca-Invest/pl/build-house/">Budowa domów</a>
           <a href="#categories">Kategorie inwestycji</a>
           <a href="#why-us">Strategia inwestycyjna</a>
           <a href="#kontakt">Kontakt</a>
@@ -1539,3 +1484,4 @@
   </script>
 </body>
 </html>
+
