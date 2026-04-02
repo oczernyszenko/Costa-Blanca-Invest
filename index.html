@@ -287,8 +287,17 @@
       object-fit: cover;
       box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
       opacity: 0;
-      transform: translateY(20px) scale(.95);
+      transform: translateY(20px) scale(.95) rotate(0deg);
       animation: avatar-fade 1.2s ease forwards;
+      transition: transform .7s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, filter .35s ease;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .hero-avatar:hover {
+      transform: translateY(0) scale(1.1) rotate(8deg);
+      box-shadow: 0 30px 56px rgba(0, 0, 0, 0.28);
+      filter: saturate(1.06);
     }
 
     .hero-badge {
@@ -351,9 +360,22 @@
       position: relative;
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-      min-height: 360px;
+      min-height: 380px;
       background: #fff;
-      transition: transform .28s ease, box-shadow .28s ease;
+      transition: transform .34s cubic-bezier(.22,1,.36,1), box-shadow .34s ease, border-color .34s ease;
+      cursor: pointer;
+      isolation: isolate;
+    }
+
+    .category-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0) 18%, rgba(255,255,255,.22) 38%, rgba(255,255,255,0) 56%);
+      transform: translateX(-130%);
+      transition: transform .9s ease;
+      pointer-events: none;
+      z-index: 3;
     }
 
     .category-card::before {
@@ -373,15 +395,29 @@
     .category-card.terra::before { background: linear-gradient(180deg, #5aa048, #2f6b54); }
 
     .category-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 34px 80px rgba(15, 23, 42, 0.16);
+    }
+
+    .category-card:hover::after {
+      transform: translateX(130%);
+    }
+
+    .category-card:active {
+      transform: translateY(-3px) scale(.995);
     }
 
     .category-media {
-      min-height: 360px;
+      min-height: 380px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      transition: transform .9s cubic-bezier(.22,1,.36,1), filter .45s ease;
+    }
+
+    .category-card:hover .category-media {
+      transform: scale(1.045);
+      filter: saturate(1.05) contrast(1.02);
     }
 
     .category-media-dev { background-image: url('/Costa-Blanca-Invest/pl/new-developments/images/new-developments-hero.jpg'); }
@@ -394,8 +430,16 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 34px 32px;
+      padding: 38px 34px;
       text-align: left;
+    }
+
+    .category-body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+      pointer-events: none;
     }
 
     .category-card.blue .category-body { background: linear-gradient(180deg, #eef7fa 0%, #f7fbfc 100%); }
@@ -409,7 +453,22 @@
     }
 
     .category-card.blue .category-body h3,
-    .category-card.blue .category-link { color: var(--blue); }
+    .category-card.blue .category-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: transform .25s ease, letter-spacing .25s ease, opacity .25s ease;
+    }
+
+    .category-card:hover .category-link {
+      transform: translateX(6px);
+      letter-spacing: .01em;
+    }
+
+    .category-link:hover { transform: translateX(2px); }
     .category-card.green .category-body h3,
     .category-card.green .category-link { color: var(--terra); }
     .category-card.terra .category-body h3,
@@ -1086,15 +1145,12 @@
         </div>
 
         <div class="category-grid">
-          <article class="category-card blue fade-up">
+          <a href="/Costa-Blanca-Invest/pl/new-developments/" class="category-card blue fade-up" aria-label="Nowe inwestycje od deweloperów na Costa Blanca">
             <div class="category-media category-media-dev"></div>
             <div class="category-body">
               <div class="chip">Inwestycje</div>
               <h3>Nowe inwestycje od deweloperów na Costa Blanca</h3>
-              <p class="category-copy">Apartamenty, penthouse’y i wille w najlepszych lokalizacjach Costa Blanca od Alicante do Benidormu. Kierunek dla klientów, którzy szukają nowej inwestycji w Hiszpanii pod życie, wynajem i wzrost wartości.</p>
-              <a href="/Costa-Blanca-Invest/pl/new-developments/" class="category-link">Zobacz inwestycje →</a>
-            </div>
-          </article>
+              <p class="category-copy">Apartamenty, penthou
 
           <article class="category-card green fade-up">
             <div class="category-media category-media-plot"></div>
