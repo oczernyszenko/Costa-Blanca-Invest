@@ -99,6 +99,7 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
@@ -109,6 +110,8 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       border: 1px solid rgba(15, 23, 42, 0.05);
+      width: fit-content;
+      margin: 0 auto 18px;
     }
 
     .section-head {
@@ -248,6 +251,7 @@
 
     .hero-copy {
       padding: 34px 36px 38px;
+      text-align: center;
     }
 
     .hero-copy h1 {
@@ -294,11 +298,22 @@
       z-index: 3;
       width: 112px;
       height: 112px;
+      border: none;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      transform: translateY(20px) scale(.94) rotate(-120deg);
+      animation: avatar-fade-hero .95s cubic-bezier(.22,1,.22,1) forwards;
+      transition: transform .45s ease, box-shadow .35s ease, filter .35s ease;
+      transform-origin: center center;
+      will-change: transform;
+    }
 
     .hero-avatar.is-hovered {
-      transform: translate3d(var(--avatar-x, 0px), var(--avatar-y, 0px), 0) scale(1.14) rotate(380deg);
-      box-shadow: 0 34px 64px rgba(0, 0, 0, 0.32);
-      filter: saturate(1.1);
+      transform: translate3d(var(--avatar-x, 0px), var(--avatar-y, 0px), 0) scale(1.06) rotate(0deg);
+      box-shadow: 0 28px 54px rgba(0, 0, 0, 0.26);
+      filter: saturate(1.04);
     }
 
     .hero-badge {
@@ -318,7 +333,7 @@
       box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
       opacity: 0;
       transform: translateY(20px);
-      animation: badge-fade 1.4s ease forwards;
+      animation: badge-fade 1s ease forwards;
     }
 
     .hero-badge strong {
@@ -764,8 +779,15 @@
       object-fit: cover;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
       opacity: 0;
-      transform: translateY(20px) scale(.9) rotate(-180deg);
-      animation: avatar-fade 1.2s ease forwards;
+      transform: translateY(14px) scale(.96);
+      animation: avatar-fade-footer .85s ease forwards;
+      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    }
+
+    .footer-expert:hover img {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18);
+      filter: saturate(1.03);
     }
 
     .footer-expert-name { font-weight: 800; color: var(--primary-dark); }
@@ -821,12 +843,20 @@
 
     .fade-up.show { opacity: 1; transform: translateY(0); }
 
-    @keyframes avatar-fade {
-      0% { opacity: 0; transform: translateY(30px) scale(.9) rotate(-180deg); }
-      60% { transform: translateY(-4px) scale(1.03) rotate(20deg); }
+    @keyframes avatar-fade-hero {
+      0% { opacity: 0; transform: translateY(20px) scale(.94) rotate(-120deg); }
       100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
     }
-    @keyframes badge-fade { to { opacity: 1; transform: translateY(0); } }
+
+    @keyframes avatar-fade-footer {
+      0% { opacity: 0; transform: translateY(14px) scale(.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes badge-fade {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
     @media (max-width: 1100px) {
       .seo-grid, .info-grid { grid-template-columns: 1fr; }
@@ -1061,7 +1091,7 @@
         </div>
 
         <div class="hero-copy">
-          <span class="eyebrow" style="display:block; text-align:center;">Costa Blanca · projekty inwestycyjne</span>
+          <span class="eyebrow">Costa Blanca · projekty inwestycyjne</span>
           <h1>Inwestycje na Costa Blanca od Alicante do Benidormu — nowe inwestycje, działki i budowa domu w Hiszpanii</h1>
           <p>Dobieramy projekty inwestycyjne precyzyjnie: pod ROI, wynajem i styl życia. Specjalizacja Alicante–Benidorm — nowe inwestycje, działki budowlane i szybka budowa domu. Bez chaosu, bez ryzyka, z jasną strategią zakupu.</p>
         </div>
@@ -1148,7 +1178,7 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2 style="text-align: justify;">Inwestycje Costa Blanca — jak kupić działkę, nową inwestycję lub zbudować dom w Hiszpanii</h2>
+          <h2>Inwestycje Costa Blanca — jak kupić działkę, nową inwestycję lub zbudować dom w Hiszpanii</h2>
         </div>
         <p>Inwestycje na Costa Blanca od Alicante do Benidormu należą do najbardziej dynamicznie rozwijających się segmentów rynku nieruchomości w Hiszpanii. Region przyciąga inwestorów z całej Europy dzięki stabilnemu popytowi, całorocznemu klimatowi oraz rosnącej wartości nieruchomości.</p>
         <p>Największym zainteresowaniem cieszą się lokalizacje takie jak Alicante, El Campello, San Juan, Finestrat, Villajoyosa oraz Benidorm. To właśnie tutaj koncentrują się nowe inwestycje, apartamenty inwestycyjne oraz działki z potencjałem wzrostu wartości.</p>
@@ -1237,6 +1267,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('.hero-visual');
+      const heroBadge = document.querySelector('.hero-badge');
       const animatedCards = document.querySelectorAll('.fade-up');
       const contactForm = document.getElementById('contact-form');
 
@@ -1305,6 +1336,10 @@
           const rect = hero.getBoundingClientRect();
           targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
           targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
+
+          if (heroBadge) {
+            heroBadge.style.boxShadow = '0 18px 36px rgba(15, 23, 42, 0.12)';
+          }
           startAnimation();
         });
 
@@ -1312,6 +1347,9 @@
           targetX = 0;
           targetY = 0;
           if (avatar) avatar.classList.remove('is-hovered');
+          if (heroBadge) {
+            heroBadge.style.boxShadow = '0 14px 34px rgba(15, 23, 42, 0.10)';
+          }
           startAnimation();
         });
       }
