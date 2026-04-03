@@ -38,14 +38,12 @@
       --primary-pale: #f8fcfe;
       --accent: #e28743;
       --accent-dark: #c8742f;
-      --eco: #3e8028;
       --investment: #76b5c5;
+      --eco: #3e8028;
       --plots: #873e23;
-      --sand: #eab676;
       --sand-soft: #faf3e7;
       --text: #1f2933;
       --text-soft: #5f6b76;
-      --white: #ffffff;
       --line: rgba(15, 23, 42, 0.08);
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       --radius: 22px;
@@ -54,6 +52,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -61,11 +60,23 @@
       background: linear-gradient(180deg, #ffffff 0%, #fdf7ef 100%);
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     a { color: inherit; }
-    h1, h2, h3 { margin: 0 0 14px; line-height: 1.15; }
-    p { margin: 0 0 14px; line-height: 1.72; color: var(--text-soft); }
-    ul { margin: 0; padding-left: 18px; color: var(--text-soft); line-height: 1.72; }
+
+    h1, h2, h3 {
+      margin: 0 0 14px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.72;
+      color: var(--text-soft);
+    }
 
     .container {
       width: min(var(--maxw), calc(100% - 32px));
@@ -73,6 +84,8 @@
     }
 
     .section {
+      position: relative;
+      overflow: hidden;
       padding: 84px 0;
       scroll-margin-top: 90px;
     }
@@ -93,7 +106,10 @@
       text-wrap: balance;
     }
 
-    .section-developers .section-title h2 { color: #2c6f7a; }
+    .section-developers .section-title h2 {
+      color: #2c6f7a;
+    }
+
     .section-title p {
       max-width: 860px;
       margin: 0 auto;
@@ -104,101 +120,112 @@
       display: inline-block;
       margin-bottom: 14px;
       padding: 8px 14px;
+      border: 1px solid rgba(31, 84, 92, 0.12);
       border-radius: 999px;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       color: var(--primary-dark);
       font-size: 13px;
       font-weight: 800;
-      border: 1px solid rgba(31,84,92,0.12);
     }
 
     .btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      overflow: hidden;
+      isolation: isolate;
       padding: 14px 24px;
+      border: none;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 800;
-      transition: transform .28s ease, box-shadow .28s ease, filter .28s ease, background .28s ease, border-color .28s ease;
-      border: none;
       cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
+      transition:
+        transform .28s ease,
+        box-shadow .28s ease,
+        filter .28s ease,
+        background .28s ease,
+        border-color .28s ease;
     }
 
     .btn::before {
       content: "";
       position: absolute;
       inset: 0;
+      z-index: -1;
       background: linear-gradient(120deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0) 80%);
       transform: translateX(-140%);
       transition: transform .7s ease;
-      z-index: -1;
     }
 
-    .btn:hover::before { transform: translateX(140%); }
-    .btn:active { transform: translateY(0) scale(.98); }
+    .btn:hover::before {
+      transform: translateX(140%);
+    }
+
+    .btn:active {
+      transform: translateY(0) scale(.98);
+    }
+
     .btn:focus-visible,
-    .nav-toggle:focus-visible,
     nav a:focus-visible,
     .contact-links a:focus-visible,
     .whatsapp-float:focus-visible,
     .contact-form input:focus-visible,
-    .contact-form textarea:focus-visible {
-      outline: 3px solid rgba(226,135,67,0.42);
+    .contact-form textarea:focus-visible,
+    .share-btn:focus-visible {
+      outline: 3px solid rgba(226, 135, 67, 0.42);
       outline-offset: 3px;
     }
 
     .btn-main {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
       color: #fff;
-      box-shadow: 0 10px 24px rgba(226,135,67,0.35);
+      box-shadow: 0 10px 24px rgba(226, 135, 67, 0.35);
     }
 
     .btn-main:hover {
       transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 18px 34px rgba(200,116,47,0.34);
+      box-shadow: 0 18px 34px rgba(200, 116, 47, 0.34);
       filter: saturate(1.08) brightness(1.02);
     }
 
     .btn-light {
+      border: 2px solid var(--accent);
       background: #fff;
       color: var(--primary);
-      border: 2px solid var(--accent);
       box-shadow: 0 6px 16px rgba(0,0,0,0.05);
     }
 
     .btn-light:hover {
       transform: translateY(-3px) scale(1.01);
       background: var(--primary-soft);
-      box-shadow: 0 16px 30px rgba(41,108,118,0.12);
+      box-shadow: 0 16px 30px rgba(41, 108, 118, 0.12);
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
 
     .header-inner {
-      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      min-height: 76px;
     }
 
     .logo {
+      color: var(--primary-dark);
       font-size: 22px;
       font-weight: 900;
-      color: var(--primary-dark);
       text-decoration: none;
       white-space: nowrap;
     }
@@ -207,22 +234,24 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      width: auto;
       margin-left: auto;
     }
 
     nav {
       display: flex;
-      gap: 16px;
       flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 16px;
     }
 
     nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 700;
-      font-size: 14px;
       position: relative;
       padding-bottom: 2px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
       transition: color .22s ease;
     }
 
@@ -240,49 +269,33 @@
       transition: transform .22s ease;
     }
 
-    nav a:hover { color: var(--accent); }
-    nav a:hover::after { transform: scaleX(1); }
-
-    .nav-toggle {
-      display: none;
-      border: none;
-      background: transparent;
-      font-size: 30px;
-      color: var(--primary-dark);
-      cursor: pointer;
+    nav a:hover {
+      color: var(--accent);
     }
 
-    .menu-overlay {
-      position: fixed;
-      inset: 76px 0 0 0;
-      background: rgba(0,0,0,0.42);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .25s ease;
-      z-index: 900;
-    }
-
-    .menu-overlay.show {
-      opacity: 1;
-      pointer-events: auto;
+    nav a:hover::after {
+      transform: scaleX(1);
     }
 
     .hero {
       padding: 34px 0 76px;
       background: linear-gradient(180deg, var(--primary-pale) 0%, #ffffff 100%);
     }
+
     .hero-media,
     .card {
       overflow: hidden;
     }
 
     .hero-media {
+      position: relative;
       margin-bottom: 26px;
-      border-radius: 26px;
-      box-shadow: var(--shadow);
       border: 1px solid var(--line);
+      border-radius: 26px;
       background: #fff;
+      box-shadow: var(--shadow);
     }
+
     .hero-media img,
     .card img {
       transition: transform .55s ease, filter .45s ease;
@@ -314,43 +327,42 @@
     .hero-content > *:nth-child(2) { animation-delay: .05s; }
     .hero-content > *:nth-child(3) { animation-delay: .1s; }
     .hero-content > *:nth-child(4) { animation-delay: .15s; }
-    .hero-content > *:nth-child(5) { animation-delay: .2s; }
 
     .hero h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      color: var(--primary-dark);
       max-width: 980px;
       margin-inline: auto;
+      color: var(--primary-dark);
+      font-size: clamp(36px, 5vw, 58px);
       letter-spacing: -0.02em;
       text-wrap: balance;
     }
 
     .hero p {
-      color: var(--text-soft);
-      font-size: 18px;
       max-width: 860px;
       margin-inline: auto;
+      color: var(--text-soft);
+      font-size: 18px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 14px;
       margin-top: 24px;
     }
+
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
-    .card,
-    .contact-box,
-    .seo-article {
 
-      background: #fff;
+    .card,
+    .seo-article {
       border: 1px solid var(--line);
       border-radius: var(--radius);
+      background: #fff;
       box-shadow: var(--shadow);
     }
 
@@ -362,7 +374,7 @@
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 36px rgba(15,23,42,0.14);
+      box-shadow: 0 20px 36px rgba(15, 23, 42, 0.14);
     }
 
     .card img {
@@ -372,26 +384,26 @@
     }
 
     .card-body {
-      padding: 22px;
       display: flex;
+      flex: 1;
       flex-direction: column;
       gap: 10px;
-      flex: 1;
+      padding: 22px;
     }
 
     .card-investments {
+      border-color: rgba(118, 181, 197, 0.25);
       background: linear-gradient(180deg, #ffffff 0%, #f2fbfe 100%);
-      border-color: rgba(118,181,197,0.25);
     }
 
     .card-eco {
+      border-color: rgba(62, 128, 40, 0.25);
       background: linear-gradient(180deg, #ffffff 0%, #f3fbf3 100%);
-      border-color: rgba(62,128,40,0.25);
     }
 
     .card-plots {
+      border-color: rgba(135, 62, 35, 0.25);
       background: linear-gradient(180deg, #ffffff 0%, #fcf4ef 100%);
-      border-color: rgba(135,62,35,0.25);
     }
 
     .card-investments h3 { color: #2c6f7a; }
@@ -400,17 +412,21 @@
 
     .chip {
       display: inline-flex;
+      width: fit-content;
       align-items: center;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(226,135,67,0.18);
+      background: rgba(226, 135, 67, 0.18);
       color: #b07a2f;
       font-size: 12px;
       font-weight: 800;
-      width: fit-content;
     }
 
-    .section-developers .chip { background: rgba(118,181,197,0.18); color: #2c6f7a; }
+    .section-developers .chip {
+      background: rgba(118, 181, 197, 0.18);
+      color: #2c6f7a;
+    }
+
     .seo-articles {
       display: grid;
       gap: 18px;
@@ -420,8 +436,8 @@
 
     .seo-article {
       position: relative;
+      overflow: visible;
       padding: 28px 28px 28px 34px;
-      overflow: hidden;
     }
 
     .seo-article::before {
@@ -433,55 +449,91 @@
     }
 
     .seo-article-investments {
+      border-color: rgba(118, 181, 197, 0.28);
       background: linear-gradient(180deg, #ffffff 0%, #f2fbfe 100%);
-      border-color: rgba(118,181,197,0.28);
     }
 
-    .seo-article-investments::before { background: var(--investment); }
-    .seo-article-investments h3 { color: #2c6f7a; }
-
-    .seo-article-eco {
-      background: linear-gradient(180deg, #ffffff 0%, #f3fbf3 100%);
-      border-color: rgba(62,128,40,0.24);
+    .seo-article-investments::before {
+      background: var(--investment);
     }
 
-    .seo-article-eco::before { background: var(--eco); }
-    .seo-article-eco h3 { color: #2e6b1f; }
-
-    .seo-article-plots {
-      background: linear-gradient(180deg, #ffffff 0%, #fcf4ef 100%);
-      border-color: rgba(135,62,35,0.26);
+    .seo-article-investments h3 {
+      color: #2c6f7a;
     }
 
-    .seo-article-plots::before { background: var(--plots); }
-    .seo-article-plots h3 { color: #6a2d16; }
+    .seo-article p {
+      margin: 0 0 14px;
+    }
 
-    .seo-article p { margin: 0 0 14px; }
+    .priority-note {
+      max-width: 860px;
+      margin: 0 auto 26px;
+      color: var(--text-soft);
+      font-size: 17px;
+      line-height: 1.7;
+      text-align: center;
+    }
 
     .contact-box {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 36px;
-      text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, var(--primary-pale) 100%);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      max-width: 1200px;
+      margin-top: 28px;
+      padding: 42px 32px 38px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(247,249,250,0.98) 100%);
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+      text-align: center;
     }
 
-    .contact-box::before {
-      content: "";
-      position: absolute;
-      inset: auto -60px -80px auto;
-      width: 220px;
-      height: 220px;
+    .contact-avatar {
+      margin: 18px auto 16px;
+      text-align: center;
+    }
+
+    .contact-avatar img {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 12px;
+      border: 4px solid rgba(255,255,255,0.82);
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(41,108,118,0.10) 0%, rgba(41,108,118,0) 70%);
-      pointer-events: none;
+      object-fit: cover;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.16);
+    }
+
+    .contact-avatar-name {
+      color: var(--primary-dark);
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .contact-avatar-role {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 18px;
+    }
+
+    .contact-links a {
+      color: #6b7280;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
     }
 
     .contact-form {
       display: grid;
       gap: 14px;
+      max-width: 860px;
+      margin-top: 24px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: left;
     }
 
@@ -495,19 +547,32 @@
     .contact-form textarea {
       width: 100%;
       padding: 15px 16px;
+      border: 1px solid rgba(15, 23, 42, 0.12);
       border-radius: 16px;
-      border: 1px solid rgba(15,23,42,0.12);
-      background: #ffffff;
+      background: rgba(255,255,255,0.92);
       color: var(--text);
-      outline: none;
       font-family: inherit;
-      font-size: 15px;
+      font-size: 16px;
+      outline: none;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.55) inset;
+      transition:
+        border-color .22s ease,
+        box-shadow .22s ease,
+        transform .22s ease,
+        background .22s ease;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #97a3ad;
     }
 
     .contact-form input:focus,
     .contact-form textarea:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(41,108,118,0.12);
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 0 0 4px rgba(41,108,118,0.12), 0 0 0 1px rgba(255,255,255,0.72) inset;
+      transform: translateY(-1px);
     }
 
     .contact-form textarea {
@@ -515,13 +580,132 @@
       resize: vertical;
     }
 
-    .priority-note {
-      max-width: 860px;
-      margin: 0 auto 26px;
+    .share-box {
+      margin-top: 22px;
       text-align: center;
-      font-size: 17px;
+    }
+
+    .share-title {
+      margin-bottom: 14px;
+      color: #5f6b76;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .share-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .share-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      color: #4b5563;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.35);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .share-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.45);
+    }
+
+    .share-btn:active {
+      transform: scale(0.96);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .share-fb {
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(59,130,246,0.25);
+      color: #fff;
+    }
+
+    .footer-card {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 34px 28px;
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(41,108,118,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,251,0.98) 100%);
+      box-shadow: 0 24px 60px rgba(15,23,42,0.08);
+      text-align: center;
+    }
+
+    .footer-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 120px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      transform: translateX(-50%);
+    }
+
+    .footer-brand {
+      margin-bottom: 12px;
+      color: var(--primary-dark);
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      text-align: center;
+    }
+
+    .footer-copy {
+      max-width: 980px;
+      margin: 0 auto 10px;
       color: var(--text-soft);
-      line-height: 1.7;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 20px;
+      margin-top: 22px;
+      margin-bottom: 0;
+    }
+
+    .footer-links a {
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .22s ease, transform .22s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .footer-bottom {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(15,23,42,0.06);
+      color: #97a3ad;
+      font-size: 12px;
+      text-align: center;
     }
 
     .whatsapp-float {
@@ -537,109 +721,154 @@
       border-radius: 999px;
       background: linear-gradient(135deg, #25d366 0%, #149e48 100%);
       color: #fff;
-      text-decoration: none;
       font-weight: 800;
+      text-decoration: none;
       box-shadow: 0 12px 24px rgba(37,211,102,0.28);
       transition: transform .25s ease;
       pointer-events: auto;
     }
 
-    .whatsapp-float:hover { transform: translateY(-2px); }
-
-    footer {
-      background: linear-gradient(180deg, #12536b 0%, #0e4357 100%);
-      padding: 34px 0 44px;
-      text-align: center;
-      color: #ffffff;
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
     }
-
-    footer strong {
-      display: block;
-      margin-bottom: 10px;
-      color: #ffffff;
-      font-size: 18px;
-    }
-
-    footer p { color: rgba(255,255,255,0.85); }
 
     @media (max-width: 980px) {
-      .nav-toggle { display: block; }
+      .header-inner {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 14px 0;
+      }
+
+      .nav-wrap {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+      }
 
       nav {
-        position: fixed;
-        top: 76px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        padding: 22px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height .25s ease, opacity .25s ease;
-        box-shadow: 0 12px 26px rgba(15,23,42,0.08);
-        z-index: 1001;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
       }
 
-      nav.open {
-        max-height: 520px;
-        opacity: 1;
+      nav a {
+        font-size: 14px;
+        text-align: center;
+        white-space: normal;
       }
     }
+
     @media (max-width: 920px) {
       .grid-3,
       .contact-form-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero p { font-size: 16px; }
-      .hero-media img { height: 300px; }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+      .hero p {
+        font-size: 16px;
       }
 
-      .hero-actions .btn,
-      .contact-form .btn {
-        width: 100%;
+      .hero-media img {
+        height: 300px;
       }
 
-      .section { padding: 72px 0; }
-      .container { width: min(var(--maxw), calc(100% - 22px)); }
+      .section {
+        padding: 72px 0;
+      }
+
+      .container {
+        width: min(var(--maxw), calc(100% - 22px));
+      }
     }
+
     @media (max-width: 768px) {
       .header-inner {
-        align-items: flex-start;
-        padding: 10px 0;
+        align-items: center;
+        padding: 12px 0;
       }
 
       .nav-wrap {
-        gap: 10px;
-        align-items: flex-start;
+        width: 100%;
+        justify-content: center;
       }
 
-      .section-title { margin-bottom: 28px; }
-      .contact-box { padding: 24px 18px; }
+      nav {
+        gap: 10px 14px;
+      }
+
+      .section-title {
+        margin-bottom: 28px;
+      }
+
+      .contact-box {
+        padding: 24px 18px;
+      }
     }
+
     @media (max-width: 560px) {
-      body { font-size: 15px; }
-      .logo { font-size: 18px; max-width: 190px; white-space: normal; line-height: 1.15; }
-      .header-inner { min-height: 70px; gap: 12px; }
-      .nav-wrap { width: 100%; justify-content: space-between; }
-      .hero { padding: 20px 0 60px; }
-      .hero h1 { font-size: clamp(30px, 9vw, 42px); }
-      .hero-media { border-radius: 18px; }
+      body {
+        font-size: 15px;
+      }
+
+      .logo {
+        max-width: 190px;
+        color: var(--primary-dark);
+        font-size: 18px;
+        line-height: 1.15;
+        white-space: normal;
+        text-align: center;
+      }
+
+      .header-inner {
+        min-height: auto;
+        gap: 10px;
+      }
+
+      .nav-wrap {
+        width: 100%;
+      }
+
+      nav {
+        gap: 10px 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 20px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(30px, 9vw, 42px);
+      }
+
+      .hero-media {
+        border-radius: 18px;
+      }
 
       .contact-box,
       .card-body,
-      .seo-article {
+      .seo-article,
+      .footer-card {
         padding: 18px;
       }
+
       .contact-form input,
-      .contact-form textarea { padding: 14px; }
+      .contact-form textarea {
+        padding: 14px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-bottom {
+        font-size: 11px;
+      }
 
       .whatsapp-float {
         right: 12px;
@@ -650,24 +879,27 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="menu-overlay"></div>
-
   <header>
     <div class="container header-inner">
       <a href="#hero" class="logo">Costa Blanca Invest</a>
       <div class="nav-wrap">
-        <button class="nav-toggle" aria-label="Menu">☰</button>
         <nav>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Start</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Deweloperzy</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Strona główna</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
           <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Eco dom</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
           <a href="#contact">Kontakt</a>
         </nav>
       </div>
@@ -675,192 +907,213 @@
   </header>
 
   <main>
-  <section class="hero section" id="hero">
-    <div class="container">
-      <div class="hero-media">
-        <img src="images/hero-sea-palm.jpg" alt="Nowe inwestycje od deweloperów na Costa Blanca">
-      </div>
-      <div class="hero-content">
-        <span class="eyebrow">Costa Blanca · deweloperzy</span>
-        <h1>Nowe inwestycje Hiszpania – Costa Blanca od deweloperów</h1>
-        <p>Wyselekcjonowane projekty od sprawdzonych deweloperów w Hiszpanii — apartamenty, penthouse’y i wille z potencjałem inwestycyjnym, wynajmu i wzrostu wartości.</p>
-        <p>Ta strona skupia się wyłącznie na nowych inwestycjach na Costa Blanca. Znajdziesz tu wybrane projekty, wewnętrzne linkowanie do kart inwestycji oraz treść SEO wspierającą widoczność pod frazy związane z nieruchomościami od deweloperów w Hiszpanii.</p>
-        <div class="hero-actions">
-          <a class="btn btn-main" href="#links">Zobacz kategorie</a>
-          <a class="btn btn-light" href="#contact">Kontakt</a>
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero-media">
+          <img src="images/hero-sea-palm.jpg" alt="Nowe inwestycje od deweloperów na Costa Blanca">
+        </div>
+
+        <div class="hero-content">
+          <span class="eyebrow">Costa Blanca · deweloperzy</span>
+          <h1>Nowe inwestycje Hiszpania – Costa Blanca od deweloperów</h1>
+          <p>Wyselekcjonowane projekty od sprawdzonych deweloperów w Hiszpanii — apartamenty, penthouse’y i wille z potencjałem inwestycyjnym, wynajmu i wzrostu wartości.</p>
+          <p>Ta strona skupia się wyłącznie na nowych inwestycjach na Costa Blanca. Znajdziesz tu wybrane projekty, wewnętrzne linkowanie do kart inwestycji oraz treść SEO wspierającą widoczność pod frazy związane z nieruchomościami od deweloperów w Hiszpanii.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-developers" id="developers">
-    <div class="container">
-      <header class="section-title">
-        <h2>Sprawdzeni deweloperzy na Costa Blanca</h2>
-        <p>Współpracujemy tylko z deweloperami, którzy mają historię realizacji, dobrą reputację i projekty w mocnych lokalizacjach.</p>
-      </header>
-      <p class="priority-note">Wybór odpowiedniego dewelopera na Costa Blanca to kluczowy element bezpiecznej inwestycji w Hiszpanii. Analizujemy historię realizacji, jakość budowy oraz potencjał lokalizacji, aby oferować tylko projekty z realnym wzrostem wartości i wysokim zainteresowaniem najmem.</p>
-      <div style="text-align:center;margin-bottom:30px;"><a href="#contact" class="btn btn-main">Zapytaj o dostępne inwestycje</a></div>
-      <div class="grid-3">
-        <article class="card card-investments">
-          <div class="card-body">
-            <div class="chip">Selekcja</div>
-            <h3>Selekcja projektów</h3>
-            <p>Pokazujemy tylko inwestycje, które mają sens inwestycyjny, dobrą płynność wyjścia i potencjał wzrostu wartości.</p>
-          </div>
+    <section class="section section-developers" id="developers">
+      <div class="container">
+        <header class="section-title">
+          <h2>Sprawdzeni deweloperzy na Costa Blanca</h2>
+          <p>Współpracujemy tylko z deweloperami, którzy mają historię realizacji, dobrą reputację i projekty w mocnych lokalizacjach.</p>
+        </header>
+
+        <p class="priority-note">Wybór odpowiedniego dewelopera na Costa Blanca to kluczowy element bezpiecznej inwestycji w Hiszpanii. Analizujemy historię realizacji, jakość budowy oraz potencjał lokalizacji, aby oferować tylko projekty z realnym wzrostem wartości i wysokim zainteresowaniem najmem.</p>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+          <a href="#contact" class="btn btn-main">Zapytaj o dostępne inwestycje</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card-investments">
+            <div class="card-body">
+              <div class="chip">Selekcja</div>
+              <h3>Selekcja projektów</h3>
+              <p>Pokazujemy tylko inwestycje, które mają sens inwestycyjny, dobrą płynność wyjścia i potencjał wzrostu wartości.</p>
+            </div>
+          </article>
+
+          <article class="card card-investments">
+            <div class="card-body">
+              <div class="chip">Lokalizacja</div>
+              <h3>Mocne lokalizacje</h3>
+              <p>Analizujemy nie tylko projekt, ale też otoczenie, dostęp do morza, infrastrukturę, lifestyle i potencjał wynajmu.</p>
+            </div>
+          </article>
+
+          <article class="card card-investments">
+            <div class="card-body">
+              <div class="chip">Bezpieczeństwo</div>
+              <h3>Przejrzysty proces zakupu</h3>
+              <p>Pracujemy wyłącznie z partnerami, którzy gwarantują czytelny proces, dobrą dokumentację i przewidywalny standard realizacji.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="links">
+      <div class="container">
+        <header class="section-title">
+          <h2>3 główne kierunki inwestycji</h2>
+          <p>Wybierz kategorię i przejdź do odpowiednich ofert.</p>
+        </header>
+
+        <div class="grid-3">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" class="card card-investments" style="text-decoration: none;">
+            <img src="images/new-dev.jpg" alt="Nowe inwestycje Costa Blanca">
+            <div class="card-body">
+              <h3>Nowe inwestycje</h3>
+              <p>Nowe apartamenty, penthouse’y i wille od sprawdzonych deweloperów.</p>
+            </div>
+          </a>
+
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/" class="card card-plots" style="text-decoration: none;">
+            <img src="images/wood-project.jpg" alt="Działki Costa Blanca">
+            <div class="card-body">
+              <h3>Działki</h3>
+              <p>Grunty inwestycyjne pod budowę i projekty deweloperskie.</p>
+            </div>
+          </a>
+
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/" class="card card-eco" style="text-decoration: none;">
+            <img src="images/wood-project-2.jpg" alt="Budowa domu Costa Blanca">
+            <div class="card-body">
+              <h3>Budowa domu</h3>
+              <p>Budowa nowoczesnych domów w technologii ekologicznej.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand" id="seo">
+      <div class="container">
+        <header class="section-title">
+          <h2>Nowe inwestycje w Hiszpanii — analiza rynku Costa Blanca</h2>
+          <p>Rynek nieruchomości na Costa Blanca pozostaje jednym z najmocniejszych segmentów dla klientów zagranicznych. Największe zainteresowanie generują nowe apartamenty, nowoczesne wille i nieruchomości premium od deweloperów.</p>
+        </header>
+
+        <article class="seo-article seo-article-investments" style="max-width: 900px; margin: 0 auto;">
+          <h3>Dlaczego nowe inwestycje od deweloperów na Costa Blanca są tak ważne</h3>
+          <p>Nowe inwestycje od deweloperów na Costa Blanca to obecnie jeden z najmocniejszych segmentów rynku nieruchomości w Hiszpanii. Klienci szukają dziś projektów, które łączą nowoczesny standard, dobrą lokalizację, potencjał wzrostu wartości i możliwość wynajmu. Dlatego apartamenty, penthouse’y i wille w nowych inwestycjach generują największe zainteresowanie zarówno wśród klientów prywatnych, jak i inwestorów.</p>
+          <p>Dobrze zaprojektowana strona pod frazy takie jak nowe inwestycje Hiszpania, nowe apartamenty Costa Blanca, wille od dewelopera w Hiszpanii czy nieruchomości Costa Blanca pozwala budować widoczność organiczną w Google. Kluczowe znaczenie ma tutaj nie tylko treść, ale również struktura strony: mocny nagłówek H1, logiczne sekcje, siatka inwestycji oraz osobne karty ofert jako 3 poziom serwisu.</p>
+          <p>Costa Blanca przyciąga kupujących dzięki klimatowi, infrastrukturze, dostępowi do morza i wysokiej rozpoznawalności regionu. W praktyce oznacza to, że dobrze wybrane nowe inwestycje mają większą płynność sprzedaży, mocniejszy potencjał odsprzedażowy i stabilniejsze zainteresowanie najmem. Właśnie dlatego współpraca ze sprawdzonymi deweloperami jest tak istotna z punktu widzenia jakości oferty i bezpieczeństwa zakupu.</p>
+          <p>Na poziomie SEO ważne jest także wewnętrzne linkowanie. Strona główna kategorii powinna prowadzić do kart inwestycji, a jednocześnie linkować do innych sekcji serwisu, takich jak działki, budowa domu czy nieruchomości premium. Taki układ wzmacnia architekturę informacji, poprawia indeksację i zwiększa szansę na lepsze pozycje dla kluczowych zapytań związanych z rynkiem nieruchomości w Hiszpanii.</p>
         </article>
-        <article class="card card-investments">
-          <div class="card-body">
-            <div class="chip">Lokalizacja</div>
-            <h3>Mocne lokalizacje</h3>
-            <p>Analizujemy nie tylko projekt, ale też otoczenie, dostęp do morza, infrastrukturę, lifestyle i potencjał wynajmu.</p>
-          </div>
-        </article>
-        <article class="card card-investments">
-          <div class="card-body">
-            <div class="chip">Bezpieczeństwo</div>
-            <h3>Przejrzysty proces zakupu</h3>
-            <p>Pracujemy wyłącznie z partnerami, którzy gwarantują czytelny proces, dobrą dokumentację i przewidywalny standard realizacji.</p>
-          </div>
-        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
+    <section class="section section-soft" id="faq">
+      <div class="container">
+        <header class="section-title">
+          <h2>FAQ — nowe inwestycje od deweloperów na Costa Blanca</h2>
+          <p>Najczęstsze pytania klientów dotyczące zakupu nowej nieruchomości w Hiszpanii.</p>
+        </header>
 
-  
+        <div class="seo-articles">
+          <section class="seo-article seo-article-investments">
+            <h3>Czy warto kupić nową nieruchomość od dewelopera na Costa Blanca?</h3>
+            <p>Tak, ponieważ nowe inwestycje oferują nowoczesny standard, lepszą efektywność energetyczną, atrakcyjne lokalizacje i większą przewidywalność zakupu niż wiele starszych nieruchomości.</p>
+          </section>
 
-  <section class="section section-soft" id="links">
-  <div class="container">
-    <header class="section-title">
-      <h2>3 główne kierunki inwestycji</h2>
-      <p>Wybierz kategorię i przejdź do odpowiednich ofert.</p>
-    </header>
+          <section class="seo-article seo-article-investments">
+            <h3>Jakie inwestycje są najczęściej wybierane przez klientów?</h3>
+            <p>Największym zainteresowaniem cieszą się nowe apartamenty, penthouse’y i wille na Costa Blanca, szczególnie w lokalizacjach blisko morza oraz infrastruktury miejskiej.</p>
+          </section>
 
-    <div class="grid-3">
-      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" class="card card-investments" style="text-decoration:none;">
-        <img src="images/new-dev.jpg" alt="Deweloperzy Costa Blanca">
-        <div class="card-body">
-          <h3>Deweloperzy</h3>
-          <p>Nowe apartamenty, penthouse’y i wille od sprawdzonych deweloperów</p>
+          <section class="seo-article seo-article-investments">
+            <h3>Ile można zarobić na inwestycji na Costa Blanca?</h3>
+            <p>Rentowność inwestycji w nieruchomości na Costa Blanca zależy od lokalizacji i typu projektu, ale w wielu przypadkach wynosi od 5% do 8% rocznie przy wynajmie krótkoterminowym. Dodatkowo inwestorzy korzystają ze wzrostu wartości nieruchomości w czasie.</p>
+          </section>
+
+          <section class="seo-article seo-article-investments">
+            <h3>Jak szybko zwraca się inwestycja w Hiszpanii?</h3>
+            <p>Średni okres zwrotu inwestycji w nieruchomości na Costa Blanca wynosi od 10 do 15 lat, w zależności od strategii wynajmu i wzrostu cen. Najlepsze projekty w top lokalizacjach osiągają jeszcze lepsze wyniki.</p>
+          </section>
+
+          <section class="seo-article seo-article-investments">
+            <h3>Dlaczego strona z kartami inwestycji jest ważna dla SEO?</h3>
+            <p>Osobne karty ofert pozwalają pozycjonować konkretne inwestycje, wzmacniają linkowanie wewnętrzne i zwiększają szanse na ruch z długich, bardziej sprzedażowych fraz.</p>
+          </section>
         </div>
-      </a>
-
-      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/" class="card card-plots" style="text-decoration:none;">
-        <img src="images/wood-project.jpg" alt="Działki Costa Blanca">
-        <div class="card-body">
-          <h3>Działki</h3>
-          <p>Grunty inwestycyjne pod budowę i projekty deweloperskie</p>
-        </div>
-      </a>
-
-      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/" class="card card-eco" style="text-decoration:none;">
-        <img src="images/wood-project-2.jpg" alt="Eco dom Hiszpania">
-        <div class="card-body">
-          <h3>Eco dom</h3>
-          <p>Budowa nowoczesnych domów w technologii ekologicznej</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-  <section class="section section-sand" id="seo">
-    <div class="container">
-      <header class="section-title">
-        <h2>Nowe inwestycje w Hiszpanii — analiza rynku Costa Blanca</h2>
-        <p>Rynek nieruchomości na Costa Blanca pozostaje jednym z najmocniejszych segmentów dla klientów zagranicznych. Największe zainteresowanie generują nowe apartamenty, nowoczesne wille i nieruchomości premium od deweloperów.</p>
-      </header>
-      <article class="seo-article seo-article-investments" style="max-width:900px;margin:0 auto;">
-        <h3>Dlaczego nowe inwestycje od deweloperów na Costa Blanca są tak ważne</h3>
-        <p>Nowe inwestycje od deweloperów na Costa Blanca to obecnie jeden z najmocniejszych segmentów rynku nieruchomości w Hiszpanii. Klienci szukają dziś projektów, które łączą nowoczesny standard, dobrą lokalizację, potencjał wzrostu wartości i możliwość wynajmu. Dlatego apartamenty, penthouse’y i wille w nowych inwestycjach generują największe zainteresowanie zarówno wśród klientów prywatnych, jak i inwestorów.</p>
-        <p>Dobrze zaprojektowana strona pod frazy takie jak nowe inwestycje Hiszpania, nowe apartamenty Costa Blanca, wille od dewelopera w Hiszpanii czy nieruchomości Costa Blanca pozwala budować widoczność organiczną w Google. Kluczowe znaczenie ma tutaj nie tylko treść, ale również struktura strony: mocny nagłówek H1, logiczne sekcje, siatka inwestycji oraz osobne karty ofert jako 3 poziom serwisu.</p>
-        <p>Costa Blanca przyciąga kupujących dzięki klimatowi, infrastrukturze, dostępowi do morza i wysokiej rozpoznawalności regionu. W praktyce oznacza to, że dobrze wybrane nowe inwestycje mają większą płynność sprzedaży, mocniejszy potencjał odsprzedażowy i stabilniejsze zainteresowanie najmem. Właśnie dlatego współpraca ze sprawdzonymi deweloperami jest tak istotna z punktu widzenia jakości oferty i bezpieczeństwa zakupu.</p>
-        <p>Na poziomie SEO ważne jest także wewnętrzne linkowanie. Strona główna kategorii powinna prowadzić do kart inwestycji, a jednocześnie linkować do innych sekcji serwisu, takich jak działki, budowa domu czy nieruchomości premium. Taki układ wzmacnia architekturę informacji, poprawia indeksację i zwiększa szansę na lepsze pozycje dla kluczowych zapytań związanych z rynkiem nieruchomości w Hiszpanii.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section-soft" id="faq">
-    <div class="container">
-      <header class="section-title">
-        <h2>FAQ — nowe inwestycje od deweloperów na Costa Blanca</h2>
-        <p>Najczęstsze pytania klientów dotyczące zakupu nowej nieruchomości w Hiszpanii.</p>
-      </header>
-      <div class="seo-articles">
-        <section class="seo-article seo-article-investments">
-          <h3>Czy warto kupić nową nieruchomość od dewelopera na Costa Blanca?</h3>
-          <p>Tak, ponieważ nowe inwestycje oferują nowoczesny standard, lepszą efektywność energetyczną, atrakcyjne lokalizacje i większą przewidywalność zakupu niż wiele starszych nieruchomości.</p>
-        </section>
-        <section class="seo-article seo-article-investments">
-          <h3>Jakie inwestycje są najczęściej wybierane przez klientów?</h3>
-          <p>Największym zainteresowaniem cieszą się nowe apartamenty, penthouse’y i wille na Costa Blanca, szczególnie w lokalizacjach blisko morza oraz infrastruktury miejskiej.</p>
-        </section>
-        <section class="seo-article seo-article-investments">
-          <h3>Ile można zarobić na inwestycji na Costa Blanca?</h3>
-          <p>Rentowność inwestycji w nieruchomości na Costa Blanca zależy od lokalizacji i typu projektu, ale w wielu przypadkach wynosi od 5% do 8% rocznie przy wynajmie krótkoterminowym. Dodatkowo inwestorzy korzystają ze wzrostu wartości nieruchomości w czasie.</p>
-        </section>
-        <section class="seo-article seo-article-investments">
-          <h3>Jak szybko zwraca się inwestycja w Hiszpanii?</h3>
-          <p>Średni okres zwrotu inwestycji w nieruchomości na Costa Blanca wynosi od 10 do 15 lat, w zależności od strategii wynajmu i wzrostu cen. Najlepsze projekty w top lokalizacjach osiągają jeszcze lepsze wyniki.</p>
-        </section>
-        <section class="seo-article seo-article-investments">
-          <h3>Dlaczego strona z kartami inwestycji jest ważna dla SEO?</h3>
-          <p>Osobne karty ofert pozwalają pozycjonować konkretne inwestycje, wzmacniają linkowanie wewnętrzne i zwiększają szanse na ruch z długich, bardziej sprzedażowych fraz.</p>
-        </section>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-soft" id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <div style="display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;">
-          <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" style="width:70px;height:70px;border-radius:50%;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,0.15);">
-          <div style="text-align:left;">
-            <strong style="display:block;font-size:18px;color:#1f545c;">Olga</strong>
-            <span style="font-size:14px;color:#5f6b76;">Specjalista nieruchomości Costa Blanca</span>
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Zapytaj o inwestycję</h2>
+          <p class="priority-note">Skontaktuj się, aby otrzymać wybrane oferty dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.</p>
+
+          <div class="contact-avatar">
+            <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
+            <div class="contact-avatar-name">Olga Chernyshenko</div>
+            <div class="contact-avatar-role">Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm</div>
+          </div>
+
+          <div class="contact-links">
+            <a href="tel:+34604158859">+34 604 15 88 59</a>
+            <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 0;">
+            <a class="btn btn-main" href="tel:+34604158859">📞 Zadzwoń teraz</a>
+            <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener">💬 Napisz</a>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="contact-form-grid">
+              <input type="text" name="name" placeholder="Twoje imię" required>
+              <input type="tel" name="phone" placeholder="Telefon / WhatsApp" required>
+            </div>
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Napisz, jaka inwestycja Cię interesuje"></textarea>
+            <button class="btn btn-main" type="submit">Wyślij zapytanie</button>
+          </form>
+
+          <div class="share-box">
+            <div class="share-title">Udostępnij stronę</div>
+            <div class="share-actions">
+              <button class="share-btn share-link" type="button" id="share-link">🔗 Link</button>
+              <a class="share-btn share-fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
           </div>
         </div>
-        <p class="priority-note">Odpowiadamy szybko — WhatsApp lub formularz to najszybsza droga kontaktu.</p>
-        
-        <form class="contact-form" id="contact-form">
-          <div class="contact-form-grid">
-            <input type="text" name="name" placeholder="Imię" required>
-            <input type="tel" name="phone" placeholder="Telefon">
-          </div>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Napisz czego szukasz"></textarea>
-          <button class="btn btn-main" type="submit">Wyślij zapytanie</button>
-        </form>
-        <h2>Zapytaj o inwestycję</h2>
-        
       </div>
-    </div>
-  </section>
-
+    </section>
   </main>
 
   <a href="https://wa.me/34604158859?text=Cze%C5%9B%C4%87%2C%20interesuj%C4%85%20mnie%20nowe%20inwestycje%20od%20deweloper%C3%B3w%20na%20Costa%20Blanca." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬 WhatsApp</a>
 
-  <footer>
-  <div class="container">
-    <strong>Costa Blanca Invest</strong>
-    <p>Nieruchomości Costa Blanca — nowe inwestycje, działki budowlane i budowa domów w Hiszpanii. Kompleksowa obsługa klienta od wyboru nieruchomości po realizację inwestycji.</p>
-
-    <div style="margin:18px 0;">
-      <p><a href="tel:+34604158859">+34 604 158 859</a> · <a href="mailto:olga@a1invest4u.com">olga@a1invest4u.com</a></p>
+  <footer style="padding: 8px 0 54px; margin-top: 34px; background: transparent;">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-brand">Costa Blanca Invest</div>
+        <p class="footer-copy">Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.</p>
+        <div class="footer-links">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
+          <a href="#links">Kategorie inwestycji</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.</div>
+      </div>
     </div>
-
-    <div style="margin:24px 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-      <a href="tel:+34604158859" class="btn btn-main">📞 Zadzwoń</a>
-      <a href="https://wa.me/34604158859" class="btn btn-main" target="_blank">💬 WhatsApp</a>
-    </div>
-
-    <p>© 2026 | Olga Chernyshenko — Costa Blanca Invest</p>
-  </div>
-</footer>
+  </footer>
 
   <script type="application/ld+json">
   {
@@ -872,7 +1125,7 @@
         "name": "Costa Blanca Invest",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/",
         "logo": "https://oczernyszenko.github.io/Costa-Blanca-Invest/images/favicon.png",
-        "email": "olga@a1invest4u.com",
+        "email": "o.czernyszenko@gmail.com",
         "telephone": "+34604158859"
       },
       {
@@ -880,7 +1133,9 @@
         "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#website",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/",
         "name": "Costa Blanca Invest",
-        "publisher": { "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#organization" },
+        "publisher": {
+          "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#organization"
+        },
         "inLanguage": "pl"
       },
       {
@@ -889,8 +1144,12 @@
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/",
         "name": "Nowe inwestycje od deweloperów na Costa Blanca | Costa Blanca Invest",
         "description": "Nowe inwestycje od deweloperów na Costa Blanca — apartamenty, penthouse’y i wille w Hiszpanii. Sprawdzone projekty, silne lokalizacje i potencjał inwestycyjny.",
-        "isPartOf": { "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#website" },
-        "about": { "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#organization" },
+        "isPartOf": {
+          "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#website"
+        },
+        "about": {
+          "@id": "https://oczernyszenko.github.io/Costa-Blanca-Invest/#organization"
+        },
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/images/hero-sea-palm.jpg"
@@ -902,7 +1161,7 @@
         "name": "Costa Blanca Invest",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/",
         "telephone": "+34604158859",
-        "email": "olga@a1invest4u.com",
+        "email": "o.czernyszenko@gmail.com",
         "areaServed": {
           "@type": "Place",
           "name": "Costa Blanca, Spain"
@@ -983,48 +1242,49 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('nav');
-      const overlay = document.querySelector('.menu-overlay');
+      const contactForm = document.getElementById('contact-form');
+      const shareLink = document.getElementById('share-link');
+      const shareFacebook = document.getElementById('share-facebook');
+      const shareUrl = window.location.href;
 
-      if (navToggle && nav && overlay) {
-        navToggle.addEventListener('click', () => {
-          const isOpen = nav.classList.toggle('open');
-          overlay.classList.toggle('show', isOpen);
-          navToggle.textContent = isOpen ? '✕' : '☰';
-        });
+      if (shareFacebook) {
+        shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+      }
 
-        overlay.addEventListener('click', () => {
-          nav.classList.remove('open');
-          overlay.classList.remove('show');
-          navToggle.textContent = '☰';
-        });
-
-        nav.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            nav.classList.remove('open');
-            overlay.classList.remove('show');
-            navToggle.textContent = '☰';
-          });
+      if (shareLink) {
+        shareLink.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(shareUrl);
+            const oldText = shareLink.textContent;
+            shareLink.textContent = '✅ Skopiowano';
+            setTimeout(() => {
+              shareLink.textContent = oldText;
+            }, 1800);
+          } catch (error) {
+            window.prompt('Skopiuj link:', shareUrl);
+          }
         });
       }
 
-      const contactForm = document.getElementById('contact-form');
       if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
           event.preventDefault();
+
           const formData = new FormData(contactForm);
           const name = formData.get('name') || '';
           const phone = formData.get('phone') || '';
           const email = formData.get('email') || '';
           const message = formData.get('message') || '';
+
           const text = `Nowe zapytanie ze strony Nowe Inwestycje - Costa Blanca Invest:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened = window.open(url, '_blank', 'noopener');
-          if (!opened) window.location.href = url;
+
+          if (!opened) {
+            window.location.href = url;
+          }
         });
       }
-
     });
   </script>
 </body>
