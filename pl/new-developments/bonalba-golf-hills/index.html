@@ -22,12 +22,20 @@
   <meta property="og:image:alt" content="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
   <meta property="og:url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/">
   <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:video" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/video/bonalba-golf-hills.mp4">
+  <meta property="og:video:secure_url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/video/bonalba-golf-hills.mp4">
+  <meta property="og:video:type" content="video/mp4">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
   <meta name="twitter:description" content="Hiszpania · Mutxamel koło Alicante · 280 800 € – 405 600 € · 98 – 156 m² · 2–3 pokoje">
   <meta name="twitter:image" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-og.jpg">
   <meta name="twitter:image:alt" content="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+  <meta name="twitter:player" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/video/bonalba-golf-hills.mp4">
+  <meta name="twitter:player:width" content="1280">
+  <meta name="twitter:player:height" content="720">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/Costa-Blanca-Invest/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/Costa-Blanca-Invest/favicon-16x16.png">
@@ -183,7 +191,16 @@
     .nav a:hover::after,
     .nav a[aria-current="page"]::after { transform: scaleX(1); }
 
-    .page { padding: 22px 0 84px; }
+    .page { padding: 26px 0 84px; }
+
+    .top-back-link {
+      position: sticky;
+      top: 14px;
+      z-index: 40;
+      width: fit-content;
+      margin: 0 0 20px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
 
     .breadcrumbs {
       display: flex;
@@ -669,6 +686,103 @@
       background: var(--glass-strong);
     }
 
+    .agent-card {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto 24px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.32);
+      box-shadow: var(--shadow-soft);
+      text-align: left;
+    }
+
+    .agent-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.14);
+    }
+
+    .agent-name {
+      margin: 0 0 4px;
+      color: var(--primary-dark);
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.08;
+    }
+
+    .agent-role {
+      margin: 0 0 6px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .agent-meta {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .share-block {
+      max-width: 760px;
+      margin: 22px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(15,23,42,0.08);
+    }
+
+    .share-title {
+      margin: 0 0 12px;
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .share-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.82);
+      box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px rgba(15,23,42,0.10);
+    }
+
+    .share-note {
+      margin: 12px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
     .contact-links {
       display: grid;
       gap: 12px;
@@ -877,6 +991,19 @@
     }
 
     @media (max-width: 768px) {
+      .agent-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .agent-avatar {
+        margin: 0 auto;
+      }
+
+      .agent-meta {
+        text-align: center;
+      }
+
       .container { padding: 0 14px; }
 
       .topbar-inner {
@@ -937,6 +1064,10 @@
     }
 
     @media (max-width: 560px) {
+      .top-back-link {
+        top: 10px;
+      }
+
       .footer-links {
         flex-direction: column;
         align-items: center;
@@ -1020,32 +1151,11 @@
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#top" class="brand">Costa Blanca Invest</a>
-      <nav class="nav" aria-label="Główna nawigacja">
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Strona główna</a>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#categories">Kategorie</a>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#why-us">Dlaczego my</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+  
 
   <main class="page">
     <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Strona główna</a>
-        <span>›</span>
-        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Nowe inwestycje</a>
-        <span>›</span>
-        <span>Bonalba Golf Hills</span>
-      </nav>
-
-      <a class="back-link" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">← Wróć do kategorii: Deweloperzy</a>
+      <a class="back-link top-back-link" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">← Zobacz inne oferty</a>
 
       <div class="hero-card">
         <div class="gallery-grid">
@@ -1169,6 +1279,16 @@
       <section class="cta-box contact-box" id="contact">
         <h2>Otrzymaj aktualną ofertę</h2>
         <p>Skontaktuj się, aby otrzymać dostępne apartamenty, ceny oraz rzuty — dopasowane do Twojego budżetu i celu zakupu.</p>
+
+        <div class="agent-card">
+          <img class="agent-avatar" src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
+          <div>
+            <div class="agent-name">Olga Chernyshenko</div>
+            <div class="agent-role">Ekspert ds. nieruchomości premium na Costa Blanca</div>
+            <p class="agent-meta">Bezpośredni kontakt, szybka selekcja ofert, pomoc w zakupie i inwestycji w Hiszpanii.</p>
+          </div>
+        </div>
+
         <div class="contact-links">
           <a href="tel:+34604158859">+34 604 15 88 59</a>
           <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
@@ -1186,35 +1306,23 @@
           <textarea name="message" placeholder="Jakiej nieruchomości szukasz?"></textarea>
           <button class="btn btn-main" type="submit">Wyślij</button>
         </form>
+
+        <div class="share-block">
+          <div class="share-title">Udostępnij ofertę</div>
+          <div class="share-actions">
+            <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F" target="_blank" rel="noopener">Facebook</a>
+            <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="share-btn" href="https://t.me/share/url?url=https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F&text=Bonalba%20Golf%20Hills%20%E2%80%94%20apartamenty%20na%20Costa%20Blanca" target="_blank" rel="noopener">Telegram</a>
+            <a class="share-btn" href="https://wa.me/?text=Bonalba%20Golf%20Hills%20%E2%80%94%20https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F" target="_blank" rel="noopener">WhatsApp</a>
+            <button class="share-btn" type="button" id="copyLinkBtn">Kopiuj link</button>
+          </div>
+          <p class="share-note">Podgląd zadziała z obrazem od razu. Wideo zadziała po dodaniu pliku MP4 pod ścieżką <strong>/video/bonalba-golf-hills.mp4</strong>.</p>
+        </div>
       </section>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-card">
-        <div class="footer-brand">Costa Blanca Invest</div>
-        <p class="footer-copy">Costa Blanca Invest wspiera klientów w zakupie nowych inwestycji, działek budowlanych i nieruchomości pod budowę domu w Hiszpanii — z naciskiem na bezpieczeństwo transakcji, wzrost wartości i komfortowy styl życia na Costa Blanca.</p>
-        <div class="footer-links">
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Wszystkie inwestycje</a>
-          <a href="#investment-benefits">Dlaczego inwestycja</a>
-          <a href="#roi">ROI</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">Budowa domu</a>
-          <a href="#contact">Kontakt</a>
-        </div>
-        <div class="footer-expert">
-          <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
-          <div>
-            <div class="footer-expert-name">Olga Chernyshenko</div>
-            <div class="footer-expert-role">Ekspert ds. nieruchomości i inwestycji premium na Costa Blanca</div>
-            <div class="footer-expert-meta">Nowe inwestycje · działki · budowa domu w Hiszpanii<br><a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a></div>
-          </div>
-        </div>
-        <div class="footer-bottom">© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii</div>
-      </div>
-    </div>
-  </footer>
+  
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
     <img id="lightboxImage" src="" alt="Podgląd zdjęcia">
@@ -1237,6 +1345,7 @@
       const prevPlanBtn = document.querySelector('.prev-plan');
       const planTrack = document.getElementById('planTrack');
       const planImages = Array.from(document.querySelectorAll('.plans-track img'));
+      const copyLinkBtn = document.getElementById('copyLinkBtn');
 
       if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
@@ -1320,6 +1429,20 @@
           lightbox.setAttribute('aria-hidden', 'false');
         });
       });
+
+      if (copyLinkBtn) {
+        copyLinkBtn.addEventListener('click', async () => {
+          const url = 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/';
+          try {
+            await navigator.clipboard.writeText(url);
+            copyLinkBtn.textContent = 'Skopiowano';
+            window.setTimeout(() => { copyLinkBtn.textContent = 'Kopiuj link'; }, 1800);
+          } catch (error) {
+            copyLinkBtn.textContent = 'Nie udało się';
+            window.setTimeout(() => { copyLinkBtn.textContent = 'Kopiuj link'; }, 1800);
+          }
+        });
+      }
 
       window.addEventListener('resize', updatePlans);
       updatePlans();
