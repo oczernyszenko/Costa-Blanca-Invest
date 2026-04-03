@@ -555,6 +555,67 @@
       -webkit-overflow-scrolling: touch;
     }
 
+    .feature-photo {
+      margin-top: 22px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.48);
+      background: rgba(255,255,255,0.72);
+    }
+
+    .feature-photo img {
+      width: 100%;
+      aspect-ratio: 16 / 8;
+      object-fit: cover;
+    }
+
+    .feature-photo figcaption {
+      padding: 12px 16px 14px;
+      font-size: 14px;
+      color: var(--text-soft);
+      text-align: center;
+      background: rgba(255,255,255,0.88);
+    }
+
+    .image-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .image-card {
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid rgba(255,255,255,0.45);
+      box-shadow: var(--shadow-soft);
+      text-align: left;
+    }
+
+    .image-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .image-card .image-copy {
+      padding: 16px 18px 18px;
+    }
+
+    .image-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: var(--primary-dark);
+      text-align: left;
+    }
+
+    .image-card p {
+      margin: 0;
+      text-align: left;
+    }
+
     table {
       width: 100%;
       min-width: 960px;
@@ -795,7 +856,8 @@
       .why-grid,
       .categories-grid,
       .steps-grid,
-      .faq-grid { grid-template-columns: 1fr; }
+      .faq-grid,
+      .image-grid-2 { grid-template-columns: 1fr; }
       .hero-image,
       .hero-image img { min-height: 420px; }
     }
@@ -1003,6 +1065,10 @@
             <p>Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium i oczekiwań klientów z Polski.</p>
           </article>
         </div>
+        <figure class="feature-photo">
+          <img src="images/final-house.jpg" alt="Gotowy dom premium na Costa Blanca" loading="lazy" decoding="async">
+          <figcaption>Efekt końcowy ma znaczenie — dom powinien nie tylko dobrze wyglądać, ale też budować realną wartość nieruchomości.</figcaption>
+        </figure>
       </section>
 
       <section class="section-card fade-up">
@@ -1034,6 +1100,22 @@
             <p>Budowę domu, remonty pod klucz, premium wykończenie wnętrz i przygotowanie obiektu do użytkowania lub wynajmu.</p>
           </article>
         </div>
+        <div class="image-grid-2">
+          <article class="image-card">
+            <img src="images/construction.jpg" alt="Proces budowy domu na Costa Blanca" loading="lazy" decoding="async">
+            <div class="image-copy">
+              <h3>Kontrola procesu budowy</h3>
+              <p>Na każdym etapie pilnujemy jakości wykonania, zgodności z projektem i logiki całej realizacji.</p>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="images/interior.jpg" alt="Premium wykończenie wnętrz domu w Hiszpanii" loading="lazy" decoding="async">
+            <div class="image-copy">
+              <h3>Wykończenie premium</h3>
+              <p>Końcowy standard wnętrza wpływa na komfort życia, wartość domu i siłę oferty przy sprzedaży lub wynajmie.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section-card fade-up">
@@ -1052,6 +1134,10 @@
             <p>Po przygotowaniu płyty dom może być montowany szybko, co skraca czas całej inwestycji.</p>
           </article>
         </div>
+        <figure class="feature-photo">
+          <img src="images/foundation.jpg" alt="Fundamenty i przygotowanie działki pod budowę domu w Hiszpanii" loading="lazy" decoding="async">
+          <figcaption>Dobrze przygotowany fundament i analiza gruntu to baza bezpiecznej realizacji na Costa Blanca.</figcaption>
+        </figure>
       </section>
 
       <section class="section-card fade-up">
@@ -1166,6 +1252,22 @@
         <p>Nie każda działka w Hiszpanii pozwala na prostą i tanią budowę fundamentów. Ukształtowanie terenu, geodezja i warunki gruntowe mogą znacząco wpłynąć na koszt i czas realizacji.</p>
         <h3>Budowa dla klienta prywatnego i inwestora</h3>
         <p>Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium i oczekiwań klientów z Polski — zarówno jako second home, dom całoroczny, jak i nieruchomość inwestycyjną lub rental premium.</p>
+        <div class="image-grid-2">
+          <article class="image-card">
+            <img src="images/final-house.jpg" alt="Nowoczesny gotowy dom na Costa Blanca" loading="lazy" decoding="async">
+            <div class="image-copy">
+              <h3>Dom gotowy do życia</h3>
+              <p>Finalny efekt powinien odpowiadać zarówno oczekiwaniom klienta prywatnego, jak i standardom rynku premium.</p>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="images/interior.jpg" alt="Nowoczesne wnętrze domu premium na Costa Blanca" loading="lazy" decoding="async">
+            <div class="image-copy">
+              <h3>Wnętrze sprzedaje emocję</h3>
+              <p>Dobrze pokazane wnętrze buduje zaufanie, podnosi atrakcyjność oferty i wzmacnia odbiór całego projektu.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="cta-box contact-box fade-up" id="contact">
