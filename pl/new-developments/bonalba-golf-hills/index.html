@@ -879,15 +879,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      min-height: 46px;
-      padding: 0 18px;
-      border-rad
-
-    .share-actions .share-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       min-height: 44px;
       padding: 0 16px;
       border-radius: 999px;
@@ -912,22 +903,6 @@
       background: linear-gradient(135deg, #25d366 0%, #149e48 100%);
       border-color: rgba(255,255,255,0.18);
       box-shadow: 0 12px 24px rgba(37,211,102,0.22);
-    }
-
-    .share-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.32);
-      background: rgba(255,255,255,0.82);
-      box-shadow: 0 10px 20px rgba(15,23,42,0.06);
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--primary-dark);
-      transition: transform .22s ease, box-shadow .22s ease;
     }
 
     .share-btn:hover {
@@ -1153,7 +1128,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
-    }
 
     @media (max-width: 768px) {
       .params {
@@ -1341,8 +1315,6 @@
   </style>
 </head>
 <body>
-  
-
   <main class="page">
     <div class="container">
       <a class="back-link top-back-link" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Zobacz inne oferty</a>
@@ -1353,7 +1325,7 @@
             <source src="video/bonalba-golf-hills.mp4" type="video/mp4">
             <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, podgląd wideo" fetchpriority="high" decoding="async">
           </video>
-          <div class="hero-video-badge">Video Preview</div>
+          <div class="hero-video-badge">Podgląd wideo</div>
         </div>
 
         <div class="gallery-grid">
@@ -1506,15 +1478,13 @@
           <div class="share-actions">
             <a class="share-btn share-btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F" target="_blank" rel="noopener">Facebook</a>
             <a class="share-btn share-btn-whatsapp" href="https://wa.me/?text=Bonalba%20Golf%20Hills%20%E2%80%94%20https%3A%2F%2Foczernyszenko.github.io%2FCosta-Blanca-Invest%2Fpl%2Fnew-developments%2Fbonalba-golf-hills%2F" target="_blank" rel="noopener">WhatsApp</a>
-            <button class="share-btn" type="button" id="copyLinkBtn">Kopiuj link</button>
+            <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Kopiuj link do oferty">Kopiuj link</button>
           </div>
           <p class="share-note">Podgląd udostępnienia pokaże obraz od razu, a po dodaniu pliku MP4 również automatyczne preview wideo.</p>
         </div>
       </section>
     </div>
   </main>
-
-  
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
     <img id="lightboxImage" src="" alt="Podgląd zdjęcia">
@@ -1649,7 +1619,7 @@
         "@type": "Organization",
         "name": "Costa Blanca Invest",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/",
-        "email": "o.czernyszenko@gmail.com",
+        "email": "olga@a1invest4u.com",
         "telephone": "+34604158859"
       },
       {
