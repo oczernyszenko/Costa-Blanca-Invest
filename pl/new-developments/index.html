@@ -1148,10 +1148,22 @@
       let accumulatedUp = 0;
       let accumulatedDown = 0;
 
-      const projects = [
+      // ===== TEMPLATE — SKOPIUJ I WYPEŁNIAJ =====
+// {
+//   href: 'LINK_DO_STRONY_OBIEKTU',
+//   image: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/nazwa-zdjecia.jpg',
+//   alt: 'SEO opis zdjęcia + nazwa inwestycji',
+//   chip: 'Premium · Sea View / Golf / City',
+//   title: 'Nazwa inwestycji',
+//   meta: 'Miasto / lokalizacja',
+//   price: 'Cena € · metraż m² · pokoje',
+//   desc: 'Krótki opis sprzedażowy (1 zdanie, mocne)'
+// },
+
+const projects = [
         {
           href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/',
-          image: 'images/bonalba-golf-hills-main.jpg',
+          image: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/bonalba-golf-hills-main.jpg',
           alt: 'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
           chip: 'Premium · Golf & Lifestyle',
           title: 'Bonalba Golf Hills',
@@ -1161,7 +1173,7 @@
         },
         {
           href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/apartments-alicante/',
-          image: 'images/new-dev.jpg',
+          image: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/new-dev.jpg',
           alt: 'Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca',
           chip: 'City & Sea',
           title: 'Apartamenty Alicante',
@@ -1171,7 +1183,7 @@
         },
         {
           href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/penthouse-benidorm/',
-          image: 'images/wood-project-2.jpg',
+          image: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/wood-project-2.jpg',
           alt: 'Penthouse Benidorm — inwestycja premium z widokiem',
           chip: 'Skyline Premium',
           title: 'Penthouse Benidorm',
@@ -1184,7 +1196,7 @@
       if (projectsGrid) {
         projectsGrid.innerHTML = projects.map((project) => `
           <a href="${project.href}" class="project-card" aria-label="${project.alt}">
-            <img src="${project.image}" alt="${project.alt}">
+            <img src="${project.image}" alt="${project.alt}" onerror="this.onerror=null;this.src='https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/images/hero-sea-palm.jpg';">
             <div class="card-body">
               <div class="chip">${project.chip}</div>
               <h3>${project.title}</h3>
