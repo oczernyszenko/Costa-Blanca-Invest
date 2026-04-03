@@ -116,9 +116,7 @@
       will-change: transform;
     }
 
-    .topbar.hide {
-      transform: translateY(-100%);
-    }
+    .topbar.hide { transform: translateY(-100%); }
 
     .topbar-inner {
       display: grid;
@@ -817,7 +815,7 @@
     @media (max-width: 1100px) {
       .hero-card { grid-template-columns: 1fr; }
       .why-grid,
-      .projects-grid,
+      #projectsGrid,
       .categories-grid,
       .steps-grid,
       .locations-grid,
@@ -879,7 +877,7 @@
       .hero-card { gap: 0; }
       .hero-image, .hero-image img { min-height: 300px; }
       .contact-form-grid,
-      .projects-grid,
+      #projectsGrid,
       .categories-grid,
       .why-grid,
       .steps-grid,
@@ -985,55 +983,7 @@
       <section class="section-card fade-up" id="projects">
         <h2>Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów</h2>
         <p>Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.</p>
-        <div class="projects-grid">
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <div class="card-body">
-              <div class="chip">Premium · Golf & Lifestyle</div>
-              <h3>Bonalba Golf Hills</h3>
-              <div class="card-meta">Mutxamel koło Alicante</div>
-              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
-              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/apartments-alicante/" class="project-card" aria-label="Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca">
-            <img src="images/new-dev.jpg" alt="Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca">
-            <div class="card-body">
-              <div class="chip">City & Sea</div>
-              <h3>Apartamenty Alicante</h3>
-              <div class="card-meta">Alicante</div>
-              <div class="card-price">Nowe mieszkania od dewelopera</div>
-              <p class="card-desc">Nowoczesne apartamenty w jednej z najbardziej poszukiwanych lokalizacji Costa Blanca — świetne połączenie miejskiej wygody, dostępu do plaż i wysokiego potencjału najmu całorocznego.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/penthouse-benidorm/" class="project-card" aria-label="Penthouse Benidorm — inwestycja premium z widokiem">
-            <img src="images/wood-project-2.jpg" alt="Penthouse Benidorm — inwestycja premium z widokiem">
-            <div class="card-body">
-              <div class="chip">Skyline Premium</div>
-              <h3>Penthouse Benidorm</h3>
-              <div class="card-meta">Benidorm</div>
-              <div class="card-price">Segment premium · new build</div>
-              <p class="card-desc">Wyjątkowa nieruchomość dla klientów oczekujących panoramicznych widoków, nowoczesnej architektury i prestiżowego adresu w jednej z najmocniejszych lokalizacji inwestycyjnych Costa Blanca.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
-            <div class="card-body">
-              <div class="chip">Premium · Golf & Lifestyle</div>
-              <h3>Bonalba Golf Hills</h3>
-              <div class="card-meta">Mutxamel koło Alicante</div>
-              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
-              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
-              <div class="card-link">Zobacz inwestycję →</div>
-            </div>
-          </a>
-        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
       </section>
 
       <section class="section-card fade-up" id="process">
@@ -1193,9 +1143,59 @@
       const contactForm = document.getElementById('contact-form');
       const animatedCards = document.querySelectorAll('.fade-up');
       const header = document.querySelector('.topbar');
+      const projectsGrid = document.getElementById('projectsGrid');
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
+
+      const projects = [
+        {
+          href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/',
+          image: 'images/bonalba-golf-hills-main.jpg',
+          alt: 'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
+          chip: 'Premium · Golf & Lifestyle',
+          title: 'Bonalba Golf Hills',
+          meta: 'Mutxamel koło Alicante',
+          price: '280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',
+          desc: 'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
+        },
+        {
+          href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/apartments-alicante/',
+          image: 'images/new-dev.jpg',
+          alt: 'Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca',
+          chip: 'City & Sea',
+          title: 'Apartamenty Alicante',
+          meta: 'Alicante',
+          price: 'Nowe mieszkania od dewelopera',
+          desc: 'Nowoczesne apartamenty w jednej z najbardziej poszukiwanych lokalizacji Costa Blanca — świetne połączenie miejskiej wygody, dostępu do plaż i wysokiego potencjału najmu całorocznego.'
+        },
+        {
+          href: 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/penthouse-benidorm/',
+          image: 'images/wood-project-2.jpg',
+          alt: 'Penthouse Benidorm — inwestycja premium z widokiem',
+          chip: 'Skyline Premium',
+          title: 'Penthouse Benidorm',
+          meta: 'Benidorm',
+          price: 'Segment premium · new build',
+          desc: 'Wyjątkowa nieruchomość dla klientów oczekujących panoramicznych widoków, nowoczesnej architektury i prestiżowego adresu w jednej z najmocniejszych lokalizacji inwestycyjnych Costa Blanca.'
+        }
+      ];
+
+      if (projectsGrid) {
+        projectsGrid.innerHTML = projects.map((project) => `
+          <a href="${project.href}" class="project-card" aria-label="${project.alt}">
+            <img src="${project.image}" alt="${project.alt}">
+            <div class="card-body">
+              <div class="chip">${project.chip}</div>
+              <h3>${project.title}</h3>
+              <div class="card-meta">${project.meta}</div>
+              <div class="card-price">${project.price}</div>
+              <p class="card-desc">${project.desc}</p>
+              <div class="card-link">Zobacz inwestycję →</div>
+            </div>
+          </a>
+        `).join('');
+      }
 
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -1244,14 +1244,7 @@
         const phone = (formData.get('phone') || '').toString().trim();
         const email = (formData.get('email') || '').toString().trim();
         const message = (formData.get('message') || '').toString().trim();
-        const text = `Nowe zapytanie ze strony Nowe inwestycje:
-
-Imię: ${name}
-Telefon: ${phone}
-Email: ${email}
-
-Wiadomość:
-${message}`;
+        const text = `Nowe zapytanie ze strony Nowe inwestycje:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
         const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
         const opened = window.open(url, '_blank', 'noopener');
         if (!opened) window.location.href = url;
