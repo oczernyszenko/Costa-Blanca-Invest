@@ -146,12 +146,9 @@
 
     .btn:hover::before { transform: translateX(140%); }
     .btn:active { transform: translateY(0) scale(.98); }
-
     .btn:focus-visible,
     .nav-toggle:focus-visible,
     nav a:focus-visible,
-    .carousel-btn:focus-visible,
-    .carousel-dot:focus-visible,
     .contact-links a:focus-visible,
     .whatsapp-float:focus-visible,
     .contact-form input:focus-visible,
@@ -183,20 +180,6 @@
       transform: translateY(-3px) scale(1.01);
       background: var(--primary-soft);
       box-shadow: 0 16px 30px rgba(41,108,118,0.12);
-    }
-
-    .btn-whatsapp {
-      background: linear-gradient(135deg, #25d366 0%, #149e48 100%);
-      color: #fff;
-      border-color: transparent;
-      box-shadow: 0 10px 24px rgba(37,211,102,0.22);
-    }
-
-    .btn-whatsapp:hover {
-      background: linear-gradient(135deg, #2ae06f 0%, #149e48 100%);
-      color: #fff;
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 18px 34px rgba(37,211,102,0.28);
     }
 
     header {
@@ -293,10 +276,7 @@
       padding: 34px 0 76px;
       background: linear-gradient(180deg, var(--primary-pale) 0%, #ffffff 100%);
     }
-
     .hero-media,
-    .panel-image,
-    .projects-carousel,
     .card {
       overflow: hidden;
     }
@@ -308,18 +288,13 @@
       border: 1px solid var(--line);
       background: #fff;
     }
-
     .hero-media img,
-    .panel-image img,
-    .card img,
-    .project-slide img {
+    .card img {
       transition: transform .55s ease, filter .45s ease;
     }
 
     .hero-media:hover img,
-    .panel-image:hover img,
-    .card:hover img,
-    .project-slide:hover img {
+    .card:hover img {
       transform: scale(1.06);
       filter: saturate(1.05) contrast(1.02);
     }
@@ -369,72 +344,20 @@
       justify-content: center;
       margin-top: 24px;
     }
-
-    .hero-badges,
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 22px;
     }
-
-    .hero-badges { margin-top: 28px; }
-
-    .badge,
     .card,
-    .panel,
-    .comparison-box,
     .contact-box,
-    .seo-article,
-    .projects-carousel {
+    .seo-article {
+
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-
-    .badge {
-      padding: 18px;
-      border: 2px solid transparent;
-      text-align: left;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .badge:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-    }
-
-    .badge strong {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-      font-size: 16px;
-    }
-
-    .badge strong::before { font-size: 18px; }
-    .badge-1 strong::before { content: "🏗️"; }
-    .badge-2 strong::before { content: "📈"; }
-    .badge-3 strong::before { content: "📍"; }
-
-    .badge-1 {
-      border-color: var(--investment);
-      background: linear-gradient(180deg, #ffffff 0%, #f2fbfe 100%);
-    }
-
-    .badge-2 {
-      border-color: var(--accent);
-      background: linear-gradient(180deg, #ffffff 0%, #fff6ef 100%);
-    }
-
-    .badge-3 {
-      border-color: var(--plots);
-      background: linear-gradient(180deg, #ffffff 0%, #fcf4ef 100%);
-    }
-
-    .badge-1 strong { color: #2c6f7a; }
-    .badge-2 strong { color: #b06a28; }
-    .badge-3 strong { color: #6a2d16; }
 
     .card {
       display: flex;
@@ -495,151 +418,6 @@
     .section-developers .chip { background: rgba(118,181,197,0.18); color: #2c6f7a; }
     .section-green .chip { background: rgba(62,128,40,0.14); color: #2e6b1f; }
     .section-plots .chip { background: rgba(135,62,35,0.12); color: #6a2d16; }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .panel { padding: 30px; }
-    .panel h2,
-    .contact-box h2,
-    .project-slide-content h3 { color: var(--primary-dark); }
-
-    .panel-image {
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .panel-image img {
-      width: 100%;
-      min-height: 420px;
-      object-fit: cover;
-    }
-
-    .comparison-box { overflow-x: auto; }
-
-    .scroll-hint {
-      display: none;
-      margin: 0 auto 10px;
-      width: fit-content;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(41,108,118,0.08);
-      color: var(--text-soft);
-      font-size: 13px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 860px;
-      border-collapse: collapse;
-      background: #fff;
-    }
-
-    th, td {
-      padding: 16px;
-      border: 1px solid rgba(15,23,42,0.08);
-      text-align: left;
-      vertical-align: top;
-      font-size: 15px;
-    }
-
-    th {
-      background: linear-gradient(135deg, rgba(41,108,118,0.14), rgba(226,135,67,0.18));
-      color: var(--primary-dark);
-    }
-
-    .projects-carousel {
-      position: relative;
-      max-width: 1020px;
-      margin: 0 auto;
-      border-radius: 24px;
-    }
-
-    .projects-track {
-      display: flex;
-      width: 100%;
-      transition: transform .55s ease-in-out;
-      will-change: transform;
-    }
-
-    .project-slide {
-      min-width: 100%;
-      display: grid;
-      grid-template-columns: 1.04fr .96fr;
-      align-items: stretch;
-      background: #fff;
-    }
-
-    .project-slide img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-    }
-
-    .project-slide-content {
-      padding: 34px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-      background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 62%, #fff9f0 100%);
-    }
-
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
-      border: none;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 5;
-      box-shadow: 0 10px 24px rgba(31,84,92,0.22);
-      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
-    }
-
-    .carousel-btn:hover {
-      transform: translateY(-50%) scale(1.08);
-      box-shadow: 0 16px 30px rgba(31,84,92,0.28);
-      filter: brightness(1.06);
-    }
-
-    .carousel-btn.prev { left: 16px; }
-    .carousel-btn.next { right: 16px; }
-
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .carousel-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(41,108,118,0.25);
-      cursor: pointer;
-      transition: transform .22s ease, background .22s ease;
-    }
-
-    .carousel-dot:hover {
-      transform: scale(1.2);
-      background: rgba(226,135,67,0.7);
-    }
-
-    .carousel-dot.active {
-      background: var(--accent);
-      transform: scale(1.15);
-    }
 
     .seo-articles {
       display: grid;
@@ -839,19 +617,12 @@
         opacity: 1;
       }
     }
-
     @media (max-width: 920px) {
-      .hero-badges,
       .grid-3,
-      .split,
-      .contact-form-grid,
-      .project-slide {
+      .contact-form-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-slide img { height: 280px; }
-      .project-slide-content { padding: 24px; }
-      .scroll-hint { display: block; }
       .hero p { font-size: 16px; }
       .hero-media img { height: 300px; }
 
@@ -869,11 +640,7 @@
 
       .section { padding: 72px 0; }
       .container { width: min(var(--maxw), calc(100% - 22px)); }
-      .projects-carousel { border-radius: 18px; }
-      .carousel-btn.prev { left: 10px; }
-      .carousel-btn.next { right: 10px; }
     }
-
     @media (max-width: 768px) {
       .header-inner {
         align-items: flex-start;
@@ -885,14 +652,9 @@
         align-items: flex-start;
       }
 
-      .hero-badges { gap: 14px; }
-      .badge { padding: 16px; }
       .section-title { margin-bottom: 28px; }
-      .project-slide-content p { font-size: 15px; }
-      .panel-image img { min-height: 280px; }
       .contact-box { padding: 24px 18px; }
     }
-
     @media (max-width: 560px) {
       body { font-size: 15px; }
       .logo { font-size: 18px; max-width: 190px; white-space: normal; line-height: 1.15; }
@@ -902,16 +664,11 @@
       .hero h1 { font-size: clamp(30px, 9vw, 42px); }
       .hero-media { border-radius: 18px; }
 
-      .badge,
-      .panel,
       .contact-box,
       .card-body,
-      .project-slide-content,
       .seo-article {
         padding: 18px;
       }
-
-      .carousel-btn { width: 42px; height: 42px; }
       .contact-form input,
       .contact-form textarea { padding: 14px; }
 
@@ -938,11 +695,10 @@
       <div class="nav-wrap">
         <button class="nav-toggle" aria-label="Menu">☰</button>
         <nav>
-          <a href="#hero">Start</a>
-          <a href="#developers">Deweloperzy</a>
-          <a href="#investments">Inwestycje</a>
-          <a href="#links">Inne strony</a>
-          <a href="#seo">SEO</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Start</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/">Deweloperzy</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/">Działki</a>
+          <a href="https://oczernyszenko.github.io/ecodom-p2/">Eco dom</a>
           <a href="#contact">Kontakt</a>
         </nav>
       </div>
@@ -1011,7 +767,7 @@
       <p class="priority-note">Wybraliśmy tylko inwestycje z realnym potencjałem wzrostu wartości i wynajmu. Znajdziesz tu nowe apartamenty Costa Blanca, wille od dewelopera w Hiszpanii oraz projekty premium w najlepszych lokalizacjach regionu.</p>
       <div style="text-align:center;margin-bottom:30px;"><a href="#contact" class="btn btn-main">Zapytaj o dostępne inwestycje</a></div>
       <div class="grid-3">
-        <a href="/investments/invespain-1044.html?title=Willa%20450m%20od%20morza&location=Torre%20de%20la%20Horadada&price=711700" class="card card-investments" style="text-decoration:none;" title="Willa przy morzu Costa Blanca — karta inwestycji">
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/invespain-1044.html?title=Willa%20450m%20od%20morza&location=Torre%20de%20la%20Horadada&price=711700" class="card card-investments" style="text-decoration:none;" title="Willa przy morzu Costa Blanca — karta inwestycji">
           <img src="images/premium-investment.jpg" alt="Willa Torre de la Horadada">
           <div class="card-body">
             <div class="chip">Zobacz szczegóły</div>
@@ -1020,7 +776,7 @@
           </div>
         </a>
 
-        <a href="/investments/apartments-alicante.html?title=Apartamenty%20inwestycyjne&location=Alicante&price=on-request" class="card card-investments" style="text-decoration:none;" title="Nowe apartamenty Costa Blanca — inwestycja Alicante">
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/apartments-alicante.html?title=Apartamenty%20inwestycyjne&location=Alicante&price=on-request" class="card card-investments" style="text-decoration:none;" title="Nowe apartamenty Costa Blanca — inwestycja Alicante">
           <img src="images/new-dev.jpg" alt="Apartamenty Alicante">
           <div class="card-body">
             <div class="chip">Zobacz szczegóły</div>
@@ -1029,7 +785,7 @@
           </div>
         </a>
 
-        <a href="/investments/penthouse-benidorm.html?title=Penthouse%20premium&location=Benidorm&price=premium" class="card card-investments" style="text-decoration:none;" title="Penthouse premium Benidorm — oferta deweloperska">
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/penthouse-benidorm.html?title=Penthouse%20premium&location=Benidorm&price=premium" class="card card-investments" style="text-decoration:none;" title="Penthouse premium Benidorm — oferta deweloperska">
           <img src="images/wood-project-2.jpg" alt="Penthouse Benidorm">
           <div class="card-body">
             <div class="chip">Zobacz szczegóły</div>
@@ -1040,66 +796,50 @@
       </div>
       <div style="margin-top:20px;text-align:center;font-size:14px;color:#6b7280;">
         <p>
-          <a href="/investments/invespain-1044.html">Willa Torre de la Horadada — nowa inwestycja 450 m od morza</a> ·
-          <a href="/investments/apartments-alicante.html">Nowe apartamenty Alicante — inwestycja Costa Blanca</a> ·
-          <a href="/investments/penthouse-benidorm.html">Penthouse premium Benidorm — nowa oferta deweloperska</a>
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/invespain-1044.html">Willa Torre de la Horadada — nowa inwestycja 450 m od morza</a> ·
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/apartments-alicante.html">Nowe apartamenty Alicante — inwestycja Costa Blanca</a> ·
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/investments/penthouse-benidorm.html">Penthouse premium Benidorm — nowa oferta deweloperska</a>
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section section-soft" id="level1-preview">
-    <div class="container">
-      <header class="section-title">
-        <h2>Karta kategorii dla 1 poziomu strony</h2>
-        <p>Ten blok możesz skopiować na stronę główną, aby poprawnie pokazać zdjęcie kategorii, tytuł i krótki opis kierujący do 2 poziomu.</p>
-      </header>
-      <div class="grid-3" style="grid-template-columns:minmax(0,420px);justify-content:center;">
-        <a href="/pl/new-developments/" class="card card-investments" style="text-decoration:none;" title="Nowe inwestycje od deweloperów na Costa Blanca">
-          <img src="images/hero-sea-palm.jpg" alt="Nowe inwestycje od deweloperów na Costa Blanca — zdjęcie kategorii">
-          <div class="card-body">
-            <div class="chip">Kategoria</div>
-            <h3>Nowe inwestycje od deweloperów</h3>
-            <p>Apartamenty, penthouse’y i wille na Costa Blanca — sprawdzone lokalizacje, potencjał inwestycyjny i bezpieczny wybór projektów w Hiszpanii.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  
 
   <section class="section section-soft" id="links">
-    <div class="container">
-      <header class="section-title">
-        <h2>Inne możliwości inwestycyjne</h2>
-        <p>Sprawdź również inne kierunki inwestycji na Costa Blanca.</p>
-      </header>
-      <div class="grid-3">
-        <a href="/pl/plots/" class="card card-plots" style="text-decoration:none;">
-          <img src="images/wood-project.jpg" alt="Działki Costa Blanca">
-          <div class="card-body">
-            <h3>Działki budowlane</h3>
-            <p>Grunty pod inwestycje i budowę willi</p>
-          </div>
-        </a>
+  <div class="container">
+    <header class="section-title">
+      <h2>3 główne kierunki inwestycji</h2>
+      <p>Wybierz kategorię i przejdź do odpowiednich ofert.</p>
+    </header>
 
-        <a href="/build-house-spain.html" class="card card-eco" style="text-decoration:none;">
-          <img src="images/wood-project-2.jpg" alt="Budowa domu Hiszpania">
-          <div class="card-body">
-            <h3>Budowa domu</h3>
-            <p>Realizacja od projektu do kluczy</p>
-          </div>
-        </a>
+    <div class="grid-3">
+      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" class="card card-investments" style="text-decoration:none;">
+        <img src="images/new-dev.jpg" alt="Deweloperzy Costa Blanca">
+        <div class="card-body">
+          <h3>Deweloperzy</h3>
+          <p>Nowe apartamenty, penthouse’y i wille od sprawdzonych deweloperów</p>
+        </div>
+      </a>
 
-        <a href="/premium-properties.html" class="card card-investments" style="text-decoration:none;">
-          <img src="images/premium-investment.jpg" alt="Premium nieruchomości">
-          <div class="card-body">
-            <h3>Nieruchomości premium</h3>
-            <p>Segment high-end i inwestycje luksusowe</p>
-          </div>
-        </a>
-      </div>
+      <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/plots/" class="card card-plots" style="text-decoration:none;">
+        <img src="images/wood-project.jpg" alt="Działki Costa Blanca">
+        <div class="card-body">
+          <h3>Działki</h3>
+          <p>Grunty inwestycyjne pod budowę i projekty deweloperskie</p>
+        </div>
+      </a>
+
+      <a href="https://oczernyszenko.github.io/ecodom-p2/" class="card card-eco" style="text-decoration:none;">
+        <img src="images/wood-project-2.jpg" alt="Eco dom Hiszpania">
+        <div class="card-body">
+          <h3>Eco dom</h3>
+          <p>Budowa nowoczesnych domów w technologii ekologicznej</p>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="section section-sand" id="seo">
     <div class="container">
@@ -1152,9 +892,7 @@
     <div class="container">
       <div class="contact-box">
         <p class="priority-note">Odpowiadamy szybko — WhatsApp lub formularz to najszybsza droga kontaktu.</p>
-        <div class="contact-actions">
-          <a href="tel:+34604158859" class="btn btn-main">Zadzwoń teraz</a>
-        </div>
+        
         <form class="contact-form" id="contact-form">
           <div class="contact-form-grid">
             <input type="text" name="name" placeholder="Imię" required>
@@ -1165,10 +903,7 @@
           <button class="btn btn-main" type="submit">Wyślij zapytanie</button>
         </form>
         <h2>Zapytaj o inwestycję</h2>
-        <div class="contact-links">
-          <a href="tel:+34604158859">+34 604 15 88 59</a>
-          <a href="mailto:olga@a1invest4u.com">olga@a1invest4u.com</a>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -1180,8 +915,14 @@
   <footer>
     <div class="container">
       <strong>Costa Blanca Invest</strong>
-      <p>Nowe inwestycje od deweloperów na Costa Blanca, działki budowlane, budowa domów w technologiach drewnianych, szkieletowych i Thermochip, fundamenty, remonty pod klucz i premium wykończenia.</p>
-      <p>© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii.</p>
+      <p>Nowe inwestycje, działki budowlane i budowa domów w Hiszpanii — kompleksowe wsparcie od wyboru nieruchomości po realizację inwestycji.</p>
+
+      <div style="margin:24px 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:+34604158859" class="btn btn-main">📞 Zadzwoń</a>
+        <a href="https://wa.me/34604158859" class="btn btn-main" target="_blank">💬 WhatsApp</a>
+      </div>
+
+      <p>© 2026 | Olga Chernyshenko — nieruchomości Costa Blanca</p>
     </div>
   </footer>
 
@@ -1348,47 +1089,6 @@
         });
       }
 
-      const track = document.querySelector('.projects-track');
-      const slides = Array.from(document.querySelectorAll('.project-slide'));
-      const prevBtn = document.querySelector('.carousel-btn.prev');
-      const nextBtn = document.querySelector('.carousel-btn.next');
-      const dots = Array.from(document.querySelectorAll('.carousel-dot'));
-      let currentSlide = 0;
-      let autoplay = null;
-
-      function updateCarousel() {
-        if (!track || !slides.length) return;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
-      }
-
-      function goToSlide(index) {
-        currentSlide = (index + slides.length) % slides.length;
-        updateCarousel();
-      }
-
-      function stopAutoplay() {
-        if (autoplay) {
-          window.clearInterval(autoplay);
-          autoplay = null;
-        }
-      }
-
-      function startAutoplay() {
-        stopAutoplay();
-        autoplay = window.setInterval(() => goToSlide(currentSlide + 1), 4000);
-      }
-
-      if (track && slides.length) {
-        prevBtn?.addEventListener('click', () => goToSlide(currentSlide - 1));
-        nextBtn?.addEventListener('click', () => goToSlide(currentSlide + 1));
-        dots.forEach((dot, index) => dot.addEventListener('click', () => goToSlide(index)));
-        const carousel = document.querySelector('.projects-carousel');
-        carousel?.addEventListener('mouseenter', stopAutoplay);
-        carousel?.addEventListener('mouseleave', startAutoplay);
-        updateCarousel();
-        startAutoplay();
-      }
     });
   </script>
 </body>
