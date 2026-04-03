@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Budowa domów w Hiszpanii na Costa Blanca | Domy drewniane, prefabrykowane, szkieletowe i Thermochip</title>
-  <meta name="description" content="Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane, szkieletowe i Thermochip, fundamenty każdej złożoności, projekty, remonty pod klucz i premium wykończenie wnętrz.">
+  <title>Budowa domów w Hiszpanii na Costa Blanca | Domy drewniane, prefabrykowane i szkieletowe</title>
+  <meta name="description" content="Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane i szkieletowe, fundamenty każdej złożoności, projekty, remonty pod klucz i premium wykończenie wnętrz.">
   <link rel="canonical" href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
@@ -20,21 +20,22 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:site_name" content="Costa Blanca Invest">
-  <meta property="og:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca">
-  <meta property="og:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane, szkieletowe i Thermochip, remonty pod klucz i premium wykończenie wnętrz.">
+  <meta property="og:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
+  <meta property="og:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane i szkieletowe, remonty pod klucz i premium wykończenie wnętrz.">
   <meta property="og:image" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/images/wood-hero.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca">
+  <meta property="og:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
   <meta property="og:url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:secure_url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/images/wood-hero.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca">
-  <meta name="twitter:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane, szkieletowe i Thermochip, remonty i wykończenia premium.">
+  <meta name="twitter:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
+  <meta name="twitter:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane i szkieletowe, remonty i wykończenia premium.">
   <meta name="twitter:image" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/images/wood-hero.jpg">
-  <meta name="twitter:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca">
+  <meta name="twitter:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
+  <meta name="twitter:url" content="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/Costa-Blanca-Invest/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/Costa-Blanca-Invest/favicon-16x16.png">
@@ -302,9 +303,21 @@
       justify-content: center;
       align-items: center;
     }
-    .contact-inline-wrap { margin: 8px 0 18px; }
-    .cta-actions { margin-top: 24px; }
+    .contact-inline-wrap {
+      margin: 12px 0 18px;
+      gap: 14px;
+      justify-content: center;
+    }
+    .cta-actions {
+      margin-top: 24px;
+      align-items: stretch;
+    }
     .inline-list { margin-top: 18px; }
+
+    .contact-inline {
+      min-width: 160px;
+      text-align: center;
+    }
 
     .contact-inline,
     .btn,
@@ -320,15 +333,25 @@
       border-radius: 999px;
       font-size: 15px;
       font-weight: 800;
+      line-height: 1;
       white-space: nowrap;
       border: 1px solid rgba(255,255,255,.35);
-      background: var(--glass-medium);
+      background: rgba(255,255,255,.92);
       color: var(--primary-dark);
       box-shadow: 0 10px 22px rgba(15,23,42,.08);
       overflow: hidden;
       isolation: isolate;
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
       cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .share-btn.fb {
+      background: #1877f2;
+      color: #fff;
+      border-color: rgba(255,255,255,.2);
+      box-shadow: 0 12px 26px rgba(24,119,242,.25);
     }
     .contact-inline::before,
     .btn::before,
@@ -390,6 +413,14 @@
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 20px 44px rgba(15,23,42,.12), 0 0 24px rgba(255,255,255,.14);
       filter: saturate(1.04);
+    }
+
+    .contact-inline:focus-visible,
+    .btn:focus-visible,
+    .sticky-btn:focus-visible,
+    .share-btn:focus-visible {
+      outline: 3px solid rgba(103,181,76,.28);
+      outline-offset: 3px;
     }
     .contact-inline:hover::after,
     .btn:hover::after,
@@ -645,6 +676,7 @@
       max-width: 860px;
       margin-left: auto;
       margin-right: auto;
+      width: 100%;
     }
     .contact-form input,
     .contact-form textarea {
@@ -657,6 +689,7 @@
       outline: none;
       font-family: inherit;
       font-size: 16px;
+      line-height: 1.5;
       box-shadow: 0 0 0 1px rgba(255,255,255,.55) inset;
       transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease, background .22s ease;
     }
@@ -819,13 +852,15 @@
       .share-actions { flex-direction: column; }
       .btn,
       .contact-inline,
-      .share-btn { width: 100%; }
+      .share-btn {
+        width: 100%;
+        min-height: 52px;
+      }
       .sticky-contact {
         display: block;
         right: 12px;
         bottom: 12px;
-      }
-      .seo-article p { text-align: left; }
+          }
       body { padding-bottom: 74px; }
     }
 
@@ -897,8 +932,8 @@
 
       <section class="hero-card">
         <div class="hero-copy">
-          <h1>Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca</h1>
-          <p class="subtitle">Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną, szkieletową i Thermochip — dobierając rozwiązanie do działki, budżetu i celu inwestycji.</p>
+          <h1>Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca</h1>
+          <p class="subtitle">Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną i szkieletową — dobierając rozwiązanie do działki, budżetu i celu inwestycji.</p>
 
           <div class="contact-inline-wrap">
             <a class="contact-inline" href="tel:+34604158859">📞 Zadzwoń</a>
@@ -920,7 +955,7 @@
           <span>Dom drewniany</span>
           <span>Prefabrykowany</span>
           <span>Dom szkieletowy</span>
-          <span>Thermochip</span>
+          
           <span>Fundamenty</span>
           <span>Wykończenie premium</span>
         </div>
@@ -935,7 +970,7 @@
           </article>
           <article class="step-card">
             <h3>Technologia i konstrukcja</h3>
-            <p>Dobór technologii: drewnianej, prefabrykowanej, szkieletowej lub Thermochip oraz przygotowanie fundamentów i instalacji.</p>
+            <p>Dobór technologii: drewnianej, prefabrykowanej lub szkieletowej oraz przygotowanie fundamentów i instalacji.</p>
           </article>
           <article class="step-card">
             <h3>Wykończenie i oddanie</h3>
@@ -963,10 +998,10 @@
             </div>
           </article>
           <article class="construction-stage">
-            <img src="/Costa-Blanca-Invest/pl/build-house/images/interior.jpg" alt="Wykończenie wnętrz domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
+            <img src="/Costa-Blanca-Invest/pl/build-house/images/interior.jpg" alt="Izolacja i przygotowanie wnętrz domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
             <div class="stage-copy">
-              <h3>3. Izolacja i Thermochip</h3>
-              <p>Etap izolacji i technologii Thermochip wpływa na energooszczędność, komfort życia i koszty eksploatacji domu.</p>
+              <h3>3. Izolacja i przygotowanie wnętrz</h3>
+              <p>Etap izolacji oraz przygotowania wnętrz wpływa na komfort życia, parametry użytkowe domu i późniejsze koszty eksploatacji.</p>
             </div>
           </article>
           <article class="construction-stage">
@@ -1008,7 +1043,6 @@
                 <th>Dom drewniany</th>
                 <th>Prefabrykowany / modułowy</th>
                 <th>Dom szkieletowy</th>
-                <th>Thermochip</th>
               </tr>
             </thead>
             <tbody>
@@ -1017,28 +1051,24 @@
                 <td>Naturalny, estetyczny i premium</td>
                 <td>Nowoczesny produkt o wysokiej powtarzalności</td>
                 <td>Uniwersalny i elastyczny wybór</td>
-                <td>Energooszczędny system szybkiej realizacji</td>
               </tr>
               <tr>
                 <td>Komfort i parametry</td>
                 <td>Przyjemny mikroklimat i naturalny charakter</td>
                 <td>Wysoka jakość wykonania i stabilność</td>
                 <td>Dobra izolacja i szerokie możliwości dopasowania</td>
-                <td>Wysoka efektywność energetyczna</td>
               </tr>
               <tr>
                 <td>Tempo i elastyczność</td>
                 <td>Styl i wizerunek domu</td>
                 <td>Szybki montaż dzięki prefabrykacji</td>
                 <td>Dobry balans między czasem i budżetem</td>
-                <td>Najszybszy kierunek dla inwestorów</td>
               </tr>
               <tr>
                 <td>Najlepsze zastosowanie</td>
                 <td>Dom wakacyjny i premium rental</td>
                 <td>Szybka realizacja pod sprzedaż lub wynajem</td>
                 <td>Dom całoroczny i inwestycja prywatna</td>
-                <td>Energooszczędny dom z szybkim terminem</td>
               </tr>
             </tbody>
           </table>
@@ -1082,10 +1112,13 @@
       </section>
 
       <section id="seo-content" class="seo-article fade-up">
-        <h2>Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca</h2>
+        <h2>Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca</h2>
 
-        <h3>Domy drewniane, prefabrykowane, szkieletowe i Thermochip</h3>
-        <p>Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną, szkieletową i Thermochip — dobierając rozwiązanie do działki, budżetu i celu inwestycji.</p>
+        <h3>Domy drewniane, prefabrykowane i szkieletowe</h3>
+        <p>Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną i szkieletową — dobierając rozwiązanie do działki, budżetu i celu inwestycji.</p>
+
+        <h3>Doświadczenie i nowoczesne technologie</h3>
+        <p>Posiadamy wieloletnie doświadczenie na rynku nieruchomości i budownictwa na Costa Blanca, co pozwala nam skutecznie prowadzić projekty o różnym stopniu złożoności. Łączymy sprawdzone rozwiązania budowlane z nowoczesnymi technologiami, które zwiększają komfort życia, efektywność energetyczną oraz trwałość domu. Posiadamy również własny showroom w Walencji, gdzie klienci mogą zobaczyć materiały, standardy wykończenia i rozwiązania technologiczne w praktyce. Dzięki temu inwestor otrzymuje nie tylko estetyczny, ale także funkcjonalny i przyszłościowy produkt.</p>
 
         <h3>Kompleksowa realizacja</h3>
         <p>Nasza oferta obejmuje nie tylko budowę domu, ale także fundamenty każdej złożoności, remonty pod klucz oraz premium wykończenie wnętrz. Dzięki temu klient otrzymuje jeden spójny model realizacji na Costa Blanca.</p>
@@ -1094,7 +1127,7 @@
         <p>Usługa jest przeznaczona zarówno dla osób, które mają już wybraną działkę prywatną, jak i dla klientów planujących budowę od zera. Jeśli grunt jest już kupiony, pomagamy dobrać odpowiednią technologię, zakres realizacji, fundamenty i standard domu dopasowany do lokalizacji, terenu oraz budżetu. Prowadzimy także cały proces etapami: analiza, projekt, technologia, budowa, wykończenie i przygotowanie domu do życia lub wynajmu. Dla inwestorów tworzymy domy, które dobrze wyglądają, są dopasowane do rynku Costa Blanca i mogą pracować jako nieruchomość inwestycyjna lub rental premium.</p>
 
         <h3>Dlaczego ta oferta działa dla klientów i inwestorów</h3>
-        <p>Ta oferta działa, ponieważ łączy różne technologie budowy z realnymi potrzebami rynku i stylem życia klienta. Budujemy domy drewniane, prefabrykowane, szkieletowe i Thermochip, dobierając rozwiązanie do inwestycji, budżetu i oczekiwanego terminu realizacji. Zapewniamy kompleksową realizację — od działki i fundamentów po remont, wykończenie premium i przygotowanie domu do użytkowania. Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium Costa Blanca oraz oczekiwań klientów z Polski.</p>
+        <p>Ta oferta działa, ponieważ łączy doświadczenie, różne technologie budowy oraz realne potrzeby rynku i styl życia klienta. Budujemy domy drewniane, prefabrykowane i szkieletowe, dobierając rozwiązanie do inwestycji, budżetu i oczekiwanego terminu realizacji. Zapewniamy kompleksową realizację — od działki i fundamentów po remont, wykończenie premium i przygotowanie domu do użytkowania. Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium Costa Blanca oraz oczekiwań klientów z Polski.</p>
 
         <h3>Jak wygląda współpraca</h3>
         <p>Współpraca rozpoczyna się od wyboru działki i analizy lokalizacji, potencjału gruntu, warunków zabudowy oraz doboru właściwej technologii budowy. Następnie przechodzimy do etapu projektu, standardu, rozwiązań konstrukcyjnych i fundamentowych odpowiednich dla konkretnej inwestycji. Ostatni etap obejmuje realizację budowy, instalacje, prace wykończeniowe oraz przygotowanie domu do zamieszkania, wynajmu lub sprzedaży.</p>
@@ -1121,15 +1154,24 @@
           <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-main" href="tel:+34604158859">Zadzwoń teraz</a>
-          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20budowa%20domu%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 Napisz</a>
+          <a class="btn btn-main" href="tel:+34604158859">
+            📞 Zadzwoń teraz
+          </a>
+          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20budowa%20domu%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">
+            💬 Napisz
+          </a>
         </div>
 
         <div class="share-box">
           <p>Udostępnij stronę</p>
           <div class="share-actions">
             <button class="share-btn" type="button" id="share-link">🔗 Link</button>
-            <a class="share-btn" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.8 8.45-4.94 8.45-9.93z"/>
+              </svg>
+              Facebook
+            </a>
           </div>
         </div>
 
@@ -1140,7 +1182,7 @@
           </div>
           <input type="email" name="email" placeholder="Email">
           <textarea name="message" placeholder="Napisz, jaki dom lub projekt Cię interesuje i czy masz już działkę"></textarea>
-          <button class="btn btn-main" type="submit">Wyślij zapytanie</button>
+          <button class="btn btn-main" type="submit">📩 Wyślij zapytanie</button>
         </form>
       </section>
     </div>
@@ -1164,8 +1206,11 @@
 
   <div class="sticky-contact" aria-label="Szybki kontakt">
     <div class="wrap">
-      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20budowa%20domu%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa">💬 Napisz</a>
+      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20budowa%20domu%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa">
+        💬 WhatsApp
+      </a>
     </div>
+  </div>
   </div>
 
   <script>
@@ -1175,7 +1220,7 @@
       const header = document.querySelector('.topbar');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
-      const shareUrl = 'https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/';
+      const shareUrl = window.location.href;
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
@@ -1281,9 +1326,9 @@ ${message}`;
       },
       {
         "@type": "WebPage",
-        "name": "Budowa domów w Hiszpanii — drewniane, prefabrykowane, szkieletowe i Thermochip na Costa Blanca",
+        "name": "Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca",
         "url": "https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/build-house/",
-        "description": "Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane, szkieletowe i Thermochip, fundamenty każdej złożoności, remonty pod klucz i premium wykończenie wnętrz.",
+        "description": "Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane i szkieletowe, fundamenty każdej złożoności, remonty pod klucz i premium wykończenie wnętrz.",
         "inLanguage": "pl",
         "primaryImageOfPage": {
           "@type": "ImageObject",
