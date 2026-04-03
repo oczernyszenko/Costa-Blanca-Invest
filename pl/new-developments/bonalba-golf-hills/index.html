@@ -550,7 +550,6 @@
       font-weight: 700;
     }
 
-    .contact-inline-wrap,
     .cta-actions,
     .footer-links {
       display: flex;
@@ -559,11 +558,11 @@
       justify-content: center;
     }
 
-    .contact-inline-wrap { margin: 4px 0 18px; }
+    .cta-actions {
+      margin: 4px 0 18px;
+    }
 
-    .contact-inline,
-    .btn,
-    .sticky-btn {
+    .btn {
       position: relative;
       display: inline-flex;
       align-items: center;
@@ -586,9 +585,7 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease, filter 0.25s ease;
     }
 
-    .contact-inline::before,
-    .btn::before,
-    .sticky-btn::before {
+    .btn::before {
       content: "";
       position: absolute;
       inset: 1px;
@@ -599,9 +596,7 @@
       z-index: 0;
     }
 
-    .contact-inline::after,
-    .btn::after,
-    .sticky-btn::after {
+    .btn::after {
       content: "";
       position: absolute;
       top: -140%;
@@ -616,14 +611,11 @@
       transition: opacity 0.25s ease, transform 0.55s ease;
     }
 
-    .contact-inline > *,
-    .btn > *,
-    .sticky-btn > * {
+    .btn > * {
       position: relative;
       z-index: 2;
     }
 
-    .contact-inline:first-child,
     .btn-main {
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.24);
@@ -659,26 +651,20 @@
       transition: opacity 0.25s ease, transform 0.55s ease;
     }
 
-    .contact-inline:last-child,
-    .btn-light,
-    .sticky-wa {
+    .btn-light {
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.22);
       background: linear-gradient(135deg, rgba(37, 211, 102, 0.9) 0%, rgba(20, 158, 72, 0.98) 100%);
       box-shadow: 0 12px 26px rgba(37, 211, 102, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
     }
 
-    .contact-inline:hover,
-    .btn:hover,
-    .sticky-btn:hover {
+    .btn:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 20px 44px rgba(15, 23, 42, 0.12), 0 0 24px rgba(255, 255, 255, 0.14);
       filter: saturate(1.04);
     }
 
-    .contact-inline:hover::after,
-    .btn:hover::after,
-    .sticky-btn:hover::after {
+    .btn:hover::after {
       opacity: 1;
       transform: translateX(150%) rotate(24deg);
     }
@@ -1262,14 +1248,11 @@
         padding: 20px;
       }
 
-      .cta-actions,
-      .contact-inline-wrap {
+      .cta-actions {
         flex-direction: column;
       }
 
-      .cta-actions .btn,
-      .contact-inline,
-      .sticky-btn {
+      .cta-actions .btn {
         width: 100%;
       }
 
@@ -1357,13 +1340,8 @@
       <div class="content">
         <h1 class="hero-title">Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury</h1>
         <div class="subtitle hero-meta-justify">Hiszpania · Mutxamel koło Alicante</div>
-        <div class="price">280 800 € – 405 600 €</div>
+        <div class="price">€ 280 800 – 405 600</div>
         <div class="price price-soft">98 – 156 m² · 2–3 pokoje</div>
-
-        <div class="contact-inline-wrap">
-          <a class="contact-inline" href="tel:+34604158859"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/></svg><span>+34 604 15 88 59</span></a>
-          <a class="contact-inline" href="https://wa.me/34604158859?text=Witam%2C%20interesuje%20mnie%20Bonalba%20Golf%20Hills" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.56 0 .26 5.29.26 11.8c0 2.08.54 4.1 1.58 5.88L0 24l6.52-1.71a11.8 11.8 0 0 0 5.55 1.41h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.1-3.36-8.42Zm-8.45 18.2h-.01a9.84 9.84 0 0 1-5-1.36l-.36-.21-3.87 1.01 1.03-3.77-.24-.39a9.8 9.8 0 0 1-1.5-5.17c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.96c0 5.43-4.42 9.85-9.85 9.85Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.35.23-.65.08-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.92 1.23 3.12.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg><span>WhatsApp</span></a>
-        </div>
 
         <div class="kpi-row" aria-label="Kluczowe parametry inwestycji">
           <div class="kpi"><strong>€</strong><div class="value">280 800 – 405 600</div></div>
@@ -1380,7 +1358,8 @@
         <h2 class="params-title">Parametry inwestycji</h2>
         <div class="params-accent"></div>
         <div class="params params-grid-justify">
-          <div class="param"><strong>Lokalizacja</strong><span>Mutxamel · Alicante</span></div>
+          <div class="param"><strong>Parametry</strong><span>Lokalizacja: Mutxamel · Alicante · Kraj: Hiszpania · Status: Nowa inwestycja · Etap: W realizacji · Liczba ofert: Wybrane apartamenty · Typ: Apartamenty 2–3 pokojowe · Charakter: Zakup prywatny i inwestycyjny · Forma własności: Pełna własność</span></div>
+        </div>
           <div class="param"><strong>Kraj</strong><span>Hiszpania</span></div>
           <div class="param"><strong>Status</strong><span>Nowa inwestycja</span></div>
           <div class="param"><strong>Etap</strong><span>W realizacji</span></div>
@@ -1466,9 +1445,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const contactForm = document.getElementById('contact-form');
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImage = document.getElementById('lightboxImage');
-      const lightboxLinks = document.querySelectorAll('[data-lightbox]');
       const nextPlanBtn = document.querySelector('.next-plan');
       const prevPlanBtn = document.querySelector('.prev-plan');
       const planTrack = document.getElementById('planTrack');
@@ -1489,27 +1465,6 @@
           if (!opened) window.location.href = url;
         });
       }
-
-      lightboxLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          lightboxImage.src = link.dataset.lightbox;
-          lightbox.classList.add('open');
-          lightbox.setAttribute('aria-hidden', 'false');
-        });
-      });
-
-      lightbox?.addEventListener('click', () => {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-          lightbox.classList.remove('open');
-          lightbox.setAttribute('aria-hidden', 'true');
-        }
-      });
 
       if (!nextPlanBtn || !prevPlanBtn || !planTrack || !planImages.length) return;
 
@@ -1549,14 +1504,7 @@
           updatePlans();
         }
       }, { passive: true });
-
-      planImages.forEach((img) => {
-        img.addEventListener('click', () => {
-          lightboxImage.src = img.src;
-          lightbox.classList.add('open');
-          lightbox.setAttribute('aria-hidden', 'false');
-        });
-      });
+      
 
       if (copyLinkBtn) {
         copyLinkBtn.addEventListener('click', async () => {
