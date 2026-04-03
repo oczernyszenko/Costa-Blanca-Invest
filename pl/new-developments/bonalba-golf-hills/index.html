@@ -725,47 +725,50 @@
       margin: 34px 0 10px;
       font-size: 24px;
       color: var(--primary-dark);
+      text-align: center;
     }
 
     .params-accent {
-      width: 68px;
-      height: 2px;
-      margin-bottom: 14px;
+      width: 88px;
+      height: 3px;
+      margin: 0 auto 16px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), transparent);
+      background: linear-gradient(90deg, var(--accent), var(--primary));
     }
 
     .params {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px 24px;
-      align-items: start;
+      display: block;
     }
 
     .params-grid-justify {
       max-width: 1080px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .param {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      padding: 2px 0;
-      font-size: 15px;
+      display: block;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(243,251,254,0.92) 100%);
+      border: 1px solid rgba(94, 198, 232, 0.16);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+      font-size: 16px;
+      line-height: 1.75;
       font-weight: 600;
       color: var(--text);
-      text-align: justify;
-      text-justify: inter-word;
+      text-align: center;
+      text-wrap: pretty;
     }
 
     .param strong {
-      margin-right: 2px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--muted);
+      display: inline;
+      margin-right: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent-dark);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
     }
 
     .why-grid,
@@ -1090,7 +1093,7 @@
 
     @media (max-width: 768px) {
       .params {
-        grid-template-columns: 1fr;
+        display: block;
       }
 
       .agent-card {
@@ -1358,15 +1361,7 @@
         <h2 class="params-title">Parametry inwestycji</h2>
         <div class="params-accent"></div>
         <div class="params params-grid-justify">
-          <div class="param"><strong>Parametry</strong><span>Lokalizacja: Mutxamel · Alicante · Kraj: Hiszpania · Status: Nowa inwestycja · Etap: W realizacji · Liczba ofert: Wybrane apartamenty · Typ: Apartamenty 2–3 pokojowe · Charakter: Zakup prywatny i inwestycyjny · Forma własności: Pełna własność</span></div>
-        </div>
-          <div class="param"><strong>Kraj</strong><span>Hiszpania</span></div>
-          <div class="param"><strong>Status</strong><span>Nowa inwestycja</span></div>
-          <div class="param"><strong>Etap</strong><span>W realizacji</span></div>
-          <div class="param"><strong>Liczba ofert</strong><span>Wybrane apartamenty</span></div>
-          <div class="param"><strong>Typ nieruchomości</strong><span>Apartamenty 2–3 pokojowe</span></div>
-          <div class="param"><strong>Charakter inwestycji</strong><span>Zakup prywatny i inwestycyjny</span></div>
-          <div class="param"><strong>Forma własności</strong><span>Pełna własność</span></div>
+          <div class="param"><strong>Najważniejsze informacje</strong><span>Lokalizacja: Mutxamel · Alicante · Kraj: Hiszpania · Status: Nowa inwestycja · Etap: W realizacji · Liczba ofert: Wybrane apartamenty · Typ nieruchomości: Apartamenty 2–3 pokojowe · Charakter inwestycji: Zakup prywatny i inwestycyjny · Forma własności: Pełna własność</span></div>
         </div>
       </div>
 
