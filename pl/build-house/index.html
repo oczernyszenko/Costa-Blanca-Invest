@@ -23,31 +23,31 @@
   <meta property="og:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
   <meta property="og:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane i szkieletowe, remonty pod klucz i premium wykończenie wnętrz.">
   <meta property="og:image" content="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg">
-  <meta property="og:image:url" content="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
   <meta property="og:url" content="https://costa-blanca-invest.com/pl/build-house/">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
   <meta name="twitter:description" content="Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane i szkieletowe, remonty i wykończenia premium.">
   <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg">
   <meta name="twitter:image:alt" content="Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca">
-  <meta name="twitter:url" content="https://costa-blanca-invest.com/pl/build-house/">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/build-house/">
-  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/pl/build-house/">
+  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.facebook.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://costa-blanca-invest.com/pl/build-house/images/wood-hero.jpg" fetchpriority="high">
 
@@ -61,14 +61,14 @@
       --text: #1f2933;
       --text-soft: #5f6b76;
       --muted: #97a3ad;
-      --line: rgba(103, 181, 76, 0.18);
-      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
-      --shadow-lux: 0 30px 80px rgba(15, 23, 42, 0.12);
+      --line: rgba(103,181,76,.18);
+      --shadow-soft: 0 8px 24px rgba(15,23,42,.05);
+      --shadow-lux: 0 30px 80px rgba(15,23,42,.12);
       --radius: 20px;
       --container: 1280px;
-      --surface: rgba(255,255,255,0.88);
-      --glass-light: rgba(255,255,255,0.72);
-      --glass-medium: rgba(255,255,255,0.82);
+      --surface: rgba(255,255,255,.88);
+      --glass-light: rgba(255,255,255,.72);
+      --glass-medium: rgba(255,255,255,.82);
       --maxw: 1200px;
       --header-height: 82px;
       --footer-title-size: 24px;
@@ -90,8 +90,8 @@
       font-size: var(--body-size);
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(103, 181, 76, 0.12), transparent 40%),
-        radial-gradient(circle at 90% 0%, rgba(208, 122, 52, 0.08), transparent 40%),
+        radial-gradient(circle at 10% 10%, rgba(103,181,76,.12), transparent 40%),
+        radial-gradient(circle at 90% 0%, rgba(208,122,52,.08), transparent 40%),
         linear-gradient(180deg, #ffffff 0%, #f8fcf6 50%, #ffffff 100%);
       line-height: 1.72;
       overflow-x: hidden;
@@ -106,10 +106,8 @@
     p {
       margin: 0 0 14px;
       color: var(--text-soft);
-      text-align: justify;
-      text-justify: inter-word;
-      hyphens: auto;
-      word-break: break-word;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
     }
 
     .container {
@@ -135,7 +133,7 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255,255,255,.28);
-      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 10px 40px rgba(15,23,42,.06);
       transition: transform .35s ease;
       will-change: transform;
     }
@@ -244,7 +242,7 @@
     }
 
     .hero-copy {
-      padding: 42px 42px;
+      padding: 42px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -292,7 +290,7 @@
       height: 100%;
       min-height: 100%;
       object-fit: cover;
-      transition: transform .9s ease, filter .45s ease;
+      transition: transform .6s ease, filter .35s ease;
     }
     .hero-card:hover .hero-image img {
       transform: scale(1.02);
@@ -342,13 +340,6 @@
       -webkit-appearance: none;
       appearance: none;
     }
-
-    .share-btn.fb {
-      background: #1877f2;
-      color: #fff;
-      border-color: rgba(255,255,255,.2);
-      box-shadow: 0 12px 26px rgba(24,119,242,.25);
-    }
     .contact-inline::before,
     .btn::before,
     .sticky-btn::before,
@@ -381,10 +372,8 @@
       z-index: 1;
       transition: opacity .25s ease, transform .55s ease;
     }
-    .contact-inline > *, .btn > *, .sticky-btn > *, .share-btn > *, .submit-btn > * {
-      position: relative;
-      z-index: 2;
-    }
+    .contact-inline > *, .btn > *, .sticky-btn > *, .share-btn > *, .submit-btn > * { position: relative; z-index: 2; }
+
     .contact-inline:first-child,
     .btn-main,
     .submit-btn {
@@ -401,9 +390,11 @@
       border-color: rgba(255,255,255,.18);
       box-shadow: 0 12px 26px rgba(37,211,102,.25), 0 0 24px rgba(37,211,102,.16);
     }
-    .share-btn {
-      background: rgba(255,255,255,.92);
-      color: var(--primary-dark);
+    .share-btn.fb {
+      background: #1877f2;
+      color: #fff;
+      border-color: rgba(255,255,255,.2);
+      box-shadow: 0 12px 26px rgba(24,119,242,.25);
     }
     .contact-inline:hover,
     .btn:hover,
@@ -562,10 +553,7 @@
       color: var(--primary-dark);
       text-align: center;
     }
-    .construction-stage p {
-      margin: 0;
-      text-align: left;
-    }
+    .construction-stage p { margin: 0; text-align: left; }
 
     table {
       width: 100%;
@@ -610,7 +598,6 @@
       margin-left: 0;
       margin-right: 0;
       text-align: justify;
-      text-justify: inter-word;
       color: var(--text-soft);
     }
 
@@ -629,10 +616,7 @@
       border: 1px solid rgba(15,23,42,.06);
       box-shadow: 0 18px 48px rgba(15,23,42,.06);
     }
-    .contact-avatar {
-      margin: 18px auto 16px;
-      text-align: center;
-    }
+    .contact-avatar { margin: 18px auto 16px; text-align: center; }
     .contact-avatar img {
       width: 110px;
       height: 110px;
@@ -648,10 +632,7 @@
       color: var(--primary-dark);
       letter-spacing: -.02em;
     }
-    .contact-avatar-role {
-      font-size: 14px;
-      color: var(--text-soft);
-    }
+    .contact-avatar-role { font-size: 14px; color: var(--text-soft); }
     .contact-links {
       display: grid;
       gap: 12px;
@@ -746,10 +727,7 @@
       color: var(--text-soft);
       text-align: center;
     }
-    .footer-links {
-      margin-top: 22px;
-      gap: 14px 20px;
-    }
+    .footer-links { margin-top: 22px; gap: 14px 20px; }
     .footer-links a {
       font-size: 14px;
       font-weight: 700;
@@ -791,10 +769,7 @@
       transform: translateY(30px);
       transition: opacity .8s cubic-bezier(.2,.6,.2,1), transform .8s cubic-bezier(.2,.6,.2,1);
     }
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 1100px) {
       .hero-card { grid-template-columns: 1fr; }
@@ -1136,7 +1111,7 @@
 
       <section class="cta-box contact-box fade-up show" id="contact">
         <h2>Zapytaj o budowę domu w Hiszpanii</h2>
-        <p>Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.</p>
+        <p class="center-text">Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.</p>
 
         <div class="contact-avatar">
           <img src="https://costa-blanca-invest.com/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async">
@@ -1168,7 +1143,7 @@
           </div>
           <input type="email" name="email" placeholder="Email">
           <textarea name="message" placeholder="Napisz, jaki dom lub projekt Cię interesuje i czy masz już działkę"></textarea>
-          <button class="btn btn-main" type="submit">📩 Wyślij zapytanie</button>
+          <button class="submit-btn" type="submit">📩 Wyślij zapytanie</button>
         </form>
       </section>
     </div>
@@ -1204,12 +1179,13 @@
       const header = document.querySelector('.topbar');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
-      const shareUrl = window.location.href;
+      const shareUrl = 'https://costa-blanca-invest.com/pl/build-house/';
       const shareTitle = document.title;
       const shareText = document.querySelector('meta[name="description"]')?.content || '';
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
+      let ticking = false;
 
       if (shareFacebook) {
         shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
@@ -1230,7 +1206,6 @@
         animatedCards.forEach((el) => el.classList.add('show'));
       }
 
-      let ticking = false;
       const onScroll = () => {
         const currentScroll = window.pageYOffset;
         const delta = currentScroll - lastScroll;
@@ -1293,7 +1268,14 @@
         const phone = (formData.get('phone') || '').toString().trim();
         const email = (formData.get('email') || '').toString().trim();
         const message = (formData.get('message') || '').toString().trim();
-        const text = `Nowe zapytanie ze strony Budowa domów w Hiszpanii:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+        const text = `Nowe zapytanie ze strony Budowa domów w Hiszpanii:
+
+Imię: ${name}
+Telefon: ${phone}
+Email: ${email}
+
+Wiadomość:
+${message}`;
         const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
         const opened = window.open(url, '_blank', 'noopener');
         if (!opened) window.location.href = url;
