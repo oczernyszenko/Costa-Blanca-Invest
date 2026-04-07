@@ -22,9 +22,9 @@
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta property="og:description" content="Wyselekcjonowane nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille w najlepszych lokalizacjach Alicante–Benidorm.">
-  <meta property="og:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
-  <meta property="og:image:url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
+  <meta property="og:image:url" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -34,7 +34,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta name="twitter:description" content="Apartamenty, penthouse’y i wille na Costa Blanca z potencjałem inwestycyjnym, wynajmu i wzrostu wartości.">
-  <meta name="twitter:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
   <meta name="twitter:image:alt" content="Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm">
   <meta name="twitter:url" content="https://costa-blanca-invest.com/pl/new-developments/">
 
@@ -49,7 +49,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/images/hero-sea-palm.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg" fetchpriority="high">
 
   <style>
     :root{
@@ -289,6 +289,8 @@
   </style>
 </head>
 <body data-projects-url="">
+  <!-- WSTAW TUTAJ URL Z GOOGLE APPS SCRIPT, gdy będzie gotowy:
+       <body data-projects-url="https://script.google.com/macros/s/AKfycb.../exec"> -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
@@ -323,7 +325,7 @@
           <p class="lead">Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.</p>
         </div>
         <div class="hero-image">
-          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+          <img src="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
         </div>
       </section>
 
@@ -507,6 +509,7 @@
     </div>
   </div>
 
+  <!-- DOMYŚLNE KARTY. Jeśli Apps Script URL nie działa, strona użyje tych danych. -->
   <script id="projects-data" type="application/json">
   [
     {
@@ -532,7 +535,7 @@
       const shareLinkBtn=d.getElementById('share-link');
       const shareFacebook=d.getElementById('share-facebook');
       const shareUrl='https://costa-blanca-invest.com/pl/new-developments/';
-      const fallbackImage='/images/hero-sea-palm.jpg';
+      const fallbackImage='https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg';
       const fallbackAvatar='/avatar.png';
       const projectsUrl=(document.body.dataset.projectsUrl||'').trim();
       let lastScroll=window.pageYOffset,up=0,down=0;
@@ -556,7 +559,7 @@
         return [
           {
             href:'/pl/new-developments/bonalba-golf-hills/',
-            image:'/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
+            image:'https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
             alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
             chip:'Premium · Golf & Lifestyle',
             title:'Bonalba Golf Hills',
@@ -791,7 +794,7 @@
         "name": "Costa Blanca Invest",
         "url": "https://costa-blanca-invest.com/",
         "logo": "https://costa-blanca-invest.com/apple-touch-icon.png",
-        "image": "https://costa-blanca-invest.com/images/hero-sea-palm.jpg",
+        "image": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
         "email": "o.czernyszenko@gmail.com",
         "telephone": "+34604158859"
       },
@@ -809,7 +812,7 @@
         "inLanguage": "pl",
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://costa-blanca-invest.com/images/hero-sea-palm.jpg"
+          "url": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg"
         },
         "isPartOf": {
           "@type": "WebSite",
