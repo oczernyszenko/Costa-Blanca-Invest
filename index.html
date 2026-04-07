@@ -502,8 +502,36 @@
     .process-card { padding: 28px; text-align: left; }
 
     .direction-card {
+      position: relative;
       color: inherit;
       transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+    .direction-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      background: transparent;
+    }
+    .direction-card.card-investments::before {
+      background: linear-gradient(90deg, var(--investment), transparent);
+      box-shadow: 0 0 12px rgba(118,181,197,.6);
+    }
+    .direction-card.card-plots::before {
+      background: linear-gradient(90deg, var(--plots), transparent);
+      box-shadow: 0 0 12px rgba(135,62,35,.6);
+    }
+    .direction-card.card-eco::before {
+      background: linear-gradient(90deg, var(--eco), transparent);
+      box-shadow: 0 0 12px rgba(62,128,40,.6);
+    }
+    .direction-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 34px 80px rgba(15,23,42,.16);
     }
     .direction-card:hover {
       transform: translateY(-8px) scale(1.01);
@@ -1092,8 +1120,13 @@
           <a href="#process">Proces</a>
           <a href="#contact">Kontakt</a>
         </div>
-        <div style="margin-top:22px;padding:16px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;gap:10px;">
-          <img src="/images/celebrity.png" alt="Celebrity Real Estate" style="height:46px;object-fit:contain;">
+        <div style="margin-top:22px;padding:18px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.4) inset, 0 0 22px rgba(118,181,197,.25), 0 0 28px rgba(135,62,35,.15), 0 0 24px rgba(62,128,40,.18);">
+          <div style="position:absolute;top:0;left:0;width:100%;height:4px;display:flex;">
+            <div style="flex:1;background:var(--investment);"></div>
+            <div style="flex:1;background:var(--plots);"></div>
+            <div style="flex:1;background:var(--eco);"></div>
+          </div>
+          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" style="height:46px;object-fit:contain;">
           <div style="font-size:13px;color:#5f6b76;text-align:center;max-width:420px;">
             Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentowane nieruchomości są częścią portfolio agencji
           </div>
