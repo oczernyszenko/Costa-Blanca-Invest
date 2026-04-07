@@ -23,7 +23,6 @@
   <meta property="og:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta property="og:description" content="Wyselekcjonowane nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille w najlepszych lokalizacjach Alicante–Benidorm.">
   <meta property="og:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
-  <meta property="og:image:url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
   <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -44,841 +43,228 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/new-developments/">
-  /new-developments/">
+  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="dns-prefetch" href="//www.facebook.com">
   <link rel="preload" as="image" href="/images/hero-sea-palm.jpg" fetchpriority="high">
 
   <style>
-    :root {
-      --primary: #5ec6e8;
-      --primary-dark: #1f6f85;
-      --primary-pale: #f3fbfe;
-      --accent: #d07a34;
-      --accent-dark: #c06b2a;
-      --text: #1f2933;
-      --text-soft: #5f6b76;
-      --muted: #97a3ad;
-      --line: rgba(94,198,232,0.18);
-      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
-      --shadow-lux: 0 30px 80px rgba(15, 23, 42, 0.12);
-      --radius: 20px;
-      --container: 1280px;
-      --surface: rgba(255,255,255,0.88);
-      --glass-light: rgba(255,255,255,0.72);
-      --glass-medium: rgba(255,255,255,0.82);
-      --maxw: 1200px;
-      --header-height: 82px;
-      --footer-title-size: 24px;
-      --body-font: Inter, Arial, sans-serif;
-      --h1-size: clamp(34px, 5vw, 54px);
-      --h2-size: clamp(30px, 4vw, 42px);
-      --h3-size: 22px;
-      --body-size: 16px;
-      --small-size: 14px;
-      --btn-height: 50px;
-      --form-radius: 18px;
+    :root{
+      --primary:#5ec6e8;
+      --primary-dark:#1f6f85;
+      --primary-pale:#f3fbfe;
+      --accent:#d07a34;
+      --accent-dark:#c06b2a;
+      --text:#1f2933;
+      --text-soft:#5f6b76;
+      --muted:#97a3ad;
+      --line:rgba(94,198,232,.18);
+      --shadow-soft:0 8px 24px rgba(15,23,42,.05);
+      --shadow-lux:0 30px 80px rgba(15,23,42,.12);
+      --radius:20px;
+      --container:1280px;
+      --surface:rgba(255,255,255,.88);
+      --glass-light:rgba(255,255,255,.72);
+      --glass-medium:rgba(255,255,255,.82);
+      --maxw:1200px;
+      --header-height:82px;
+      --footer-title-size:24px;
+      --body-font:Inter,Arial,sans-serif;
+      --h1-size:clamp(34px,5vw,54px);
+      --h2-size:clamp(30px,4vw,42px);
+      --h3-size:22px;
+      --body-size:16px;
+      --small-size:14px;
+      --btn-height:50px;
+      --form-radius:18px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-
-    body {
-      margin: 0;
-      font-family: var(--body-font);
-      font-size: var(--body-size);
-      color: var(--text);
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      font-family:var(--body-font);
+      font-size:var(--body-size);
+      color:var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(94, 198, 232, 0.12), transparent 40%),
-        radial-gradient(circle at 90% 0%, rgba(31, 111, 133, 0.08), transparent 40%),
-        linear-gradient(180deg, #ffffff 0%, #eef9fd 50%, #ffffff 100%);
-      line-height: 1.72;
-      overflow-x: hidden;
+        radial-gradient(circle at 10% 10%,rgba(94,198,232,.12),transparent 40%),
+        radial-gradient(circle at 90% 0%,rgba(31,111,133,.08),transparent 40%),
+        linear-gradient(180deg,#fff 0%,#eef9fd 50%,#fff 100%);
+      line-height:1.72;
+      overflow-x:hidden;
+    }
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3{margin:0 0 14px;line-height:1.08;text-wrap:balance}
+    h1{font-size:var(--h1-size)}
+    h2{font-size:var(--h2-size)}
+    h3{font-size:var(--h3-size)}
+    p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;text-align:justify}
+    .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:var(--glass-light);
+      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.28);
+      box-shadow:0 10px 40px rgba(15,23,42,.06);
+      transition:transform .35s ease;
+      will-change:transform;
+    }
+    .topbar.hide{transform:translateY(-100%)}
+    .topbar-inner{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:24px;min-height:var(--header-height)}
+    .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
+    .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(94,198,232,.15);flex:0 0 auto}
+    .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:wrap}
+    .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease}
+    .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+    .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
+    .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+
+    .page{padding:22px 0 84px}
+    .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:0 0 18px;color:var(--muted);font-size:var(--small-size);font-weight:700}
+    .breadcrumbs a{color:var(--primary-dark);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.32);box-shadow:0 6px 18px rgba(15,23,42,.05)}
+
+    .hero-card,.section-card,.cta-box,.footer-card{border:1px solid rgba(255,255,255,.5);border-radius:var(--radius);background:var(--surface);backdrop-filter:blur(14px);box-shadow:var(--shadow-lux);overflow:hidden}
+    .hero-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);align-items:stretch;min-height:560px}
+    .hero-copy{padding:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(94,198,232,.08);color:var(--primary-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(15,23,42,.05);width:fit-content;margin-bottom:16px}
+    h1,.section-card h2,.cta-box h2,.seo-article h2,.seo-article h3{color:var(--primary-dark);letter-spacing:-.03em;text-align:center}
+    .subtitle,.lead,.center-text{text-align:center;max-width:920px;margin-left:auto;margin-right:auto;font-size:17px}
+    .hero-image{position:relative;min-height:100%;background:var(--primary-pale);isolation:isolate}
+    .hero-image::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.02) 0%,rgba(15,23,42,.16) 72%,rgba(15,23,42,.24) 100%),radial-gradient(circle at 78% 18%,rgba(255,255,255,.18),transparent 24%);z-index:1;pointer-events:none}
+    .hero-image img{width:100%;height:100%;min-height:100%;object-fit:cover;transition:transform .6s ease,filter .35s ease}
+    .hero-card:hover .hero-image img{transform:scale(1.02);filter:saturate(1.02) contrast(1.01)}
+
+    .contact-inline-wrap,.cta-actions,.footer-links,.inline-list,.share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+    .contact-inline-wrap{margin:12px 0 18px;gap:14px}
+    .cta-actions{margin-top:24px;align-items:stretch}
+    .inline-list{margin-top:18px}
+
+    .contact-inline,.btn,.sticky-btn,.share-btn,.submit-btn{
+      position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;
+      border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);
+      overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,filter .25s ease;cursor:pointer;-webkit-appearance:none;appearance:none
+    }
+    .contact-inline::before,.btn::before,.sticky-btn::before,.share-btn::before,.submit-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.06));opacity:.78;pointer-events:none;z-index:0}
+    .contact-inline::after,.btn::after,.sticky-btn::after,.share-btn::after,.submit-btn::after{content:"";position:absolute;top:-140%;left:-30%;width:55%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;pointer-events:none;z-index:1;transition:opacity .25s ease,transform .55s ease}
+    .contact-inline>*,.btn>*,.sticky-btn>*,.share-btn>*,.submit-btn>*{position:relative;z-index:2}
+    .contact-inline:first-child,.btn-main,.submit-btn{background:linear-gradient(135deg,rgba(208,122,52,.92),rgba(192,107,42,1));color:#fff;border:1px solid rgba(255,255,255,.24);box-shadow:0 14px 34px rgba(192,107,42,.25),0 0 0 1px rgba(255,255,255,.1) inset}
+    .contact-inline:last-child,.btn-light,.sticky-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff;border-color:rgba(255,255,255,.18);box-shadow:0 12px 26px rgba(37,211,102,.25),0 0 24px rgba(37,211,102,.16)}
+    .share-btn.fb{background:#1877f2;color:#fff;border-color:rgba(255,255,255,.2);box-shadow:0 12px 26px rgba(24,119,242,.25)}
+    .share-btn{background:rgba(255,255,255,.92);color:var(--primary-dark)}
+    .contact-inline:hover,.btn:hover,.sticky-btn:hover,.share-btn:hover,.submit-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12),0 0 24px rgba(255,255,255,.14);filter:saturate(1.04)}
+    .contact-inline:hover::after,.btn:hover::after,.sticky-btn:hover::after,.share-btn:hover::after,.submit-btn:hover::after{opacity:1;transform:translateX(150%) rotate(24deg)}
+    .contact-inline:focus-visible,.btn:focus-visible,.sticky-btn:focus-visible,.share-btn:focus-visible,.submit-btn:focus-visible,.contact-form input:focus-visible,.contact-form textarea:focus-visible,.nav a:focus-visible,.contact-links a:focus-visible{outline:3px solid rgba(94,198,232,.28);outline-offset:3px}
+
+    .why-grid,.projects-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid,.contact-form-grid,.sticky-contact .wrap{display:grid;gap:22px}
+    .why-grid,.projects-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .categories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .contact-form-grid{grid-template-columns:1fr 1fr;gap:14px}
+    .sticky-contact .wrap{grid-template-columns:1fr;max-width:var(--maxw);margin:0 auto}
+
+    .why-item,.project-card,.category-card,.step-card,.location-card,.faq-card{border-radius:var(--radius);border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow-soft);overflow:hidden}
+    .why-item,.step-card,.location-card,.faq-card{padding:28px;text-align:left}
+    .project-card .card-body,.category-card .card-body{padding:24px 26px;text-align:left}
+    .project-card,.category-card{color:inherit;position:relative;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+    .project-card:hover,.category-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 34px 80px rgba(15,23,42,.16)}
+    .project-card img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .6s ease,filter .35s ease}
+    .project-card:hover img{transform:scale(1.03);filter:saturate(1.03)}
+    .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
+    .project-card .card-meta{font-size:14px;font-weight:700;color:var(--muted)}
+    .project-card .card-price{font-size:17px;font-weight:800;color:#c8742f}
+    .project-card .card-link{margin-top:6px;font-size:14px;font-weight:800;color:var(--primary-dark)}
+    .chip{display:inline-flex;align-items:center;justify-content:center;width:fit-content;margin-bottom:10px;padding:7px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(94,198,232,.08);color:var(--primary-dark);border:1px solid rgba(94,198,232,.16)}
+
+    .section-card,.cta-box{margin-top:28px;padding:36px}
+    .section-card h2,.cta-box h2,.seo-article h2{position:relative;padding-bottom:12px;font-size:var(--h2-size);margin-left:auto;margin-right:auto}
+    .section-card h2::after,.cta-box h2::after,.seo-article h2::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:70px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),transparent)}
+    .inline-list span{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(94,198,232,.07);color:var(--primary-dark);font-weight:700;font-size:14px}
+
+    .seo-article{margin:42px auto 0;max-width:1200px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+    .seo-article h2,.seo-article h3{color:var(--primary-dark);text-align:center}
+    .seo-article h3{margin-top:22px;font-size:clamp(22px,3vw,30px)}
+    .seo-article p{max-width:none;margin-left:0;margin-right:0;text-align:justify;color:var(--text-soft)}
+
+    .contact-box{margin-top:28px;padding:42px 32px 38px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(247,249,250,.98) 100%);border:1px solid rgba(15,23,42,.06);box-shadow:0 18px 48px rgba(15,23,42,.06);position:relative;overflow:hidden}
+    .contact-box::before{content:"";position:absolute;inset:auto -80px -80px auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(94,198,232,.16) 0%,rgba(94,198,232,0) 70%);pointer-events:none}
+    .contact-title{font-size:clamp(34px,5vw,48px);margin-bottom:10px;color:var(--primary-dark);text-align:center;letter-spacing:-.03em}
+    .contact-note{margin:10px 0 20px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(94,198,232,.08);color:var(--primary-dark);font-weight:800;font-size:13px}
+    .contact-avatar{margin:20px auto 16px;text-align:center}
+    .contact-avatar img{width:110px;height:110px;border-radius:50%;margin:0 auto 12px;object-fit:cover;box-shadow:0 14px 36px rgba(0,0,0,.16);border:4px solid rgba(255,255,255,.82)}
+    .contact-avatar-name{font-weight:900;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
+    .contact-avatar-role{font-size:14px;color:var(--text-soft)}
+    .contact-links{display:grid;gap:12px;margin:20px 0 18px}
+    .contact-links a{font-weight:700;color:#6b7280;font-size:18px}
+    .contact-form{display:grid;gap:16px;text-align:left;margin-top:26px;max-width:860px;margin-left:auto;margin-right:auto;width:100%}
+    .contact-form input,.contact-form textarea{width:100%;padding:18px;border-radius:var(--form-radius);border:1px solid rgba(94,198,232,.2);background:rgba(255,255,255,.92);color:var(--text);outline:none;font-family:inherit;font-size:16px;line-height:1.5;box-shadow:0 0 0 1px rgba(255,255,255,.55) inset;transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease,background .22s ease}
+    .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
+    .contact-form textarea{min-height:150px;resize:vertical}
+    .contact-form input:focus,.contact-form textarea:focus{border-color:rgba(94,198,232,.5);box-shadow:0 0 0 4px rgba(94,198,232,.12),0 0 0 1px rgba(255,255,255,.72) inset;transform:translateY(-1px);background:rgba(255,255,255,.98)}
+    .share-box{margin-top:18px;padding-top:16px;border-top:1px solid rgba(15,23,42,.08)}
+    .share-box p{margin-bottom:12px;text-align:center}
+
+    .footer{padding:8px 0 54px;margin-top:34px;font-size:14px;color:var(--text-soft)}
+    .footer-card{position:relative;padding:34px 34px 28px;text-align:center;background:radial-gradient(circle at top left,rgba(94,198,232,.08),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(247,250,251,.98) 100%);border:1px solid rgba(255,255,255,.65);box-shadow:0 24px 60px rgba(15,23,42,.08);border-radius:24px;overflow:hidden}
+    .footer-card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--primary))}
+    .footer-brand{margin-bottom:12px;font-size:var(--footer-title-size);font-weight:900;letter-spacing:-.03em;color:var(--primary-dark);text-align:center}
+    .footer-copy{max-width:980px;margin:0 auto 10px;font-size:14px;line-height:1.8;color:var(--text-soft);text-align:center}
+    .footer-links{margin-top:22px;gap:14px 20px}
+    .footer-links a{font-size:14px;font-weight:700;color:var(--primary-dark);transition:color .22s ease,transform .22s ease}
+    .footer-links a:hover{color:var(--accent-dark);transform:translateY(-1px)}
+    .footer-bottom{margin-top:18px;padding-top:14px;border-top:1px solid rgba(15,23,42,.06);font-size:12px;color:var(--muted);text-align:center}
+
+    .sticky-contact{position:fixed;right:14px;bottom:14px;z-index:1200;display:none}
+    .sticky-wa{min-width:132px;min-height:52px;padding:0 18px;border-radius:999px}
+    .sticky-wa::before,.sticky-wa::after,.sticky-call{display:none}
+
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+    .fade-up.show{opacity:1;transform:translateY(0)}
+
+    @media (max-width:1100px){
+      .hero-card{grid-template-columns:1fr;min-height:auto}
+      .why-grid,.projects-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .hero-image,.hero-image img{min-height:420px}
     }
 
-    img { display: block; max-width: 100%; height: auto; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3 { margin: 0 0 14px; line-height: 1.08; text-wrap: balance; }
-    h1 { font-size: var(--h1-size); }
-    h2 { font-size: var(--h2-size); }
-    h3 { font-size: var(--h3-size); }
-    p {
-      margin: 0 0 14px;
-      color: var(--text-soft);
-      text-wrap: pretty;
-      overflow-wrap: anywhere;
-      text-align: justify;
-      text-justify: inter-word;
+    @media (max-width:768px){
+      .container{padding:0 14px}
+      .topbar-inner{grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
+      .brand{justify-self:center;text-align:center}
+      .nav{justify-content:center;align-items:center;gap:10px 14px}
+      .nav a{white-space:normal;text-align:center;font-size:14px;line-height:1.3}
+      .page{padding:14px 0 56px}
+      .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:22px}
+      .hero-image,.hero-image img{min-height:300px}
+      .contact-form-grid,.categories-grid,.why-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .contact-inline-wrap,.cta-actions,.share-actions{flex-direction:column}
+      .btn,.contact-inline,.share-btn,.submit-btn{width:100%;min-height:52px}
+      .sticky-contact{display:block;right:12px;bottom:12px}
+      body{padding-bottom:74px}
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 24px;
+    @media (max-width:560px){
+      .container{padding:0 10px}
+      .hero-card,.section-card,.cta-box,.footer-card,.contact-box{border-radius:18px}
+      .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:18px}
+      h1{font-size:clamp(28px,8.5vw,36px)}
+      .subtitle,.lead,p{font-size:15px}
+      .nav{gap:14px}
+      .nav a{font-size:14px}
+      .hero-image,.hero-image img{min-height:220px}
+      .contact-links a{font-size:16px}
+      .footer-links{flex-direction:column;align-items:center}
+      .footer-bottom{font-size:11px}
+      .sticky-contact{right:10px;bottom:10px}
+      .sticky-btn{min-height:48px;font-size:13px;padding:0 16px}
+      .sticky-wa{min-width:116px}
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: var(--glass-light);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,.28);
-      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
-      transition: transform .35s ease;
-      will-change: transform;
-    }
-    .topbar.hide { transform: translateY(-100%); }
-
-    .topbar-inner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      gap: 24px;
-      min-height: var(--header-height);
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 18px;
-      font-weight: 900;
-      letter-spacing: -.03em;
-      color: var(--primary-dark);
-    }
-    .brand::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--primary);
-      box-shadow: 0 0 0 6px rgba(94, 198, 232, .15);
-      flex: 0 0 auto;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      width: 100%;
-      min-width: 0;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      position: relative;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-soft);
-      white-space: nowrap;
-      transition: color .22s ease;
-    }
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .22s ease;
-    }
-    .nav a:hover,
-    .nav a[aria-current="page"] { color: var(--primary-dark); }
-    .nav a:hover::after,
-    .nav a[aria-current="page"]::after { transform: scaleX(1); }
-
-    .page { padding: 22px 0 84px; }
-
-    .breadcrumbs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: var(--small-size);
-      font-weight: 700;
-    }
-    .breadcrumbs a {
-      color: var(--primary-dark);
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.78);
-      border: 1px solid rgba(255,255,255,.32);
-      box-shadow: 0 6px 18px rgba(15,23,42,.05);
-    }
-
-    .hero-card,
-    .section-card,
-    .cta-box,
-    .footer-card {
-      border: 1px solid rgba(255,255,255,.5);
-      border-radius: var(--radius);
-      background: var(--surface);
-      backdrop-filter: blur(14px);
-      box-shadow: var(--shadow-lux);
-      overflow: hidden;
-    }
-
-    .hero-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
-      align-items: stretch;
-      min-height: 560px;
-    }
-
-    .hero-copy {
-      padding: 42px 42px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(94,198,232,0.08);
-      color: var(--primary-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      border: 1px solid rgba(15,23,42,0.05);
-      width: fit-content;
-      margin-bottom: 16px;
-    }
-
-    h1,
-    .section-card h2,
-    .cta-box h2,
-    .seo-article h2,
-    .seo-article h3 {
-      color: var(--primary-dark);
-      letter-spacing: -.03em;
-      text-align: center;
-    }
-
-    .subtitle,
-    .lead,
-    .center-text {
-      text-align: center;
-      max-width: 920px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 17px;
-    }
-
-    .hero-image {
-      position: relative;
-      min-height: 100%;
-      background: var(--primary-pale);
-      isolation: isolate;
-    }
-    .hero-image::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(15,23,42,.02) 0%, rgba(15,23,42,.16) 72%, rgba(15,23,42,.24) 100%),
-        radial-gradient(circle at 78% 18%, rgba(255,255,255,.18), transparent 24%);
-      z-index: 1;
-      pointer-events: none;
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      transition: transform .9s ease, filter .45s ease;
-    }
-    .hero-card:hover .hero-image img {
-      transform: scale(1.02);
-      filter: saturate(1.02) contrast(1.01);
-    }
-
-    .contact-inline-wrap,
-    .cta-actions,
-    .footer-links,
-    .inline-list,
-    .share-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      align-items: center;
-    }
-    .contact-inline-wrap { margin: 12px 0 18px; gap: 14px; }
-    .cta-actions { margin-top: 24px; align-items: stretch; }
-    .inline-list { margin-top: 18px; }
-
-    .contact-inline,
-    .btn,
-    .sticky-btn,
-    .share-btn,
-    .submit-btn {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: var(--btn-height);
-      padding: 0 20px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1;
-      white-space: nowrap;
-      border: 1px solid rgba(255,255,255,.35);
-      background: rgba(255,255,255,.92);
-      color: var(--primary-dark);
-      box-shadow: 0 10px 22px rgba(15,23,42,.08);
-      overflow: hidden;
-      isolation: isolate;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, filter .25s ease;
-      cursor: pointer;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-
-    .contact-inline::before,
-    .btn::before,
-    .sticky-btn::before,
-    .share-btn::before,
-    .submit-btn::before {
-      content: "";
-      position: absolute;
-      inset: 1px;
-      border-radius: inherit;
-      background: linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.06));
-      opacity: .78;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .contact-inline::after,
-    .btn::after,
-    .sticky-btn::after,
-    .share-btn::after,
-    .submit-btn::after {
-      content: "";
-      position: absolute;
-      top: -140%;
-      left: -30%;
-      width: 55%;
-      height: 320%;
-      transform: rotate(24deg);
-      background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.42), rgba(255,255,255,0));
-      opacity: 0;
-      pointer-events: none;
-      z-index: 1;
-      transition: opacity .25s ease, transform .55s ease;
-    }
-    .contact-inline > *, .btn > *, .sticky-btn > *, .share-btn > *, .submit-btn > * { position: relative; z-index: 2; }
-
-    .contact-inline:first-child,
-    .btn-main,
-    .submit-btn {
-      background: linear-gradient(135deg, rgba(208,122,52,.92), rgba(192,107,42,1));
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.24);
-      box-shadow: 0 14px 34px rgba(192,107,42,.25), 0 0 0 1px rgba(255,255,255,.10) inset;
-    }
-    .contact-inline:last-child,
-    .btn-light,
-    .sticky-wa {
-      background: linear-gradient(135deg, rgba(37,211,102,.96) 0%, rgba(20,158,72,1) 100%);
-      color: #fff;
-      border-color: rgba(255,255,255,.18);
-      box-shadow: 0 12px 26px rgba(37,211,102,.25), 0 0 24px rgba(37,211,102,.16);
-    }
-    .share-btn.fb {
-      background: #1877f2;
-      color: #fff;
-      border-color: rgba(255,255,255,.2);
-      box-shadow: 0 12px 26px rgba(24,119,242,.25);
-    }
-    .share-btn {
-      background: rgba(255,255,255,.92);
-      color: var(--primary-dark);
-    }
-    .contact-inline:hover,
-    .btn:hover,
-    .sticky-btn:hover,
-    .share-btn:hover,
-    .submit-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 20px 44px rgba(15,23,42,.12), 0 0 24px rgba(255,255,255,.14);
-      filter: saturate(1.04);
-    }
-    .contact-inline:hover::after,
-    .btn:hover::after,
-    .sticky-btn:hover::after,
-    .share-btn:hover::after,
-    .submit-btn:hover::after {
-      opacity: 1;
-      transform: translateX(150%) rotate(24deg);
-    }
-
-    .contact-inline:focus-visible,
-    .btn:focus-visible,
-    .sticky-btn:focus-visible,
-    .share-btn:focus-visible,
-    .submit-btn:focus-visible,
-    .contact-form input:focus-visible,
-    .contact-form textarea:focus-visible,
-    .nav a:focus-visible,
-    .contact-links a:focus-visible {
-      outline: 3px solid rgba(94,198,232,.28);
-      outline-offset: 3px;
-    }
-
-    .why-grid,
-    .projects-grid,
-    .categories-grid,
-    .steps-grid,
-    .locations-grid,
-    .faq-grid,
-    .contact-form-grid,
-    .sticky-contact .wrap {
-      display: grid;
-      gap: 22px;
-    }
-    .why-grid,
-    .projects-grid,
-    .steps-grid,
-    .locations-grid,
-    .faq-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .categories-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .contact-form-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .sticky-contact .wrap { grid-template-columns: 1fr; max-width: var(--maxw); margin: 0 auto; }
-
-    .why-item,
-    .project-card,
-    .category-card,
-    .step-card,
-    .location-card,
-    .faq-card {
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.38);
-      background: rgba(255,255,255,.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-
-    .why-item,
-    .step-card,
-    .location-card,
-    .faq-card { padding: 28px; text-align: left; }
-
-    .project-card .card-body,
-    .category-card .card-body { padding: 24px 26px; text-align: left; }
-
-    .project-card,
-    .category-card {
-      color: inherit;
-      position: relative;
-      transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
-    }
-    .project-card:hover,
-    .category-card:hover {
-      transform: translateY(-8px) scale(1.01);
-      box-shadow: 0 34px 80px rgba(15, 23, 42, 0.16);
-    }
-
-    .project-card img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      transition: transform .9s ease, filter .45s ease;
-    }
-    .project-card:hover img { transform: scale(1.03); filter: saturate(1.03); }
-
-    .project-card h3,
-    .category-card h3,
-    .why-item h3,
-    .step-card h3,
-    .location-card h3,
-    .faq-card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      color: var(--primary-dark);
-      letter-spacing: -.02em;
-    }
-
-    .project-card .card-meta { font-size: 14px; font-weight: 700; color: var(--muted); }
-    .project-card .card-price { font-size: 17px; font-weight: 800; color: #c8742f; }
-    .project-card .card-link { margin-top: 6px; font-size: 14px; font-weight: 800; color: var(--primary-dark); }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: fit-content;
-      margin-bottom: 10px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      background: rgba(94,198,232,0.08);
-      color: var(--primary-dark);
-      border: 1px solid rgba(94,198,232,0.16);
-    }
-
-    .section-card,
-    .cta-box { margin-top: 28px; padding: 36px; }
-
-    .section-card h2,
-    .cta-box h2,
-    .seo-article h2 {
-      position: relative;
-      padding-bottom: 12px;
-      font-size: var(--h2-size);
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .section-card h2::after,
-    .cta-box h2::after,
-    .seo-article h2::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      width: 70px;
-      height: 3px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-    }
-
-    .inline-list span {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(94,198,232,0.07);
-      color: var(--primary-dark);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .seo-article {
-      margin: 42px auto 0;
-      max-width: 1200px;
-      padding: 0;
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      backdrop-filter: none;
-    }
-    .seo-article h2,
-    .seo-article h3 { color: var(--primary-dark); text-align: center; }
-    .seo-article h3 { margin-top: 22px; font-size: clamp(22px, 3vw, 30px); }
-    .seo-article p {
-      max-width: none;
-      margin-left: 0;
-      margin-right: 0;
-      text-align: justify;
-      text-justify: inter-word;
-      color: var(--text-soft);
-    }
-
-    .contact-box {
-      margin-top: 28px;
-      padding: 42px 32px 38px;
-      text-align: center;
-      background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(247,249,250,.98) 100%);
-      border: 1px solid rgba(15,23,42,.06);
-      box-shadow: 0 18px 48px rgba(15,23,42,.06);
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-box::before {
-      content: "";
-      position: absolute;
-      inset: auto -80px -80px auto;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(94,198,232,.16) 0%, rgba(94,198,232,0) 70%);
-      pointer-events: none;
-    }
-
-    .contact-title {
-      font-size: clamp(34px, 5vw, 48px);
-      margin-bottom: 10px;
-      color: var(--primary-dark);
-      text-align: center;
-      letter-spacing: -.03em;
-    }
-
-    .contact-note {
-      margin: 10px 0 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(94,198,232,0.08);
-      color: var(--primary-dark);
-      font-weight: 800;
-      font-size: 13px;
-    }
-
-    .contact-avatar {
-      margin: 20px auto 16px;
-      text-align: center;
-    }
-    .contact-avatar img {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 12px;
-      object-fit: cover;
-      box-shadow: 0 14px 36px rgba(0,0,0,.16);
-      border: 4px solid rgba(255,255,255,.82);
-    }
-    .contact-avatar-name {
-      font-weight: 900;
-      font-size: 22px;
-      color: var(--primary-dark);
-      letter-spacing: -.02em;
-    }
-    .contact-avatar-role {
-      font-size: 14px;
-      color: var(--text-soft);
-    }
-
-    .contact-links { display: grid; gap: 12px; margin: 20px 0 18px; }
-    .contact-links a { font-weight: 700; color: #6b7280; font-size: 18px; }
-
-    .contact-form {
-      display: grid;
-      gap: 16px;
-      text-align: left;
-      margin-top: 26px;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 18px 18px;
-      border-radius: var(--form-radius);
-      border: 1px solid rgba(94,198,232,0.20);
-      background: rgba(255,255,255,.92);
-      color: var(--text);
-      outline: none;
-      font-family: inherit;
-      font-size: 16px;
-      line-height: 1.5;
-      box-shadow: 0 0 0 1px rgba(255,255,255,.55) inset;
-      transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease, background .22s ease;
-    }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: var(--muted); }
-    .contact-form textarea { min-height: 150px; resize: vertical; }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: rgba(94,198,232,0.50);
-      box-shadow: 0 0 0 4px rgba(94,198,232,0.12), 0 0 0 1px rgba(255,255,255,.72) inset;
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.98);
-    }
-
-    .share-box {
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(15,23,42,.08);
-    }
-    .share-box p { margin-bottom: 12px; text-align: center; }
-
-    .footer {
-      padding: 8px 0 54px;
-      margin-top: 34px;
-      font-size: 14px;
-      color: var(--text-soft);
-    }
-    .footer-card {
-      position: relative;
-      padding: 34px 34px 28px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top left, rgba(94,198,232,.08), transparent 28%),
-        linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(247,250,251,.98) 100%);
-      border: 1px solid rgba(255,255,255,.65);
-      box-shadow: 0 24px 60px rgba(15,23,42,.08);
-      border-radius: 24px;
-      overflow: hidden;
-    }
-    .footer-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 3px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), var(--primary));
-    }
-    .footer-brand {
-      margin-bottom: 12px;
-      font-size: var(--footer-title-size);
-      font-weight: 900;
-      letter-spacing: -.03em;
-      color: var(--primary-dark);
-      text-align: center;
-    }
-    .footer-copy {
-      max-width: 980px;
-      margin: 0 auto 10px;
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text-soft);
-      text-align: center;
-    }
-    .footer-links {
-      margin-top: 22px;
-      gap: 14px 20px;
-    }
-    .footer-links a {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--primary-dark);
-      transition: color .22s ease, transform .22s ease;
-    }
-    .footer-links a:hover {
-      color: var(--accent-dark);
-      transform: translateY(-1px);
-    }
-    .footer-bottom {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(15,23,42,.06);
-      font-size: 12px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .sticky-contact {
-      position: fixed;
-      right: 14px;
-      bottom: max(14px, env(safe-area-inset-bottom));
-      z-index: 1200;
-      display: none;
-    }
-    .sticky-wa {
-      min-width: 132px;
-      min-height: 52px;
-      padding: 0 18px;
-      border-radius: 999px;
-    }
-    .sticky-wa::before,
-    .sticky-wa::after,
-    .sticky-call { display: none; }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity .8s cubic-bezier(.2,.6,.2,1), transform .8s cubic-bezier(.2,.6,.2,1);
-    }
-    .fade-up.show { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 1100px) {
-      .hero-card { grid-template-columns: 1fr; }
-      .why-grid,
-      .projects-grid,
-      .categories-grid,
-      .steps-grid,
-      .locations-grid,
-      .faq-grid { grid-template-columns: 1fr; }
-      .hero-image,
-      .hero-image img { min-height: 420px; }
-    }
-
-    @media (max-width: 768px) {
-      .container { padding: 0 14px; }
-      .topbar-inner {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 12px 0;
-        min-height: auto;
-        justify-items: center;
-      }
-      .brand { justify-self: center; text-align: center; }
-      .nav {
-        justify-content: flex-start;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        width: 100%;
-        padding: 2px 2px 8px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
-      .nav::-webkit-scrollbar { display: none; }
-      .nav a {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.3;
-      }
-      .page { padding: 14px 0 56px; }
-      .hero-copy,
-      .section-card,
-      .cta-box,
-      .footer-card,
-      .contact-box { padding: 22px; }
-      .hero-image,
-      .hero-image img { min-height: 300px; }
-      .contact-form-grid,
-      .categories-grid,
-      .why-grid,
-      .steps-grid,
-      .locations-grid,
-      .faq-grid { grid-template-columns: 1fr; }
-      .contact-inline-wrap,
-      .cta-actions,
-      .share-actions { flex-direction: column; }
-      .btn,
-      .contact-inline,
-      .share-btn,
-      .submit-btn {
-        width: 100%;
-        min-height: 52px;
-      }
-      .sticky-contact {
-        display: block;
-        right: 12px;
-        bottom: max(12px, env(safe-area-inset-bottom));
-      }
-      body { padding-bottom:uced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none!important;transition:none!important}
     }
   </style>
 </head>
@@ -910,17 +296,14 @@
           <div class="eyebrow">Nowe inwestycje · Costa Blanca</div>
           <h1>Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów</h1>
           <p class="subtitle">Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.</p>
-
           <div class="contact-inline-wrap">
-            <a class="contact-ioń</a>
+            <a class="contact-inline" href="tel:+34604158859">📞 Zadzwoń</a>
             <a class="contact-inline" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
           </div>
-
           <p class="lead">Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.</p>
         </div>
-
         <div class="hero-image">
-          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" width="1200" height="900" fetchpriority="high" decoding="async">
+          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630">
         </div>
       </section>
 
@@ -1021,7 +404,6 @@
               <p>Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.</p>
             </div>
           </a>
-
           <a href="/pl/build-house/" class="category-card">
             <div class="card-body">
               <h3>Budowa domu</h3>
@@ -1047,13 +429,11 @@
         <h2 class="contact-title">Zapytaj o aktualne inwestycje</h2>
         <p class="center-text">Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.</p>
         <div class="contact-note">💡 Odpowiadam w 10–15 minut</div>
-
         <div class="contact-avatar">
           <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async">
           <div class="contact-avatar-name">Olga Chernyshenko</div>
           <div class="contact-avatar-role">Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm</div>
         </div>
-
         <div class="contact-links">
           <a href="tel:+34604158859">+34 604 15 88 59</a>
           <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
@@ -1062,7 +442,6 @@
           <a class="btn btn-main" href="tel:+34604158859">📞 Zadzwoń teraz</a>
           <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 Napisz</a>
         </div>
-
         <div class="share-box">
           <p>Udostępnij stronę</p>
           <div class="share-actions">
@@ -1070,7 +449,6 @@
             <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
-
         <form class="contact-form" id="contact-form" action="#" method="post">
           <div class="contact-form-grid">
             <input type="text" name="name" placeholder="Twoje imię" required>
@@ -1085,7 +463,6 @@
   </main>
 
   <footer class="footer fade-up show">
-    <!-- Internal links aligned to costa-blanca-invest.com Polish structure -->
     <div class="container">
       <div class="footer-card">
         <div class="footer-brand">Costa Blanca Invest</div>
@@ -1098,7 +475,7 @@
           <a href="#process">Strategia inwestycyjna</a>
           <a href="#contact">Kontakt</a>
         </div>
-        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.</div>
+        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną автора.</div>
       </div>
     </div>
   </footer>
@@ -1110,62 +487,27 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const contactForm = document.getElementById('contact-form')reLinkBtn = document.getElementById('share-link');
-      const shareFacebook = document.getElementById('share-facebook');
-      const shareUrl = window.location.href.split('#')[0];
-      let lastScroll = window.pageYOffset;
-      let accumulatedUp = 0;
-      let accumulatedDown = 0;
+    document.addEventListener('DOMContentLoaded',()=>{
+      const d=document;
+      const contactForm=d.getElementById('contact-form');
+      const animatedCards=d.querySelectorAll('.fade-up');
+      const header=d.querySelector('.topbar');
+      const projectsGrid=d.getElementById('projectsGrid');
+      const shareLinkBtn=d.getElementById('share-link');
+      const shareFacebook=d.getElementById('share-facebook');
+      const shareUrl=window.location.href;
+      const fallbackImage='/images/hero-sea-palm.jpg';
+      let lastScroll=window.pageYOffset,up=0,down=0;
 
-      const fallbackImage = '/images/hero-sea-palm.jpg';
-      let ticking = false;
-
-      const projects = [
-        {
-          href: '/pl/new-developments/bonalba-golf-hills/',
-          image: '/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
-          alt: 'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
-          chip: 'Premium · Golf & Lifestyle',
-          title: 'Bonalba Golf Hills',
-          meta: 'Mutxamel koło Alicante',
-          price: '280 800 € – 405 600 € · 98–156 m² · 2–3 
-          desc: 'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
-        },
-        {
-          href: '/pl/new-developments/apartments-alicante/',
-          image: '/images/new-dev.jpg',
-          alt: 'Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca',
-          chip: 'City & Sea',
-          title: 'Apartamenty Alicante',
-          meta: 'Alicante',
-          price: 'Nowe mieszkania od dewelopera',
-          desc: 'Nowoczesne apartamenty w jednej z najbardziej poszukiwanych lokalizacji Costa Blanca — świetne połączenie miejskiej wygody, dostępu do plaż i wysokiego potencjału najmu całorocznego.'
-        },
-        {
-          href: '/pl/new-developments/penthouse-benidorm/',
-          image: '/images/wood-project-2.jpg',
-          alt: 'Penthouse Benidorm — inwestycja premium z widokiem',
-          chip: 'Skyline Premium',
-          title: 'Penthouse Benidorm',
-          meta: 'Benidorm',
-          price: 'Segment premium · new build',
-          desc: 'Wyjątkowa nieruchomość dla klientów oczekujących panoramicznych widoków, nowoczesnej architektury i prestiżowego adresu w jednej z najmocniejszych lokalizacji inwestycyjnych Costa Blanca.'
-        },
-        {
-          href: '/pl/new-developments/vista-azul-xxxvii/',
-          image: '/images/hero-sea-palm.jpg',
-          alt: 'Vista Azul XXXVII — nowoczesne apartamenty El Raso Guardamar',
-          chip: 'Investment · Lago & Sea',
-          title: 'Vista Azul XXXVII',
-          meta: 'El Raso (Guardamar del Segura)',
-          price: 'od ok. 210 000 € · 2–3 sypialnie',
-          desc: 'Nowoczesny kompleks apartamentów w El Raso blisko laguny i plaż Guardamar — idealny pod wynajem i second home.'
-        }
+      const projects=[
+        {href:'/pl/new-developments/bonalba-golf-hills/',image:'/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',chip:'Premium · Golf & Lifestyle',title:'Bonalba Golf Hills',meta:'Mutxamel koło Alicante',price:'280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',desc:'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'},
+        {href:'/pl/new-developments/apartments-alicante/',image:'/images/new-dev.jpg',alt:'Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca',chip:'City & Sea',title:'Apartamenty Alicante',meta:'Alicante',price:'Nowe mieszkania od dewelopera',desc:'Nowoczesne apartamenty w jednej z najbardziej poszukiwanych lokalizacji Costa Blanca — świetne połączenie miejskiej wygody, dostępu do plaż i wysokiego potencjału najmu całorocznego.'},
+        {href:'/pl/new-developments/penthouse-benidorm/',image:'/images/wood-project-2.jpg',alt:'Penthouse Benidorm — inwestycja premium z widokiem',chip:'Skyline Premium',title:'Penthouse Benidorm',meta:'Benidorm',price:'Segment premium · new build',desc:'Wyjątkowa nieruchomość dla klientów oczekujących panoramicznych widoków, nowoczesnej architektury i prestiżowego adresu w jednej z najmocniejszych lokalizacji inwestycyjnych Costa Blanca.'},
+        {href:'/pl/new-developments/vista-azul-xxxvii/',image:'/images/hero-sea-palm.jpg',alt:'Vista Azul XXXVII — nowoczesne apartamenty El Raso Guardamar',chip:'Investment · Lago & Sea',title:'Vista Azul XXXVII',meta:'El Raso (Guardamar del Segura)',price:'od ok. 210 000 € · 2–3 sypialnie',desc:'Nowoczesny kompleks apartamentów w El Raso blisko laguny i plaż Guardamar — idealny pod wynajem i second home.'}
       ];
 
-      if (projectsGrid) {
-        projectsGrid.innerHTML = projects.map((project) => `
+      if(projectsGrid){
+        projectsGrid.innerHTML=projects.map(project=>`
           <a href="${project.href}" class="project-card" aria-label="${project.alt}">
             <img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}';">
             <div class="card-body">
@@ -1180,90 +522,73 @@
         `).join('');
       }
 
-      if (shareFacebook) {
-        shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+      if(shareFacebook){
+        shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
       }
 
-      if (shareLinkBtn) {
-        shareLinkBtn.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: document.title,
-                text: 'Nowe inwestycje na Costa Blanca',
-                url: shareUrl
-              });
+      if(shareLinkBtn){
+        shareLinkBtn.addEventListener('click',async()=>{
+          try{
+            if(navigator.share && window.innerWidth<768){
+              await navigator.share({title:document.title,text:document.querySelector('meta[name="description"]')?.content||'',url:shareUrl});
               return;
-            } catch (error) {}
-          }
-
-          try {
+            }
             await navigator.clipboard.writeText(shareUrl);
-            shareLinkBtn.textContent = '✅ Skopiowano';
-            setTimeout(() => {
-              shareLinkBtn.textContent = '🔗 Link';
-            }, 2000);
-          } catch (error) {
-            window.prompt('Skopiuj link:', shareUrl);
+            const oldText=shareLinkBtn.textContent;
+            shareLinkBtn.textContent='✅ Skopiowano';
+            setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
+          }catch(error){
+            window.prompt('Skopiuj link:',shareUrl);
           }
         });
       }
 
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+      if('IntersectionObserver' in window){
+        const observer=new IntersectionObserver(entries=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){
               entry.target.classList.add('show');
               observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
-
-        animatedCards.forEach((el) => observer.observe(el));
-      } else {
-        animatedCards.forEach((el) => el.classList.add('show'));
+        },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+        animatedCards.forEach(el=>observer.observe(el));
+      }else{
+        animatedCards.forEach(el=>el.classList.add('show'));
       }
 
-      window.addEventListener('scroll', () => {
-        if (ticking) return;
-        ticking = true;
-
-        requestAnimationFrame(() => {
-          const currentScroll = window.pageYOffset;
-          const delta = currentScroll - lastScroll;
-
-          if (Math.abs(delta) >= 4) {
-            if (delta > 0) {
-              accumulatedDown += delta;
-              accumulatedUp = 0;
-              if (currentScroll > 120 && accumulatedDown > 24 && header) {
-                header.classList.add('hide');
-              }
-            } else {
-              accumulatedUp += Math.abs(delta);
-              accumulatedDown = 0;
-              if ((accumulatedUp > 42 || currentScroll < 40) && header) {
-                header.classList.remove('hide');
-              }
-            }
-
-            lastScroll = currentScroll;
+      let ticking=false;
+      const onScroll=()=>{
+        const current=window.pageYOffset;
+        const delta=current-lastScroll;
+        if(Math.abs(delta)>=4){
+          if(delta>0){
+            down+=delta; up=0;
+            if(current>120 && down>24 && header) header.classList.add('hide');
+          }else{
+            up+=Math.abs(delta); down=0;
+            if((up>42 || current<40) && header) header.classList.remove('hide');
           }
+          lastScroll=current;
+        }
+        ticking=false;
+      };
+      window.addEventListener('scroll',()=>{
+        if(!ticking){
+          window.requestAnimationFrame(onScroll);
+          ticking=true;
+        }
+      },{passive:true});
 
-          ticking = false;
-        });
-      }, { passive: true });
-
-      if (!contactForm) return;
-
-      contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-        const name = (formData.get('name') || '').toString().trim();
-        const phone = (formData.get('phone') || '').toString().trim();
-        const email = (formData.get('email') || '').toString().trim();
-        const message = (formData.get('message') || '').toString().trim();
-        const text = `Nowe zapytanie ze strony Nowe inwestycje:
+      if(contactForm){
+        contactForm.addEventListener('submit',event=>{
+          event.preventDefault();
+          const formData=new FormData(contactForm);
+          const name=(formData.get('name')||'').toString().trim();
+          const phone=(formData.get('phone')||'').toString().trim();
+          const email=(formData.get('email')||'').toString().trim();
+          const message=(formData.get('message')||'').toString().trim();
+          const text=`Nowe zapytanie ze strony Nowe inwestycje:
 
 Imię: ${name}
 Telefon: ${phone}
@@ -1271,10 +596,11 @@ Email: ${email}
 
 Wiadomość:
 ${message}`;
-        const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
-        const opened = window.open(url, '_blank', 'noopener');
-        if (!opened) window.location.href = url;
-      });
+          const url=`https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
+          const opened=window.open(url,'_blank','noopener');
+          if(!opened) window.location.href=url;
+        });
+      }
     });
   </script>
 
