@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>{{PAGE_TITLE}}</title>
-  <meta name="description" content="{{PAGE_DESCRIPTION}}">
-  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <title>Costa Blanca Invest | Nieruchomości w Hiszpanii: nowe inwestycje, działki i budowa domu</title>
+  <meta name="description" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje od deweloperów, działki pod budowę oraz kompleksowa realizacja domu. Sprawdzone oferty i bezpieczny proces zakupu.">
+  <link rel="canonical" href="https://costa-blanca-invest.com/">
   <!-- URL standard for Polish pages:
        Home: /pl/
        New developments: /pl/new-developments/
@@ -29,8 +29,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="alternate" hreflang="pl" href="{{CANONICAL_URL}}">
-  <link rel="alternate" hreflang="x-default" href="{{X_DEFAULT_URL}}">
+  <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/">
+  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
   <!-- Sharing and linking rules:
        1) canonical, og:url and JSON-LD WebPage url must always be identical.
        2) SHARE_IMAGE must be absolute URL, 1200x630 preferred.
@@ -42,20 +42,20 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:site_name" content="Costa Blanca Invest">
-  <meta property="og:title" content="{{SHARE_TITLE}}">
-  <meta property="og:description" content="{{SHARE_DESCRIPTION}}">
-  <meta property="og:image" content="{{SHARE_IMAGE}}">
-  <meta property="og:image:secure_url" content="{{SHARE_IMAGE}}">
+  <meta property="og:title" content="Costa Blanca Invest | Nieruchomości w Hiszpanii na Costa Blanca">
+  <meta property="og:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
+  <meta property="og:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca">
-  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:url" content="https://costa-blanca-invest.com/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{SHARE_TITLE}}">
-  <meta name="twitter:description" content="{{SHARE_DESCRIPTION}}">
-  <meta name="twitter:image" content="{{SHARE_IMAGE}}">
+  <meta name="twitter:title" content="Costa Blanca Invest | Nieruchomości w Hiszpanii na Costa Blanca">
+  <meta name="twitter:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
+  <meta name="twitter:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
   <meta name="twitter:image:alt" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca">
 
   <style>
@@ -830,9 +830,9 @@
   <!-- Dla polskich stron używaj /pl/ jako strony głównej. Root / zostaw dla wersji głównej lub x-default. -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="/pl/" class="brand" aria-label="Costa Blanca Invest — strona główna PL">Costa Blanca Invest</a>
+      <a href="/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="/pl/">Strona główna</a>
+        <a href="/" aria-current="page">Strona główna</a>
         <a href="/pl/new-developments/">Nowe inwestycje</a>
         <a href="/pl/plots/">Działki</a>
         <a href="/pl/build-house/">Budowa domu</a>
@@ -1010,7 +1010,7 @@
         <div class="footer-brand">Costa Blanca Invest</div>
         <p class="footer-copy">Costa Blanca Invest to strona poświęcona rynkowi nieruchomości w Hiszpanii na Costa Blanca. Serwis prowadzi użytkownika do głównych kierunków zakupu: nowych inwestycji, działek oraz budowy domu.</p>
         <div class="footer-links">
-          <a href="/pl/">Strona główna</a>
+          <a href="/">Strona główna</a>
           <a href="/pl/new-developments/">Nowe inwestycje</a>
           <a href="/pl/plots/">Działki</a>
           <a href="/pl/build-house/">Budowa domu</a>
@@ -1036,7 +1036,7 @@
       const header = document.querySelector('.topbar');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
-      const shareUrl = '{{CANONICAL_URL}}';
+      const shareUrl = 'https://costa-blanca-invest.com/';
       // Keep shareUrl identical to canonical and og:url for stable Facebook and WhatsApp previews.
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
@@ -1053,7 +1053,7 @@
             try {
               await navigator.share({
                 title: document.title,
-                text: '{{SHARE_DESCRIPTION}}',
+                text: 'Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.',
                 url: shareUrl
               });
               return;
@@ -1165,10 +1165,10 @@ ${message}`;
       },
       {
         "@type": "WebPage",
-        "@id": "{{CANONICAL_URL}}#webpage",
-        "url": "{{CANONICAL_URL}}",
-        "name": "{{PAGE_TITLE}}",
-        "description": "{{PAGE_DESCRIPTION}}",
+        "@id": "https://costa-blanca-invest.com/#webpage",
+        "url": "https://costa-blanca-invest.com/",
+        "name": "Costa Blanca Invest | Nieruchomości w Hiszpanii: nowe inwestycje, działki i budowa domu",
+        "description": "Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje od deweloperów, działki pod budowę oraz kompleksowa realizacja domu.",
         "isPartOf": {
           "@id": "https://costa-blanca-invest.com/#website"
         },
@@ -1177,7 +1177,7 @@ ${message}`;
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "{{SHARE_IMAGE}}"
+          "url": "https://costa-blanca-invest.com/images/hero-sea-palm.jpg"
         },
         "inLanguage": "pl"
       }
@@ -1186,4 +1186,3 @@ ${message}`;
   </script>
 </body>
 </html>
-
