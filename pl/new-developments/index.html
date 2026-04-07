@@ -209,4 +209,517 @@
     .share-box p{margin-bottom:12px;text-align:center}
 
     .footer{padding:8px 0 54px;margin-top:34px;font-size:14px;color:var(--text-soft)}
-    .footer-card{position:relative;padding:34px 34px 28px;text-align:center;background:radial
+    .footer-card{position:relative;padding:34px 34px 28px;text-align:center;background:radial-gradient(circle at top left,rgba(94,198,232,.08),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(247,250,251,.98) 100%);border:1px solid rgba(255,255,255,.65);box-shadow:0 24px 60px rgba(15,23,42,.08);border-radius:24px;overflow:hidden}
+    .footer-card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--primary))}
+    .footer-brand{margin-bottom:12px;font-size:var(--footer-title-size);font-weight:900;letter-spacing:-.03em;color:var(--primary-dark);text-align:center}
+    .footer-copy{max-width:980px;margin:0 auto 10px;font-size:14px;line-height:1.8;color:var(--text-soft);text-align:center}
+    .footer-links{margin-top:22px;gap:14px 20px}
+    .footer-links a{font-size:14px;font-weight:700;color:var(--primary-dark);transition:color .22s ease,transform .22s ease}
+    .footer-links a:hover{color:var(--accent-dark);transform:translateY(-1px)}
+    .footer-bottom{margin-top:18px;padding-top:14px;border-top:1px solid rgba(15,23,42,.06);font-size:12px;color:var(--muted);text-align:center}
+
+    .sticky-contact{position:fixed;right:14px;bottom:14px;z-index:1200;display:none}
+    .sticky-wa{min-width:132px;min-height:52px;padding:0 18px;border-radius:999px}
+    .sticky-wa::before,.sticky-wa::after,.sticky-call{display:none}
+
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+    .fade-up.show{opacity:1;transform:translateY(0)}
+
+    @media (max-width:1100px){
+      .hero-card{grid-template-columns:1fr;min-height:auto}
+      .why-grid,.projects-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .hero-image,.hero-image img{min-height:420px}
+    }
+
+    @media (max-width:768px){
+      p{ text-align:left; text-justify:auto; hyphens:none; }
+      .why-item p,.step-card p,.location-card p,.faq-card p,.project-card p,.footer-copy,.seo-article p{ text-align:left; }
+      .section-card > p,.cta-box > p,.center-text,.subtitle,.lead{ text-align:center; }
+      .topbar{ backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+      .topbar-inner{ width:100%; }
+      .breadcrumbs{ justify-content:center; text-align:center; }
+      .footer-links a{ text-align:center; }
+      .contact-links a{ text-align:center; }
+      .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{ text-align:left; }
+      .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{ text-align:left; }
+      .inline-list span{ text-align:center; }
+      .container{padding:0 14px}
+      .topbar-inner{grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
+      .brand{justify-self:center;text-align:center}
+      .nav{justify-content:flex-start;align-items:center;gap:14px;flex-wrap:nowrap;overflow-x:auto;width:100%;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .nav::-webkit-scrollbar{display:none}
+      .nav a{flex:0 0 auto;white-space:nowrap;text-align:center;font-size:14px;line-height:1.3}
+      .page{padding:14px 0 56px}
+      .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:22px}
+      .hero-image,.hero-image img{min-height:300px}
+      .contact-form-grid,.categories-grid,.why-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .contact-inline-wrap,.cta-actions,.share-actions{flex-direction:column}
+      .btn,.contact-inline,.share-btn,.submit-btn{width:100%;min-height:52px}
+      .sticky-contact{display:block;right:12px;bottom:12px}
+      body{padding-bottom:74px}
+    }
+
+    @media (max-width:560px){
+      p{font-size:15px;line-height:1.65}
+      .subtitle,.lead,.center-text{font-size:15px;line-height:1.6}
+      .contact-note{font-size:12px}
+      .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{padding:20px}
+      .breadcrumbs a{padding:7px 10px}
+      .container{padding:0 10px}
+      .hero-card,.section-card,.cta-box,.footer-card,.contact-box{border-radius:18px}
+      .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:18px}
+      h1{font-size:clamp(28px,8.5vw,36px)}
+      .subtitle,.lead,p{font-size:15px}
+      .nav{gap:12px}
+      .nav a{font-size:14px}
+      .hero-image,.hero-image img{min-height:220px}
+      .contact-links a{font-size:16px}
+      .footer-links{flex-direction:column;align-items:center}
+      .footer-bottom{font-size:11px}
+      .sticky-contact{right:10px;bottom:10px}
+      .sticky-btn{min-height:48px;font-size:13px;padding:0 16px}
+      .sticky-wa{min-width:116px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a href="https://costa-blanca-invest.com/">Strona główna</a>
+        <a href="https://costa-blanca-invest.com/#directions">Kategorie</a>
+        <a href="/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
+        <a href="/pl/plots/">Działki</a>
+        <a href="/pl/build-house/">Budowa domu</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="https://costa-blanca-invest.com/">Strona główna</a>
+        <span>›</span>
+        <span>Nowe inwestycje</span>
+      </nav>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <div class="eyebrow">Nowe inwestycje · Costa Blanca</div>
+          <h1>Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów</h1>
+          <p class="subtitle">Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.</p>
+          <div class="contact-inline-wrap">
+            <a class="contact-inline" href="tel:+34604158859">📞 Zadzwoń</a>
+            <a class="contact-inline" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          </div>
+          <p class="lead">Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.</p>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630">
+        </div>
+      </section>
+
+      <section class="section-card fade-up">
+        <h2>Dlaczego warto inwestować w nowe inwestycje Costa Blanca Alicante–Benidorm</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Stabilny rynek nieruchomości</h3>
+            <p>Costa Blanca to jeden z najbardziej stabilnych regionów w Hiszpanii z całorocznym popytem na zakup i wynajem nieruchomości.</p>
+          </div>
+          <div class="why-item">
+            <h3>Wysoki potencjał ROI</h3>
+            <p>Nowe inwestycje Alicante i Benidorm oferują średni zwrot na poziomie 5–7% rocznie przy dobrze dobranym projekcie.</p>
+          </div>
+          <div class="why-item">
+            <h3>Bezpieczny zakup od dewelopera</h3>
+            <p>Apartamenty i wille od dewelopera w Hiszpanii to przejrzysty proces, nowoczesne standardy i gwarancje jakości.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card fade-up" id="projects">
+        <h2>Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów</h2>
+        <p class="center-text">Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.</p>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <section class="section-card fade-up" id="process">
+        <h2>Jak wybieramy new developments Alicante Spain i Costa Blanca</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <h3>1. Analiza lokalizacji</h3>
+            <p>Sprawdzamy potencjał inwestycyjny Alicante, Benidorm i okolic pod kątem popytu, infrastruktury i wynajmu.</p>
+          </div>
+          <div class="step-card">
+            <h3>2. Weryfikacja dewelopera</h3>
+            <p>Analizujemy doświadczenie dewelopera, jakość realizacji oraz bezpieczeństwo prawne inwestycji.</p>
+          </div>
+          <div class="step-card">
+            <h3>3. Strategia inwestycyjna</h3>
+            <p>Dopasowujemy inwestycję do celu: wynajem, wzrost wartości lub zakup drugiego domu w Hiszpanii.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card fade-up" id="locations">
+        <h2>Najlepsze lokalizacje: nowe mieszkania Alicante i property for sale Benidorm new build</h2>
+        <p class="center-text">Alicante, Finestrat, Benidorm i Torre de la Horadada należą do najczęściej wybieranych kierunków dla klientów szukających nowej nieruchomości w Hiszpanii.</p>
+        <div class="locations-grid">
+          <div class="location-card">
+            <h3>Alicante — nowe mieszkania i apartamenty</h3>
+            <p>Nowe mieszkania i apartamenty od dewelopera z wysokim potencjałem wynajmu oraz dobrym dostępem do miasta, lotniska i plaż.</p>
+          </div>
+          <div class="location-card">
+            <h3>Benidorm i Finestrat — property for sale new build</h3>
+            <p>Nowoczesne inwestycje premium z widokiem, rozwiniętą infrastrukturą i atrakcyjnym profilem inwestycyjnym.</p>
+          </div>
+          <div class="location-card">
+            <h3>Torre de la Horadada</h3>
+            <p>Kameralne lokalizacje blisko morza, idealne pod second home, spokojny styl życia i zakup wakacyjnej nieruchomości.</p>
+          </div>
+        </div>
+        <div class="inline-list" aria-label="Lista lokalizacji">
+          <span>Alicante</span>
+          <span>San Juan</span>
+          <span>El Campello</span>
+          <span>Finestrat</span>
+          <span>Villajoyosa</span>
+          <span>Benidorm</span>
+          <span>Torre de la Horadada</span>
+        </div>
+      </section>
+
+      <section class="section-card fade-up" id="faq">
+        <h2>FAQ — nowe inwestycje na Costa Blanca</h2>
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3>Czy warto kupić nowe inwestycje w Alicante?</h3>
+            <p>Tak. Alicante oferuje stabilny popyt, rozwiniętą infrastrukturę i wysoki potencjał wynajmu przez cały rok.</p>
+          </div>
+          <div class="faq-card">
+            <h3>Ile kosztują nowe mieszkania w Alicante?</h3>
+            <p>Ceny zależą od lokalizacji i standardu, ale nowe mieszkania w Alicante zaczynają się od około 200 000 €.</p>
+          </div>
+          <div class="faq-card">
+            <h3>Czy Benidorm to dobra lokalizacja inwestycyjna?</h3>
+            <p>Tak. Benidorm i Finestrat należą do najmocniejszych segmentów rynku premium na Costa Blanca i przyciągają klientów przez cały rok.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card fade-up">
+        <h2>Inne główne kategorie</h2>
+        <div class="categories-grid">
+          <a href="/pl/plots/" class="category-card">
+            <div class="card-body">
+              <h3>Działki</h3>
+              <p>Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.</p>
+            </div>
+          </a>
+          <a href="/pl/build-house/" class="category-card">
+            <div class="card-body">
+              <h3>Budowa domu</h3>
+              <p>Kompleksowa realizacja domu w Hiszpanii — od działki po wykończenie pod klucz.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="seo-content" class="seo-article fade-up">
+        <h2>Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm</h2>
+        <h3>Rynek nowych inwestycji w Hiszpanii</h3>
+        <p>Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.</p>
+        <h3>Najbardziej popularne lokalizacje</h3>
+        <p>Największym zainteresowaniem cieszą się nowe mieszkania w Alicante oraz nowoczesne inwestycje w Benidormie i Finestrat. To projekty projektowane pod wynajem krótkoterminowy i długoterminowy, ale również pod własne użytkowanie jako second home w Hiszpanii.</p>
+        <h3>Apartamenty i wille od deweloperów</h3>
+        <p>Apartamenty i wille od deweloperów to rozwiązanie dla osób, które chcą kupić nieruchomość w uporządkowanym procesie, bez konieczności prowadzenia budowy. Nowe inwestycje powstają w najlepszych lokalizacjach — blisko morza, infrastruktury i stref turystycznych, co bezpośrednio wpływa na ich potencjał inwestycyjny.</p>
+        <h3>Strategie inwestycyjne</h3>
+        <p>W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.</p>
+      </section>
+
+      <section class="cta-box contact-box fade-up show" id="contact">
+        <h2 class="contact-title">Zapytaj o aktualne inwestycje</h2>
+        <p class="center-text">Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.</p>
+        <div class="contact-note">💡 Odpowiadam w 10–15 minut</div>
+        <div class="contact-avatar">
+          <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async">
+          <div class="contact-avatar-name">Olga Chernyshenko</div>
+          <div class="contact-avatar-role">Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm</div>
+        </div>
+        <div class="contact-links">
+          <a href="tel:+34604158859">+34 604 15 88 59</a>
+          <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-main" href="tel:+34604158859" aria-label="Zadzwoń teraz pod numer +34 604 15 88 59">📞 Zadzwoń teraz</a>
+          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" aria-label="Napisz na WhatsApp w sprawie nowych inwestycji">💬 Napisz</a>
+        </div>
+        <div class="share-box">
+          <p>Udostępnij stronę</p>
+          <div class="share-actions">
+            <button class="share-btn" type="button" id="share-link">🔗 Link</button>
+            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" action="#" method="post">
+          <div class="contact-form-grid">
+            <input type="text" name="name" placeholder="Twoje imię" required>
+            <input type="tel" name="phone" placeholder="Telefon / WhatsApp" required>
+          </div>
+          <input type="email" name="email" placeholder="Email">
+          <textarea name="message" placeholder="Napisz, jaka inwestycja Cię interesuje"></textarea>
+          <button class="submit-btn" type="submit">📩 Wyślij zapytanie</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer fade-up show">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-brand">Costa Blanca Invest</div>
+        <p class="footer-copy">Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.</p>
+        <div class="footer-links">
+          <a href="/pl/new-developments/">Nowe inwestycje</a>
+          <a href="/pl/plots/">Działki</a>
+          <a href="/pl/build-house/">Budowa domu</a>
+          <a href="https://costa-blanca-invest.com/#directions">Kategorie inwestycji</a>
+          <a href="#process">Strategia inwestycyjna</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-contact" aria-label="Szybki kontakt">
+    <div class="wrap">
+      <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nowa%20inwestycja%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa" aria-label="WhatsApp — szybki kontakt">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const d=document;
+      const contactForm=d.getElementById('contact-form');
+      const animatedCards=d.querySelectorAll('.fade-up');
+      const header=d.querySelector('.topbar');
+      const projectsGrid=d.getElementById('projectsGrid');
+      const shareLinkBtn=d.getElementById('share-link');
+      const shareFacebook=d.getElementById('share-facebook');
+      const shareUrl='https://costa-blanca-invest.com/pl/new-developments/';
+      const fallbackImage='/images/hero-sea-palm.jpg';
+      let lastScroll=window.pageYOffset,up=0,down=0;
+
+            function renderProjects(projects){
+        if(!projectsGrid) return;
+        projectsGrid.innerHTML=projects.map(project=>`
+          <a href="${project.href}" class="project-card" aria-label="${project.alt}">
+            <img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}';">
+            <div class="card-body">
+              <div class="chip">${project.chip}</div>
+              <h3>${project.title}</h3>
+              <div class="card-meta">${project.meta}</div>
+              <div class="card-price">${project.price}</div>
+              <p>${project.desc}</p>
+              <div class="card-link">Zobacz inwestycję →</div>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      async function loadProjects(){
+        try{
+          const response=await fetch('/data/projects-pl.json', { cache:'no-store' });
+          if(!response.ok) throw new Error(`HTTP ${response.status}`);
+          const projects=await response.json();
+          renderProjects(projects);
+        }catch(error){
+          console.error('Błąd ładowania projektów:', error);
+          renderProjects([
+            {
+              href:'/pl/new-developments/bonalba-golf-hills/',
+              image:'/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
+              alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
+              chip:'Premium · Golf & Lifestyle',
+              title:'Bonalba Golf Hills',
+              meta:'Mutxamel koło Alicante',
+              price:'280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',
+              desc:'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
+            }
+          ]);
+        }
+      }
+
+      loadProjects();
+
+      if(shareFacebook){
+        shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+      }
+
+      if(shareLinkBtn){
+        shareLinkBtn.addEventListener('click',async()=>{
+          try{
+            if(navigator.share && window.innerWidth<768){
+              await navigator.share({title:document.title,text:document.querySelector('meta[name="description"]')?.content||'',url:shareUrl});
+              return;
+            }
+            await navigator.clipboard.writeText(shareUrl);
+            const oldText=shareLinkBtn.textContent;
+            shareLinkBtn.textContent='✅ Skopiowano';
+            setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
+          }catch(error){
+            window.prompt('Skopiuj link:',shareUrl);
+          }
+        });
+      }
+
+      if('IntersectionObserver' in window){
+        const observer=new IntersectionObserver(entries=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+        animatedCards.forEach(el=>observer.observe(el));
+      }else{
+        animatedCards.forEach(el=>el.classList.add('show'));
+      }
+
+      let ticking=false;
+      const onScroll=()=>{
+        const current=window.pageYOffset;
+        const delta=current-lastScroll;
+        if(Math.abs(delta)>=4){
+          if(delta>0){
+            down+=delta; up=0;
+            if(current>120 && down>24 && header) header.classList.add('hide');
+          }else{
+            up+=Math.abs(delta); down=0;
+            if((up>42 || current<40) && header) header.classList.remove('hide');
+          }
+          lastScroll=current;
+        }
+        ticking=false;
+      };
+      window.addEventListener('scroll',()=>{
+        if(!ticking){
+          window.requestAnimationFrame(onScroll);
+          ticking=true;
+        }
+      },{passive:true});
+
+      if(contactForm){
+        contactForm.addEventListener('submit',event=>{
+          event.preventDefault();
+          const formData=new FormData(contactForm);
+          const name=(formData.get('name')||'').toString().trim();
+          const phone=(formData.get('phone')||'').toString().trim();
+          const email=(formData.get('email')||'').toString().trim();
+          const message=(formData.get('message')||'').toString().trim();
+          const text=`Nowe zapytanie ze strony Nowe inwestycje:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+          const url=`https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
+          const opened=window.open(url,'_blank','noopener');
+          if(!opened) window.location.href=url;
+        });
+      }
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Costa Blanca Invest",
+        "url": "https://costa-blanca-invest.com/",
+        "logo": "https://costa-blanca-invest.com/apple-touch-icon.png",
+        "image": "https://costa-blanca-invest.com/images/hero-sea-palm.jpg",
+        "email": "o.czernyszenko@gmail.com",
+        "telephone": "+34604158859"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Costa Blanca Invest",
+        "url": "https://costa-blanca-invest.com/",
+        "inLanguage": "pl"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Nowe inwestycje na Costa Blanca",
+        "url": "https://costa-blanca-invest.com/pl/new-developments/",
+        "description": "Nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille od deweloperów w rejonie Alicante–Benidorm.",
+        "inLanguage": "pl",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://costa-blanca-invest.com/images/hero-sea-palm.jpg"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Costa Blanca Invest",
+          "url": "https://costa-blanca-invest.com/"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Nowe inwestycje na Costa Blanca",
+        "provider": {
+          "@type": "Organization",
+          "name": "Costa Blanca Invest"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Costa Blanca, Spain"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://costa-blanca-invest.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Nowe inwestycje", "item": "https://costa-blanca-invest.com/pl/new-developments/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy warto kupić nowe inwestycje w Alicante?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak — Alicante oferuje stabilny popyt, rozwiniętą infrastrukturę i wysoki potencjał wynajmu przez cały rok."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile kosztują nowe mieszkania w Alicante?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ceny zależą od lokalizacji i standardu, ale nowe mieszkania w Alicante zaczynają się od około 200 000 euro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy Benidorm to dobra lokalizacja inwestycyjna?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Benidorm i Finestrat należą do najmocniejszych segmentów rynku premium na Costa Blanca i przyciągają klientów przez cały rok."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
