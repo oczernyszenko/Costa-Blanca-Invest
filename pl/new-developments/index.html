@@ -24,12 +24,12 @@
   <meta property="og:description" content="Wyselekcjonowane nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille w najlepszych lokalizacjach Alicante–Benidorm.">
   <meta property="og:image" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
   <meta property="og:image:url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm">
   <meta property="og:url" content="https://costa-blanca-invest.com/pl/new-developments/">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/hero-sea-palm.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
@@ -44,10 +44,11 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/new-developments/">
-  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/pl/new-developments/">
+  <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="//www.facebook.com">
   <link rel="preload" as="image" href="/images/hero-sea-palm.jpg" fetchpriority="high">
 
   <style>
@@ -69,6 +70,16 @@
       --glass-light: rgba(255,255,255,0.72);
       --glass-medium: rgba(255,255,255,0.82);
       --maxw: 1200px;
+      --header-height: 82px;
+      --footer-title-size: 24px;
+      --body-font: Inter, Arial, sans-serif;
+      --h1-size: clamp(34px, 5vw, 54px);
+      --h2-size: clamp(30px, 4vw, 42px);
+      --h3-size: 22px;
+      --body-size: 16px;
+      --small-size: 14px;
+      --btn-height: 50px;
+      --form-radius: 18px;
     }
 
     * { box-sizing: border-box; }
@@ -76,7 +87,8 @@
 
     body {
       margin: 0;
-      font-family: Inter, Arial, sans-serif;
+      font-family: var(--body-font);
+      font-size: var(--body-size);
       color: var(--text);
       background:
         radial-gradient(circle at 10% 10%, rgba(94, 198, 232, 0.12), transparent 40%),
@@ -89,6 +101,9 @@
     img { display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration: none; }
     h1, h2, h3 { margin: 0 0 14px; line-height: 1.08; text-wrap: balance; }
+    h1 { font-size: var(--h1-size); }
+    h2 { font-size: var(--h2-size); }
+    h3 { font-size: var(--h3-size); }
     p {
       margin: 0 0 14px;
       color: var(--text-soft);
@@ -124,7 +139,7 @@
       grid-template-columns: auto 1fr;
       align-items: center;
       gap: 24px;
-      min-height: 82px;
+      min-height: var(--header-height);
     }
 
     .brand {
@@ -190,7 +205,7 @@
       justify-content: center;
       margin: 0 0 18px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: var(--small-size);
       font-weight: 700;
     }
     .breadcrumbs a {
@@ -218,10 +233,11 @@
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
       align-items: stretch;
+      min-height: 560px;
     }
 
     .hero-copy {
-      padding: 34px 36px 38px;
+      padding: 42px 42px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -249,24 +265,20 @@
     h1,
     .section-card h2,
     .cta-box h2,
-    .seo-article h2 {
+    .seo-article h2,
+    .seo-article h3 {
       color: var(--primary-dark);
       letter-spacing: -.03em;
       text-align: center;
     }
 
-    h1 {
-      font-size: clamp(34px, 5vw, 54px);
-      margin-bottom: 12px;
-      max-width: 980px;
-    }
-
     .subtitle,
-    .lead {
+    .lead,
+    .center-text {
+      text-align: center;
       max-width: 920px;
       margin-left: auto;
       margin-right: auto;
-      text-align: center;
       font-size: 17px;
     }
 
@@ -316,13 +328,14 @@
     .contact-inline,
     .btn,
     .sticky-btn,
-    .share-btn {
+    .share-btn,
+    .submit-btn {
       position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 48px;
+      min-height: var(--btn-height);
       padding: 0 20px;
       border-radius: 999px;
       font-size: 15px;
@@ -344,7 +357,8 @@
     .contact-inline::before,
     .btn::before,
     .sticky-btn::before,
-    .share-btn::before {
+    .share-btn::before,
+    .submit-btn::before {
       content: "";
       position: absolute;
       inset: 1px;
@@ -357,7 +371,8 @@
     .contact-inline::after,
     .btn::after,
     .sticky-btn::after,
-    .share-btn::after {
+    .share-btn::after,
+    .submit-btn::after {
       content: "";
       position: absolute;
       top: -140%;
@@ -371,10 +386,11 @@
       z-index: 1;
       transition: opacity .25s ease, transform .55s ease;
     }
-    .contact-inline > *, .btn > *, .sticky-btn > *, .share-btn > * { position: relative; z-index: 2; }
+    .contact-inline > *, .btn > *, .sticky-btn > *, .share-btn > *, .submit-btn > * { position: relative; z-index: 2; }
 
     .contact-inline:first-child,
-    .btn-main {
+    .btn-main,
+    .submit-btn {
       background: linear-gradient(135deg, rgba(208,122,52,.92), rgba(192,107,42,1));
       color: #fff;
       border: 1px solid rgba(255,255,255,.24);
@@ -388,18 +404,21 @@
       border-color: rgba(255,255,255,.18);
       box-shadow: 0 12px 26px rgba(37,211,102,.25), 0 0 24px rgba(37,211,102,.16);
     }
-
     .share-btn.fb {
       background: #1877f2;
       color: #fff;
       border-color: rgba(255,255,255,.2);
       box-shadow: 0 12px 26px rgba(24,119,242,.25);
     }
-
+    .share-btn {
+      background: rgba(255,255,255,.92);
+      color: var(--primary-dark);
+    }
     .contact-inline:hover,
     .btn:hover,
     .sticky-btn:hover,
-    .share-btn:hover {
+    .share-btn:hover,
+    .submit-btn:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 20px 44px rgba(15,23,42,.12), 0 0 24px rgba(255,255,255,.14);
       filter: saturate(1.04);
@@ -407,7 +426,8 @@
     .contact-inline:hover::after,
     .btn:hover::after,
     .sticky-btn:hover::after,
-    .share-btn:hover::after {
+    .share-btn:hover::after,
+    .submit-btn:hover::after {
       opacity: 1;
       transform: translateX(150%) rotate(24deg);
     }
@@ -416,6 +436,7 @@
     .btn:focus-visible,
     .sticky-btn:focus-visible,
     .share-btn:focus-visible,
+    .submit-btn:focus-visible,
     .contact-form input:focus-visible,
     .contact-form textarea:focus-visible,
     .nav a:focus-visible,
@@ -528,7 +549,7 @@
     .seo-article h2 {
       position: relative;
       padding-bottom: 12px;
-      font-size: clamp(30px, 4vw, 42px);
+      font-size: var(--h2-size);
       margin-left: auto;
       margin-right: auto;
     }
@@ -661,7 +682,7 @@
     .contact-form textarea {
       width: 100%;
       padding: 18px 18px;
-      border-radius: 18px;
+      border-radius: var(--form-radius);
       border: 1px solid rgba(94,198,232,0.20);
       background: rgba(255,255,255,.92);
       color: var(--text);
@@ -697,6 +718,7 @@
       color: var(--text-soft);
     }
     .footer-card {
+      position: relative;
       padding: 34px 34px 28px;
       text-align: center;
       background:
@@ -705,7 +727,7 @@
       border: 1px solid rgba(255,255,255,.65);
       box-shadow: 0 24px 60px rgba(15,23,42,.08);
       border-radius: 24px;
-      position: relative;
+      overflow: hidden;
     }
     .footer-card::before {
       content: "";
@@ -720,7 +742,7 @@
     }
     .footer-brand {
       margin-bottom: 12px;
-      font-size: 24px;
+      font-size: var(--footer-title-size);
       font-weight: 900;
       letter-spacing: -.03em;
       color: var(--primary-dark);
@@ -760,7 +782,7 @@
     .sticky-contact {
       position: fixed;
       right: 14px;
-      bottom: 14px;
+      bottom: max(14px, env(safe-area-inset-bottom));
       z-index: 1200;
       display: none;
     }
@@ -804,12 +826,20 @@
       }
       .brand { justify-self: center; text-align: center; }
       .nav {
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        gap: 10px 14px;
+        gap: 14px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding: 2px 2px 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
       }
+      .nav::-webkit-scrollbar { display: none; }
       .nav a {
-        white-space: normal;
+        flex: 0 0 auto;
+        white-space: nowrap;
         text-align: center;
         font-size: 14px;
         line-height: 1.3;
@@ -833,9 +863,18 @@
       .share-actions { flex-direction: column; }
       .btn,
       .contact-inline,
-      .share-btn { width: 100%; min-height: 52px; }
-      .sticky-contact { display: block; right: 12px; bottom: 12px; }
+      .share-btn,
+      .submit-btn {
+        width: 100%;
+        min-height: 52px;
+      }
+      .sticky-contact {
+        display: block;
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+      }
       body { padding-bottom: 74px; }
+    }
     }
 
     @media (max-width: 560px) {
@@ -852,15 +891,17 @@
       .contact-box { padding: 18px; }
       h1 { font-size: clamp(28px, 8.5vw, 36px); }
       .subtitle, .lead, p { font-size: 15px; }
-      .nav { gap: 14px; }
+      .nav { gap: 12px; }
       .nav a { font-size: 14px; }
       .hero-image,
       .hero-image img { min-height: 220px; }
       .contact-links a { font-size: 16px; }
       .footer-links { flex-direction: column; align-items: center; }
       .footer-bottom { font-size: 11px; }
-      .sticky-contact { right: 10px; bottom: 10px; }
+      .sticky-contact { right: 10px; bottom: max(10px, env(safe-area-inset-bottom)); }
       .sticky-btn { min-height: 48px; font-size: 13px; padding: 0 16px; }
+      .sticky-wa { min-width: 116px; }
+    }
       .sticky-wa { min-width: 116px; }
     }
 
@@ -876,10 +917,10 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="/" class="brand">Costa Blanca Invest</a>
+      <a href="/pl/" class="brand">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="/">Strona główna</a>
-        <a href="/#directions">Kategorie</a>
+        <a href="/pl/">Strona główna</a>
+        <a href="/pl/#directions">Kategorie</a>
         <a href="/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
         <a href="/pl/plots/">Działki</a>
         <a href="/pl/build-house/">Budowa domu</a>
@@ -891,7 +932,7 @@
   <main class="page">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Strona główna</a>
+        <a href="/pl/">Strona główna</a>
         <span>›</span>
         <span>Nowe inwestycje</span>
       </nav>
@@ -911,7 +952,7 @@
         </div>
 
         <div class="hero-image">
-          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async">
+          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" width="1200" height="900" fetchpriority="high" decoding="async">
         </div>
       </section>
 
@@ -1069,7 +1110,7 @@
           </div>
           <input type="email" name="email" placeholder="Email">
           <textarea name="message" placeholder="Napisz, jaka inwestycja Cię interesuje"></textarea>
-          <button class="btn btn-main" type="submit">📩 Wyślij zapytanie</button>
+          <button class="submit-btn" type="submit">📩 Wyślij zapytanie</button>
         </form>
       </section>
     </div>
@@ -1084,7 +1125,7 @@
           <a href="/pl/new-developments/">Nowe inwestycje</a>
           <a href="/pl/plots/">Działki</a>
           <a href="/pl/build-house/">Budowa domu</a>
-          <a href="/#directions">Kategorie inwestycji</a>
+          <a href="/pl/#directions">Kategorie inwestycji</a>
           <a href="#process">Strategia inwestycyjna</a>
           <a href="#contact">Kontakt</a>
         </div>
@@ -1107,12 +1148,13 @@
       const projectsGrid = document.getElementById('projectsGrid');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
-      const shareUrl = window.location.href;
+      const shareUrl = window.location.href.split('#')[0];
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
 
       const fallbackImage = '/images/hero-sea-palm.jpg';
+      let ticking = false;
 
       const projects = [
         {
@@ -1160,7 +1202,7 @@
       if (projectsGrid) {
         projectsGrid.innerHTML = projects.map((project) => `
           <a href="${project.href}" class="project-card" aria-label="${project.alt}">
-            <img src="${project.image}" alt="${project.alt}" onerror="this.onerror=null;this.src='${fallbackImage}';">
+            <img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}';">
             <div class="card-body">
               <div class="chip">${project.chip}</div>
               <h3>${project.title}</h3>
@@ -1179,6 +1221,17 @@
 
       if (shareLinkBtn) {
         shareLinkBtn.addEventListener('click', async () => {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: document.title,
+                text: 'Nowe inwestycje na Costa Blanca',
+                url: shareUrl
+              });
+              return;
+            } catch (error) {}
+          }
+
           try {
             await navigator.clipboard.writeText(shareUrl);
             shareLinkBtn.textContent = '✅ Skopiowano';
@@ -1207,26 +1260,33 @@
       }
 
       window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        const delta = currentScroll - lastScroll;
+        if (ticking) return;
+        ticking = true;
 
-        if (Math.abs(delta) < 4) return;
+        requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
+          const delta = currentScroll - lastScroll;
 
-        if (delta > 0) {
-          accumulatedDown += delta;
-          accumulatedUp = 0;
-          if (currentScroll > 120 && accumulatedDown > 24 && header) {
-            header.classList.add('hide');
+          if (Math.abs(delta) >= 4) {
+            if (delta > 0) {
+              accumulatedDown += delta;
+              accumulatedUp = 0;
+              if (currentScroll > 120 && accumulatedDown > 24 && header) {
+                header.classList.add('hide');
+              }
+            } else {
+              accumulatedUp += Math.abs(delta);
+              accumulatedDown = 0;
+              if ((accumulatedUp > 42 || currentScroll < 40) && header) {
+                header.classList.remove('hide');
+              }
+            }
+
+            lastScroll = currentScroll;
           }
-        } else {
-          accumulatedUp += Math.abs(delta);
-          accumulatedDown = 0;
-          if ((accumulatedUp > 42 || currentScroll < 40) && header) {
-            header.classList.remove('hide');
-          }
-        }
 
-        lastScroll = currentScroll;
+          ticking = false;
+        });
       }, { passive: true });
 
       if (!contactForm) return;
@@ -1238,7 +1298,14 @@
         const phone = (formData.get('phone') || '').toString().trim();
         const email = (formData.get('email') || '').toString().trim();
         const message = (formData.get('message') || '').toString().trim();
-        const text = `Nowe zapytanie ze strony Nowe inwestycje:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+        const text = `Nowe zapytanie ze strony Nowe inwestycje:
+
+Imię: ${name}
+Telefon: ${phone}
+Email: ${email}
+
+Wiadomość:
+${message}`;
         const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
         const opened = window.open(url, '_blank', 'noopener');
         if (!opened) window.location.href = url;
@@ -1296,7 +1363,7 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://costa-blanca-invest.com/" },
+          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://costa-blanca-invest.com/pl/" },
           { "@type": "ListItem", "position": 2, "name": "Nowe inwestycje", "item": "https://costa-blanca-invest.com/pl/new-developments/" }
         ]
       },
