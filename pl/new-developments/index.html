@@ -207,6 +207,7 @@
     .contact-form input:focus,.contact-form textarea:focus{border-color:rgba(94,198,232,.5);box-shadow:0 0 0 4px rgba(94,198,232,.12),0 0 0 1px rgba(255,255,255,.72) inset;transform:translateY(-1px);background:rgba(255,255,255,.98)}
     .share-box{margin-top:18px;padding-top:16px;border-top:1px solid rgba(15,23,42,.08)}
     .share-box p{margin-bottom:12px;text-align:center}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     .footer{padding:8px 0 54px;margin-top:34px;font-size:14px;color:var(--text-soft)}
     .footer-card{position:relative;padding:34px 34px 28px;text-align:center;background:radial-gradient(circle at top left,rgba(94,198,232,.08),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(247,250,251,.98) 100%);border:1px solid rgba(255,255,255,.65);box-shadow:0 24px 60px rgba(15,23,42,.08);border-radius:24px;overflow:hidden}
@@ -287,7 +288,7 @@
     }
   </style>
 </head>
-<body>
+<body data-projects-url="">
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
@@ -322,7 +323,7 @@
           <p class="lead">Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.</p>
         </div>
         <div class="hero-image">
-          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630">
+          <img src="/images/hero-sea-palm.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
         </div>
       </section>
 
@@ -449,7 +450,7 @@
         <p class="center-text">Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.</p>
         <div class="contact-note">💡 Odpowiadam w 10–15 minut</div>
         <div class="contact-avatar">
-          <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async">
+          <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
           <div class="contact-avatar-name">Olga Chernyshenko</div>
           <div class="contact-avatar-role">Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm</div>
         </div>
@@ -467,6 +468,7 @@
             <button class="share-btn" type="button" id="share-link">🔗 Link</button>
             <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
+          <div id="share-status" class="sr-only" aria-live="polite"></div>
         </div>
         <form class="contact-form" id="contact-form" action="#" method="post">
           <div class="contact-form-grid">
@@ -505,6 +507,21 @@
     </div>
   </div>
 
+  <script id="projects-data" type="application/json">
+  [
+    {
+      "href": "/pl/new-developments/bonalba-golf-hills/",
+      "image": "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+      "alt": "Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury",
+      "chip": "Premium · Golf & Lifestyle",
+      "title": "Bonalba Golf Hills",
+      "meta": "Mutxamel koło Alicante",
+      "price": "280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje",
+      "desc": "Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego."
+    }
+  ]
+  </script>
+
   <script>
     document.addEventListener('DOMContentLoaded',()=>{
       const d=document;
@@ -516,48 +533,150 @@
       const shareFacebook=d.getElementById('share-facebook');
       const shareUrl='https://costa-blanca-invest.com/pl/new-developments/';
       const fallbackImage='/images/hero-sea-palm.jpg';
+      const fallbackAvatar='/avatar.png';
+      const projectsUrl=(document.body.dataset.projectsUrl||'').trim();
       let lastScroll=window.pageYOffset,up=0,down=0;
 
-            function renderProjects(projects){
+      window.handleBrokenImage=function(img){
+        const original=img.getAttribute('src') || '';
+        console.warn('Broken image:', original);
+
+        if(img.dataset.fallbackApplied==='true') return;
+        img.dataset.fallbackApplied='true';
+
+        if(img.closest('.contact-avatar')){
+          img.src=fallbackAvatar;
+          return;
+        }
+
+        img.src=fallbackImage;
+      };
+
+      function getDefaultProjects(){
+        return [
+          {
+            href:'/pl/new-developments/bonalba-golf-hills/',
+            image:'/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
+            alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
+            chip:'Premium · Golf & Lifestyle',
+            title:'Bonalba Golf Hills',
+            meta:'Mutxamel koło Alicante',
+            price:'280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',
+            desc:'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
+          }
+        ];
+      }
+
+      function escapeHtml(value){
+        return String(value ?? '')
+          .replace(/&/g,'&amp;')
+          .replace(/</g,'&lt;')
+          .replace(/>/g,'&gt;')
+          .replace(/"/g,'&quot;')
+          .replace(/'/g,'&#39;');
+      }
+
+      function normalizeProjects(raw){
+        const fallback=getDefaultProjects()[0];
+        if(!Array.isArray(raw)) return getDefaultProjects();
+
+        const cleaned=raw
+          .filter(item=>item && typeof item==='object')
+          .map(item=>({
+            href: typeof item.href==='string' && item.href.trim() ? item.href.trim() : fallback.href,
+            image: typeof item.image==='string' && item.image.trim() ? item.image.trim() : fallback.image,
+            alt: typeof item.alt==='string' && item.alt.trim() ? item.alt.trim() : (typeof item.title==='string' ? item.title.trim() : fallback.alt),
+            chip: typeof item.chip==='string' && item.chip.trim() ? item.chip.trim() : '',
+            title: typeof item.title==='string' && item.title.trim() ? item.title.trim() : fallback.title,
+            meta: typeof item.meta==='string' ? item.meta.trim() : '',
+            price: typeof item.price==='string' ? item.price.trim() : '',
+            desc: typeof item.desc==='string' ? item.desc.trim() : ''
+          }))
+          .filter(item=>item.title && item.href);
+
+        return cleaned.length ? cleaned : getDefaultProjects();
+      }
+
+      function getEmbeddedProjects(){
+        const el=document.getElementById('projects-data');
+        if(!el) return getDefaultProjects();
+        try{
+          return normalizeProjects(JSON.parse(el.textContent));
+        }catch(error){
+          console.warn('Nieprawidłowy JSON w #projects-data. Używam danych domyślnych.', error);
+          return getDefaultProjects();
+        }
+      }
+
+      function renderProjects(projects){
         if(!projectsGrid) return;
-        projectsGrid.innerHTML=projects.map(project=>`
-          <a href="${project.href}" class="project-card" aria-label="${project.alt}">
-            <img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}';">
+        projectsGrid.innerHTML=normalizeProjects(projects).map(project=>`
+          <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(project.alt)}">
+            <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.alt)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
             <div class="card-body">
-              <div class="chip">${project.chip}</div>
-              <h3>${project.title}</h3>
-              <div class="card-meta">${project.meta}</div>
-              <div class="card-price">${project.price}</div>
-              <p>${project.desc}</p>
+              ${project.chip ? `<div class="chip">${escapeHtml(project.chip)}</div>` : ''}
+              <h3>${escapeHtml(project.title)}</h3>
+              ${project.meta ? `<div class="card-meta">${escapeHtml(project.meta)}</div>` : ''}
+              ${project.price ? `<div class="card-price">${escapeHtml(project.price)}</div>` : ''}
+              ${project.desc ? `<p>${escapeHtml(project.desc)}</p>` : ''}
               <div class="card-link">Zobacz inwestycję →</div>
             </div>
           </a>
         `).join('');
       }
 
+      function setShareStatus(message){
+        const shareStatus=d.getElementById('share-status');
+        if(shareStatus) shareStatus.textContent=message;
+      }
+
+      async function copyTextToClipboard(text){
+        if(navigator.clipboard && window.isSecureContext){
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+
+        const temp=d.createElement('textarea');
+        temp.value=text;
+        temp.setAttribute('readonly','');
+        temp.style.position='absolute';
+        temp.style.left='-9999px';
+        d.body.appendChild(temp);
+        temp.select();
+        const copied=d.execCommand('copy');
+        d.body.removeChild(temp);
+        return copied;
+      }
+
       async function loadProjects(){
+        const embeddedProjects=getEmbeddedProjects();
+
+        if(!projectsUrl){
+          renderProjects(embeddedProjects);
+          return;
+        }
+
         try{
-          const response=await fetch('/data/projects-pl.json', { cache:'no-store' });
+          const response=await fetch(projectsUrl,{cache:'no-store'});
           if(!response.ok) throw new Error(`HTTP ${response.status}`);
           const projects=await response.json();
           renderProjects(projects);
         }catch(error){
-          console.error('Błąd ładowania projektów:', error);
-          renderProjects([
-            {
-              href:'/pl/new-developments/bonalba-golf-hills/',
-              image:'/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
-              alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
-              chip:'Premium · Golf & Lifestyle',
-              title:'Bonalba Golf Hills',
-              meta:'Mutxamel koło Alicante',
-              price:'280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',
-              desc:'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
-            }
-          ]);
+          console.warn('Nie udało się pobrać zewnętrznych projektów. Używam danych osadzonych.', error);
+          renderProjects(embeddedProjects);
         }
       }
 
+      function runProjectTests(){
+        console.assert(Array.isArray(normalizeProjects([])),'Test: normalizeProjects zwraca tablicę');
+        console.assert(normalizeProjects([]).length===1,'Test: pusta lista daje projekt domyślny');
+        console.assert(normalizeProjects([{title:'X',href:'/x',image:'/x.jpg'}])[0].title==='X','Test: poprawny projekt zachowuje title');
+        console.assert(escapeHtml('<b>')==='&lt;b&gt;','Test: escapeHtml działa poprawnie');
+        console.assert(normalizeProjects([{href:'/x',image:'/x.jpg'}])[0].title==='Bonalba Golf Hills','Test: brak title daje fallback');
+        console.assert(normalizeProjects([{title:'X',href:'/x'}])[0].image.includes('bonalba-golf-hills-main.jpg'),'Test: brak image daje fallback');
+      }
+
+      runProjectTests();
       loadProjects();
 
       if(shareFacebook){
@@ -566,20 +685,48 @@
 
       if(shareLinkBtn){
         shareLinkBtn.addEventListener('click',async()=>{
+          const shareData={
+            title:document.title,
+            text:document.querySelector('meta[name="description"]')?.content || '',
+            url:shareUrl
+          };
+
           try{
-            if(navigator.share && window.innerWidth<768){
-              await navigator.share({title:document.title,text:document.querySelector('meta[name="description"]')?.content||'',url:shareUrl});
+            if(navigator.share){
+              await navigator.share(shareData);
+              setShareStatus('Link został udostępniony.');
               return;
             }
-            await navigator.clipboard.writeText(shareUrl);
-            const oldText=shareLinkBtn.textContent;
-            shareLinkBtn.textContent='✅ Skopiowano';
-            setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
+
+            const copied=await copyTextToClipboard(shareUrl);
+            if(copied){
+              const oldText=shareLinkBtn.textContent;
+              shareLinkBtn.textContent='✅ Skopiowano';
+              setShareStatus('Link został skopiowany.');
+              setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
+              return;
+            }
+
+            window.prompt('Skopiuj link:',shareUrl);
           }catch(error){
+            try{
+              const copied=await copyTextToClipboard(shareUrl);
+              if(copied){
+                const oldText=shareLinkBtn.textContent;
+                shareLinkBtn.textContent='✅ Skopiowano';
+                setShareStatus('Link został skopiowany.');
+                setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
+                return;
+              }
+            }catch(copyError){
+              console.warn('Błąd kopiowania linku:', copyError);
+            }
             window.prompt('Skopiuj link:',shareUrl);
           }
         });
       }
+
+      
 
       if('IntersectionObserver' in window){
         const observer=new IntersectionObserver(entries=>{
