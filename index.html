@@ -391,6 +391,26 @@
       border-color: rgba(255,255,255,.2);
       box-shadow: 0 12px 26px rgba(24,119,242,.25);
     }
+    .share-btn.telegram {
+      background: #0088cc;
+      color: #fff;
+      border-color: rgba(255,255,255,.2);
+      box-shadow: 0 12px 26px rgba(0,136,204,.25);
+    }
+    .share-btn.whatsapp {
+      background: #25d366;
+      color: #fff;
+      border-color: rgba(255,255,255,.2);
+      box-shadow: 0 12px 26px rgba(37,211,102,.25);
+    }
+    .share-btn.copy {
+      background: #6b7280;
+      color: #fff;
+    }
+    .share-btn.native {
+      background: linear-gradient(135deg, #e28743, #c8742f);
+      color: #fff;
+    }
     .contact-inline:hover,
     .btn:hover,
     .sticky-btn:hover,
@@ -994,8 +1014,11 @@
         <div class="share-box">
           <p>Udostępnij stronę</p>
           <div class="share-actions">
-            <button class="share-btn" type="button" id="share-link">🔗 Link</button>
-            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <button class="share-btn native" type="button" id="share-native">✨ Udostępnij</button>
+            <button class="share-btn copy" type="button" id="share-link">🔗 Kopiuj link</button>
+            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a class="share-btn telegram" id="share-telegram" href="#" target="_blank" rel="noopener noreferrer">✈️ Telegram</a>
+            <a class="share-btn whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
           </div>
         </div>
       </section>
@@ -1034,10 +1057,14 @@
       const contactForm = document.getElementById('contact-form');
       const animatedCards = document.querySelectorAll('.fade-up');
       const header = document.querySelector('.topbar');
+      const shareNativeBtn = document.getElementById('share-native');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
+      const shareTelegram = document.getElementById('share-telegram');
+      const shareWhatsapp = document.getElementById('share-whatsapp');
       const shareUrl = 'https://costa-blanca-invest.com/';
-      // Keep shareUrl identical to canonical and og:url for stable Facebook and WhatsApp previews.
+      const shareTitle = document.title;
+      const shareText = 'Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.';
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
@@ -1047,19 +1074,32 @@
         shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
       }
 
-      if (shareLinkBtn) {
-        shareLinkBtn.addEventListener('click', async () => {
+      if (shareTelegram) {
+        shareTelegram.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`;
+      }
+
+      if (shareWhatsapp) {
+        shareWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
+      }
+
+      if (shareNativeBtn) {
+        shareNativeBtn.addEventListener('click', async () => {
           if (navigator.share) {
             try {
               await navigator.share({
-                title: document.title,
-                text: 'Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.',
+                title: shareTitle,
+                text: shareText,
                 url: shareUrl
               });
               return;
             } catch (error) {}
           }
+          window.open(`https://wa.me/?text=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener');
+        });
+      }
 
+      if (shareLinkBtn) {
+        shareLinkBtn.addEventListener('click', async () => {
           try {
             await navigator.clipboard.writeText(shareUrl);
             shareLinkBtn.textContent = '✅ Skopiowano';
