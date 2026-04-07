@@ -22,9 +22,9 @@
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta property="og:description" content="Wyselekcjonowane nowe inwestycje na Costa Blanca: apartamenty, penthouse’y i wille w najlepszych lokalizacjach Alicante–Benidorm.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
-  <meta property="og:image:url" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
-  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
+  <meta property="og:image" content="https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg">
+  <meta property="og:image:url" content="https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -34,7 +34,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm">
   <meta name="twitter:description" content="Apartamenty, penthouse’y i wille na Costa Blanca z potencjałem inwestycyjnym, wynajmu i wzrostu wartości.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg">
+  <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg">
   <meta name="twitter:image:alt" content="Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm">
   <meta name="twitter:url" content="https://costa-blanca-invest.com/pl/new-developments/">
 
@@ -49,7 +49,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg" fetchpriority="high">
 
   <style>
     :root{
@@ -60,16 +60,12 @@
       --accent-dark:#c06b2a;
       --text:#1f2933;
       --text-soft:#5f6b76;
-      --muted:#97a3ad;
-      --line:rgba(94,198,232,.18);
-      --shadow-soft:0 8px 24px rgba(15,23,42,.05);
+      --muted:#97a3ad;      --shadow-soft:0 8px 24px rgba(15,23,42,.05);
       --shadow-lux:0 30px 80px rgba(15,23,42,.12);
       --radius:20px;
       --container:1280px;
       --surface:rgba(255,255,255,.88);
-      --glass-light:rgba(255,255,255,.72);
-      --glass-medium:rgba(255,255,255,.82);
-      --maxw:1200px;
+      --glass-light:rgba(255,255,255,.72);      --maxw:1200px;
       --header-height:82px;
       --footer-title-size:24px;
       --body-font:Inter,Arial,sans-serif;
@@ -104,6 +100,9 @@
     h3{font-size:var(--h3-size)}
     p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;text-align:justify;text-justify:inter-word;hyphens:auto;word-break:break-word}
     .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+    iframe,video{max-width:100%;height:auto}
+    .project-card,.category-card,.why-item,.step-card,.location-card,.faq-card,.hero-card,.section-card,.cta-box,.footer-card{min-width:0}
+    .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3,.card-meta,.card-price,.card-link,.chip,.contact-links a,.footer-links a{overflow-wrap:anywhere}
 
     .topbar{
       position:sticky;top:0;z-index:50;
@@ -162,7 +161,8 @@
     .contact-inline:focus-visible,.btn:focus-visible,.sticky-btn:focus-visible,.share-btn:focus-visible,.submit-btn:focus-visible,.contact-form input:focus-visible,.contact-form textarea:focus-visible,.nav a:focus-visible,.contact-links a:focus-visible{outline:3px solid rgba(94,198,232,.28);outline-offset:3px}
 
     .why-grid,.projects-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid,.contact-form-grid,.sticky-contact .wrap{display:grid;gap:22px}
-    .why-grid,.projects-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .why-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
     .categories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     .contact-form-grid{grid-template-columns:1fr 1fr;gap:14px}
     .sticky-contact .wrap{grid-template-columns:1fr;max-width:var(--maxw);margin:0 auto}
@@ -170,14 +170,18 @@
     .why-item,.project-card,.category-card,.step-card,.location-card,.faq-card{border-radius:var(--radius);border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow-soft);overflow:hidden}
     .why-item,.step-card,.location-card,.faq-card{padding:28px;text-align:left}
     .project-card .card-body,.category-card .card-body{padding:24px 26px;text-align:left}
+    .project-card .card-body{display:flex;flex-direction:column;gap:10px;height:100%}
     .project-card,.category-card{color:inherit;position:relative;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+    .project-card{display:flex;flex-direction:column;height:100%}
+    .project-card img{flex:0 0 auto}
+    .card-body p:last-child,.why-item p:last-child,.step-card p:last-child,.location-card p:last-child,.faq-card p:last-child,.footer-copy:last-child{margin-bottom:0}
     .project-card:hover,.category-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 34px 80px rgba(15,23,42,.16)}
     .project-card img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .6s ease,filter .35s ease}
     .project-card:hover img{transform:scale(1.03);filter:saturate(1.03)}
     .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
     .project-card .card-meta{font-size:14px;font-weight:700;color:var(--muted)}
     .project-card .card-price{font-size:17px;font-weight:800;color:#c8742f}
-    .project-card .card-link{margin-top:6px;font-size:14px;font-weight:800;color:var(--primary-dark)}
+    .project-card .card-link{margin-top:auto;font-size:14px;font-weight:800;color:var(--primary-dark)}
     .chip{display:inline-flex;align-items:center;justify-content:center;width:fit-content;margin-bottom:10px;padding:7px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(94,198,232,.08);color:var(--primary-dark);border:1px solid rgba(94,198,232,.16)}
 
     .section-card,.cta-box{margin-top:28px;padding:36px}
@@ -228,32 +232,31 @@
 
     @media (max-width:1100px){
       .hero-card{grid-template-columns:1fr;min-height:auto}
-      .why-grid,.projects-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr 1fr}
+      .why-grid,.categories-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
       .hero-image,.hero-image img{min-height:420px}
     }
 
     @media (max-width:768px){
-      p{ text-align:left; text-justify:auto; hyphens:none; }
-      .why-item p,.step-card p,.location-card p,.faq-card p,.project-card p,.footer-copy,.seo-article p{ text-align:left; }
-      .section-card > p,.cta-box > p,.center-text,.subtitle,.lead{ text-align:center; }
-      .topbar{ backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
-      .topbar-inner{ width:100%; }
-      .breadcrumbs{ justify-content:center; text-align:center; }
-      .footer-links a{ text-align:center; }
-      .contact-links a{ text-align:center; }
-      .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{ text-align:left; }
-      .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{ text-align:left; }
-      .inline-list span{ text-align:center; }
-      .container{padding:0 14px}
-      .topbar-inner{grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
+      p{text-align:left;text-justify:auto;hyphens:none}
+      .why-item p,.step-card p,.location-card p,.faq-card p,.project-card p,.footer-copy,.seo-article p{text-align:left}
+      .section-card > p,.cta-box > p,.center-text,.subtitle,.lead{text-align:center}
+      .topbar{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+      .topbar-inner{width:100%;grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
       .brand{justify-self:center;text-align:center}
-      .nav{justify-content:flex-start;align-items:center;gap:14px;flex-wrap:nowrap;overflow-x:auto;width:100%;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .breadcrumbs{justify-content:center;text-align:center}
+      .footer-links a,.contact-links a{text-align:center}
+      .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{text-align:left}
+      .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{text-align:left}
+      .inline-list span{text-align:center}
+      .container{padding:0 14px}
+      .nav{justify-content:flex-start;align-items:center;gap:14px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;width:100%;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
       .nav::-webkit-scrollbar{display:none}
       .nav a{flex:0 0 auto;white-space:nowrap;text-align:center;font-size:14px;line-height:1.3}
       .page{padding:14px 0 56px}
       .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:22px}
       .hero-image,.hero-image img{min-height:300px}
-      .contact-form-grid,.categories-grid,.why-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .projects-grid,.contact-form-grid,.categories-grid,.why-grid,.steps-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
       .contact-inline-wrap,.cta-actions,.share-actions{flex-direction:column}
       .btn,.contact-inline,.share-btn,.submit-btn{width:100%;min-height:52px}
       .sticky-contact{display:block;right:12px;bottom:12px}
@@ -265,11 +268,14 @@
       .subtitle,.lead,.center-text{font-size:15px;line-height:1.6}
       .contact-note{font-size:12px}
       .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{padding:20px}
+      .breadcrumbs{gap:6px;font-size:12px}
       .breadcrumbs a{padding:7px 10px}
       .container{padding:0 10px}
       .hero-card,.section-card,.cta-box,.footer-card,.contact-box{border-radius:18px}
       .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:18px}
       h1{font-size:clamp(28px,8.5vw,36px)}
+      h2{font-size:clamp(24px,7vw,32px)}
+      h3{font-size:20px}
       .subtitle,.lead,p{font-size:15px}
       .nav{gap:12px}
       .nav a{font-size:14px}
@@ -280,6 +286,20 @@
       .sticky-contact{right:10px;bottom:10px}
       .sticky-btn{min-height:48px;font-size:13px;padding:0 16px}
       .sticky-wa{min-width:116px}
+      .contact-form input,.contact-form textarea{padding:16px;font-size:16px}
+      .chip{font-size:10px;padding:6px 10px}
+    }
+
+    @media (max-width:390px){
+      .container{padding:0 8px}
+      .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:16px}
+      .contact-inline,.btn,.share-btn,.submit-btn,.sticky-btn{font-size:14px;padding:0 14px}
+      .contact-links a{font-size:15px}
+      .contact-avatar-name{font-size:20px}
+      .contact-avatar-role{font-size:13px}
+      .inline-list{gap:8px}
+      .inline-list span{font-size:13px;padding:9px 12px}
+      .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{padding:18px}
     }
 
     @media (prefers-reduced-motion:reduce){
@@ -288,9 +308,7 @@
     }
   </style>
 </head>
-<body data-projects-url="">
-  <!-- WSTAW TUTAJ URL Z GOOGLE APPS SCRIPT, gdy będzie gotowy:
-       <body data-projects-url="https://script.google.com/macros/s/AKfycb.../exec"> -->
+<body>
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
@@ -325,7 +343,7 @@
           <p class="lead">Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.</p>
         </div>
         <div class="hero-image">
-          <img src="https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+          <img src="/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg" alt="Nowe inwestycje Costa Blanca w rejonie Alicante i Benidorm — apartamenty i wille od deweloperów w Hiszpanii" fetchpriority="high" decoding="async" width="1200" height="630" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
         </div>
       </section>
 
@@ -509,7 +527,6 @@
     </div>
   </div>
 
-  <!-- DOMYŚLNE KARTY. Jeśli Apps Script URL nie działa, strona użyje tych danych. -->
   <script id="projects-data" type="application/json">
   [
     {
@@ -523,14 +540,14 @@
       "desc": "Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego."
     },
     {
-      "href": "/pl/new-developments/penthouse-torrevieja/index.html",
-      "image": "/pl/new-developments/penthouse-torrevieja/image/main.jpg",
-      "alt": "Penthouse w spokojnym centrum Torrevieja — nowa inwestycja od dewelopera",
-      "chip": "Nowa inwestycja · Penthouse",
+      "href": "/pl/new-developments/penthouse-torrevieja/",
+      "image": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/penthouse-torrevieja/image/IMG_0973.jpeg",
+      "alt": "Penthouse Torrevieja Centrum — nowa inwestycja w centrum miasta blisko plaży",
+      "chip": "🔥 Ostatnie mieszkanie w budynku · Centrum miasta",
       "title": "Penthouse Torrevieja Centrum",
-      "meta": "Torrevieja",
+      "meta": "Torrevieja · Costa Blanca Południe",
       "price": "305 000 € · 134 m² · 3 sypialnie",
-      "desc": "Nowy, 3-pokojowy penthouse w spokojnym centrum Torrevieja z prywatną przeszkloną werandą 63 m², tylko 15 minut spacerem od plaży i blisko wszystkich udogodnień."
+      "desc": "Nowoczesny penthouse w centrum Torrevieja z dużą prywatną przestrzenią, zaledwie kilka minut od plaży i wszystkich usług — idealny jako inwestycja, second home lub ostatnia dostępna oferta w budynku."
     }
   ]
   </script>
@@ -545,40 +562,19 @@
       const shareLinkBtn=d.getElementById('share-link');
       const shareFacebook=d.getElementById('share-facebook');
       const shareUrl='https://costa-blanca-invest.com/pl/new-developments/';
-      const fallbackImage='https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg';
+      const fallbackImage='/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg';
       const fallbackAvatar='/avatar.png';
-      const projectsUrl=(document.body.dataset.projectsUrl||'').trim();
       let lastScroll=window.pageYOffset,up=0,down=0;
 
       window.handleBrokenImage=function(img){
-        const original=img.getAttribute('src') || '';
-        console.warn('Broken image:', original);
-
         if(img.dataset.fallbackApplied==='true') return;
         img.dataset.fallbackApplied='true';
-
         if(img.closest('.contact-avatar')){
           img.src=fallbackAvatar;
           return;
         }
-
         img.src=fallbackImage;
       };
-
-      function getDefaultProjects(){
-        return [
-          {
-            href:'/pl/new-developments/bonalba-golf-hills/',
-            image:'https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg',
-            alt:'Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury',
-            chip:'Premium · Golf & Lifestyle',
-            title:'Bonalba Golf Hills',
-            meta:'Mutxamel koło Alicante',
-            price:'280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje',
-            desc:'Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.'
-          }
-        ];
-      }
 
       function escapeHtml(value){
         return String(value ?? '')
@@ -589,46 +585,30 @@
           .replace(/'/g,'&#39;');
       }
 
-      function normalizeProjects(raw){
-        const fallback=getDefaultProjects()[0];
-        if(!Array.isArray(raw)) return getDefaultProjects();
-
-        const cleaned=raw
-          .filter(item=>item && typeof item==='object')
-          .map(item=>({
-            href: typeof item.href==='string' && item.href.trim() ? item.href.trim() : fallback.href,
-            image: typeof item.image==='string' && item.image.trim() ? item.image.trim() : fallback.image,
-            alt: typeof item.alt==='string' && item.alt.trim() ? item.alt.trim() : (typeof item.title==='string' ? item.title.trim() : fallback.alt),
-            chip: typeof item.chip==='string' && item.chip.trim() ? item.chip.trim() : '',
-            title: typeof item.title==='string' && item.title.trim() ? item.title.trim() : fallback.title,
-            meta: typeof item.meta==='string' ? item.meta.trim() : '',
-            price: typeof item.price==='string' ? item.price.trim() : '',
-            desc: typeof item.desc==='string' ? item.desc.trim() : ''
-          }))
-          .filter(item=>item.title && item.href);
-
-        return cleaned.length ? cleaned : getDefaultProjects();
-      }
-
-      function getEmbeddedProjects(){
-        const el=document.getElementById('projects-data');
-        if(!el) return getDefaultProjects();
+      function getProjects(){
+        const el=d.getElementById('projects-data');
+        if(!el) return [];
         try{
-          return normalizeProjects(JSON.parse(el.textContent));
+          const parsed=JSON.parse(el.textContent);
+          return Array.isArray(parsed) ? parsed.filter(item=>item && item.href && item.title) : [];
         }catch(error){
-          console.warn('Nieprawidłowy JSON w #projects-data. Używam danych domyślnych.', error);
-          return getDefaultProjects();
+          console.warn('Nieprawidłowy JSON w #projects-data.', error);
+          return [];
         }
       }
 
       function renderProjects(projects){
         if(!projectsGrid) return;
-        projectsGrid.innerHTML=normalizeProjects(projects).map(project=>`
-          <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(project.alt)}">
-            <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.alt)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+        if(!projects.length){
+          projectsGrid.innerHTML='<div class="project-card"><div class="card-body"><h3>Oferty w przygotowaniu</h3><p>Skontaktuj się z nami, aby otrzymać aktualne propozycje inwestycji na Costa Blanca.</p></div></div>';
+          return;
+        }
+        projectsGrid.innerHTML=projects.map(project=>`
+          <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(project.alt || project.title)}">
+            <img src="${escapeHtml(project.image || fallbackImage)}" alt="${escapeHtml(project.alt || project.title)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
             <div class="card-body">
               ${project.chip ? `<div class="chip">${escapeHtml(project.chip)}</div>` : ''}
-              <h3>${escapeHtml(project.title)}</h3>
+              <h3>${escapeHtml(project.title || '')}</h3>
               ${project.meta ? `<div class="card-meta">${escapeHtml(project.meta)}</div>` : ''}
               ${project.price ? `<div class="card-price">${escapeHtml(project.price)}</div>` : ''}
               ${project.desc ? `<p>${escapeHtml(project.desc)}</p>` : ''}
@@ -661,36 +641,7 @@
         return copied;
       }
 
-      async function loadProjects(){
-        const embeddedProjects=getEmbeddedProjects();
-
-        if(!projectsUrl){
-          renderProjects(embeddedProjects);
-          return;
-        }
-
-        try{
-          const response=await fetch(projectsUrl,{cache:'no-store'});
-          if(!response.ok) throw new Error(`HTTP ${response.status}`);
-          const projects=await response.json();
-          renderProjects(projects);
-        }catch(error){
-          console.warn('Nie udało się pobrać zewnętrznych projektów. Używam danych osadzonych.', error);
-          renderProjects(embeddedProjects);
-        }
-      }
-
-      function runProjectTests(){
-        console.assert(Array.isArray(normalizeProjects([])),'Test: normalizeProjects zwraca tablicę');
-        console.assert(normalizeProjects([]).length===1,'Test: pusta lista daje projekt domyślny');
-        console.assert(normalizeProjects([{title:'X',href:'/x',image:'/x.jpg'}])[0].title==='X','Test: poprawny projekt zachowuje title');
-        console.assert(escapeHtml('<b>')==='&lt;b&gt;','Test: escapeHtml działa poprawnie');
-        console.assert(normalizeProjects([{href:'/x',image:'/x.jpg'}])[0].title==='Bonalba Golf Hills','Test: brak title daje fallback');
-        console.assert(normalizeProjects([{title:'X',href:'/x'}])[0].image.includes('bonalba-golf-hills-main.jpg'),'Test: brak image daje fallback');
-      }
-
-      runProjectTests();
-      loadProjects();
+      renderProjects(getProjects());
 
       if(shareFacebook){
         shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
@@ -722,24 +673,10 @@
 
             window.prompt('Skopiuj link:',shareUrl);
           }catch(error){
-            try{
-              const copied=await copyTextToClipboard(shareUrl);
-              if(copied){
-                const oldText=shareLinkBtn.textContent;
-                shareLinkBtn.textContent='✅ Skopiowano';
-                setShareStatus('Link został skopiowany.');
-                setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
-                return;
-              }
-            }catch(copyError){
-              console.warn('Błąd kopiowania linku:', copyError);
-            }
             window.prompt('Skopiuj link:',shareUrl);
           }
         });
       }
-
-      
 
       if('IntersectionObserver' in window){
         const observer=new IntersectionObserver(entries=>{
@@ -804,7 +741,7 @@
         "name": "Costa Blanca Invest",
         "url": "https://costa-blanca-invest.com/",
         "logo": "https://costa-blanca-invest.com/apple-touch-icon.png",
-        "image": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+        "image": "https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg",
         "email": "o.czernyszenko@gmail.com",
         "telephone": "+34604158859"
       },
@@ -822,7 +759,7 @@
         "inLanguage": "pl",
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg"
+          "url": "https://costa-blanca-invest.com/pl/new-developments/images/costa-blanca-real-estate-sea-view.jpg"
         },
         "isPartOf": {
           "@type": "WebSite",
