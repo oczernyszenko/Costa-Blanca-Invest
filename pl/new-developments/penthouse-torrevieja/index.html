@@ -17,6 +17,7 @@
   <meta property="og:title" content="Penthouse w Torrevieja — FINAL PRICE € 305 000">
   <meta property="og:description" content="FINAL PRICE € 305 000 · 134 m² · 3 sypialnie · 2 łazienki · prywatna weranda i solarium 71 m²">
   <meta property="og:url" content="https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg">
   <meta property="og:image" content="https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -28,6 +29,7 @@
   <meta name="twitter:description" content="FINAL PRICE € 305 000 · 134 m² · 3 sypialnie · 2 łazienki · solarium 71 m²">
   <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg">
   <meta name="twitter:image:alt" content="Penthouse w Torrevieja — nowa inwestycja od dewelopera">
+  <meta name="twitter:url" content="https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -655,6 +657,12 @@
       text-align: center;
     }
 
+    .share-actions .share-btn {
+      min-width: 160px;
+      position: relative;
+      z-index: 1;
+    }
+
     .contact-form {
       display: grid;
       gap: 14px;
@@ -994,8 +1002,8 @@
           <div class="share-title">Udostępnij ofertę</div>
           <div class="share-actions">
             <button class="share-btn" type="button" id="share-native"><span>Udostępnij</span></button>
-            <a class="share-btn share-btn-facebook" href="#" id="share-facebook" target="_blank" rel="noopener"><span>Facebook</span></a>
-            <a class="share-btn share-btn-whatsapp" href="#" id="share-whatsapp" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+            <a class="share-btn share-btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcosta-blanca-invest.com%2Fpl%2Fnew-developments%2Fpenthouse-torrevieja%2F&amp;quote=Penthouse%20w%20Torrevieja%20%E2%80%94%20FINAL%20PRICE%20%E2%82%AC%20305%20000" id="share-facebook" target="_blank" rel="noopener noreferrer" data-share-role="facebook"><span>Facebook</span></a>
+            <a class="share-btn share-btn-whatsapp" href="https://wa.me/?text=Penthouse%20w%20Torrevieja%20%E2%80%94%20FINAL%20PRICE%20%E2%82%AC%20305%20000%0A134%20m%C2%B2%20%C2%B7%203%20sypialnie%20%C2%B7%202%20%C5%82azienki%0APrywatna%20weranda%20i%20solarium%2071%20m%C2%B2%0Ahttps%3A%2F%2Fcosta-blanca-invest.com%2Fpl%2Fnew-developments%2Fpenthouse-torrevieja%2F" id="share-whatsapp" target="_blank" rel="noopener noreferrer" data-share-role="whatsapp"><span>WhatsApp</span></a>
             <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Kopiuj link do oferty"><span>Kopiuj link</span></button>
           </div>
           <p class="share-note">Penthouse w Torrevieja<br><strong>FINAL PRICE € 305 000</strong><br>134 m² · 3 sypialnie · 2 łazienki</p>
@@ -1022,6 +1030,7 @@
       const shareNativeBtn = document.getElementById('share-native');
       const shareFacebook = document.getElementById('share-facebook');
       const shareWhatsapp = document.getElementById('share-whatsapp');
+      const shareButtons = Array.from(document.querySelectorAll('[data-share-role]'));
       const shareUrl = 'https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/';
       const shareTitle = 'Penthouse w Torrevieja — FINAL PRICE € 305 000';
       const shareParams = '134 m² · 3 sypialnie · 2 łazienki';
@@ -1075,15 +1084,21 @@
       });
 
       if (shareFacebook) {
-        shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        shareFacebook.setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareTitle)}`);
       }
       if (shareWhatsapp) {
         const shareText = `${shareTitle}
 ${shareParams}
 ${shareDescription}
 ${shareUrl}`;
-        shareWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+        shareWhatsapp.setAttribute('href', `https://wa.me/?text=${encodeURIComponent(shareText)}`);
       }
+
+      shareButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+      });
 
       if (shareNativeBtn) {
         shareNativeBtn.addEventListener('click', async () => {
@@ -1092,6 +1107,7 @@ ${shareUrl}`;
             text: `${shareParams} · ${shareDescription}`,
             url: shareUrl
           };
+          const shareNativeLabel = shareNativeBtn.querySelector('span');
           try {
             if (navigator.share) {
               await navigator.share(shareData);
@@ -1101,8 +1117,10 @@ ${shareUrl}`;
 ${shareParams}
 ${shareDescription}
 ${shareUrl}`);
-            shareNativeBtn.textContent = 'Skopiowano';
-            window.setTimeout(() => { shareNativeBtn.textContent = 'Udostępnij'; }, 1800);
+            if (shareNativeLabel) shareNativeLabel.textContent = 'Skopiowano';
+            window.setTimeout(() => {
+              if (shareNativeLabel) shareNativeLabel.textContent = 'Udostępnij';
+            }, 1800);
           } catch (error) {
             window.prompt('Skopiuj link:', shareUrl);
           }
@@ -1115,13 +1133,18 @@ ${shareUrl}`);
 ${shareParams}
 ${shareDescription}
 ${shareUrl}`;
+          const copyLabel = copyLinkBtn.querySelector('span');
           try {
             await navigator.clipboard.writeText(shareText);
-            copyLinkBtn.textContent = 'Skopiowano';
-            window.setTimeout(() => { copyLinkBtn.textContent = 'Kopiuj link'; }, 1800);
+            if (copyLabel) copyLabel.textContent = 'Skopiowano';
+            window.setTimeout(() => {
+              if (copyLabel) copyLabel.textContent = 'Kopiuj link';
+            }, 1800);
           } catch (error) {
-            copyLinkBtn.textContent = 'Nie udało się';
-            window.setTimeout(() => { copyLinkBtn.textContent = 'Kopiuj link'; }, 1800);
+            if (copyLabel) copyLabel.textContent = 'Nie udało się';
+            window.setTimeout(() => {
+              if (copyLabel) copyLabel.textContent = 'Kopiuj link';
+            }, 1800);
           }
         });
       }
@@ -1146,6 +1169,9 @@ ${shareUrl}`;
       console.assert(!!document.getElementById('share-facebook'), 'share facebook button should exist');
       console.assert(!!document.getElementById('share-whatsapp'), 'share whatsapp button should exist');
       console.assert(!!document.getElementById('copyLinkBtn'), 'copy link button should exist');
+      console.assert(shareFacebook && shareFacebook.href.includes('facebook.com/sharer/sharer.php'), 'facebook share should point to facebook sharer');
+      console.assert(shareFacebook && shareFacebook.href.includes(encodeURIComponent(shareUrl)), 'facebook share should contain property url');
+      console.assert(shareWhatsapp && shareWhatsapp.href.includes('wa.me/?text='), 'whatsapp share should point to whatsapp sharer');
     });
   </script>
 
