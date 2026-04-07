@@ -99,6 +99,7 @@
     h2{font-size:var(--h2-size)}
     h3{font-size:var(--h3-size)}
     p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;text-align:justify;text-justify:inter-word;hyphens:auto;word-break:break-word}
+    .project-card .card-body p,.why-item p,.step-card p,.location-card p,.faq-card p,.seo-article p{text-align:justify;text-justify:inter-word;hyphens:auto}
     .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
     iframe,video{max-width:100%;height:auto}
     .project-card,.category-card,.why-item,.step-card,.location-card,.faq-card,.hero-card,.section-card,.cta-box,.footer-card{min-width:0}
@@ -171,6 +172,7 @@
     .why-item,.step-card,.location-card,.faq-card{padding:28px;text-align:left}
     .project-card .card-body,.category-card .card-body{padding:24px 26px;text-align:left}
     .project-card .card-body{display:flex;flex-direction:column;gap:10px;height:100%}
+    .project-card .card-body p{margin-bottom:0;min-height:96px}
     .project-card,.category-card{color:inherit;position:relative;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
     .project-card{display:flex;flex-direction:column;height:100%}
     .project-card img{flex:0 0 auto}
@@ -239,8 +241,8 @@
 
     @media (max-width:768px){
       p{text-align:left;text-justify:auto;hyphens:none}
-      .why-item p,.step-card p,.location-card p,.faq-card p,.project-card p,.footer-copy,.seo-article p{text-align:left}
       .section-card > p,.cta-box > p,.center-text,.subtitle,.lead{text-align:center}
+      .why-item p,.step-card p,.location-card p,.faq-card p,.project-card .card-body p,.footer-copy,.seo-article p{text-align:justify;text-justify:inter-word;hyphens:auto}
       .topbar{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
       .topbar-inner{width:100%;grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
       .brand{justify-self:center;text-align:center}
@@ -268,6 +270,7 @@
       .subtitle,.lead,.center-text{font-size:15px;line-height:1.6}
       .contact-note{font-size:12px}
       .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{padding:20px}
+      .project-card .card-body p{min-height:auto}
       .breadcrumbs{gap:6px;font-size:12px}
       .breadcrumbs a{padding:7px 10px}
       .container{padding:0 10px}
@@ -531,23 +534,63 @@
   [
     {
       "href": "/pl/new-developments/bonalba-golf-hills/",
-      "image": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+      "image": "/pl/new-developments/bonalba-golf-hills/1.jpg",
+      "gallery": [
+        "/pl/new-developments/bonalba-golf-hills/2.jpg",
+        "/pl/new-developments/bonalba-golf-hills/3.jpg",
+        "/pl/new-developments/bonalba-golf-hills/4.jpg"
+      ],
       "alt": "Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury",
       "chip": "Premium · Golf & Lifestyle",
       "title": "Bonalba Golf Hills",
       "meta": "Mutxamel koło Alicante",
       "price": "280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje",
-      "desc": "Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego."
+      "desc": "Kameralna inwestycja premium w otoczeniu golfa i zieleni — idealna dla klientów szukających stylu życia, prywatności i stabilnego potencjału inwestycyjnego."
     },
     {
       "href": "/pl/new-developments/penthouse-torrevieja/",
-      "image": "https://raw.githubusercontent.com/oczernyszenko/Costa-Blanca-Invest/main/pl/new-developments/penthouse-torrevieja/image/IMG_0973.jpeg",
-      "alt": "Penthouse Torrevieja Centrum — nowa inwestycja w centrum miasta blisko plaży",
-      "chip": "🔥 Ostatnie mieszkanie w budynku · Centrum miasta",
-      "title": "Penthouse Torrevieja Centrum",
-      "meta": "Torrevieja · Costa Blanca Południe",
+      "image": "/pl/new-developments/torrevieja-penthouse/1.jpg",
+      "gallery": [
+        "/pl/new-developments/torrevieja-penthouse/2.jpg",
+        "/pl/new-developments/torrevieja-penthouse/3.jpg",
+        "/pl/new-developments/torrevieja-penthouse/4.jpg"
+      ],
+      "alt": "Penthouse 3 sypialnie w centrum Torrevieja — ostatnia jednostka",
+      "chip": "🔥 Ostatnia jednostka · Nowa inwestycja",
+      "title": "Penthouse w Torrevieja — 3 sypialnie",
+      "meta": "Torrevieja · centrum · odbiór: 2026",
       "price": "305 000 € · 134 m² · 3 sypialnie",
-      "desc": "Nowoczesny penthouse w centrum Torrevieja z dużą prywatną przestrzenią, zaledwie kilka minut od plaży i wszystkich usług — idealny jako inwestycja, second home lub ostatnia dostępna oferta w budynku."
+      "desc": "Penthouse z werandą i 71 m² solarium. 15 min do plaży, pełna infrastruktura w zasięgu spaceru — idealny do zamieszkania lub jako second home."
+    },
+    {
+      "href": "/pl/new-developments/maranon-38/",
+      "image": "/pl/new-developments/maranon/1.jpg",
+      "gallery": [
+        "/pl/new-developments/maranon/2.jpg",
+        "/pl/new-developments/maranon/3.jpg",
+        "/pl/new-developments/maranon/4.jpg"
+      ],
+      "alt": "Marañón — apartamenty 3 minuty od plaży w Torrevieja",
+      "chip": "Nowa inwestycja · 3 min do morza",
+      "title": "Marañón — apartamenty przy plaży",
+      "meta": "Torrevieja · Marañón · odbiór: Q2 2027",
+      "price": "od 133 000 € do 300 000 €",
+      "desc": "Nowoczesny 6-piętrowy budynek z 20 apartamentami, około 180 m od morza. Projekt pod życie, wakacje i inwestycję, z budową od Q2 2026 i zakończeniem w Q2 2027."
+    },
+    {
+      "href": "/pl/new-developments/monteagudo-17/",
+      "image": "/pl/new-developments/monteagudo/1.jpg",
+      "gallery": [
+        "/pl/new-developments/monteagudo/2.jpg",
+        "/pl/new-developments/monteagudo/3.jpg",
+        "/pl/new-developments/monteagudo/4.jpg"
+      ],
+      "alt": "Monteagudo — apartamenty w Torrevieja z planem ratalnym",
+      "chip": "Nowa inwestycja · Plan ratalny",
+      "title": "Monteagudo — apartamenty w Torrevieja",
+      "meta": "Torrevieja · Monteagudo · elastyczna płatność",
+      "price": "od 132 000 €",
+      "desc": "Dwa warianty zakupu: cena inwestorska przy pełnej płatności lub od 132 000 € w systemie ratalnym — 10 000 € zaliczki, 30% w ciągu miesiąca, 30% po 4–6 miesiącach, reszta u notariusza. W cenie: wykończenie, kuchnia, wyposażona łazienka, ogrzewanie podłogowe, klimatyzacja centralna, okna PVC i pełne instalacje."
     }
   ]
   </script>
