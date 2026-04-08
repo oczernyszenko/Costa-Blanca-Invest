@@ -331,7 +331,7 @@
               <span data-i18n="copy_link">Kopiuj link</span>
             </button>
           </div>
-          <p class="share-note"><span data-i18n="share_note_title">Maranon — inwestycja nad morzem</span><br><strong data-i18n="share_note_strong">od € 133 000</strong><br><span data-i18n="share_note_text">Torrevieja · 2–3 minuty od plaży · około 180 m od morza</span><br><span style="font-size:12px;opacity:.8;">Po wklejeniu linku pojawi się preview: zdjęcie główne, nazwa i zakres cen.</span></p>
+          <p class="share-note"><span data-i18n="share_note_title">Maranon — inwestycja nad morzem</span><br><strong data-i18n="share_note_strong">od € 133 000</strong><br><span data-i18n="share_note_text">Torrevieja · 2–3 minuty od plaży · około 180 m od morza</span><br><span style="font-size:12px;opacity:.8;">Po zmianie języka tekst zmienia się na tej samej stronie, a link pozostaje zawsze działający.</span></p>
         </div>
       </section>
     </div>
@@ -345,6 +345,10 @@
   </div>
 
   <script>
+    const LIVE_PATH = '/pl/new-developments/maranon/';
+    const LIVE_CATEGORY_PATH = '/pl/new-developments/';
+    const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
+
     const PROPERTY_DATA = {
       slug: 'maranon',
       images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
@@ -637,12 +641,12 @@
         document.documentElement.lang = t.lang;
         document.title = t.page_title;
         setAttr('meta[name="description"]', 'content', t.meta_description);
-        setAttr('link[rel="canonical"]', 'href', `https://costa-blanca-invest.com${t.path}`);
+        setAttr('link[rel="canonical"]', 'href', `https://costa-blanca-invest.com${LIVE_PATH}`);
         setAttr('link[rel="image_src"]', 'href', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[property="og:locale"]', 'content', t.locale);
         setAttr('meta[property="og:title"]', 'content', t.og_title);
         setAttr('meta[property="og:description"]', 'content', t.og_description);
-        setAttr('meta[property="og:url"]', 'content', `https://costa-blanca-invest.com${t.path}`);
+        setAttr('meta[property="og:url"]', 'content', `https://costa-blanca-invest.com${LIVE_PATH}`);
         setAttr('meta[property="og:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[property="og:image:url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[property="og:image:secure_url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
@@ -651,7 +655,7 @@
         setAttr('meta[name="twitter:description"]', 'content', t.og_description);
         setAttr('meta[name="twitter:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
-        setAttr('meta[name="twitter:url"]', 'content', `https://costa-blanca-invest.com${t.path}`);
+        setAttr('meta[name="twitter:url"]', 'content', `https://costa-blanca-invest.com${LIVE_PATH}`);
         setAttr('link[rel="preload"][as="image"]', 'href', `${imageBase()}1.jpg`);
       }
 
@@ -666,7 +670,7 @@
         const backLink = document.getElementById('backLink');
         if (backLink) {
           backLink.textContent = t.back_link;
-          backLink.setAttribute('href', `/${currentLang}/new-developments/`);
+          backLink.setAttribute('href', LIVE_CATEGORY_PATH);
         }
 
         const formName = document.getElementById('formName');
@@ -719,7 +723,7 @@
             {
               '@type': 'WebPage',
               name: t.og_title,
-              url: `https://costa-blanca-invest.com${t.path}`,
+              url: `https://costa-blanca-invest.com${LIVE_PATH}`,
               description: t.meta_description,
               inLanguage: t.lang,
               primaryImageOfPage: {
@@ -750,14 +754,31 @@
         }
       }
 
-      function applyLanguage(lang) {
-        currentLang = lang;
-        const t = PROPERTY_DATA.translations[lang] || PROPERTY_DATA.translations.pl;
+      function updateUrlLang(lang) {
+        const url = new URL(window.location.href);
+        if (lang === 'pl') {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', lang);
+        }
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+
+      function getInitialLang() {
+        const url = new URL(window.location.href);
+        const lang = url.searchParams.get('lang');
+        return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      }
+
+      function applyLanguage(lang, syncUrl = true) {
+        currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        const t = PROPERTY_DATA.translations[currentLang] || PROPERTY_DATA.translations.pl;
         applyMeta(t);
         applyText(t);
         applyImages();
         applyShareAndSchema(t);
-        langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === lang));
+        langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+        if (syncUrl) updateUrlLang(currentLang);
       }
 
       function openMediaLightbox(src) {
@@ -790,7 +811,7 @@
       if (copyLinkBtn) {
         copyLinkBtn.addEventListener('click', async () => {
           const t = PROPERTY_DATA.translations[currentLang];
-          const shareUrl = `https://costa-blanca-invest.com${t.path}`;
+          const shareUrl = `https://costa-blanca-invest.com${LIVE_PATH}`;
           const shareText = `${shareUrl}
 
 🏡 ${t.og_title}
@@ -835,12 +856,12 @@
       langButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
           if (btn.dataset.lang !== currentLang) {
-            applyLanguage(btn.dataset.lang);
+            applyLanguage(btn.dataset.lang, true);
           }
         });
       });
 
-      applyLanguage('pl');
+      applyLanguage(getInitialLang(), false);
     });
   </script>
 
