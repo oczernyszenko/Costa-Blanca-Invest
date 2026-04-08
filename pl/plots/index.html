@@ -963,7 +963,7 @@
 
       <section class="section-card fade-up" id="plots-list">
         <h2>Wybrane działki Costa Blanca i plots for sale Alicante Spain</h2>
-        <p class="center-text">Każda karta może automatycznie pobierać unikalny tekst SEO z własnej strony oferty — bez ręcznego przepisywania opisów.</p>
+        <p class="center-text">Każda karta prowadzi do osobnej strony oferty w katalogu https://costa-blanca-invest.com/pl/plots/ i może mieć własny unikalny opis SEO.</p>
         <div class="plots-grid" id="plotsGrid"></div>
       </section>
 
@@ -1194,118 +1194,37 @@
       let accumulatedUp = 0;
       let accumulatedDown = 0;
 
+      const PLOTS_BASE_URL = 'https://costa-blanca-invest.com/pl/plots';
+
       const plots = [
         {
-          href: 'https://costa-blanca-invest.com/pl/plots/santabarbara/',
+          href: `${PLOTS_BASE_URL}/santabarbara/`,
           image: '/pl/plots/images/plots-hero.jpg',
           alt: 'Działka Santa Barbara na Costa Blanca',
           chip: 'Premium Plot',
-          title: 'Santa Barbara',
-          meta: 'Costa Blanca',
-          price: 'Zobacz ofertę',
-          desc: '',
-          linkText: 'Zobacz działkę →'
+          title: 'Aparthotel Alicante przy Santa Bárbara',
+          meta: 'Alicante · Santa Bárbara · 6 apartamentów',
+          price: '€ 390 000 · ready to build',
+          desc: 'Gotowy projekt inwestycyjny pod aparthotel z zatwierdzoną licencją na 6 apartamentów turystycznych. Top lokalizacja przy Santa Bárbara w Alicante, komplet dokumentów i możliwość rozpoczęcia budowy od razu.',
+          linkText: 'Zobacz projekt →'
         }
       ];
 
-      const escapeHtml = (value) => String(value || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-
-      const truncateText = (text, maxLength = 190) => {
-        const normalized = String(text || '').replace(/\s+/g, ' ').trim();
-
-        if (normalized.length <= maxLength) {
-          return normalized;
-        }
-
-        return `$$\{normalized.slice(0, maxLength).trimEnd()}…`;
-      };
-
-      const extractSeoDescription = (doc) => {
-        const selectors = [
-          'meta[name="description"]',
-          'meta[property="og:description"]',
-          'meta[name="twitter:description"]'
-        ];
-
-        for (const selector of selectors) {
-          const value = doc.querySelector(selector)?.getAttribute('content')?.trim();
-
-          if (value) {
-            return value;
-          }
-        }
-
-        const firstParagraph = Array.from(doc.querySelectorAll('p'))
-          .map((paragraph) => paragraph.textContent.trim())
-          .find((text) => text.length > 80);
-
-        return firstParagraph || '';
-      };
-
-      const extractSeoTitle = (doc) => {
-        const ogTitle = doc.querySelector('meta[property="og:title"]')?.getAttribute('content')?.trim();
-        const h1 = doc.querySelector('h1')?.textContent?.trim();
-        const title = doc.title?.trim();
-
-        return ogTitle || h1 || title || '';
-      };
-
-      const extractSeoImage = (doc) => {
-        return doc.querySelector('meta[property="og:image"]')?.getAttribute('content')?.trim() || '';
-      };
-
-      const renderPlots = (items) => {
-        if (!plotsGrid) {
-          return;
-        }
-
-        plotsGrid.innerHTML = items.map((plot) => `
-          <a href="$$\{escapeHtml(plot.href)}" class="plot-card" aria-label="$$\{escapeHtml(plot.alt)}">
-            <img src="$$\{escapeHtml(plot.image)}" alt="$$\{escapeHtml(plot.alt)}" loading="lazy" decoding="async">
+      if (plotsGrid) {
+        plotsGrid.innerHTML = plots.map((plot) => `
+          <a href="${plot.href}" class="plot-card" aria-label="${plot.alt}">
+            <img src="${plot.image}" alt="${plot.alt}" loading="lazy" decoding="async">
             <div class="card-body">
-              <div class="chip">$$\{escapeHtml(plot.chip)}</div>
-              <h3>$$\{escapeHtml(plot.title)}</h3>
-              <div class="card-meta">$$\{escapeHtml(plot.meta)}</div>
-              <div class="card-price">$$\{escapeHtml(plot.price)}</div>
-              <p>$$\{escapeHtml(plot.desc || 'Opis oferty ładuje się automatycznie...')}</p>
-              <div class="card-link">$$\{escapeHtml(plot.linkText)}</div>
+              <div class="chip">${plot.chip}</div>
+              <h3>${plot.title}</h3>
+              <div class="card-meta">${plot.meta}</div>
+              <div class="card-price">${plot.price}</div>
+              <p>${plot.desc}</p>
+              <div class="card-link">${plot.linkText}</div>
             </div>
           </a>
         `).join('');
-      };
-
-      const enrichPlotsFromSeo = async () => {
-        const updatedPlots = await Promise.all(
-          plots.map(async (plot) => {
-            try {
-              const response = await fetch(plot.href, {
-                method: 'GET',
-                headers: {
-                  Accept: 'text/html'
-                }
-              });
-
-              if (!response.ok) {
-                throw new Error(`HTTP $$\{response.status}`);
-              }
-
-              const html = await response.text();
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, 'text/html');
-
-              const seoDescription = extractSeoDescription(doc);
-              const seoTitle = extractSeoTitle(doc);
-              const seoImage = extractSeoImage(doc);
-
-              return {
-                ...plot,
-                title: seoTitle || plot.title,
-                image: seoImage || plot
+      }
 
       if (shareFacebook) {
         shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
