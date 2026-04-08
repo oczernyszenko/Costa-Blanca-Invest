@@ -76,9 +76,9 @@
     .page{padding:24px 0 80px}
     .top-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap;margin-bottom:20px}
     .lang-switcher{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin:0}
-    .lang-btn{width:38px;height:38px;border-radius:50%;border:none;font-size:12px;font-weight:700;cursor:pointer;background:linear-gradient(145deg,#e6c27a,#cfa75a);color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.08), inset 0 2px 4px rgba(255,255,255,.4);transition:all .2s ease}
+    .lang-btn{width:38px;height:38px;border-radius:50%;border:none;font-size:12px;font-weight:700;cursor:pointer;background:linear-gradient(145deg,rgba(230,194,122,.92),rgba(207,167,90,.84));color:#fff;box-shadow:0 10px 24px rgba(15,23,42,.12), inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .2s ease}
     .lang-btn.active{background:#fff;color:var(--gold-dark);box-shadow:0 6px 16px rgba(0,0,0,.12)}
-    .back-link{position:sticky;top:14px;z-index:20;display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:0;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.34);box-shadow:0 8px 18px rgba(15,23,42,.04);color:var(--gold);font-size:15px;font-weight:800}
+    .back-link{position:sticky;top:14px;z-index:20;display:inline-flex;align-items:center;justify-content:center;gap:10px;margin:0;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.30),rgba(255,255,255,.12));border:1px solid rgba(255,255,255,.36);box-shadow:0 14px 28px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.30);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--gold-dark);font-size:15px;font-weight:800}
     .hero-card,.section-card,.cta-box{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--surface);border:1px solid rgba(255,255,255,.40);box-shadow:0 20px 50px rgba(15,23,42,.08),0 0 0 1px rgba(255,255,255,.14) inset}
     .hero-card{padding:20px}
     .section-card,.cta-box{margin-top:32px;padding:40px}
@@ -132,9 +132,15 @@
     .agent-meta{margin:0;color:var(--text-soft);font-size:14px;line-height:1.7}
     .cta-actions,.share-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
     .cta-actions{margin:4px 0 18px}
-    .btn,.share-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 28px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.28);font-size:15px;font-weight:800;cursor:pointer;overflow:hidden;color:#ffffff;background:linear-gradient(135deg,#183746,#234e63);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-    .btn-main{background:linear-gradient(135deg,#d9b56d,#b89245)}
-    .btn-light{background:linear-gradient(135deg,#25d366,#149e48)}
+    .btn,.share-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 28px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.28);font-size:15px;font-weight:800;cursor:pointer;overflow:hidden;color:#ffffff;background:linear-gradient(135deg,rgba(24,55,70,.88),rgba(35,78,99,.78));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .btn::before,.share-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.05));pointer-events:none}
+    .btn::after,.share-btn::after{content:"";position:absolute;top:-140%;left:-26%;width:48%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.38),rgba(255,255,255,0));opacity:0;pointer-events:none;transition:opacity .24s ease,transform .6s ease}
+    .btn > *, .share-btn > *{position:relative;z-index:1}
+    .btn:hover,.share-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(15,23,42,.14), inset 0 1px 0 rgba(255,255,255,.32)}
+    .btn:hover::after,.share-btn:hover::after{opacity:1;transform:translateX(170%) rotate(24deg)}
+    .btn-main{background:linear-gradient(135deg,rgba(217,181,109,.92),rgba(184,146,69,.84))}
+    .btn-light{background:linear-gradient(135deg,rgba(37,211,102,.92),rgba(20,158,72,.84))}
+    .share-btn{background:linear-gradient(135deg,rgba(24,55,70,.72),rgba(35,78,99,.58));color:#fff}
     .share-block{max-width:760px;margin:24px auto 0;padding-top:20px;border-top:1px solid rgba(15,23,42,.08)}
     .share-note{margin:12px 0 0;color:var(--muted);font-size:13px;text-align:center}
     .urgency-note{margin:0 0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(217,181,109,.12);border:1px solid rgba(217,181,109,.22);color:var(--gold-dark);font-size:13px;font-weight:800;letter-spacing:.02em}
@@ -159,7 +165,7 @@
   <main class="page">
     <div class="container">
       <div class="top-controls">
-        <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/new-developments/" translate="no">Zobacz inne oferty</a>
+        <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/new-developments/" translate="no"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><span>Zobacz inne oferty</span></a>
         <div class="lang-switcher" aria-label="Language switcher">
           <button class="lang-btn active" data-lang="pl">PL</button>
           <button class="lang-btn" data-lang="es">ES</button>
@@ -284,8 +290,8 @@
         </div>
 
         <div class="cta-actions">
-          <a class="btn btn-main" href="tel:+34604158859" aria-label="Call"><span data-i18n="call_btn">📞 Zadzwoń</span></a>
-          <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859?text=Interesuje%20mnie%20projekt%20aparthotelu%20przy%20Santa%20B%C3%A1rbara%20w%20Alicante" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span data-i18n="wa_btn">💬 WhatsApp</span></a>
+          <a class="btn btn-main" href="tel:+34604158859" aria-label="Call"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.73 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.48a2 2 0 0 1 2.11-.45c.82.36 1.7.61 2.6.73A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="call_btn">Zadzwoń</span></a>
+          <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859?text=Interesuje%20mnie%20projekt%20aparthotelu%20przy%20Santa%20B%C3%A1rbara%20w%20Alicante" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-4.2-7.6L21 3l-1.4 4.2A9 9 0 0 1 21 12z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg><span data-i18n="wa_btn">WhatsApp</span></a>
         </div>
 
         <form class="contact-form" id="contact-form" action="#" method="post">
@@ -295,12 +301,12 @@
           </div>
           <input type="email" name="email" id="formEmail" placeholder="Email">
           <textarea name="message" id="formMessage" placeholder="Napisz, czy interesuje Cię zakup inwestycyjny, budowa lub model aparthotelowy"></textarea>
-          <button class="btn btn-main" type="submit"><span data-i18n="form_submit">Wyślij przez WhatsApp</span></button>
+          <button class="btn btn-main" type="submit"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.56 0 .26 5.29.26 11.8c0 2.08.54 4.1 1.58 5.88L0 24l6.52-1.71a11.8 11.8 0 0 0 5.55 1.41h.01c6.5 0 11.8-5.3 11.8-11.8 0-3.15-1.23-6.1-3.36-8.42Zm-8.45 18.2h-.01a9.84 9.84 0 0 1-5-1.36l-.36-.21-3.87 1.01 1.03-3.77-.24-.39a9.8 9.8 0 0 1-1.5-5.17c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.96c0 5.43-4.42 9.85-9.85 9.85Z"/></svg><span data-i18n="form_submit">Wyślij przez WhatsApp</span></button>
         </form>
 
         <div class="share-block">
           <div class="share-actions" role="group" aria-label="Share">
-            <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span data-i18n="copy_link">Kopiuj link</span></button>
+            <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span data-i18n="copy_link">Kopiuj link</span></button>
           </div>
           <p class="share-note"><span data-i18n="share_note_title">Aparthotel Alicante przy Santa Bárbara</span><br><strong data-i18n="share_note_strong">€ 390 000 · ready to build</strong><br><span data-i18n="share_note_text">6 apartamentów · licencja · top lokalizacja w Alicante</span></p>
         </div>
@@ -333,7 +339,7 @@
         kicker:'ALICANTE · SANTA BÁRBARA · INVESTMENT PROJECT',
         hero_title:'Aparthotel Alicante',
         hero_subtext:'Projekt inwestycyjny pod aparthotel z licencją na 6 apartamentów turystycznych. Top lokalizacja przy Santa Bárbara i możliwość rozpoczęcia budowy od razu.',
-        hero_price_box_title:'ASKING PRICE', hero_price_value_1:'€390k', hero_price_sep:'→', hero_price_value_2:'BUILD NOW', hero_price_note:'6 apartamentów · licencja budowlana · projekt techniczny', hero_price_meta:'produkt dla inwestora / dewelopera',
+        hero_price_box_title:'ASKING PRICE', hero_price_value_1:'€390k', hero_price_sep:'→', hero_price_value_2:'BUILD NOW', hero_price_note:'6 apartamentów · licencja budowlana · projekt techniczny', hero_price_meta:'parter + 2 piętra + atyk',
         page_h1:'Projekt aparthotelu przy Santa Bárbara w Alicante', subtitle:'Hiszpania · Alicante · aparthotel / short-term rental', price_range:'€ 390 000', price_soft:'licencja zatwierdzona · 6 apartamentów · gotowość do budowy',
         kpi_1:'390 000', kpi_icon_2:'6', kpi_2:'apartamentów', kpi_icon_3:'3\+A', kpi_3:'3 kondygnacje + atyk',
         lead_1:'To gotowy projekt inwestycyjny w Alicante przygotowany pod aparthotel z 6 apartamentami turystycznymi. Dla inwestora oznacza to wejście w produkt z realną wartością deweloperską, a nie sam grunt bez koncepcji.',
@@ -380,6 +386,9 @@
       let currentLang = 'pl';
 
       function imageBase() { return `/pl/new-developments/${PROPERTY_DATA.slug}/`; }
+      function listingUrl(lang = currentLang) {
+        return `https://costa-blanca-invest.com${LIVE_PATH}${lang === 'pl' ? '' : `?lang=${lang}`}`;
+      }
       window.handleBrokenImage = function(img) {
         if (img.dataset.fallbackApplied === 'true') return;
         img.dataset.fallbackApplied = 'true';
@@ -412,33 +421,48 @@
           const key = el.dataset.i18n;
           if (t[key]) el.textContent = t[key];
         });
-        if (backLink) { backLink.textContent = t.back_link; backLink.setAttribute('href', `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`); }
+        if (backLink) {
+          backLink.textContent = t.back_link;
+          backLink.setAttribute('href', `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`);
+        }
         document.getElementById('formName').placeholder = t.form_name;
         document.getElementById('formPhone').placeholder = t.form_phone;
         document.getElementById('formEmail').placeholder = t.form_email;
         document.getElementById('formMessage').placeholder = t.form_message;
+        const callBtn = document.querySelector('.btn.btn-main span[data-i18n="call_btn"]');
+        const waBtnLabel = document.querySelector('#waBtn span[data-i18n="wa_btn"]');
+        if (callBtn) callBtn.textContent = t.call_btn;
+        if (waBtnLabel) waBtnLabel.textContent = t.wa_btn;
       }
       function applyImages() {
         const base = imageBase();
         const heroImage = document.getElementById('heroImage');
-        if (heroImage) { heroImage.src = `${base}${PROPERTY_DATA.images[0]}`; heroImage.alt = 'aparthotel santa barbara hero'; }
+        const currentText = TRANSLATIONS[currentLang];
+        if (heroImage) {
+          heroImage.src = `${base}${PROPERTY_DATA.images[0]}`;
+          heroImage.alt = currentText.og_image_alt;
+        }
         mediaTriggers.forEach((item, index) => {
           const fileName = PROPERTY_DATA.images[index] || PROPERTY_DATA.images[0];
           const src = `${base}${fileName}`;
           item.dataset.mediaSrc = src;
           const img = item.querySelector('img');
-          if (img) img.src = src;
+          if (img) {
+            img.src = src;
+            img.alt = index === 0 ? currentText.og_image_alt : `${currentText.hero_title} ${index + 1}`;
+          }
         });
       }
       function applyShareAndSchema(t) {
         const waBtn = document.getElementById('waBtn');
         if (waBtn) waBtn.setAttribute('href', `https://wa.me/34604158859?text=${encodeURIComponent(t.wa_interest_text)}`);
+        const canonicalUrl = listingUrl(currentLang);
         const schema = {
           '@context': 'https://schema.org',
           '@graph': [
             { '@type': 'Organization', name: 'Costa Blanca Invest', url: 'https://costa-blanca-invest.com/', email: PROPERTY_DATA.contact_email, telephone: PROPERTY_DATA.contact_phone },
-            { '@type': 'WebPage', name: t.og_title, url: `https://costa-blanca-invest.com${LIVE_PATH}`, description: t.meta_description, inLanguage: t.lang, primaryImageOfPage: { '@type': 'ImageObject', url: `https://costa-blanca-invest.com${imageBase()}1.jpg` } },
-            { '@type': 'Product', name: t.og_title, description: t.schema_product_description, image: [`https://costa-blanca-invest.com${imageBase()}1.jpg`], brand: { '@type': 'Brand', name: 'Costa Blanca Invest' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price: t.schema_price_from, availability: 'https://schema.org/InStock', url: `https://costa-blanca-invest.com${LIVE_PATH}` } }
+            { '@type': 'WebPage', name: t.og_title, url: canonicalUrl, description: t.meta_description, inLanguage: t.lang, primaryImageOfPage: { '@type': 'ImageObject', url: `https://costa-blanca-invest.com${imageBase()}1.jpg` } },
+            { '@type': 'Product', name: t.og_title, description: t.schema_product_description, image: [`https://costa-blanca-invest.com${imageBase()}1.jpg`,`https://costa-blanca-invest.com${imageBase()}2.png`], brand: { '@type': 'Brand', name: 'Costa Blanca Invest' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price: t.schema_price_from, availability: 'https://schema.org/InStock', url: canonicalUrl } }
           ]
         };
         document.getElementById('schemaJson').textContent = JSON.stringify(schema, null, 2);
@@ -452,7 +476,10 @@
       function applyLanguage(lang, syncUrl = true) {
         currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
         const t = TRANSLATIONS[currentLang];
-        applyMeta(t); applyText(t); applyImages(); applyShareAndSchema(t);
+        applyMeta(t);
+        applyText(t);
+        applyImages();
+        applyShareAndSchema(t);
         langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
         if (syncUrl) updateUrlLang(currentLang);
       }
@@ -477,9 +504,32 @@
       if (copyLinkBtn) {
         copyLinkBtn.addEventListener('click', async () => {
           const t = TRANSLATIONS[currentLang];
-          const shareUrl = `https://costa-blanca-invest.com${LIVE_PATH}${currentLang === 'pl' ? '' : `?lang=${currentLang}`}`;
-          const shareText = `${shareUrl}\n\n🏡 ${t.og_title}\n💰 ${t.price_range}\n📍 ${t.share_params}\n✨ ${t.share_description}`;
-          try { await navigator.clipboard.writeText(shareText); } catch (error) { window.prompt('Copy this text:', shareText); }
+          const shareUrl = listingUrl(currentLang);
+          const shareText = `${shareUrl}
+
+🏡 ${t.og_title}
+💰 ${t.price_range}
+📍 ${t.share_params}
+✨ ${t.share_description}`;
+          const label = copyLinkBtn.querySelector('span') || copyLinkBtn;
+          const copiedText = currentLang === 'ru' ? 'Скопировано' : currentLang === 'es' ? 'Copiado' : currentLang === 'en' ? 'Copied' : 'Skopiowano';
+          const promptText = currentLang === 'ru' ? 'Скопируйте текст:' : currentLang === 'es' ? 'Copia este texto:' : currentLang === 'en' ? 'Copy this text:' : 'Skopiuj ten tekst:';
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(shareText);
+            } else {
+              throw new Error('Clipboard unavailable');
+            }
+            label.textContent = copiedText;
+            window.setTimeout(() => {
+              label.textContent = t.copy_link;
+            }, 1800);
+          } catch (error) {
+            window.prompt(promptText, shareText);
+            window.setTimeout(() => {
+              label.textContent = t.copy_link;
+            }, 300);
+          }
         });
       }
       if (contactForm) {
@@ -497,7 +547,10 @@
           if (!opened) window.location.href = url;
         });
       }
-      if (backLink) backLink.addEventListener('click', (event) => { event.preventDefault(); window.location.href = `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`; });
+      if (backLink) backLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`;
+      });
       langButtons.forEach((btn) => btn.addEventListener('click', () => { if (btn.dataset.lang !== currentLang) applyLanguage(btn.dataset.lang, true); }));
       applyLanguage(getInitialLang(), false);
     });
