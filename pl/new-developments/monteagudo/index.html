@@ -58,22 +58,13 @@
       --text-soft:#62707c;
       --muted:#8e9aa4;
       --surface:rgba(255,255,255,.88);
-      --surface-strong:rgba(255,255,255,.96);
       --shadow-soft:0 14px 34px rgba(15,23,42,.06);
-      --shadow-lux:0 28px 90px rgba(15,23,42,.12);
       --radius:28px;
       --container:1280px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,Arial,sans-serif;
-      color:var(--text);
-      background:radial-gradient(circle at top left,rgba(217,181,109,.12),transparent 24%),radial-gradient(circle at top right,rgba(158,199,212,.14),transparent 28%),linear-gradient(180deg,#fdfbf8 0%,var(--bg) 52%,#fff 100%);
-      line-height:1.72;
-      overflow-x:hidden;
-    }
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(217,181,109,.12),transparent 24%),radial-gradient(circle at top right,rgba(158,199,212,.14),transparent 28%),linear-gradient(180deg,#fdfbf8 0%,var(--bg) 52%,#fff 100%);line-height:1.72;overflow-x:hidden}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     h1,h2,h3{margin:0 0 14px;line-height:1.08}
@@ -87,90 +78,28 @@
     .lang-switcher{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin:0}
     .lang-btn{width:38px;height:38px;border-radius:50%;border:none;font-size:12px;font-weight:700;cursor:pointer;background:linear-gradient(145deg,#e6c27a,#cfa75a);color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.08), inset 0 2px 4px rgba(255,255,255,.4);transition:all .2s ease}
     .lang-btn.active{background:#fff;color:var(--gold-dark);box-shadow:0 6px 16px rgba(0,0,0,.12)}
-    .lang-btn:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12),0 0 10px rgba(217,181,109,.4)}
-    .back-link{position:sticky;top:14px;z-index:20;display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:0;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.34);box-shadow:0 8px 18px rgba(15,23,42,.04);color:var(--gold);font-size:15px;font-weight:800;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;overflow:hidden;isolation:isolate}
-    .back-link::after{content:"";position:absolute;top:-120%;left:-30%;width:42%;height:280%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;transition:opacity .22s ease,transform .55s ease;pointer-events:none}
-    .back-link:hover{transform:translateY(-1px);background:rgba(255,255,255,.58);box-shadow:0 12px 24px rgba(15,23,42,.06),0 0 18px rgba(217,181,109,.16);color:var(--gold-dark)}
-    .back-link:hover::after{opacity:1;transform:translateX(165%) rotate(24deg)}
+    .back-link{position:sticky;top:14px;z-index:20;display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:0;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.34);box-shadow:0 8px 18px rgba(15,23,42,.04);color:var(--gold);font-size:15px;font-weight:800;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;overflow:hidden}
     .hero-card,.section-card,.cta-box{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--surface);border:1px solid rgba(255,255,255,.40);box-shadow:0 20px 50px rgba(15,23,42,.08),0 0 0 1px rgba(255,255,255,.14) inset}
     .hero-card{padding:20px}
     .section-card,.cta-box{margin-top:32px;padding:40px}
     .hero-media{position:relative;overflow:hidden;min-height:700px;border-radius:26px;background:#e7edf1;box-shadow:0 30px 90px rgba(15,23,42,.22);cursor:zoom-in}
     .hero-media::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,20,.06) 0%,rgba(8,14,20,.14) 34%,rgba(8,14,20,.62) 100%);z-index:1;pointer-events:none}
-    .hero-media::after{content:"";position:absolute;inset:-20%;background:linear-gradient(120deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.16) 50%,rgba(255,255,255,0) 62%);transform:translateX(-120%) rotate(8deg);opacity:0;transition:transform .9s ease,opacity .3s ease;pointer-events:none;z-index:2}
-    .hero-media:hover::after{opacity:1;transform:translateX(120%) rotate(8deg)}
     .hero-media img{width:100%;height:100%;min-height:700px;object-fit:cover}
     .hero-badge{position:absolute;top:22px;right:22px;z-index:3;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.22);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,0,0,.10)}
     .hero-overlay{position:absolute;left:24px;right:24px;bottom:24px;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
     .hero-copy{max-width:760px}
-    .hero-kicker{margin-bottom:10px;color:rgba(255,255,255,.82);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+    .hero-kicker{margin-bottom:10px;color:rgba(255,255,255,.82);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16)}
     .hero-display{margin:0 0 14px;color:#fff;font-size:clamp(40px,5.6vw,78px);font-weight:900;letter-spacing:-.05em;line-height:.94;text-shadow:0 16px 34px rgba(0,0,0,.24);max-width:10ch}
     .hero-sub{max-width:620px;color:rgba(255,255,255,.9);font-size:15px}
-    .hero-price-box{
-      min-width:320px;
-      max-width:360px;
-      padding:20px 22px;
-      border-radius:26px;
-      background:linear-gradient(180deg,rgba(255,255,255,.26) 0%,rgba(255,255,255,.12) 100%);
-      border:1px solid rgba(255,255,255,.24);
-      color:#fff;
-      box-shadow:0 18px 40px rgba(0,0,0,.16),0 0 0 1px rgba(255,255,255,.08) inset;
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-      text-align:left;
-    }
+    .hero-price-box{min-width:320px;max-width:360px;padding:20px 22px;border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.26) 0%,rgba(255,255,255,.12) 100%);border:1px solid rgba(255,255,255,.24);color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);text-align:left}
     .hero-price-box small{display:block;margin-bottom:10px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.78;font-weight:800}
-    .hero-price-range{
-      display:flex;
-      align-items:flex-end;
-      gap:10px;
-      margin:4px 0 10px;
-      flex-wrap:wrap;
-    }
-    .hero-price-from,
-    .hero-price-to{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:124px;
-      padding:14px 16px 12px;
-      border-radius:22px;
-      background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08));
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 10px 24px rgba(0,0,0,.10);
-      color:#fff8d6;
-      font-size:clamp(24px,3vw,36px);
-      line-height:1;
-      font-weight:900;
-      letter-spacing:-.05em;
-      text-shadow:0 4px 16px rgba(0,0,0,.18);
-    }
-    .hero-price-sep{
-      font-size:20px;
-      font-weight:900;
-      color:#fff;
-      opacity:.92;
-      padding-bottom:8px;
-    }
-    .hero-price-note{
-      display:block;
-      margin-top:6px;
-      font-size:13px;
-      line-height:1.5;
-      color:rgba(255,255,255,.96);
-      font-weight:700;
-    }
-    .hero-price-meta{
-      display:block;
-      margin-top:8px;
-      font-size:12px;
-      line-height:1.55;
-      opacity:.94;
-    }
+    .hero-price-range{display:flex;align-items:flex-end;gap:10px;margin:4px 0 10px;flex-wrap:wrap}
+    .hero-price-from,.hero-price-to{display:inline-flex;align-items:center;justify-content:center;min-width:124px;padding:14px 16px 12px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.18);color:#fff8d6;font-size:clamp(24px,3vw,36px);line-height:1;font-weight:900;letter-spacing:-.05em}
+    .hero-price-sep{font-size:20px;font-weight:900;color:#fff;opacity:.92;padding-bottom:8px}
+    .hero-price-note{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.96);font-weight:700}
+    .hero-price-meta{display:block;margin-top:8px;font-size:12px;line-height:1.55;opacity:.94}
     .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
-    .gallery-item{position:relative;overflow:hidden;height:220px;border-radius:22px;background:#edf1f4;border:1px solid rgba(255,255,255,.34);box-shadow:0 20px 44px rgba(15,23,42,.10);cursor:zoom-in;transition:transform .32s ease,box-shadow .32s ease,filter .32s ease}
-    .gallery-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,28,0) 0%,rgba(10,20,28,.08) 100%);pointer-events:none}
-    .gallery-item:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 28px 56px rgba(15,23,42,.16);filter:saturate(1.04)}
+    .gallery-item{position:relative;overflow:hidden;height:220px;border-radius:22px;background:#edf1f4;border:1px solid rgba(255,255,255,.34);box-shadow:0 20px 44px rgba(15,23,42,.10);cursor:zoom-in}
     .gallery-item img{width:100%;height:100%;object-fit:cover;display:block}
     .content{margin-top:34px}
     .hero-title,.subtitle,.price,.price-soft{text-align:center}
@@ -180,7 +109,7 @@
     .price-soft{color:var(--text-soft);font-size:17px;font-weight:700;opacity:.88}
     .kpi-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 24px}
     .kpi{padding:24px 18px 20px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,#fbf5e9 100%);border:1px solid rgba(217,181,109,.20);box-shadow:0 14px 30px rgba(0,0,0,.04);text-align:center}
-    .kpi strong{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin:0 auto 10px;color:#fff;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff8d6 0%,#f5d27a 25%,#d9b56d 55%,#b89245 100%);box-shadow:inset 0 2px 4px rgba(255,255,255,.5),inset 0 -3px 8px rgba(120,80,20,.3),0 10px 20px rgba(185,140,60,.25);font-size:14px;font-weight:900}
+    .kpi strong{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin:0 auto 10px;color:#fff;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff8d6 0%,#f5d27a 25%,#d9b56d 55%,#b89245 100%);font-size:14px;font-weight:900}
     .kpi .value{color:var(--primary);font-size:clamp(18px,2.4vw,24px);font-weight:900;letter-spacing:-.02em}
     .lead{font-size:16px;line-height:1.82;text-align:justify;text-justify:inter-word;hyphens:auto}
     .params-title{margin:34px 0 10px;color:var(--primary);font-size:24px;text-align:center}
@@ -189,8 +118,7 @@
     .param .label{color:var(--muted);font-size:13px;font-weight:600;margin-right:6px}
     .param .value{margin-right:14px;color:var(--primary);font-size:16px;font-weight:800}
     .why-grid,.audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
-    .why-item,.audience-card{padding:22px 20px;border-radius:22px;border:1px solid rgba(217,181,109,.18);background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(250,246,238,.92));box-shadow:0 10px 24px rgba(15,23,42,.05);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-    .why-item:hover,.audience-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(15,23,42,.08);border-color:rgba(217,181,109,.28)}
+    .why-item,.audience-card{padding:22px 20px;border-radius:22px;border:1px solid rgba(217,181,109,.18);background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(250,246,238,.92));box-shadow:0 10px 24px rgba(15,23,42,.05)}
     .why-item strong,.audience-card strong{display:block;margin-bottom:8px;color:var(--primary);font-size:17px;line-height:1.3}
     .why-item p,.audience-card p{margin:0;line-height:1.65;font-size:14px}
     .section-card h2,.cta-box h2{position:relative;padding-bottom:12px;color:var(--primary);font-size:clamp(30px,4vw,42px);letter-spacing:-.03em}
@@ -203,25 +131,21 @@
     .agent-meta{margin:0;color:var(--text-soft);font-size:14px;line-height:1.7}
     .cta-actions,.share-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
     .cta-actions{margin:4px 0 18px}
-    .btn,.share-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 22px rgba(15,23,42,.08);font-size:15px;font-weight:800;transition:transform .20s ease,box-shadow .20s ease,filter .20s ease;cursor:pointer;overflow:hidden;isolation:isolate;background:rgba(255,255,255,.92);color:var(--primary)}
-    .btn::before,.share-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,.06));opacity:.86;pointer-events:none;z-index:0}
-    .btn::after,.share-btn::after{content:"";position:absolute;top:-140%;left:-30%;width:52%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;pointer-events:none;z-index:1;transition:opacity .24s ease,transform .55s ease}
-    .btn>*,.share-btn>*{position:relative;z-index:2}
-    .btn:hover,.share-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(15,23,42,.14),0 0 18px rgba(217,181,109,.12);filter:saturate(1.04)}
-    .btn:hover::after,.share-btn:hover::after{opacity:1;transform:translateX(150%) rotate(24deg)}
-    .btn-main{color:#fff;background:linear-gradient(135deg,#e0be7a,var(--gold-dark));box-shadow:0 16px 36px rgba(184,146,69,.24),0 0 0 1px rgba(255,255,255,.08) inset}
-    .btn-light,.share-btn-whatsapp{color:#fff;background:linear-gradient(135deg,rgba(37,211,102,.92),rgba(20,158,72,.98));box-shadow:0 14px 34px rgba(37,211,102,.22),0 0 0 1px rgba(255,255,255,.08) inset}
-    .share-btn-facebook{color:#fff;background:linear-gradient(135deg,#1877f2,#0f5fd1);box-shadow:0 14px 34px rgba(24,119,242,.22),0 0 0 1px rgba(255,255,255,.08) inset}
+    .btn,.share-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 28px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.28);font-size:15px;font-weight:800;cursor:pointer;overflow:hidden;color:#ffffff;background:linear-gradient(135deg,#183746,#234e63);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease}
+    .btn::before,.share-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));pointer-events:none}
+    .btn::after,.share-btn::after{content:"";position:absolute;top:-120%;left:-25%;width:42%;height:260%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.34),rgba(255,255,255,0));opacity:0;transition:opacity .24s ease, transform .55s ease;pointer-events:none}
+    .btn>span,.share-btn>span{position:relative;z-index:1}
+    .btn:hover,.share-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(15,23,42,.14), inset 0 1px 0 rgba(255,255,255,.34)}
+    .btn:hover::after,.share-btn:hover::after{opacity:1;transform:translateX(180%) rotate(24deg)}
+    .btn-main{background:linear-gradient(135deg,#d9b56d,#b89245);border-color:rgba(255,255,255,.6);box-shadow:0 16px 36px rgba(184,146,69,.35), inset 0 1px 0 rgba(255,255,255,.35)}
+    .btn-light{background:linear-gradient(135deg,#25d366,#149e48);border-color:rgba(255,255,255,.6);box-shadow:0 16px 36px rgba(37,211,102,.35), inset 0 1px 0 rgba(255,255,255,.35)}
     .share-block{max-width:760px;margin:24px auto 0;padding-top:20px;border-top:1px solid rgba(15,23,42,.08)}
-    .share-title{margin:0 0 12px;color:var(--primary);font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-align:center}
     .share-note{margin:12px 0 0;color:var(--muted);font-size:13px;text-align:center}
-    .share-actions .share-btn{min-width:160px;position:relative;z-index:1;touch-action:manipulation}
     .urgency-note{margin:0 0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(217,181,109,.12);border:1px solid rgba(217,181,109,.22);color:var(--gold-dark);font-size:13px;font-weight:800;letter-spacing:.02em}
     .contact-form{display:grid;gap:14px;margin-top:24px;text-align:left}
     .contact-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .contact-form input,.contact-form textarea{width:100%;padding:15px 16px;border-radius:18px;border:1px solid rgba(31,111,133,.12);background:rgba(255,255,255,.82);color:var(--text);outline:none;font-family:inherit;font-size:16px;transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease}
+    .contact-form input,.contact-form textarea{width:100%;padding:15px 16px;border-radius:18px;border:1px solid rgba(31,111,133,.12);background:rgba(255,255,255,.82);color:var(--text);outline:none;font-family:inherit;font-size:16px}
     .contact-form textarea{min-height:130px;resize:vertical}
-    .contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(214,165,93,.14);transform:translateY(-1px)}
     .contact-form .btn-main{width:100%;min-height:54px;border:none}
     .media-lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,10,16,.94);z-index:9999}
     .media-lightbox.open{display:flex}
@@ -232,14 +156,14 @@
     @media (max-width:1100px){.hero-media,.hero-media img{min-height:520px}.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.why-grid,.audience-grid{grid-template-columns:1fr}}
     @media (max-width:980px){.hero-media,.hero-media img{min-height:430px}.hero-overlay{left:18px;right:18px;bottom:18px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:768px){body{padding-bottom:24px}.container{padding:0 14px}.page{padding:18px 0 50px}.section-card,.cta-box{padding:24px}.top-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}.lang-switcher{justify-content:flex-end;width:auto;margin:0;gap:8px}.hero-media,.hero-media img{min-height:340px}.hero-overlay{flex-direction:column;align-items:flex-start;gap:12px;left:14px;right:14px;bottom:14px}.hero-copy{max-width:100%;width:100%}.hero-display{font-size:clamp(28px,7vw,40px);max-width:100%}.hero-sub{font-size:13px}.hero-price-box{min-width:0;width:100%;max-width:100%;padding:16px 16px 14px}.hero-price-range{gap:8px}.hero-price-from,.hero-price-to{min-width:0;flex:1 1 0;font-size:clamp(22px,7vw,30px);padding:12px 14px 10px}.hero-price-sep{padding-bottom:6px;font-size:18px}.gallery-grid,.kpi-row,.contact-form-grid,.why-grid,.audience-grid{grid-template-columns:1fr}.cta-actions,.share-actions{flex-direction:column}.cta-actions .btn,.share-actions .share-btn,.contact-form .btn-main{width:100%}.agent-card{grid-template-columns:1fr;text-align:center;gap:16px}.agent-avatar{margin:0 auto;justify-self:center;order:-1}.agent-meta{text-align:center}.back-link{width:100%;justify-content:center;position:static;margin-bottom:0;padding:11px 14px;font-size:14px;white-space:nowrap}}
-    @media (max-width:560px){.container{padding:0 10px}.hero-card,.section-card,.cta-box{border-radius:18px}.hero-media,.hero-media img{min-height:280px}.hero-badge{top:12px;right:12px;min-height:36px;padding:0 11px;font-size:10px}.hero-overlay{left:12px;right:12px;bottom:12px;gap:12px}.hero-kicker{font-size:10px;letter-spacing:.18em;padding:9px 12px}.hero-display{font-size:clamp(26px,8vw,38px)}.hero-price-range{gap:6px}.hero-price-from,.hero-price-to{width:100%;font-size:28px;padding:12px 12px 10px}.hero-price-sep{width:100%;text-align:center;padding:0;font-size:16px} .hero-price-note,.hero-price-meta{text-align:left}.gallery-grid{grid-template-columns:1fr;gap:10px}.hero-title{font-size:clamp(30px,9vw,40px)}.price{font-size:24px}.lead,p{font-size:15px}.param{font-size:14px;line-height:1.8}.section-card,.cta-box,.why-item,.audience-card{padding:20px}.cta-actions,.share-actions{flex-direction:column}.cta-actions .btn,.share-actions .share-btn,.contact-form .btn-main{width:100%}.btn,.share-btn{min-height:52px}.subtitle,.price-soft,.share-note{font-size:14px}.top-controls{grid-template-columns:minmax(0,1fr) auto;gap:8px}.lang-btn{width:28px;height:28px;font-size:9px}.back-link{font-size:13px;padding:10px 12px}}
+    @media (max-width:560px){.container{padding:0 10px}.hero-card,.section-card,.cta-box{border-radius:18px}.hero-media,.hero-media img{min-height:280px}.hero-badge{top:12px;right:12px;min-height:36px;padding:0 11px;font-size:10px}.hero-overlay{left:12px;right:12px;bottom:12px;gap:12px}.hero-kicker{font-size:10px;letter-spacing:.18em;padding:9px 12px}.hero-display{font-size:clamp(26px,8vw,38px)}.hero-price-range{gap:6px}.hero-price-from,.hero-price-to{width:100%;font-size:28px;padding:12px 12px 10px}.hero-price-sep{width:100%;text-align:center;padding:0;font-size:16px}.gallery-grid{grid-template-columns:1fr;gap:10px}.hero-title{font-size:clamp(30px,9vw,40px)}.price{font-size:24px}.lead,p{font-size:15px}.param{font-size:14px;line-height:1.8}.section-card,.cta-box,.why-item,.audience-card{padding:20px}.cta-actions,.share-actions{flex-direction:column}.cta-actions .btn,.share-actions .share-btn,.contact-form .btn-main{width:100%}.btn,.share-btn{min-height:52px}.subtitle,.price-soft,.share-note{font-size:14px}.top-controls{grid-template-columns:minmax(0,1fr) auto;gap:8px}.lang-btn{width:28px;height:28px;font-size:9px}.back-link{font-size:13px;padding:10px 12px}}
   </style>
 </head>
 <body>
   <main class="page">
     <div class="container">
       <div class="top-controls">
-        <a class="back-link" id="backLink" href="/pl/new-developments/">Inne oferty</a>
+        <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/new-developments/" translate="no">Inne oferty</a>
         <div class="lang-switcher" aria-label="Language switcher">
           <button class="lang-btn active" data-lang="pl">PL</button>
           <button class="lang-btn" data-lang="es">ES</button>
@@ -251,19 +175,19 @@
       <section class="hero-card">
         <div class="hero-media" data-media-src="/pl/new-developments/monteagudo/1.jpg">
           <img id="heroImage" src="/pl/new-developments/monteagudo/1.jpg" alt="Nowa inwestycja w Torrevieja — główne zdjęcie projektu" fetchpriority="high" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
-          <div class="hero-badge" data-i18n="badge_text">Investor Deal · From € 104 000</div>
+          <div class="hero-badge" data-i18n="badge_text">Investor Deal · €104k / €132k</div>
           <div class="hero-overlay">
             <div class="hero-copy">
-              <div class="hero-kicker" data-i18n="kicker">Costa Blanca · Investment Project</div>
+              <div class="hero-kicker" data-i18n="kicker">Costa Blanca · Investor & Instalments</div>
               <div class="hero-display" data-i18n="hero_title">Nowa inwestycja Torrevieja</div>
               <p class="hero-sub" data-i18n="hero_subtext">Projekt z wejściem od € 104 000 dla inwestorów, opcją zakupu ratalnego od € 132 000 oraz ostatnim dostępnym lokalem premium do € 305 000.</p>
             </div>
             <div class="hero-price-box">
-              <small data-i18n="hero_price_box_title">Pricing</small>
+              <small data-i18n="hero_price_box_title">Kluczowe ceny</small>
               <div class="hero-price-range">
-                <span class="hero-price-from" data-i18n="hero_price_value_1">€104k<br><small style="font-size:10px;font-weight:700;opacity:.8">INWESTOR</small></span>
+                <span class="hero-price-from" data-i18n="hero_price_value_1">€104k</span>
                 <span class="hero-price-sep" data-i18n="hero_price_sep">→</span>
-                <span class="hero-price-to" data-i18n="hero_price_value_2">€132k<br><small style="font-size:10px;font-weight:700;opacity:.8">RATY</small></span>
+                <span class="hero-price-to" data-i18n="hero_price_value_2">€132k</span>
               </div>
               <span class="hero-price-note" data-i18n="hero_price_note">wejście inwestora (pełna płatność) · zakup w systemie ratalnym</span>
               <span class="hero-price-meta" data-i18n="hero_price_meta">pełna płatność dla inwestorów · system ratalny</span>
@@ -315,18 +239,9 @@
       <section class="section-card" id="investment-benefits">
         <h2 data-i18n="why_section_title">Dlaczego to mocny produkt inwestycyjny?</h2>
         <div class="why-grid">
-          <div class="why-item">
-            <strong data-i18n="why_title_1">💰 Niski próg wejścia</strong>
-            <p data-i18n="why_text_1">Cena od € 104 000 dla inwestorów pozwala wejść w nową inwestycję na Costa Blanca z relatywnie niskim kapitałem początkowym.</p>
-          </div>
-          <div class="why-item">
-            <strong data-i18n="why_title_2">📑 Dwa modele zakupu</strong>
-            <p data-i18n="why_text_2">Projekt oferuje zarówno pełną płatność dla inwestorów, jak i system ratalny dla klientów prywatnych — to zwiększa grupę odbiorców i płynność sprzedaży.</p>
-          </div>
-          <div class="why-item">
-            <strong data-i18n="why_title_3">🏡 Produkt wielowarstwowy</strong>
-            <p data-i18n="why_text_3">W projekcie są mniejsze lokale wejściowe oraz ostatni apartament premium, co pozwala komunikować inwestycję szeroko i skuteczniej sprzedawać cały budynek.</p>
-          </div>
+          <div class="why-item"><strong data-i18n="why_title_1">💰 Niski próg wejścia</strong><p data-i18n="why_text_1">Cena od € 104 000 dla inwestorów pozwala wejść w nową inwestycję na Costa Blanca z relatywnie niskim kapitałem początkowym.</p></div>
+          <div class="why-item"><strong data-i18n="why_title_2">📑 Dwa modele zakupu</strong><p data-i18n="why_text_2">Projekt oferuje zarówno pełną płatność dla inwestorów, jak i system ratalny dla klientów prywatnych — to zwiększa grupę odbiorców i płynność sprzedaży.</p></div>
+          <div class="why-item"><strong data-i18n="why_title_3">🏡 Produkt wielowarstwowy</strong><p data-i18n="why_text_3">W projekcie są mniejsze lokale wejściowe oraz ostatni apartament premium, co pozwala komunikować inwestycję szeroko i skuteczniej sprzedawać cały budynek.</p></div>
         </div>
       </section>
 
@@ -359,18 +274,9 @@
       <section class="section-card" id="audience-fit">
         <h2 data-i18n="audience_title">Dla kogo jest ten projekt?</h2>
         <div class="audience-grid">
-          <div class="audience-card">
-            <strong data-i18n="audience_card_1_title">💼 Dla inwestora</strong>
-            <p data-i18n="audience_card_1_text">Projekt daje niski próg wejścia, dwa modele zakupu i czytelne pozycjonowanie jako produkt inwestycyjny.</p>
-          </div>
-          <div class="audience-card">
-            <strong data-i18n="audience_card_2_title">🏠 Dla klienta prywatnego</strong>
-            <p data-i18n="audience_card_2_text">System ratalny i gotowe wykończenie zwiększają dostępność projektu dla osób kupujących mieszkanie dla siebie.</p>
-          </div>
-          <div class="audience-card">
-            <strong data-i18n="audience_card_3_title">📈 Dla wzrostu wartości</strong>
-            <p data-i18n="audience_card_3_text">Szeroki zakres cenowy i finalny apartament premium wzmacniają atrakcyjność projektu również przy dalszej odsprzedaży.</p>
-          </div>
+          <div class="audience-card"><strong data-i18n="audience_card_1_title">💼 Dla inwestora</strong><p data-i18n="audience_card_1_text">Projekt daje niski próg wejścia, dwa modele zakupu i czytelne pozycjonowanie jako produkt inwestycyjny.</p></div>
+          <div class="audience-card"><strong data-i18n="audience_card_2_title">🏠 Dla klienta prywatnego</strong><p data-i18n="audience_card_2_text">System ratalny i gotowe wykończenie zwiększają dostępność projektu dla osób kupujących mieszkanie dla siebie.</p></div>
+          <div class="audience-card"><strong data-i18n="audience_card_3_title">📈 Dla wzrostu wartości</strong><p data-i18n="audience_card_3_text">Szeroki zakres cenowy i finalny apartament premium wzmacniają atrakcyjność projektu również przy dalszej odsprzedaży.</p></div>
         </div>
       </section>
 
@@ -404,14 +310,10 @@
         </form>
 
         <div class="share-block">
-          <div class="share-title" data-i18n="share_title">Udostępnij ofertę</div>
           <div class="share-actions" role="group" aria-label="Udostępnianie oferty">
-            <button class="share-btn" type="button" id="share-native"><span data-i18n="share_native">Udostępnij</span></button>
-            <a class="share-btn share-btn-facebook" href="#" id="share-facebook" target="_blank" rel="noopener noreferrer" data-share-role="facebook"><span>Facebook</span></a>
-            <a class="share-btn share-btn-whatsapp" href="#" id="share-whatsapp" target="_blank" rel="noopener noreferrer" data-share-role="whatsapp"><span>WhatsApp</span></a>
             <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Kopiuj link do oferty"><span data-i18n="copy_link">Kopiuj link</span></button>
           </div>
-          <p class="share-note"><span data-i18n="share_note_title">Nowa inwestycja Torrevieja</span><br><strong data-i18n="share_note_strong">od € 104 000 dla inwestorów</strong><br><span data-i18n="share_note_text">od € 132 000 w ratach · studio · 1 dormitorio · apartament premium</span></p>
+          <p class="share-note"><span data-i18n="share_note_title">Nowa inwestycja Torrevieja</span><br><strong data-i18n="share_note_strong">od € 104 000 dla inwestorów</strong><br><span data-i18n="share_note_text">od € 132 000 w ratach · studio · 1 dormitorio · apartament premium</span><br><span style="font-size:12px;opacity:.8;">Po zmianie języka tekst zmienia się na tej samej stronie, a link pozostaje zawsze działający.</span></p>
         </div>
       </section>
     </div>
@@ -425,6 +327,10 @@
   </div>
 
   <script>
+    const LIVE_PATH = '/pl/new-developments/monteagudo/';
+    const LIVE_CATEGORY_PATH = '/pl/new-developments/';
+    const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
+
     const PROPERTY_DATA = {
       slug: 'monteagudo',
       images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'],
@@ -486,7 +392,7 @@
           agent_meta:'Bezpośredni kontakt, szybka selekcja ofert i pomoc w zakupie nieruchomości w Hiszpanii.',
           call_btn:'📞 Zadzwoń', wa_btn:'💬 WhatsApp',
           form_name:'Imię', form_phone:'Telefon', form_email:'Email', form_message:'Jakiej nieruchomości szukasz?', form_submit:'Wyślij przez WhatsApp',
-          share_title:'Udostępnij ofertę', share_native:'Udostępnij', copy_link:'Kopiuj link',
+          copy_link:'Kopiuj link',
           share_note_title:'Nowa inwestycja Torrevieja', share_note_strong:'od € 104 000 dla inwestorów', share_note_text:'od € 132 000 w ratach · studio · 1 dormitorio · apartament premium',
           share_params:'od € 104 000 dla inwestorów · od € 132 000 w ratach', share_description:'studio · 1 dormitorio · apartament premium · wykończenie w cenie',
           wa_interest_text:'Interesuje mnie nowa inwestycja w Torrevieja od €104 000', wa_form_prefix:'Nowe zapytanie ze strony Nowa inwestycja Torrevieja:',
@@ -494,16 +400,13 @@
           schema_price_from:'104000'
         },
         es: {
-          lang:'es', locale:'es_ES', path:'/es/new-developments/monteagudo/', page_title:'Nueva promoción en Torrevieja — desde €104.000 | apartamentos y apartamento premium', meta_description:'Nueva promoción en Torrevieja desde €104.000 para inversores y desde €132.000 en sistema de pagos. Unidades studio, 1 dormitorio y apartamento premium hasta €305.000.', og_title:'Nueva promoción en Torrevieja — desde €104.000', og_description:'Desde €104.000 para inversores · desde €132.000 en pagos · studio, 1 dormitorio y apartamento premium hasta €305.000', og_image_alt:'Nueva promoción Torrevieja — imagen del proyecto', back_link:'Otras ofertas', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'Nueva promoción Torrevieja', hero_subtext:'Proyecto con entrada desde €104.000 para inversores, opción de compra aplazada desde €132.000 y última unidad premium disponible hasta €305.000.',
-          hero_price_box_title:'Precios clave', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'entrada inversor (pago completo) · compra en pagos', hero_price_meta:'pago completo para inversores · sistema de pagos', page_h1:'Nueva promoción en Torrevieja — desde €104.000', subtitle:'España · Costa Blanca · oferta para inversores y clientes privados', price_range:'desde €104.000', price_soft:'pago completo para inversores · sistema de pagos desde €132.000', kpi_1:'104.000', kpi_icon_2:'10k', kpi_2:'reserva', kpi_icon_3:'30%', kpi_3:'+ 30% en pagos', lead_1:'La nueva promoción en Torrevieja ofrece un amplio rango de precios: desde €104.000 para pequeñas unidades tipo estudio hasta €305.000 por el último apartamento premium disponible. Esto permite entrar tanto a inversores como a clientes finales.', lead_2:'Dos modelos de compra: inversores con pago completo desde €104.000 y compra aplazada desde €132.000. La reserva es de €10.000, después 30% en un mes, 30% después de 4–6 meses y el saldo ante notario.', lead_3:'Este enfoque flexible de financiación aumenta notablemente la accesibilidad del proyecto y permite adaptar la estrategia de compra a inversión o uso propio.', params_title:'Parámetros de la promoción', param_label_price_investor:'Precio para inversores:', param_price_investor:'desde €104.000', param_label_price_installments:'Precio con pagos:', param_price_installments:'desde €132.000', param_label_booking:'Reserva:', param_booking:'€10.000', param_label_payment_1:'Pago 1:', param_payment_1:'30% en un mes', param_label_payment_2:'Pago 2:', param_payment_2:'30% después de 4–6 meses', param_label_balance:'Saldo:', param_balance:'ante notario', param_label_types:'Tipos de unidad:', param_types:'studio · 1 dormitorio · apartamento premium', why_section_title:'¿Por qué es un producto de inversión sólido?', why_title_1:'💰 Bajo umbral de entrada', why_text_1:'El precio desde €104.000 para inversores permite entrar en una nueva promoción en Costa Blanca con un capital inicial relativamente bajo.', why_title_2:'📑 Dos modelos de compra', why_text_2:'El proyecto ofrece tanto pago completo para inversores como sistema de pagos para clientes privados, ampliando el público objetivo y la liquidez comercial.', why_title_3:'🏡 Producto multinivel', why_text_3:'Hay unidades de entrada más pequeñas y un último apartamento premium, lo que permite comunicar el proyecto de forma amplia y vender mejor todo el edificio.', spec_title:'Especificación y memoria de calidades', spec_1:'Acabado interior completo', spec_2:'Cocina integrada', spec_3:'Baño totalmente equipado + suelo radiante', spec_4:'Aire acondicionado central', spec_5:'Ventanas PVC con aislamiento', spec_6:'Conexiones: agua, luz, internet, TV', spec_7:'Armarios empotrados', spec_paragraph:'El proyecto se desarrolla según normativa CTE (España), garantía de calidad, aislamiento y eficiencia energética.', roi_title:'Modelo de compra y potencial de inversión', roi_paragraph_1:'El proyecto responde a dos tipos de demanda: inversores que buscan un precio de entrada más bajo y clientes privados que quieren repartir la compra en el tiempo. Por ello, la promoción es más flexible comercialmente que los proyectos clásicos con un solo modelo de pago.', roi_label_1:'Inversores:', roi_value_1:'precio desde €104.000 con pago completo', roi_label_2:'Pagos:', roi_value_2:'desde €132.000', roi_label_3:'Estructura:', roi_value_3:'studio, 1 dormitorio y apartamento premium', roi_label_4:'Ventaja:', roi_value_4:'equipamiento y acabado incluidos', roi_paragraph_2:'Esto permite comunicar el proyecto como producto de inversión de entrada y, al mismo tiempo, mantener un ancla premium en el apartamento premium.', audience_title:'¿Para quién es este proyecto?', audience_card_1_title:'💼 Para inversor', audience_card_1_text:'El proyecto ofrece una entrada baja, dos modelos de compra y un posicionamiento claro como producto de inversión.', audience_card_2_title:'🏠 Para cliente privado', audience_card_2_text:'El sistema de pagos y el acabado completo aumentan la accesibilidad para quienes compran una vivienda para sí mismos.', audience_card_3_title:'📈 Para crecimiento de valor', audience_card_3_text:'El amplio rango de precios y la unidad premium final aumentan el atractivo del proyecto también para la futura reventa.', urgency_note:'Disponibilidad limitada en esta ubicación', contact_title:'Consulta sobre la promoción', contact_intro:'Escríbenos o llámanos para recibir disponibilidad actualizada, lista completa de precios y variante de compra adaptada a tu presupuesto.', agent_role:'Experta en inmobiliaria premium en Costa Blanca', agent_meta:'Contacto directo, selección rápida de ofertas y ayuda en la compra de propiedades en España.', call_btn:'📞 Llamar', wa_btn:'💬 WhatsApp', form_name:'Nombre', form_phone:'Teléfono', form_email:'Email', form_message:'¿Qué propiedad buscas?', form_submit:'Enviar por WhatsApp', share_title:'Compartir oferta', share_native:'Compartir', copy_link:'Copiar enlace', share_note_title:'Nueva promoción Torrevieja', share_note_strong:'desde €104.000 para inversores', share_note_text:'desde €132.000 en pagos · studio · 1 dormitorio · apartamento premium', share_params:'desde €104.000 para inversores · desde €132.000 en pagos', share_description:'studio · 1 dormitorio · apartamento premium · acabado incluido', wa_interest_text:'Me interesa la nueva promoción en Torrevieja desde €104.000', wa_form_prefix:'Nueva consulta desde la página Nueva promoción Torrevieja:', schema_product_description:'Nueva promoción en Torrevieja con precio desde €104.000 para inversores, desde €132.000 en pagos y última unidad premium hasta €305.000.', schema_price_from:'104000'
+          lang:'es', locale:'es_ES', path:'/es/new-developments/monteagudo/', page_title:'Nueva promoción en Torrevieja — desde €104.000 | apartamentos y apartamento premium', meta_description:'Nueva promoción en Torrevieja desde €104.000 para inversores y desde €132.000 en sistema de pagos. Unidades studio, 1 dormitorio y apartamento premium hasta €305.000.', og_title:'Nueva promoción en Torrevieja — desde €104.000', og_description:'Desde €104.000 para inversores · desde €132.000 en pagos · studio, 1 dormitorio y apartamento premium hasta €305.000', og_image_alt:'Nueva promoción Torrevieja — imagen del proyecto', back_link:'Otras ofertas', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'Nueva promoción Torrevieja', hero_subtext:'Proyecto con entrada desde €104.000 para inversores, opción de compra aplazada desde €132.000 y última unidad premium disponible hasta €305.000.', hero_price_box_title:'Precios clave', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'entrada inversor (pago completo) · compra en pagos', hero_price_meta:'pago completo para inversores · sistema de pagos', page_h1:'Nueva promoción en Torrevieja — desde €104.000', subtitle:'España · Costa Blanca · oferta para inversores y clientes privados', price_range:'desde €104.000', price_soft:'pago completo para inversores · sistema de pagos desde €132.000', kpi_1:'104.000', kpi_icon_2:'10k', kpi_2:'reserva', kpi_icon_3:'30%', kpi_3:'+ 30% en pagos', lead_1:'La nueva promoción en Torrevieja ofrece un amplio rango de precios: desde €104.000 para pequeñas unidades tipo estudio hasta €305.000 por el último apartamento premium disponible. Esto permite entrar tanto a inversores como a clientes finales.', lead_2:'Dos modelos de compra: inversores con pago completo desde €104.000 y compra aplazada desde €132.000. La reserva es de €10.000, después 30% en un mes, 30% después de 4–6 meses y el saldo ante notario.', lead_3:'Este enfoque flexible de financiación aumenta notablemente la accesibilidad del proyecto y permite adaptar la estrategia de compra a inversión o uso propio.', params_title:'Parámetros de la promoción', param_label_price_investor:'Precio para inversores:', param_price_investor:'desde €104.000', param_label_price_installments:'Precio con pagos:', param_price_installments:'desde €132.000', param_label_booking:'Reserva:', param_booking:'€10.000', param_label_payment_1:'Pago 1:', param_payment_1:'30% en un mes', param_label_payment_2:'Pago 2:', param_payment_2:'30% después de 4–6 meses', param_label_balance:'Saldo:', param_balance:'ante notario', param_label_types:'Tipos de unidad:', param_types:'studio · 1 dormitorio · apartamento premium', why_section_title:'¿Por qué es un producto de inversión sólido?', why_title_1:'💰 Bajo umbral de entrada', why_text_1:'El precio desde €104.000 para inversores permite entrar en una nueva promoción en Costa Blanca con un capital inicial relativamente bajo.', why_title_2:'📑 Dos modelos de compra', why_text_2:'El proyecto ofrece tanto pago completo para inversores como sistema de pagos para clientes privados, ampliando el público objetivo y la liquidez comercial.', why_title_3:'🏡 Producto multinivel', why_text_3:'Hay unidades de entrada más pequeñas y un último apartamento premium, lo que permite comunicar el proyecto de forma amplia y vender mejor todo el edificio.', spec_title:'Especificación y memoria de calidades', spec_1:'Acabado interior completo', spec_2:'Cocina integrada', spec_3:'Baño totalmente equipado + suelo radiante', spec_4:'Aire acondicionado central', spec_5:'Ventanas PVC con aislamiento', spec_6:'Conexiones: agua, luz, internet, TV', spec_7:'Armarios empotrados', spec_paragraph:'El proyecto se desarrolla según normativa CTE (España), garantía de calidad, aislamiento y eficiencia energética.', roi_title:'Modelo de compra y potencial de inversión', roi_paragraph_1:'El proyecto responde a dos tipos de demanda: inversores que buscan un precio de entrada más bajo y clientes privados que quieren repartir la compra en el tiempo. Por ello, la promoción es más flexible comercialmente que los proyectos clásicos con un solo modelo de pago.', roi_label_1:'Inversores:', roi_value_1:'precio desde €104.000 con pago completo', roi_label_2:'Pagos:', roi_value_2:'desde €132.000', roi_label_3:'Estructura:', roi_value_3:'studio, 1 dormitorio y apartamento premium', roi_label_4:'Ventaja:', roi_value_4:'equipamiento y acabado incluidos', roi_paragraph_2:'Esto permite comunicar el proyecto como producto de inversión de entrada y, al mismo tiempo, mantener un ancla premium en el apartamento premium.', audience_title:'¿Para quién es este proyecto?', audience_card_1_title:'💼 Para inversor', audience_card_1_text:'El proyecto ofrece una entrada baja, dos modelos de compra y un posicionamiento claro como producto de inversión.', audience_card_2_title:'🏠 Para cliente privado', audience_card_2_text:'El sistema de pagos y el acabado completo aumentan la accesibilidad para quienes compran una vivienda para sí mismos.', audience_card_3_title:'📈 Para crecimiento de valor', audience_card_3_text:'El amplio rango de precios y la unidad premium final aumentan el atractivo del proyecto también para la futura reventa.', urgency_note:'Disponibilidad limitada en esta ubicación', contact_title:'Consulta sobre la promoción', contact_intro:'Escríbenos o llámanos para recibir disponibilidad actualizada, lista completa de precios y variante de compra adaptada a tu presupuesto.', agent_role:'Experta en inmobiliaria premium en Costa Blanca', agent_meta:'Contacto directo, selección rápida de ofertas y ayuda en la compra de propiedades en España.', call_btn:'📞 Llamar', wa_btn:'💬 WhatsApp', form_name:'Nombre', form_phone:'Teléfono', form_email:'Email', form_message:'¿Qué propiedad buscas?', form_submit:'Enviar por WhatsApp', copy_link:'Copiar enlace', share_note_title:'Nueva promoción Torrevieja', share_note_strong:'desde €104.000 para inversores', share_note_text:'desde €132.000 en pagos · studio · 1 dormitorio · apartamento premium', share_params:'desde €104.000 para inversores · desde €132.000 en pagos', share_description:'studio · 1 dormitorio · apartamento premium · acabado incluido', wa_interest_text:'Me interesa la nueva promoción en Torrevieja desde €104.000', wa_form_prefix:'Nueva consulta desde la página Nueva promoción Torrevieja:', schema_product_description:'Nueva promoción en Torrevieja con precio desde €104.000 para inversores, desde €132.000 en pagos y última unidad premium hasta €305.000.', schema_price_from:'104000'
         },
         en: {
-          lang:'en', locale:'en_GB', path:'/en/new-developments/monteagudo/', page_title:'New development in Torrevieja — from €104,000 | apartments and premium apartment', meta_description:'New development in Torrevieja from €104,000 for investors and from €132,000 on instalments. Studio units, 1-bedroom and premium apartment up to €305,000.', og_title:'New development in Torrevieja — from €104,000', og_description:'From €104,000 for investors · from €132,000 on instalments · studio, 1-bedroom and premium apartment up to €305,000', og_image_alt:'New Torrevieja development — project image', back_link:'Other listings', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'New Torrevieja development', hero_subtext:'Project with an entry point from €104,000 for investors, an instalment option from €132,000 and the last premium unit available up to €305,000.',
-          hero_price_box_title:'Key pricing', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'investor entry (full payment) · purchase on instalments', hero_price_meta:'full payment for investors · instalment plan', page_h1:'New development in Torrevieja — from €104,000', subtitle:'Spain · Costa Blanca · offer for investors and private buyers', price_range:'from €104,000', price_soft:'full payment for investors · instalment plan from €132,000', kpi_1:'104,000', kpi_icon_2:'10k', kpi_2:'reservation', kpi_icon_3:'30%', kpi_3:'+ 30% on instalments', lead_1:'The new development in Torrevieja offers a broad price range — from €104,000 for smaller studio units up to €305,000 for the last available premium apartment. This opens the project both to investors and end buyers.', lead_2:'Two purchase models: investors with full payment from €104,000 and instalment purchase from €132,000. Reservation is €10,000, then 30% within one month, 30% after 4–6 months and the balance at the notary.', lead_3:'This flexible financing approach significantly improves accessibility and allows the buying strategy to be matched to either investment or own use.', params_title:'Development parameters', param_label_price_investor:'Investor price:', param_price_investor:'from €104,000', param_label_price_installments:'Instalment price:', param_price_installments:'from €132,000', param_label_booking:'Reservation:', param_booking:'€10,000', param_label_payment_1:'Payment 1:', param_payment_1:'30% within one month', param_label_payment_2:'Payment 2:', param_payment_2:'30% after 4–6 months', param_label_balance:'Balance:', param_balance:'at the notary', param_label_types:'Unit types:', param_types:'studio · 1-bedroom · premium apartment', why_section_title:'Why is this a strong investment product?', why_title_1:'💰 Low entry threshold', why_text_1:'A price from €104,000 for investors makes it possible to enter a new Costa Blanca project with relatively low starting capital.', why_title_2:'📑 Two purchase models', why_text_2:'The project offers both full payment for investors and an instalment system for private buyers, increasing the target audience and sales liquidity.', why_title_3:'🏡 Multi-layered product', why_text_3:'The project includes smaller entry units and a final premium apartment, allowing broader communication and stronger sell-through of the entire building.', spec_title:'Specification and finish standard', spec_1:'Fully finished interiors', spec_2:'Built-in kitchen', spec_3:'Fully equipped bathroom + underfloor heating', spec_4:'Central air conditioning', spec_5:'PVC windows with insulation', spec_6:'Connections: water, electricity, internet, TV', spec_7:'Built-in wardrobes', spec_paragraph:'The project is delivered in accordance with CTE standards (Spain), ensuring quality, insulation and energy efficiency.', roi_title:'Purchase model and investment potential', roi_paragraph_1:'The project addresses two types of demand: investors looking for a lower entry price and private buyers wanting to spread the purchase over time. This makes the development more commercially flexible than classic projects with a single payment model.', roi_label_1:'Investors:', roi_value_1:'price from €104,000 with full payment', roi_label_2:'Instalments:', roi_value_2:'from €132,000', roi_label_3:'Structure:', roi_value_3:'studio, 1-bedroom and premium apartment', roi_label_4:'Advantage:', roi_value_4:'equipment and finish included', roi_paragraph_2:'This allows the project to be positioned as an entry-level investment product while still keeping a premium anchor price at the premium apartment level.', audience_title:'Who is this project for?', audience_card_1_title:'💼 For the investor', audience_card_1_text:'The project offers a low entry threshold, two purchase models and clear positioning as an investment product.', audience_card_2_title:'🏠 For the private buyer', audience_card_2_text:'The instalment plan and turnkey finish increase accessibility for people buying a home for themselves.', audience_card_3_title:'📈 For value growth', audience_card_3_text:'The wide price range and final premium apartment also strengthen the project’s attractiveness for future resale.', urgency_note:'Limited availability in this location', contact_title:'Ask about this development', contact_intro:'Write or call to receive current availability, full price list and a purchase option matched to your budget.', agent_role:'Premium Costa Blanca property expert', agent_meta:'Direct contact, quick property shortlist and support with buying real estate in Spain.', call_btn:'📞 Call', wa_btn:'💬 WhatsApp', form_name:'Name', form_phone:'Phone', form_email:'Email', form_message:'What kind of property are you looking for?', form_submit:'Send via WhatsApp', share_title:'Share listing', share_native:'Share', copy_link:'Copy link', share_note_title:'New Torrevieja development', share_note_strong:'from €104,000 for investors', share_note_text:'from €132,000 on instalments · studio · 1-bedroom · premium apartment', share_params:'from €104,000 for investors · from €132,000 on instalments', share_description:'studio · 1-bedroom · premium apartment · finish included', wa_interest_text:'I am interested in the new development in Torrevieja from €104,000', wa_form_prefix:'New enquiry from the New Torrevieja development page:', schema_product_description:'New development in Torrevieja priced from €104,000 for investors, from €132,000 on instalments and a last premium unit up to €305,000.', schema_price_from:'104000'
+          lang:'en', locale:'en_GB', path:'/en/new-developments/monteagudo/', page_title:'New development in Torrevieja — from €104,000 | apartments and premium apartment', meta_description:'New development in Torrevieja from €104,000 for investors and from €132,000 on instalments. Studio units, 1-bedroom and premium apartment up to €305,000.', og_title:'New development in Torrevieja — from €104,000', og_description:'From €104,000 for investors · from €132,000 on instalments · studio, 1-bedroom and premium apartment up to €305,000', og_image_alt:'New Torrevieja development — project image', back_link:'Other listings', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'New Torrevieja development', hero_subtext:'Project with an entry point from €104,000 for investors, an instalment option from €132,000 and the last premium unit available up to €305,000.', hero_price_box_title:'Key pricing', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'investor entry (full payment) · purchase on instalments', hero_price_meta:'full payment for investors · instalment plan', page_h1:'New development in Torrevieja — from €104,000', subtitle:'Spain · Costa Blanca · offer for investors and private buyers', price_range:'from €104,000', price_soft:'full payment for investors · instalment plan from €132,000', kpi_1:'104,000', kpi_icon_2:'10k', kpi_2:'reservation', kpi_icon_3:'30%', kpi_3:'+ 30% on instalments', lead_1:'The new development in Torrevieja offers a broad price range — from €104,000 for smaller studio units up to €305,000 for the last available premium apartment. This opens the project both to investors and end buyers.', lead_2:'Two purchase models: investors with full payment from €104,000 and instalment purchase from €132,000. Reservation is €10,000, then 30% within one month, 30% after 4–6 months and the balance at the notary.', lead_3:'This flexible financing approach significantly improves accessibility and allows the buying strategy to be matched to either investment or own use.', params_title:'Development parameters', param_label_price_investor:'Investor price:', param_price_investor:'from €104,000', param_label_price_installments:'Instalment price:', param_price_installments:'from €132,000', param_label_booking:'Reservation:', param_booking:'€10,000', param_label_payment_1:'Payment 1:', param_payment_1:'30% within one month', param_label_payment_2:'Payment 2:', param_payment_2:'30% after 4–6 months', param_label_balance:'Balance:', param_balance:'at the notary', param_label_types:'Unit types:', param_types:'studio · 1-bedroom · premium apartment', why_section_title:'Why is this a strong investment product?', why_title_1:'💰 Low entry threshold', why_text_1:'A price from €104,000 for investors makes it possible to enter a new Costa Blanca project with relatively low starting capital.', why_title_2:'📑 Two purchase models', why_text_2:'The project offers both full payment for investors and an instalment system for private buyers, increasing the target audience and sales liquidity.', why_title_3:'🏡 Multi-layered product', why_text_3:'The project includes smaller entry units and a final premium apartment, allowing broader communication and stronger sell-through of the entire building.', spec_title:'Specification and finish standard', spec_1:'Fully finished interiors', spec_2:'Built-in kitchen', spec_3:'Fully equipped bathroom + underfloor heating', spec_4:'Central air conditioning', spec_5:'PVC windows with insulation', spec_6:'Connections: water, electricity, internet, TV', spec_7:'Built-in wardrobes', spec_paragraph:'The project is delivered in accordance with CTE standards (Spain), ensuring quality, insulation and energy efficiency.', roi_title:'Purchase model and investment potential', roi_paragraph_1:'The project addresses two types of demand: investors looking for a lower entry price and private buyers wanting to spread the purchase over time. This makes the development more commercially flexible than classic projects with a single payment model.', roi_label_1:'Investors:', roi_value_1:'price from €104,000 with full payment', roi_label_2:'Instalments:', roi_value_2:'from €132,000', roi_label_3:'Structure:', roi_value_3:'studio, 1-bedroom and premium apartment', roi_label_4:'Advantage:', roi_value_4:'equipment and finish included', roi_paragraph_2:'This allows the project to be positioned as an entry-level investment product while still keeping a premium anchor price at the premium apartment level.', audience_title:'Who is this project for?', audience_card_1_title:'💼 For the investor', audience_card_1_text:'The project offers a low entry threshold, two purchase models and clear positioning as an investment product.', audience_card_2_title:'🏠 For the private buyer', audience_card_2_text:'The instalment plan and turnkey finish increase accessibility for people buying a home for themselves.', audience_card_3_title:'📈 For value growth', audience_card_3_text:'The wide price range and final premium apartment also strengthen the project’s attractiveness for future resale.', urgency_note:'Limited availability in this location', contact_title:'Ask about this development', contact_intro:'Write or call to receive current availability, full price list and a purchase option matched to your budget.', agent_role:'Premium Costa Blanca property expert', agent_meta:'Direct contact, quick property shortlist and support with buying real estate in Spain.', call_btn:'📞 Call', wa_btn:'💬 WhatsApp', form_name:'Name', form_phone:'Phone', form_email:'Email', form_message:'What kind of property are you looking for?', form_submit:'Send via WhatsApp', copy_link:'Copy link', share_note_title:'New Torrevieja development', share_note_strong:'from €104,000 for investors', share_note_text:'from €132,000 on instalments · studio · 1-bedroom · premium apartment', share_params:'from €104,000 for investors · from €132,000 on instalments', share_description:'studio · 1-bedroom · premium apartment · finish included', wa_interest_text:'I am interested in the new development in Torrevieja from €104,000', wa_form_prefix:'New enquiry from the New Torrevieja development page:', schema_product_description:'New development in Torrevieja priced from €104,000 for investors, from €132,000 on instalments and a last premium unit up to €305,000.', schema_price_from:'104000'
         },
         ru: {
-          lang:'ru', locale:'ru_RU', path:'/ru/new-developments/monteagudo/', page_title:'Новый проект в Торревьехе — от €104 000 | апартаменты и премиум-апартамент', meta_description:'Новый проект в Торревьехе от €104 000 для инвесторов и от €132 000 в рассрочку. Студии, 1 dormitorio и премиум-апартамент до €305 000.', og_title:'Новый проект в Торревьехе — от €104 000', og_description:'От €104 000 для инвесторов · от €132 000 в рассрочку · студия, 1 dormitorio и премиум-апартамент до €305 000', og_image_alt:'Новый проект Торревьеха — изображение проекта', back_link:'Другие объекты', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'Новый проект Торревьеха', hero_subtext:'Проект со входом от €104 000 для инвесторов, опцией покупки в рассрочку от €132 000 и последним доступным премиум-апартаментом до €305 000.',
-          hero_price_box_title:'Ключевые цены', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'вход инвестора (полная оплата) · покупка в рассрочку', hero_price_meta:'полная оплата для инвесторов · система рассрочки', page_h1:'Новый проект в Торревьехе — от €104 000', subtitle:'Испания · Costa Blanca · предложение для инвесторов и частных клиентов', price_range:'от €104 000', price_soft:'полная оплата для инвесторов · рассрочка от €132 000', kpi_1:'104 000', kpi_icon_2:'10k', kpi_2:'резервация', kpi_icon_3:'30%', kpi_3:'+ 30% в рассрочку', lead_1:'Новый проект в Торревьехе предлагает широкий ценовой диапазон — от €104 000 за небольшие студии до €305 000 за последний доступный премиум-апартамент. Это даёт возможность войти в проект как инвесторам, так и конечным покупателям.', lead_2:'Две модели покупки: инвесторы при полной оплате от €104 000 и покупка в рассрочку от €132 000. Резервация составляет €10 000, затем 30% в течение месяца, 30% через 4–6 месяцев, а остаток у нотариуса.', lead_3:'Такой гибкий подход к финансированию значительно повышает доступность проекта и позволяет адаптировать стратегию покупки под инвестицию или собственное проживание.', params_title:'Параметры проекта', param_label_price_investor:'Цена для инвесторов:', param_price_investor:'от €104 000', param_label_price_installments:'Цена в рассрочку:', param_price_installments:'от €132 000', param_label_booking:'Резервация:', param_booking:'€10 000', param_label_payment_1:'Платёж 1:', param_payment_1:'30% в течение месяца', param_label_payment_2:'Платёж 2:', param_payment_2:'30% через 4–6 месяцев', param_label_balance:'Остаток:', param_balance:'у нотариуса', param_label_types:'Типы лотов:', param_types:'студия · 1 dormitorio · премиум-апартамент', why_section_title:'Почему это сильный инвестиционный продукт?', why_title_1:'💰 Низкий порог входа', why_text_1:'Цена от €104 000 для инвесторов позволяет войти в новый проект на Costa Blanca с относительно низким стартовым капиталом.', why_title_2:'📑 Две модели покупки', why_text_2:'Проект предлагает как полную оплату для инвесторов, так и систему рассрочки для частных клиентов, расширяя аудиторию и ликвидность продаж.', why_title_3:'🏡 Многослойный продукт', why_text_3:'В проекте есть более доступные входные лоты и финальный премиум-апартамент, что позволяет шире коммуницировать объект и эффективнее продавать всё здание.', spec_title:'Спецификация и стандарт отделки', spec_1:'Готовая отделка интерьеров', spec_2:'Встроенная кухня', spec_3:'Полностью оборудованная ванная + тёплый пол', spec_4:'Центральный кондиционер', spec_5:'Окна PVC с изоляцией', spec_6:'Подключения: вода, электричество, интернет, ТВ', spec_7:'Встроенные шкафы', spec_paragraph:'Проект реализуется в соответствии с нормами CTE (Испания), что гарантирует качество, изоляцию и энергоэффективность.', roi_title:'Модель покупки и инвестиционный потенциал', roi_paragraph_1:'Проект отвечает двум типам спроса: инвесторам, которые ищут более низкий входной бюджет, и частным клиентам, которые хотят распределить покупку во времени. Благодаря этому объект коммерчески гибче, чем классические проекты с одной моделью оплаты.', roi_label_1:'Инвесторы:', roi_value_1:'цена от €104 000 при полной оплате', roi_label_2:'Рассрочка:', roi_value_2:'от €132 000', roi_label_3:'Структура:', roi_value_3:'студия, 1 dormitorio и премиум-апартамент', roi_label_4:'Преимущество:', roi_value_4:'оборудование и отделка включены', roi_paragraph_2:'Это позволяет позиционировать проект как входной инвестиционный продукт и одновременно удерживать premium anchor price на уровне премиум-апартамента.', audience_title:'Для кого этот проект?', audience_card_1_title:'💼 Для инвестора', audience_card_1_text:'Проект даёт низкий порог входа, две модели покупки и понятное позиционирование как инвестиционный продукт.', audience_card_2_title:'🏠 Для частного покупателя', audience_card_2_text:'Рассрочка и готовая отделка повышают доступность проекта для тех, кто покупает жильё для себя.', audience_card_3_title:'📈 Для роста стоимости', audience_card_3_text:'Широкий ценовой диапазон и финальный премиум-апартамент усиливают привлекательность проекта и для дальнейшей перепродажи.', urgency_note:'Ограниченная доступность в этой локации', contact_title:'Запросить информацию по проекту', contact_intro:'Напишите или позвоните, чтобы получить актуальную доступность, полный прайс-лист и вариант покупки под ваш бюджет.', agent_role:'Эксперт по премиальной недвижимости на Costa Blanca', agent_meta:'Прямой контакт, быстрая подборка объектов и помощь в покупке недвижимости в Испании.', call_btn:'📞 Позвонить', wa_btn:'💬 WhatsApp', form_name:'Имя', form_phone:'Телефон', form_email:'Email', form_message:'Какую недвижимость вы ищете?', form_submit:'Отправить через WhatsApp', share_title:'Поделиться объектом', share_native:'Поделиться', copy_link:'Копировать ссылку', share_note_title:'Новый проект Торревьеха', share_note_strong:'от €104 000 для инвесторов', share_note_text:'от €132 000 в рассрочку · студия · 1 dormitorio · премиум-апартамент', share_params:'от €104 000 для инвесторов · от €132 000 в рассрочку', share_description:'студия · 1 dormitorio · премиум-апартамент · отделка включена', wa_interest_text:'Меня интересует новый проект в Торревьехе от €104 000', wa_form_prefix:'Новый запрос со страницы Новый проект Торревьеха:', schema_product_description:'Новый проект в Торревьехе с ценой от €104 000 для инвесторов, от €132 000 в рассрочку и последним премиум-апартаментом до €305 000.', schema_price_from:'104000'
+          lang:'ru', locale:'ru_RU', path:'/ru/new-developments/monteagudo/', page_title:'Новый проект в Торревьехе — от €104 000 | апартаменты и премиум-апартамент', meta_description:'Новый проект в Торревьехе от €104 000 для инвесторов и от €132 000 в рассрочку. Студии, 1 dormitorio и премиум-апартамент до €305 000.', og_title:'Новый проект в Торревьехе — от €104 000', og_description:'От €104 000 для инвесторов · от €132 000 в рассрочку · студия, 1 dormitorio и премиум-апартамент до €305 000', og_image_alt:'Новый проект Торревьеха — изображение проекта', back_link:'Другие объекты', badge_text:'Investor Deal · €104k / €132k', kicker:'Costa Blanca · Investor & Instalments', hero_title:'Новый проект Торревьеха', hero_subtext:'Проект со входом от €104 000 для инвесторов, опцией покупки в рассрочку от €132 000 и последним доступным премиум-апартаментом до €305 000.', hero_price_box_title:'Ключевые цены', hero_price_value_1:'€104k', hero_price_sep:'→', hero_price_value_2:'€132k', hero_price_note:'вход инвестора (полная оплата) · покупка в рассрочку', hero_price_meta:'полная оплата для инвесторов · система рассрочки', page_h1:'Новый проект в Торревьехе — от €104 000', subtitle:'Испания · Costa Blanca · предложение для инвесторов и частных клиентов', price_range:'от €104 000', price_soft:'полная оплата для инвесторов · рассрочка от €132 000', kpi_1:'104 000', kpi_icon_2:'10k', kpi_2:'резервация', kpi_icon_3:'30%', kpi_3:'+ 30% в рассрочку', lead_1:'Новый проект в Торревьехе предлагает широкий ценовой диапазон — от €104 000 за небольшие студии до €305 000 за последний доступный премиум-апартамент. Это даёт возможность войти в проект как инвесторам, так и конечным покупателям.', lead_2:'Две модели покупки: инвесторы при полной оплате от €104 000 и покупка в рассрочку от €132 000. Резервация составляет €10 000, затем 30% в течение месяца, 30% через 4–6 месяцев, а остаток у нотариуса.', lead_3:'Такой гибкий подход к финансированию значительно повышает доступность проекта и позволяет адаптировать стратегию покупки под инвестицию или собственное проживание.', params_title:'Параметры проекта', param_label_price_investor:'Цена для инвесторов:', param_price_investor:'от €104 000', param_label_price_installments:'Цена в рассрочку:', param_price_installments:'от €132 000', param_label_booking:'Резервация:', param_booking:'€10 000', param_label_payment_1:'Платёж 1:', param_payment_1:'30% в течение месяца', param_label_payment_2:'Платёж 2:', param_payment_2:'30% через 4–6 месяцев', param_label_balance:'Остаток:', param_balance:'у нотариуса', param_label_types:'Типы лотов:', param_types:'студия · 1 dormitorio · премиум-апартамент', why_section_title:'Почему это сильный инвестиционный продукт?', why_title_1:'💰 Низкий порог входа', why_text_1:'Цена от €104 000 для инвесторов позволяет войти в новый проект на Costa Blanca с относительно низким стартовым капиталом.', why_title_2:'📑 Две модели покупки', why_text_2:'Проект предлагает как полную оплату для инвесторов, так и систему рассрочки для частных клиентов, расширяя аудиторию и ликвидность продаж.', why_title_3:'🏡 Многослойный продукт', why_text_3:'В проекте есть более доступные входные лоты и финальный премиум-апартамент, что позволяет шире коммуницировать объект и эффективнее продавать всё здание.', spec_title:'Спецификация и стандарт отделки', spec_1:'Готовая отделка интерьеров', spec_2:'Встроенная кухня', spec_3:'Полностью оборудованная ванная + тёплый пол', spec_4:'Центральный кондиционер', spec_5:'Окна PVC с изоляцией', spec_6:'Подключения: вода, электричество, интернет, ТВ', spec_7:'Встроенные шкафы', spec_paragraph:'Проект реализуется в соответствии с нормами CTE (Испания), что гарантирует качество, изоляцию и энергоэффективность.', roi_title:'Модель покупки и инвестиционный потенциал', roi_paragraph_1:'Проект отвечает двум типам спроса: инвесторам, которые ищут более низкий входной бюджет, и частным клиентам, которые хотят распределить покупку во времени. Благодаря этому объект коммерчески гибче, чем классические проекты с одной моделью оплаты.', roi_label_1:'Инвесторы:', roi_value_1:'цена от €104 000 при полной оплате', roi_label_2:'Рассрочка:', roi_value_2:'от €132 000', roi_label_3:'Структура:', roi_value_3:'студия, 1 dormitorio и премиум-апартамент', roi_label_4:'Преимущество:', roi_value_4:'оборудование и отделка включены', roi_paragraph_2:'Это позволяет позиционировать проект как входной инвестиционный продукт и одновременно удерживать premium anchor price на уровне премиум-апартамента.', audience_title:'Для кого этот проект?', audience_card_1_title:'💼 Для инвестора', audience_card_1_text:'Проект даёт низкий порог входа, две модели покупки и понятное позиционирование как инвестиционный продукт.', audience_card_2_title:'🏠 Для частного покупателя', audience_card_2_text:'Рассрочка и готовая отделка повышают доступность проекта для тех, кто покупает жильё для себя.', audience_card_3_title:'📈 Для роста стоимости', audience_card_3_text:'Широкий ценовой диапазон и финальный премиум-апартамент усиливают привлекательность проекта и для дальнейшей перепродажи.', urgency_note:'Ограниченная доступность в этой локации', contact_title:'Запросить информацию по проекту', contact_intro:'Напишите или позвоните, чтобы получить актуальную доступность, полный прайс-лист и вариант покупки под ваш бюджет.', agent_role:'Эксперт по премиальной недвижимости на Costa Blanca', agent_meta:'Прямой контакт, быстрая подборка объектов и помощь в покупке недвижимости в Испании.', call_btn:'📞 Позвонить', wa_btn:'💬 WhatsApp', form_name:'Имя', form_phone:'Телефон', form_email:'Email', form_message:'Какую недвижимость вы ищете?', form_submit:'Отправить через WhatsApp', copy_link:'Копировать ссылку', share_note_title:'Новый проект Торревьеха', share_note_strong:'от €104 000 для инвесторов', share_note_text:'от €132 000 в рассрочку · студия · 1 dormitorio · премиум-апартамент', share_params:'от €104 000 для инвесторов · от €132 000 в рассрочку', share_description:'студия · 1 dormitorio · премиум-апартамент · отделка включена', wa_interest_text:'Меня интересует новый проект в Торревьехе от €104 000', wa_form_prefix:'Новый запрос со страницы Новый проект Торревьеха:', schema_product_description:'Новый проект в Торревьехе с ценой от €104 000 для инвесторов, от €132 000 в рассрочку и последним премиум-апартаментом до €305 000.', schema_price_from:'104000'
         }
       }
     };
@@ -515,186 +418,148 @@
       const mediaLightboxClose = document.getElementById('mediaLightboxClose');
       const mediaTriggers = Array.from(document.querySelectorAll('[data-media-src]'));
       const copyLinkBtn = document.getElementById('copyLinkBtn');
-      const shareNativeBtn = document.getElementById('share-native');
-      const shareFacebook = document.getElementById('share-facebook');
-      const shareWhatsapp = document.getElementById('share-whatsapp');
-      const shareButtons = Array.from(document.querySelectorAll('[data-share-role]'));
       const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
       const fallbackAvatar = 'https://costa-blanca-invest.com/avatar.png';
+      const backLink = document.getElementById('backLink');
       let currentLang = 'pl';
 
-      function imageBase(lang){ return `/pl/new-developments/${PROPERTY_DATA.slug}/`; }
-
-      window.handleBrokenImage = function(img){
+      function imageBase() { return `/pl/new-developments/${PROPERTY_DATA.slug}/`; }
+      window.handleBrokenImage = function(img) {
         if (img.dataset.fallbackApplied === 'true') return;
         img.dataset.fallbackApplied = 'true';
         if (img.classList.contains('agent-avatar')) { img.src = fallbackAvatar; return; }
-        img.src = imageBase(currentLang) + '1.jpg';
+        img.src = imageBase() + '1.jpg';
       };
-
-      function applyMeta(t){
+      function setAttr(selector, attr, value) { const el = document.querySelector(selector); if (el) el.setAttribute(attr, value); }
+      function applyMeta(t) {
         document.documentElement.lang = t.lang;
         document.title = t.page_title;
-        document.querySelector('meta[name="description"]').setAttribute('content', t.meta_description);
-        document.querySelector('link[rel="canonical"]').setAttribute('href', `https://costa-blanca-invest.com${t.path}`);
-        document.querySelector('link[rel="image_src"]').setAttribute('href', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        document.querySelector('meta[property="og:locale"]').setAttribute('content', t.locale);
-        document.querySelector('meta[property="og:title"]').setAttribute('content', t.og_title);
-        document.querySelector('meta[property="og:description"]').setAttribute('content', t.og_description);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', `https://costa-blanca-invest.com${t.path}`);
-        document.querySelector('meta[property="og:image"]').setAttribute('content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        document.querySelector('meta[property="og:image:url"]').setAttribute('content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        document.querySelector('meta[property="og:image:secure_url"]').setAttribute('content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        document.querySelector('meta[property="og:image:alt"]').setAttribute('content', t.og_image_alt);
-        document.querySelector('meta[name="twitter:title"]').setAttribute('content', t.og_title);
-        document.querySelector('meta[name="twitter:description"]').setAttribute('content', t.og_description);
-        document.querySelector('meta[name="twitter:image"]').setAttribute('content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        document.querySelector('meta[name="twitter:image:alt"]').setAttribute('content', t.og_image_alt);
-        document.querySelector('meta[name="twitter:url"]').setAttribute('content', `https://costa-blanca-invest.com${t.path}`);
-        document.querySelector('link[rel="preload"]').setAttribute('href', `${imageBase(currentLang)}1.jpg`);
+        setAttr('meta[name="description"]', 'content', t.meta_description);
+        setAttr('link[rel="canonical"]', 'href', `https://costa-blanca-invest.com${LIVE_PATH}`);
+        setAttr('link[rel="image_src"]', 'href', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:locale"]', 'content', t.locale);
+        setAttr('meta[property="og:title"]', 'content', t.og_title);
+        setAttr('meta[property="og:description"]', 'content', t.og_description);
+        setAttr('meta[property="og:url"]', 'content', `https://costa-blanca-invest.com${LIVE_PATH}`);
+        setAttr('meta[property="og:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:image:url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:image:secure_url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:image:alt"]', 'content', t.og_image_alt);
+        setAttr('meta[name="twitter:title"]', 'content', t.og_title);
+        setAttr('meta[name="twitter:description"]', 'content', t.og_description);
+        setAttr('meta[name="twitter:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
+        setAttr('meta[name="twitter:url"]', 'content', `https://costa-blanca-invest.com${LIVE_PATH}`);
+        setAttr('link[rel="preload"][as="image"]', 'href', `${imageBase()}1.jpg`);
       }
-
-      function applyText(t){
-        document.querySelectorAll('[data-i18n]').forEach(el => {
+      function applyText(t) {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
           const key = el.dataset.i18n;
-          if (t[key] !== undefined) {
-            if (key === 'hero_price_value_1' || key === 'hero_price_value_2' || key === 'hero_price_note') {
-              el.innerHTML = t[key];
-            } else {
-              el.textContent = t[key];
-            }
-          }
+          if (t[key] !== undefined) el.textContent = t[key];
         });
-        document.getElementById('backLink').textContent = t.back_link;
-        document.getElementById('backLink').setAttribute('href', `/${currentLang}/new-developments/`);
-        document.getElementById('formName').placeholder = t.form_name;
-        document.getElementById('formPhone').placeholder = t.form_phone;
-        document.getElementById('formEmail').placeholder = t.form_email;
-        document.getElementById('formMessage').placeholder = t.form_message;
+        if (backLink) { backLink.textContent = t.back_link; backLink.setAttribute('href', `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`); }
+        const formName = document.getElementById('formName');
+        const formPhone = document.getElementById('formPhone');
+        const formEmail = document.getElementById('formEmail');
+        const formMessage = document.getElementById('formMessage');
+        if (formName) formName.placeholder = t.form_name;
+        if (formPhone) formPhone.placeholder = t.form_phone;
+        if (formEmail) formEmail.placeholder = t.form_email;
+        if (formMessage) formMessage.placeholder = t.form_message;
       }
-
-      function applyImages(){
-        const base = imageBase(currentLang);
+      function applyImages() {
+        const base = imageBase();
         const heroImage = document.getElementById('heroImage');
-        heroImage.src = `${base}1.jpg`;
-        heroImage.alt = `${PROPERTY_DATA.slug} hero`;
+        if (heroImage) { heroImage.src = `${base}${PROPERTY_DATA.images[0]}`; heroImage.alt = `${PROPERTY_DATA.slug} hero`; }
         mediaTriggers.forEach((item, index) => {
-          const src = `${base}${PROPERTY_DATA.images[index]}`;
+          const filename = PROPERTY_DATA.images[index];
+          if (!filename) return;
+          const src = `${base}${filename}`;
           item.dataset.mediaSrc = src;
           const img = item.querySelector('img');
           if (img) { img.src = src; img.loading = index === 0 ? 'eager' : 'lazy'; img.decoding = 'async'; }
         });
       }
-
-      function applyShareAndSchema(t){
-        const shareUrl = `https://costa-blanca-invest.com${t.path}`;
-        const shareFullText = `${t.og_title}
-${t.subtitle}
-${t.share_params}
-${shareUrl}`;
-        shareFacebook.setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareFullText)}`);
-        shareWhatsapp.setAttribute('href', `https://wa.me/?text=${encodeURIComponent(shareFullText)}`);
-        document.getElementById('waBtn').setAttribute('href', `https://wa.me/34604158859?text=${encodeURIComponent(t.wa_interest_text)}`);
+      function applyShareAndSchema(t) {
+        const waBtn = document.getElementById('waBtn');
+        if (waBtn) waBtn.setAttribute('href', `https://wa.me/34604158859?text=${encodeURIComponent(t.wa_interest_text)}`);
         const schema = {
           '@context': 'https://schema.org',
           '@graph': [
             { '@type': 'Organization', name: 'Costa Blanca Invest', url: 'https://costa-blanca-invest.com/', email: PROPERTY_DATA.contact_email, telephone: PROPERTY_DATA.contact_phone },
-            { '@type': 'WebPage', name: t.og_title, url: `https://costa-blanca-invest.com${t.path}`, description: t.meta_description, inLanguage: t.lang, primaryImageOfPage: { '@type': 'ImageObject', url: `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg` } },
-            { '@type': 'Product', name: t.og_title, description: t.schema_product_description, image: PROPERTY_DATA.images.map(img => `https://costa-blanca-invest.com${imageBase(currentLang)}${img}`), brand: { '@type': 'Brand', name: 'Costa Blanca Invest' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price: t.schema_price_from, availability: 'https://schema.org/InStock', url: `https://costa-blanca-invest.com${t.path}` } }
+            { '@type': 'WebPage', name: t.og_title, url: `https://costa-blanca-invest.com${LIVE_PATH}`, description: t.meta_description, inLanguage: t.lang, primaryImageOfPage: { '@type': 'ImageObject', url: `https://costa-blanca-invest.com${imageBase()}1.jpg` } },
+            { '@type': 'Product', name: t.og_title, description: t.schema_product_description, image: PROPERTY_DATA.images.map((img) => `https://costa-blanca-invest.com${imageBase()}${img}`), brand: { '@type': 'Brand', name: 'Costa Blanca Invest' }, offers: { '@type': 'Offer', priceCurrency: 'EUR', price: t.schema_price_from, availability: 'https://schema.org/InStock', url: `https://costa-blanca-invest.com${LIVE_PATH}` } }
           ]
         };
-        document.getElementById('schemaJson').textContent = JSON.stringify(schema, null, 2);
+        const schemaEl = document.getElementById('schemaJson');
+        if (schemaEl) schemaEl.textContent = JSON.stringify(schema, null, 2);
       }
-
-      function applyLanguage(lang){
-        currentLang = lang;
-        const t = PROPERTY_DATA.translations[lang] || PROPERTY_DATA.translations.pl;
+      function updateUrlLang(lang) {
+        const url = new URL(window.location.href);
+        if (lang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+      function getInitialLang() { const url = new URL(window.location.href); const lang = url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
+      function applyLanguage(lang, syncUrl = true) {
+        currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        const t = PROPERTY_DATA.translations[currentLang] || PROPERTY_DATA.translations.pl;
         applyMeta(t); applyText(t); applyImages(); applyShareAndSchema(t);
-        langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+        langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+        if (syncUrl) updateUrlLang(currentLang);
       }
-
-      const openMediaLightbox = (src) => {
+      function openMediaLightbox(src) {
         if (!mediaLightbox || !mediaLightboxContent) return;
         mediaLightboxContent.innerHTML = `<img src="${src}" alt="Preview">`;
         mediaLightbox.classList.add('open');
         mediaLightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
-      };
-      const closeMediaLightbox = () => {
+      }
+      function closeMediaLightbox() {
         if (!mediaLightbox || !mediaLightboxContent) return;
         mediaLightbox.classList.remove('open');
         mediaLightbox.setAttribute('aria-hidden', 'true');
         mediaLightboxContent.innerHTML = '';
         document.body.style.overflow = '';
-      };
-      mediaTriggers.forEach(item => item.addEventListener('click', () => openMediaLightbox(item.dataset.mediaSrc)));
+      }
+      mediaTriggers.forEach((item) => item.addEventListener('click', () => openMediaLightbox(item.dataset.mediaSrc)));
       if (mediaLightboxClose) mediaLightboxClose.addEventListener('click', closeMediaLightbox);
       if (mediaLightbox) mediaLightbox.addEventListener('click', (event) => { if (event.target === mediaLightbox) closeMediaLightbox(); });
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && mediaLightbox && mediaLightbox.classList.contains('open')) closeMediaLightbox(); });
-      shareButtons.forEach(button => button.addEventListener('click', (event) => event.stopPropagation()));
-
-      if (shareNativeBtn) {
-        shareNativeBtn.addEventListener('click', async () => {
-          const t = PROPERTY_DATA.translations[currentLang];
-          const shareUrl = `https://costa-blanca-invest.com${t.path}`;
-          const shareData = { title: t.og_title, text: `${t.share_params} · ${t.share_description}`, url: shareUrl };
-          const label = shareNativeBtn.querySelector('span');
-          try {
-            if (navigator.share) { await navigator.share(shareData); return; }
-            await navigator.clipboard.writeText(`${t.og_title}
-${t.share_params}
-${t.share_description}
-${shareUrl}`);
-            if (label) label.textContent = currentLang === 'ru' ? 'Скопировано' : 'Skopiowano';
-            window.setTimeout(() => { if (label) label.textContent = t.share_native; }, 1800);
-          } catch (error) { window.prompt('Copy link:', shareUrl); }
-        });
-      }
-
       if (copyLinkBtn) {
         copyLinkBtn.addEventListener('click', async () => {
           const t = PROPERTY_DATA.translations[currentLang];
-          const shareUrl = `https://costa-blanca-invest.com${t.path}`;
-          const shareText = `${t.og_title}
-${t.share_params}
-${t.share_description}
-${shareUrl}`;
+          const shareUrl = `https://costa-blanca-invest.com${LIVE_PATH}${currentLang === 'pl' ? '' : `?lang=${currentLang}`}`;
+          const shareText = `${shareUrl}\n\n🏡 ${t.og_title}\n💰 ${t.price_range || t.share_note_strong}\n📍 ${t.share_params}\n✨ ${t.share_description}`;
           const copyLabel = copyLinkBtn.querySelector('span');
           try {
             await navigator.clipboard.writeText(shareText);
             if (copyLabel) copyLabel.textContent = currentLang === 'ru' ? 'Скопировано' : 'Skopiowano';
             window.setTimeout(() => { if (copyLabel) copyLabel.textContent = t.copy_link; }, 1800);
           } catch (error) {
+            window.prompt('Copy this text:', shareText);
             if (copyLabel) copyLabel.textContent = currentLang === 'ru' ? 'Ошибка' : 'Nie udało się';
             window.setTimeout(() => { if (copyLabel) copyLabel.textContent = t.copy_link; }, 1800);
           }
         });
       }
-
       if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
           event.preventDefault();
           const t = PROPERTY_DATA.translations[currentLang];
           const formData = new FormData(contactForm);
-          const name = (formData.get('name') || '').toString().trim();
-          const phone = (formData.get('phone') || '').toString().trim();
-          const email = (formData.get('email') || '').toString().trim();
-          const message = (formData.get('message') || '').toString().trim();
-          const text = `${t.wa_form_prefix}
-
-${t.form_name}: ${name}
-${t.form_phone}: ${phone}
-${t.form_email}: ${email}
-
-${message}`;
+          const name = String(formData.get('name') || '').trim();
+          const phone = String(formData.get('phone') || '').trim();
+          const email = String(formData.get('email') || '').trim();
+          const message = String(formData.get('message') || '').trim();
+          const text = `${t.wa_form_prefix}\n\n${t.form_name}: ${name}\n${t.form_phone}: ${phone}\n${t.form_email}: ${email}\n\n${message}`;
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened = window.open(url, '_blank', 'noopener');
           if (!opened) window.location.href = url;
         });
       }
-
-      langButtons.forEach(btn => btn.addEventListener('click', () => { if (btn.dataset.lang !== currentLang) applyLanguage(btn.dataset.lang); }));
-      applyLanguage('pl');
+      if (backLink) backLink.addEventListener('click', (event) => { event.preventDefault(); window.location.href = `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`; });
+      langButtons.forEach((btn) => btn.addEventListener('click', () => { if (btn.dataset.lang !== currentLang) applyLanguage(btn.dataset.lang, true); }));
+      applyLanguage(getInitialLang(), false);
     });
   </script>
 
