@@ -139,7 +139,7 @@
     .btn:hover,.share-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(15,23,42,.14), inset 0 1px 0 rgba(255,255,255,.32)}
     .btn:hover::after,.share-btn:hover::after{opacity:1;transform:translateX(170%) rotate(24deg)}
     .btn-main{background:linear-gradient(135deg,rgba(217,181,109,.92),rgba(184,146,69,.84))}
-    .btn-light{background:linear-gradient(135deg,rgba(37,211,102,.92),rgba(20,158,72,.84))}
+    .btn-light{background:linear-gradient(135deg,#25D366,#128C7E);border:1px solid rgba(37,211,102,.6)}
     .share-btn{background:linear-gradient(135deg,rgba(24,55,70,.72),rgba(35,78,99,.58));color:#fff}
     .share-block{max-width:760px;margin:24px auto 0;padding-top:20px;border-top:1px solid rgba(15,23,42,.08)}
     .share-note{margin:12px 0 0;color:var(--muted);font-size:13px;text-align:center}
