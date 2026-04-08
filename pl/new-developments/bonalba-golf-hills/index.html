@@ -165,12 +165,13 @@
       <div class="top-controls">
         <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/new-developments/" translate="no">Inne oferty</a>
         <div class="lang-switcher" aria-label="Language switcher">
-          <button class="lang-btn active" data-lang="pl">PL</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn active" type="button" data-lang="pl">PL</button>
+          <button class="lang-btn" type="button" data-lang="es">ES</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="ru">RU</button>
         </div>
       </div>
+      <div id="google_translate_element" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"></div>
 
       <section class="hero-card">
         <div class="hero-media" data-media-src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-main.jpg">
@@ -196,10 +197,14 @@
         </div>
 
         <div class="gallery-grid" aria-label="Galeria oferty">
-          <div class="gallery-item" data-media-src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-main.jpg"><img src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — zdjęcie główne" loading="lazy" decoding="async"></div>
-          <div class="gallery-item" data-media-src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-exterior-1.jpg"><img src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-exterior-1.jpg" alt="Bonalba Golf Hills — elewacja 1" loading="lazy" decoding="async"></div>
-          <div class="gallery-item" data-media-src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-exterior-2.jpg"><img src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-exterior-2.jpg" alt="Bonalba Golf Hills — elewacja 2" loading="lazy" decoding="async"></div>
-          <div class="gallery-item" data-media-src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-interior-1.jpg"><img src="/pl/new-developments/bonalba-golf-hills/bonalba-golf-hills-interior-1.jpg" alt="Bonalba Golf Hills — wnętrze 1" loading="lazy" decoding="async"></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
+          <div class="gallery-item" data-media-src=""><img></div>
         </div>
       </section>
 
@@ -324,10 +329,21 @@
     const LIVE_PATH = '/pl/new-developments/bonalba-golf-hills/';
     const LIVE_CATEGORY_PATH = '/pl/new-developments/';
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
+    const GOOGLE_LANG_MAP = { pl: 'pl', es: 'es', en: 'en', ru: 'ru' };
 
     const PROPERTY_DATA = {
       slug: 'bonalba-golf-hills',
-      images: ['bonalba-golf-hills-main.jpg','bonalba-golf-hills-exterior-1.jpg','bonalba-golf-hills-exterior-2.jpg','bonalba-golf-hills-interior-1.jpg'],
+      images: [
+        'bonalba-golf-hills-main.jpg',
+        'bonalba-golf-hills-exterior-1.jpg',
+        'bonalba-golf-hills-exterior-2.jpg',
+        'bonalba-golf-hills-interior-1.jpg',
+        'bonalba-golf-hills-interior-2.jpg',
+        'bonalba-golf-hills-bedroom.jpg',
+        'bonalba-golf-hills-lifestyle-1.jpg',
+        'bonalba-golf-hills-lifestyle-2.jpg',
+        'bonalba-golf-hills-view-2.jpg'
+      ],
       contact_phone: '+34604158859',
       contact_email: 'olga@a1invest4u.com',
       agent_name: 'Olga Chernyshenko',
@@ -387,7 +403,7 @@
       const backLink = document.getElementById('backLink');
       let currentLang = 'pl';
 
-      function imageBase() { return `/pl/new-developments/${PROPERTY_DATA.slug}/`; }
+      function imageBase() { return `/pl/new-developments/${PROPERTY_DATA.slug}/images/`; }
       window.handleBrokenImage = function(img) {
         if (img.dataset.fallbackApplied === 'true') return;
         img.dataset.fallbackApplied = 'true';
@@ -459,13 +475,54 @@
         if (lang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
         window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
       }
-      function getInitialLang() { const url = new URL(window.location.href); const lang = url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
+      function getInitialLang() {
+        const url = new URL(window.location.href);
+        const lang = url.searchParams.get('lang');
+        return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      }
+      function waitForTranslateSelect(callback, attempts = 0) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          callback(select);
+          return;
+        }
+        if (attempts > 40) return;
+        window.setTimeout(() => waitForTranslateSelect(callback, attempts + 1), 250);
+      }
+      function forceTranslate(lang) {
+        const googleLang = GOOGLE_LANG_MAP[lang] || 'pl';
+        waitForTranslateSelect((select) => {
+          if (select.value === googleLang) return;
+          select.value = googleLang;
+          select.dispatchEvent(new Event('change'));
+        });
+      }
+      window.googleTranslateElementInit = function() {
+        if (!window.google || !window.google.translate) return;
+        new window.google.translate.TranslateElement({
+          pageLanguage: 'pl',
+          includedLanguages: 'pl,es,en,ru',
+          autoDisplay: false
+        }, 'google_translate_element');
+        const initialLang = getInitialLang();
+        if (initialLang !== 'pl') {
+          window.setTimeout(() => forceTranslate(initialLang), 600);
+        }
+      };
       function applyLanguage(lang, syncUrl = true) {
         currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-        const t = PROPERTY_DATA.translations[currentLang] || PROPERTY_DATA.translations.pl;
-        applyMeta(t); applyText(t); applyImages(); applyShareAndSchema(t);
+        const t = PROPERTY_DATA.translations.pl;
+        applyMeta(t);
+        applyText(t);
+        applyImages();
+        applyShareAndSchema(t);
         langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
         if (syncUrl) updateUrlLang(currentLang);
+        if (currentLang !== 'pl') {
+          forceTranslate(currentLang);
+        } else {
+          forceTranslate('pl');
+        }
       }
       function openMediaLightbox(src) {
         if (!mediaLightbox || !mediaLightboxContent) return;
@@ -513,6 +570,10 @@
       if (backLink) backLink.addEventListener('click', (event) => { event.preventDefault(); window.location.href = `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`; });
       langButtons.forEach((btn) => btn.addEventListener('click', () => { if (btn.dataset.lang !== currentLang) applyLanguage(btn.dataset.lang, true); }));
       applyLanguage(getInitialLang(), false);
+      const gtScript = document.createElement('script');
+      gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      gtScript.async = true;
+      document.head.appendChild(gtScript);
     });
   </script>
 
