@@ -331,7 +331,7 @@
               <span data-i18n="copy_link">Kopiuj link</span>
             </button>
           </div>
-          <p class="share-note"><span data-i18n="share_note_title">Maranon — inwestycja nad morzem</span><br><strong data-i18n="share_note_strong">od € 133 000</strong><br><span data-i18n="share_note_text">Torrevieja · 2–3 minuty od plaży · około 180 m od morza</span></p>
+          <p class="share-note"><span data-i18n="share_note_title">Maranon — inwestycja nad morzem</span><br><strong data-i18n="share_note_strong">od € 133 000</strong><br><span data-i18n="share_note_text">Torrevieja · 2–3 minuty od plaży · około 180 m od morza</span><br><span style="font-size:12px;opacity:.8;">Po wklejeniu linku pojawi się preview: zdjęcie główne, nazwa i zakres cen.</span></p>
         </div>
       </section>
     </div>
@@ -614,8 +614,8 @@
       const fallbackAvatar = 'https://costa-blanca-invest.com/avatar.png';
       let currentLang = 'pl';
 
-      function imageBase(lang) {
-        return `/${lang}/new-developments/${PROPERTY_DATA.slug}/`;
+      function imageBase() {
+        return `/pl/new-developments/${PROPERTY_DATA.slug}/`;
       }
 
       window.handleBrokenImage = function(img) {
@@ -625,7 +625,7 @@
           img.src = fallbackAvatar;
           return;
         }
-        img.src = imageBase(currentLang) + '1.jpg';
+        img.src = imageBase() + '1.jpg';
       };
 
       function setAttr(selector, attr, value) {
@@ -638,21 +638,21 @@
         document.title = t.page_title;
         setAttr('meta[name="description"]', 'content', t.meta_description);
         setAttr('link[rel="canonical"]', 'href', `https://costa-blanca-invest.com${t.path}`);
-        setAttr('link[rel="image_src"]', 'href', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
+        setAttr('link[rel="image_src"]', 'href', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[property="og:locale"]', 'content', t.locale);
         setAttr('meta[property="og:title"]', 'content', t.og_title);
         setAttr('meta[property="og:description"]', 'content', t.og_description);
         setAttr('meta[property="og:url"]', 'content', `https://costa-blanca-invest.com${t.path}`);
-        setAttr('meta[property="og:image"]', 'content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        setAttr('meta[property="og:image:url"]', 'content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
-        setAttr('meta[property="og:image:secure_url"]', 'content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
+        setAttr('meta[property="og:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:image:url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
+        setAttr('meta[property="og:image:secure_url"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[property="og:image:alt"]', 'content', t.og_image_alt);
         setAttr('meta[name="twitter:title"]', 'content', t.og_title);
         setAttr('meta[name="twitter:description"]', 'content', t.og_description);
-        setAttr('meta[name="twitter:image"]', 'content', `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`);
+        setAttr('meta[name="twitter:image"]', 'content', `https://costa-blanca-invest.com${imageBase()}1.jpg`);
         setAttr('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
         setAttr('meta[name="twitter:url"]', 'content', `https://costa-blanca-invest.com${t.path}`);
-        setAttr('link[rel="preload"][as="image"]', 'href', `${imageBase(currentLang)}1.jpg`);
+        setAttr('link[rel="preload"][as="image"]', 'href', `${imageBase()}1.jpg`);
       }
 
       function applyText(t) {
@@ -681,7 +681,7 @@
       }
 
       function applyImages() {
-        const base = imageBase(currentLang);
+        const base = imageBase();
         const heroImage = document.getElementById('heroImage');
         if (heroImage) {
           heroImage.src = `${base}1.jpg`;
@@ -724,14 +724,14 @@
               inLanguage: t.lang,
               primaryImageOfPage: {
                 '@type': 'ImageObject',
-                url: `https://costa-blanca-invest.com${imageBase(currentLang)}1.jpg`
+                url: `https://costa-blanca-invest.com${imageBase()}1.jpg`
               }
             },
             {
               '@type': 'Product',
               name: 'Maranon',
               description: t.schema_product_description,
-              image: PROPERTY_DATA.images.map((img) => `https://costa-blanca-invest.com${imageBase(currentLang)}${img}`),
+              image: PROPERTY_DATA.images.map((img) => `https://costa-blanca-invest.com${imageBase()}${img}`),
               brand: { '@type': 'Brand', name: 'Costa Blanca Invest' },
               offers: {
                 '@type': 'Offer',
@@ -791,7 +791,12 @@
         copyLinkBtn.addEventListener('click', async () => {
           const t = PROPERTY_DATA.translations[currentLang];
           const shareUrl = `https://costa-blanca-invest.com${t.path}`;
-          const shareText = `🏡 ${t.og_title}\n💰 ${t.price_range || t.share_note_strong}\n📍 ${t.share_params}\n✨ ${t.share_description}\n🔗 ${shareUrl}`;
+          const shareText = `${shareUrl}
+
+🏡 ${t.og_title}
+💰 ${t.price_range || t.share_note_strong}
+📍 ${t.share_params}
+✨ ${t.share_description}`;
           const copyLabel = copyLinkBtn.querySelector('span');
 
           try {
