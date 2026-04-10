@@ -45,6 +45,9 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/new-developments/">
+  <link rel="alternate" hreflang="es" href="https://costa-blanca-invest.com/es/new-developments/">
+  <link rel="alternate" hreflang="en" href="https://costa-blanca-invest.com/en/new-developments/">
+  <link rel="alternate" hreflang="ru" href="https://costa-blanca-invest.com/ru/new-developments/">
   <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,18 +110,19 @@
 
     .topbar{
       position:sticky;top:0;z-index:50;
-      background:var(--glass-light);
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(255,255,255,.28);
-      box-shadow:0 10px 40px rgba(15,23,42,.06);
-      transition:transform .35s ease;
+      background:rgba(255,255,255,.55);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(255,255,255,.18);
+      box-shadow:0 6px 24px rgba(15,23,42,.04);
+      transition:transform .35s ease, background .3s ease, box-shadow .3s ease;
       will-change:transform;
     }
     .topbar.hide{transform:translateY(-100%)}
-    .topbar-inner{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:24px;min-height:var(--header-height)}
+    .topbar-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:var(--header-height)}
     .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(94,198,232,.15);flex:0 0 auto}
-    .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:wrap}
+    .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
     .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease}
     .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
@@ -127,13 +131,23 @@
     .page{padding:22px 0 84px}
     .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:0 0 18px;color:var(--muted);font-size:var(--small-size);font-weight:700}
     .breadcrumbs a{color:var(--primary-dark);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.32);box-shadow:0 6px 18px rgba(15,23,42,.05)}
+    .top-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:nowrap;margin:0 0 18px}
+    
+    /* desktop: one row */
+    @media (min-width:769px){
+      .top-controls{flex-direction:row}
+    }
+    .lang-switcher{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin:0}
+    .lang-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:none;font-size:12px;font-weight:700;cursor:pointer;background:linear-gradient(145deg,rgba(230,194,122,.92),rgba(207,167,90,.84));color:#fff;box-shadow:0 10px 24px rgba(15,23,42,.12), inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .2s ease}
+    .lang-btn.active{background:#fff;color:var(--accent-dark);box-shadow:0 6px 16px rgba(0,0,0,.12)}
+    .lang-btn:hover{transform:translateY(-2px)}
 
     .hero-card,.section-card,.cta-box,.footer-card{border:1px solid rgba(255,255,255,.5);border-radius:var(--radius);background:var(--surface);backdrop-filter:blur(14px);box-shadow:var(--shadow-lux);overflow:hidden}
     .hero-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);align-items:stretch;min-height:560px}
     .hero-copy{padding:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(94,198,232,.08);color:var(--primary-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(15,23,42,.05);width:fit-content;margin-bottom:16px}
     h1,.section-card h2,.cta-box h2,.seo-article h2,.seo-article h3{color:var(--primary-dark);letter-spacing:-.03em;text-align:center}
-    .subtitle,.lead,.center-text{text-align:center;max-width:920px;margin-left:auto;margin-right:auto;font-size:17px;text-wrap:pretty}
+    .subtitle,.lead,.center-text{display:block;text-align:center !important;max-width:920px;margin:0 auto;padding:0 24px;font-size:17px;line-height:1.7;text-wrap:pretty}
     .hero-image{position:relative;min-height:100%;background:var(--primary-pale);isolation:isolate}
     .hero-image::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.02) 0%,rgba(15,23,42,.16) 72%,rgba(15,23,42,.24) 100%),radial-gradient(circle at 78% 18%,rgba(255,255,255,.18),transparent 24%);z-index:1;pointer-events:none}
     .hero-image img{width:100%;height:100%;min-height:100%;object-fit:cover;transition:transform .6s ease,filter .35s ease}
@@ -240,21 +254,30 @@
     }
 
     @media (max-width:768px){
+      .topbar{position:sticky;top:0;bottom:auto;width:100%}
+      .topbar-inner{width:100%;grid-template-columns:1fr;gap:6px;padding:8px 0;min-height:auto;justify-items:center}
+      .brand{justify-self:center;text-align:center;font-size:15px}
+      .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;justify-content:stretch;align-items:stretch;overflow:visible;padding:0}
+      .nav a{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 8px;text-align:center;font-size:13px;line-height:1.15;white-space:normal;border-radius:8px;background:rgba(255,255,255,.55)}
+      .nav a:nth-child(-n+3){order:1}
+      .nav a:nth-child(n+4){order:2}
+      .top-controls{justify-content:center;margin-bottom:14px;flex-direction:column}
+      .top-controls > *{order:1}
+      .lang-switcher{order:2;justify-content:center;gap:8px}
+      .hero-copy{padding:22px 20px;align-items:center;text-align:center;overflow:hidden}
+      .eyebrow{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}
+      .hero-copy h1{width:100%;max-width:100%;padding:0 12px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
+      .subtitle,.lead,.center-text{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 20px;text-align:center !important;overflow-wrap:anywhere}
       p{text-align:left;text-justify:auto;hyphens:none}
       .section-card > p,.cta-box > p,.center-text,.subtitle,.lead{text-align:center}
       .why-item p,.step-card p,.location-card p,.faq-card p,.project-card .card-body p,.footer-copy,.seo-article p{text-align:justify;text-justify:inter-word;hyphens:auto}
       .topbar{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-      .topbar-inner{width:100%;grid-template-columns:1fr;gap:10px;padding:12px 0;min-height:auto;justify-items:center}
-      .brand{justify-self:center;text-align:center}
       .breadcrumbs{justify-content:center;text-align:center}
       .footer-links a,.contact-links a{text-align:center}
       .project-card .card-body,.category-card .card-body,.why-item,.step-card,.location-card,.faq-card{text-align:left}
       .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3{text-align:left}
       .inline-list span{text-align:center}
       .container{padding:0 14px}
-      .nav{justify-content:flex-start;align-items:center;gap:14px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;width:100%;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-      .nav::-webkit-scrollbar{display:none}
-      .nav a{flex:0 0 auto;white-space:nowrap;text-align:center;font-size:14px;line-height:1.3}
       .page{padding:14px 0 56px}
       .hero-copy,.section-card,.cta-box,.footer-card,.contact-box{padding:22px}
       .hero-image,.hero-image img{min-height:300px}
@@ -266,6 +289,11 @@
     }
 
     @media (max-width:560px){
+      .lang-btn{width:30px;height:30px;font-size:10px}
+      .hero-copy{padding:18px 16px}
+      .eyebrow{padding:8px 12px;font-size:11px}
+      .hero-copy h1{padding:0 8px}
+      .subtitle,.lead,.center-text{padding:0 14px}
       p{font-size:15px;line-height:1.65}
       .subtitle,.lead,.center-text{font-size:15px;line-height:1.6}
       .contact-note{font-size:12px}
@@ -318,11 +346,17 @@
       <nav class="nav" aria-label="Główna nawigacja">
         <a href="https://costa-blanca-invest.com/">Strona główna</a>
         <a href="https://costa-blanca-invest.com/#directions">Kategorie</a>
+        <a href="#contact">Kontakt</a>
         <a href="/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
         <a href="/pl/plots/">Działki</a>
         <a href="/pl/build-house/">Budowa domu</a>
-        <a href="#contact">Kontakt</a>
       </nav>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button class="lang-btn active" type="button" data-lang="pl">PL</button>
+        <button class="lang-btn" type="button" data-lang="es">ES</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+        <button class="lang-btn" type="button" data-lang="ru">RU</button>
+      </div>
     </div>
   </header>
 
@@ -333,6 +367,9 @@
         <span>›</span>
         <span>Nowe inwestycje</span>
       </nav>
+
+      
+      </div>
 
       <section class="hero-card">
         <div class="hero-copy">
@@ -589,15 +626,102 @@
       "chip": "Nowa inwestycja · Plan ratalny",
       "title": "Monteagudo — apartamenty w Torrevieja",
       "meta": "Torrevieja · Monteagudo · elastyczna płatność",
-      "price": "од 132 000 €",
-      "desc": "Dwa warianty zakupu: cena inwestorska przy pełnej płatności lub od 132 000 € w systemie ratalnym — 10 000 € zaliczki, 30% w ciągu miesiąca, 30% po 4–6 miesiącach, reszta u notariusza. W cenie: wykończenie, kuchnia, wyposażona łazienka, ogrzewanie podłogowe, klimatyzacja centralna, okna PVC i pełne instalacje."
+      "price": "od 104 000 €",
+      "desc": "Dwa warianty zakupu: cena inwestorska przy pełnej płatności lub od 104 000 € w systemie ratalnym — 10 000 € zaliczki, 30% w ciągu miesiąca, 30% po 4–6 miesiącach, reszta u notariusza. W cenie: wykończenie, kuchnia, wyposażona łazienka, ogrzewanie podłogowe, klimatyzacja centralna, okna PVC i pełne instalacje."
+    },
+    {
+      "href": "/pl/new-developments/investment-coming-soon/",
+      "image": "/pl/new-developments/images/new-developments-costa-blanca.jpg",
+      "alt": "Nowe inwestycje od deweloperów na Costa Blanca — oferta w przygotowaniu",
+      "chip": "Nowe inwestycje · W przygotowaniu",
+      "title": "Nowe inwestycje od deweloperów",
+      "meta": "Costa Blanca · Alicante · Benidorm",
+      "price": "Aktualizujemy oferty i ceny",
+      "desc": "Dodajemy nowe projekty od deweloperów. Skontaktuj się z nami, aby otrzymać aktualne propozycje dostępne teraz.",
+      "isComingSoon": true
     }
   ]
   </script>
 
   <script>
-    document.addEventListener('DOMContentLoaded',()=>{
+    const SUPPORTED_LANGS=['pl','es','en','ru'];
+    const CATEGORY_TRANSLATIONS={
+      pl:{
+        page_title:'Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm',
+        meta_description:'Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm: apartamenty, penthouse’y i wille od deweloperów. Projekty pod inwestycję, wynajem i second home w Hiszpanii.',
+        og_locale:'pl_PL',
+        hero_eyebrow:'Nowe inwestycje · Costa Blanca',
+        hero_title:'Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów',
+        hero_subtitle:'Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.',
+        hero_lead:'Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.',
+        nav_home:'Strona główna',nav_categories:'Kategorie',nav_contact:'Kontakt',nav_new:'Nowe inwestycje',nav_plots:'Działki',nav_build:'Budowa domu',
+        breadcrumbs_home:'Strona główna',breadcrumbs_current:'Nowe inwestycje',
+        why_title:'Dlaczego warto inwestować w nowe inwestycje Costa Blanca Alicante–Benidorm',
+        why_1_h:'Stabilny rynek nieruchomości',why_1_p:'Costa Blanca to jeden z najbardziej stabilnych regionów w Hiszpanii z całorocznym popytem na zakup i wynajem nieruchomości.',
+        why_2_h:'Wysoki potencjał ROI',why_2_p:'Nowe inwestycje Alicante i Benidorm oferują średni zwrot na poziomie 5–7% rocznie przy dobrze dobranym projekcie.',
+        why_3_h:'Bezpieczny zakup od dewelopera',why_3_p:'Apartamenty i wille od dewelopera w Hiszpanii to przejrzysty proces, nowoczesne standardy i gwarancje jakości.',
+        projects_title:'Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów',projects_intro:'Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.',
+        process_title:'Jak wybieramy new developments Alicante Spain i Costa Blanca',
+        process_1_h:'1. Analiza lokalizacji',process_1_p:'Sprawdzamy potencjał inwestycyjny Alicante, Benidorm i okolic pod kątem popytu, infrastruktury i wynajmu.',
+        process_2_h:'2. Weryfikacja dewelopera',process_2_p:'Analizujemy doświadczenie dewelopera, jakość realizacji oraz bezpieczeństwo prawne inwestycji.',
+        process_3_h:'3. Strategia inwestycyjna',process_3_p:'Dopasowujemy inwestycję do celu: wynajem, wzrost wartości lub zakup drugiego domu w Hiszpanii.',
+        locations_title:'Najlepsze lokalizacje: nowe mieszkania Alicante i property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm i Torre de la Horadada należą do najczęściej wybieranych kierunków dla klientów szukających nowej nieruchomości w Hiszpanii.',
+        loc_1_h:'Alicante — nowe mieszkania i apartamenty',loc_1_p:'Nowe mieszkania i apartamenty od dewelopera z wysokim potencjałem wynajmu oraz dobrym dostępem do miasta, lotniska i plaż.',
+        loc_2_h:'Benidorm i Finestrat — property for sale new build',loc_2_p:'Nowoczesne inwestycje premium z widokiem, rozwiniętą infrastrukturą i atrakcyjnym profilem inwestycyjnym.',
+        loc_3_h:'Torre de la Horadada',loc_3_p:'Kameralne lokalizacje blisko morza, idealne pod second home, spokojny styl życia i zakup wakacyjnej nieruchomości.',
+        faq_title:'FAQ — nowe inwestycje na Costa Blanca',
+        faq_1_h:'Czy warto kupić nowe inwestycje w Alicante?',faq_1_p:'Tak. Alicante oferuje stabilny popyt, rozwiniętą infrastrukturę i wysoki potencjał wynajmu przez cały rok.',
+        faq_2_h:'Ile kosztują nowe mieszkania w Alicante?',faq_2_p:'Ceny zależą od lokalizacji i standardu, ale nowe mieszkania w Alicante zaczynają się od około 200 000 €.',
+        faq_3_h:'Czy Benidorm to dobra lokalizacja inwestycyjna?',faq_3_p:'Tak. Benidorm i Finestrat należą do najmocniejszych segmentów rynku premium na Costa Blanca i przyciągają klientów przez cały rok.',
+        categories_title:'Inne główne kategorie',cat_1_h:'Działki',cat_1_p:'Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.',cat_2_h:'Budowa domu',cat_2_p:'Kompleksowa realizacja domu w Hiszpanii — od działki po wykończenie pod klucz.',
+        seo_h2:'Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm',seo_1_h:'Rynek nowych inwestycji w Hiszpanii',seo_1_p:'Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.',seo_2_h:'Najbardziej popularne lokalizacje',seo_2_p:'Największym zainteresowaniem cieszą się nowe mieszkania w Alicante oraz nowoczesne inwestycje w Benidormie i Finestrat. To projekty projektowane pod wynajem krótkoterminowy i długoterminowy, ale również pod własne użytkowanie jako second home w Hiszpanii.',seo_3_h:'Apartamenty i wille od deweloperów',seo_3_p:'Apartamenty i wille od deweloperów to rozwiązanie dla osób, które chcą kupić nieruchomość w uporządkowanym procesie, bez konieczności prowadzenia budowy. Nowe inwestycje powstają w najlepszych lokalizacjach — blisko morza, infrastruktury i stref turystycznych, co bezpośrednio wpływa na ich potencjał inwestycyjny.',seo_4_h:'Strategie inwestycyjne',seo_4_p:'W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.',
+        contact_title:'Zapytaj o aktualne inwestycje',contact_intro:'Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.',contact_note:'💡 Odpowiadam w 10–15 minut',contact_role:'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm',call_now:'📞 Zadzwoń teraz',write_now:'💬 Napisz',share_title:'Udostępnij stronę',share_link:'🔗 Link',share_copied:'✅ Skopiowano',share_shared:'Link został udostępniony.',share_copied_status:'Link został skopiowany.',share_prompt:'Skopiuj link:',form_name:'Twoje imię',form_phone:'Telefon / WhatsApp',form_email:'Email',form_message:'Napisz, jaka inwestycja Cię interesuje',form_submit:'📩 Wyślij zapytanie',wa_lead:'Interesuje mnie nowa inwestycja na Costa Blanca.',wa_form_prefix:'Nowe zapytanie ze strony Nowe inwestycje:',
+        footer_copy:'Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.',footer_1:'Nowe inwestycje',footer_2:'Działki',footer_3:'Budowa domu',footer_4:'Kategorie inwestycji',footer_5:'Strategia inwestycyjna',footer_6:'Kontakt',footer_bottom:'© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.',sticky_wa:'💬 WhatsApp',card_link:'Zobacz inwestycję →',card_link_soon:'Zobacz ofertę →',empty_h:'Oferty w przygotowaniu',empty_p:'Skontaktuj się z nami, aby otrzymać aktualne propozycje inwestycji na Costa Blanca.'
+      },
+      es:{
+        page_title:'Obra nueva en Costa Blanca | Apartamentos y villas de promotor Alicante–Benidorm',meta_description:'Obra nueva en Costa Blanca en la zona Alicante–Benidorm: apartamentos, áticos y villas de promotor. Proyectos para inversión, alquiler y segunda residencia en España.',og_locale:'es_ES',hero_eyebrow:'Obra nueva · Costa Blanca',hero_title:'Obra nueva en Costa Blanca — apartamentos y villas de promotor',hero_subtitle:'Selección de obra nueva en Costa Blanca para cliente privado e inversor — de Alicante a Benidorm, con foco en ubicación y potencial de revalorización.',hero_lead:'Te ayudamos a elegir obra nueva con potencial de crecimiento, alquiler y compra segura en España — desde apartamentos hasta villas premium.',nav_home:'Inicio',nav_categories:'Categorías',nav_contact:'Contacto',nav_new:'Obra nueva',nav_plots:'Parcelas',nav_build:'Construcción',breadcrumbs_home:'Inicio',breadcrumbs_current:'Obra nueva',why_title:'Por qué invertir en obra nueva Costa Blanca Alicante–Benidorm',why_1_h:'Mercado inmobiliario estable',why_1_p:'Costa Blanca es una de las regiones más estables de España con demanda durante todo el año para compra y alquiler.',why_2_h:'Alto potencial ROI',why_2_p:'La obra nueva en Alicante y Benidorm ofrece una rentabilidad media del 5–7% anual con el proyecto adecuado.',why_3_h:'Compra segura al promotor',why_3_p:'Apartamentos y villas de promotor en España significan un proceso claro, estándares modernos y garantías de calidad.',projects_title:'Obra nueva Costa Blanca — apartamentos y villas de promotor',projects_intro:'Cada proyecto lleva a una oferta detallada con descripción, fotos, parámetros y ubicación.',process_title:'Cómo seleccionamos new developments Alicante Spain y Costa Blanca',process_1_h:'1. Análisis de ubicación',process_1_p:'Evaluamos el potencial de inversión de Alicante, Benidorm y alrededores en demanda, infraestructura y alquiler.',process_2_h:'2. Verificación del promotor',process_2_p:'Analizamos la experiencia del promotor, la calidad de ejecución y la seguridad jurídica.',process_3_h:'3. Estrategia de inversión',process_3_p:'Ajustamos la inversión al objetivo: alquiler, revalorización o compra de segunda residencia en España.',locations_title:'Mejores ubicaciones: vivienda nueva Alicante y property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm y Torre de la Horadada están entre los destinos más elegidos por quienes buscan vivienda nueva en España.',loc_1_h:'Alicante — pisos y apartamentos nuevos',loc_1_p:'Viviendas nuevas de promotor con alto potencial de alquiler y buen acceso a ciudad, aeropuerto y playas.',loc_2_h:'Benidorm y Finestrat — obra nueva',loc_2_p:'Inversiones premium modernas con vistas, buena infraestructura y atractivo perfil inversor.',loc_3_h:'Torre de la Horadada',loc_3_p:'Ubicaciones tranquilas junto al mar, ideales como segunda residencia o compra vacacional.',faq_title:'FAQ — obra nueva en Costa Blan('DOMContentLoaded',()=>{
       const d=document;
+      const langButtons=d.querySelectorAll('.lang-btn');
+      const heroImage=d.querySelector('.hero-image img');
+      const navLinks=d.querySelectorAll('.nav a');
+      const eyebrow=d.querySelector('.eyebrow');
+      const heroTitle=d.querySelector('.hero-copy h1');
+      const heroSubtitle=d.querySelector('.subtitle');
+      const heroLead=d.querySelector('.lead');
+
+      function setAttr(selector,attr,value){ const el=d.querySelector(selector); if(el) el.setAttribute(attr,value); }
+      function getInitialLang(){ const url=new URL(window.location.href); const lang=url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
+      function updateUrlLang(lang){ const url=new URL(window.location.href); if(lang==='pl') url.searchParams.delete('lang'); else url.searchParams.set('lang',lang); window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`); }
+      function applyLanguage(lang,syncUrl=true){
+        const t=CATEGORY_TRANSLATIONS[SUPPORTED_LANGS.includes(lang)?lang:'pl'];
+        document.documentElement.lang=t===CATEGORY_TRANSLATIONS.en?'en':t===CATEGORY_TRANSLATIONS.es?'es':t===CATEGORY_TRANSLATIONS.ru?'ru':'pl';
+        document.title=t.page_title;
+        setAttr('meta[name="description"]','content',t.meta_description);
+        setAttr('meta[property="og:title"]','content',t.page_title);
+        setAttr('meta[property="og:description"]','content',t.meta_description);
+        setAttr('meta[property="og:locale"]','content',t.og_locale);
+        setAttr('meta[name="twitter:title"]','content',t.page_title);
+        setAttr('meta[name="twitter:description"]','content',t.meta_description);
+        if(eyebrow) eyebrow.textContent=t.hero_eyebrow;
+        if(heroTitle) heroTitle.textContent=t.hero_title;
+        if(heroSubtitle) heroSubtitle.textContent=t.hero_subtitle;
+        if(heroLead) heroLead.textContent=t.hero_lead;
+        if(navLinks.length>=6){
+          navLinks[0].textContent=t.nav_home;
+          navLinks[1].textContent=t.nav_categories;
+          navLinks[2].textContent=t.nav_contact;
+          navLinks[3].textContent=t.nav_new;
+          navLinks[4].textContent=t.nav_plots;
+          navLinks[5].textContent=t.nav_build;
+        }
+        langButtons.forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+        if(syncUrl) updateUrlLang(lang);
+        if(heroImage && heroImage.dataset.originalSrc){ heroImage.src=heroImage.dataset.originalSrc; }
+      }
+
+      if(heroImage){ heroImage.dataset.originalSrc=heroImage.getAttribute('src') || ''; }
+      langButtons.forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang,true)));
+      applyLanguage(getInitialLang(),false);
       const contactForm=d.getElementById('contact-form');
       const animatedCards=d.querySelectorAll('.fade-up');
       const header=d.querySelector('.topbar');
@@ -646,7 +770,14 @@
           projectsGrid.innerHTML='<div class="project-card"><div class="card-body"><h3>Oferty w przygotowaniu</h3><p>Skontaktuj się z nami, aby otrzymać aktualne propozycje inwestycji na Costa Blanca.</p></div></div>';
           return;
         }
-        projectsGrid.innerHTML=projects.map(project=>`
+
+        const sortedProjects=[...projects].sort((a,b)=>{
+          const aComingSoon=a?.isComingSoon===true ? 1 : 0;
+          const bComingSoon=b?.isComingSoon===true ? 1 : 0;
+          return aComingSoon-bComingSoon;
+        });
+
+        projectsGrid.innerHTML=sortedProjects.map(project=>`
           <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(project.alt || project.title)}">
             <img src="${escapeHtml(project.image || fallbackImage)}" alt="${escapeHtml(project.alt || project.title)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
             <div class="card-body">
@@ -655,7 +786,7 @@
               ${project.meta ? `<div class="card-meta">${escapeHtml(project.meta)}</div>` : ''}
               ${project.price ? `<div class="card-price">${escapeHtml(project.price)}</div>` : ''}
               ${project.desc ? `<p>${escapeHtml(project.desc)}</p>` : ''}
-              <div class="card-link">Zobacz inwestycję →</div>
+              <div class="card-link">${project.isComingSoon ? 'Zobacz ofertę →' : 'Zobacz inwestycję →'}</div>
             </div>
           </a>
         `).join('');
