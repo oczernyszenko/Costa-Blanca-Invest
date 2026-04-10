@@ -1190,6 +1190,8 @@
           <div class="share-actions">
             <button class="share-btn copy" type="button" id="share-link"><span>Kopiuj link</span></button>
             <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer"><span>Facebook</span></a>
+            <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span></a>
+            <button class="share-btn" type="button" id="share-native"><span>Udostępnij</span></button>
           </div>
         </div>
       </section>
@@ -1603,8 +1605,8 @@
             footerLinks[1].textContent = t.footer_new; footerLinks[1].href = buildLangUrl('/pl/new-developments/', state.currentLang);
             footerLinks[2].textContent = t.footer_plots; footerLinks[2].href = buildLangUrl('/pl/plots/', state.currentLang);
             footerLinks[3].textContent = t.footer_build; footerLinks[3].href = buildLangUrl('/pl/build-house/', state.currentLang);
-            footerLinks[4].textContent = t.footer_process;
-            footerLinks[5].textContent = t.footer_contact;
+            footerLinks[4].textContent = t.footer_process; footerLinks[4].href = '#process';
+            footerLinks[5].textContent = t.footer_contact; footerLinks[5].href = '#contact';
           }
           const celeb = footer.querySelector('div[style*="font-size:15px"]');
           if (celeb) celeb.innerHTML = t.footer_celeb;
@@ -1612,9 +1614,19 @@
           if (footerBottom) footerBottom.textContent = t.footer_bottom;
         }
 
+        const shareUrl = getShareUrl();
         if (shareFacebook) {
-          const shareUrl = getShareUrl();
           shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        }
+
+        const shareWhatsapp = document.getElementById('share-whatsapp');
+        if (shareWhatsapp) {
+          shareWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
+        }
+
+        const shareNative = document.getElementById('share-native');
+        if (shareNative) {
+          shareNative.hidden = !navigator.share;
         }
         langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
         if (syncUrl) updateUrlLang(state.currentLang);
@@ -1623,6 +1635,21 @@
       state.currentLang = getInitialLang();
       applyLanguage(state.currentLang, false);
       langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true)));
+
+      const shareNative = document.getElementById('share-native');
+      if (shareNative) {
+        shareNative.addEventListener('click', async () => {
+          if (!navigator.share) return;
+          const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
+          try {
+            await navigator.share({
+              title: t.page_title,
+              text: t.meta_description,
+              url: getShareUrl()
+            });
+          } catch (error) {}
+        });
+      }
 
       if (shareLinkBtn) {
         shareLinkBtn.addEventListener('click', async () => {
