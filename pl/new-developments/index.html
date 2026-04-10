@@ -1057,22 +1057,14 @@
           const shareTitle = t.page_title;
           const shareText = `${shareTitle}
 ${shareUrl}`;
-          const shareData = {
-            title: shareTitle,
-            text: shareTitle,
-            url: shareUrl
-          };
           try {
-            if (navigator.share) {
-              await navigator.share(shareData);
-              setShareStatus(t.share_shared);
-              return;
-            }
             const copied = await copyTextToClipboard(shareText);
             if (copied) {
               el.shareLinkBtn.textContent = t.share_copied;
               setShareStatus(t.share_copied_status);
-              setTimeout(() => { el.shareLinkBtn.textContent = t.share_link; }, 1800);
+              setTimeout(() => {
+                el.shareLinkBtn.textContent = t.share_link;
+              }, 1800);
               return;
             }
             window.prompt(t.share_prompt, shareText);
