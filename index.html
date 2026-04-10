@@ -34,6 +34,7 @@
   <meta property="og:title" content="Costa Blanca Invest | Nieruchomości w Hiszpanii na Costa Blanca">
   <meta property="og:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
   <meta property="og:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
+  <meta property="og:image:url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
   <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -46,6 +47,7 @@
   <meta name="twitter:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
   <meta name="twitter:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
   <meta name="twitter:image:alt" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca">
+  <meta name="twitter:url" content="https://costa-blanca-invest.com/">
 
   <style>
     :root {
@@ -1477,12 +1479,14 @@
         setMeta('meta[property="og:locale"]', 'content', t.og_locale);
         setMeta('meta[property="og:url"]', 'content', getShareUrl(state.currentLang));
         setMeta('meta[property="og:image"]', 'content', SHARE_IMAGE);
+        setMeta('meta[property="og:image:url"]', 'content', SHARE_IMAGE);
         setMeta('meta[property="og:image:secure_url"]', 'content', SHARE_IMAGE);
         setMeta('meta[property="og:image:alt"]', 'content', t.og_image_alt);
         setMeta('meta[name="twitter:title"]', 'content', t.page_title);
         setMeta('meta[name="twitter:description"]', 'content', t.meta_description);
         setMeta('meta[name="twitter:image"]', 'content', SHARE_IMAGE);
         setMeta('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
+        setMeta('meta[name="twitter:url"]', 'content', getShareUrl(state.currentLang));
 
         if (brand) brand.setAttribute('aria-label', t.brand_aria);
         if (nav) nav.setAttribute('aria-label', t.nav_aria);
@@ -1611,7 +1615,7 @@
         }
 
         if (shareFacebook) {
-          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl(state.currentLang))}`;
+          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(DEFAULT_HOME_URL)}`;
         }
         langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
         if (syncUrl) updateUrlLang(state.currentLang);
