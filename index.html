@@ -6,12 +6,6 @@
   <title>Costa Blanca Invest | Nieruchomości w Hiszpanii: nowe inwestycje, działki i budowa domu</title>
   <meta name="description" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje od deweloperów, działki pod budowę oraz kompleksowa realizacja domu. Sprawdzone oferty i bezpieczny proces zakupu.">
   <link rel="canonical" href="https://costa-blanca-invest.com/">
-  <!-- URL standard for Polish pages:
-       Home: /pl/
-       New developments: /pl/new-developments/
-       Plots: /pl/plots/
-       Build house: /pl/build-house/
-       Use root / only for main x-default version. -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#296c76">
@@ -22,7 +16,6 @@
   <link rel="dns-prefetch" href="//www.facebook.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="/images/costa-blanca-real-estate-sea-view.jpg" fetchpriority="high">
-  <!-- Luxury gradient favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -31,13 +24,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" hreflang="pl" href="https://costa-blanca-invest.com/pl/">
   <link rel="alternate" hreflang="x-default" href="https://costa-blanca-invest.com/">
-  <!-- Sharing and linking rules:
-       1) canonical, og:url and JSON-LD WebPage url must always be identical.
-       2) SHARE_IMAGE must be absolute URL, 1200x630 preferred.
-       3) Polish internal links use /pl/, /pl/new-developments/, /pl/plots/, /pl/build-house/.
-       4) x-default should point to the main default version of the page.
-       5) Logo and "Strona główna" on Polish pages should point to /pl/.
-  -->
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
@@ -138,7 +124,7 @@
 
     .topbar-inner {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
       gap: 24px;
       min-height: var(--header-height);
@@ -198,6 +184,43 @@
     .nav a[aria-current="page"] { color: var(--primary-dark); }
     .nav a:hover::after,
     .nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+    .lang-switcher{
+      position:relative;
+      z-index:100;
+      display:flex;
+      gap:4px;
+      align-items:center;
+      justify-content:flex-end;
+      flex-wrap:nowrap;
+      margin:0;
+      padding:6px;
+      background:#fff;
+      border:1px solid rgba(31,84,92,.10);
+      border-radius:999px;
+      box-shadow:0 8px 20px rgba(15,23,42,.10);
+      isolation:isolate;
+      overflow:hidden;
+      line-height:1;
+      min-height:56px;
+    }
+    .lang-switcher::before{content:"";position:absolute;inset:0;background:#fff;border-radius:inherit;z-index:0;pointer-events:none}
+    .lang-btn{
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 44px;
+      width:44px;height:44px;min-width:44px;min-height:44px;max-width:44px;max-height:44px;
+      border-radius:50%;border:none;padding:0;margin:0;font-size:13px;line-height:1;font-weight:800;cursor:pointer;
+      color:#fff;background:linear-gradient(135deg,#9fcad3,#76b5c5);box-shadow:0 6px 14px rgba(118,181,197,.35);
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;
+      appearance:none;-webkit-appearance:none;transform:translateZ(0);backface-visibility:hidden;overflow:hidden;
+    }
+    .lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 8px 20px rgba(41,108,118,.35);transform:scale(1.05)}
+    .lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 22px rgba(118,181,197,.5)}
+    .lang-btn:active{transform:scale(.95)}
 
     .page { padding: 22px 0 84px; }
 
@@ -533,10 +556,6 @@
       transform: translateY(-8px) scale(1.01);
       box-shadow: 0 34px 80px rgba(15,23,42,.16);
     }
-    .direction-card:hover {
-      transform: translateY(-8px) scale(1.01);
-      box-shadow: 0 34px 80px rgba(15,23,42,.16);
-    }
     .direction-card img {
       width: 100%;
       aspect-ratio: 16 / 10;
@@ -816,32 +835,42 @@
     @media (max-width: 768px) {
       .container { padding: 0 14px; }
       .topbar-inner {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 12px 0;
-        min-height: auto;
-        justify-items: center;
+        width:100%;
+        grid-template-columns:1fr;
+        gap:8px;
+        padding:8px 0;
+        min-height:auto;
+        justify-items:center;
       }
-      .brand { justify-self: center; text-align: center; }
+      .brand { justify-self:center; text-align:center; font-size:15px; max-width:100%; overflow-wrap:anywhere; }
       .nav {
-        justify-content: flex-start;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        width: 100%;
-        padding: 2px 2px 8px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:6px;
+        width:100%;
+        justify-content:stretch;
+        align-items:stretch;
+        overflow:visible;
+        padding:0;
+        flex-wrap:unset;
+        scroll-snap-type:none;
       }
-      .nav::-webkit-scrollbar { display: none; }
       .nav a {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.3;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:38px;
+        padding:6px 6px;
+        text-align:center;
+        font-size:12px;
+        line-height:1.15;
+        white-space:normal;
+        border-radius:10px;
+        background:rgba(255,255,255,.62);
+        overflow-wrap:anywhere;
+        word-break:break-word;
       }
+      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px;max-width:100%}
       .page { padding: 14px 0 56px; }
       .hero-copy,
       .section-card,
@@ -868,6 +897,8 @@
     }
 
     @media (max-width: 560px) {
+      .lang-switcher{gap:4px;padding:4px;min-height:44px}
+      .lang-btn{flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;max-width:36px;max-height:36px;border-radius:50%;font-size:11px;line-height:1}
       .container { padding: 0 10px; }
       .hero-card,
       .section-card,
@@ -895,6 +926,16 @@
       .sticky-wa { min-width: 116px; }
     }
 
+    @media (max-width: 420px){
+      .container{padding:0 8px}
+      .topbar-inner{gap:6px;padding:6px 0}
+      .brand{font-size:14px}
+      .nav{grid-template-columns:repeat(3,1fr);gap:5px}
+      .nav a{min-height:36px;font-size:11px;padding:6px}
+      .lang-switcher{padding:3px;gap:3px;min-height:42px}
+      .lang-btn{flex:0 0 34px;width:34px;height:34px;min-width:34px;min-height:34px;max-width:34px;max-height:34px;font-size:10px}
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
@@ -905,25 +946,28 @@
   </style>
 </head>
 <body>
-  <!-- ===== UNIFIED TEMPLATE: HEADER START ===== -->
-  <!-- Dla polskich stron używaj /pl/ jako strony głównej. Root / zostaw dla wersji głównej lub x-default. -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
         <a href="/" aria-current="page">Strona główna</a>
-        <a href="/pl/new-developments/">Nowe inwestycje</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#directions">Kategorie</a>
         <a href="/pl/plots/">Działki</a>
         <a href="/pl/build-house/">Budowa domu</a>
-        <a href="#contact">Kontakt</a>
+        <a href="/pl/new-developments/">Nowe inwestycje</a>
       </nav>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button class="lang-btn active" type="button" data-lang="pl">PL</button>
+        <button class="lang-btn" type="button" data-lang="es">ES</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+        <button class="lang-btn" type="button" data-lang="ru">RU</button>
+      </div>
     </div>
   </header>
-  <!-- ===== UNIFIED TEMPLATE: HEADER END ===== -->
 
   <main class="page">
     <div class="container">
-      <!-- ===== PAGE-SPECIFIC CONTENT START ===== -->
       <section class="hero-card">
         <div class="hero-media">
           <img src="/images/costa-blanca-real-estate-sea-view.jpg" alt="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje, działki budowlane i budowa domu z widokiem na morze" width="1200" height="630" fetchpriority="high" decoding="async">
@@ -954,15 +998,8 @@
             </div>
           </div>
         </div>
-                <div style="margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(24,119,242,.06);border:1px solid rgba(24,119,242,.18);max-width:780px;">
-            <p style="margin:0;font-size:14px;color:#1f2933;text-align:center;">
-              Współpracuję z agencją nieruchomości <strong>Celebrity</strong>. Wszystkie prezentowane oferty stanowią portfolio tej agencji i pochodzą z jej działalności operacyjnej.
-            </p>
-          </div>
-        </div>
       </section>
 
-      <!-- Duplicate and adapt the blocks below for category pages, project pages, and landing pages -->
       <section class="section-card fade-up" id="directions">
         <h2>3 główne kierunki zakupu nieruchomości na Costa Blanca</h2>
         <p class="center-text">Wybierz ścieżkę, która najlepiej odpowiada Twojemu celowi: gotowa nowa nieruchomość, działka pod inwestycję lub budowa domu od podstaw.</p>
@@ -1079,34 +1116,14 @@
         <div class="share-box">
           <p>Udostępnij stronę</p>
           <div class="share-actions">
-            <button class="share-btn native" type="button" id="share-native">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.27 3.27 0 0 0 0-1.39l7-4.11A2.99 2.99 0 1 0 15 5a3 3 0 0 0 .04.49l-7 4.12a3 3 0 1 0 0 4.78l7.05 4.14c-.03.15-.05.31-.05.47a3 3 0 1 0 3-2.92z"/></svg></span>
-              <span>Udostępnij</span>
-            </button>
-            <button class="share-btn copy" type="button" id="share-link">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg></span>
-              <span>Kopiuj link</span>
-            </button>
-            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7v3h3.1v8h3.4z"/></svg></span>
-              <span>Facebook</span>
-            </a>
-            <a class="share-btn telegram" id="share-telegram" href="#" target="_blank" rel="noopener noreferrer">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.9 4.6c.2-1-1-1.8-1.9-1.4L2.6 10.1c-1.2.5-1.1 2.2.1 2.5l4.4 1.4 1.7 5.2c.3 1 1.6 1.3 2.4.5l2.5-2.4 4.8 3.5c.9.7 2.2.2 2.4-.9l1-15.3zM9 13.3l8.9-5.5-6.7 6.5-.3 3.3L9 13.3z"/></svg></span>
-              <span>Telegram</span>
-            </a>
-            <a class="share-btn whatsapp pulse" id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.7 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3zm-8.4 18.2h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4A9.9 9.9 0 0 1 2.1 12C2.1 6.5 6.6 2 12.1 2c2.6 0 5.1 1 6.9 2.9A9.7 9.7 0 0 1 22 12c0 5.5-4.5 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.1-.7.1l-.6.8c-.2.3-.4.3-.7.2-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.5.1.2 1.8 2.8 4.4 3.9.6.3 1.1.5 1.5.6.6.2 1.2.2 1.7.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.1-.2-.2-.5-.4z"/></svg></span>
-              <span>WhatsApp</span>
-            </a>
+            <button class="share-btn copy" type="button" id="share-link"><span>Kopiuj link</span></button>
+            <a class="share-btn fb" id="share-facebook" href="#" target="_blank" rel="noopener noreferrer"><span>Facebook</span></a>
           </div>
         </div>
       </section>
-      <!-- ===== PAGE-SPECIFIC CONTENT END ===== -->
     </div>
   </main>
 
-  <!-- ===== UNIFIED TEMPLATE: FOOTER START ===== -->
   <footer class="footer fade-up show">
     <div class="container">
       <div class="footer-card">
@@ -1126,17 +1143,14 @@
             <div style="flex:1;background:var(--plots);"></div>
             <div style="flex:1;background:var(--eco);"></div>
           </div>
-          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" style="height:46px;object-fit:contain;">
-          <div style="font-size:13px;color:#5f6b76;text-align:center;max-width:420px;">
-            Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentowane nieruchomości są częścią portfolio agencji
-          </div>
+          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" width="220" height="70" loading="lazy" decoding="async" style="height:46px;width:auto;max-width:100%;object-fit:contain;display:block;">
+          <div style="font-size:13px;color:#5f6b76;text-align:center;max-width:420px;">Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentowane nieruchomości są częścią portfolio agencji</div>
         </div>
 
         <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Projekt, koncepcja oraz realizacja należą do autora. Strona działa w ramach współpracy z agencją nieruchomości Celebrity Real Estate — prezentowane nieruchomości i działki oferowane są na zasadach partnerskich.</div>
       </div>
     </div>
   </footer>
-  <!-- ===== UNIFIED TEMPLATE: FOOTER END ===== -->
 
   <div class="sticky-contact" aria-label="Szybki kontakt">
     <div class="wrap">
@@ -1145,61 +1159,394 @@
   </div>
 
   <script>
+    const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
+    const DEFAULT_HOME_URL = 'https://costa-blanca-invest.com/';
+    const SHARE_IMAGE = 'https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg';
+
+    const PAGE_TRANSLATIONS = {
+      pl: {
+        page_title: 'Costa Blanca Invest | Nieruchomości w Hiszpanii: nowe inwestycje, działki i budowa domu',
+        meta_description: 'Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje od deweloperów, działki pod budowę oraz kompleksowa realizacja domu. Sprawdzone oferty i bezpieczny proces zakupu.',
+        og_locale: 'pl_PL',
+        brand_aria: 'Costa Blanca Invest — strona główna',
+        nav_aria: 'Główna nawigacja',
+        hero_alt: 'Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje, działki budowlane i budowa domu z widokiem na morze',
+        og_image_alt: 'Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca: nowe inwestycje, działki i budowa domu',
+        nav_home: 'Strona główna', nav_contact: 'Kontakt', nav_categories: 'Kategorie', nav_plots: 'Działki', nav_build: 'Budowa domu', nav_new: 'Nowe inwestycje',
+        eyebrow: 'Costa Blanca · nieruchomości · inwestycje',
+        hero_title: 'Nieruchomości w Hiszpanii na Costa Blanca — nowe inwestycje, działki i budowa domu',
+        subtitle: 'Costa Blanca Invest pomaga znaleźć odpowiednią nieruchomość w Hiszpanii — od nowych inwestycji od deweloperów, przez działki pod budowę, aż po realizację nowoczesnego domu na Costa Blanca.',
+        lead: 'Pracujemy z klientami, którzy szukają bezpiecznego zakupu, mocnej lokalizacji, potencjału inwestycyjnego i sprawdzonego procesu od pierwszego kontaktu do finalizacji transakcji.',
+        hero_cta_1: 'Zobacz nowe inwestycje', hero_cta_2: 'Poznaj kierunki zakupu',
+        stat_1_n: '3', stat_1_t: 'główne kierunki: nowe inwestycje, działki i budowa domu',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'rynek skoncentrowany na mocnych lokalizacjach i realnym popycie',
+        stat_3_n: '1 kontakt', stat_3_t: 'jedna osoba prowadząca klienta przez cały proces zakupu',
+        directions_title: '3 główne kierunki zakupu nieruchomości na Costa Blanca',
+        directions_intro: 'Wybierz ścieżkę, która najlepiej odpowiada Twojemu celowi: gotowa nowa nieruchomość, działka pod inwestycję lub budowa domu od podstaw.',
+        chip_1: 'Deweloperzy', card_1_h: 'Nowe inwestycje', card_1_p: 'Apartamenty, penthouse’y i wille od sprawdzonych deweloperów w Hiszpanii.',
+        chip_2: 'Grunty', card_2_h: 'Działki', card_2_p: 'Działki inwestycyjne i parcele pod budowę domu lub projektu deweloperskiego.',
+        chip_3: 'Realizacja', card_3_h: 'Budowa domu', card_3_p: 'Kompleksowa budowa nowoczesnego domu na Costa Blanca — od działki po gotowy projekt.',
+        why_title: 'Dlaczego Costa Blanca Invest',
+        why_intro: 'Łączymy selekcję ofert, znajomość rynku Costa Blanca i prostą ścieżkę współpracy dla klientów zagranicznych.',
+        why_1_h: 'Selekcja lokalizacji', why_1_p: 'Skupiamy się na miejscach, które mają realny popyt, dobrą infrastrukturę, dostęp do morza i potencjał utrzymania wartości w czasie.',
+        why_2_h: 'Bezpieczny proces', why_2_p: 'Pomagamy uporządkować ścieżkę zakupu: od wyboru kierunku i typu nieruchomości po kontakt, dokumenty i kolejne etapy decyzji.',
+        why_3_h: 'Podejście inwestycyjne', why_3_p: 'Patrzymy nie tylko na sam wygląd nieruchomości, ale także na płynność, potencjał najmu i sens zakupu w danej lokalizacji.',
+        process_title: 'Jak wygląda współpraca', process_intro: 'Prosty model pracy, który porządkuje wybór nieruchomości i przyspiesza decyzję zakupową.',
+        process_1_h: '1. Cel zakupu', process_1_p: 'Ustalamy, czy szukasz nieruchomości do życia, wynajmu, inwestycji lub działki pod własny projekt.',
+        process_2_h: '2. Selekcja ofert', process_2_p: 'Dobieramy odpowiedni kierunek: nowe inwestycje, działki lub budowę domu, a następnie zawężamy wybór.',
+        process_3_h: '3. Kontakt i dalsze kroki', process_3_p: 'Przechodzimy do rozmowy, dopasowania budżetu i przygotowania kolejnych działań pod konkretną nieruchomość.',
+        seo_h2: 'Nieruchomości Hiszpania — Costa Blanca jako rynek zakupu i inwestycji',
+        seo_h3: 'Co znajdziesz na stronie głównej Costa Blanca Invest',
+        seo_p1: 'Costa Blanca to jeden z najmocniejszych kierunków zakupu nieruchomości w Hiszpanii dla klientów zagranicznych. Największe zainteresowanie dotyczą nowe inwestycje, działki w dobrych lokalizacjach oraz budowa nowoczesnych domów.',
+        seo_p2: 'Strona główna Costa Blanca Invest pełni rolę centralnego punktu nawigacji dla całego serwisu. Jej zadaniem jest prowadzić użytkownika do trzech najważniejszych sekcji: nowych inwestycji od deweloperów, działek oraz budowy domu na Costa Blanca. Taka struktura porządkuje ścieżkę użytkownika i wzmacnia wewnętrzne linkowanie pomiędzy głównymi kategoriami serwisu.',
+        seo_p3: 'Z punktu widzenia SEO homepage powinna opisywać szeroko temat nieruchomości w Hiszpanii na Costa Blanca, ale bez duplikowania treści z podstron kategorii. Dzięki temu każda strona ma własną rolę: strona główna buduje autorytet marki i temat główny, a podstrony odpowiadają za bardziej szczegółowe zapytania, takie jak nowe inwestycje, działki czy budowa domu.',
+        seo_p4: 'Dobrze zaprojektowana strona główna wspiera zarówno użytkownika, jak i indeksację Google. Powinna mieć czytelny H1, mocne linki wewnętrzne do kategorii, logiczne sekcje informacyjne i dane kontaktowe. To właśnie ten układ pomaga budować widoczność organiczną dla fraz związanych z rynkiem nieruchomości Costa Blanca i jednocześnie kieruje ruch do stron bardziej sprzedażowych.',
+        contact_title: 'Porozmawiajmy o nieruchomości na Costa Blanca',
+        contact_intro: 'Skontaktuj się, aby dobrać odpowiedni kierunek zakupu: nowe inwestycje, działkę lub budowę domu dopasowaną do budżetu i celu zakupu.',
+        contact_role: 'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm', celebrity_line: 'Współpraca: agencja nieruchomości Celebrity',
+        call_now: '📞 Zadzwoń teraz', write_now: '💬 Napisz',
+        form_name: 'Twoje imię', form_phone: 'Telefon / WhatsApp', form_email: 'Email', form_message: 'Napisz, czego szukasz na Costa Blanca', form_submit: 'Wyślij zapytanie',
+        share_title: 'Udostępnij stronę', share_copy: 'Kopiuj link', share_copied: '✅ Skopiowano', share_prompt: 'Skopiuj link:',
+        wa_form_prefix: 'Nowe zapytanie ze strony głównej Costa Blanca Invest:',
+        footer_copy: 'Costa Blanca Invest to strona poświęcona rynkowi nieruchomości w Hiszpanii na Costa Blanca. Serwis prowadzi użytkownika do głównych kierunków zakupu: nowych inwestycji, działek oraz budowy domu.',
+        footer_home: 'Strona główna', footer_new: 'Nowe inwestycje', footer_plots: 'Działki', footer_build: 'Budowa domu', footer_process: 'Proces', footer_contact: 'Kontakt',
+        footer_celeb: 'Partnerstwo z Celebrity Real Estate — prezentowane nieruchomości są częścią portfolio agencji',
+        footer_bottom: '© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Projekt, koncepcja oraz realizacja należą do autora. Strona działa w ramach współpracy z agencją nieruchomości Celebrity Real Estate — prezentowane nieruchomości i działki oferowane są na zasadach partnerskich.'
+      },
+      es: {
+        page_title: 'Costa Blanca Invest | Inmuebles en España: obra nueva, parcelas y construcción de casas',
+        meta_description: 'Costa Blanca Invest — inmuebles en España en Costa Blanca: obra nueva, parcelas para construir y ejecución integral de vivienda. Ofertas verificadas y proceso de compra seguro.',
+        og_locale: 'es_ES', brand_aria: 'Costa Blanca Invest — página principal', nav_aria: 'Navegación principal',
+        hero_alt: 'Costa Blanca Invest — inmuebles en España en Costa Blanca: obra nueva, parcelas y construcción de casas con vistas al mar',
+        og_image_alt: 'Costa Blanca Invest — inmuebles en España en Costa Blanca: obra nueva, parcelas y construcción de casas',
+        nav_home: 'Inicio', nav_contact: 'Contacto', nav_categories: 'Categorías', nav_plots: 'Parcelas', nav_build: 'Construcción', nav_new: 'Obra nueva',
+        eyebrow: 'Costa Blanca · inmuebles · inversión', hero_title: 'Inmuebles en España en Costa Blanca — obra nueva, parcelas y construcción de casas',
+        subtitle: 'Costa Blanca Invest ayuda a encontrar la propiedad adecuada en España: desde obra nueva de promotores y parcelas para construir hasta la ejecución de una casa moderna en Costa Blanca.',
+        lead: 'Trabajamos con clientes que buscan una compra segura, una buena ubicación, potencial de inversión y un proceso fiable desde el primer contacto hasta el cierre.',
+        hero_cta_1: 'Ver obra nueva', hero_cta_2: 'Conocer opciones',
+        stat_1_n: '3', stat_1_t: 'líneas principales: obra nueva, parcelas y construcción de casas',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'mercado centrado en ubicaciones sólidas y demanda real',
+        stat_3_n: '1 contacto', stat_3_t: 'una persona acompaña al cliente durante todo el proceso',
+        directions_title: '3 líneas principales para comprar inmuebles en Costa Blanca', directions_intro: 'Elige la ruta que mejor se adapte a tu objetivo: vivienda nueva terminada, parcela para inversión o construcción desde cero.',
+        chip_1: 'Promotores', card_1_h: 'Obra nueva', card_1_p: 'Apartamentos, áticos y villas de promotores fiables en España.',
+        chip_2: 'Suelo', card_2_h: 'Parcelas', card_2_p: 'Parcelas de inversión y suelo para construir una casa o un proyecto promotor.',
+        chip_3: 'Ejecución', card_3_h: 'Construcción de casa', card_3_p: 'Construcción integral de una casa moderna en Costa Blanca — desde la parcela hasta el proyecto terminado.',
+        why_title: 'Por qué Costa Blanca Invest', why_intro: 'Combinamos selección de ofertas, conocimiento del mercado de Costa Blanca y un proceso claro para clientes internacionales.',
+        why_1_h: 'Selección de ubicaciones', why_1_p: 'Nos centramos en lugares con demanda real, buena infraestructura, acceso al mar y potencial para mantener valor en el tiempo.',
+        why_2_h: 'Proceso seguro', why_2_p: 'Ayudamos a ordenar el proceso de compra: desde la elección del rumbo y del tipo de inmueble hasta el contacto, la documentación y las siguientes decisiones.',
+        why_3_h: 'Enfoque inversor', why_3_p: 'Miramos no solo el aspecto de la propiedad, sino también la liquidez, el potencial de alquiler y el sentido de la compra en una ubicación concreta.',
+        process_title: 'Cómo es la colaboración', process_intro: 'Un modelo de trabajo simple que ordena la elección del inmueble y acelera la decisión de compra.',
+        process_1_h: '1. Objetivo de compra', process_1_p: 'Definimos si buscas una propiedad para vivir, alquilar, invertir o una parcela para tu propio proyecto.',
+        process_2_h: '2. Selección de ofertas', process_2_p: 'Elegimos la dirección adecuada: obra nueva, parcelas o construcción de casa, y luego reducimos la selección.',
+        process_3_h: '3. Contacto y siguientes pasos', process_3_p: 'Pasamos a la conversación, ajustamos el presupuesto y preparamos las acciones siguientes para una propiedad concreta.',
+        seo_h2: 'Inmuebles en España — Costa Blanca como mercado de compra e inversión', seo_h3: 'Qué encontrarás en la página principal de Costa Blanca Invest',
+        seo_p1: 'Costa Blanca es uno de los destinos más sólidos para comprar inmuebles en España para clientes internacionales. El mayor interés se concentra en obra nueva, parcelas bien ubicadas y la construcción de casas modernas.',
+        seo_p2: 'La página principal de Costa Blanca Invest actúa como punto central de navegación de todo el sitio. Su función es llevar al usuario a tres secciones clave: obra nueva de promotores, parcelas y construcción de casas en Costa Blanca. Esta estructura ordena el recorrido del usuario y refuerza el enlazado interno entre las categorías principales.',
+        seo_p3: 'Desde el punto de vista SEO, la home debe describir de forma amplia el tema de los inmuebles en España en Costa Blanca sin duplicar el contenido de las páginas de categoría. Así cada página tiene su propio papel: la principal construye autoridad de marca y tema, y las subpáginas responden a búsquedas más detalladas.',
+        seo_p4: 'Una página principal bien diseñada ayuda tanto al usuario como a la indexación de Google. Debe tener un H1 claro, enlaces internos fuertes a categorías, secciones lógicas y datos de contacto.',
+        contact_title: 'Hablemos de inmuebles en Costa Blanca', contact_intro: 'Ponte en contacto para elegir la mejor línea de compra: obra nueva, parcela o construcción de una casa adaptada a tu presupuesto y objetivo.',
+        contact_role: 'Especialista en inversión inmobiliaria Costa Blanca · Alicante–Benidorm', celebrity_line: 'Colaboración: agencia inmobiliaria Celebrity',
+        call_now: '📞 Llamar ahora', write_now: '💬 Escribir', form_name: 'Tu nombre', form_phone: 'Teléfono / WhatsApp', form_email: 'Email', form_message: 'Escribe qué buscas en Costa Blanca', form_submit: 'Enviar consulta',
+        share_title: 'Compartir página', share_copy: 'Copiar enlace', share_copied: '✅ Copiado', share_prompt: 'Copia el enlace:', wa_form_prefix: 'Nueva consulta desde la página principal de Costa Blanca Invest:',
+        footer_copy: 'Costa Blanca Invest es un sitio dedicado al mercado inmobiliario en España, en Costa Blanca. El portal guía al usuario hacia las principales líneas de compra: obra nueva, parcelas y construcción de casas.',
+        footer_home: 'Inicio', footer_new: 'Obra nueva', footer_plots: 'Parcelas', footer_build: 'Construcción', footer_process: 'Proceso', footer_contact: 'Contacto', footer_celeb: 'Colaboración con Celebrity Real Estate — las propiedades presentadas forman parte del portafolio de la agencia', footer_bottom: '© 2026 | Sitio creado personalmente por Olga Chernyshenko. El proyecto, concepto y realización pertenecen a la autora. El sitio funciona en colaboración con la agencia inmobiliaria Celebrity Real Estate.'
+      },
+      en: {
+        page_title: 'Costa Blanca Invest | Real estate in Spain: new developments, plots and house construction',
+        meta_description: 'Costa Blanca Invest — real estate in Spain on Costa Blanca: new developments, plots for building and full house delivery. Verified listings and a safe buying process.',
+        og_locale: 'en_GB', brand_aria: 'Costa Blanca Invest — home page', nav_aria: 'Main navigation', hero_alt: 'Costa Blanca Invest — real estate in Spain on Costa Blanca: new developments, plots and house construction with sea view', og_image_alt: 'Costa Blanca Invest — real estate in Spain on Costa Blanca: new developments, plots and house construction',
+        nav_home: 'Home', nav_contact: 'Contact', nav_categories: 'Categories', nav_plots: 'Plots', nav_build: 'Build house', nav_new: 'New developments',
+        eyebrow: 'Costa Blanca · real estate · investment', hero_title: 'Real estate in Spain on Costa Blanca — new developments, plots and house construction',
+        subtitle: 'Costa Blanca Invest helps find the right property in Spain — from new developments by developers and building plots to the delivery of a modern house on Costa Blanca.',
+        lead: 'We work with clients looking for a safe purchase, a strong location, investment potential and a reliable process from first contact to closing.',
+        hero_cta_1: 'View new developments', hero_cta_2: 'Explore options',
+        stat_1_n: '3', stat_1_t: 'main directions: new developments, plots and house construction',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'a market focused on strong locations and real demand',
+        stat_3_n: '1 contact', stat_3_t: 'one person guides the client through the whole process',
+        directions_title: '3 main directions for buying property on Costa Blanca', directions_intro: 'Choose the route that best matches your goal: a finished new property, a plot for investment, or a house built from scratch.',
+        chip_1: 'Developers', card_1_h: 'New developments', card_1_p: 'Apartments, penthouses and villas from reliable developers in Spain.',
+        chip_2: 'Land', card_2_h: 'Plots', card_2_p: 'Investment plots and land for a private house or a development project.',
+        chip_3: 'Delivery', card_3_h: 'House construction', card_3_p: 'Comprehensive construction of a modern home on Costa Blanca — from plot to finished project.',
+        why_title: 'Why Costa Blanca Invest', why_intro: 'We combine offer selection, Costa Blanca market knowledge and a clear cooperation path for international clients.',
+        why_1_h: 'Location selection', why_1_p: 'We focus on places with real demand, good infrastructure, sea access and potential to hold value over time.',
+        why_2_h: 'Safe process', why_2_p: 'We help structure the buying path: from choosing the direction and property type to contact, documentation and next decisions.',
+        why_3_h: 'Investment mindset', why_3_p: 'We look not only at the property itself, but also at liquidity, rental potential and whether the purchase makes sense in a given location.',
+        process_title: 'How the cooperation works', process_intro: 'A simple work model that structures the property choice and speeds up the buying decision.',
+        process_1_h: '1. Purchase goal', process_1_p: 'We define whether you are looking for a home to live in, rent out, invest in, or a plot for your own project.',
+        process_2_h: '2. Offer selection', process_2_p: 'We choose the right direction: new developments, plots or house construction, and then narrow the choice.',
+        process_3_h: '3. Contact and next steps', process_3_p: 'We move to conversation, budget fit and preparation of the next actions for a specific property.',
+        seo_h2: 'Real estate in Spain — Costa Blanca as a market for buying and investing', seo_h3: 'What you will find on the Costa Blanca Invest home page',
+        seo_p1: 'Costa Blanca is one of the strongest destinations for buying real estate in Spain for international clients. The highest interest is focused on new developments, well-located plots and the construction of modern homes.',
+        seo_p2: 'The Costa Blanca Invest home page acts as the central navigation point for the whole website. Its role is to lead the user to three key sections: new developments from developers, plots and house construction on Costa Blanca. This structure organises the user journey and strengthens internal linking.',
+        seo_p3: 'From an SEO perspective, the homepage should broadly describe the topic of real estate in Spain on Costa Blanca without duplicating content from category pages. This gives each page its own role: the homepage builds brand authority and the main topic, while subpages answer more detailed search intent.',
+        seo_p4: 'A well-designed homepage supports both the user and Google indexing. It should have a clear H1, strong internal links to categories, logical sections and contact details.',
+        contact_title: 'Let’s talk about property on Costa Blanca', contact_intro: 'Get in touch to choose the right buying direction: new developments, a plot or a house build matched to your budget and goal.',
+        contact_role: 'Costa Blanca real estate investment specialist · Alicante–Benidorm', celebrity_line: 'Cooperation: Celebrity real estate agency',
+        call_now: '📞 Call now', write_now: '💬 Write', form_name: 'Your name', form_phone: 'Phone / WhatsApp', form_email: 'Email', form_message: 'Write what you are looking for on Costa Blanca', form_submit: 'Send enquiry',
+        share_title: 'Share page', share_copy: 'Copy link', share_copied: '✅ Copied', share_prompt: 'Copy the link:', wa_form_prefix: 'New enquiry from the Costa Blanca Invest home page:',
+        footer_copy: 'Costa Blanca Invest is a website focused on the property market in Spain on Costa Blanca. The site guides users to the main buying directions: new developments, plots and house construction.',
+        footer_home: 'Home', footer_new: 'New developments', footer_plots: 'Plots', footer_build: 'Build house', footer_process: 'Process', footer_contact: 'Contact', footer_celeb: 'Partnership with Celebrity Real Estate — the presented properties are part of the agency portfolio', footer_bottom: '© 2026 | Site personally created by Olga Chernyshenko. The project, concept and execution belong to the author. The site operates in cooperation with Celebrity Real Estate.'
+      },
+      ru: {
+        page_title: 'Costa Blanca Invest | Недвижимость в Испании: новостройки, участки и строительство дома',
+        meta_description: 'Costa Blanca Invest — недвижимость в Испании на Costa Blanca: новостройки, участки под строительство и полная реализация дома. Проверенные предложения и безопасный процесс покупки.',
+        og_locale: 'ru_RU', brand_aria: 'Costa Blanca Invest — главная страница', nav_aria: 'Основная навигация', hero_alt: 'Costa Blanca Invest — недвижимость в Испании на Costa Blanca: новостройки, участки и строительство дома с видом на море', og_image_alt: 'Costa Blanca Invest — недвижимость в Испании на Costa Blanca: новостройки, участки и строительство дома',
+        nav_home: 'Главная', nav_contact: 'Контакт', nav_categories: 'Категории', nav_plots: 'Участки', nav_build: 'Строительство дома', nav_new: 'Новостройки',
+        eyebrow: 'Costa Blanca · недвижимость · инвестиции', hero_title: 'Недвижимость в Испании на Costa Blanca — новостройки, участки и строительство дома',
+        subtitle: 'Costa Blanca Invest помогает подобрать подходящую недвижимость в Испании — от новостроек от застройщиков и участков под строительство до реализации современного дома на Costa Blanca.',
+        lead: 'Мы работаем с клиентами, которым важны безопасная покупка, сильная локация, инвестиционный потенциал и понятный процесс от первого контакта до сделки.',
+        hero_cta_1: 'Смотреть новостройки', hero_cta_2: 'Изучить направления',
+        stat_1_n: '3', stat_1_t: 'главные направления: новостройки, участки и строительство дома',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'рынок с фокусом на сильные локации и реальный спрос',
+        stat_3_n: '1 контакт', stat_3_t: 'один человек ведёт клиента через весь процесс',
+        directions_title: '3 главных направления покупки недвижимости на Costa Blanca', directions_intro: 'Выберите путь, который лучше всего соответствует вашей цели: готовая новая недвижимость, участок под инвестицию или строительство дома с нуля.',
+        chip_1: 'Застройщики', card_1_h: 'Новостройки', card_1_p: 'Апартаменты, пентхаусы и виллы от надёжных застройщиков в Испании.',
+        chip_2: 'Земля', card_2_h: 'Участки', card_2_p: 'Инвестиционные участки и земля под частный дом или девелоперский проект.',
+        chip_3: 'Реализация', card_3_h: 'Строительство дома', card_3_p: 'Комплексное строительство современного дома на Costa Blanca — от участка до готового проекта.',
+        why_title: 'Почему Costa Blanca Invest', why_intro: 'Мы объединяем отбор предложений, знание рынка Costa Blanca и понятный путь работы для иностранных клиентов.',
+        why_1_h: 'Отбор локаций', why_1_p: 'Мы фокусируемся на местах с реальным спросом, хорошей инфраструктурой, доступом к морю и потенциалом сохранения стоимости.',
+        why_2_h: 'Безопасный процесс', why_2_p: 'Мы помогаем выстроить путь покупки: от выбора направления и типа недвижимости до контакта, документов и следующих этапов решения.',
+        why_3_h: 'Инвестиционный подход', why_3_p: 'Мы смотрим не только на внешний вид объекта, но и на ликвидность, арендный потенциал и логику покупки в конкретной локации.',
+        process_title: 'Как проходит работа', process_intro: 'Простая модель работы, которая упорядочивает выбор недвижимости и ускоряет решение о покупке.',
+        process_1_h: '1. Цель покупки', process_1_p: 'Мы определяем, ищете ли вы жильё для жизни, аренды, инвестиций или участок под собственный проект.',
+        process_2_h: '2. Отбор предложений', process_2_p: 'Мы выбираем правильное направление: новостройки, участки или строительство дома, а затем сужаем выбор.',
+        process_3_h: '3. Контакт и следующие шаги', process_3_p: 'Мы переходим к разговору, бюджету и подготовке следующих действий по конкретному объекту.',
+        seo_h2: 'Недвижимость в Испании — Costa Blanca как рынок для покупки и инвестиций', seo_h3: 'Что вы найдёте на главной странице Costa Blanca Invest',
+        seo_p1: 'Costa Blanca — одно из самых сильных направлений для покупки недвижимости в Испании иностранными клиентами. Наибольший интерес сосредоточен вокруг новостроек, участков в хороших локациях и строительства современных домов.',
+        seo_p2: 'Главная страница Costa Blanca Invest выполняет роль центральной навигационной точки всего сайта. Её задача — провести пользователя к трём ключевым разделам: новостройки от застройщиков, участки и строительство дома на Costa Blanca. Такая структура упорядочивает путь пользователя и усиливает внутреннюю перелинковку между основными категориями.',
+        seo_p3: 'С точки зрения SEO главная страница должна широко описывать тему недвижимости в Испании на Costa Blanca, но без дублирования контента подстраниц категорий. Благодаря этому у каждой страницы есть своя роль: главная строит авторитет бренда и основную тему, а подстраницы отвечают на более детальные запросы.',
+        seo_p4: 'Хорошо спроектированная главная страница помогает и пользователю, и индексации Google. Она должна иметь понятный H1, сильные внутренние ссылки на категории, логичные информационные секции и контактные данные.',
+        contact_title: 'Давайте поговорим о недвижимости на Costa Blanca', contact_intro: 'Свяжитесь с нами, чтобы выбрать правильное направление покупки: новостройки, участок или строительство дома под ваш бюджет и цель.',
+        contact_role: 'Специалист по инвестициям в недвижимость Costa Blanca · Alicante–Benidorm', celebrity_line: 'Сотрудничество: агентство недвижимости Celebrity',
+        call_now: '📞 Позвонить сейчас', write_now: '💬 Написать', form_name: 'Ваше имя', form_phone: 'Телефон / WhatsApp', form_email: 'Email', form_message: 'Напишите, что вы ищете на Costa Blanca', form_submit: 'Отправить запрос',
+        share_title: 'Поделиться страницей', share_copy: 'Копировать ссылку', share_copied: '✅ Скопировано', share_prompt: 'Скопируйте ссылку:', wa_form_prefix: 'Новый запрос с главной страницы Costa Blanca Invest:',
+        footer_copy: 'Costa Blanca Invest — сайт о рынке недвижимости в Испании на Costa Blanca. Сервис ведёт пользователя к главным направлениям покупки: новостройкам, участкам и строительству дома.',
+        footer_home: 'Главная', footer_new: 'Новостройки', footer_plots: 'Участки', footer_build: 'Строительство дома', footer_process: 'Процесс', footer_contact: 'Контакт', footer_celeb: 'Партнёрство с Celebrity Real Estate — представленные объекты входят в портфель агентства', footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко. Проект, концепция и реализация принадлежат автору. Сайт работает в сотрудничестве с агентством недвижимости Celebrity Real Estate.'
+      }
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
       const contactForm = document.getElementById('contact-form');
       const animatedCards = document.querySelectorAll('.fade-up');
       const header = document.querySelector('.topbar');
-      const shareNativeBtn = document.getElementById('share-native');
       const shareLinkBtn = document.getElementById('share-link');
       const shareFacebook = document.getElementById('share-facebook');
-      const shareTelegram = document.getElementById('share-telegram');
-      const shareWhatsapp = document.getElementById('share-whatsapp');
-      const shareUrl = 'https://costa-blanca-invest.com/';
-      const shareTitle = document.title;
-      const shareText = 'Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.';
+      const root = document.documentElement;
+      const brand = document.querySelector('.brand');
+      const nav = document.querySelector('.nav');
+      const navLinks = Array.from(document.querySelectorAll('.nav a'));
+      const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
+      const heroImage = document.querySelector('.hero-media img');
+      const eyebrow = document.querySelector('.eyebrow');
+      const heroTitle = document.querySelector('.hero-copy h1');
+      const subtitle = document.querySelector('.subtitle');
+      const lead = document.querySelector('.lead');
+      const heroBtns = Array.from(document.querySelectorAll('.hero-copy .cta-actions a'));
+      const statCards = Array.from(document.querySelectorAll('.stats-grid .stat-card'));
+      const directionsSection = document.getElementById('directions');
+      const directionCards = Array.from(document.querySelectorAll('.direction-card'));
+      const benefitCards = Array.from(document.querySelectorAll('.benefit-card'));
+      const processCards = Array.from(document.querySelectorAll('.process-card'));
+      const seoSection = document.getElementById('seo');
+      const contactSection = document.getElementById('contact');
+      const footer = document.querySelector('.footer-card');
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
       let ticking = false;
+      const state = { currentLang: 'pl' };
 
-      if (shareFacebook) {
-        shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-      }
+      const getInitialLang = () => {
+        const lang = new URL(window.location.href).searchParams.get('lang');
+        return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      };
 
-      if (shareTelegram) {
-        shareTelegram.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`;
-      }
+      const buildLangUrl = (path, lang) => {
+        if (lang === 'pl') return path;
+        const url = new URL(path, DEFAULT_HOME_URL);
+        url.searchParams.set('lang', lang);
+        return `${url.pathname}${url.search}${url.hash}`;
+      };
 
-      if (shareWhatsapp) {
-        shareWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
-      }
+      const getShareUrl = (lang) => {
+        const url = new URL(DEFAULT_HOME_URL);
+        if (lang !== 'pl') url.searchParams.set('lang', lang);
+        return url.toString();
+      };
 
-      if (shareNativeBtn) {
-        shareNativeBtn.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: shareTitle,
-                text: shareText,
-                url: shareUrl
-              });
-              return;
-            } catch (error) {}
+      const updateUrlLang = (lang) => {
+        const url = new URL(window.location.href);
+        if (lang === 'pl') url.searchParams.delete('lang');
+        else url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+      };
+
+      const setMeta = (selector, attr, value) => {
+        const node = document.querySelector(selector);
+        if (node && value) node.setAttribute(attr, value);
+      };
+
+      const applyLanguage = (lang, syncUrl = true) => {
+        state.currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
+        root.lang = state.currentLang;
+        document.title = t.page_title;
+        setMeta('meta[name="description"]', 'content', t.meta_description);
+        setMeta('meta[property="og:title"]', 'content', t.page_title);
+        setMeta('meta[property="og:description"]', 'content', t.meta_description);
+        setMeta('meta[property="og:locale"]', 'content', t.og_locale);
+        setMeta('meta[property="og:url"]', 'content', getShareUrl(state.currentLang));
+        setMeta('meta[property="og:image"]', 'content', SHARE_IMAGE);
+        setMeta('meta[property="og:image:secure_url"]', 'content', SHARE_IMAGE);
+        setMeta('meta[property="og:image:alt"]', 'content', t.og_image_alt);
+        setMeta('meta[name="twitter:title"]', 'content', t.page_title);
+        setMeta('meta[name="twitter:description"]', 'content', t.meta_description);
+        setMeta('meta[name="twitter:image"]', 'content', SHARE_IMAGE);
+        setMeta('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
+
+        if (brand) brand.setAttribute('aria-label', t.brand_aria);
+        if (nav) nav.setAttribute('aria-label', t.nav_aria);
+        if (heroImage) heroImage.alt = t.hero_alt;
+        if (eyebrow) eyebrow.textContent = t.eyebrow;
+        if (heroTitle) heroTitle.textContent = t.hero_title;
+        if (subtitle) subtitle.textContent = t.subtitle;
+        if (lead) lead.textContent = t.lead;
+
+        if (navLinks.length >= 6) {
+          navLinks[0].textContent = t.nav_home; navLinks[0].href = buildLangUrl('/', state.currentLang);
+          navLinks[1].textContent = t.nav_contact; navLinks[1].href = '#contact';
+          navLinks[2].textContent = t.nav_categories; navLinks[2].href = '#directions';
+          navLinks[3].textContent = t.nav_plots; navLinks[3].href = buildLangUrl('/pl/plots/', state.currentLang);
+          navLinks[4].textContent = t.nav_build; navLinks[4].href = buildLangUrl('/pl/build-house/', state.currentLang);
+          navLinks[5].textContent = t.nav_new; navLinks[5].href = buildLangUrl('/pl/new-developments/', state.currentLang);
+        }
+
+        if (heroBtns.length >= 2) {
+          heroBtns[0].textContent = t.hero_cta_1;
+          heroBtns[0].href = buildLangUrl('/pl/new-developments/', state.currentLang);
+          heroBtns[1].textContent = t.hero_cta_2;
+        }
+
+        if (statCards.length >= 3) {
+          statCards[0].querySelector('strong').textContent = t.stat_1_n; statCards[0].querySelector('p').textContent = t.stat_1_t;
+          statCards[1].querySelector('strong').textContent = t.stat_2_n; statCards[1].querySelector('p').textContent = t.stat_2_t;
+          statCards[2].querySelector('strong').textContent = t.stat_3_n; statCards[2].querySelector('p').textContent = t.stat_3_t;
+        }
+
+        if (directionsSection) {
+          directionsSection.querySelector('h2').textContent = t.directions_title;
+          directionsSection.querySelector('.center-text').textContent = t.directions_intro;
+        }
+
+        if (directionCards.length >= 3) {
+          directionCards[0].querySelector('.chip').textContent = t.chip_1;
+          directionCards[0].querySelector('h3').textContent = t.card_1_h;
+          directionCards[0].querySelector('p').textContent = t.card_1_p;
+          directionCards[0].href = buildLangUrl('/pl/new-developments/', state.currentLang);
+          directionCards[1].querySelector('.chip').textContent = t.chip_2;
+          directionCards[1].querySelector('h3').textContent = t.card_2_h;
+          directionCards[1].querySelector('p').textContent = t.card_2_p;
+          directionCards[1].href = buildLangUrl('/pl/plots/', state.currentLang);
+          directionCards[2].querySelector('.chip').textContent = t.chip_3;
+          directionCards[2].querySelector('h3').textContent = t.card_3_h;
+          directionCards[2].querySelector('p').textContent = t.card_3_p;
+          directionCards[2].href = buildLangUrl('/pl/build-house/', state.currentLang);
+        }
+
+        if (benefitCards.length >= 3) {
+          document.querySelector('#why-us h2').textContent = t.why_title;
+          document.querySelector('#why-us .center-text').textContent = t.why_intro;
+          benefitCards[0].querySelector('h3').textContent = t.why_1_h; benefitCards[0].querySelector('p').textContent = t.why_1_p;
+          benefitCards[1].querySelector('h3').textContent = t.why_2_h; benefitCards[1].querySelector('p').textContent = t.why_2_p;
+          benefitCards[2].querySelector('h3').textContent = t.why_3_h; benefitCards[2].querySelector('p').textContent = t.why_3_p;
+        }
+
+        if (processCards.length >= 3) {
+          document.querySelector('#process h2').textContent = t.process_title;
+          document.querySelector('#process .center-text').textContent = t.process_intro;
+          processCards[0].querySelector('h3').textContent = t.process_1_h; processCards[0].querySelector('p').textContent = t.process_1_p;
+          processCards[1].querySelector('h3').textContent = t.process_2_h; processCards[1].querySelector('p').textContent = t.process_2_p;
+          processCards[2].querySelector('h3').textContent = t.process_3_h; processCards[2].querySelector('p').textContent = t.process_3_p;
+        }
+
+        if (seoSection) {
+          const h2 = seoSection.querySelector('h2');
+          const h3 = seoSection.querySelector('h3');
+          const ps = seoSection.querySelectorAll('p');
+          if (h2) h2.textContent = t.seo_h2;
+          if (h3) h3.textContent = t.seo_h3;
+          if (ps.length >= 4) {
+            ps[0].textContent = t.seo_p1; ps[1].textContent = t.seo_p2; ps[2].textContent = t.seo_p3; ps[3].textContent = t.seo_p4;
           }
-          window.open(`https://wa.me/?text=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener');
-        });
-      }
+        }
+
+        if (contactSection) {
+          contactSection.querySelector('h2').textContent = t.contact_title;
+          contactSection.querySelector('.priority-note').textContent = t.contact_intro;
+          const role = contactSection.querySelector('.contact-avatar-role');
+          if (role) role.innerHTML = `${t.contact_role}<br><span style="font-weight:700;color:#1f545c;">${t.celebrity_line}</span>`;
+          const ctaLinks = contactSection.querySelectorAll('.cta-actions a');
+          if (ctaLinks.length >= 2) {
+            ctaLinks[0].textContent = t.call_now;
+            ctaLinks[1].textContent = t.write_now;
+          }
+          const formEls = contactSection.querySelectorAll('input, textarea');
+          if (formEls.length >= 4) {
+            formEls[0].placeholder = t.form_name;
+            formEls[1].placeholder = t.form_phone;
+            formEls[2].placeholder = t.form_email;
+            formEls[3].placeholder = t.form_message;
+          }
+          const submitBtn = contactSection.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.textContent = t.form_submit;
+          const shareP = contactSection.querySelector('.share-box p');
+          if (shareP) shareP.textContent = t.share_title;
+          if (shareLinkBtn && !shareLinkBtn.dataset.copied) shareLinkBtn.textContent = t.share_copy;
+        }
+
+        if (footer) {
+          const footerCopy = footer.querySelector('.footer-copy');
+          if (footerCopy) footerCopy.textContent = t.footer_copy;
+          const footerLinks = footer.querySelectorAll('.footer-links a');
+          if (footerLinks.length >= 6) {
+            footerLinks[0].textContent = t.footer_home; footerLinks[0].href = buildLangUrl('/', state.currentLang);
+            footerLinks[1].textContent = t.footer_new; footerLinks[1].href = buildLangUrl('/pl/new-developments/', state.currentLang);
+            footerLinks[2].textContent = t.footer_plots; footerLinks[2].href = buildLangUrl('/pl/plots/', state.currentLang);
+            footerLinks[3].textContent = t.footer_build; footerLinks[3].href = buildLangUrl('/pl/build-house/', state.currentLang);
+            footerLinks[4].textContent = t.footer_process;
+            footerLinks[5].textContent = t.footer_contact;
+          }
+          const celeb = footer.querySelector('div[style*="font-size:13px"]');
+          if (celeb) celeb.innerHTML = t.footer_celeb.replace('Celebrity Real Estate', '<strong>Celebrity Real Estate</strong>');
+          const footerBottom = footer.querySelector('.footer-bottom');
+          if (footerBottom) footerBottom.textContent = t.footer_bottom;
+        }
+
+        if (shareFacebook) {
+          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl(state.currentLang))}`;
+        }
+        langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
+        if (syncUrl) updateUrlLang(state.currentLang);
+      };
+
+      state.currentLang = getInitialLang();
+      applyLanguage(state.currentLang, false);
+      langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true)));
 
       if (shareLinkBtn) {
         shareLinkBtn.addEventListener('click', async () => {
+          const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
+          const shareUrl = getShareUrl(state.currentLang);
           try {
             await navigator.clipboard.writeText(shareUrl);
-            shareLinkBtn.textContent = '✅ Skopiowano';
+            shareLinkBtn.dataset.copied = 'true';
+            shareLinkBtn.textContent = t.share_copied;
             setTimeout(() => {
-              shareLinkBtn.textContent = '🔗 Link';
+              shareLinkBtn.dataset.copied = '';
+              shareLinkBtn.textContent = t.share_copy;
             }, 2000);
           } catch (error) {
-            window.prompt('Skopiuj link:', shareUrl);
+            window.prompt(t.share_prompt, shareUrl);
           }
         });
       }
@@ -1213,7 +1560,6 @@
             }
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
-
         animatedCards.forEach((el) => observer.observe(el));
       } else {
         animatedCards.forEach((el) => el.classList.add('show'));
@@ -1222,48 +1568,40 @@
       window.addEventListener('scroll', () => {
         if (ticking) return;
         ticking = true;
-
         requestAnimationFrame(() => {
           const currentScroll = window.pageYOffset;
           const delta = currentScroll - lastScroll;
-
           if (Math.abs(delta) >= 4) {
             if (delta > 0) {
               accumulatedDown += delta;
               accumulatedUp = 0;
-              if (currentScroll > 120 && accumulatedDown > 24 && header) {
-                header.classList.add('hide');
-              }
+              if (currentScroll > 120 && accumulatedDown > 24 && header) header.classList.add('hide');
             } else {
               accumulatedUp += Math.abs(delta);
               accumulatedDown = 0;
-              if ((accumulatedUp > 42 || currentScroll < 40) && header) {
-                header.classList.remove('hide');
-              }
+              if ((accumulatedUp > 42 || currentScroll < 40) && header) header.classList.remove('hide');
             }
             lastScroll = currentScroll;
           }
-
           ticking = false;
         });
       }, { passive: true });
 
       if (!contactForm) return;
-
       contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
         const formData = new FormData(contactForm);
-        const name = (formData.get('name') || '').toString().trim();
-        const phone = (formData.get('phone') || '').toString().trim();
-        const email = (formData.get('email') || '').toString().trim();
-        const message = (formData.get('message') || '').toString().trim();
-        const text = `Nowe zapytanie ze strony głównej Costa Blanca Invest:
+        const name = String(formData.get('name') || '').trim();
+        const phone = String(formData.get('phone') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const message = String(formData.get('message') || '').trim();
+        const text = `${t.wa_form_prefix}
 
-Imię: ${name}
-Telefon: ${phone}
-Email: ${email}
+${t.form_name}: ${name}
+${t.form_phone}: ${phone}
+${t.form_email}: ${email}
 
-Wiadomość:
 ${message}`;
         const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
         const opened = window.open(url, '_blank', 'noopener');
@@ -1293,36 +1631,6 @@ ${message}`;
         "publisher": {
           "@id": "https://costa-blanca-invest.com/#organization"
         },
-        "inLanguage": "pl"
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://costa-blanca-invest.com/#image-new-developments",
-        "url": "https://costa-blanca-invest.com/images/new-developments-costa-blanca.jpg",
-        "contentUrl": "https://costa-blanca-invest.com/images/new-developments-costa-blanca.jpg",
-        "name": "Nowe inwestycje na Costa Blanca",
-        "description": "Zdjęcie przedstawiające nowe inwestycje mieszkaniowe na Costa Blanca w Hiszpanii.",
-        "caption": "Nowe inwestycje — apartamenty i wille na Costa Blanca",
-        "inLanguage": "pl"
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://costa-blanca-invest.com/#image-plots",
-        "url": "https://costa-blanca-invest.com/images/building-plot-costa-blanca.jpg",
-        "contentUrl": "https://costa-blanca-invest.com/images/building-plot-costa-blanca.jpg",
-        "name": "Działki na Costa Blanca",
-        "description": "Zdjęcie przedstawiające działkę budowlaną na Costa Blanca w Hiszpanii.",
-        "caption": "Działki budowlane i inwestycyjne na Costa Blanca",
-        "inLanguage": "pl"
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://costa-blanca-invest.com/#image-build-house",
-        "url": "https://costa-blanca-invest.com/images/villa-construction-costa-blanca.jpg",
-        "contentUrl": "https://costa-blanca-invest.com/images/villa-construction-costa-blanca.jpg",
-        "name": "Budowa domu na Costa Blanca",
-        "description": "Zdjęcie przedstawiające budowę nowoczesnej willi na Costa Blanca w Hiszpanii.",
-        "caption": "Budowa domu i realizacja inwestycji na Costa Blanca",
         "inLanguage": "pl"
       },
       {
