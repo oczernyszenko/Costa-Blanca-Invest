@@ -578,6 +578,17 @@
         return url.toString();
       };
 
+      const getFacebookPreviewUrl = () => {
+        const url = new URL(DEFAULT_CATEGORY_URL);
+        if (state.currentLang !== 'pl') url.searchParams.set('lang', state.currentLang);
+        url.searchParams.set('fbshare', 'plots-og-v1');
+        return url.toString();
+      };
+
+      const getFacebookSharerUrl = () => {
+        return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getFacebookPreviewUrl())}`;
+      };
+
       window.handleBrokenImage = (img) => {
         if (img.dataset.fallbackApplied === 'true') return;
         img.dataset.fallbackApplied = 'true';
@@ -762,9 +773,7 @@
         if (syncUrl) updateUrlLang(state.currentLang);
 
         if (el.shareFacebook) {
-          const fbUrl = getShareUrl();
-          const fbTitle = t.page_title;
-          el.shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fbUrl)}&quote=${encodeURIComponent(fbTitle)}`;
+          el.shareFacebook.href = getFacebookSharerUrl();
         }
       };
 
