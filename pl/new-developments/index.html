@@ -148,10 +148,20 @@
   align-items:center;
   justify-content:flex-end;
   margin:0;
-  padding:2px 0;
-  background:transparent;
-  box-shadow:none;
+  padding:4px 6px;
+  background:#ffffff;
+  border-radius:999px;
+  box-shadow:0 6px 16px rgba(15,23,42,.10);
   isolation:isolate;
+  overflow:hidden;
+}
+.lang-switcher::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#ffffff;
+  border-radius:inherit;
+  z-index:-1;
 }
 .lang-btn{
   position:relative;
@@ -175,6 +185,9 @@
   box-shadow:0 6px 14px rgba(199,154,58,.35);
   transition:all .25s ease;
   overflow:hidden;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+  backface-visibility:hidden;
 }
 .lang-btn::before{
   content:"";
@@ -333,7 +346,7 @@
       .nav a:nth-child(n+4){order:2}
       .top-controls{justify-content:center;margin-bottom:14px;flex-direction:column}
       .top-controls > *{order:1}
-      .lang-switcher{order:2;justify-content:center;gap:8px}
+      .lang-switcher{order:2;justify-content:center;gap:8px;padding:4px 6px}
       .hero-copy{padding:22px 20px;align-items:center;text-align:center;overflow:hidden}
       .eyebrow{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}
       .hero-copy h1{width:100%;max-width:100%;padding:0 12px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
@@ -1005,7 +1018,9 @@
         renderProjects();
 
         if (el.shareFacebook) {
-          el.shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl())}`;
+          const fbUrl = getShareUrl();
+          const fbTitle = t.page_title;
+          el.shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fbUrl)}&quote=${encodeURIComponent(fbTitle)}`;
         }
       };
 
@@ -1039,24 +1054,30 @@
         el.shareLinkBtn.addEventListener('click', async () => {
           const t = CATEGORY_TRANSLATIONS[state.currentLang] || CATEGORY_TRANSLATIONS.pl;
           const shareUrl = getShareUrl();
-          const shareData = { title: document.title, text: d.querySelector('meta[name="description"]')?.content || '', url: shareUrl };
+          const shareTitle = t.page_title;
+          const shareText = `${shareTitle}
+${shareUrl}`;
+          const shareData = {
+            title: shareTitle,
+            text: shareTitle,
+            url: shareUrl
+          };
           try {
             if (navigator.share) {
               await navigator.share(shareData);
               setShareStatus(t.share_shared);
               return;
             }
-            const copied = await copyTextToClipboard(shareUrl);
+            const copied = await copyTextToClipboard(shareText);
             if (copied) {
-              const oldText = el.shareLinkBtn.textContent;
               el.shareLinkBtn.textContent = t.share_copied;
               setShareStatus(t.share_copied_status);
               setTimeout(() => { el.shareLinkBtn.textContent = t.share_link; }, 1800);
               return;
             }
-            window.prompt(t.share_prompt, shareUrl);
+            window.prompt(t.share_prompt, shareText);
           } catch {
-            window.prompt(t.share_prompt, shareUrl);
+            window.prompt(t.share_prompt, shareText);
           }
         });
       }
