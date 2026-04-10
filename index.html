@@ -228,12 +228,21 @@
     .section-card,
     .cta-box,
     .footer-card {
-      border: 1px solid rgba(255,255,255,.5);
-      border-radius: var(--radius);
-      background: var(--surface);
-      backdrop-filter: blur(14px);
-      box-shadow: var(--shadow-lux);
+      position: relative;
+      padding: 40px 34px 34px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(41,108,118,.10), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(247,250,251,.98) 100%);
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: 0 30px 70px rgba(15,23,42,.10);
+      border-radius: 26px;
       overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .footer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 40px 90px rgba(15,23,42,.14);
     }
 
     .hero-card {
@@ -714,8 +723,8 @@
       background: linear-gradient(90deg, var(--accent), var(--primary));
     }
     .footer-brand {
-      margin-bottom: 12px;
-      font-size: 24px;
+      margin-bottom: 16px;
+      font-size: 26px;
       font-weight: 900;
       letter-spacing: -.03em;
       color: var(--primary-dark);
@@ -932,12 +941,13 @@
         <div class="hero-copy">
           <div class="eyebrow">Costa Blanca · nieruchomości · inwestycje</div>
           <h1>Nieruchomości w Hiszpanii na Costa Blanca — nowe inwestycje, działki i budowa domu</h1>
-          <p class="subtitle">Costa Blanca Invest pomaga znaleźć odpowiednią nieruchomość w Hiszpanii — od nowych inwestycji od deweloperów, przez działki pod budowę, aż po realizację nowoczesnego domu na Costa Blanca.</p>
-          <p class="lead">Pracujemy z klientami, którzy szukają bezpiecznego zakupu, mocnej lokalizacji, potencjału inwestycyjnego i sprawdzonego procesu od pierwszego kontaktu do finalizacji transakcji.</p>
+          <p class="subtitle">Pomagamy znaleźć właściwą nieruchomość w Hiszpanii — bez chaosu, bez straty czasu i bez przypadkowych ofert.</p>
+          <p class="lead">Dostajesz konkretną selekcję, jasną strategię zakupu i realne wsparcie na każdym etapie — od pierwszego kontaktu do finalizacji.</p>
 
           <div class="cta-actions">
             <a href="/pl/new-developments/" class="btn btn-main">Zobacz nowe inwestycje</a>
             <a href="#directions" class="btn">Poznaj kierunki zakupu</a>
+            <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20nieruchomo%C5%9B%C4%87%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="btn btn-light">💬 WhatsApp</a>
           </div>
 
           <div class="stats-grid" style="width:100%;margin-top:28px;">
@@ -1042,7 +1052,7 @@
 
       <section class="cta-box contact-box fade-up" id="contact">
         <h2>Porozmawiajmy o nieruchomości na Costa Blanca</h2>
-        <p class="priority-note">Skontaktuj się, aby dobrać odpowiedni kierunek zakupu: nowe inwestycje, działkę lub budowę domu dopasowaną do budżetu i celu zakupu.</p>
+        <p class="priority-note">Skontaktuj się teraz — odpowiadamy szybko i dobieramy konkretne oferty dopasowane do Twojego celu, budżetu i lokalizacji.</p>
 
         <div class="contact-avatar">
           <img src="/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async" width="220" height="220">
@@ -1057,7 +1067,7 @@
 
         <div class="cta-actions" style="margin-top:0;">
           <a class="btn btn-main" href="tel:+34604158859">📞 Zadzwoń teraz</a>
-          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nieruchomo%C5%9B%C4%87%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 Napisz</a>
+          <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20nieruchomo%C5%9B%C4%87%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
         </div>
 
         <form class="contact-form" id="contact-form" action="#" method="post">
@@ -1094,12 +1104,12 @@
           <a href="#process">Proces</a>
           <a href="#contact">Kontakt</a>
         </div>
-        <div style="margin-top:22px;padding:18px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.4) inset, 0 0 22px rgba(118,181,197,.25);">
-            <div style="flex:1;background:var(--plots);"></div>
-            <div style="flex:1;background:var(--eco);"></div>
+        <div style="margin-top:22px;padding:28px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;box-shadow:0 0 0 1px rgba(255,255,255,.4) inset, 0 0 22px rgba(118,181,197,.25);">
+          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" width="300" height="100" loading="lazy" decoding="async" style="height:130px;width:auto;max-width:100%;object-fit:contain;display:block;margin:0 auto;filter: drop-shadow(0 10px 25px rgba(0,0,0,.15));">
+          <div style="font-size:15px;color:#5f6b76;text-align:center;max-width:520px;line-height:1.6;">
+            Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentujemy starannie wyselekcjonowane nieruchomości będące częścią portfolio renomowanej agencji
           </div>
-          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" width="300" height="100" loading="lazy" decoding="async" style="height:110px;width:auto;max-width:100%;object-fit:contain;display:block;margin:0 auto;">
-          <div style="font-size:13px;color:#5f6b76;text-align:center;max-width:420px;">Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentowane nieruchomości są częścią portfolio agencji</div>
+        </div>
         </div>
 
         <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Projekt, koncepcja oraz realizacja należą do autora. Strona działa w ramach współpracy z agencją nieruchomości Celebrity Real Estate — prezentowane nieruchomości i działki oferowane są na zasadach partnerskich.</div>
@@ -1159,7 +1169,7 @@
         contact_title: 'Porozmawiajmy o nieruchomości na Costa Blanca',
         contact_intro: 'Skontaktuj się, aby dobrać odpowiedni kierunek zakupu: nowe inwestycje, działkę lub budowę domu dopasowaną do budżetu i celu zakupu.',
         contact_role: 'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm', celebrity_line: 'Współpraca: agencja nieruchomości Celebrity',
-        call_now: '📞 Zadzwoń teraz', write_now: '💬 Napisz',
+        call_now: '📞 Zadzwoń teraz', write_now: '💬 WhatsApp',
         form_name: 'Twoje imię', form_phone: 'Telefon / WhatsApp', form_email: 'Email', form_message: 'Napisz, czego szukasz na Costa Blanca', form_submit: 'Wyślij zapytanie',
         share_title: 'Udostępnij stronę', share_copy: 'Kopiuj link', share_copied: '✅ Skopiowano', share_prompt: 'Skopiuj link:',
         wa_form_prefix: 'Nowe zapytanie ze strony głównej Costa Blanca Invest:',
@@ -1473,7 +1483,7 @@
             footerLinks[4].textContent = t.footer_process;
             footerLinks[5].textContent = t.footer_contact;
           }
-          const celeb = footer.querySelector('div[style*="font-size:13px"]');
+          const celeb = footer.querySelector('div[style*="font-size:15px"]');
           if (celeb) celeb.innerHTML = t.footer_celeb.replace('Celebrity Real Estate', '<strong>Celebrity Real Estate</strong>');
           const footerBottom = footer.querySelector('.footer-bottom');
           if (footerBottom) footerBottom.textContent = t.footer_bottom;
