@@ -308,8 +308,8 @@
       h2{font-size:clamp(24px,7vw,32px)}
       h3{font-size:20px}
       .subtitle,.lead,p{font-size:15px}
-      .nav{gap:12px}
-      .nav a{font-size:14px}
+      .nav{gap:6px}
+      .nav a{font-size:13px}
       .hero-image,.hero-image img{min-height:220px}
       .contact-links a{font-size:16px}
       .footer-links{flex-direction:column;align-items:center}
@@ -367,9 +367,6 @@
         <span>›</span>
         <span>Nowe inwestycje</span>
       </nav>
-
-      
-      </div>
 
       <section class="hero-card">
         <div class="hero-copy">
@@ -646,50 +643,23 @@
   <script>
     const SUPPORTED_LANGS=['pl','es','en','ru'];
     const CATEGORY_TRANSLATIONS={
-      pl:{
-        page_title:'Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm',
-        meta_description:'Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm: apartamenty, penthouse’y i wille od deweloperów. Projekty pod inwestycję, wynajem i second home w Hiszpanii.',
-        og_locale:'pl_PL',
-        hero_eyebrow:'Nowe inwestycje · Costa Blanca',
-        hero_title:'Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów',
-        hero_subtitle:'Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.',
-        hero_lead:'Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.',
-        nav_home:'Strona główna',nav_categories:'Kategorie',nav_contact:'Kontakt',nav_new:'Nowe inwestycje',nav_plots:'Działki',nav_build:'Budowa domu'
-      },
-      es:{
-        page_title:'Obra nueva en Costa Blanca | Apartamentos y villas de promotor Alicante–Benidorm',
-        meta_description:'Obra nueva en Costa Blanca en la zona Alicante–Benidorm: apartamentos, áticos y villas de promotor. Proyectos para inversión, alquiler y second home en España.',
-        og_locale:'es_ES',
-        hero_eyebrow:'Obra nueva · Costa Blanca',
-        hero_title:'Obra nueva en Costa Blanca — apartamentos y villas de promotor',
-        hero_subtitle:'Selección de obra nueva en Costa Blanca para cliente privado e inversor — de Alicante a Benidorm, con enfoque en ubicación y potencial de revalorización.',
-        hero_lead:'Te ayudamos a elegir obra nueva con potencial de crecimiento, alquiler y compra segura en España — desde apartamentos hasta villas premium.',
-        nav_home:'Inicio',nav_categories:'Categorías',nav_contact:'Contacto',nav_new:'Obra nueva',nav_plots:'Parcelas',nav_build:'Construcción'
-      },
-      en:{
-        page_title:'New developments on Costa Blanca | Developer apartments and villas Alicante–Benidorm',
-        meta_description:'New developments on Costa Blanca in the Alicante–Benidorm area: apartments, penthouses and villas from developers. Projects for investment, rental and second home in Spain.',
-        og_locale:'en_GB',
-        hero_eyebrow:'New developments · Costa Blanca',
-        hero_title:'New developments on Costa Blanca — developer apartments and villas',
-        hero_subtitle:'Selected new developments on Costa Blanca for private buyers and investors — from Alicante to Benidorm, focused on location quality and value growth potential.',
-        hero_lead:'We help you choose new developments with growth potential, rental appeal and a safe buying process in Spain — from apartments to premium villas.',
-        nav_home:'Home',nav_categories:'Categories',nav_contact:'Contact',nav_new:'New developments',nav_plots:'Plots',nav_build:'Build house'
-      },
-      ru:{
-        page_title:'Новостройки на Costa Blanca | Апартаменты и виллы от застройщиков Alicante–Benidorm',
-        meta_description:'Новостройки на Costa Blanca в районе Alicante–Benidorm: апартаменты, пентхаусы и виллы от застройщиков. Проекты для инвестиций, аренды и second home в Испании.',
-        og_locale:'ru_RU',
-        hero_eyebrow:'Новостройки · Costa Blanca',
-        hero_title:'Новостройки на Costa Blanca — апартаменты и виллы от застройщиков',
-        hero_subtitle:'Подборка новостроек на Costa Blanca для частного клиента и инвестора — от Alicante до Benidorm, с акцентом на локацию и потенциал роста стоимости.',
-        hero_lead:'Помогаем выбрать новостройки с потенциалом роста, аренды и безопасной покупки в Испании — от апартаментов до премиальных вилл.',
-        nav_home:'Главная',nav_categories:'Категории',nav_contact:'Контакт',nav_new:'Новостройки',nav_plots:'Участки',nav_build:'Строительство дома'
-      }
+      pl:{page_title:'Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm',meta_description:'Nowe inwestycje na Costa Blanca w rejonie Alicante–Benidorm: apartamenty, penthouse’y i wille od deweloperów. Projekty pod inwestycję, wynajem i second home w Hiszpanii.',og_locale:'pl_PL',hero_eyebrow:'Nowe inwestycje · Costa Blanca',hero_title:'Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów',hero_subtitle:'Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.',hero_lead:'Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.',nav_home:'Strona główna',nav_categories:'Kategorie',nav_contact:'Kontakt',nav_new:'Nowe inwestycje',nav_plots:'Działki',nav_build:'Budowa domu',breadcrumbs_home:'Strona główna',breadcrumbs_current:'Nowe inwestycje',why_title:'Dlaczego warto inwestować w nowe inwestycje Costa Blanca Alicante–Benidorm',why_1_h:'Stabilny rynek nieruchomości',why_1_p:'Costa Blanca to jeden z najbardziej stabilnych regionów w Hiszpanii z całorocznym popytem na zakup i wynajem nieruchomości.',why_2_h:'Wysoki potencjał ROI',why_2_p:'Nowe inwestycje Alicante i Benidorm oferują średni zwrot na poziomie 5–7% rocznie przy dobrze dobranym projekcie.',why_3_h:'Bezpieczny zakup od dewelopera',why_3_p:'Apartamenty i wille od dewelopera w Hiszpanii to przejrzysty proces, nowoczesne standardy i gwarancje jakości.',projects_title:'Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów',projects_intro:'Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.',process_title:'Jak wybieramy new developments Alicante Spain i Costa Blanca',process_1_h:'1. Analiza lokalizacji',process_1_p:'Sprawdzamy potencjał inwestycyjny Alicante, Benidorm i okolic pod kątem popytu, infrastruktury i wynajmu.',process_2_h:'2. Weryfikacja dewelopera',process_2_p:'Analizujemy doświadczenie dewelopera, jakość realizacji oraz bezpieczeństwo prawne inwestycji.',process_3_h:'3. Strategia inwestycyjna',process_3_p:'Dopasowujemy inwestycję do celu: wynajem, wzrost wartości lub zakup drugiego domu w Hiszpanii.',locations_title:'Najlepsze lokalizacje: nowe mieszkania Alicante i property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm i Torre de la Horadada należą do najczęściej wybieranych kierunków dla klientów szukających nowej nieruchomości w Hiszpanii.',loc_1_h:'Alicante — nowe mieszkania i apartamenty',loc_1_p:'Nowe mieszkania i apartamenty od dewelopera z wysokim potencjałem wynajmu oraz dobrym dostępem do miasta, lotniska i plaż.',loc_2_h:'Benidorm i Finestrat — property for sale new build',loc_2_p:'Nowoczesne inwestycje premium z widokiem, rozwiniętą infrastrukturą i atrakcyjnym profilem inwestycyjnym.',loc_3_h:'Torre de la Horadada',loc_3_p:'Kameralne lokalizacje blisko morza, idealne pod second home, spokojny styl życia i zakup wakacyjnej nieruchomości.',faq_title:'FAQ — nowe inwestycje na Costa Blanca',faq_1_h:'Czy warto kupić nowe inwestycje w Alicante?',faq_1_p:'Tak. Alicante oferuje stabilny popyt, rozwiniętą infrastrukturę i wysoki potencjał wynajmu przez cały rok.',faq_2_h:'Ile kosztują nowe mieszkania w Alicante?',faq_2_p:'Ceny zależą od lokalizacji i standardu, ale nowe mieszkania w Alicante zaczynają się od około 200 000 €.',faq_3_h:'Czy Benidorm to dobra lokalizacja inwestycyjna?',faq_3_p:'Tak. Benidorm i Finestrat należą do najmocniejszych segmentów rynku premium na Costa Blanca i przyciągają klientów przez cały rok.',categories_title:'Inne główne kategorie',cat_1_h:'Działki',cat_1_p:'Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.',cat_2_h:'Budowa domu',cat_2_p:'Kompleksowa realizacja domu w Hiszpanii — od działki po wykończenie pod klucz.',seo_h2:'Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm',seo_1_h:'Rynek nowych inwestycji w Hiszpanii',seo_1_p:'Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.',seo_2_h:'Najbardziej popularne lokalizacje',seo_2_p:'Największym zainteresowaniem cieszą się nowe mieszkania w Alicante oraz nowoczesne inwestycje w Benidormie i Finestrat. To projekty projektowane pod wynajem krótkoterminowy i długoterminowy, ale również pod własne użytkowanie jako second home w Hiszpanii.',seo_3_h:'Apartamenty i wille od deweloperów',seo_3_p:'Apartamenty i wille od deweloperów to rozwiązanie dla osób, które chcą kupić nieruchomość w uporządkowanym procesie, bez konieczności prowadzenia budowy. Nowe inwestycje powstają w najlepszych lokalizacjach — blisko morza, infrastruktury i stref turystycznych, co bezpośrednio wpływa na ich potencjał inwestycyjny.',seo_4_h:'Strategie inwestycyjne',seo_4_p:'W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.',contact_title:'Zapytaj o aktualne inwestycje',contact_intro:'Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.',contact_note:'💡 Odpowiadam w 10–15 minut',contact_role:'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm',call_now:'📞 Zadzwoń teraz',write_now:'💬 Napisz',share_title:'Udostępnij stronę',share_link:'🔗 Link',share_copied:'✅ Skopiowano',share_shared:'Link został udostępniony.',share_copied_status:'Link został skopiowany.',share_prompt:'Skopiuj link:',form_name:'Twoje imię',form_phone:'Telefon / WhatsApp',form_email:'Email',form_message:'Napisz, jaka inwestycja Cię interesuje',form_submit:'📩 Wyślij zapytanie',wa_interest:'Interesuje mnie nowa inwestycja na Costa Blanca.',wa_form_prefix:'Nowe zapytanie ze strony Nowe inwestycje:',footer_copy:'Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.',footer_1:'Nowe inwestycje',footer_2:'Działki',footer_3:'Budowa domu',footer_4:'Kategorie inwestycji',footer_5:'Strategia inwestycyjna',footer_6:'Kontakt',footer_bottom:'© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.',sticky_wa:'💬 WhatsApp',card_link:'Zobacz inwestycję →',card_link_soon:'Zobacz ofertę →',empty_h:'Oferty w przygotowaniu',empty_p:'Skontaktuj się z nami, aby otrzymać aktualne propozycje inwestycji na Costa Blanca.'},
+      es:{page_title:'Obra nueva en Costa Blanca | Apartamentos y villas de promotor Alicante–Benidorm',meta_description:'Obra nueva en Costa Blanca en la zona Alicante–Benidorm: apartamentos, áticos y villas de promotor. Proyectos para inversión, alquiler y segunda residencia en España.',og_locale:'es_ES',hero_eyebrow:'Obra nueva · Costa Blanca',hero_title:'Obra nueva en Costa Blanca — apartamentos y villas de promotor',hero_subtitle:'Selección de obra nueva en Costa Blanca para cliente privado e inversor — de Alicante a Benidorm, con foco en ubicación y potencial de revalorización.',hero_lead:'Te ayudamos a elegir obra nueva con potencial de crecimiento, alquiler y compra segura en España — desde apartamentos hasta villas premium.',nav_home:'Inicio',nav_categories:'Categorías',nav_contact:'Contacto',nav_new:'Obra nueva',nav_plots:'Parcelas',nav_build:'Construcción',breadcrumbs_home:'Inicio',breadcrumbs_current:'Obra nueva',why_title:'Por qué invertir en obra nueva Costa Blanca Alicante–Benidorm',why_1_h:'Mercado inmobiliario estable',why_1_p:'Costa Blanca es una de las regiones más estables de España con demanda durante todo el año para compra y alquiler.',why_2_h:'Alto potencial ROI',why_2_p:'La obra nueva en Alicante y Benidorm ofrece una rentabilidad media del 5–7% anual con el proyecto adecuado.',why_3_h:'Compra segura al promotor',why_3_p:'Apartamentos y villas de promotor en España significan un proceso claro, estándares modernos y garantías de calidad.',projects_title:'Obra nueva Costa Blanca — apartamentos y villas de promotor',projects_intro:'Cada proyecto lleva a una oferta detallada con descripción, fotos, parámetros y ubicación.',process_title:'Cómo seleccionamos new developments Alicante Spain y Costa Blanca',process_1_h:'1. Análisis de ubicación',process_1_p:'Evaluamos el potencial de inversión de Alicante, Benidorm y alrededores en demanda, infraestructura y alquiler.',process_2_h:'2. Verificación del promotor',process_2_p:'Analizamos la experiencia del promotor, la calidad de ejecución y la seguridad jurídica.',process_3_h:'3. Estrategia de inversión',process_3_p:'Ajustamos la inversión al objetivo: alquiler, revalorización o compra de segunda residencia en España.',locations_title:'Mejores ubicaciones: vivienda nueva Alicante y property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm y Torre de la Horadada están entre los destinos más elegidos por quienes buscan vivienda nueva en España.',loc_1_h:'Alicante — pisos y apartamentos nuevos',loc_1_p:'Viviendas nuevas de promotor con alto potencial de alquiler y buen acceso a ciudad, aeropuerto y playas.',loc_2_h:'Benidorm y Finestrat — obra nueva',loc_2_p:'Inversiones premium modernas con vistas, buena infraestructura y atractivo perfil inversor.',loc_3_h:'Torre de la Horadada',loc_3_p:'Ubicaciones tranquilas junto al mar, ideales como segunda residencia o compra vacacional.',faq_title:'FAQ — obra nueva en Costa Blanca',faq_1_h:'¿Vale la pena comprar obra nueva en Alicante?',faq_1_p:'Sí. Alicante ofrece demanda estable, buena infraestructura y alto potencial de alquiler todo el año.',faq_2_h:'¿Cuánto cuesta la vivienda nueva en Alicante?',faq_2_p:'Los precios dependen de la ubicación y el nivel, pero empiezan aproximadamente desde 200 000 €.',faq_3_h:'¿Benidorm es una buena zona para invertir?',faq_3_p:'Sí. Benidorm y Finestrat están entre los segmentos premium más fuertes de Costa Blanca y atraen clientes todo el año.',categories_title:'Otras categorías principales',cat_1_h:'Parcelas',cat_1_p:'Compra de suelo en Costa Blanca para vivienda privada o proyecto de inversión.',cat_2_h:'Construcción',cat_2_p:'Construcción integral de vivienda en España — desde la parcela hasta la entrega llave en mano.',seo_h2:'Obra nueva en Costa Blanca — apartamentos y villas Alicante–Benidorm',seo_1_h:'Mercado de obra nueva en España',seo_1_p:'El mercado de obra nueva en Costa Blanca, en la zona de Alicante–Benidorm, crece de forma dinámica y atrae tanto a clientes privados como a inversores. La gran ventaja del área es la combinación de demanda estable, clima anual e infraestructura desarrollada.',seo_2_h:'Ubicaciones más populares',seo_2_p:'Las zonas con más interés son la vivienda nueva en Alicante y las promociones modernas en Benidorm y Finestrat. Son proyectos pensados para alquiler y también para uso propio como segunda residencia.',seo_3_h:'Apartamentos y villas de promotor',seo_3_p:'Comprar a promotor es una solución para quienes quieren adquirir una propiedad en un proceso ordenado, sin gestionar la construcción. Los proyectos nacen en ubicaciones clave cerca del mar y de la infraestructura.',seo_4_h:'Estrategias de inversión',seo_4_p:'Según el objetivo de compra, se puede elegir entre alquiler, apartamento vacacional o villa como inversión a largo plazo. Costa Blanca sigue siendo uno de los mercados más previsibles de España.',contact_title:'Pregunta por las promociones actuales',contact_intro:'Contacta para recibir ofertas actuales y promociones seleccionadas según presupuesto, objetivo de compra y ubicación preferida en Costa Blanca.',contact_note:'💡 Respondo en 10–15 minutos',contact_role:'Especialista en inversión inmobiliaria Costa Blanca · Alicante–Benidorm',call_now:'📞 Llamar ahora',write_now:'💬 Escribir',share_title:'Compartir página',share_link:'🔗 Enlace',share_copied:'✅ Copiado',share_shared:'Enlace compartido.',share_copied_status:'Enlace copiado.',share_prompt:'Copia el enlace:',form_name:'Tu nombre',form_phone:'Teléfono / WhatsApp',form_email:'Email',form_message:'Escribe qué tipo de inversión te interesa',form_submit:'📩 Enviar consulta',wa_interest:'Me interesa una promoción nueva en Costa Blanca.',wa_form_prefix:'Nueva consulta desde la página Obra nueva:',footer_copy:'Costa Blanca Invest es un proyecto de inversión en el mercado inmobiliario en España. La web fue creada como herramienta personal de trabajo para socios y clientes, con acceso rápido a promociones, parcelas y proyectos de construcción.',footer_1:'Obra nueva',footer_2:'Parcelas',footer_3:'Construcción',footer_4:'Categorías de inversión',footer_5:'Estrategia de inversión',footer_6:'Contacto',footer_bottom:'© 2026 | Sitio creado personalmente por Olga Chernyshenko. Los materiales, el código y el concepto del sitio son propiedad intelectual de la autora.',sticky_wa:'💬 WhatsApp',card_link:'Ver promoción →',card_link_soon:'Ver oferta →',empty_h:'Ofertas en preparación',empty_p:'Contáctanos para recibir propuestas actuales de inversión en Costa Blanca.'},
+      en:{page_title:'New developments on Costa Blanca | Developer apartments and villas Alicante–Benidorm',meta_description:'New developments on Costa Blanca in the Alicante–Benidorm area: apartments, penthouses and villas from developers. Projects for investment, rental and second home in Spain.',og_locale:'en_GB',hero_eyebrow:'New developments · Costa Blanca',hero_title:'New developments on Costa Blanca — developer apartments and villas',hero_subtitle:'Selected new developments on Costa Blanca for private buyers and investors — from Alicante to Benidorm, focused on location quality and value growth potential.',hero_lead:'We help you choose new developments with growth potential, rental appeal and a safe buying process in Spain — from apartments to premium villas.',nav_home:'Home',nav_categories:'Categories',nav_contact:'Contact',nav_new:'New developments',nav_plots:'Plots',nav_build:'Build house',breadcrumbs_home:'Home',breadcrumbs_current:'New developments',why_title:'Why invest in new developments Costa Blanca Alicante–Benidorm',why_1_h:'Stable property market',why_1_p:'Costa Blanca is one of Spain’s most stable regions with year-round demand for buying and renting property.',why_2_h:'High ROI potential',why_2_p:'New developments in Alicante and Benidorm can offer average returns of 5–7% per year with the right project.',why_3_h:'Safe developer purchase',why_3_p:'Buying apartments and villas from developers in Spain means a clear process, modern standards and quality guarantees.',projects_title:'Costa Blanca new developments — developer apartments and villas',projects_intro:'Each project leads to a detailed offer with description, photos, parameters and location.',process_title:'How we select new developments Alicante Spain and Costa Blanca',process_1_h:'1. Location analysis',process_1_p:'We assess investment potential in Alicante, Benidorm and nearby areas in terms of demand, infrastructure and rentals.',process_2_h:'2. Developer review',process_2_p:'We analyse the developer’s experience, build quality and legal security.',process_3_h:'3. Investment strategy',process_3_p:'We match the investment to your goal: rental income, capital growth or a second home in Spain.',locations_title:'Best locations: new homes Alicante and property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm and Torre de la Horadada are among the top choices for buyers looking for new property in Spain.',loc_1_h:'Alicante — new flats and apartments',loc_1_p:'New developer homes with strong rental potential and good access to the city, airport and beaches.',loc_2_h:'Benidorm and Finestrat — new build property',loc_2_p:'Modern premium developments with views, good infrastructure and an attractive investment profile.',loc_3_h:'Torre de la Horadada',loc_3_p:'Calmer seaside locations, ideal for a second home or holiday property.',faq_title:'FAQ — new developments on Costa Blanca',faq_1_h:'Is it worth buying new developments in Alicante?',faq_1_p:'Yes. Alicante offers stable demand, developed infrastructure and strong year-round rental potential.',faq_2_h:'How much do new homes in Alicante cost?',faq_2_p:'Prices depend on location and standard, but new homes in Alicante start from around €200,000.',faq_3_h:'Is Benidorm a good investment location?',faq_3_p:'Yes. Benidorm and Finestrat are among the strongest premium segments on Costa Blanca and attract buyers all year round.',categories_title:'Other main categories',cat_1_h:'Plots',cat_1_p:'Buying land on Costa Blanca for a private home or investment project.',cat_2_h:'Build house',cat_2_p:'Comprehensive house construction in Spain — from plot to turnkey finish.',seo_h2:'New developments on Costa Blanca — apartments and villas Alicante–Benidorm',seo_1_h:'Spain’s new development market',seo_1_p:'The Costa Blanca new development market in the Alicante–Benidorm area is growing dynamically and attracts both private buyers and investors. The region’s key advantage is its blend of stable demand, year-round climate and developed infrastructure.',seo_2_h:'Most popular locations',seo_2_p:'The greatest interest is in new homes in Alicante and modern developments in Benidorm and Finestrat. These projects are designed both for rental and personal use as a second home.',seo_3_h:'Developer apartments and villas',seo_3_p:'Developer apartments and villas are a solution for buyers who want an orderly process without managing a build themselves. New projects are created in the best locations near the sea and infrastructure.',seo_4_h:'Investment strategies',seo_4_p:'Depending on the goal, buyers may choose a rental apartment, holiday apartment or villa as a long-term investment. Costa Blanca remains one of Spain’s most predictable property markets.',contact_title:'Ask about current developments',contact_intro:'Get in touch to receive current offers and selected developments matched to your budget, purchase goal and preferred Costa Blanca location.',contact_note:'💡 I reply in 10–15 minutes',contact_role:'Costa Blanca property investment specialist · Alicante–Benidorm',call_now:'📞 Call now',write_now:'💬 Message',share_title:'Share page',share_link:'🔗 Link',share_copied:'✅ Copied',share_shared:'Link shared.',share_copied_status:'Link copied.',share_prompt:'Copy the link:',form_name:'Your name',form_phone:'Phone / WhatsApp',form_email:'Email',form_message:'Write which type of investment interests you',form_submit:'📩 Send enquiry',wa_interest:'I am interested in a new development on Costa Blanca.',wa_form_prefix:'New enquiry from the New developments page:',footer_copy:'Costa Blanca Invest is an investment project in the Spanish property market. The site was created as a personal work tool for partners and clients, giving quick access to developments, plots and house-building projects on Costa Blanca.',footer_1:'New developments',footer_2:'Plots',footer_3:'Build house',footer_4:'Investment categories',footer_5:'Investment strategy',footer_6:'Contact',footer_bottom:'© 2026 | Site personally created by Olga Chernyshenko. The materials, code and concept of the site are the intellectual property of the author.',sticky_wa:'💬 WhatsApp',card_link:'View development →',card_link_soon:'View offer →',empty_h:'Offers in preparation',empty_p:'Contact us to receive current investment proposals on Costa Blanca.'},
+      ru:{page_title:'Новостройки на Costa Blanca | Апартаменты и виллы от застройщиков Alicante–Benidorm',meta_description:'Новостройки на Costa Blanca в районе Alicante–Benidorm: апартаменты, пентхаусы и виллы от застройщиков. Проекты для инвестиций, аренды и второго дома в Испании.',og_locale:'ru_RU',hero_eyebrow:'Новостройки · Costa Blanca',hero_title:'Новостройки на Costa Blanca — апартаменты и виллы от застройщиков',hero_subtitle:'Подборка новостроек на Costa Blanca для частного клиента и инвестора — от Alicante до Benidorm, с акцентом на локацию и потенциал роста стоимости.',hero_lead:'Помогаем выбрать новостройки с потенциалом роста, аренды и безопасной покупки в Испании — от апартаментов до премиальных вилл.',nav_home:'Главная',nav_categories:'Категории',nav_contact:'Контакт',nav_new:'Новостройки',nav_plots:'Участки',nav_build:'Строительство дома',breadcrumbs_home:'Главная',breadcrumbs_current:'Новостройки',why_title:'Почему стоит инвестировать в новостройки Costa Blanca Alicante–Benidorm',why_1_h:'Стабильный рынок недвижимости',why_1_p:'Costa Blanca — один из самых стабильных регионов Испании с круглогодичным спросом на покупку и аренду недвижимости.',why_2_h:'Высокий потенциал ROI',why_2_p:'Новостройки в Alicante и Benidorm могут давать среднюю доходность 5–7% в год при правильном проекте.',why_3_h:'Безопасная покупка у застройщика',why_3_p:'Апартаменты и виллы от застройщика в Испании — это прозрачный процесс, современные стандарты и гарантии качества.',projects_title:'Новостройки Costa Blanca — апартаменты и виллы от застройщиков',projects_intro:'Каждый объект ведёт на подробную страницу с описанием, фото, параметрами и локацией.',process_title:'Как мы отбираем new developments Alicante Spain и Costa Blanca',process_1_h:'1. Анализ локации',process_1_p:'Мы оцениваем инвестиционный потенциал Alicante, Benidorm и окрестностей по спросу, инфраструктуре и аренде.',process_2_h:'2. Проверка застройщика',process_2_p:'Анализируем опыт застройщика, качество реализации и юридическую безопасность.',process_3_h:'3. Инвестиционная стратегия',process_3_p:'Подбираем объект под цель: аренда, рост стоимости или второй дом в Испании.',locations_title:'Лучшие локации: новое жильё Alicante и property for sale Benidorm new build',locations_intro:'Alicante, Finestrat, Benidorm и Torre de la Horadada входят в число самых популярных направлений для покупателей новой недвижимости в Испании.',loc_1_h:'Alicante — новые квартиры и апартаменты',loc_1_p:'Новое жильё от застройщика с высоким арендным потенциалом и хорошим доступом к городу, аэропорту и пляжам.',loc_2_h:'Benidorm и Finestrat — новостройки',loc_2_p:'Современные премиальные проекты с видами, развитой инфраструктурой и привлекательным инвестиционным профилем.',loc_3_h:'Torre de la Horadada',loc_3_p:'Спокойные локации у моря, идеальные для второго дома и покупки курортной недвижимости.',faq_title:'FAQ — новостройки на Costa Blanca',faq_1_h:'Стоит ли покупать новостройки в Alicante?',faq_1_p:'Да. Alicante предлагает стабильный спрос, развитую инфраструктуру и высокий арендный потенциал круглый год.',faq_2_h:'Сколько стоит новое жильё в Alicante?',faq_2_p:'Цены зависят от локации и уровня проекта, но стартуют примерно от 200 000 €.',faq_3_h:'Benidorm — хорошая локация для инвестиций?',faq_3_p:'Да. Benidorm и Finestrat входят в число самых сильных премиальных сегментов Costa Blanca и привлекают клиентов круглый год.',categories_title:'Другие основные категории',cat_1_h:'Участки',cat_1_p:'Покупка земли на Costa Blanca под частный дом или инвестиционный проект.',cat_2_h:'Строительство дома',cat_2_p:'Комплексная реализация дома в Испании — от участка до отделки под ключ.',seo_h2:'Новостройки на Costa Blanca — апартаменты и виллы Alicante–Benidorm',seo_1_h:'Рынок новостроек в Испании',seo_1_p:'Рынок новостроек на Costa Blanca в зоне Alicante–Benidorm динамично развивается и привлекает как частных клиентов, так и инвесторов. Ключевое преимущество региона — сочетание стабильного спроса, круглогодичного климата и развитой инфраструктуры.',seo_2_h:'Самые популярные локации',seo_2_p:'Наибольший интерес вызывают новые квартиры в Alicante и современные проекты в Benidorm и Finestrat. Это объекты как под аренду, так и под личное использование в формате second home.',seo_3_h:'Апартаменты и виллы от застройщиков',seo_3_p:'Покупка у застройщика подходит тем, кто хочет приобрести недвижимость в упорядоченном процессе без ведения стройки. Новые проекты создаются в лучших локациях рядом с морем и инфраструктурой.',seo_4_h:'Инвестиционные стратегии',seo_4_p:'В зависимости от цели можно выбрать квартиру под аренду, курортные апартаменты или виллу как долгосрочную инвестицию. Costa Blanca остаётся одним из самых предсказуемых рынков недвижимости Испании.',contact_title:'Запросить актуальные новостройки',contact_intro:'Свяжитесь, чтобы получить актуальные предложения и подборку объектов под ваш бюджет, цель покупки и желаемую локацию на Costa Blanca.',contact_note:'💡 Отвечаю за 10–15 минут',contact_role:'Специалист по инвестициям в недвижимость Costa Blanca · Alicante–Benidorm',call_now:'📞 Позвонить сейчас',write_now:'💬 Написать',share_title:'Поделиться страницей',share_link:'🔗 Ссылка',share_copied:'✅ Скопировано',share_shared:'Ссылка отправлена.',share_copied_status:'Ссылка скопирована.',share_prompt:'Скопируйте ссылку:',form_name:'Ваше имя',form_phone:'Телефон / WhatsApp',form_email:'Email',form_message:'Напишите, какой объект вас интересует',form_submit:'📩 Отправить запрос',wa_interest:'Меня интересует новостройка на Costa Blanca.',wa_form_prefix:'Новый запрос со страницы Новостройки:',footer_copy:'Costa Blanca Invest — инвестиционный проект на рынке недвижимости Испании. Сайт создан как личный рабочий инструмент для партнёров и клиентов, обеспечивающий быстрый доступ к новостройкам, участкам и проектам строительства дома на Costa Blanca.',footer_1:'Новостройки',footer_2:'Участки',footer_3:'Строительство дома',footer_4:'Категории инвестиций',footer_5:'Инвестиционная стратегия',footer_6:'Контакт',footer_bottom:'© 2026 | Сайт создан лично Ольгой Чернышенко. Материалы, код и концепция сайта являются интеллектуальной собственностью автора.',sticky_wa:'💬 WhatsApp',card_link:'Смотреть объект →',card_link_soon:'Смотреть предложение →',empty_h:'Предложения в подготовке',empty_p:'Свяжитесь с нами, чтобы получить актуальные инвестиционные предложения на Costa Blanca.'}
+    };
+
+    const PROJECT_TRANSLATIONS={
+      'bonalba-golf-hills':{es:{chip:'Premium · Golf & Lifestyle',title:'Bonalba Golf Hills',meta:'Mutxamel cerca de Alicante',price:'280 800 € – 405 600 € · 98–156 m² · 2–3 dormitorios',desc:'Promoción premium en entorno de golf y zonas verdes, ideal para clientes que buscan estilo de vida, privacidad y potencial de inversión estable.'},en:{chip:'Premium · Golf & Lifestyle',title:'Bonalba Golf Hills',meta:'Mutxamel near Alicante',price:'€280,800 – €405,600 · 98–156 m² · 2–3 bedrooms',desc:'Boutique premium development surrounded by golf and greenery, ideal for buyers seeking lifestyle, privacy and stable investment potential.'},ru:{chip:'Премиум · Гольф и lifestyle',title:'Bonalba Golf Hills',meta:'Mutxamel рядом с Alicante',price:'280 800 € – 405 600 € · 98–156 м² · 2–3 спальни',desc:'Камерный премиальный проект среди гольф-полей и зелени — для клиентов, которым важны стиль жизни, приватность и стабильный инвестиционный потенциал.'}},
+      'penthouse-torrevieja':{es:{chip:'🔥 Última unidad · Obra nueva',title:'Ático en Torrevieja — 3 dormitorios',meta:'Torrevieja · centro · entrega: 2026',price:'305 000 € · 134 m² · 3 dormitorios',desc:'Ático con terraza y solárium de 71 m². A 15 min de la playa y con toda la infraestructura a pie, ideal para vivir o como second home.'},en:{chip:'🔥 Last unit · New development',title:'Penthouse in Torrevieja — 3 bedrooms',meta:'Torrevieja · centre · delivery: 2026',price:'€305,000 · 134 m² · 3 bedrooms',desc:'Penthouse with veranda and 71 m² solarium. 15 minutes to the beach and full infrastructure within walking distance — ideal for living or as a second home.'},ru:{chip:'🔥 Последний объект · Новостройка',title:'Пентхаус в Torrevieja — 3 спальни',meta:'Torrevieja · центр · сдача: 2026',price:'305 000 € · 134 м² · 3 спальни',desc:'Пентхаус с верандой и солярием 71 м². 15 минут до пляжа и вся инфраструктура в пешей доступности — идеально для проживания или второго дома.'}},
+      'maranon':{es:{chip:'Obra nueva · 3 min al mar',title:'Marañón — apartamentos junto a la playa',meta:'Torrevieja · Marañón · entrega: T2 2027',price:'desde 133 000 € hasta 300 000 €',desc:'Edificio moderno de 6 plantas con 20 apartamentos, a unos 180 m del mar. Proyecto para vivir, vacaciones e inversión, con obra desde T2 2026 y finalización en T2 2027.'},en:{chip:'New development · 3 min to the sea',title:'Marañón — beachside apartments',meta:'Torrevieja · Marañón · delivery: Q2 2027',price:'from €133,000 to €300,000',desc:'Modern 6-storey building with 20 apartments around 180 m from the sea. A project for living, holidays and investment, with construction from Q2 2026 and completion in Q2 2027.'},ru:{chip:'Новостройка · 3 мин до моря',title:'Marañón — апартаменты у пляжа',meta:'Torrevieja · Marañón · сдача: Q2 2027',price:'от 133 000 € до 300 000 €',desc:'Современное 6-этажное здание на 20 апартаментов примерно в 180 м от моря. Проект для жизни, отдыха и инвестиций, со строительством с Q2 2026 и завершением в Q2 2027.'}},
+      'monteagudo':{es:{chip:'Obra nueva · Pago flexible',title:'Monteagudo — apartamentos en Torrevieja',meta:'Torrevieja · Monteagudo · pago flexible',price:'desde 104 000 €',desc:'Dos opciones de compra: precio inversor con pago completo o desde 104 000 € con pago aplazado — 10 000 € de reserva, 30% en un mes, 30% en 4–6 meses y resto ante notario. Incluye acabados, cocina, baño equipado, suelo radiante, aire acondicionado central, ventanas PVC e instalaciones completas.'},en:{chip:'New development · Flexible payment',title:'Monteagudo — apartments in Torrevieja',meta:'Torrevieja · Monteagudo · flexible payment',price:'from €104,000',desc:'Two purchase options: investor price with full payment or from €104,000 on an instalment plan — €10,000 deposit, 30% within one month, 30% after 4–6 months, and the balance before the notary. Includes finishes, kitchen, fitted bathroom, underfloor heating, central air conditioning, PVC windows and full installations.'},ru:{chip:'Новостройка · Гибкая оплата',title:'Monteagudo — апартаменты в Torrevieja',meta:'Torrevieja · Monteagudo · гибкая оплата',price:'от 104 000 €',desc:'Два варианта покупки: инвесторская цена при полной оплате или от 104 000 € в рассрочку — 10 000 € резерв, 30% в течение месяца, 30% через 4–6 месяцев, остаток у нотариуса. В стоимость входят отделка, кухня, оборудованная ванная, тёплый пол, центральный кондиционер, окна PVC и все инженерные системы.'}},
+      'investment-coming-soon':{es:{chip:'Obra nueva · En preparación',title:'Nuevas promociones de promotor',meta:'Costa Blanca · Alicante · Benidorm',price:'Estamos actualizando ofertas y precios',desc:'Estamos añadiendo nuevos proyectos de promotor. Contáctanos para recibir propuestas actualmente disponibles.',alt:'Nuevas promociones de promotor en Costa Blanca — oferta en preparación'},en:{chip:'New developments · Coming soon',title:'New developer projects',meta:'Costa Blanca · Alicante · Benidorm',price:'We are updating offers and prices',desc:'We are adding new developer projects. Contact us to receive currently available proposals.',alt:'New developer projects on Costa Blanca — offer coming soon'},ru:{chip:'Новостройки · В подготовке',title:'Новые проекты от застройщиков',meta:'Costa Blanca · Alicante · Benidorm',price:'Обновляем предложения и цены',desc:'Мы добавляем новые проекты от застройщиков. Свяжитесь с нами, чтобы получить актуальные предложения уже сейчас.',alt:'Новые проекты от застройщиков на Costa Blanca — предложение в подготовке'}}
     };
 
     document.addEventListener('DOMContentLoaded',()=>{
       const d=document;
+      let currentLang='pl';
       const langButtons=d.querySelectorAll('.lang-btn');
       const heroImage=d.querySelector('.hero-image img');
       const navLinks=d.querySelectorAll('.nav a');
@@ -697,68 +667,40 @@
       const heroTitle=d.querySelector('.hero-copy h1');
       const heroSubtitle=d.querySelector('.subtitle');
       const heroLead=d.querySelector('.lead');
-
-      function setAttr(selector,attr,value){ const el=d.querySelector(selector); if(el) el.setAttribute(attr,value); }
-      function getInitialLang(){ const url=new URL(window.location.href); const lang=url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
-      function updateUrlLang(lang){ const url=new URL(window.location.href); if(lang==='pl') url.searchParams.delete('lang'); else url.searchParams.set('lang',lang); window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`); }
-      function applyLanguage(lang,syncUrl=true){
-        const t=CATEGORY_TRANSLATIONS[SUPPORTED_LANGS.includes(lang)?lang:'pl'];
-        document.documentElement.lang=t===CATEGORY_TRANSLATIONS.en?'en':t===CATEGORY_TRANSLATIONS.es?'es':t===CATEGORY_TRANSLATIONS.ru?'ru':'pl';
-        document.title=t.page_title;
-        setAttr('meta[name="description"]','content',t.meta_description);
-        setAttr('meta[property="og:title"]','content',t.page_title);
-        setAttr('meta[property="og:description"]','content',t.meta_description);
-        setAttr('meta[property="og:locale"]','content',t.og_locale);
-        setAttr('meta[name="twitter:title"]','content',t.page_title);
-        setAttr('meta[name="twitter:description"]','content',t.meta_description);
-        if(eyebrow) eyebrow.textContent=t.hero_eyebrow;
-        if(heroTitle) heroTitle.textContent=t.hero_title;
-        if(heroSubtitle) heroSubtitle.textContent=t.hero_subtitle;
-        if(heroLead) heroLead.textContent=t.hero_lead;
-        if(navLinks.length>=6){
-          navLinks[0].textContent=t.nav_home;
-          navLinks[1].textContent=t.nav_categories;
-          navLinks[2].textContent=t.nav_contact;
-          navLinks[3].textContent=t.nav_new;
-          navLinks[4].textContent=t.nav_plots;
-          navLinks[5].textContent=t.nav_build;
-        }
-        langButtons.forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
-        if(syncUrl) updateUrlLang(lang);
-        if(heroImage && heroImage.dataset.originalSrc){ heroImage.src=heroImage.dataset.originalSrc; }
-      }
-
-      if(heroImage){ heroImage.dataset.originalSrc=heroImage.getAttribute('src') || ''; }
-      langButtons.forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang,true)));
-      applyLanguage(getInitialLang(),false);
+      const breadcrumbs=d.querySelectorAll('.breadcrumbs a, .breadcrumbs span');
+      const sections=d.querySelectorAll('.section-card.fade-up');
+      const whyCards=d.querySelectorAll('.why-item');
+      const processCards=d.querySelectorAll('#process .step-card');
+      const locationCards=d.querySelectorAll('#locations .location-card');
+      const faqCards=d.querySelectorAll('#faq .faq-card');
+      const categoryCards=d.querySelectorAll('.category-card');
+      const seoSection=d.querySelector('#seo-content');
+      const contactSection=d.querySelector('#contact');
+      const footer=d.querySelector('.footer-card');
       const contactForm=d.getElementById('contact-form');
       const animatedCards=d.querySelectorAll('.fade-up');
       const header=d.querySelector('.topbar');
       const projectsGrid=d.getElementById('projectsGrid');
       const shareLinkBtn=d.getElementById('share-link');
       const shareFacebook=d.getElementById('share-facebook');
-      const shareUrl='https://costa-blanca-invest.com/pl/new-developments/';
       const fallbackImage='/pl/new-developments/images/new-developments-costa-blanca.jpg';
       const fallbackAvatar='/avatar.png';
       let lastScroll=window.pageYOffset,up=0,down=0;
 
+      function setAttr(selector,attr,value){ const el=d.querySelector(selector); if(el) el.setAttribute(attr,value); }
+      function getInitialLang(){ const url=new URL(window.location.href); const lang=url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
+      function updateUrlLang(lang){ const url=new URL(window.location.href); if(lang==='pl') url.searchParams.delete('lang'); else url.searchParams.set('lang',lang); window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`); }
+      function getShareUrl(){ return currentLang==='pl' ? 'https://costa-blanca-invest.com/pl/new-developments/' : `https://costa-blanca-invest.com/pl/new-developments/?lang=${currentLang}`; }
+
       window.handleBrokenImage=function(img){
         if(img.dataset.fallbackApplied==='true') return;
         img.dataset.fallbackApplied='true';
-        if(img.closest('.contact-avatar')){
-          img.src=fallbackAvatar;
-          return;
-        }
+        if(img.closest('.contact-avatar')){ img.src=fallbackAvatar; return; }
         img.src=fallbackImage;
       };
 
       function escapeHtml(value){
-        return String(value ?? '')
-          .replace(/&/g,'&amp;')
-          .replace(/</g,'&lt;')
-          .replace(/>/g,'&gt;')
-          .replace(/"/g,'&quot;')
-          .replace(/'/g,'&#39;');
+        return String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;').replace(/'/g,'&#39;');
       }
 
       function getProjects(){
@@ -775,138 +717,117 @@
 
       function renderProjects(projects){
         if(!projectsGrid) return;
+        const t=CATEGORY_TRANSLATIONS[currentLang] || CATEGORY_TRANSLATIONS.pl;
         if(!projects.length){
-          projectsGrid.innerHTML='<div class="project-card"><div class="card-body"><h3>Oferty w przygotowaniu</h3><p>Skontaktuj się z nami, aby otrzymać aktualne propozycje inwestycji na Costa Blanca.</p></div></div>';
+          projectsGrid.innerHTML=`<div class="project-card"><div class="card-body"><h3>${escapeHtml(t.empty_h)}</h3><p>${escapeHtml(t.empty_p)}</p></div></div>`;
           return;
         }
-
-        const sortedProjects=[...projects].sort((a,b)=>{
-          const aComingSoon=a?.isComingSoon===true ? 1 : 0;
-          const bComingSoon=b?.isComingSoon===true ? 1 : 0;
-          return aComingSoon-bComingSoon;
-        });
-
-        projectsGrid.innerHTML=sortedProjects.map(project=>`
-          <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(project.alt || project.title)}">
-            <img src="${escapeHtml(project.image || fallbackImage)}" alt="${escapeHtml(project.alt || project.title)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+        const sortedProjects=[...projects].sort((a,b)=>{ const aComingSoon=a?.isComingSoon===true ? 1 : 0; const bComingSoon=b?.isComingSoon===true ? 1 : 0; return aComingSoon-bComingSoon; });
+        projectsGrid.innerHTML=sortedProjects.map(project=>{
+          const slug=(project.href||'').split('/').filter(Boolean).pop();
+          const tr=(PROJECT_TRANSLATIONS[slug] && PROJECT_TRANSLATIONS[slug][currentLang]) || null;
+          const chip=tr?.chip || project.chip || '';
+          const title=tr?.title || project.title || '';
+          const meta=tr?.meta || project.meta || '';
+          const price=tr?.price || project.price || '';
+          const desc=tr?.desc || project.desc || '';
+          const alt=tr?.alt || project.alt || project.title || '';
+          const linkLabel=project.isComingSoon ? t.card_link_soon : t.card_link;
+          return `
+          <a href="${escapeHtml(project.href)}" class="project-card" aria-label="${escapeHtml(alt)}">
+            <img src="${escapeHtml(project.image || fallbackImage)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
             <div class="card-body">
-              ${project.chip ? `<div class="chip">${escapeHtml(project.chip)}</div>` : ''}
-              <h3>${escapeHtml(project.title || '')}</h3>
-              ${project.meta ? `<div class="card-meta">${escapeHtml(project.meta)}</div>` : ''}
-              ${project.price ? `<div class="card-price">${escapeHtml(project.price)}</div>` : ''}
-              ${project.desc ? `<p>${escapeHtml(project.desc)}</p>` : ''}
-              <div class="card-link">${project.isComingSoon ? 'Zobacz ofertę →' : 'Zobacz inwestycję →'}</div>
+              ${chip ? `<div class="chip">${escapeHtml(chip)}</div>` : ''}
+              <h3>${escapeHtml(title)}</h3>
+              ${meta ? `<div class="card-meta">${escapeHtml(meta)}</div>` : ''}
+              ${price ? `<div class="card-price">${escapeHtml(price)}</div>` : ''}
+              ${desc ? `<p>${escapeHtml(desc)}</p>` : ''}
+              <div class="card-link">${escapeHtml(linkLabel)}</div>
             </div>
-          </a>
-        `).join('');
+          </a>`;
+        }).join('');
       }
 
-      function setShareStatus(message){
-        const shareStatus=d.getElementById('share-status');
-        if(shareStatus) shareStatus.textContent=message;
+      function applyLanguage(lang,syncUrl=true){
+        currentLang=SUPPORTED_LANGS.includes(lang)?lang:'pl';
+        const t=CATEGORY_TRANSLATIONS[currentLang];
+        document.documentElement.lang=currentLang;
+        document.title=t.page_title;
+        setAttr('meta[name="description"]','content',t.meta_description);
+        setAttr('meta[property="og:title"]','content',t.page_title);
+        setAttr('meta[property="og:description"]','content',t.meta_description);
+        setAttr('meta[property="og:locale"]','content',t.og_locale);
+        setAttr('meta[name="twitter:title"]','content',t.page_title);
+        setAttr('meta[name="twitter:description"]','content',t.meta_description);
+        if(eyebrow) eyebrow.textContent=t.hero_eyebrow;
+        if(heroTitle) heroTitle.textContent=t.hero_title;
+        if(heroSubtitle) heroSubtitle.textContent=t.hero_subtitle;
+        if(heroLead) heroLead.textContent=t.hero_lead;
+        if(navLinks.length>=6){ navLinks[0].textContent=t.nav_home; navLinks[1].textContent=t.nav_categories; navLinks[2].textContent=t.nav_contact; navLinks[3].textContent=t.nav_new; navLinks[4].textContent=t.nav_plots; navLinks[5].textContent=t.nav_build; }
+        if(breadcrumbs.length>=3){ breadcrumbs[0].textContent=t.breadcrumbs_home; breadcrumbs[2].textContent=t.breadcrumbs_current; }
+        if(sections.length>=1){ sections[0].querySelector('h2').textContent=t.why_title; }
+        if(whyCards.length>=3){ whyCards[0].querySelector('h3').textContent=t.why_1_h; whyCards[0].querySelector('p').textContent=t.why_1_p; whyCards[1].querySelector('h3').textContent=t.why_2_h; whyCards[1].querySelector('p').textContent=t.why_2_p; whyCards[2].querySelector('h3').textContent=t.why_3_h; whyCards[2].querySelector('p').textContent=t.why_3_p; }
+        const projectsSection=d.querySelector('#projects'); if(projectsSection){ projectsSection.querySelector('h2').textContent=t.projects_title; projectsSection.querySelector('.center-text').textContent=t.projects_intro; }
+        const processSection=d.querySelector('#process'); if(processSection){ processSection.querySelector('h2').textContent=t.process_title; }
+        if(processCards.length>=3){ processCards[0].querySelector('h3').textContent=t.process_1_h; processCards[0].querySelector('p').textContent=t.process_1_p; processCards[1].querySelector('h3').textContent=t.process_2_h; processCards[1].querySelector('p').textContent=t.process_2_p; processCards[2].querySelector('h3').textContent=t.process_3_h; processCards[2].querySelector('p').textContent=t.process_3_p; }
+        const locationsSection=d.querySelector('#locations'); if(locationsSection){ locationsSection.querySelector('h2').textContent=t.locations_title; locationsSection.querySelector('.center-text').textContent=t.locations_intro; }
+        if(locationCards.length>=3){ locationCards[0].querySelector('h3').textContent=t.loc_1_h; locationCards[0].querySelector('p').textContent=t.loc_1_p; locationCards[1].querySelector('h3').textContent=t.loc_2_h; locationCards[1].querySelector('p').textContent=t.loc_2_p; locationCards[2].querySelector('h3').textContent=t.loc_3_h; locationCards[2].querySelector('p').textContent=t.loc_3_p; }
+        const faqSection=d.querySelector('#faq'); if(faqSection){ faqSection.querySelector('h2').textContent=t.faq_title; }
+        if(faqCards.length>=3){ faqCards[0].querySelector('h3').textContent=t.faq_1_h; faqCards[0].querySelector('p').textContent=t.faq_1_p; faqCards[1].querySelector('h3').textContent=t.faq_2_h; faqCards[1].querySelector('p').textContent=t.faq_2_p; faqCards[2].querySelector('h3').textContent=t.faq_3_h; faqCards[2].querySelector('p').textContent=t.faq_3_p; }
+        if(sections.length>=6){ sections[5].querySelector('h2').textContent=t.categories_title; }
+        if(categoryCards.length>=2){ categoryCards[0].querySelector('h3').textContent=t.cat_1_h; categoryCards[0].querySelector('p').textContent=t.cat_1_p; categoryCards[1].querySelector('h3').textContent=t.cat_2_h; categoryCards[1].querySelector('p').textContent=t.cat_2_p; }
+        if(seoSection){ const h=seoSection.querySelectorAll('h2,h3'); const p=seoSection.querySelectorAll('p'); if(h.length>=5 && p.length>=4){ h[0].textContent=t.seo_h2; h[1].textContent=t.seo_1_h; p[0].textContent=t.seo_1_p; h[2].textContent=t.seo_2_h; p[1].textContent=t.seo_2_p; h[3].textContent=t.seo_3_h; p[2].textContent=t.seo_3_p; h[4].textContent=t.seo_4_h; p[3].textContent=t.seo_4_p; } }
+        if(contactSection){ contactSection.querySelector('.contact-title').textContent=t.contact_title; contactSection.querySelector('.center-text').textContent=t.contact_intro; contactSection.querySelector('.contact-note').textContent=t.contact_note; contactSection.querySelector('.contact-avatar-role').textContent=t.contact_role; contactSection.querySelector('.btn-main').textContent=t.call_now; contactSection.querySelector('.btn-light').textContent=t.write_now; contactSection.querySelector('.share-box p').textContent=t.share_title; d.getElementById('share-link').textContent=t.share_link; const inputs=contactSection.querySelectorAll('input, textarea'); if(inputs.length>=4){ inputs[0].placeholder=t.form_name; inputs[1].placeholder=t.form_phone; inputs[2].placeholder=t.form_email; inputs[3].placeholder=t.form_message; } contactSection.querySelector('.submit-btn').textContent=t.form_submit; }
+        if(footer){ footer.querySelector('.footer-copy').textContent=t.footer_copy; const links=footer.querySelectorAll('.footer-links a'); if(links.length>=6){ links[0].textContent=t.footer_1; links[1].textContent=t.footer_2; links[2].textContent=t.footer_3; links[3].textContent=t.footer_4; links[4].textContent=t.footer_5; links[5].textContent=t.footer_6; } footer.querySelector('.footer-bottom').textContent=t.footer_bottom; }
+        const sticky=d.querySelector('.sticky-wa'); if(sticky) sticky.textContent=t.sticky_wa;
+        langButtons.forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===currentLang));
+        if(syncUrl) updateUrlLang(currentLang);
+        if(heroImage && heroImage.dataset.originalSrc){ heroImage.src=heroImage.dataset.originalSrc; }
+        renderProjects(getProjects());
+        if(shareFacebook){ shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl())}`; }
       }
 
-      async function copyTextToClipboard(text){
-        if(navigator.clipboard && window.isSecureContext){
-          await navigator.clipboard.writeText(text);
-          return true;
-        }
+      function setShareStatus(message){ const shareStatus=d.getElementById('share-status'); if(shareStatus) shareStatus.textContent=message; }
+      async function copyTextToClipboard(text){ if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); return true; } const temp=d.createElement('textarea'); temp.value=text; temp.setAttribute('readonly',''); temp.style.position='absolute'; temp.style.left='-9999px'; d.body.appendChild(temp); temp.select(); const copied=d.execCommand('copy'); d.body.removeChild(temp); return copied; }
 
-        const temp=d.createElement('textarea');
-        temp.value=text;
-        temp.setAttribute('readonly','');
-        temp.style.position='absolute';
-        temp.style.left='-9999px';
-        d.body.appendChild(temp);
-        temp.select();
-        const copied=d.execCommand('copy');
-        d.body.removeChild(temp);
-        return copied;
-      }
-
+      if(heroImage){ heroImage.dataset.originalSrc=heroImage.getAttribute('src') || ''; }
       renderProjects(getProjects());
-
-      if(shareFacebook){
-        shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-      }
+      langButtons.forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang,true)));
+      applyLanguage(getInitialLang(),false);
 
       if(shareLinkBtn){
         shareLinkBtn.addEventListener('click',async()=>{
-          const shareData={
-            title:document.title,
-            text:document.querySelector('meta[name="description"]')?.content || '',
-            url:shareUrl
-          };
-
+          const t=CATEGORY_TRANSLATIONS[currentLang] || CATEGORY_TRANSLATIONS.pl;
+          const shareUrl=getShareUrl();
+          const shareData={ title:document.title, text:document.querySelector('meta[name="description"]')?.content || '', url:shareUrl };
           try{
-            if(navigator.share){
-              await navigator.share(shareData);
-              setShareStatus('Link został udostępniony.');
-              return;
-            }
-
+            if(navigator.share){ await navigator.share(shareData); setShareStatus(t.share_shared); return; }
             const copied=await copyTextToClipboard(shareUrl);
-            if(copied){
-              const oldText=shareLinkBtn.textContent;
-              shareLinkBtn.textContent='✅ Skopiowano';
-              setShareStatus('Link został skopiowany.');
-              setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800);
-              return;
-            }
-
-            window.prompt('Skopiuj link:',shareUrl);
-          }catch(error){
-            window.prompt('Skopiuj link:',shareUrl);
-          }
+            if(copied){ const oldText=shareLinkBtn.textContent; shareLinkBtn.textContent=t.share_copied; setShareStatus(t.share_copied_status); setTimeout(()=>{shareLinkBtn.textContent=oldText;},1800); return; }
+            window.prompt(t.share_prompt,shareUrl);
+          }catch(error){ window.prompt(t.share_prompt,shareUrl); }
         });
       }
 
       if('IntersectionObserver' in window){
-        const observer=new IntersectionObserver(entries=>{
-          entries.forEach(entry=>{
-            if(entry.isIntersecting){
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target);
-            }
-          });
-        },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+        const observer=new IntersectionObserver(entries=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } }); },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
         animatedCards.forEach(el=>observer.observe(el));
-      }else{
-        animatedCards.forEach(el=>el.classList.add('show'));
-      }
+      }else{ animatedCards.forEach(el=>el.classList.add('show')); }
 
       let ticking=false;
-      const onScroll=()=>{
-        const current=window.pageYOffset;
-        const delta=current-lastScroll;
-        if(Math.abs(delta)>=4){
-          if(delta>0){
-            down+=delta; up=0;
-            if(current>120 && down>24 && header) header.classList.add('hide');
-          }else{
-            up+=Math.abs(delta); down=0;
-            if((up>42 || current<40) && header) header.classList.remove('hide');
-          }
-          lastScroll=current;
-        }
-        ticking=false;
-      };
-      window.addEventListener('scroll',()=>{
-        if(!ticking){
-          window.requestAnimationFrame(onScroll);
-          ticking=true;
-        }
-      },{passive:true});
+      const onScroll=()=>{ const current=window.pageYOffset; const delta=current-lastScroll; if(Math.abs(delta)>=4){ if(delta>0){ down+=delta; up=0; if(current>120 && down>24 && header) header.classList.add('hide'); }else{ up+=Math.abs(delta); down=0; if((up>42 || current<40) && header) header.classList.remove('hide'); } lastScroll=current; } ticking=false; };
+      window.addEventListener('scroll',()=>{ if(!ticking){ window.requestAnimationFrame(onScroll); ticking=true; } },{passive:true});
 
       if(contactForm){
         contactForm.addEventListener('submit',event=>{
           event.preventDefault();
+          const t=CATEGORY_TRANSLATIONS[currentLang] || CATEGORY_TRANSLATIONS.pl;
           const formData=new FormData(contactForm);
           const name=(formData.get('name')||'').toString().trim();
           const phone=(formData.get('phone')||'').toString().trim();
           const email=(formData.get('email')||'').toString().trim();
           const message=(formData.get('message')||'').toString().trim();
-          const text=`Nowe zapytanie ze strony Nowe inwestycje:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+          const text=`${t.wa_form_prefix}\n\n${t.form_name}: ${name}\n${t.form_phone}: ${phone}\n${t.form_email}: ${email}\n\nWiadomość:\n${message}`;
           const url=`https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened=window.open(url,'_blank','noopener');
           if(!opened) window.location.href=url;
