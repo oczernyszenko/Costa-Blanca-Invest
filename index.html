@@ -15,7 +15,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="//www.facebook.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/images/costa-blanca-real-estate-sea-view.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410" fetchpriority="high">
+  <link rel="image_src" href="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
+  <meta itemprop="image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -33,9 +35,9 @@
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Costa Blanca Invest | Nieruchomości w Hiszpanii na Costa Blanca">
   <meta property="og:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
-  <meta property="og:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
-  <meta property="og:image:url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
+  <meta property="og:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
+  <meta property="og:image:url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -45,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Costa Blanca Invest | Nieruchomości w Hiszpanii na Costa Blanca">
   <meta name="twitter:description" content="Nowe inwestycje, działki i budowa domu na Costa Blanca. Sprawdzone nieruchomości w Hiszpanii i bezpieczny proces zakupu.">
-  <meta name="twitter:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg">
+  <meta name="twitter:image" content="https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410">
   <meta name="twitter:image:alt" content="Costa Blanca Invest — nieruchomości w Hiszpanii na Costa Blanca">
   <meta name="twitter:url" content="https://costa-blanca-invest.com/">
 
@@ -1228,7 +1230,7 @@
   <script>
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
     const DEFAULT_HOME_URL = 'https://costa-blanca-invest.com/';
-    const SHARE_IMAGE = 'https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg';
+    const SHARE_IMAGE = 'https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410';
 
     const PAGE_TRANSLATIONS = {
       pl: {
@@ -1450,11 +1452,7 @@
         return `${url.pathname}${url.search}${url.hash}`;
       };
 
-      const getShareUrl = (lang) => {
-        const url = new URL(DEFAULT_HOME_URL);
-        if (lang !== 'pl') url.searchParams.set('lang', lang);
-        return url.toString();
-      };
+      const getShareUrl = () => DEFAULT_HOME_URL;
 
       const updateUrlLang = (lang) => {
         const url = new URL(window.location.href);
@@ -1477,7 +1475,7 @@
         setMeta('meta[property="og:title"]', 'content', t.page_title);
         setMeta('meta[property="og:description"]', 'content', t.meta_description);
         setMeta('meta[property="og:locale"]', 'content', t.og_locale);
-        setMeta('meta[property="og:url"]', 'content', getShareUrl(state.currentLang));
+        setMeta('meta[property="og:url"]', 'content', getShareUrl());
         setMeta('meta[property="og:image"]', 'content', SHARE_IMAGE);
         setMeta('meta[property="og:image:url"]', 'content', SHARE_IMAGE);
         setMeta('meta[property="og:image:secure_url"]', 'content', SHARE_IMAGE);
@@ -1486,7 +1484,7 @@
         setMeta('meta[name="twitter:description"]', 'content', t.meta_description);
         setMeta('meta[name="twitter:image"]', 'content', SHARE_IMAGE);
         setMeta('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
-        setMeta('meta[name="twitter:url"]', 'content', getShareUrl(state.currentLang));
+        setMeta('meta[name="twitter:url"]', 'content', getShareUrl());
 
         if (brand) brand.setAttribute('aria-label', t.brand_aria);
         if (nav) nav.setAttribute('aria-label', t.nav_aria);
@@ -1615,7 +1613,8 @@
         }
 
         if (shareFacebook) {
-          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(DEFAULT_HOME_URL)}`;
+          const shareUrl = getShareUrl();
+          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
         }
         langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
         if (syncUrl) updateUrlLang(state.currentLang);
@@ -1628,7 +1627,7 @@
       if (shareLinkBtn) {
         shareLinkBtn.addEventListener('click', async () => {
           const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
-          const shareUrl = getShareUrl(state.currentLang);
+          const shareUrl = getShareUrl();
           try {
             await navigator.clipboard.writeText(shareUrl);
             shareLinkBtn.dataset.copied = 'true';
@@ -1741,8 +1740,8 @@ ${message}`;
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "@id": "https://costa-blanca-invest.com/#primaryimage",
-          "url": "https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg",
-          "contentUrl": "https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg",
+          "url": "https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410",
+          "contentUrl": "https://costa-blanca-invest.com/images/costa-blanca-real-estate-sea-view.jpg?v=20260410",
           "name": "Nieruchomości na Costa Blanca w Hiszpanii — inwestycje, działki i budowa domu",
           "description": "Główne zdjęcie strony Costa Blanca Invest przedstawiające nieruchomości na Costa Blanca w Hiszpanii — nowe inwestycje, działki budowlane i budowę domu z widokiem na morze.",
           "caption": "Costa Blanca Invest — nieruchomości, inwestycje, działki i budowa domu na Costa Blanca",
