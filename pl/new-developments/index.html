@@ -1054,11 +1054,8 @@
         el.shareLinkBtn.addEventListener('click', async () => {
           const t = CATEGORY_TRANSLATIONS[state.currentLang] || CATEGORY_TRANSLATIONS.pl;
           const shareUrl = getShareUrl();
-          const shareTitle = t.page_title;
-          const shareText = `${shareTitle}
-${shareUrl}`;
           try {
-            const copied = await copyTextToClipboard(shareText);
+            const copied = await copyTextToClipboard(shareUrl);
             if (copied) {
               el.shareLinkBtn.textContent = t.share_copied;
               setShareStatus(t.share_copied_status);
@@ -1067,9 +1064,9 @@ ${shareUrl}`;
               }, 1800);
               return;
             }
-            window.prompt(t.share_prompt, shareText);
+            window.prompt(t.share_prompt, shareUrl);
           } catch {
-            window.prompt(t.share_prompt, shareText);
+            window.prompt(t.share_prompt, shareUrl);
           }
         });
       }
