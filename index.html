@@ -414,57 +414,6 @@
       border-color: rgba(255,255,255,.2);
       box-shadow: 0 12px 26px rgba(24,119,242,.25);
     }
-    .share-btn.telegram {
-      background: #0088cc;
-      color: #fff;
-      border-color: rgba(255,255,255,.2);
-      box-shadow: 0 12px 26px rgba(0,136,204,.25);
-    }
-    .share-btn.whatsapp {
-      background: #25d366;
-      color: #fff;
-      border-color: rgba(255,255,255,.2);
-      box-shadow: 0 12px 26px rgba(37,211,102,.25);
-    }
-    .share-btn.copy {
-      background: #6b7280;
-      color: #fff;
-    }
-    .share-btn.native {
-      background: linear-gradient(135deg, #e28743, #c8742f);
-      color: #fff;
-    }
-    .share-btn .icon {
-      width: 18px;
-      height: 18px;
-      display: inline-block;
-      flex: 0 0 18px;
-    }
-    .share-btn .icon svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      fill: currentColor;
-    }
-    .share-btn.fb:hover {
-      box-shadow: 0 20px 44px rgba(24,119,242,.32), 0 0 24px rgba(24,119,242,.18);
-    }
-    .share-btn.telegram:hover {
-      box-shadow: 0 20px 44px rgba(0,136,204,.32), 0 0 24px rgba(0,136,204,.18);
-    }
-    .share-btn.whatsapp:hover {
-      box-shadow: 0 20px 44px rgba(37,211,102,.32), 0 0 24px rgba(37,211,102,.18);
-    }
-    .share-btn.native:hover {
-      box-shadow: 0 20px 44px rgba(200,116,47,.32), 0 0 24px rgba(226,135,67,.18);
-    }
-    .share-btn.whatsapp.pulse {
-      animation: whatsappPulse 1.8s ease-in-out infinite;
-    }
-    @keyframes whatsappPulse {
-      0%, 100% { box-shadow: 0 12px 26px rgba(37,211,102,.25), 0 0 0 0 rgba(37,211,102,.22); }
-      50% { box-shadow: 0 18px 34px rgba(37,211,102,.34), 0 0 0 10px rgba(37,211,102,0); }
-    }
     .contact-inline:hover,
     .btn:hover,
     .sticky-btn:hover,
@@ -833,6 +782,11 @@
     }
 
     @media (max-width: 768px) {
+      .stat-card strong{font-size:clamp(26px,7vw,34px);line-height:1.12}
+      .stat-card p,.process-card p,.benefit-card p,.direction-card p{font-size:15px;line-height:1.65;text-align:left}
+      .direction-card .card-body{padding:20px 20px 22px}
+      .contact-form{max-width:100%}
+      .footer-card img[alt="Celebrity Real Estate"]{height:72px !important;max-width:min(100%,280px)}
       .container { padding: 0 14px; }
       .topbar-inner {
         width:100%;
@@ -927,6 +881,9 @@
     }
 
     @media (max-width: 420px){
+      .stat-card,.benefit-card,.process-card{padding:22px}
+      .stat-card strong{font-size:clamp(24px,8vw,30px)}
+      .footer-card img[alt="Celebrity Real Estate"]{height:60px !important;max-width:min(100%,230px)}
       .container{padding:0 8px}
       .topbar-inner{gap:6px;padding:6px 0}
       .brand{font-size:14px}
@@ -985,24 +942,24 @@
 
           <div class="stats-grid" style="width:100%;margin-top:28px;">
             <div class="stat-card">
-              <strong>3</strong>
-              <p>główne kierunki: nowe inwestycje, działki i budowa domu</p>
+              <strong>Strategia zamiast chaosu</strong>
+              <p>Pomagamy wybrać właściwy kierunek zakupu — tak, aby Twoja decyzja miała sens finansowy i życiowy, a nie była przypadkiem.</p>
             </div>
             <div class="stat-card">
-              <strong>Costa Blanca</strong>
-              <p>rynek skoncentrowany na mocnych lokalizacjach i realnym popycie</p>
+              <strong>Costa Blanca — rynek z potencjałem</strong>
+              <p>Najlepsze lokalizacje, realny popyt i stabilność, która przekłada się na bezpieczeństwo i wzrost wartości nieruchomości.</p>
             </div>
             <div class="stat-card">
-              <strong>1 kontakt</strong>
-              <p>jedna osoba prowadząca klienta przez cały proces zakupu</p>
+              <strong>Właściwe oferty</strong>
+              <p>Docieramy do sprawdzonych nieruchomości dopasowanych do Twojego celu — inwestycji, przeprowadzki lub budowy. Selekcja zamiast chaosu, konkret zamiast przypadkowych propozycji.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section-card fade-up" id="directions">
-        <h2>3 główne kierunki zakupu nieruchomości na Costa Blanca</h2>
-        <p class="center-text">Wybierz ścieżkę, która najlepiej odpowiada Twojemu celowi: gotowa nowa nieruchomość, działka pod inwestycję lub budowa domu od podstaw.</p>
+        <h2>Jak możesz kupić nieruchomość na Costa Blanca</h2>
+        <p class="center-text">Dobierz rozwiązanie dopasowane do Twojego celu — inwestycji, przeprowadzki lub budowy własnego domu w Hiszpanii.</p>
 
         <div class="directions-grid">
           <a href="/pl/new-developments/" class="direction-card card-investments">
@@ -1060,15 +1017,15 @@
 
         <div class="process-grid">
           <article class="process-card">
-            <h3>1. Cel zakupu</h3>
+            <h3>Cel zakupu</h3>
             <p>Ustalamy, czy szukasz nieruchomości do życia, wynajmu, inwestycji lub działki pod własny projekt.</p>
           </article>
           <article class="process-card">
-            <h3>2. Selekcja ofert</h3>
+            <h3>Selekcja ofert</h3>
             <p>Dobieramy odpowiedni kierunek: nowe inwestycje, działki lub budowę domu, a następnie zawężamy wybór.</p>
           </article>
           <article class="process-card">
-            <h3>3. Kontakt i dalsze kroki</h3>
+            <h3>Kontakt i kolejne kroki</h3>
             <p>Przechodzimy do rozmowy, dopasowania budżetu i przygotowania kolejnych działań pod konkretną nieruchomość.</p>
           </article>
         </div>
@@ -1076,11 +1033,11 @@
 
       <section id="seo" class="seo-article fade-up">
         <h2>Nieruchomości Hiszpania — Costa Blanca jako rynek zakupu i inwestycji</h2>
-        <p>Costa Blanca to jeden z najmocniejszych kierunków zakupu nieruchomości w Hiszpanii dla klientów zagranicznych. Największe zainteresowanie dotyczą nowe inwestycje, działki w dobrych lokalizacjach oraz budowa nowoczesnych domów.</p>
         <h3>Co znajdziesz na stronie głównej Costa Blanca Invest</h3>
-        <p>Strona główna Costa Blanca Invest pełni rolę centralnego punktu nawigacji dla całego serwisu. Jej zadaniem jest prowadzić użytkownika do trzech najważniejszych sekcji: nowych inwestycji od deweloperów, działek oraz budowy domu na Costa Blanca. Taka struktura porządkuje ścieżkę użytkownika i wzmacnia wewnętrzne linkowanie pomiędzy głównymi kategoriami serwisu.</p>
-        <p>Z punktu widzenia SEO homepage powinna opisywać szeroko temat nieruchomości w Hiszpanii na Costa Blanca, ale bez duplikowania treści z podstron kategorii. Dzięki temu każda strona ma własną rolę: strona główna buduje autorytet marki i temat główny, a podstrony odpowiadają za bardziej szczegółowe zapytania, takie jak nowe inwestycje, działki czy budowa domu.</p>
-        <p>Dobrze zaprojektowana strona główna wspiera zarówno użytkownika, jak i indeksację Google. Powinna mieć czytelny H1, mocne linki wewnętrzne do kategorii, logiczne sekcje informacyjne i dane kontaktowe. To właśnie ten układ pomaga budować widoczność organiczną dla fraz związanych z rynkiem nieruchomości Costa Blanca i jednocześnie kieruje ruch do stron bardziej sprzedażowych.</p>
+        <p>Costa Blanca to jeden z najmocniejszych kierunków zakupu nieruchomości w Hiszpanii dla klientów zagranicznych. Największe zainteresowanie dotyczą nowe inwestycje, działki w dobrych lokalizacjach oraz budowa nowoczesnych domów.</p>
+        <p>Strona główna Costa Blanca Invest pełni rolę centralnego punktu nawigacji dla całego serwisu. Jej zadaniem jest prowadzić użytkownika do kluczowych sekcji: nowych inwestycji od deweloperów, działek oraz budowy domu na Costa Blanca.</p>
+        <p>Z punktu widzenia SEO strona główna buduje szeroki kontekst tematyczny: nieruchomości w Hiszpanii, Costa Blanca, inwestycje, zakup domu za granicą. Podstrony odpowiadają natomiast za bardziej szczegółowe zapytania użytkowników.</p>
+        <p>Dobrze zaprojektowana strona główna wspiera zarówno użytkownika, jak i indeksację Google. Czytelny H1, mocne linki wewnętrzne do kategorii, logiczne sekcje informacyjne i dane kontaktowe pomagają budować widoczność organiczną i kierują ruch do stron bardziej sprzedażowych.</p>
       </section>
 
       <section class="cta-box contact-box fade-up" id="contact">
@@ -1137,13 +1094,11 @@
           <a href="#process">Proces</a>
           <a href="#contact">Kontakt</a>
         </div>
-        <div style="margin-top:22px;padding:18px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.4) inset, 0 0 22px rgba(118,181,197,.25), 0 0 28px rgba(135,62,35,.15), 0 0 24px rgba(62,128,40,.18);">
-          <div style="position:absolute;top:0;left:0;width:100%;height:4px;display:flex;">
-            <div style="flex:1;background:var(--investment);"></div>
+        <div style="margin-top:22px;padding:18px;border-radius:16px;background:rgba(41,108,118,.06);border:1px solid rgba(41,108,118,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.4) inset, 0 0 22px rgba(118,181,197,.25);">
             <div style="flex:1;background:var(--plots);"></div>
             <div style="flex:1;background:var(--eco);"></div>
           </div>
-          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" width="220" height="70" loading="lazy" decoding="async" style="height:46px;width:auto;max-width:100%;object-fit:contain;display:block;">
+          <img src="/images/logocelebrity.jpg" alt="Celebrity Real Estate" width="300" height="100" loading="lazy" decoding="async" style="height:110px;width:auto;max-width:100%;object-fit:contain;display:block;margin:0 auto;">
           <div style="font-size:13px;color:#5f6b76;text-align:center;max-width:420px;">Partnerstwo z <strong>Celebrity Real Estate</strong> — prezentowane nieruchomości są częścią portfolio agencji</div>
         </div>
 
@@ -1178,10 +1133,10 @@
         subtitle: 'Costa Blanca Invest pomaga znaleźć odpowiednią nieruchomość w Hiszpanii — od nowych inwestycji od deweloperów, przez działki pod budowę, aż po realizację nowoczesnego domu na Costa Blanca.',
         lead: 'Pracujemy z klientami, którzy szukają bezpiecznego zakupu, mocnej lokalizacji, potencjału inwestycyjnego i sprawdzonego procesu od pierwszego kontaktu do finalizacji transakcji.',
         hero_cta_1: 'Zobacz nowe inwestycje', hero_cta_2: 'Poznaj kierunki zakupu',
-        stat_1_n: '3', stat_1_t: 'główne kierunki: nowe inwestycje, działki i budowa domu',
-        stat_2_n: 'Costa Blanca', stat_2_t: 'rynek skoncentrowany na mocnych lokalizacjach i realnym popycie',
-        stat_3_n: '1 kontakt', stat_3_t: 'jedna osoba prowadząca klienta przez cały proces zakupu',
-        directions_title: '3 główne kierunki zakupu nieruchomości na Costa Blanca',
+        stat_1_n: 'Różne drogi zakupu', stat_1_t: 'Dobierz strategię: nowe inwestycje, działki lub budowa domu dopasowana do Twojego celu.',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'Rynek, w którym najlepsze lokalizacje spotykają się z realnym popytem — stabilność, płynność i potencjał wzrostu w jednym miejscu',
+        stat_3_n: 'Dostęp do właściwych nieruchomości', stat_3_t: 'Docieramy do ofert, które naprawdę mają sens — dopasowanych do Twojego celu, budżetu i strategii, często zanim trafią do szerokiej sprzedaży.',
+        directions_title: 'Główne kierunki zakupu nieruchomości na Costa Blanca',
         directions_intro: 'Wybierz ścieżkę, która najlepiej odpowiada Twojemu celowi: gotowa nowa nieruchomość, działka pod inwestycję lub budowa domu od podstaw.',
         chip_1: 'Deweloperzy', card_1_h: 'Nowe inwestycje', card_1_p: 'Apartamenty, penthouse’y i wille od sprawdzonych deweloperów w Hiszpanii.',
         chip_2: 'Grunty', card_2_h: 'Działki', card_2_p: 'Działki inwestycyjne i parcele pod budowę domu lub projektu deweloperskiego.',
@@ -1192,15 +1147,15 @@
         why_2_h: 'Bezpieczny proces', why_2_p: 'Pomagamy uporządkować ścieżkę zakupu: od wyboru kierunku i typu nieruchomości po kontakt, dokumenty i kolejne etapy decyzji.',
         why_3_h: 'Podejście inwestycyjne', why_3_p: 'Patrzymy nie tylko na sam wygląd nieruchomości, ale także na płynność, potencjał najmu i sens zakupu w danej lokalizacji.',
         process_title: 'Jak wygląda współpraca', process_intro: 'Prosty model pracy, który porządkuje wybór nieruchomości i przyspiesza decyzję zakupową.',
-        process_1_h: '1. Cel zakupu', process_1_p: 'Ustalamy, czy szukasz nieruchomości do życia, wynajmu, inwestycji lub działki pod własny projekt.',
-        process_2_h: '2. Selekcja ofert', process_2_p: 'Dobieramy odpowiedni kierunek: nowe inwestycje, działki lub budowę domu, a następnie zawężamy wybór.',
-        process_3_h: '3. Kontakt i dalsze kroki', process_3_p: 'Przechodzimy do rozmowy, dopasowania budżetu i przygotowania kolejnych działań pod konkretną nieruchomość.',
+        process_1_h: 'Cel zakupu', process_1_p: 'Ustalamy, czy szukasz nieruchomości do życia, wynajmu, inwestycji lub działki pod własny projekt.',
+        process_2_h: 'Selekcja ofert', process_2_p: 'Dobieramy odpowiedni kierunek: nowe inwestycje, działki lub budowę domu, a następnie zawężamy wybór.',
+        process_3_h: 'Kontakt i kolejne kroki', process_3_p: 'Przechodzimy do rozmowy, dopasowania budżetu i przygotowania kolejnych działań pod konkretną nieruchomość.',
         seo_h2: 'Nieruchomości Hiszpania — Costa Blanca jako rynek zakupu i inwestycji',
         seo_h3: 'Co znajdziesz na stronie głównej Costa Blanca Invest',
-        seo_p1: 'Costa Blanca to jeden z najmocniejszych kierunków zakupu nieruchomości w Hiszpanii dla klientów zagranicznych. Największe zainteresowanie dotyczą nowe inwestycje, działki w dobrych lokalizacjach oraz budowa nowoczesnych domów.',
-        seo_p2: 'Strona główna Costa Blanca Invest pełni rolę centralnego punktu nawigacji dla całego serwisu. Jej zadaniem jest prowadzić użytkownika do trzech najważniejszych sekcji: nowych inwestycji od deweloperów, działek oraz budowy domu na Costa Blanca. Taka struktura porządkuje ścieżkę użytkownika i wzmacnia wewnętrzne linkowanie pomiędzy głównymi kategoriami serwisu.',
-        seo_p3: 'Z punktu widzenia SEO homepage powinna opisywać szeroko temat nieruchomości w Hiszpanii na Costa Blanca, ale bez duplikowania treści z podstron kategorii. Dzięki temu każda strona ma własną rolę: strona główna buduje autorytet marki i temat główny, a podstrony odpowiadają za bardziej szczegółowe zapytania, takie jak nowe inwestycje, działki czy budowa domu.',
-        seo_p4: 'Dobrze zaprojektowana strona główna wspiera zarówno użytkownika, jak i indeksację Google. Powinna mieć czytelny H1, mocne linki wewnętrzne do kategorii, logiczne sekcje informacyjne i dane kontaktowe. To właśnie ten układ pomaga budować widoczność organiczną dla fraz związanych z rynkiem nieruchomości Costa Blanca i jednocześnie kieruje ruch do stron bardziej sprzedażowych.',
+        seo_p1: 'Costa Blanca to jeden z najmocniejszych kierunków zakupu nieruchomości w Hiszpanii dla klientów zagranicznych. Największe zainteresowanie koncentruje się wokół nowych inwestycji, działek w dobrych lokalizacjach oraz budowy nowoczesnych domów.',
+        seo_p2: 'Strona główna Costa Blanca Invest pełni rolę centralnego punktu nawigacji dla całego serwisu. Jej zadaniem jest prowadzić użytkownika do kluczowych sekcji: nowych inwestycji od deweloperów, działek oraz budowy domu na Costa Blanca.',
+        seo_p3: 'Z punktu widzenia SEO strona główna buduje szeroki kontekst tematyczny: nieruchomości w Hiszpanii, Costa Blanca, inwestycje oraz zakup domu za granicą. Podstrony odpowiadają natomiast za bardziej szczegółowe zapytania użytkowników.',
+        seo_p4: 'Dobrze zaprojektowana strona główna wspiera zarówno użytkownika, jak i indeksację Google. Czytelny H1, mocne linki wewnętrzne do kategorii, logiczne sekcje informacyjne i dane kontaktowe pomagają budować widoczność organiczną i kierują ruch do stron bardziej sprzedażowych.',
         contact_title: 'Porozmawiajmy o nieruchomości na Costa Blanca',
         contact_intro: 'Skontaktuj się, aby dobrać odpowiedni kierunek zakupu: nowe inwestycje, działkę lub budowę domu dopasowaną do budżetu i celu zakupu.',
         contact_role: 'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm', celebrity_line: 'Współpraca: agencja nieruchomości Celebrity',
@@ -1224,10 +1179,10 @@
         subtitle: 'Costa Blanca Invest ayuda a encontrar la propiedad adecuada en España: desde obra nueva de promotores y parcelas para construir hasta la ejecución de una casa moderna en Costa Blanca.',
         lead: 'Trabajamos con clientes que buscan una compra segura, una buena ubicación, potencial de inversión y un proceso fiable desde el primer contacto hasta el cierre.',
         hero_cta_1: 'Ver obra nueva', hero_cta_2: 'Conocer opciones',
-        stat_1_n: '3', stat_1_t: 'líneas principales: obra nueva, parcelas y construcción de casas',
-        stat_2_n: 'Costa Blanca', stat_2_t: 'mercado centrado en ubicaciones sólidas y demanda real',
-        stat_3_n: '1 contacto', stat_3_t: 'una persona acompaña al cliente durante todo el proceso',
-        directions_title: '3 líneas principales para comprar inmuebles en Costa Blanca', directions_intro: 'Elige la ruta que mejor se adapte a tu objetivo: vivienda nueva terminada, parcela para inversión o construcción desde cero.',
+        stat_1_n: 'Opciones de compra', stat_1_t: 'Elige estrategia: obra nueva, parcelas o construcción según tu objetivo.',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'Un mercado donde las mejores ubicaciones se unen con una demanda real — estabilidad, liquidez y potencial de crecimiento.',
+        stat_3_n: 'Acceso a las propiedades adecuadas', stat_3_t: 'Llegamos a ofertas que realmente tienen sentido — ajustadas a tu objetivo, presupuesto y estrategia, a menudo antes de salir al mercado abierto.',
+        directions_title: 'Principales vías para comprar inmuebles en Costa Blanca', directions_intro: 'Elige la ruta que mejor se adapte a tu objetivo: vivienda nueva terminada, parcela para inversión o construcción desde cero.',
         chip_1: 'Promotores', card_1_h: 'Obra nueva', card_1_p: 'Apartamentos, áticos y villas de promotores fiables en España.',
         chip_2: 'Suelo', card_2_h: 'Parcelas', card_2_p: 'Parcelas de inversión y suelo para construir una casa o un proyecto promotor.',
         chip_3: 'Ejecución', card_3_h: 'Construcción de casa', card_3_p: 'Construcción integral de una casa moderna en Costa Blanca — desde la parcela hasta el proyecto terminado.',
@@ -1236,9 +1191,9 @@
         why_2_h: 'Proceso seguro', why_2_p: 'Ayudamos a ordenar el proceso de compra: desde la elección del rumbo y del tipo de inmueble hasta el contacto, la documentación y las siguientes decisiones.',
         why_3_h: 'Enfoque inversor', why_3_p: 'Miramos no solo el aspecto de la propiedad, sino también la liquidez, el potencial de alquiler y el sentido de la compra en una ubicación concreta.',
         process_title: 'Cómo es la colaboración', process_intro: 'Un modelo de trabajo simple que ordena la elección del inmueble y acelera la decisión de compra.',
-        process_1_h: '1. Objetivo de compra', process_1_p: 'Definimos si buscas una propiedad para vivir, alquilar, invertir o una parcela para tu propio proyecto.',
-        process_2_h: '2. Selección de ofertas', process_2_p: 'Elegimos la dirección adecuada: obra nueva, parcelas o construcción de casa, y luego reducimos la selección.',
-        process_3_h: '3. Contacto y siguientes pasos', process_3_p: 'Pasamos a la conversación, ajustamos el presupuesto y preparamos las acciones siguientes para una propiedad concreta.',
+        process_1_h: 'Objetivo de compra', process_1_p: 'Definimos si buscas una propiedad para vivir, alquilar, invertir o una parcela para tu propio proyecto.',
+        process_2_h: 'Selección de ofertas', process_2_p: 'Elegimos la dirección adecuada: obra nueva, parcelas o construcción de casa, y luego reducimos la selección.',
+        process_3_h: 'Contacto y siguientes pasos', process_3_p: 'Pasamos a la conversación, ajustamos el presupuesto y preparamos las acciones siguientes para una propiedad concreta.',
         seo_h2: 'Inmuebles en España — Costa Blanca como mercado de compra e inversión', seo_h3: 'Qué encontrarás en la página principal de Costa Blanca Invest',
         seo_p1: 'Costa Blanca es uno de los destinos más sólidos para comprar inmuebles en España para clientes internacionales. El mayor interés se concentra en obra nueva, parcelas bien ubicadas y la construcción de casas modernas.',
         seo_p2: 'La página principal de Costa Blanca Invest actúa como punto central de navegación de todo el sitio. Su función es llevar al usuario a tres secciones clave: obra nueva de promotores, parcelas y construcción de casas en Costa Blanca. Esta estructura ordena el recorrido del usuario y refuerza el enlazado interno entre las categorías principales.',
@@ -1260,10 +1215,10 @@
         subtitle: 'Costa Blanca Invest helps find the right property in Spain — from new developments by developers and building plots to the delivery of a modern house on Costa Blanca.',
         lead: 'We work with clients looking for a safe purchase, a strong location, investment potential and a reliable process from first contact to closing.',
         hero_cta_1: 'View new developments', hero_cta_2: 'Explore options',
-        stat_1_n: '3', stat_1_t: 'main directions: new developments, plots and house construction',
-        stat_2_n: 'Costa Blanca', stat_2_t: 'a market focused on strong locations and real demand',
-        stat_3_n: '1 contact', stat_3_t: 'one person guides the client through the whole process',
-        directions_title: '3 main directions for buying property on Costa Blanca', directions_intro: 'Choose the route that best matches your goal: a finished new property, a plot for investment, or a house built from scratch.',
+        stat_1_n: 'Buying options', stat_1_t: 'Choose your path: new developments, plots or a custom house build.',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'A market where the best locations meet real demand — stability, liquidity and long-term growth potential.',
+        stat_3_n: 'Access to the right properties', stat_3_t: 'We reach listings that genuinely make sense — matched to your goal, budget and strategy, often before they reach the wider market.',
+        directions_title: 'Main ways to buy property on Costa Blanca', directions_intro: 'Choose the route that best matches your goal: a finished new property, a plot for investment, or a house built from scratch.',
         chip_1: 'Developers', card_1_h: 'New developments', card_1_p: 'Apartments, penthouses and villas from reliable developers in Spain.',
         chip_2: 'Land', card_2_h: 'Plots', card_2_p: 'Investment plots and land for a private house or a development project.',
         chip_3: 'Delivery', card_3_h: 'House construction', card_3_p: 'Comprehensive construction of a modern home on Costa Blanca — from plot to finished project.',
@@ -1272,9 +1227,9 @@
         why_2_h: 'Safe process', why_2_p: 'We help structure the buying path: from choosing the direction and property type to contact, documentation and next decisions.',
         why_3_h: 'Investment mindset', why_3_p: 'We look not only at the property itself, but also at liquidity, rental potential and whether the purchase makes sense in a given location.',
         process_title: 'How the cooperation works', process_intro: 'A simple work model that structures the property choice and speeds up the buying decision.',
-        process_1_h: '1. Purchase goal', process_1_p: 'We define whether you are looking for a home to live in, rent out, invest in, or a plot for your own project.',
-        process_2_h: '2. Offer selection', process_2_p: 'We choose the right direction: new developments, plots or house construction, and then narrow the choice.',
-        process_3_h: '3. Contact and next steps', process_3_p: 'We move to conversation, budget fit and preparation of the next actions for a specific property.',
+        process_1_h: 'Purchase goal', process_1_p: 'We define whether you are looking for a home to live in, rent out, invest in, or a plot for your own project.',
+        process_2_h: 'Offer selection', process_2_p: 'We choose the right direction: new developments, plots or house construction, and then narrow the choice.',
+        process_3_h: 'Contact and next steps', process_3_p: 'We move to conversation, budget fit and preparation of the next actions for a specific property.',
         seo_h2: 'Real estate in Spain — Costa Blanca as a market for buying and investing', seo_h3: 'What you will find on the Costa Blanca Invest home page',
         seo_p1: 'Costa Blanca is one of the strongest destinations for buying real estate in Spain for international clients. The highest interest is focused on new developments, well-located plots and the construction of modern homes.',
         seo_p2: 'The Costa Blanca Invest home page acts as the central navigation point for the whole website. Its role is to lead the user to three key sections: new developments from developers, plots and house construction on Costa Blanca. This structure organises the user journey and strengthens internal linking.',
@@ -1296,10 +1251,10 @@
         subtitle: 'Costa Blanca Invest помогает подобрать подходящую недвижимость в Испании — от новостроек от застройщиков и участков под строительство до реализации современного дома на Costa Blanca.',
         lead: 'Мы работаем с клиентами, которым важны безопасная покупка, сильная локация, инвестиционный потенциал и понятный процесс от первого контакта до сделки.',
         hero_cta_1: 'Смотреть новостройки', hero_cta_2: 'Изучить направления',
-        stat_1_n: '3', stat_1_t: 'главные направления: новостройки, участки и строительство дома',
-        stat_2_n: 'Costa Blanca', stat_2_t: 'рынок с фокусом на сильные локации и реальный спрос',
-        stat_3_n: '1 контакт', stat_3_t: 'один человек ведёт клиента через весь процесс',
-        directions_title: '3 главных направления покупки недвижимости на Costa Blanca', directions_intro: 'Выберите путь, который лучше всего соответствует вашей цели: готовая новая недвижимость, участок под инвестицию или строительство дома с нуля.',
+        stat_1_n: 'Варианты покупки', stat_1_t: 'Выберите стратегию: новостройки, участки или строительство под ваш запрос.',
+        stat_2_n: 'Costa Blanca', stat_2_t: 'Рынок, где сильные локации сочетаются с реальным спросом — стабильность, ликвидность и потенциал роста.',
+        stat_3_n: 'Доступ к нужным объектам', stat_3_t: 'Мы находим предложения, которые действительно имеют смысл — под вашу цель, бюджет и стратегию, часто ещё до выхода в широкую продажу.',
+        directions_title: 'Основные направления покупки недвижимости на Costa Blanca', directions_intro: 'Выберите путь, который лучше всего соответствует вашей цели: готовая новая недвижимость, участок под инвестицию или строительство дома с нуля.',
         chip_1: 'Застройщики', card_1_h: 'Новостройки', card_1_p: 'Апартаменты, пентхаусы и виллы от надёжных застройщиков в Испании.',
         chip_2: 'Земля', card_2_h: 'Участки', card_2_p: 'Инвестиционные участки и земля под частный дом или девелоперский проект.',
         chip_3: 'Реализация', card_3_h: 'Строительство дома', card_3_p: 'Комплексное строительство современного дома на Costa Blanca — от участка до готового проекта.',
@@ -1308,9 +1263,9 @@
         why_2_h: 'Безопасный процесс', why_2_p: 'Мы помогаем выстроить путь покупки: от выбора направления и типа недвижимости до контакта, документов и следующих этапов решения.',
         why_3_h: 'Инвестиционный подход', why_3_p: 'Мы смотрим не только на внешний вид объекта, но и на ликвидность, арендный потенциал и логику покупки в конкретной локации.',
         process_title: 'Как проходит работа', process_intro: 'Простая модель работы, которая упорядочивает выбор недвижимости и ускоряет решение о покупке.',
-        process_1_h: '1. Цель покупки', process_1_p: 'Мы определяем, ищете ли вы жильё для жизни, аренды, инвестиций или участок под собственный проект.',
-        process_2_h: '2. Отбор предложений', process_2_p: 'Мы выбираем правильное направление: новостройки, участки или строительство дома, а затем сужаем выбор.',
-        process_3_h: '3. Контакт и следующие шаги', process_3_p: 'Мы переходим к разговору, бюджету и подготовке следующих действий по конкретному объекту.',
+        process_1_h: 'Цель покупки', process_1_p: 'Мы определяем, ищете ли вы жильё для жизни, аренды, инвестиций или участок под собственный проект.',
+        process_2_h: 'Отбор предложений', process_2_p: 'Мы выбираем правильное направление: новостройки, участки или строительство дома, а затем сужаем выбор.',
+        process_3_h: 'Контакт и следующие шаги', process_3_p: 'Мы переходим к разговору, бюджету и подготовке следующих действий по конкретному объекту.',
         seo_h2: 'Недвижимость в Испании — Costa Blanca как рынок для покупки и инвестиций', seo_h3: 'Что вы найдёте на главной странице Costa Blanca Invest',
         seo_p1: 'Costa Blanca — одно из самых сильных направлений для покупки недвижимости в Испании иностранными клиентами. Наибольший интерес сосредоточен вокруг новостроек, участков в хороших локациях и строительства современных домов.',
         seo_p2: 'Главная страница Costa Blanca Invest выполняет роль центральной навигационной точки всего сайта. Её задача — провести пользователя к трём ключевым разделам: новостройки от застройщиков, участки и строительство дома на Costa Blanca. Такая структура упорядочивает путь пользователя и усиливает внутреннюю перелинковку между основными категориями.',
@@ -1425,6 +1380,7 @@
           heroBtns[0].textContent = t.hero_cta_1;
           heroBtns[0].href = buildLangUrl('/pl/new-developments/', state.currentLang);
           heroBtns[1].textContent = t.hero_cta_2;
+          heroBtns[1].href = '#directions';
         }
 
         if (statCards.length >= 3) {
@@ -1489,6 +1445,7 @@
           if (ctaLinks.length >= 2) {
             ctaLinks[0].textContent = t.call_now;
             ctaLinks[1].textContent = t.write_now;
+            ctaLinks[1].href = `https://wa.me/34604158859?text=${encodeURIComponent(t.page_title)}`;
           }
           const formEls = contactSection.querySelectorAll('input, textarea');
           if (formEls.length >= 4) {
@@ -1609,6 +1566,7 @@ ${message}`;
       });
     });
   </script>
+
 
   <script type="application/ld+json">
   {
