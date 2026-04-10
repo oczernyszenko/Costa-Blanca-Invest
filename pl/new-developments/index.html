@@ -109,15 +109,15 @@
     .project-card h3,.category-card h3,.why-item h3,.step-card h3,.location-card h3,.faq-card h3,.card-meta,.card-price,.card-link,.chip,.contact-links a,.footer-links a{overflow-wrap:anywhere}
 
     .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,.72);
+      position:sticky;top:0;z-index:9999;
+      background:rgba(255,255,255,.95);
       backdrop-filter:blur(18px);
       -webkit-backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.24);
-      box-shadow:0 6px 24px rgba(15,23,42,.04);
+      border-bottom:1px solid rgba(255,255,255,.4);
+      box-shadow:0 6px 24px rgba(15,23,42,.06);
       transition:transform .35s ease, background .3s ease, box-shadow .3s ease;
       will-change:transform;
-      overflow:hidden;
+      isolation:isolate;
     }
     .topbar.hide{transform:translateY(-100%)}
     .topbar-inner{
@@ -141,23 +141,53 @@
       .top-controls{flex-direction:row}
     }
     .lang-switcher{
-      position:relative;
-      z-index:999;
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:flex-end;
-      margin:0;
-      padding:8px 12px;
-      border-radius:999px;
-      background:#ffffff;
-      box-shadow:0 8px 24px rgba(15,23,42,.12);
-      isolation:isolate;
-      overflow:hidden;
-    }
-    .lang-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:none;font-size:12px;font-weight:700;cursor:pointer;background:linear-gradient(145deg,rgba(230,194,122,.92),rgba(207,167,90,.84));color:#fff;box-shadow:0 10px 24px rgba(15,23,42,.12), inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .2s ease}
-    .lang-btn.active{background:#fff;color:var(--accent-dark);box-shadow:0 6px 16px rgba(0,0,0,.12)}
-    .lang-btn:hover{transform:translateY(-2px)}
+  position:relative;
+  z-index:10000;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-end;
+  margin:0;
+  padding:0; /* убрали лишний блок */
+  background:transparent; /* без плашки */
+  box-shadow:none; /* без тени */
+}
+    .lang-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  min-width:44px;
+  min-height:44px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  border:none;
+  padding:0;
+  font-size:13px;
+  font-weight:800;
+  cursor:pointer;
+  color:#fff;
+  background:linear-gradient(135deg,#e5c07b,#c79a3a);
+  box-shadow:0 6px 14px rgba(199,154,58,.35);
+  transition:all .25s ease;
+}
+
+.lang-btn.active{
+  background:var(--primary);
+  color:#fff;
+  box-shadow:0 8px 20px rgba(94,198,232,.45);
+  transform:scale(1.05);
+}
+
+.lang-btn:hover{
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 10px 22px rgba(184,134,43,.5);
+}
+
+.lang-btn:active{
+  transform:scale(.95);
+}
 
     .hero-card,.section-card,.cta-box,.footer-card{border:1px solid rgba(255,255,255,.5);border-radius:var(--radius);background:var(--surface);backdrop-filter:blur(14px);box-shadow:var(--shadow-lux);overflow:hidden}
     .hero-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);align-items:stretch;min-height:560px}
@@ -717,7 +747,10 @@
       function setAttr(selector,attr,value){ const el=d.querySelector(selector); if(el) el.setAttribute(attr,value); }
       function getInitialLang(){ const url=new URL(window.location.href); const lang=url.searchParams.get('lang'); return SUPPORTED_LANGS.includes(lang) ? lang : 'pl'; }
       function updateUrlLang(lang){ const url=new URL(window.location.href); if(lang==='pl') url.searchParams.delete('lang'); else url.searchParams.set('lang',lang); window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`); }
-      function getShareUrl(){ return currentLang==='pl' ? 'https://costa-blanca-invest.com/pl/new-developments/' : `https://costa-blanca-invest.com/pl/new-developments/?lang=${currentLang}`; }
+      function getShareUrl(){
+        const base='https://costa-blanca-invest.com';
+        return `${base}/${currentLang}/new-developments/`;
+      }
 
       window.handleBrokenImage=function(img){
         if(img.dataset.fallbackApplied==='true') return;
@@ -784,8 +817,14 @@
         setAttr('meta[property="og:title"]','content',t.page_title);
         setAttr('meta[property="og:description"]','content',t.meta_description);
         setAttr('meta[property="og:locale"]','content',t.og_locale);
+        setAttr('meta[property="og:url"]','content',`https://costa-blanca-invest.com/${currentLang}/new-developments/`);
+        setAttr('meta[property="og:image"]','content','https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg');
+        setAttr('meta[property="og:image:url"]','content','https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg');
+        setAttr('meta[property="og:image:secure_url"]','content','https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg');
         setAttr('meta[name="twitter:title"]','content',t.page_title);
         setAttr('meta[name="twitter:description"]','content',t.meta_description);
+        setAttr('meta[name="twitter:url"]','content',`https://costa-blanca-invest.com/${currentLang}/new-developments/`);
+        setAttr('meta[name="twitter:image"]','content','https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg');
         if(eyebrow) eyebrow.textContent=t.hero_eyebrow;
         if(heroTitle) heroTitle.textContent=t.hero_title;
         if(heroSubtitle) heroSubtitle.textContent=t.hero_subtitle;
@@ -811,7 +850,9 @@
         if(syncUrl) updateUrlLang(currentLang);
         if(heroImage && heroImage.dataset.originalSrc){ heroImage.src=heroImage.dataset.originalSrc; }
         renderProjects(getProjects());
-        if(shareFacebook){ shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl())}`; }
+        if(shareFacebook){
+          shareFacebook.href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl())}`;
+        }
       }
 
       function setShareStatus(message){ const shareStatus=d.getElementById('share-status'); if(shareStatus) shareStatus.textContent=message; }
