@@ -135,64 +135,9 @@
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
     .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 
-    .lang-switcher{
-      position:relative;
-      z-index:10000;
-      display:flex;
-      gap:4px;
-      align-items:center;
-      justify-content:flex-end;
-      flex-wrap:nowrap;
-      margin:0;
-      padding:6px;
-      background:#fff;
-      border:1px solid rgba(143,78,31,.10);
-      border-radius:999px;
-      box-shadow:0 8px 20px rgba(15,23,42,.10);
-      isolation:isolate;
-      overflow:hidden;
-      line-height:1;
-      min-height:56px;
-    }
+    .lang-switcher{position:relative;z-index:10000;display:flex;gap:4px;align-items:center;justify-content:flex-end;flex-wrap:nowrap;margin:0;padding:6px;background:#fff;border:1px solid rgba(143,78,31,.10);border-radius:999px;box-shadow:0 8px 20px rgba(15,23,42,.10);isolation:isolate;overflow:hidden;line-height:1;min-height:56px}
     .lang-switcher::before{content:"";position:absolute;inset:0;background:#fff;border-radius:inherit;z-index:0;pointer-events:none}
-    .lang-btn{
-      position:relative;
-      z-index:1;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      flex:0 0 44px;
-      width:44px;
-      height:44px;
-      min-width:44px;
-      min-height:44px;
-      max-width:44px;
-      max-height:44px;
-      border-radius:50%;
-      border:none;
-      padding:0;
-      margin:0;
-      font-size:13px;
-      line-height:44px;
-      font-weight:800;
-      cursor:pointer;
-      color:#fff;
-      background:linear-gradient(135deg,#e5c07b,#c79a3a);
-      box-shadow:0 6px 14px rgba(199,154,58,.35);
-      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
-      white-space:nowrap;
-      text-transform:uppercase;
-      letter-spacing:0;
-      appearance:none;
-      -webkit-appearance:none;
-      transform:translateZ(0);
-      backface-visibility:hidden;
-      overflow:hidden;
-      word-break:normal;
-      overflow-wrap:normal;
-      text-decoration:none;
-      font-family:Inter,Arial,sans-serif;
-    }
+    .lang-btn{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;max-width:44px;max-height:44px;border-radius:50%;border:none;padding:0;margin:0;font-size:13px;line-height:44px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#e5c07b,#c79a3a);box-shadow:0 6px 14px rgba(199,154,58,.35);transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;text-transform:uppercase;letter-spacing:0;appearance:none;-webkit-appearance:none;transform:translateZ(0);backface-visibility:hidden;overflow:hidden;word-break:normal;overflow-wrap:normal;text-decoration:none;font-family:Inter,Arial,sans-serif}
     .lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 8px 20px rgba(200,116,47,.35);transform:scale(1.05)}
     .lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 22px rgba(184,134,43,.5)}
     .lang-btn:active{transform:scale(.95)}
@@ -213,12 +158,7 @@
     .contact-inline-wrap,.cta-actions,.footer-links,.inline-list,.share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
     .contact-inline-wrap{margin:12px 0 18px;gap:14px}
     .inline-list{margin-top:18px}
-    .contact-inline,.btn,.sticky-btn,.share-btn,.submit-btn{
-      position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;
-      border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);
-      overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,filter .25s ease;cursor:pointer;-webkit-appearance:none;appearance:none
-    }
+    .contact-inline,.btn,.sticky-btn,.share-btn,.submit-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,filter .25s ease;cursor:pointer;-webkit-appearance:none;appearance:none}
     .contact-inline::before,.btn::before,.sticky-btn::before,.share-btn::before,.submit-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.06));opacity:.78;pointer-events:none;z-index:0}
     .contact-inline::after,.btn::after,.sticky-btn::after,.share-btn::after,.submit-btn::after{content:"";position:absolute;top:-140%;left:-30%;width:55%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;pointer-events:none;z-index:1;transition:opacity .25s ease,transform .55s ease}
     .contact-inline>*,.btn>*,.sticky-btn>*,.share-btn>*,.submit-btn>*{position:relative;z-index:2}
@@ -313,18 +253,7 @@
     }
     @media (max-width:560px){
       .lang-switcher{gap:4px;padding:4px;min-height:44px}
-      .lang-btn{
-        flex:0 0 36px;
-        width:36px;
-        height:36px;
-        min-width:36px;
-        min-height:36px;
-        max-width:36px;
-        max-height:36px;
-        border-radius:50%;
-        font-size:11px;
-        line-height:36px;
-      }
+      .lang-btn{flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;max-width:36px;max-height:36px;border-radius:50%;font-size:11px;line-height:36px}
       .hero-copy{padding:18px 16px}
       .eyebrow{padding:8px 12px;font-size:11px}
       .hero-copy h1{padding:0 8px}
@@ -507,12 +436,12 @@
     {
       "href": "/pl/plots/santabarbara/",
       "image": "/pl/plots/santabarbara/1.jpg",
-      "alt": "Działka Santa Bárbara w Alicante — projekt aparthotelu",
+      "alt": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
       "chip": "Premium Plot",
-      "title": "Aparthotel Alicante przy Santa Bárbara",
-      "meta": "Alicante · Santa Bárbara · 6 apartamentów",
-      "price": "€ 390 000 · ready to build",
-      "desc": "Gotowy projekt inwestycyjny pod aparthotel z zatwierdzoną licencją na 6 apartamentów turystycznych. Top lokalizacja przy Santa Bárbara w Alicante, komplet dokumentów i możliwość rozpoczęcia budowy od razu."
+      "title": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
+      "meta": "Alicante · Santa Bárbara · projekt inwestycyjny",
+      "price": "€ 390 000 · projekt + licencja",
+      "desc": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel. Atrakcyjna lokalizacja, potencjał najmu krótkoterminowego i możliwość szybkiej realizacji inwestycji."
     }
   ]
   </script>
@@ -531,9 +460,9 @@
 
     const PLOT_TRANSLATIONS = {
       'santabarbara': {
-        es:{chip:'Premium Plot',title:'Aparthotel Alicante junto a Santa Bárbara',meta:'Alicante · Santa Bárbara · 6 apartamentos',price:'€ 390 000 · ready to build',desc:'Proyecto de inversión listo para aparthotel con licencia aprobada para 6 apartamentos turísticos. Ubicación top junto a Santa Bárbara en Alicante, documentación completa y posibilidad de empezar la obra de inmediato.',alt:'Parcela Santa Bárbara en Alicante — proyecto de aparthotel'},
-        en:{chip:'Premium Plot',title:'Aparthotel Alicante by Santa Bárbara',meta:'Alicante · Santa Bárbara · 6 apartments',price:'€390,000 · ready to build',desc:'Ready investment project for an aparthotel with an approved licence for 6 tourist apartments. Prime location by Santa Bárbara in Alicante, full documentation and the ability to start construction immediately.',alt:'Santa Bárbara plot in Alicante — aparthotel project'},
-        ru:{chip:'Премиальный участок',title:'Aparthotel Alicante у Santa Bárbara',meta:'Alicante · Santa Bárbara · 6 апартаментов',price:'390 000 € · ready to build',desc:'Готовый инвестиционный проект под aparthotel с утверждённой лицензией на 6 туристических апартаментов. Топ-локация у Santa Bárbara в Alicante, полный пакет документов и возможность начать строительство сразу.',alt:'Участок Santa Bárbara в Alicante — проект aparthotel'}
+        es:{chip:'Premium Plot',title:'Parcela de inversión en Alicante junto a Santa Bárbara — proyecto y licencia para aparthotel',meta:'Alicante · Santa Bárbara · proyecto de inversión',price:'€ 390 000 · proyecto + licencia',desc:'Parcela de inversión en Alicante junto a Santa Bárbara con proyecto y licencia para aparthotel. Ubicación atractiva, potencial para alquiler turístico y posibilidad de desarrollar la inversión con rapidez.',alt:'Parcela de inversión junto a Santa Bárbara en Alicante — proyecto y licencia para aparthotel'},
+        en:{chip:'Premium Plot',title:'Investment plot in Alicante by Santa Bárbara — project and licence for an aparthotel',meta:'Alicante · Santa Bárbara · investment project',price:'€390,000 · project + licence',desc:'Investment plot in Alicante by Santa Bárbara with a ready project and licence for an aparthotel. Attractive location, short-term rental potential and the possibility to move forward with the investment quickly.',alt:'Investment plot by Santa Bárbara in Alicante — project and licence for an aparthotel'},
+        ru:{chip:'Премиальный участок',title:'Инвестиционный участок в Alicante у Santa Bárbara — проект и лицензия под апарт-отель',meta:'Alicante · Santa Bárbara · инвестиционный проект',price:'390 000 € · проект + лицензия',desc:'Инвестиционный участок в Alicante у Santa Bárbara с готовым проектом и лицензией под апарт-отель. Привлекательная локация, потенциал краткосрочной аренды и возможность быстро перейти к реализации проекта.',alt:'Инвестиционный участок у Santa Bárbara в Alicante — проект и лицензия под апарт-отель'}
       }
     };
 
@@ -950,7 +879,13 @@
           const phone = String(formData.get('phone') || '').trim();
           const email = String(formData.get('email') || '').trim();
           const message = String(formData.get('message') || '').trim();
-          const text = `${t.wa_form_prefix}\n\n${t.form_name}: ${name}\n${t.form_phone}: ${phone}\n${t.form_email}: ${email}\n\n${message}`;
+          const text = `${t.wa_form_prefix}
+
+${t.form_name}: ${name}
+${t.form_phone}: ${phone}
+${t.form_email}: ${email}
+
+${message}`;
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened = window.open(url, '_blank', 'noopener');
           if (!opened) window.location.href = url;
