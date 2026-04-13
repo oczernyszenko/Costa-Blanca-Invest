@@ -633,7 +633,7 @@
           el.plotsGrid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(t.empty_h)}</h3><p>${escapeHtml(t.empty_p)}</p></div></div>`;
           return;
         }
-        el.plotsGrid.innerHTML = plots.map(plot => {
+        const cards = plots.map(plot => {
           const slug = plot.slug || (plot.href || '').split('/').filter(Boolean).pop();
           const tr = PLOT_TRANSLATIONS[slug]?.[state.currentLang] || null;
           const chip = tr?.chip || plot.chip || '';
@@ -653,7 +653,21 @@
               <div class="card-link">${escapeHtml(t.card_link)}</div>
             </div>
           </a>`;
-        }).join('');
+        });
+
+        // 👉 placeholders to keep grid nice (4 columns desktop)
+        const remainder = plots.length % 4;
+        const placeholdersCount = remainder === 0 ? 0 : 4 - remainder;
+        const placeholders = Array.from({ length: placeholdersCount }).map(() => `
+          <div class="plot-card" style="opacity:.6; pointer-events:none; border-style:dashed;">
+            <div class="card-body" style="justify-content:center; align-items:center; text-align:center;">
+              <h3>${escapeHtml(t.empty_h)}</h3>
+              <p>${escapeHtml(t.empty_p)}</p>
+            </div>
+          </div>
+        `);
+
+        el.plotsGrid.innerHTML = [...cards, ...placeholders].join('');
       };
 
       const applyLanguage = (lang, syncUrl = true) => {
