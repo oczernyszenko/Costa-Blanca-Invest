@@ -402,15 +402,6 @@
     <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20działka%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa" aria-label="WhatsApp — szybki kontakt">💬 WhatsApp</a>
   </div>
 
-  <!--
-  ADD NEW PLOT CARD HERE:
-  1) duplicate one object in #plots-data
-  2) keep order you want on the page
-  3) set slug, href, image, alt, chip, title, meta, price, desc
-  4) image path should point to the folder image, e.g. /pl/plots/FolderName/1.jpg
-  Cards are rendered automatically in the grid.
--->
-  
   <script id="plots-data" type="application/json">
   [
     {
@@ -470,12 +461,12 @@
     },
     {
       "slug":"CovetaFuma",
-      "href":"/pl/plots/CovetaFumá/",
-      "image":"/pl/plots/CovetaFumá/1.jpg",
-      "alt":"Działka w Coveta Fumá na Costa Blanca",
+      "href":"/pl/plots/CovetaFuma/",
+      "image":"/pl/plots/CovetaFuma/1.jpg",
+      "alt":"Działka w Coveta Fuma na Costa Blanca",
       "chip":"Sea View Plot",
-      "title":"Działka — Coveta Fumá",
-      "meta":"Coveta Fumá · Costa Blanca · działka budowlana",
+      "title":"Działka — Coveta Fuma",
+      "meta":"Coveta Fuma · Costa Blanca · działka budowlana",
       "price":"Cena na zapytanie",
       "desc":"Atrakcyjna działka w jednej z najbardziej poszukiwanych nadmorskich lokalizacji Costa Blanca, odpowiednia pod dom prywatny lub inwestycję."
     },
@@ -483,9 +474,9 @@
       "slug":"SanJuan6Bungalows",
       "href":"/pl/plots/SanJuan6Bungalows/",
       "image":"/pl/plots/SanJuan6Bungalows/1.jpg",
-      "alt":"Uczestok z projektem na 6 bungalowów w San Juan",
+      "alt":"Działka z projektem na 6 bungalowów w San Juan",
       "chip":"Project Plot",
-      "title":"Uczestok z projektem na 6 bungalowów — San Juan",
+      "title":"Działka z projektem na 6 bungalowów — San Juan",
       "meta":"San Juan · 6 bungalowów · projekt deweloperski",
       "price":"€ 1 500 000",
       "desc":"Działka inwestycyjna z gotowym projektem na budowę 6 nowoczesnych bungalowów. Mocny potencjał deweloperski w atrakcyjnej lokalizacji."
@@ -494,12 +485,12 @@
       "slug":"Alicante512",
       "href":"/pl/plots/Alicante512/",
       "image":"/pl/plots/Alicante512/1.jpg",
-      "alt":"Zemelny uchastok s potentsialom zastroyki 512 m² w Alicante",
+      "alt":"Ziemia z potencjałem zabudowy 512 m² w Alicante",
       "chip":"Urban Plot",
       "title":"Ziemia z potencjałem zabudowy — Alicante, 512 m²",
       "meta":"Alicante · 512 m² · działka miejska",
       "price":"€ 350 000",
-      "desc":"Działka pod indywidualną zabudowę mieszkaniową, położona w granicach miasta. Odpowiednia pod prywatny dom lub коттедж."
+      "desc":"Działka pod indywidualną zabudowę mieszkaniową, położona w granicach miasta. Odpowiednia pod prywatny dom lub willę."
     },
     {
       "slug":"Alicante10422",
@@ -524,7 +515,9 @@
       "desc":"Gotowy do zabudowy miejski grunt pod dom prywatny. Wszystkie komunikacje podłączone, spokojna strefa mieszkalna i wygodny dojazd do centrum."
     }
   ]
-  </script>  <script>
+  </script>
+
+  <script>
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
     const SHARE_IMAGE = '/pl/plots/plots-hero.png';
     const DEFAULT_CATEGORY_URL = 'https://costa-blanca-invest.com/pl/plots/';
@@ -563,9 +556,9 @@
         ru:{chip:'Участок',title:'Продажа участка — 950 м², El Campello',meta:'El Campello · 950 м² · спокойная зона',price:'€ 115 000',desc:'Ровный участок с удобным подъездом и хорошим потенциалом.',alt:'Участок El Campello 950 м²'}
       },
       'CovetaFuma': {
-        es:{chip:'Sea View Plot',title:'Parcela — Coveta Fumá',meta:'Coveta Fumá · Costa Blanca · parcela edificable',price:'Precio a consultar',desc:'Parcela atractiva en una de las zonas costeras más demandadas de Costa Blanca.',alt:'Parcela en Coveta Fumá'},
-        en:{chip:'Sea View Plot',title:'Plot — Coveta Fumá',meta:'Coveta Fumá · Costa Blanca · building plot',price:'Price on request',desc:'Attractive plot in one of the most sought-after coastal areas of Costa Blanca.',alt:'Plot in Coveta Fumá'},
-        ru:{chip:'Участок у моря',title:'Участок — Coveta Fumá',meta:'Coveta Fumá · Costa Blanca · участок под застройку',price:'Цена по запросу',desc:'Привлекательный участок в одной из самых востребованных прибрежных локаций Costa Blanca.',alt:'Участок в Coveta Fumá'}
+        es:{chip:'Sea View Plot',title:'Parcela — Coveta Fuma',meta:'Coveta Fuma · Costa Blanca · parcela edificable',price:'Precio a consultar',desc:'Parcela atractiva en una de las zonas costeras más demandadas de Costa Blanca.',alt:'Parcela en Coveta Fuma'},
+        en:{chip:'Sea View Plot',title:'Plot — Coveta Fuma',meta:'Coveta Fuma · Costa Blanca · building plot',price:'Price on request',desc:'Attractive plot in one of the most sought-after coastal areas of Costa Blanca.',alt:'Plot in Coveta Fuma'},
+        ru:{chip:'Участок у моря',title:'Участок — Coveta Fuma',meta:'Coveta Fuma · Costa Blanca · участок под застройку',price:'Цена по запросу',desc:'Привлекательный участок в одной из самых востребованных прибрежных локаций Costa Blanca.',alt:'Участок в Coveta Fuma'}
       }
     };
 
@@ -698,7 +691,6 @@
           </a>`;
         });
 
-        // 👉 placeholders to keep grid nice (4 columns desktop)
         const remainder = plots.length % 4;
         const placeholdersCount = remainder === 0 ? 0 : 4 - remainder;
         const placeholders = Array.from({ length: placeholdersCount }).map(() => `
