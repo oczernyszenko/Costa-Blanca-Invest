@@ -28,7 +28,7 @@
     "alt": "Premium land plot Nou Nazareth",
     "chip": "Development Plot",
     "title": "Premium land plot — Nou Nazareth",
-    "meta": "Sant Joan · 4 936 m²",
+    "meta": "San Joan · 4 936 m²",
     "price": "€ 3 760 000",
     "desc": "Duży grunt inwestycyjny."
   },
@@ -62,7 +62,7 @@
     "chip": "Sea View Plot",
     "title": "Działka — Coveta Fuma",
     "meta": "Costa Blanca",
-    "price": "Cena na zapytanie",
+    "price": "€ 394 000",
     "desc": "Atrakcyjna działka nad morzem."
   },
   {
@@ -73,7 +73,7 @@
     "chip": "Project Plot",
     "title": "Działka — San Juan",
     "meta": "San Juan",
-    "price": "Cena na zapytanie",
+    "price": "€ 350 000,
     "desc": "Działka inwestycyjna."
   },
   {
@@ -84,7 +84,7 @@
     "chip": "Urban Plot",
     "title": "Działka — Alicante",
     "meta": "miasto",
-    "price": "Cena na zapytanie",
+    "price": "€ 600 000,
     "desc": "Działka miejska."
   },
   {
@@ -95,7 +95,7 @@
     "chip": "City Plot",
     "title": "Działka — Alicante City",
     "meta": "centrum",
-    "price": "Cena na zapytanie",
+    "price": "€ 630 000",
     "desc": "Grunt inwestycyjny."
   }
 ]
