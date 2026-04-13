@@ -1,1 +1,101 @@
-
+[
+  {
+    "slug": "santabarbara",
+    "href": "/pl/plots/santabarbara/",
+    "image": "/pl/plots/santabarbara/1.jpg",
+    "alt": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
+    "chip": "Premium Plot",
+    "title": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
+    "meta": "Alicante · Santa Bárbara · projekt inwestycyjny",
+    "price": "€ 390 000 · projekt + licencja",
+    "desc": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel."
+  },
+  {
+    "slug": "BenidormPlanet",
+    "href": "/pl/plots/BenidormPlanet/",
+    "image": "/pl/plots/BenidormPlanet/1.png",
+    "alt": "Działka pod budowę willi w Benidorm",
+    "chip": "Villa Plot",
+    "title": "Działka pod budowę willi — Benidorm",
+    "meta": "Benidorm · działka urbanistyczna",
+    "price": "€ 420 000",
+    "desc": "Suelo Urbano pod budowę domu."
+  },
+  {
+    "slug": "NouNazareth",
+    "href": "/pl/plots/NouNazareth/",
+    "image": "/pl/plots/NouNazareth/1.jpg",
+    "alt": "Premium land plot Nou Nazareth",
+    "chip": "Development Plot",
+    "title": "Premium land plot — Nou Nazareth",
+    "meta": "Sant Joan · 4 936 m²",
+    "price": "€ 3 760 000",
+    "desc": "Duży grunt inwestycyjny."
+  },
+  {
+    "slug": "Polop",
+    "href": "/pl/plots/Polop/",
+    "image": "/pl/plots/Polop/1.jpg",
+    "alt": "Działka Polop",
+    "chip": "Ready Project",
+    "title": "Działka — Polop",
+    "meta": "Polop · projekt",
+    "price": "€ 250 000",
+    "desc": "Gotowy projekt inwestycyjny."
+  },
+  {
+    "slug": "Campella",
+    "href": "/pl/plots/Campella/",
+    "image": "/pl/plots/Campella/1.jpg",
+    "alt": "Działka Campello",
+    "chip": "Building Plot",
+    "title": "Działka — El Campello",
+    "meta": "950 m²",
+    "price": "€ 115 000",
+    "desc": "Działka pod budowę."
+  },
+  {
+    "slug": "CovetaFuma",
+    "href": "/pl/plots/CovetaFuma/",
+    "image": "/pl/plots/CovetaFuma/1.jpg",
+    "alt": "Działka Coveta Fuma",
+    "chip": "Sea View Plot",
+    "title": "Działka — Coveta Fuma",
+    "meta": "Costa Blanca",
+    "price": "Cena na zapytanie",
+    "desc": "Atrakcyjna działka nad morzem."
+  },
+  {
+    "slug": "SanJuan",
+    "href": "/pl/plots/SanJuan/",
+    "image": "/pl/plots/SanJuan/1.jpg",
+    "alt": "Działka San Juan",
+    "chip": "Project Plot",
+    "title": "Działka — San Juan",
+    "meta": "San Juan",
+    "price": "Cena na zapytanie",
+    "desc": "Działka inwestycyjna."
+  },
+  {
+    "slug": "Alicante",
+    "href": "/pl/plots/Alicante/",
+    "image": "/pl/plots/Alicante/1.jpg",
+    "alt": "Działka Alicante",
+    "chip": "Urban Plot",
+    "title": "Działka — Alicante",
+    "meta": "miasto",
+    "price": "Cena na zapytanie",
+    "desc": "Działka miejska."
+  },
+  {
+    "slug": "AlicanteCityPlot",
+    "href": "/pl/plots/AlicanteCityPlot/",
+    "image": "/pl/plots/AlicanteCityPlot/1.jpg",
+    "alt": "Działka Alicante City",
+    "chip": "City Plot",
+    "title": "Działka — Alicante City",
+    "meta": "centrum",
+    "price": "Cena na zapytanie",
+    "desc": "Grunt inwestycyjny."
+  }
+]
