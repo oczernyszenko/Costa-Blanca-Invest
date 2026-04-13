@@ -9,12 +9,6 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#c8742f">
-  <meta name="application-name" content="Costa Blanca Invest">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Costa Blanca Invest">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="msapplication-TileColor" content="#c8742f">
   <meta name="format-detection" content="telephone=no">
   <meta name="google" content="notranslate">
 
@@ -61,7 +55,6 @@
       --primary-dark:#8f4e1f;
       --primary-pale:#fff6f0;
       --accent:#d07a34;
-      --accent-dark:#c06b2a;
       --text:#1f2933;
       --text-soft:#5f6b76;
       --muted:#97a3ad;
@@ -70,18 +63,10 @@
       --radius:20px;
       --container:1280px;
       --surface:rgba(255,255,255,.88);
-      --glass-light:rgba(255,255,255,.72);
-      --maxw:1200px;
       --header-height:82px;
-      --footer-title-size:24px;
       --body-font:Inter,Arial,sans-serif;
       --h1-size:clamp(34px,5vw,54px);
       --h2-size:clamp(30px,4vw,42px);
-      --h3-size:22px;
-      --body-size:16px;
-      --small-size:14px;
-      --btn-height:50px;
-      --form-radius:18px;
     }
 
     *{box-sizing:border-box}
@@ -89,7 +74,6 @@
     body{
       margin:0;
       font-family:var(--body-font);
-      font-size:var(--body-size);
       color:var(--text);
       background:
         radial-gradient(circle at top left,rgba(200,116,47,.10),transparent 26%),
@@ -103,9 +87,8 @@
     h1,h2,h3{margin:0 0 14px;line-height:1.08;text-wrap:balance}
     h1{font-size:var(--h1-size)}
     h2{font-size:var(--h2-size)}
-    h3{font-size:var(--h3-size)}
-    p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;word-break:break-word}
-    .plot-card .card-body p,.benefit-item p,.location-card p,.faq-card p,.seo-full p{line-height:1.7}
+    h3{font-size:22px}
+    p{margin:0 0 14px;color:var(--text-soft)}
     .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
 
     .topbar{
@@ -114,20 +97,12 @@
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(255,255,255,.25);
-      box-shadow:none;
-      transition:transform .4s ease, background .4s ease, backdrop-filter .4s ease, box-shadow .4s ease;
-      will-change:transform;
-      isolation:isolate;
+      transition:transform .4s ease, background .4s ease, box-shadow .4s ease;
     }
-    .topbar.scrolled{
-      background:rgba(255,255,255,0.78);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-      box-shadow:0 6px 24px rgba(15,23,42,.08);
-    }
+    .topbar.scrolled{background:rgba(255,255,255,0.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 6px 24px rgba(15,23,42,.08)}
     .topbar.hide{transform:translateY(-100%)}
-    .topbar-inner{position:relative;z-index:4;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:var(--header-height)}
-    .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
+    .topbar-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:var(--header-height)}
+    .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
     .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
     .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease}
@@ -135,87 +110,75 @@
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
     .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 
-    .lang-switcher{position:relative;z-index:10000;display:flex;gap:4px;align-items:center;justify-content:flex-end;flex-wrap:nowrap;margin:0;padding:6px;background:#fff;border:1px solid rgba(143,78,31,.10);border-radius:999px;box-shadow:0 8px 20px rgba(15,23,42,.10);isolation:isolate;overflow:hidden;line-height:1;min-height:56px}
-    .lang-switcher::before{content:"";position:absolute;inset:0;background:#fff;border-radius:inherit;z-index:0;pointer-events:none}
-    .lang-btn{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;max-width:44px;max-height:44px;border-radius:50%;border:none;padding:0;margin:0;font-size:13px;line-height:44px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#e5c07b,#c79a3a);box-shadow:0 6px 14px rgba(199,154,58,.35);transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;text-transform:uppercase;letter-spacing:0;appearance:none;-webkit-appearance:none;transform:translateZ(0);backface-visibility:hidden;overflow:hidden;word-break:normal;overflow-wrap:normal;text-decoration:none;font-family:Inter,Arial,sans-serif}
-    .lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 8px 20px rgba(200,116,47,.35);transform:scale(1.05)}
-    .lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 22px rgba(184,134,43,.5)}
-    .lang-btn:active{transform:scale(.95)}
+    .lang-switcher{display:flex;gap:4px;align-items:center;justify-content:flex-end;padding:6px;background:#fff;border:1px solid rgba(143,78,31,.10);border-radius:999px;box-shadow:0 8px 20px rgba(15,23,42,.10)}
+    .lang-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:none;font-size:13px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#e5c07b,#c79a3a);box-shadow:0 6px 14px rgba(199,154,58,.35);transition:transform .25s ease, box-shadow .25s ease}
+    .lang-btn.active{background:var(--primary);box-shadow:0 8px 20px rgba(200,116,47,.35);transform:scale(1.05)}
 
     .page{padding:22px 0 84px}
-    .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:0 0 18px;color:var(--muted);font-size:var(--small-size);font-weight:700}
+    .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:0 0 18px;color:var(--muted);font-size:14px;font-weight:700}
     .breadcrumbs a{color:var(--primary-dark);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.32);box-shadow:0 6px 18px rgba(15,23,42,.05)}
 
     .hero-card,.section-card,.cta-box,.footer-card{border:1px solid rgba(255,255,255,.5);border-radius:var(--radius);background:var(--surface);backdrop-filter:blur(14px);box-shadow:var(--shadow-lux);overflow:hidden}
     .hero-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);align-items:stretch;min-height:560px}
-    .hero-copy{position:relative;z-index:2;padding:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(200,116,47,.08);color:var(--primary-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(143,78,31,.08);width:fit-content;margin-bottom:16px}
-    h1,.section-card h2,.cta-box h2,.seo-full h2,.seo-full h3{color:var(--primary-dark);letter-spacing:-.03em;text-align:center}
-    .subtitle,.center-text,.lead{display:block;text-align:center !important;max-width:920px;margin:0 auto;padding:0 24px;font-size:17px;line-height:1.7;text-wrap:pretty}
-    .hero-image{position:relative;min-height:100%;background:var(--primary-pale);isolation:isolate}
+    .hero-copy{padding:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(200,116,47,.08);color:var(--primary-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(143,78,31,.08);margin-bottom:16px}
+    .hero-image{background:var(--primary-pale)}
     .hero-image img{width:100%;height:100%;min-height:100%;object-fit:cover}
-
     .contact-inline-wrap,.cta-actions,.footer-links,.inline-list,.share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
     .contact-inline-wrap{margin:12px 0 18px;gap:14px}
-    .inline-list{margin-top:18px}
-    .contact-inline,.btn,.sticky-btn,.share-btn,.submit-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,filter .25s ease;cursor:pointer;-webkit-appearance:none;appearance:none}
-    .contact-inline::before,.btn::before,.sticky-btn::before,.share-btn::before,.submit-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.06));opacity:.78;pointer-events:none;z-index:0}
-    .contact-inline::after,.btn::after,.sticky-btn::after,.share-btn::after,.submit-btn::after{content:"";position:absolute;top:-140%;left:-30%;width:55%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;pointer-events:none;z-index:1;transition:opacity .25s ease,transform .55s ease}
-    .contact-inline>*,.btn>*,.sticky-btn>*,.share-btn>*,.submit-btn>*{position:relative;z-index:2}
-    .contact-inline:first-child,.btn-main,.submit-btn{background:linear-gradient(135deg,rgba(208,122,52,.92),rgba(192,107,42,1));color:#fff;border:1px solid rgba(255,255,255,.24);box-shadow:0 14px 34px rgba(192,107,42,.25),0 0 0 1px rgba(255,255,255,.1) inset}
-    .contact-inline:last-child,.btn-light,.sticky-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff;border-color:rgba(255,255,255,.18);box-shadow:0 12px 26px rgba(37,211,102,.25),0 0 24px rgba(37,211,102,.16)}
-    .share-btn.fb{background:#1877f2;color:#fff;border-color:rgba(255,255,255,.2);box-shadow:0 12px 26px rgba(24,119,242,.25)}
-    .share-btn{background:rgba(255,255,255,.92);color:var(--primary-dark)}
-    .contact-inline:hover,.btn:hover,.sticky-btn:hover,.share-btn:hover,.submit-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12),0 0 24px rgba(255,255,255,.14);filter:saturate(1.04)}
-    .contact-inline:hover::after,.btn:hover::after,.sticky-btn:hover::after,.share-btn:hover::after,.submit-btn:hover::after{opacity:1;transform:translateX(150%) rotate(24deg)}
+    .contact-inline,.btn,.sticky-btn,.share-btn,.submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease;cursor:pointer}
+    .contact-inline:first-child,.btn-main,.submit-btn{background:linear-gradient(135deg,rgba(208,122,52,.92),rgba(192,107,42,1));color:#fff}
+    .contact-inline:last-child,.btn-light,.sticky-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff}
+    .share-btn.fb{background:#1877f2;color:#fff}
+    .contact-inline:hover,.btn:hover,.sticky-btn:hover,.share-btn:hover,.submit-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12)}
 
     .benefits-grid,.plots-grid,.locations-grid,.faq-grid,.contact-form-grid{display:grid;gap:22px}
-    .benefits-grid,.plots-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .plots-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
     .contact-form-grid{grid-template-columns:1fr 1fr;gap:14px}
     .benefit-item,.plot-card,.location-card,.faq-card{border-radius:var(--radius);border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:var(--shadow-soft);overflow:hidden}
     .benefit-item,.location-card,.faq-card{padding:28px;text-align:left}
-    .plot-card .card-body{padding:24px 26px;display:flex;flex-direction:column;gap:10px;height:100%;text-align:left}
     .plot-card{display:flex;flex-direction:column;height:100%;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
     .plot-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 34px 80px rgba(15,23,42,.16)}
     .plot-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
-    .plot-card h3,.benefit-item h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
+    .plot-card .card-body{padding:24px 26px;display:flex;flex-direction:column;gap:10px;height:100%}
+    .plot-card h3,.benefit-item h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark)}
     .plot-card .card-meta{font-size:14px;font-weight:700;color:var(--muted)}
     .plot-card .card-price{font-size:17px;font-weight:800;color:var(--primary)}
     .plot-card .card-link{margin-top:auto;font-size:14px;font-weight:800;color:var(--primary-dark)}
     .chip{display:inline-flex;align-items:center;justify-content:center;width:fit-content;margin-bottom:10px;padding:7px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(200,116,47,.08);color:var(--primary-dark);border:1px solid rgba(200,116,47,.16)}
 
     .section-card,.cta-box{margin-top:28px;padding:36px}
-    .section-card h2,.cta-box h2,.seo-full h2{position:relative;padding-bottom:12px;font-size:var(--h2-size);margin-left:auto;margin-right:auto}
+    .section-card h2,.cta-box h2,.seo-full h2{position:relative;padding-bottom:12px;font-size:var(--h2-size);margin-left:auto;margin-right:auto;text-align:center;color:var(--primary-dark)}
     .section-card h2::after,.cta-box h2::after,.seo-full h2::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:70px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),transparent)}
+    .center-text,.lead{display:block;text-align:center;max-width:920px;margin:0 auto;padding:0 24px;font-size:17px;line-height:1.7}
     .inline-list span{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(200,116,47,.07);color:var(--primary-dark);font-weight:700;font-size:14px}
     .seo-full{margin:42px auto 0;max-width:1200px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
-    .seo-full h2,.seo-full h3{color:var(--primary-dark);text-align:center}
-    .seo-full h3{margin-top:22px;font-size:clamp(22px,3vw,30px)}
+    .seo-full h3{margin-top:22px;font-size:clamp(22px,3vw,30px);color:var(--primary-dark);text-align:center}
     .seo-full p{max-width:none;margin-left:0;margin-right:0;text-align:justify;color:var(--text-soft)}
 
-    .contact-box{margin-top:28px;padding:42px 32px 38px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(247,249,250,.98) 100%);border:1px solid rgba(15,23,42,.06);box-shadow:0 18px 48px rgba(15,23,42,.06);position:relative;overflow:hidden}
-    .contact-title{font-size:clamp(34px,5vw,48px);margin-bottom:10px;color:var(--primary-dark);text-align:center;letter-spacing:-.03em}
+    .contact-box{margin-top:28px;padding:42px 32px 38px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(247,249,250,.98) 100%)}
+    .contact-title{font-size:clamp(34px,5vw,48px);margin-bottom:10px;color:var(--primary-dark);text-align:center}
     .contact-note{margin:10px 0 20px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(200,116,47,.08);color:var(--primary-dark);font-weight:800;font-size:13px}
     .contact-avatar{margin:20px auto 16px;text-align:center}
     .contact-avatar img{width:110px;height:110px;border-radius:50%;margin:0 auto 12px;object-fit:cover;box-shadow:0 14px 36px rgba(0,0,0,.16);border:4px solid rgba(255,255,255,.82)}
-    .contact-avatar-name{font-weight:900;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
+    .contact-avatar-name{font-weight:900;font-size:22px;color:var(--primary-dark)}
     .contact-avatar-role{font-size:14px;color:var(--text-soft)}
     .contact-links{display:grid;gap:12px;margin:20px 0 18px}
     .contact-links a{font-weight:700;color:#6b7280;font-size:18px}
     .contact-form{display:grid;gap:16px;text-align:left;margin-top:26px;max-width:860px;margin-left:auto;margin-right:auto;width:100%}
-    .contact-form input,.contact-form textarea{width:100%;padding:18px;border-radius:var(--form-radius);border:1px solid rgba(200,116,47,.2);background:rgba(255,255,255,.92);color:var(--text);outline:none;font-family:inherit;font-size:16px;line-height:1.5}
+    .contact-form input,.contact-form textarea{width:100%;padding:18px;border-radius:18px;border:1px solid rgba(200,116,47,.2);background:rgba(255,255,255,.92);color:var(--text);outline:none;font-family:inherit;font-size:16px}
     .contact-form textarea{min-height:150px;resize:vertical}
     .share-box{margin-top:18px;padding-top:16px;border-top:1px solid rgba(15,23,42,.08)}
     .share-box p{margin-bottom:12px;text-align:center}
     .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     .footer{padding:8px 0 54px;margin-top:34px;font-size:14px;color:var(--text-soft)}
-    .footer-card{position:relative;z-index:2;padding:34px 34px 28px;text-align:center;background:radial-gradient(circle at top left,rgba(200,116,47,.08),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(247,250,251,.98) 100%);border:1px solid rgba(255,255,255,.65);box-shadow:0 24px 60px rgba(15,23,42,.08);border-radius:24px;overflow:hidden}
-    .footer-card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--primary))}
-    .footer-brand{margin-bottom:12px;font-size:var(--footer-title-size);font-weight:900;letter-spacing:-.03em;color:var(--primary-dark);text-align:center}
+    .footer-card{padding:34px 34px 28px;text-align:center;background:radial-gradient(circle at top left,rgba(200,116,47,.08),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(247,250,251,.98) 100%)}
+    .footer-brand{margin-bottom:12px;font-size:24px;font-weight:900;color:var(--primary-dark);text-align:center}
     .footer-copy{max-width:980px;margin:0 auto 10px;font-size:14px;line-height:1.8;color:var(--text-soft);text-align:center}
     .footer-links{margin-top:22px;gap:14px 20px}
-    .footer-links a{position:relative;z-index:3;pointer-events:auto;font-size:14px;font-weight:700;color:var(--primary-dark)}
+    .footer-links a{font-size:14px;font-weight:700;color:var(--primary-dark)}
     .footer-bottom{margin-top:18px;padding-top:14px;border-top:1px solid rgba(15,23,42,.06);font-size:12px;color:var(--muted);text-align:center}
 
     .sticky-contact{position:fixed;right:14px;bottom:14px;z-index:1200;display:none;pointer-events:none}
@@ -224,23 +187,20 @@
     .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
     .fade-up.show{opacity:1;transform:translateY(0)}
 
+    @media (max-width:1200px){.plots-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media (max-width:1100px){
       .hero-card{grid-template-columns:1fr;min-height:auto}
-      .benefits-grid,.plots-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .plots-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .hero-image,.hero-image img{min-height:420px}
     }
     @media (max-width:768px){
       .topbar-inner{width:100%;grid-template-columns:1fr;gap:6px;padding:8px 0;min-height:auto;justify-items:center}
       .brand{justify-self:center;text-align:center;font-size:15px}
-      .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;justify-content:stretch;align-items:stretch;overflow:visible;padding:0}
+      .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;justify-content:stretch;align-items:stretch}
       .nav a{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 8px;text-align:center;font-size:13px;line-height:1.15;white-space:normal;border-radius:8px;background:rgba(255,255,255,.55)}
-      .nav a:nth-child(-n+3){order:1}
-      .nav a:nth-child(n+4){order:2}
-      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px}
-      .hero-copy{padding:22px 20px;align-items:center;text-align:center;overflow:hidden}
-      .eyebrow{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}
-      .hero-copy h1{width:100%;max-width:100%;padding:0 12px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
-      .subtitle,.lead,.center-text{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 20px;text-align:center !important;overflow-wrap:anywhere}
+      .lang-switcher{justify-content:center}
+      .hero-copy{padding:22px 20px}
       .container{padding:0 14px}
       .page{padding:14px 0 56px}
       .section-card,.cta-box,.footer-card,.contact-box{padding:22px}
@@ -252,25 +212,16 @@
       body{padding-bottom:74px}
     }
     @media (max-width:560px){
-      .lang-switcher{gap:4px;padding:4px;min-height:44px}
-      .lang-btn{flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;max-width:36px;max-height:36px;border-radius:50%;font-size:11px;line-height:36px}
+      .lang-btn{width:36px;height:36px;font-size:11px}
       .hero-copy{padding:18px 16px}
-      .eyebrow{padding:8px 12px;font-size:11px}
-      .hero-copy h1{padding:0 8px}
-      .subtitle,.lead,.center-text{padding:0 14px}
       .container{padding:0 10px}
       .hero-card,.section-card,.cta-box,.footer-card,.contact-box{border-radius:18px}
       .section-card,.cta-box,.footer-card,.contact-box{padding:18px}
       h1{font-size:clamp(28px,8.5vw,36px)}
       h2{font-size:clamp(24px,7vw,32px)}
       h3{font-size:20px}
-      .subtitle,.lead,p{font-size:15px}
-      .nav{gap:6px}
-      .nav a{font-size:13px}
       .hero-image,.hero-image img{min-height:220px}
-      .contact-links a{font-size:16px}
       .footer-links{flex-direction:column;align-items:center}
-      .footer-bottom{font-size:11px}
     }
   </style>
 </head>
@@ -314,7 +265,7 @@
           <p class="lead">Pracujemy wyłącznie na sprawdzonych działkach — analizujemy grunt, możliwości zabudowy i realny potencjał inwestycji, abyś kupował świadomie i bez ryzyka.</p>
         </div>
         <div class="hero-image">
-          <img src="/pl/plots/plots-hero.png" alt="Działki na Costa Blanca pod budowę domu i inwestycję w Hiszpanii" width="1200" height="630" fetchpriority="high" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+          <img src="/pl/plots/plots-hero.png" alt="Działki na Costa Blanca pod budowę domu i inwestycję w Hiszpanii" width="1200" height="630">
         </div>
       </section>
 
@@ -376,7 +327,7 @@
         <p class="center-text">Skontaktuj się, aby otrzymać działki dopasowane do budżetu, lokalizacji i celu zakupu — pod dom prywatny lub inwestycję.</p>
         <div class="contact-note">💡 Odpowiadam w 10–15 minut</div>
         <div class="contact-avatar">
-          <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+          <img src="/avatar.png" alt="Olga Chernyshenko" width="220" height="220" loading="lazy" decoding="async">
           <div class="contact-avatar-name">Olga Chernyshenko</div>
           <div class="contact-avatar-role">Specjalista ds. inwestycji Costa Blanca</div>
         </div>
@@ -434,6 +385,7 @@
   <script id="plots-data" type="application/json">
   [
     {
+      "slug": "santabarbara",
       "href": "/pl/plots/santabarbara/",
       "image": "/pl/plots/santabarbara/1.jpg",
       "alt": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
@@ -442,6 +394,50 @@
       "meta": "Alicante · Santa Bárbara · projekt inwestycyjny",
       "price": "€ 390 000 · projekt + licencja",
       "desc": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel. Atrakcyjna lokalizacja, potencjał najmu krótkoterminowego i możliwość szybkiej realizacji inwestycji."
+    },
+    {
+      "slug": "BenidormPlanet",
+      "href": "/pl/plots/BenidormPlanet/",
+      "image": "/pl/plots/BenidormPlanet/1.png",
+      "alt": "Uczestok pod stroitelstvo willi w Benidorm, Urb. El Planet",
+      "chip": "Villa Plot",
+      "title": "Uczestok pod stroitelstvo willi — Benidorm, Urb. El Planet",
+      "meta": "Benidorm · El Planet · działka budowlana",
+      "price": "€ 420 000 · Suelo Urbano",
+      "desc": "Działka pod budowę indywidualnej willi w zielonej strefie między Benidormem a Alteą. Do 25% zabudowy i do 3 kondygnacji."
+    },
+    {
+      "slug": "NouNazareth",
+      "href": "/pl/plots/NouNazareth/",
+      "image": "/pl/plots/NouNazareth/1.jpg",
+      "alt": "Premiowy uczestok Nou Nazareth Sant Joan d'Alacant",
+      "chip": "Development Plot",
+      "title": "Premiowy uczestok — Nou Nazareth, Sant Joan d'Alacant",
+      "meta": "Sant Joan d'Alacant · Nou Nazareth · 4 936 m²",
+      "price": "€ 3 760 000 · 16 pareados",
+      "desc": "Unikalny grunt mieszkaniowy w high-standing zone, pod projekt 16 domów typu pareados, z mocnym potencjałem marżowym."
+    },
+    {
+      "slug": "Polop",
+      "href": "/pl/plots/Polop/",
+      "image": "/pl/plots/Polop/1.jpg",
+      "alt": "Działka pod zabudowę bungalowów w Polop",
+      "chip": "Ready Project",
+      "title": "Działka pod zabudowę bungalowów — Polop",
+      "meta": "Polop · projekt 6 bungalowów",
+      "price": "€ 250 000 · licencje gotowe",
+      "desc": "Gotowa inwestycja pod budowę 6 bungalowów. Wszystkie licencje i pozwolenia uzyskane, możliwość rozpoczęcia budowy od razu."
+    },
+    {
+      "slug": "Campella",
+      "href": "/pl/plots/Campella/",
+      "image": "/pl/plots/Campella/1.jpg",
+      "alt": "Działka na sprzedaż w El Campello 950 m²",
+      "chip": "Land Plot",
+      "title": "Sprzedaż działki — 950 m², El Campello",
+      "meta": "El Campello · 950 m² · ziemia",
+      "price": "€ 115 000 · spokojna strefa",
+      "desc": "Równa działka w spokojnej strefie mieszkalnej, z wygodnym dojazdem i dużym potencjałem pod dom prywatny lub projekt inwestycyjny."
     }
   ]
   </script>
@@ -459,10 +455,30 @@
     };
 
     const PLOT_TRANSLATIONS = {
-      'santabarbara': {
+      santabarbara:{
         es:{chip:'Premium Plot',title:'Parcela de inversión en Alicante junto a Santa Bárbara — proyecto y licencia para aparthotel',meta:'Alicante · Santa Bárbara · proyecto de inversión',price:'€ 390 000 · proyecto + licencia',desc:'Parcela de inversión en Alicante junto a Santa Bárbara con proyecto y licencia para aparthotel. Ubicación atractiva, potencial para alquiler turístico y posibilidad de desarrollar la inversión con rapidez.',alt:'Parcela de inversión junto a Santa Bárbara en Alicante — proyecto y licencia para aparthotel'},
-        en:{chip:'Premium Plot',title:'Investment plot in Alicante by Santa Bárbara — project and licence for an aparthotel',meta:'Alicante · Santa Bárbara · investment project',price:'€390,000 · project + licence',desc:'Investment plot in Alicante by Santa Bárbara with a ready project and licence for an aparthotel. Attractive location, short-term rental potential and the possibility to move forward with the investment quickly.',alt:'Investment plot by Santa Bárbara in Alicante — project and licence for an aparthotel'},
-        ru:{chip:'Премиальный участок',title:'Инвестиционный участок в Alicante у Santa Bárbara — проект и лицензия под апарт-отель',meta:'Alicante · Santa Bárbara · инвестиционный проект',price:'390 000 € · проект + лицензия',desc:'Инвестиционный участок в Alicante у Santa Bárbara с готовым проектом и лицензией под апарт-отель. Привлекательная локация, потенциал краткосрочной аренды и возможность быстро перейти к реализации проекта.',alt:'Инвестиционный участок у Santa Bárbara в Alicante — проект и лицензия под апарт-отель'}
+        en:{chip:'Premium Plot',title:'Investment plot in Alicante by Santa Bárbara — project and licence for an aparthotel',meta:'Alicante · Santa Bárbara · investment project',price:'€390,000 · project + licence',desc:'Investment plot in Alicante by Santa Bárbara with a ready project and licence for an aparthotel. Attractive location, short-term rental potential and the possibility to move forward quickly.',alt:'Investment plot by Santa Bárbara in Alicante — project and licence for an aparthotel'},
+        ru:{chip:'Премиальный участок',title:'Инвестиционный участок в Alicante у Santa Bárbara — проект и лицензия под апарт-отель',meta:'Alicante · Santa Bárbara · инвестиционный проект',price:'390 000 € · проект + лицензия',desc:'Инвестиционный участок в Alicante у Santa Bárbara с готовым проектом и лицензией под апарт-отель. Привлекательная локация и быстрый вход в реализацию.',alt:'Инвестиционный участок у Santa Bárbara в Alicante — проект и лицензия под апарт-отель'}
+      },
+      BenidormPlanet:{
+        es:{chip:'Villa Plot',title:'Parcela para villa — Benidorm, Urb. El Planet',meta:'Benidorm · El Planet · parcela urbana',price:'€ 420 000 · Suelo Urbano',desc:'Parcela para construir una villa unifamiliar en una zona verde entre Benidorm y Altea.',alt:'Parcela para villa en Benidorm El Planet'},
+        en:{chip:'Villa Plot',title:'Villa plot — Benidorm, Urb. El Planet',meta:'Benidorm · El Planet · urban plot',price:'€ 420,000 · Suelo Urbano',desc:'Plot for an individual villa in a green residential area between Benidorm and Altea.',alt:'Villa plot in Benidorm El Planet'},
+        ru:{chip:'Участок под виллу',title:'Участок под строительство виллы — Benidorm, Urb. El Planet',meta:'Benidorm · El Planet · земельный участок',price:'420 000 € · Suelo Urbano',desc:'Участок под индивидуальную виллу в зелёной зоне между Benidorm и Altea.',alt:'Участок под виллу в Benidorm El Planet'}
+      },
+      NouNazareth:{
+        es:{chip:'Development Plot',title:'Parcela premium — Nou Nazareth, Sant Joan d’Alacant',meta:'Sant Joan d’Alacant · Nou Nazareth · 4 936 m²',price:'€ 3 760 000 · 16 pareados',desc:'Suelo residencial único en high standing zone para un proyecto de 16 viviendas pareadas.',alt:'Parcela premium Nou Nazareth Sant Joan d’Alacant'},
+        en:{chip:'Development Plot',title:'Premium plot — Nou Nazareth, Sant Joan d’Alacant',meta:'Sant Joan d’Alacant · Nou Nazareth · 4,936 m²',price:'€ 3,760,000 · 16 semi-detached homes',desc:'Unique residential land in a high-standing zone for a 16-unit pareados project.',alt:'Premium plot Nou Nazareth Sant Joan d’Alacant'},
+        ru:{chip:'Девелоперский участок',title:'Премиальный земельный участок — Nou Nazareth, Sant Joan d’Alacant',meta:'Sant Joan d’Alacant · Nou Nazareth · 4 936 м²',price:'3 760 000 € · 16 pareados',desc:'Уникальный жилой участок под проект 16 домов в high-standing районе.',alt:'Премиальный участок Nou Nazareth Sant Joan d’Alacant'}
+      },
+      Polop:{
+        es:{chip:'Ready Project',title:'Parcela para bungalows — Polop',meta:'Polop · proyecto de 6 bungalows',price:'€ 250 000 · licencias listas',desc:'Inversión lista para construir 6 bungalows. Todas las licencias obtenidas.',alt:'Parcela para bungalows en Polop'},
+        en:{chip:'Ready Project',title:'Bungalow development plot — Polop',meta:'Polop · 6 bungalow project',price:'€ 250,000 · permits ready',desc:'Ready investment for 6 bungalows. All licences and permits obtained.',alt:'Bungalow development plot in Polop'},
+        ru:{chip:'Готовый проект',title:'Земельный участок под застройку — Polop',meta:'Polop · проект 6 бунгало',price:'250 000 € · лицензии готовы',desc:'Готовая инвестиция под строительство 6 бунгало. Все разрешения уже получены.',alt:'Участок под застройку бунгало в Polop'}
+      },
+      Campella:{
+        es:{chip:'Land Plot',title:'Venta de parcela — 950 m², El Campello',meta:'El Campello · 950 m² · suelo',price:'€ 115 000 · zona tranquila',desc:'Parcela llana en una zona residencial tranquila, con buen acceso y potencial para vivienda o inversión.',alt:'Parcela en venta en El Campello 950 m²'},
+        en:{chip:'Land Plot',title:'Plot for sale — 950 m², El Campello',meta:'El Campello · 950 m² · land',price:'€ 115,000 · quiet area',desc:'Level plot in a quiet residential area, with easy access and strong potential for a private home or investment.',alt:'Plot for sale in El Campello 950 m²'},
+        ru:{chip:'Земельный участок',title:'Продажа участка — 950 м², El Campello',meta:'El Campello · 950 м² · земля',price:'115 000 € · спокойная зона',desc:'Ровный участок в спокойной жилой зоне с удобным подъездом и потенциалом под дом или инвестицию.',alt:'Участок на продажу в El Campello 950 м²'}
       }
     };
 
@@ -510,13 +526,11 @@
         hreflangDefault: d.querySelector('link[rel="alternate"][hreflang="x-default"]')
       };
 
-      const fallbackImage = '/pl/plots/plots-hero.png';
-      const fallbackAvatar = '/avatar.png';
+      let cachedPlots = null;
       let lastScroll = window.pageYOffset;
       let up = 0;
       let down = 0;
       let ticking = false;
-      let cachedPlots = null;
 
       const setMeta = (selector, attr, value) => {
         const node = d.querySelector(selector);
@@ -535,38 +549,24 @@
         return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
       };
 
-      const buildLangUrl = (basePath, lang = state.currentLang) => {
-        if (lang === 'pl') return basePath;
-        return `${basePath}?lang=${lang}`;
-      };
-
+      const buildLangUrl = (basePath, lang = state.currentLang) => lang === 'pl' ? basePath : `${basePath}?lang=${lang}`;
       const updateUrlLang = (lang) => {
         const url = new URL(window.location.href);
         if (lang === 'pl') url.searchParams.delete('lang');
         else url.searchParams.set('lang', lang);
         window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
       };
-
-      const getShareUrl = () => {
-        const url = new URL(DEFAULT_CATEGORY_URL);
-        if (state.currentLang !== 'pl') url.searchParams.set('lang', state.currentLang);
-        return url.toString();
-      };
-
+      const getShareUrl = () => buildLangUrl(DEFAULT_CATEGORY_URL, state.currentLang);
       const getFacebookPreviewUrl = () => {
         const url = new URL(DEFAULT_CATEGORY_URL);
         if (state.currentLang !== 'pl') url.searchParams.set('lang', state.currentLang);
         url.searchParams.set('fbshare', 'plots-og-v1');
         return url.toString();
       };
-
-      const getFacebookSharerUrl = () => {
-        return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getFacebookPreviewUrl())}`;
-      };
+      const getFacebookSharerUrl = () => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getFacebookPreviewUrl())}`;
 
       const updateStaticLinks = () => {
         const lang = state.currentLang;
-
         if (el.navLinks.length >= 6) {
           el.navLinks[0].href = 'https://costa-blanca-invest.com/';
           el.navLinks[1].href = 'https://costa-blanca-invest.com/#directions';
@@ -575,11 +575,7 @@
           el.navLinks[4].href = buildLangUrl('/pl/plots/', lang);
           el.navLinks[5].href = buildLangUrl('/pl/build-house/', lang);
         }
-
-        if (el.breadcrumbs.length >= 1 && el.breadcrumbs[0].tagName === 'A') {
-          el.breadcrumbs[0].href = 'https://costa-blanca-invest.com/';
-        }
-
+        if (el.breadcrumbs.length >= 1 && el.breadcrumbs[0].tagName === 'A') el.breadcrumbs[0].href = 'https://costa-blanca-invest.com/';
         if (el.canonical) el.canonical.href = getShareUrl();
         if (el.hreflangPl) el.hreflangPl.href = 'https://costa-blanca-invest.com/pl/plots/';
         if (el.hreflangEs) el.hreflangEs.href = 'https://costa-blanca-invest.com/pl/plots/?lang=es';
@@ -588,20 +584,13 @@
         if (el.hreflangDefault) el.hreflangDefault.href = 'https://costa-blanca-invest.com/pl/plots/';
       };
 
-      window.handleBrokenImage = (img) => {
-        if (img.dataset.fallbackApplied === 'true') return;
-        img.dataset.fallbackApplied = 'true';
-        img.src = img.closest('.contact-avatar') ? fallbackAvatar : fallbackImage;
-      };
-
       const getPlots = () => {
         if (cachedPlots) return cachedPlots;
         if (!el.plotsData) return [];
         try {
           const parsed = JSON.parse(el.plotsData.textContent);
           cachedPlots = Array.isArray(parsed) ? parsed.filter(item => item && item.href && item.title) : [];
-        } catch (error) {
-          console.warn('Invalid JSON in #plots-data.', error);
+        } catch {
           cachedPlots = [];
         }
         return cachedPlots;
@@ -616,7 +605,7 @@
           return;
         }
         el.plotsGrid.innerHTML = plots.map(plot => {
-          const slug = (plot.href || '').split('/').filter(Boolean).pop();
+          const slug = plot.slug || (plot.href || '').split('/').filter(Boolean).pop();
           const tr = PLOT_TRANSLATIONS[slug]?.[state.currentLang] || null;
           const chip = tr?.chip || plot.chip || '';
           const title = tr?.title || plot.title || '';
@@ -624,8 +613,9 @@
           const price = tr?.price || plot.price || '';
           const desc = tr?.desc || plot.desc || '';
           const alt = tr?.alt || plot.alt || plot.title || '';
-          return `<a href="${escapeHtml(plot.href)}" class="plot-card" aria-label="${escapeHtml(alt)}">
-            <img src="${escapeHtml(plot.image || fallbackImage)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+          const href = buildLangUrl(plot.href, state.currentLang);
+          return `<a href="${escapeHtml(href)}" class="plot-card" aria-label="${escapeHtml(alt)}">
+            <img src="${escapeHtml(plot.image)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">
             <div class="card-body">
               ${chip ? `<div class="chip">${escapeHtml(chip)}</div>` : ''}
               <h3>${escapeHtml(title)}</h3>
@@ -642,7 +632,6 @@
         const safeLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
         state.currentLang = safeLang;
         const t = CATEGORY_TRANSLATIONS[state.currentLang] || CATEGORY_TRANSLATIONS.pl;
-
         el.root.lang = state.currentLang;
         document.title = t.page_title;
         setMeta('meta[name="description"]', 'content', t.meta_description);
@@ -666,56 +655,20 @@
         if (el.stickyContact) el.stickyContact.setAttribute('aria-label', t.sticky_aria);
         if (el.stickyWa) el.stickyWa.setAttribute('aria-label', t.sticky_wa_aria);
         if (el.heroImage) el.heroImage.alt = t.hero_alt;
-
         if (el.eyebrow) el.eyebrow.textContent = t.hero_eyebrow;
         if (el.heroTitle) el.heroTitle.textContent = t.hero_title;
         if (el.heroLead) el.heroLead.textContent = t.hero_lead;
 
-        if (el.navLinks.length >= 6) {
-          [t.nav_home, t.nav_categories, t.nav_contact, t.nav_new, t.nav_plots, t.nav_build].forEach((text, index) => {
-            el.navLinks[index].textContent = text;
-          });
-        }
-        if (el.breadcrumbs.length >= 3) {
-          el.breadcrumbs[0].textContent = t.breadcrumbs_home;
-          el.breadcrumbs[2].textContent = t.breadcrumbs_current;
-        }
-
+        if (el.navLinks.length >= 6) [t.nav_home, t.nav_categories, t.nav_contact, t.nav_new, t.nav_plots, t.nav_build].forEach((text, index) => el.navLinks[index].textContent = text);
+        if (el.breadcrumbs.length >= 3) { el.breadcrumbs[0].textContent = t.breadcrumbs_home; el.breadcrumbs[2].textContent = t.breadcrumbs_current; }
         if (el.benefitsSection) el.benefitsSection.querySelector('h2').textContent = t.benefits_title;
-        if (el.benefitCards.length >= 3) {
-          [[t.benefit_1_h,t.benefit_1_p],[t.benefit_2_h,t.benefit_2_p],[t.benefit_3_h,t.benefit_3_p]].forEach((pair, index) => {
-            el.benefitCards[index].querySelector('h3').textContent = pair[0];
-            el.benefitCards[index].querySelector('p').textContent = pair[1];
-          });
-        }
-
-        if (el.plotsSection) {
-          el.plotsSection.querySelector('h2').textContent = t.plots_title;
-          el.plotsSection.querySelector('.center-text').textContent = t.plots_intro;
-        }
-
-        if (el.locationsSection) {
-          el.locationsSection.querySelector('h2').textContent = t.locations_title;
-          el.locationsSection.querySelector('.center-text').textContent = t.locations_intro;
-        }
-        if (el.locationCards.length >= 3) {
-          [[t.loc_1_h,t.loc_1_p],[t.loc_2_h,t.loc_2_p],[t.loc_3_h,t.loc_3_p]].forEach((pair, index) => {
-            el.locationCards[index].querySelector('h3').textContent = pair[0];
-            el.locationCards[index].querySelector('p').textContent = pair[1];
-          });
-        }
-        if (el.locationChipsWrap) {
-          el.locationChipsWrap.innerHTML = t.location_chips.map(item => `<span>${escapeHtml(item)}</span>`).join('');
-        }
-
+        if (el.benefitCards.length >= 3) [[t.benefit_1_h,t.benefit_1_p],[t.benefit_2_h,t.benefit_2_p],[t.benefit_3_h,t.benefit_3_p]].forEach((pair, index) => { el.benefitCards[index].querySelector('h3').textContent = pair[0]; el.benefitCards[index].querySelector('p').textContent = pair[1]; });
+        if (el.plotsSection) { el.plotsSection.querySelector('h2').textContent = t.plots_title; el.plotsSection.querySelector('.center-text').textContent = t.plots_intro; }
+        if (el.locationsSection) { el.locationsSection.querySelector('h2').textContent = t.locations_title; el.locationsSection.querySelector('.center-text').textContent = t.locations_intro; }
+        if (el.locationCards.length >= 3) [[t.loc_1_h,t.loc_1_p],[t.loc_2_h,t.loc_2_p],[t.loc_3_h,t.loc_3_p]].forEach((pair, index) => { el.locationCards[index].querySelector('h3').textContent = pair[0]; el.locationCards[index].querySelector('p').textContent = pair[1]; });
+        if (el.locationChipsWrap) el.locationChipsWrap.innerHTML = t.location_chips.map(item => `<span>${escapeHtml(item)}</span>`).join('');
         if (el.faqSection) el.faqSection.querySelector('h2').textContent = t.faq_title;
-        if (el.faqCards.length >= 3) {
-          [[t.faq_1_h,t.faq_1_p],[t.faq_2_h,t.faq_2_p],[t.faq_3_h,t.faq_3_p]].forEach((pair, index) => {
-            el.faqCards[index].querySelector('h3').textContent = pair[0];
-            el.faqCards[index].querySelector('p').textContent = pair[1];
-          });
-        }
-
+        if (el.faqCards.length >= 3) [[t.faq_1_h,t.faq_1_p],[t.faq_2_h,t.faq_2_p],[t.faq_3_h,t.faq_3_p]].forEach((pair, index) => { el.faqCards[index].querySelector('h3').textContent = pair[0]; el.faqCards[index].querySelector('p').textContent = pair[1]; });
         if (el.seoSection) {
           const heads = el.seoSection.querySelectorAll('h2,h3');
           const paras = el.seoSection.querySelectorAll('p');
@@ -724,7 +677,6 @@
             [t.seo_1_p,t.seo_2_p,t.seo_3_p,t.seo_4_p,t.seo_5_p,t.seo_6_p].forEach((text, index) => paras[index].textContent = text);
           }
         }
-
         if (el.contactSection) {
           el.contactSection.querySelector('.contact-title').textContent = t.contact_title;
           el.contactSection.querySelector('.center-text').textContent = t.contact_intro;
@@ -735,81 +687,38 @@
           el.contactSection.querySelector('.share-box p').textContent = t.share_title;
           if (el.shareLinkBtn) el.shareLinkBtn.textContent = t.share_link;
           const inputs = el.contactSection.querySelectorAll('input, textarea');
-          if (inputs.length >= 4) {
-            inputs[0].placeholder = t.form_name;
-            inputs[1].placeholder = t.form_phone;
-            inputs[2].placeholder = t.form_email;
-            inputs[3].placeholder = t.form_message;
-          }
+          if (inputs.length >= 4) { inputs[0].placeholder = t.form_name; inputs[1].placeholder = t.form_phone; inputs[2].placeholder = t.form_email; inputs[3].placeholder = t.form_message; }
           el.contactSection.querySelector('.submit-btn').textContent = t.form_submit;
         }
-
         if (el.footer) {
           el.footer.querySelector('.footer-copy').textContent = t.footer_copy;
           const footerLinks = el.footer.querySelectorAll('.footer-links a');
           if (footerLinks.length >= 6) {
-            const footerData = [
-              [t.footer_1, state.currentLang === 'pl' ? '/pl/new-developments/' : `/pl/new-developments/?lang=${state.currentLang}`],
-              [t.footer_2, state.currentLang === 'pl' ? '/pl/plots/' : `/pl/plots/?lang=${state.currentLang}`],
-              [t.footer_3, state.currentLang === 'pl' ? '/pl/build-house/' : `/pl/build-house/?lang=${state.currentLang}`],
-              [t.footer_4, 'https://costa-blanca-invest.com/#directions'],
-              [t.footer_5, '#locations'],
-              [t.footer_6, '#contact']
-            ];
-            footerLinks.forEach((link, index) => {
-              if (footerData[index]) {
-                link.textContent = footerData[index][0];
-                link.setAttribute('href', footerData[index][1]);
-              }
-            });
+            const footerData = [[t.footer_1, buildLangUrl('/pl/new-developments/', state.currentLang)],[t.footer_2, buildLangUrl('/pl/plots/', state.currentLang)],[t.footer_3, buildLangUrl('/pl/build-house/', state.currentLang)],[t.footer_4, 'https://costa-blanca-invest.com/#directions'],[t.footer_5, '#locations'],[t.footer_6, '#contact']];
+            footerLinks.forEach((link, index) => { if (footerData[index]) { link.textContent = footerData[index][0]; link.href = footerData[index][1]; } });
           }
           el.footer.querySelector('.footer-bottom').textContent = t.footer_bottom;
         }
-
         if (el.stickyWa) el.stickyWa.textContent = t.sticky_wa;
-
         renderPlots();
         updateStaticLinks();
-
-        el.langButtons.forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.lang === state.currentLang);
-          btn.textContent = (btn.dataset.lang || '').toUpperCase();
-        });
-
+        el.langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
         if (syncUrl) updateUrlLang(state.currentLang);
-
-        if (el.shareFacebook) {
-          el.shareFacebook.href = getFacebookSharerUrl();
-        }
+        if (el.shareFacebook) el.shareFacebook.href = getFacebookSharerUrl();
       };
 
-      const setShareStatus = (message) => {
-        if (el.shareStatus) el.shareStatus.textContent = message;
-      };
-
+      const setShareStatus = (message) => { if (el.shareStatus) el.shareStatus.textContent = message; };
       const copyTextToClipboard = async (text) => {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-          return true;
-        }
+        if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true; }
         const temp = d.createElement('textarea');
-        temp.value = text;
-        temp.setAttribute('readonly', '');
-        temp.style.position = 'absolute';
-        temp.style.left = '-9999px';
-        d.body.appendChild(temp);
-        temp.select();
-        const copied = d.execCommand('copy');
-        d.body.removeChild(temp);
-        return copied;
+        temp.value = text; temp.setAttribute('readonly', ''); temp.style.position = 'absolute'; temp.style.left = '-9999px';
+        d.body.appendChild(temp); temp.select(); const copied = d.execCommand('copy'); d.body.removeChild(temp); return copied;
       };
 
       renderPlots();
       applyLanguage(getInitialLang(), false);
       el.langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true)));
-      window.addEventListener('popstate', () => {
-        applyLanguage(getInitialLang(), false);
-      });
+      window.addEventListener('popstate', () => applyLanguage(getInitialLang(), false));
 
       if (el.shareLinkBtn) {
         el.shareLinkBtn.addEventListener('click', async () => {
@@ -833,10 +742,7 @@
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target);
-            }
+            if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); }
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
         el.animatedCards.forEach(node => observer.observe(node));
@@ -848,26 +754,16 @@
         const current = window.pageYOffset;
         const delta = current - lastScroll;
         if (el.header) {
-          if (current > 40) el.header.classList.add('scrolled');
-          else el.header.classList.remove('scrolled');
+          if (current > 40) el.header.classList.add('scrolled'); else el.header.classList.remove('scrolled');
         }
         if (Math.abs(delta) >= 4) {
-          if (delta > 0) {
-            down += delta; up = 0;
-            if (current > 120 && down > 24 && el.header) el.header.classList.add('hide');
-          } else {
-            up += Math.abs(delta); down = 0;
-            if ((up > 42 || current < 40) && el.header) el.header.classList.remove('hide');
-          }
+          if (delta > 0) { down += delta; up = 0; if (current > 120 && down > 24 && el.header) el.header.classList.add('hide'); }
+          else { up += Math.abs(delta); down = 0; if ((up > 42 || current < 40) && el.header) el.header.classList.remove('hide'); }
           lastScroll = current;
         }
         ticking = false;
       };
-      window.addEventListener('scroll', () => {
-        if (ticking) return;
-        ticking = true;
-        window.requestAnimationFrame(onScroll);
-      }, { passive: true });
+      window.addEventListener('scroll', () => { if (ticking) return; ticking = true; window.requestAnimationFrame(onScroll); }, { passive: true });
       onScroll();
 
       if (el.contactForm) {
@@ -879,13 +775,7 @@
           const phone = String(formData.get('phone') || '').trim();
           const email = String(formData.get('email') || '').trim();
           const message = String(formData.get('message') || '').trim();
-          const text = `${t.wa_form_prefix}
-
-${t.form_name}: ${name}
-${t.form_phone}: ${phone}
-${t.form_email}: ${email}
-
-${message}`;
+          const text = `${t.wa_form_prefix}\n\n${t.form_name}: ${name}\n${t.form_phone}: ${phone}\n${t.form_email}: ${email}\n\n${message}`;
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
           const opened = window.open(url, '_blank', 'noopener');
           if (!opened) window.location.href = url;
