@@ -110,5 +110,16 @@
     "meta": "centrum",
     "price": "€ 700 000",
     "desc": "Grunt inwestycyjny."
-  }
+  },
+  {
+  "slug": "villajoyosa-first-line-plot-3-2m",
+  "href": "/pl/plots/villajoyosa-first-line-plot-3-2m/",
+  "image": "/pl/plots/villajoyosa-first-line-plot-3-2m/1.jpg",
+  "alt": "Działka na pierwszej linii morza w Villajoyosa",
+  "chip": "First Line Plot",
+  "title": "Działka — Villajoyosa (1 linia morza)",
+  "meta": "Villajoyosa · 1 linia · projekt deweloperski",
+  "price": "€ 3 200 000",
+  "desc": "Działka na pierwszej linii morza pod budowę 2 budynków (24 apartamenty). Idealna inwestycja deweloperska z widokiem na morze."
+}  
 ]
