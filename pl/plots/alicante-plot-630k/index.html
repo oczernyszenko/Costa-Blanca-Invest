@@ -280,7 +280,7 @@
     .hero-price-note { display: block; margin-top: 6px; font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.96); font-weight: 700; }
     .hero-price-meta { display: block; margin-top: 8px; font-size: 12px; line-height: 1.55; opacity: .94; }
 
-    .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
     .gallery-item {
       position: relative;
       overflow: hidden;
@@ -639,12 +639,14 @@
         </div>
 
         <div class="gallery-grid" aria-label="Дополнительные изображения участка">
-          <div class="gallery-item" data-media-src="2.jpg">
-            <img src="2.jpg" alt="Участок в Аликанте — вид 2" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
-          </div>
-          <div class="gallery-item" data-media-src="3.jpg">
-            <img src="3.jpg" alt="Участок в Аликанте — вид 3" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
-          </div>
+          <div class="gallery-item" data-media-src="2.jpg"><img src="2.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="3.jpg"><img src="3.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="4.jpg"><img src="4.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="5.jpg"><img src="5.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="6.jpg"><img src="6.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="7.jpg"><img src="7.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="8.jpg"><img src="8.jpg" alt="" loading="lazy"></div>
+          <div class="gallery-item" data-media-src="9.jpg"><img src="9.jpg" alt="" loading="lazy"></div>
         </div>
       </section>
 
@@ -890,7 +892,7 @@
     }
   };
 
-  const PROPERTY_DATA = { slug: 'alicante-city-plot', images: ['1.jpg', '2.jpg', '3.jpg'], contact_phone: '+34604158859' };
+  const PROPERTY_DATA = { slug: 'alicante-city-plot', images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg'], contact_phone: '+34604158859' };
 
   document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
