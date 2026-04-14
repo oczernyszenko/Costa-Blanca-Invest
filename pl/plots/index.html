@@ -402,8 +402,6 @@
     <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20działka%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa" aria-label="WhatsApp — szybki kontakt">💬 WhatsApp</a>
   </div>
 
-  <!-- plots data moved to external file: /pl/plots/plots-index.json -->
-
   <script>
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
     const SHARE_IMAGE = '/pl/plots/plots-hero.png';
@@ -483,7 +481,6 @@
         shareLinkBtn: d.getElementById('share-link'),
         shareFacebook: d.getElementById('share-facebook'),
         shareStatus: d.getElementById('share-status'),
-        plotsData: d.getElementById('plots-data'),
         canonical: d.querySelector('link[rel="canonical"]')
       };
 
@@ -530,9 +527,19 @@
       };
 
       window.handleBrokenImage = (img) => {
-        if (img.dataset.fallbackApplied === 'true') return;
-        img.dataset.fallbackApplied = 'true';
-        img.src = fallbackImage;
+        const candidates = [
+          img.dataset.fallback1,
+          img.dataset.fallback2,
+          img.dataset.fallback3,
+          img.dataset.fallback4,
+          fallbackImage
+        ].filter(Boolean);
+
+        const currentIndex = Number(img.dataset.fallbackIndex || '0');
+        if (currentIndex >= candidates.length) return;
+
+        img.dataset.fallbackIndex = String(currentIndex + 1);
+        img.src = candidates[currentIndex];
       };
 
       const getPlots = async () => {
@@ -559,6 +566,7 @@
           el.plotsGrid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(t.empty_h)}</h3><p>${escapeHtml(t.empty_p)}</p></div></div>`;
           return;
         }
+
         const cards = plots.map(plot => {
           const slug = plot.slug || (plot.href || '').split('/').filter(Boolean).pop();
           const tr = PLOT_TRANSLATIONS[slug]?.[state.currentLang] || null;
@@ -568,8 +576,22 @@
           const price = tr?.price || plot.price || '';
           const desc = tr?.desc || plot.desc || '';
           const alt = tr?.alt || plot.alt || plot.title || '';
+
+          const cleanHref = String(plot.href || '').replace(/\/+$/, '');
+          const imageBase = `${cleanHref}/1`;
+
           return `<a href="${escapeHtml(buildLangUrl(plot.href, state.currentLang))}" class="plot-card" aria-label="${escapeHtml(alt)}">
-            <img src="${escapeHtml(plot.image || fallbackImage)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
+            <img
+              src="${escapeHtml(imageBase + '.jpg')}"
+              data-fallback1="${escapeHtml(imageBase + '.png')}"
+              data-fallback2="${escapeHtml(imageBase + '.jpeg')}"
+              data-fallback3="${escapeHtml(imageBase + '.webp')}"
+              data-fallback4="${escapeHtml(fallbackImage)}"
+              alt="${escapeHtml(alt)}"
+              loading="lazy"
+              decoding="async"
+              onerror="window.handleBrokenImage && window.handleBrokenImage(this)"
+            >
             <div class="card-body">
               ${chip ? `<div class="chip">${escapeHtml(chip)}</div>` : ''}
               <h3>${escapeHtml(title)}</h3>
