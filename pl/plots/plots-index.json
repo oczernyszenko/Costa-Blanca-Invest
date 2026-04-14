@@ -121,5 +121,38 @@
   "meta": "Villajoyosa · 1 linia · projekt deweloperski",
   "price": "€ 3 200 000",
   "desc": "Działka na pierwszej linii morza pod budowę 2 budynków (24 apartamenty). Idealna inwestycja deweloperska z widokiem na morze."
+}, 
+{
+  "slug": "alicante-residential-building-plot-470k",
+  "href": "/pl/plots/alicante-residential-building-plot-470k/",
+  "image": "/pl/plots/alicante-residential-building-plot-470k/1.jpg",
+  "alt": "Działka pod budowę budynku mieszkalnego w Alicante",
+  "chip": "Development Plot",
+  "title": "Działka — Alicante (8 mieszkań + parking)",
+  "meta": "Alicante · 4 piętra · 8 mieszkań · parking",
+  "price": "€ 470 000",
+  "desc": "Działka pod budowę budynku mieszkalnego (4 piętra, 8 mieszkań po 130 m² + parking podziemny). Idealna inwestycja deweloperska."
+},
+  {
+  "slug": "playa-san-juan-villa-plot-1260m",
+  "href": "/pl/plots/playa-san-juan-villa-plot-1260m/",
+  "image": "/pl/plots/playa-san-juan-villa-plot-1260m/1.jpg",
+  "alt": "Działka pod willę w Playa San Juan",
+  "chip": "Villa Plot",
+  "title": "Działka — Playa San Juan (1260 m²)",
+  "meta": "Playa San Juan · 1260 m² · willa",
+  "price": "€ 1 100 000",
+  "desc": "Działka 1260 m² pod budowę prywatnej willi w Playa San Juan. Jedna z najbardziej prestiżowych lokalizacji nad morzem na Costa Blanca."
+},
+  {
+  "slug": "finestrat-plot-3-villas-sea-mountain-view",
+  "href": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/",
+  "image": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg",
+  "alt": "Działka w Finestrat z widokiem na morze i góry",
+  "chip": "Sea View Plot",
+  "title": "Działka — Finestrat (3 wille)",
+  "meta": "Finestrat · widok na morze i góry · 3 wille",
+  "price": "€ 500 000",
+  "desc": "Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry. Prestiżowa lokalizacja na Costa Blanca, idealna inwestycja lub projekt prywatny."
 }  
 ]
