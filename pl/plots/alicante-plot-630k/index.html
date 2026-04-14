@@ -784,7 +784,7 @@
 
   <script>
   const LIVE_PATH = '/ru/plots/alicante-city-plot/';
-  const LIVE_CATEGORY_PATH = '/ru/plots/';
+  function categoryPath(lang){ return `https://costa-blanca-invest.com/${lang}/plots/`; }
   const SUPPORTED_LANGS = ['ru', 'es', 'en', 'pl'];
 
   const TRANSLATIONS = {
@@ -951,7 +951,7 @@
         const key = el.dataset.i18n;
         if (t[key]) el.textContent = t[key];
       });
-      if (backLink) backLink.href = `https://costa-blanca-invest.com${LIVE_CATEGORY_PATH}`;
+      if (backLink) backLink.href = categoryPath(currentLang);
       if (backLinkLabel) backLinkLabel.textContent = t.back_link;
       const formName = document.getElementById('formName');
       const formPhone = document.getElementById('formPhone');
