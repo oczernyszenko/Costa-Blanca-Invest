@@ -457,7 +457,13 @@
       background: linear-gradient(135deg, rgba(24,55,70,.72), rgba(35,78,99,.58));
       border: 1px solid rgba(255,255,255,.2);
     }
-    .share-btn { background: linear-gradient(135deg, rgba(24,55,70,.72), rgba(35,78,99,.58)); color: #fff; }
+    .share-btn { background: #ffffff; color: var(--primary); border: 1px solid rgba(0,0,0,.08); }
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.12);
+      background: linear-gradient(135deg, rgba(24,55,70,.08), rgba(35,78,99,.06));
+      color: var(--primary);
+    }
 
     .share-block { max-width: 760px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid rgba(15,23,42,.08); }
     .share-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
@@ -830,7 +836,7 @@
       spec_title: 'Qué incluye la oferta', spec_1: 'Parcela urbana de 465 m² en Alicante', spec_2: 'Edificabilidad permitida de hasta 230 m²', spec_3: 'Posibilidad de construir vivienda de hasta 2 plantas', spec_4: 'Agua, electricidad y alcantarillado conectados', spec_5: 'Alumbrado público y entorno residencial formado', spec_6: 'Acceso cómodo al centro de Alicante', spec_paragraph: 'Es una propuesta para quien busca una parcela con base técnica ya resuelta. Esto permite planificar la construcción con más seguridad y rapidez.',
       roi_title: 'Potencial del activo', roi_paragraph_1: 'El valor principal de esta parcela es su condición urbana y su preparación para construir. Para el comprador final significa poder proyectar una vivienda moderna sin alejarse de la ciudad.', roi_label_1: 'Formato:', roi_value_1: 'parcela para vivienda unifamiliar', roi_label_2: 'Ubicación:', roi_value_2: 'zona residencial tranquila de Alicante', roi_label_3: 'Estado:', roi_value_3: 'suministros conectados y parcela lista', roi_label_4: 'Ventaja:', roi_value_4: 'inicio rápido del proyecto y cercanía al centro', roi_paragraph_2: 'También es una base sólida para una inversión residencial en una zona urbana donde la demanda de vivienda bien ubicada sigue siendo relevante.',
       audience_title: '¿Para quién encaja esta parcela?', audience_card_1_title: '🏡 Para comprador final', audience_card_1_text: 'Para quien desea construir su propia casa en Alicante y vivir en la ciudad con comodidad y privacidad.', audience_card_2_title: '👨‍👩‍👧 Para familias', audience_card_2_text: 'Para familias que valoran una zona tranquila, suministros conectados y posibilidad de una vivienda cómoda de dos plantas.', audience_card_3_title: '📈 Para inversor', audience_card_3_text: 'Para quien busca una parcela urbana líquida como base de un futuro proyecto residencial.',
-      urgency_note: 'Lista para construir · parcela urbana · suministros conectados', contact_title: 'Recibir información de la parcela', contact_intro: 'Contacta conmigo para recibir más detalles sobre la parcela, los parámetros de construcción y la visita.', agent_role: 'Experta en недвижимость en Costa Blanca', agent_meta: 'Selección de propiedades, acompañamiento en la compra y apoyo en todo el proceso en España.', call_btn: 'Llamar', wa_btn: 'WhatsApp', copy_link: 'Copiar enlace', share_btn: 'Compartir', share_note_title: 'Parcela urbana en Alicante', share_note_strong: '€ 630 000 · 465 m² · hasta 2 plantas', share_note_text: 'Suministros conectados · zona residencial tranquila · buen acceso al centro', form_name: 'Nombre', form_phone: 'Teléfono', form_email: 'Email', form_message: 'Indique si busca una parcela para vivienda propia o inversión', form_submit: 'Enviar por WhatsApp', wa_form_prefix: 'Nueva solicitud desde la web'
+      urgency_note: 'Lista para construir · parcela urbana · suministros conectados', contact_title: 'Recibir información de la parcela', contact_intro: 'Contacta conmigo para recibir más detalles sobre la parcela, los parámetros de construcción y la visita.', agent_role: 'Experta en inversión inmobiliaria en Costa Blanca', agent_meta: 'Selección de propiedades, acompañamiento en la compra y apoyo en todo el proceso en España.', call_btn: 'Llamar', wa_btn: 'WhatsApp', copy_link: 'Copiar enlace', share_btn: 'Compartir', share_note_title: 'Parcela urbana en Alicante', share_note_strong: '€ 630 000 · 465 m² · hasta 2 plantas', share_note_text: 'Suministros conectados · zona residencial tranquila · buen acceso al centro', form_name: 'Nombre', form_phone: 'Teléfono', form_email: 'Email', form_message: 'Indique si busca una parcela para vivienda propia o inversión', form_submit: 'Enviar por WhatsApp', wa_form_prefix: 'Nueva solicitud desde la web'
     },
     en: {
       lang: 'en', locale: 'en_US',
@@ -900,9 +906,9 @@
     const backLinkLabel = document.getElementById('backLinkLabel');
     let currentLang = 'ru';
 
-    function imageBaseAbsolute() { return `https://costa-blanca-invest.com/ru/plots/${PROPERTY_DATA.slug}/`; }
+    function imageBaseAbsolute(lang = currentLang) { return `https://costa-blanca-invest.com/${lang}/plots/${PROPERTY_DATA.slug}/`; }
     function imageBaseRelative() { return './'; }
-    function listingUrl(lang = currentLang) { return `https://costa-blanca-invest.com${LIVE_PATH}${lang === 'ru' ? '' : `?lang=${lang}`}`; }
+    function listingUrl(lang = currentLang) { return `https://costa-blanca-invest.com/${lang}/plots/${PROPERTY_DATA.slug}/`; }
 
     window.handleBrokenImage = function(img) {
       if (img.dataset.fallbackApplied === 'true') return;
@@ -923,21 +929,21 @@
       document.documentElement.lang = t.lang;
       document.title = t.page_title;
       setAttr('meta[name="description"]', 'content', t.meta_description);
-      setAttr('link[rel="canonical"]', 'href', listingUrl('ru'));
-      setAttr('link[rel="image_src"]', 'href', `${imageBaseAbsolute()}1.jpg`);
+      setAttr('link[rel="canonical"]', 'href', listingUrl(currentLang));
+      setAttr('link[rel="image_src"]', 'href', `${imageBaseAbsolute(currentLang)}1.jpg`);
       setAttr('meta[property="og:locale"]', 'content', t.locale);
       setAttr('meta[property="og:title"]', 'content', t.og_title);
       setAttr('meta[property="og:description"]', 'content', t.og_description);
-      setAttr('meta[property="og:url"]', 'content', listingUrl('ru'));
-      setAttr('meta[property="og:image"]', 'content', `${imageBaseAbsolute()}1.jpg`);
-      setAttr('meta[property="og:image:url"]', 'content', `${imageBaseAbsolute()}1.jpg`);
-      setAttr('meta[property="og:image:secure_url"]', 'content', `${imageBaseAbsolute()}1.jpg`);
+      setAttr('meta[property="og:url"]', 'content', listingUrl(currentLang));
+      setAttr('meta[property="og:image"]', 'content', `${imageBaseAbsolute(currentLang)}1.jpg`);
+      setAttr('meta[property="og:image:url"]', 'content', `${imageBaseAbsolute(currentLang)}1.jpg`);
+      setAttr('meta[property="og:image:secure_url"]', 'content', `${imageBaseAbsolute(currentLang)}1.jpg`);
       setAttr('meta[property="og:image:alt"]', 'content', t.og_image_alt);
       setAttr('meta[name="twitter:title"]', 'content', t.og_title);
       setAttr('meta[name="twitter:description"]', 'content', t.og_description);
-      setAttr('meta[name="twitter:image"]', 'content', `${imageBaseAbsolute()}1.jpg`);
+      setAttr('meta[name="twitter:image"]', 'content', `${imageBaseAbsolute(currentLang)}1.jpg`);
       setAttr('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
-      setAttr('meta[name="twitter:url"]', 'content', listingUrl('ru'));
+      setAttr('meta[name="twitter:url"]', 'content', listingUrl(currentLang));
     }
 
     function applyText(t) {
@@ -1027,7 +1033,7 @@
       nativeShareBtn.addEventListener('click', async () => {
         const t = TRANSLATIONS[currentLang] || TRANSLATIONS.ru;
         const shareData = {
-          title: t.page_title,
+          title: t.og_title,
           text: `${t.share_note_title} · ${t.share_note_strong}`,
           url: listingUrl(currentLang)
         };
