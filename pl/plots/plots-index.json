@@ -77,17 +77,6 @@
     "desc": "Działka inwestycyjna."
   },
 
- {
-    "slug": "Alicante",
-    "href": "/pl/plots/Alicante/",
-    "image": "/pl/plots/Alicante/1.jpg",
-    "alt": "Działka Alicante",
-    "chip": "Urban Plot",
-    "title": "Działka — Alicante",
-    "description": "Land in San Juan with a ready project for 6 modern bungalows."
-    "price": "€ 1500 000",
-    "desc": "Działka miejska."
-  },
   {
     "slug": "AlicanteCityPlot",
     "href": "/pl/plots/AlicanteCityPlot/",
