@@ -130,7 +130,7 @@
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
     .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
     .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease, transform .22s ease, box-shadow .22s ease}
-    .nav-icon{display:none;flex:0 0 auto;font-size:14px;line-height:1;opacity:.92}
+    .nav-icon{display:none}
     .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
     .nav a:hover{transform:translateY(-1px)}
@@ -266,8 +266,7 @@
 
     @media (max-width:768px){
       .nav a span:last-child{display:block}
-      .nav-icon{display:inline-flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:3px}
-      .nav a{flex-direction:column;gap:4px}
+      .nav a{flex-direction:column;gap:0}
 
       .topbar{
         position:sticky;
@@ -465,12 +464,12 @@
     <div class="container topbar-inner">
       <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="https://costa-blanca-invest.com/"><span class="nav-icon">⌂</span><span>Strona główna</span></a>
-        <a href="https://costa-blanca-invest.com/#directions"><span class="nav-icon">◫</span><span>Kategorie</span></a>
-        <a href="#contact"><span class="nav-icon">✉</span><span>Kontakt</span></a>
-        <a href="/pl/new-developments/"><span class="nav-icon">✦</span><span>Nowe inwestycje</span></a>
-        <a href="/pl/plots/" aria-current="page"><span class="nav-icon">▣</span><span>Działki</span></a>
-        <a href="/pl/build-house/"><span class="nav-icon">⌘</span><span>Budowa domu</span></a>
+        <a href="https://costa-blanca-invest.com/"><span>Strona główna</span></a>
+        <a href="https://costa-blanca-invest.com/#directions"><span>Kategorie</span></a>
+        <a href="#contact"><span>Kontakt</span></a>
+        <a href="/pl/new-developments/"><span>Nowe inwestycje</span></a>
+        <a href="/pl/plots/" aria-current="page"><span>Działki</span></a>
+        <a href="/pl/build-house/"><span>Budowa domu</span></a>
       </nav>
       <div class="lang-switcher notranslate" translate="no" aria-label="Language switcher">
         <button class="lang-btn active" type="button" aria-label="Polski">PL</button>
@@ -1022,7 +1021,13 @@
           return;
         }
 
-        grid.innerHTML = plots.map(makeCardHtml).join('');
+        const sortedPlots = [...plots].sort((a, b) => {
+          const priceA = Number(a?.price_value || 0);
+          const priceB = Number(b?.price_value || 0);
+          return priceB - priceA;
+        });
+
+        grid.innerHTML = sortedPlots.map(makeCardHtml).join('');
       } catch (error) {
         console.error('renderPlots error:', error);
         grid.innerHTML = `
@@ -1039,6 +1044,13 @@
     const setText = (selector, value) => {
       const el = document.querySelector(selector);
       if (el) el.textContent = value;
+    };
+
+    const setNavLabel = (link, text) => {
+      if (!link) return;
+      const label = link.querySelector('span:last-child');
+      if (label) label.textContent = text;
+      else link.textContent = text;
     };
 
     const applyLanguage = async (lang) => {
@@ -1066,12 +1078,12 @@
 
         const navLinks = document.querySelectorAll('.nav a');
         if (navLinks.length >= 6) {
-          navLinks[0].textContent = ui.nav_home;
-          navLinks[1].textContent = ui.nav_categories;
-          navLinks[2].textContent = ui.nav_contact;
-          navLinks[3].textContent = ui.nav_new;
-          navLinks[4].textContent = ui.nav_plots;
-          navLinks[5].textContent = ui.nav_build;
+          setNavLabel(navLinks[0], ui.nav_home);
+          setNavLabel(navLinks[1], ui.nav_categories);
+          setNavLabel(navLinks[2], ui.nav_contact);
+          setNavLabel(navLinks[3], ui.nav_new);
+          setNavLabel(navLinks[4], ui.nav_plots);
+          setNavLabel(navLinks[5], ui.nav_build);
 
           navLinks[3].href = buildInternalUrl('/pl/new-developments/', currentLang);
           navLinks[4].href = buildInternalUrl('/pl/plots/', currentLang);
@@ -1090,8 +1102,8 @@
 
         const topContacts = document.querySelectorAll('.contact-inline-wrap .contact-inline');
         if (topContacts.length >= 2) {
-          topContacts[0].textContent = ui.call_now;
-          topContacts[1].textContent = ui.wa_now;
+          topContacts[0].innerHTML = `${ui.call_now}`;
+          topContacts[1].innerHTML = `${ui.wa_now}`;
         }
 
         setText('#benefits h2', ui.benefits_title);
@@ -1154,15 +1166,22 @@
 
         const contactBtns = document.querySelectorAll('#contact .cta-actions .btn');
         if (contactBtns.length >= 2) {
-          contactBtns[0].textContent = ui.call_cta;
-          contactBtns[1].textContent = ui.wa_cta;
+          contactBtns[0].innerHTML = ui.call_cta;
+          contactBtns[1].innerHTML = ui.wa_cta;
         }
 
         setText('.footer-copy', ui.footer_copy);
         setText('.footer-bottom', ui.footer_bottom);
 
         const footerLinks = document.querySelectorAll('.footer-links a');
-        if (footerLinks.length >= 3) {
+        if (footerLinks.length >= 6) {
+          footerLinks[0].textContent = ui.nav_new;
+          footerLinks[1].textContent = ui.nav_plots;
+          footerLinks[2].textContent = ui.nav_build;
+          footerLinks[3].textContent = ui.nav_categories;
+          footerLinks[4].textContent = currentLang === 'pl' ? 'Lokalizacje' : (currentLang === 'es' ? 'Ubicaciones' : (currentLang === 'en' ? 'Locations' : 'Локации'));
+          footerLinks[5].textContent = ui.nav_contact;
+
           footerLinks[0].href = buildInternalUrl('/pl/new-developments/', currentLang);
           footerLinks[1].href = buildInternalUrl('/pl/plots/', currentLang);
           footerLinks[2].href = buildInternalUrl('/pl/build-house/', currentLang);
