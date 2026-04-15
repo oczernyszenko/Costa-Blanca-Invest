@@ -61,14 +61,58 @@
     p { margin: 0 0 14px; color: var(--text-soft); }
     ul { margin: 0; padding-left: 20px; color: var(--text-soft); }
     .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 24px 20px 80px; }
-    .lang-bar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:16px}
-    .lang-bar a{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,.06);font-size:13px;font-weight:700;color:#183746;box-shadow:0 6px 16px rgba(0,0,0,.06)}
-    .lang-bar a.active{background:linear-gradient(135deg,#d9b56d,#b89245);color:#fff;border:none}
-    .back-link {
-      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; padding: 12px 18px;
-      border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid rgba(255,255,255,.5);
-      box-shadow: 0 14px 28px rgba(15,23,42,.08); color: var(--gold-dark); font-size: 15px; font-weight: 800;
+    .top-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: nowrap;
+      margin-bottom: 20px;
     }
+    .lang-switcher { display: flex; gap: 10px; align-items: center; justify-content: flex-end; margin: 0; }
+    .lang-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(217,181,109,.5);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, rgba(217,181,109,.6), rgba(184,146,69,.6));
+      color: #fff;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      transition: all .25s ease;
+    }
+    .lang-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 28px rgba(0,0,0,.14); }
+    .lang-btn.active {
+      background: #fff;
+      color: var(--gold-dark);
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+    .back-link {
+      position: sticky;
+      top: 14px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255,255,255,.30), rgba(255,255,255,.12));
+      border: 1px solid rgba(255,255,255,.36);
+      box-shadow: 0 14px 28px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.30);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: var(--gold-dark);
+      font-size: 15px;
+      font-weight: 800;
+      transition: all .25s ease;
+    }
+    .back-link:hover { transform: translateY(-2px); }
     .hero-card, .section-card, .cta-box {
       overflow: hidden; border-radius: var(--radius); background: var(--surface);
       border: 1px solid rgba(255,255,255,.4); box-shadow: 0 20px 50px rgba(15,23,42,.08);
@@ -165,15 +209,41 @@
     .agent-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; justify-self: end; }
     .agent-name { color: var(--primary); font-size: 24px; font-weight: 900; }
     .agent-role { color: var(--gold-dark); font-size: 15px; font-weight: 800; }
-    .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 18px 0; }
-    .btn {
+    .cta-actions, .share-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .cta-actions { margin: 18px 0; }
+    .btn, .share-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; min-height: 52px;
-      border-radius: 999px; font-weight: 700; font-size: 15px; border: 1px solid rgba(255,255,255,.34); color: #fff;
-      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1; position: relative; cursor: pointer;
+      border: 1px solid rgba(255,255,255,.34); color: #fff; text-align: center;
+      backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.28);
+      transition: all .25s ease;
+    }
+    .btn::before, .share-btn::before {
+      content: ""; position: absolute; inset: 1px; border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.06)); pointer-events: none;
+    }
+    .btn > *, .share-btn > * { position: relative; z-index: 1; }
+    .btn:hover, .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.34);
     }
     .btn-main { background: linear-gradient(135deg, rgba(24,55,70,.74), rgba(35,78,99,.60)); }
     .btn-wa { background: linear-gradient(135deg, rgba(37,211,102,.88), rgba(18,140,126,.78)); }
-    .share-note { margin-top: 16px; color: var(--muted); font-size: 13px; text-align: center; }
+    .btn-wa:hover { background: linear-gradient(135deg, rgba(43,224,112,.94), rgba(20,154,138,.84)); }
+    .share-btn {
+      background: linear-gradient(135deg, rgba(255,255,255,.86), rgba(255,255,255,.58));
+      color: var(--primary);
+      border: 1px solid rgba(255,255,255,.74);
+      box-shadow: 0 10px 24px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.74);
+    }
+    .share-btn:hover {
+      background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,255,255,.66));
+      color: var(--primary);
+    }
+    .share-block { max-width: 760px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid rgba(15,23,42,.08); }
+    .share-note { margin-top: 12px; color: var(--muted); font-size: 13px; text-align: center; }
+    .is-hidden { display: none !important; }
     @media (max-width: 980px) {
       .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .why-grid, .audience-grid, .kpi-row { grid-template-columns: 1fr; }
@@ -181,6 +251,18 @@
     }
     @media (max-width: 768px) {
       .container { padding: 18px 14px 50px; }
+      .section-card, .cta-box { padding: 24px; }
+      .top-controls { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 10px; }
+      .lang-switcher { gap: 8px; }
+      .hero-overlay { flex-direction: column; align-items: flex-start; }
+      .hero-price-box { width: 100%; max-width: 100%; min-width: 0; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .agent-card { grid-template-columns: 1fr; text-align: center; }
+      .agent-avatar { justify-self: center; }
+      .cta-actions, .share-actions { flex-direction: column; }
+      .btn, .share-btn { width: 100%; }
+      .back-link { position: static; width: 100%; }
+    }
       .section-card, .cta-box { padding: 24px; }
       .hero-overlay { flex-direction: column; align-items: flex-start; }
       .hero-price-box { width: 100%; max-width: 100%; min-width: 0; }
@@ -198,18 +280,20 @@
 </head>
 <body>
   <main class="container">
-    <div class="lang-bar">
-      <a href="/ru/plots/el-campello-amerador-3700k/" class="active">🇷🇺 RU</a>
-      <a href="/en/plots/el-campello-amerador-3700k/">🇬🇧 EN</a>
-      <a href="/es/plots/el-campello-amerador-3700k/">🇪🇸 ES</a>
-      <a href="/pl/plots/el-campello-amerador-3700k/">🇵🇱 PL</a>
-      <a href="/ua/plots/el-campello-amerador-3700k/">🇺🇦 UA</a>
+    <div class="top-controls">
+      <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/plots" translate="no">← <span id="backLinkLabel">Zobacz inne działki</span></a>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button class="lang-btn active" data-lang="pl">PL</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="uk">UA</button>
+      </div>
     </div>
-    <a class="back-link" href="https://costa-blanca-invest.com/ru/plots/">← Смотреть другие участки</a>
 
-    <section class="hero-card">
+    <section class="hero-card" id="photoSection">
       <div class="hero-media">
-        <img src="1.jpg" alt="Участок под строительство в El Campello (Amerador)">
+        <img id="heroImage" src="1.jpg" alt="Участок под строительство в El Campello (Amerador)" onerror="window.handleBrokenImage && window.handleBrokenImage(this)">
         <div class="hero-badge">ИНВЕСТИЦИОННЫЙ УЧАСТОК</div>
         <div class="hero-overlay">
           <div class="hero-copy">
@@ -229,11 +313,11 @@
         </div>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="2.jpg" alt="El Campello plot photo 2"></div>
-        <div class="gallery-item"><img src="3.jpg" alt="El Campello plot photo 3"></div>
-        <div class="gallery-item"><img src="4.jpg" alt="El Campello plot photo 4"></div>
-        <div class="gallery-item"><img src="5.jpg" alt="El Campello plot photo 5"></div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item"><img src="2.jpg" alt="El Campello plot photo 2" onerror="window.handleBrokenImage && window.handleBrokenImage(this)"></div>
+        <div class="gallery-item"><img src="3.jpg" alt="El Campello plot photo 3" onerror="window.handleBrokenImage && window.handleBrokenImage(this)"></div>
+        <div class="gallery-item"><img src="4.jpg" alt="El Campello plot photo 4" onerror="window.handleBrokenImage && window.handleBrokenImage(this)"></div>
+        <div class="gallery-item"><img src="5.jpg" alt="El Campello plot photo 5" onerror="window.handleBrokenImage && window.handleBrokenImage(this)"></div>
       </div>
 
       <h1 class="hero-title">ПРОДАЁТСЯ ЗЕМЕЛЬНЫЙ УЧАСТОК ПОД СТРОИТЕЛЬСТВО — EL CAMPELLO (AMERADOR)</h1>
@@ -323,12 +407,119 @@
 
       <div class="cta-actions">
         <a class="btn btn-main" href="tel:+34604158859">Позвонить</a>
-        <a class="btn btn-wa" href="https://wa.me/34604158859?text=Интересует%20участок%20в%20El%20Campello%20(Amerador)%20за%20€%203.700.000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-wa" id="waBtn" href="https://wa.me/34604158859?text=Интересует%20участок%20в%20El%20Campello%20(Amerador)%20за%20€%203.700.000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
 
-      <p class="share-note">Участок под строительство в El Campello (Amerador)<br><strong>€ 3.700.000 · 5.965 м² · до 30 домов</strong><br>Разрешённая застройка 3.575 м² · престижная прибрежная зона · Коста-Бланка</p>
+      <div class="share-block">
+        <div class="share-actions" role="group" aria-label="Share">
+          <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link">Копировать ссылку</button>
+          <button class="share-btn" type="button" id="nativeShareBtn" aria-label="Share">Поделиться</button>
+        </div>
+        <p class="share-note"><span id="shareNoteTitle">Участок под строительство в El Campello (Amerador)</span><br><strong id="shareNoteStrong">€ 3.700.000 · 5.965 м² · до 30 домов</strong><br><span id="shareNoteText">Разрешённая застройка 3.575 м² · престижная прибрежная зона · Коста-Бланка</span></p>
+      </div>
     </section>
   </main>
+
+  <script>
+    function categoryPath(lang){
+      const map = { pl:'pl', en:'en', es:'es', ru:'ru', uk:'ua' };
+      return `https://costa-blanca-invest.com/${map[lang] || 'pl'}/plots`;
+    }
+
+    const SUPPORTED_LANGS = ['pl','en','es','ru','uk'];
+    const UI_TRANSLATIONS = {
+      pl: { back_link: 'Zobacz inne działki' },
+      en: { back_link: 'View other plots' },
+      es: { back_link: 'Ver otras parcelas' },
+      ru: { back_link: 'Смотреть другие участки' },
+      uk: { back_link: 'Дивитися інші ділянки' }
+    };
+
+    window.handleBrokenImage = function(img) {
+      const galleryItem = img.closest('.gallery-item');
+      if (galleryItem) {
+        galleryItem.classList.add('is-hidden');
+        const grid = document.getElementById('galleryGrid');
+        if (grid) {
+          const visibleItems = Array.from(grid.querySelectorAll('.gallery-item')).filter((item) => !item.classList.contains('is-hidden'));
+          if (visibleItems.length === 0) grid.classList.add('is-hidden');
+        }
+        return;
+      }
+
+      if (img.id === 'heroImage') {
+        const photoSection = document.getElementById('photoSection');
+        if (photoSection) photoSection.classList.add('is-hidden');
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const galleryGrid = document.getElementById('galleryGrid');
+      const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
+      const backLink = document.getElementById('backLink');
+      const backLinkLabel = document.getElementById('backLinkLabel');
+      const copyLinkBtn = document.getElementById('copyLinkBtn');
+      const nativeShareBtn = document.getElementById('nativeShareBtn');
+      let currentLang = 'pl';
+
+      function listingUrl(lang = currentLang) {
+        const map = { pl:'pl', en:'en', es:'es', ru:'ru', uk:'ua' };
+        return `https://costa-blanca-invest.com/${map[lang] || 'pl'}/plots/el-campello-amerador-3700k/`;
+      }
+
+      function applyLanguage(lang) {
+        currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+        if (backLink) backLink.href = categoryPath(currentLang);
+        if (backLinkLabel) backLinkLabel.textContent = (UI_TRANSLATIONS[currentLang] || UI_TRANSLATIONS.pl).back_link;
+      }
+
+      langButtons.forEach((btn) => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang)));
+      applyLanguage('pl');
+
+      if (galleryGrid) {
+        const galleryImages = Array.from(galleryGrid.querySelectorAll('img'));
+        const workingImages = galleryImages.filter((img) => img.getAttribute('src'));
+        if (workingImages.length === 0) galleryGrid.classList.add('is-hidden');
+      }
+
+      if (copyLinkBtn) {
+        copyLinkBtn.addEventListener('click', async () => {
+          const shareUrl = listingUrl(currentLang);
+          const original = copyLinkBtn.textContent;
+          try {
+            await navigator.clipboard.writeText(shareUrl);
+            copyLinkBtn.textContent = '✔';
+            setTimeout(() => { copyLinkBtn.textContent = original; }, 1800);
+          } catch (error) {
+            window.prompt('Copy link:', shareUrl);
+          }
+        });
+      }
+
+      if (nativeShareBtn) {
+        nativeShareBtn.addEventListener('click', async () => {
+          const shareData = {
+            title: document.title,
+            text: `${document.getElementById('shareNoteTitle')?.textContent || ''} · ${document.getElementById('shareNoteStrong')?.textContent || ''}`,
+            url: listingUrl(currentLang)
+          };
+          if (navigator.share) {
+            try { await navigator.share(shareData); } catch (error) {}
+          } else {
+            try {
+              await navigator.clipboard.writeText(shareData.url);
+              const original = nativeShareBtn.textContent;
+              nativeShareBtn.textContent = '✔';
+              setTimeout(() => { nativeShareBtn.textContent = original; }, 1800);
+            } catch (error) {
+              window.prompt('Copy link:', shareData.url);
+            }
+          }
+        });
+      }
+    });
+  </script>
 
   <script type="application/ld+json">
   {
