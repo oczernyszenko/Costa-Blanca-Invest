@@ -50,9 +50,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="/pl/plots/plots-hero.png" fetchpriority="high">
 
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+
   <style>
     :root {
-      
       --primary:#c8742f;
       --primary-dark:#8f4e1f;
       --primary-pale:#fff6f0;
@@ -91,19 +94,11 @@
     }
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
-    h1,h2,h3{
-      margin:0 0 14px;
-      line-height:1.08;
-      text-wrap:balance;
-      font-weight:800;
-      letter-spacing:-0.02em;
-    }
+    h1,h2,h3{margin:0 0 14px;line-height:1.08;text-wrap:balance;font-weight:800;letter-spacing:-0.02em}
     h1{font-size:var(--h1-size)}
     h2{font-size:var(--h2-size)}
     h3{font-size:var(--h3-size)}
-    p{
-      hyphens:auto;
-      text-align:justify;margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;word-break:break-word}
+    p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
     .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
 
     .topbar{
@@ -112,7 +107,7 @@
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(255,255,255,.25);
-      transition:transform .4s ease, background .4s ease, backdrop-filter .4s ease, box-shadow .4s ease;
+      transition:transform .4s ease, background .4s ease, backdrop-filter .4s ease, box-shadow .4s ease, opacity .4s ease;
     }
     .topbar.scrolled{
       background:rgba(255,255,255,0.78);
@@ -120,7 +115,16 @@
       -webkit-backdrop-filter:blur(18px);
       box-shadow:0 6px 24px rgba(15,23,42,.08);
     }
-    .topbar.hide{transform:translateY(-100%);opacity:0;background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important;border-bottom-color:transparent;pointer-events:none}
+    .topbar.hide{
+      transform:translateY(-100%);
+      opacity:0;
+      background:transparent !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+      box-shadow:none !important;
+      border-bottom-color:transparent;
+      pointer-events:none;
+    }
     .topbar-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:82px}
     .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
@@ -147,7 +151,7 @@
     .hero-image{position:relative;min-height:100%;background:var(--primary-pale)}
     .hero-image img{width:100%;height:100%;min-height:100%;object-fit:cover}
 
-    .contact-inline-wrap,.cta-actions,.footer-links,.inline-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+    .contact-inline-wrap,.cta-actions,.footer-links,.inline-list,.share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
     .contact-inline-wrap{margin:12px 0 18px;gap:14px}
     .inline-list{margin-top:18px}
     .contact-inline,.btn,.sticky-btn,.submit-btn,.share-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background .25s ease;cursor:pointer}
@@ -155,28 +159,31 @@
     .contact-inline:last-child,.btn-light,.sticky-wa,.share-btn.share-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff}
     .share-btn.share-fb{background:linear-gradient(135deg,#1877f2,#0e5fd1);color:#fff}
     .contact-inline:hover,.btn:hover,.sticky-btn:hover,.submit-btn:hover,.share-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12)}
-    .share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:16px}
+    .share-actions{margin-top:16px}
     .share-title{margin:18px 0 0;color:var(--text-soft);font-size:14px;font-weight:700;text-align:center}
 
-    .benefits-grid,.plots-grid,.locations-grid,.faq-grid,.contact-form-grid{display:grid;gap:22px}
-    .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .plots-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;min-height:120px}
-    .contact-form-grid{grid-template-columns:1fr 1fr;gap:14px}
+    .benefits-grid,.plots-grid,.locations-grid,.faq-grid{
+      display:grid;
+      gap:22px;
+    }
+    .benefits-grid,.locations-grid,.faq-grid{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+    .plots-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:22px;
+      align-items:stretch;
+      min-height:120px;
+    }
+    .plots-grid > *{min-width:0}
+    .status-card{grid-column:1 / -1;min-height:160px}
+
     .benefit-item,.plot-card,.location-card,.faq-card{border-radius:var(--radius);border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:var(--shadow-soft);overflow:hidden}
-    .benefit-item,.location-card,.faq-card{
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(0,0,0,.04);
-      box-shadow:0 10px 30px rgba(0,0,0,.04);padding:28px;text-align:left}
-    /* выравнивание текста преимуществ и локаций по ширине */
-    .benefit-item p,
-    .location-card p{
-      text-align: justify;
-    }
+    .benefit-item,.location-card,.faq-card{padding:28px;text-align:left;background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.04);box-shadow:0 10px 30px rgba(0,0,0,.04)}
+    .benefit-item p,.location-card p,.faq-card p,.seo-full p{text-align:justify}
     .plot-card{display:flex;flex-direction:column;height:100%;min-height:320px;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
-    .plot-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 24px 60px rgba(15,23,42,.12);
-    }
+    .plot-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(15,23,42,.12)}
     .plot-card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#f4f4f4}
     .plot-card .card-body{padding:24px 22px;display:flex;flex-direction:column;gap:10px;height:100%;text-align:left}
     .plot-card h3,.benefit-item h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
@@ -187,20 +194,9 @@
 
     .section-card,.cta-box{margin-top:28px;padding:36px}
     .section-card h2,.cta-box h2,.seo-full h2{position:relative;padding-bottom:12px;font-size:var(--h2-size);margin-left:auto;margin-right:auto}
-    .section-card h2::after,.cta-box h2::after,.seo-full h2::after{
-      content:"";
-      position:absolute;
-      left:50%;
-      transform:translateX(-50%);
-      bottom:0;
-      width:70px;
-      height:3px;
-      border-radius:999px;
-      background:linear-gradient(90deg,var(--accent),transparent);
-    }
+    .section-card h2::after,.cta-box h2::after,.seo-full h2::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:70px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),transparent)}
     .inline-list span{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(200,116,47,.07);color:var(--primary-dark);font-weight:700;font-size:14px}
     .seo-full{margin:42px auto 0;max-width:1200px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
-    .seo-full p{max-width:none;margin-left:0;margin-right:0;text-align:justify;color:var(--text-soft)}
 
     .contact-box{margin-top:28px;padding:42px 32px 38px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(247,249,250,.98) 100%);border:1px solid rgba(15,23,42,.06);box-shadow:0 18px 48px rgba(15,23,42,.06)}
     .contact-title{font-size:clamp(34px,5vw,48px);margin-bottom:10px;color:var(--primary-dark);text-align:center;letter-spacing:-.03em}
@@ -222,38 +218,65 @@
 
     .sticky-contact{position:fixed;right:14px;bottom:14px;z-index:1200;display:none}
     .sticky-wa{min-width:132px;min-height:52px;padding:0 18px}
-    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
-    .fade-up.show{opacity:1;transform:translateY(0)}
 
-    @media (max-width:1200px){ .plots-grid{grid-template-columns:repeat(3,minmax(0,1fr))} }
+    .fade-up{
+      opacity:1;
+      transform:none;
+      transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);
+    }
+    .js .fade-up{
+      opacity:0;
+      transform:translateY(30px);
+    }
+    .js .fade-up.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
     @media (max-width:1100px){
       .hero-card{grid-template-columns:1fr;min-height:auto}
       .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
-      .plots-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .hero-image,.hero-image img{min-height:420px}
     }
+
     @media (max-width:768px){
       .topbar-inner{width:100%;grid-template-columns:1fr;gap:6px;padding:8px 0;min-height:auto;justify-items:center}
       .brand{justify-self:center;text-align:center;font-size:15px}
       .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;justify-content:stretch;align-items:stretch;overflow:visible;padding:0}
       .nav a{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 8px;text-align:center;font-size:13px;line-height:1.15;white-space:normal;border-radius:8px;background:rgba(255,255,255,.55)}
       .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px;flex-wrap:wrap;max-width:100%}
-      .hero-copy{padding:22px 20px;align-items:center;text-align:center;overflow:hidden}
+      .hero-copy{padding:22px 20px}
       .hero-copy h1{width:100%;max-width:100%;padding:0 12px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
       .center-text,.lead{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 20px;text-align:center !important;overflow-wrap:anywhere}
       .container{padding:0 14px}
       .page{padding:14px 0 56px}
       .section-card,.cta-box,.footer-card,.contact-box{padding:22px}
+      .hero-card{grid-template-columns:1fr}
+      .hero-image{order:-1}
       .hero-image,.hero-image img{min-height:300px}
-      .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
-      .plots-grid{grid-template-columns:1fr;gap:18px;min-height:220px}
+      .plots-grid,.benefits-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
+      .plots-grid{gap:16px;min-height:auto}
       .plot-card{min-height:unset}
       .plot-card .card-body{padding:20px 18px}
       .contact-inline-wrap,.cta-actions,.share-actions{flex-direction:column}
       .btn,.contact-inline,.share-btn{width:100%;min-height:52px}
       .sticky-contact{display:block;right:12px;bottom:12px}
+      .topbar.hide{
+        transform:none;
+        opacity:1;
+        pointer-events:auto;
+        background:rgba(255,255,255,.92) !important;
+        backdrop-filter:blur(14px) !important;
+        -webkit-backdrop-filter:blur(14px) !important;
+      }
+      .contact-links a{
+        font-size:15px;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+      }
       body{padding-bottom:74px}
     }
+
     @media (max-width:560px){
       .lang-switcher{gap:4px;padding:4px;min-height:44px;display:grid;grid-template-columns:repeat(4,36px);justify-content:center}
       .lang-btn{flex:0 0 36px;width:36px;height:36px;font-size:11px}
@@ -277,7 +300,9 @@
       .contact-links a{font-size:16px}
       .footer-links{flex-direction:column;align-items:center}
       .footer-bottom{font-size:11px}
+      .sticky-wa{min-width:auto;width:auto;padding:0 16px;font-size:14px}
     }
+
     @media (max-width:390px){
       .container{padding:0 8px}
       .nav{grid-template-columns:1fr 1fr}
@@ -436,6 +461,12 @@
     const JSON_URL = '/pl/plots/plots-index.json';
     const SUPPORTED_LANGS = ['pl','es','en','ru'];
     const SITE_ORIGIN = 'https://costa-blanca-invest.com';
+    const ROUTE_ALIASES = {
+      'villajoyosa-first-line-plot-3-2m': '/pl/plots/villajoyosa-sea-plot-3-2m/',
+      'alicante-residential-building-plot-470k': '/pl/plots/residential-building-plot-8-units-470k/',
+      'playa-san-juan-villa-plot-1260m': '/pl/plots/playa-san-juan-villa-plot-1-1m/'
+    };
+
     const UI = {
       pl: {
         html_lang: 'pl',
@@ -505,11 +536,12 @@
         contact_title: 'Отдел продаж', contact_intro: 'Свяжитесь с нами, чтобы получить участки под ваш бюджет, локацию и цель покупки.', contact_note: '💡 Отвечаю за 10–15 минут', contact_role: 'Специалист по инвестициям Costa Blanca', call_cta: '📞 Позвонить сейчас', wa_cta: '💬 Написать в WhatsApp', footer_copy: 'Партнёрство с Celebrity Real Estate — представленные объекты входят в портфель агентства.', footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко. Проект, концепция и реализация являются объектом авторской интеллектуальной собственности. Сервис функционирует в рамках стратегического сотрудничества с агентством недвижимости Celebrity Real Estate — представленные объекты и участки входят в партнёрский портфель и предлагаются в соответствии с агентской моделью сотрудничества.', share_title: 'Поделиться страницей', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Посмотрите этот объект: ', card_link: 'Смотреть участок →', loading_h: 'Загрузка объектов…', loading_p: 'Пожалуйста, подождите.', empty_h: 'Нет видимых объектов', empty_p: 'Проверьте plots-index.json или добавьте первый объект.'
       }
     };
+
     const PREVIEW_PLOTS = [
       {
-        slug: 'preview-1',
-        href: '/pl/plots/playa-san-juan-villa-plot-1260m/',
-        image: '/pl/plots/playa-san-juan-villa-plot-1260m/1.jpg',
+        slug: 'playa-san-juan-villa-plot-1-1m',
+        url_path: '/pl/plots/playa-san-juan-villa-plot-1-1m/',
+        image: '/pl/plots/playa-san-juan-villa-plot-1-1m/1.jpg',
         alt: 'Działka pod willę w Playa San Juan',
         chip: 'Villa Plot',
         title: 'Działka — Playa San Juan (1260 m²)',
@@ -523,8 +555,8 @@
         }
       },
       {
-        slug: 'preview-2',
-        href: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/',
+        slug: 'finestrat-plot-3-villas-sea-mountain-view',
+        url_path: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/',
         image: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg',
         alt: 'Działka w Finestrat z widokiem na morze i góry',
         chip: 'Sea View Plot',
@@ -535,7 +567,7 @@
         translations: {
           es: { chip: 'Sea View Plot', title: 'Parcela — Finestrat (3 villas)', meta: 'Finestrat · vistas al mar y montaña · 3 villas', desc: 'Parcela para construir 3 villas con vistas panorámicas al mar y a la montaña.', alt: 'Parcela en Finestrat con vistas al mar y la montaña' },
           en: { chip: 'Sea View Plot', title: 'Plot — Finestrat (3 villas)', meta: 'Finestrat · sea and mountain view · 3 villas', desc: 'Plot for building 3 villas with panoramic sea and mountain views.', alt: 'Plot in Finestrat with sea and mountain views' },
-          ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид на море и горы · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
+          ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид na morze i góry · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
         }
       }
     ];
@@ -633,6 +665,50 @@
       return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
     };
 
+    const slugifyPathSegment = (value) => String(value || '')
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/_/g, '-')
+      .replace(/[^a-z0-9\-\/]/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/\/+/g, '/')
+      .replace(/^-|-$/g, '');
+
+    const normalizePathname = (value) => {
+      if (!value) return '';
+      let path = String(value).trim();
+      if (!path.startsWith('/')) path = `/${path}`;
+      path = path.replace(/\/+/g, '/');
+      path = path.replace(/\?.*$/, '');
+      if (!path.endsWith('/')) path = `${path}/`;
+      return path;
+    };
+
+    const applyRouteAlias = (path) => {
+      const normalized = normalizePathname(path);
+      const aliasMap = {
+        '/pl/plots/villajoyosa-first-line-plot-3-2m/': '/pl/plots/villajoyosa-sea-plot-3-2m/',
+        '/pl/plots/alicante-residential-building-plot-470k/': '/pl/plots/residential-building-plot-8-units-470k/',
+        '/pl/plots/playa-san-juan-villa-plot-1260m/': '/pl/plots/playa-san-juan-villa-plot-1-1m/'
+      };
+      return aliasMap[normalized] || normalized;
+    };
+
+    const withLangParam = (urlLike, lang) => {
+      if (!urlLike || urlLike === '#') return '#';
+      if (/^https?:\/\//i.test(urlLike)) {
+        const url = new URL(urlLike);
+        if (lang !== 'pl') url.searchParams.set('lang', lang);
+        else url.searchParams.delete('lang');
+        return url.toString();
+      }
+      if (lang === 'pl') return urlLike;
+      return `${urlLike}?lang=${lang}`;
+    };
+
+    const buildInternalUrl = (path, lang = currentLang) => withLangParam(normalizePathname(path), lang);
+
     const updateUrlLang = (lang) => {
       const url = new URL(window.location.href);
       if (lang === 'pl') url.searchParams.delete('lang');
@@ -641,9 +717,8 @@
     };
 
     const getCurrentShareUrl = () => {
-      const url = new URL('/pl/plots/', SITE_ORIGIN);
-      if (currentLang !== 'pl') url.searchParams.set('lang', currentLang);
-      return url.toString();
+      const built = buildInternalUrl('/pl/plots/', currentLang);
+      return /^https?:\/\//i.test(built) ? built : new URL(built, SITE_ORIGIN).toString();
     };
 
     const updateShareMeta = async () => {
@@ -695,7 +770,9 @@
         const res = await fetch(JSON_URL, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        cachedPlots = Array.isArray(data) ? data.filter(p => p && p.href && p.title) : [];
+        cachedPlots = Array.isArray(data)
+          ? data.filter(p => p && (p.url_path || p.href || p.slug) && p.title)
+          : [];
       } catch (e) {
         console.warn('JSON unavailable, using preview fallback.', e);
         cachedPlots = PREVIEW_PLOTS;
@@ -706,13 +783,10 @@
 
     const localizePlot = (plot, lang) => {
       if (lang === 'pl') return plot;
-
       const fromJson = plot?.translations?.[lang] || null;
       const fromSlug = plot?.slug ? (PLOT_TRANSLATIONS[plot.slug]?.[lang] || null) : null;
       const translated = fromJson || fromSlug;
-
       if (!translated) return plot;
-
       return {
         ...plot,
         ...translated,
@@ -726,47 +800,41 @@
     };
 
     const normalizePlotHref = (plot, lang) => {
-  const rawHref = String(plot?.href || '').trim();
-  const slug = String(plot?.slug || '').trim();
+      const explicitPath = String(plot?.url_path || '').trim();
+      const rawHref = String(plot?.href || '').trim();
+      const rawSlug = String(plot?.slug || '').trim();
+      const normalizedSlug = slugifyPathSegment(rawSlug);
 
-  let baseHref = rawHref;
+      if (explicitPath) {
+        return withLangParam(applyRouteAlias(explicitPath), lang);
+      }
 
-  // если нет href — строим ЧИСТЫЙ URL под GitHub Pages
-  if (!baseHref && slug) {
-    baseHref = `/pl/plots/${slug}/`;
-  }
+      if (rawSlug && ROUTE_ALIASES[rawSlug]) {
+        return withLangParam(normalizePathname(ROUTE_ALIASES[rawSlug]), lang);
+      }
 
-  if (!baseHref) return '#';
+      if (rawHref) {
+        if (/^https?:\/\//i.test(rawHref)) return withLangParam(rawHref, lang);
+        return withLangParam(applyRouteAlias(rawHref), lang);
+      }
 
-  // нормализуем относительный путь
-  if (!/^https?:\/\//i.test(baseHref) && !baseHref.startsWith('/')) {
-    baseHref = `/${baseHref}`;
-  }
+      if (normalizedSlug) {
+        return withLangParam(applyRouteAlias(`/pl/plots/${normalizedSlug}/`), lang);
+      }
 
-  // ❗ ВАЖНО: НЕ добавляем index.html — GitHub Pages сам открывает его
-
-  // абсолютные ссылки
-  if (/^https?:\/\//i.test(baseHref)) {
-    const url = new URL(baseHref);
-    if (lang !== 'pl') url.searchParams.set('lang', lang);
-    else url.searchParams.delete('lang');
-    return url.toString();
-  }
-
-  // локальные ссылки
-  if (lang === 'pl') return baseHref;
-
-  return `${baseHref}?lang=${lang}`;
-};
+      return '#';
+    };
 
     const makeCardHtml = (plot) => {
       const ui = UI[currentLang] || UI.pl;
       const localizedPlot = localizePlot(plot, currentLang);
-      const image = localizedPlot.image || (localizedPlot.href ? localizedPlot.href.replace(/\/$/, '') + '/1.jpg' : fallbackImage);
-      const link = normalizePlotHref(localizedPlot, currentLang);
+      const cardLink = normalizePlotHref(localizedPlot, currentLang);
+      const imageBaseForFallback = normalizePlotHref(localizedPlot, 'pl').replace(/\?.*$/, '').replace(/\/$/, '');
+      const image = localizedPlot.image || `${imageBaseForFallback}/1.jpg`;
+
       return `
-        <a href="${escapeHtml(link)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
-          <img src="${escapeHtml(image)}" alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}'">
+        <a href="${escapeHtml(cardLink)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
+          <img src="${escapeHtml(image)}" alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHtml(fallbackImage)}'">
           <div class="card-body">
             ${localizedPlot.chip ? `<div class="chip">${escapeHtml(localizedPlot.chip)}</div>` : ''}
             <h3>${escapeHtml(localizedPlot.title || '')}</h3>
@@ -782,125 +850,193 @@
     const renderPlots = async () => {
       const grid = document.getElementById('plotsGrid');
       if (!grid) return;
+
       const ui = UI[currentLang] || UI.pl;
 
-      grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(ui.loading_h)}</h3><p>${escapeHtml(ui.loading_p)}</p></div></div>`;
+      grid.innerHTML = `
+        <article class="plot-card status-card">
+          <div class="card-body">
+            <h3>${escapeHtml(ui.loading_h)}</h3>
+            <p>${escapeHtml(ui.loading_p)}</p>
+          </div>
+        </article>
+      `;
 
-      const plots = await getPlots();
-      if (!plots.length) {
-        grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(ui.empty_h)}</h3><p>${escapeHtml(ui.empty_p)}</p></div></div>`;
-        return;
+      try {
+        const plots = await getPlots();
+
+        if (!Array.isArray(plots) || !plots.length) {
+          grid.innerHTML = `
+            <article class="plot-card status-card">
+              <div class="card-body">
+                <h3>${escapeHtml(ui.empty_h)}</h3>
+                <p>${escapeHtml(ui.empty_p)}</p>
+              </div>
+            </article>
+          `;
+          return;
+        }
+
+        grid.innerHTML = plots.map(makeCardHtml).join('');
+      } catch (error) {
+        console.error('renderPlots error:', error);
+        grid.innerHTML = `
+          <article class="plot-card status-card">
+            <div class="card-body">
+              <h3>Błąd ładowania</h3>
+              <p>Nie udało się załadować ofert. Sprawdź plots-index.json i ścieżki do stron.</p>
+            </div>
+          </article>
+        `;
       }
+    };
 
-      grid.innerHTML = plots.map(makeCardHtml).join('');
+    const setText = (selector, value) => {
+      const el = document.querySelector(selector);
+      if (el) el.textContent = value;
     };
 
     const applyLanguage = async (lang) => {
-      currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-      const ui = UI[currentLang] || UI.pl;
+      try {
+        currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        const ui = UI[currentLang] || UI.pl;
 
-      document.documentElement.lang = ui.html_lang;
-      document.title = ui.title;
-      const desc = document.querySelector('meta[name="description"]');
-      if (desc) desc.setAttribute('content', ui.description);
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', ui.title);
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', ui.description);
-      const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', ui.title);
-      const twDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twDesc) twDesc.setAttribute('content', ui.description);
+        document.documentElement.lang = ui.html_lang;
+        document.title = ui.title;
 
-      const navLinks = document.querySelectorAll('.nav a');
-      if (navLinks.length >= 6) {
-        navLinks[0].textContent = ui.nav_home;
-        navLinks[1].textContent = ui.nav_categories;
-        navLinks[2].textContent = ui.nav_contact;
-        navLinks[3].textContent = ui.nav_new;
-        navLinks[4].textContent = ui.nav_plots;
-        navLinks[5].textContent = ui.nav_build;
-      }
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute('content', ui.description);
 
-      const breadcrumbs = document.querySelectorAll('.breadcrumbs a, .breadcrumbs span');
-      if (breadcrumbs.length >= 3) {
-        breadcrumbs[0].textContent = ui.breadcrumb_home;
-        breadcrumbs[2].textContent = ui.breadcrumb_current;
-      }
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', ui.title);
 
-      document.querySelector('.eyebrow').textContent = ui.eyebrow;
-      document.querySelector('.hero-copy h1').textContent = ui.hero_title;
-      document.querySelector('.hero-copy .lead').textContent = ui.hero_lead;
-      const topContacts = document.querySelectorAll('.contact-inline-wrap .contact-inline');
-      if (topContacts.length >= 2) {
-        topContacts[0].textContent = ui.call_now;
-        topContacts[1].textContent = ui.wa_now;
-      }
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', ui.description);
 
-      const benefitTitle = document.querySelector('#benefits h2');
-      if (benefitTitle) benefitTitle.textContent = ui.benefits_title;
-      const benefitCards = document.querySelectorAll('#benefits .benefit-item');
-      if (benefitCards.length >= 3) {
-        benefitCards[0].querySelector('h3').textContent = ui.b1t; benefitCards[0].querySelector('p').textContent = ui.b1d;
-        benefitCards[1].querySelector('h3').textContent = ui.b2t; benefitCards[1].querySelector('p').textContent = ui.b2d;
-        benefitCards[2].querySelector('h3').textContent = ui.b3t; benefitCards[2].querySelector('p').textContent = ui.b3d;
-      }
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', ui.title);
 
-      document.querySelector('#plots-list h2').textContent = ui.plots_title;
-      document.querySelector('#plots-list .center-text').textContent = ui.plots_intro;
-      document.querySelector('#locations h2').textContent = ui.locations_title;
-      document.querySelector('#locations .center-text').textContent = ui.locations_intro;
-      const locs = document.querySelectorAll('#locations .location-card');
-      if (locs.length >= 3) {
-        locs[0].querySelector('h3').textContent = ui.loc1t; locs[0].querySelector('p').textContent = ui.loc1d;
-        locs[1].querySelector('h3').textContent = ui.loc2t; locs[1].querySelector('p').textContent = ui.loc2d;
-        locs[2].querySelector('h3').textContent = ui.loc3t; locs[2].querySelector('p').textContent = ui.loc3d;
-      }
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', ui.description);
 
-      document.querySelector('#faq h2').textContent = ui.faq_title;
-      const faqs = document.querySelectorAll('#faq .faq-card');
-      if (faqs.length >= 3) {
-        faqs[0].querySelector('h3').textContent = ui.f1t; faqs[0].querySelector('p').textContent = ui.f1d;
-        faqs[1].querySelector('h3').textContent = ui.f2t; faqs[1].querySelector('p').textContent = ui.f2d;
-        faqs[2].querySelector('h3').textContent = ui.f3t; faqs[2].querySelector('p').textContent = ui.f3d;
-      }
+        const navLinks = document.querySelectorAll('.nav a');
+        if (navLinks.length >= 6) {
+          navLinks[0].textContent = ui.nav_home;
+          navLinks[1].textContent = ui.nav_categories;
+          navLinks[2].textContent = ui.nav_contact;
+          navLinks[3].textContent = ui.nav_new;
+          navLinks[4].textContent = ui.nav_plots;
+          navLinks[5].textContent = ui.nav_build;
 
-      const seo = document.querySelector('#seo-content');
-      if (seo) {
-        const h2 = seo.querySelector('h2');
-        const h3s = seo.querySelectorAll('h3');
-        const ps = seo.querySelectorAll('p');
-        if (h2) h2.textContent = ui.seo_h2;
-        if (h3s.length >= 4 && ps.length >= 4) {
-          h3s[0].textContent = ui.seo_h3_1; ps[0].textContent = ui.seo_p1;
-          h3s[1].textContent = ui.seo_h3_2; ps[1].textContent = ui.seo_p2;
-          h3s[2].textContent = ui.seo_h3_3; ps[2].textContent = ui.seo_p3;
-          h3s[3].textContent = ui.seo_h3_4; ps[3].textContent = ui.seo_p4;
+          navLinks[3].href = buildInternalUrl('/pl/new-developments/', currentLang);
+          navLinks[4].href = buildInternalUrl('/pl/plots/', currentLang);
+          navLinks[5].href = buildInternalUrl('/pl/build-house/', currentLang);
         }
+
+        const breadcrumbs = document.querySelectorAll('.breadcrumbs a, .breadcrumbs span');
+        if (breadcrumbs.length >= 3) {
+          breadcrumbs[0].textContent = ui.breadcrumb_home;
+          breadcrumbs[2].textContent = ui.breadcrumb_current;
+        }
+
+        setText('.eyebrow', ui.eyebrow);
+        setText('.hero-copy h1', ui.hero_title);
+        setText('.hero-copy .lead', ui.hero_lead);
+
+        const topContacts = document.querySelectorAll('.contact-inline-wrap .contact-inline');
+        if (topContacts.length >= 2) {
+          topContacts[0].textContent = ui.call_now;
+          topContacts[1].textContent = ui.wa_now;
+        }
+
+        setText('#benefits h2', ui.benefits_title);
+        setText('#plots-list h2', ui.plots_title);
+        setText('#plots-list .center-text', ui.plots_intro);
+        setText('#locations h2', ui.locations_title);
+        setText('#locations .center-text', ui.locations_intro);
+        setText('#faq h2', ui.faq_title);
+
+        const benefitCards = document.querySelectorAll('#benefits .benefit-item');
+        if (benefitCards.length >= 3) {
+          benefitCards[0].querySelector('h3').textContent = ui.b1t;
+          benefitCards[0].querySelector('p').textContent = ui.b1d;
+          benefitCards[1].querySelector('h3').textContent = ui.b2t;
+          benefitCards[1].querySelector('p').textContent = ui.b2d;
+          benefitCards[2].querySelector('h3').textContent = ui.b3t;
+          benefitCards[2].querySelector('p').textContent = ui.b3d;
+        }
+
+        const locs = document.querySelectorAll('#locations .location-card');
+        if (locs.length >= 3) {
+          locs[0].querySelector('h3').textContent = ui.loc1t;
+          locs[0].querySelector('p').textContent = ui.loc1d;
+          locs[1].querySelector('h3').textContent = ui.loc2t;
+          locs[1].querySelector('p').textContent = ui.loc2d;
+          locs[2].querySelector('h3').textContent = ui.loc3t;
+          locs[2].querySelector('p').textContent = ui.loc3d;
+        }
+
+        const faqs = document.querySelectorAll('#faq .faq-card');
+        if (faqs.length >= 3) {
+          faqs[0].querySelector('h3').textContent = ui.f1t;
+          faqs[0].querySelector('p').textContent = ui.f1d;
+          faqs[1].querySelector('h3').textContent = ui.f2t;
+          faqs[1].querySelector('p').textContent = ui.f2d;
+          faqs[2].querySelector('h3').textContent = ui.f3t;
+          faqs[2].querySelector('p').textContent = ui.f3d;
+        }
+
+        const seo = document.querySelector('#seo-content');
+        if (seo) {
+          const h2 = seo.querySelector('h2');
+          const h3s = seo.querySelectorAll('h3');
+          const ps = seo.querySelectorAll('p');
+
+          if (h2) h2.textContent = ui.seo_h2;
+
+          if (h3s.length >= 4 && ps.length >= 4) {
+            h3s[0].textContent = ui.seo_h3_1; ps[0].textContent = ui.seo_p1;
+            h3s[1].textContent = ui.seo_h3_2; ps[1].textContent = ui.seo_p2;
+            h3s[2].textContent = ui.seo_h3_3; ps[2].textContent = ui.seo_p3;
+            h3s[3].textContent = ui.seo_h3_4; ps[3].textContent = ui.seo_p4;
+          }
+        }
+
+        setText('.contact-title', ui.contact_title);
+        setText('#contact .center-text', ui.contact_intro);
+        setText('.contact-note', ui.contact_note);
+        setText('.contact-avatar-role', ui.contact_role);
+
+        const contactBtns = document.querySelectorAll('#contact .cta-actions .btn');
+        if (contactBtns.length >= 2) {
+          contactBtns[0].textContent = ui.call_cta;
+          contactBtns[1].textContent = ui.wa_cta;
+        }
+
+        setText('.footer-copy', ui.footer_copy);
+        setText('.footer-bottom', ui.footer_bottom);
+
+        const footerLinks = document.querySelectorAll('.footer-links a');
+        if (footerLinks.length >= 3) {
+          footerLinks[0].href = buildInternalUrl('/pl/new-developments/', currentLang);
+          footerLinks[1].href = buildInternalUrl('/pl/plots/', currentLang);
+          footerLinks[2].href = buildInternalUrl('/pl/build-house/', currentLang);
+        }
+
+        document.querySelectorAll('.lang-btn').forEach((btn, index) => {
+          const langs = ['pl','es','en','ru'];
+          const isActive = langs[index] === currentLang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', String(isActive));
+        });
+
+        updateUrlLang(currentLang);
+        await renderPlots();
+        await updateShareMeta();
+      } catch (error) {
+        console.error('applyLanguage error:', error);
+        await renderPlots();
       }
-
-      document.querySelector('.contact-title').textContent = ui.contact_title;
-      document.querySelector('#contact .center-text').textContent = ui.contact_intro;
-      document.querySelector('.contact-note').textContent = ui.contact_note;
-      document.querySelector('.contact-avatar-role').textContent = ui.contact_role;
-      const contactBtns = document.querySelectorAll('#contact .cta-actions .btn');
-      if (contactBtns.length >= 2) {
-        contactBtns[0].textContent = ui.call_cta;
-        contactBtns[1].textContent = ui.wa_cta;
-      }
-      document.querySelector('.footer-copy').textContent = ui.footer_copy;
-      document.querySelector('.footer-bottom').textContent = ui.footer_bottom;
-
-      document.querySelectorAll('.lang-btn').forEach((btn, index) => {
-        const langs = ['pl','es','en','ru'];
-        const isActive = langs[index] === currentLang;
-        btn.classList.toggle('active', isActive);
-        btn.setAttribute('aria-pressed', String(isActive));
-      });
-
-      updateUrlLang(currentLang);
-      await renderPlots();
-      await updateShareMeta();
     };
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -940,7 +1076,7 @@
           if (current > 40) header.classList.add('scrolled');
           else header.classList.remove('scrolled');
         }
-        if (Math.abs(delta) >= 4) {
+        if (window.innerWidth > 768 && Math.abs(delta) >= 4) {
           if (delta > 0) {
             down += delta; up = 0;
             if (current > 120 && down > 24 && header) header.classList.add('hide');
@@ -948,6 +1084,9 @@
             up += Math.abs(delta); down = 0;
             if ((up > 42 || current < 40) && header) header.classList.remove('hide');
           }
+          lastScroll = current;
+        } else {
+          if (header) header.classList.remove('hide');
           lastScroll = current;
         }
         ticking = false;
