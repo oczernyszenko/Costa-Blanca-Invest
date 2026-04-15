@@ -111,8 +111,8 @@
     }
     .topbar.scrolled{
       background:rgba(255,255,255,0.78);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
+      backdrop-filter:blur(18px) saturate(1.12);
+      -webkit-backdrop-filter:blur(18px) saturate(1.12);
       box-shadow:0 6px 24px rgba(15,23,42,.08);
     }
     .topbar.hide{
@@ -129,14 +129,22 @@
     .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
     .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
-    .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease}
+    .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease, transform .22s ease, box-shadow .22s ease}
+    .nav-icon{display:none;flex:0 0 auto;font-size:14px;line-height:1;opacity:.92}
     .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
+    .nav a:hover{transform:translateY(-1px)}
     .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 
-    .lang-switcher{display:flex;gap:4px;align-items:center;justify-content:flex-end;flex-wrap:nowrap;margin:0;padding:6px;background:#fff;border:1px solid rgba(143,78,31,.10);border-radius:999px;box-shadow:0 8px 20px rgba(15,23,42,.10)}
-    .lang-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:none;padding:0;margin:0;font-size:12px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#e5c07b,#c79a3a);box-shadow:0 6px 14px rgba(199,154,58,.35);transition:transform .25s ease, box-shadow .25s ease, background .25s ease;text-transform:uppercase}
-    .lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 8px 20px rgba(200,116,47,.35);transform:scale(1.05)}
+    .lang-switcher{position:relative;display:flex;gap:4px;align-items:center;justify-content:flex-end;flex-wrap:nowrap;margin:0;padding:6px;background:#fff;border:1px solid rgba(143,78,31,.10);border-radius:999px;box-shadow:0 8px 20px rgba(15,23,42,.10);isolation:isolate;overflow:hidden}
+    .lang-switcher::before{content:"";position:absolute;inset:0;background:#fff;border-radius:inherit;z-index:0;pointer-events:none}
+    .lang-btn{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:none;padding:0;margin:0;font-size:12px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#e5c07b,#c79a3a);box-shadow:0 6px 14px rgba(199,154,58,.35);transition:transform .25s ease, box-shadow .25s ease, background .25s ease, filter .25s ease;text-transform:uppercase;overflow:hidden}
+    .lang-btn::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.04));opacity:.82;pointer-events:none}
+    .lang-btn::after{content:"";position:absolute;top:-140%;left:-28%;width:55%;height:320%;transform:rotate(24deg);background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0;pointer-events:none;transition:opacity .25s ease,transform .55s ease}
+    .lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 8px 20px rgba(200,116,47,.35),0 0 22px rgba(200,116,47,.18);transform:scale(1.05)}
+    .lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 22px rgba(199,154,58,.45),0 0 20px rgba(199,154,58,.18);filter:saturate(1.04)}
+    .lang-btn:hover::after{opacity:1;transform:translateX(150%) rotate(24deg)}
+    .lang-btn:active{transform:scale(.95)}
 
     .page{padding:22px 0 84px}
     .breadcrumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:0 0 18px;color:var(--muted);font-size:var(--small-size);font-weight:700}
@@ -257,21 +265,25 @@
     }
 
     @media (max-width:768px){
+      .nav a span:last-child{display:block}
+      .nav-icon{display:inline-flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:3px}
+      .nav a{flex-direction:column;gap:4px}
+
       .topbar{
         position:sticky;
         top:0;
         bottom:auto;
         width:100%;
-        background:rgba(255,255,255,.14);
-        backdrop-filter:blur(10px);
-        -webkit-backdrop-filter:blur(10px);
+        background:rgba(255,255,255,.16);
+        backdrop-filter:blur(14px) saturate(1.14);
+        -webkit-backdrop-filter:blur(14px) saturate(1.14);
         border-bottom:1px solid rgba(255,255,255,.25);
       }
       .topbar.scrolled{
-        background:rgba(255,255,255,.78);
-        backdrop-filter:blur(18px);
-        -webkit-backdrop-filter:blur(18px);
-        box-shadow:0 6px 24px rgba(15,23,42,.08);
+        background:rgba(255,255,255,.82);
+        backdrop-filter:blur(22px) saturate(1.18);
+        -webkit-backdrop-filter:blur(22px) saturate(1.18);
+        box-shadow:0 10px 30px rgba(15,23,42,.10);
       }
       .topbar.hide{
         transform:translateY(-100%);
@@ -453,12 +465,12 @@
     <div class="container topbar-inner">
       <a href="https://costa-blanca-invest.com/" class="brand" aria-label="Costa Blanca Invest — strona główna">Costa Blanca Invest</a>
       <nav class="nav" aria-label="Główna nawigacja">
-        <a href="https://costa-blanca-invest.com/">Strona główna</a>
-        <a href="https://costa-blanca-invest.com/#directions">Kategorie</a>
-        <a href="#contact">Kontakt</a>
-        <a href="/pl/new-developments/">Nowe inwestycje</a>
-        <a href="/pl/plots/" aria-current="page">Działki</a>
-        <a href="/pl/build-house/">Budowa domu</a>
+        <a href="https://costa-blanca-invest.com/"><span class="nav-icon">⌂</span><span>Strona główna</span></a>
+        <a href="https://costa-blanca-invest.com/#directions"><span class="nav-icon">◫</span><span>Kategorie</span></a>
+        <a href="#contact"><span class="nav-icon">✉</span><span>Kontakt</span></a>
+        <a href="/pl/new-developments/"><span class="nav-icon">✦</span><span>Nowe inwestycje</span></a>
+        <a href="/pl/plots/" aria-current="page"><span class="nav-icon">▣</span><span>Działki</span></a>
+        <a href="/pl/build-house/"><span class="nav-icon">⌘</span><span>Budowa domu</span></a>
       </nav>
       <div class="lang-switcher notranslate" translate="no" aria-label="Language switcher">
         <button class="lang-btn active" type="button" aria-label="Polski">PL</button>
