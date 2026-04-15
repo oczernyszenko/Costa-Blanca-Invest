@@ -52,6 +52,7 @@
 
   <style>
     :root {
+      
       --primary:#c8742f;
       --primary-dark:#8f4e1f;
       --primary-pale:#fff6f0;
@@ -90,11 +91,19 @@
     }
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
-    h1,h2,h3{margin:0 0 14px;line-height:1.08;text-wrap:balance}
+    h1,h2,h3{
+      margin:0 0 14px;
+      line-height:1.08;
+      text-wrap:balance;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
     h1{font-size:var(--h1-size)}
     h2{font-size:var(--h2-size)}
     h3{font-size:var(--h3-size)}
-    p{margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;word-break:break-word}
+    p{
+      hyphens:auto;
+      text-align:justify;margin:0 0 14px;color:var(--text-soft);overflow-wrap:anywhere;word-break:break-word}
     .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
 
     .topbar{
@@ -154,9 +163,20 @@
     .plots-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;min-height:120px}
     .contact-form-grid{grid-template-columns:1fr 1fr;gap:14px}
     .benefit-item,.plot-card,.location-card,.faq-card{border-radius:var(--radius);border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:var(--shadow-soft);overflow:hidden}
-    .benefit-item,.location-card,.faq-card{padding:28px;text-align:left}
+    .benefit-item,.location-card,.faq-card{
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(0,0,0,.04);
+      box-shadow:0 10px 30px rgba(0,0,0,.04);padding:28px;text-align:left}
+    /* выравнивание текста преимуществ и локаций по ширине */
+    .benefit-item p,
+    .location-card p{
+      text-align: justify;
+    }
     .plot-card{display:flex;flex-direction:column;height:100%;min-height:320px;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
-    .plot-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 34px 80px rgba(15,23,42,.16)}
+    .plot-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 24px 60px rgba(15,23,42,.12);
+    }
     .plot-card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#f4f4f4}
     .plot-card .card-body{padding:24px 22px;display:flex;flex-direction:column;gap:10px;height:100%;text-align:left}
     .plot-card h3,.benefit-item h3,.location-card h3,.faq-card h3{margin:0 0 10px;font-size:22px;color:var(--primary-dark);letter-spacing:-.02em}
@@ -167,7 +187,17 @@
 
     .section-card,.cta-box{margin-top:28px;padding:36px}
     .section-card h2,.cta-box h2,.seo-full h2{position:relative;padding-bottom:12px;font-size:var(--h2-size);margin-left:auto;margin-right:auto}
-    .section-card h2::after,.cta-box h2::after,.seo-full h2::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:70px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),transparent)}
+    .section-card h2::after,.cta-box h2::after,.seo-full h2::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:0;
+      width:70px;
+      height:3px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--accent),transparent);
+    }
     .inline-list span{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(200,116,47,.07);color:var(--primary-dark);font-weight:700;font-size:14px}
     .seo-full{margin:42px auto 0;max-width:1200px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
     .seo-full p{max-width:none;margin-left:0;margin-right:0;text-align:justify;color:var(--text-soft)}
@@ -383,7 +413,7 @@
     <div class="container">
       <div class="footer-card">
         <div class="footer-brand">Costa Blanca Invest</div>
-        <p class="footer-copy">Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów.</p>
+        <p class="footer-copy">Partnerstwo z Celebrity Real Estate — prezentowane nieruchomości wchodzą w skład portfolio agencji.</p>
         <div class="footer-links">
           <a href="/pl/new-developments/">Nowe inwestycje</a>
           <a href="/pl/plots/">Działki</a>
@@ -392,7 +422,7 @@
           <a href="#locations">Lokalizacje</a>
           <a href="#contact">Kontakt</a>
         </div>
-        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko.</div>
+        <div class="footer-bottom">© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Projekt, koncepcja oraz realizacja stanowią autorską własność intelektualną. Serwis funkcjonuje w ramach strategicznej współpracy z agencją nieruchomości Celebrity Real Estate — prezentowane nieruchomości i działki stanowią część portfolio partnerskiego i oferowane są zgodnie z modelem współpracy agencyjnej.</div>
       </div>
     </div>
   </footer>
@@ -439,8 +469,7 @@
         seo_h3_4: 'Działki budowlane Hiszpania i grunt inwestycyjny', seo_p4: 'Oferujemy zarówno działki pod zabudowę prywatną, jak i większe grunty inwestycyjne pod projekty deweloperskie i urbanizacje.',
         contact_title: 'Dział sprzedaży', contact_intro: 'Skontaktuj się, aby otrzymać działki dopasowane do budżetu, lokalizacji i celu zakupu — pod dom prywatny lub inwestycję.', contact_note: '💡 Odpowiadam w 10–15 minut',
         contact_role: 'Specjalista ds. inwestycji Costa Blanca', call_cta: '📞 Zadzwoń teraz', wa_cta: '💬 Napisz na WhatsApp',
-        footer_copy: 'Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów.',
-        footer_bottom: '© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko.', share_title: 'Udostępnij stronę', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Zobacz ofertę: ', card_link: 'Zobacz działkę →', loading_h: 'Ładowanie ofert…', loading_p: 'Proszę czekać.', empty_h: 'Brak widocznych obiektów', empty_p: 'Sprawdź plik plots-index.json lub dodaj pierwszy obiekt.'
+        footer_copy: 'Partnerstwo z Celebrity Real Estate — prezentowane nieruchomości wchodzą w skład portfolio agencji.', footer_bottom: '© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Projekt, koncepcja oraz realizacja stanowią autorską własność intelektualną. Serwis funkcjonuje w ramach strategicznej współpracy z agencją nieruchomości Celebrity Real Estate — prezentowane nieruchomości i działki stanowią część portfolio partnerskiego i oferowane są zgodnie z modelem współpracy agencyjnej.', share_title: 'Udostępnij stronę', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Zobacz ofertę: ', card_link: 'Zobacz działkę →', loading_h: 'Ładowanie ofert…', loading_p: 'Proszę czekać.', empty_h: 'Brak widocznych obiektów', empty_p: 'Sprawdź plik plots-index.json lub dodaj pierwszy obiekt.'
       },
       es: {
         html_lang: 'es', title: 'Parcelas Costa Blanca | Parcelas urbanizables y suelo de inversión en España', description: 'Parcelas Costa Blanca y suelo de inversión en España.',
@@ -451,7 +480,7 @@
         loc1t: 'Finestrat', loc1d: 'Ubicación prestigiosa con vistas y cercanía a Benidorm.', loc2t: 'San Juan y Alicante', loc2d: 'Zonas potentes para vivienda privada o second home.', loc3t: 'El Campello y alrededores', loc3d: 'Áreas atractivas para quienes buscan más privacidad y tranquilidad.',
         faq_title: 'FAQ — parcelas en Costa Blanca', f1t: '¿Vale la pena comprar una parcela?', f1d: 'Sí, un suelo bien ubicado puede ofrecer flexibilidad y revalorización.', f2t: '¿Qué hay que revisar?', f2d: 'Estado urbanístico, suministros, acceso y limitaciones de construcción.', f3t: '¿Ayudáis con la construcción?', f3d: 'Sí, podemos acompañar desde la selección hasta la construcción.',
         seo_h2: 'Parcelas Costa Blanca — cómo comprar suelo con seguridad en España', seo_h3_1: 'Mercado de parcelas en Costa Blanca', seo_p1: 'Las parcelas en Costa Blanca interesan cada vez más a compradores privados e inversores.', seo_h3_2: 'Parcela Alicante España — qué revisar', seo_p2: 'La compra de suelo en España requiere análisis técnico y urbanístico.', seo_h3_3: 'Por qué la verificación es clave', seo_p3: 'Analizamos cada parcela de forma integral.', seo_h3_4: 'Parcelas urbanizables y suelo de inversión', seo_p4: 'Ofrecemos parcelas para uso privado y grandes suelos para promotores.',
-        contact_title: 'Departamento comercial', contact_intro: 'Contacta para recibir parcelas adaptadas a tu presupuesto, ubicación y objetivo.', contact_note: '💡 Respondo en 10–15 minutos', contact_role: 'Especialista en inversión Costa Blanca', call_cta: '📞 Llamar ahora', wa_cta: '💬 Escribir por WhatsApp', footer_copy: 'Costa Blanca Invest es un proyecto de inversión en el mercado inmobiliario español.', footer_bottom: '© 2026 | Sitio creado personalmente por Olga Chernyshenko.', share_title: 'Compartir página', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Mira esta oferta: ', card_link: 'Ver parcela →', loading_h: 'Cargando ofertas…', loading_p: 'Por favor espera.', empty_h: 'No hay propiedades visibles', empty_p: 'Revisa plots-index.json o añade la primera propiedad.'
+        contact_title: 'Departamento comercial', contact_intro: 'Contacta para recibir parcelas adaptadas a tu presupuesto, ubicación y objetivo.', contact_note: '💡 Respondo en 10–15 minutos', contact_role: 'Especialista en inversión Costa Blanca', call_cta: '📞 Llamar ahora', wa_cta: '💬 Escribir por WhatsApp', footer_copy: 'Asociación con Celebrity Real Estate — las propiedades presentadas forman parte del portfolio de la agencia.', footer_bottom: '© 2026 | Sitio creado personalmente por Olga Chernyshenko. El proyecto, concepto y ejecución constituyen propiedad intelectual de autor. El sitio funciona en el marco de una colaboración estratégica con la agencia inmobiliaria Celebrity Real Estate; las propiedades y parcelas presentadas forman parte del portfolio asociado y se ofrecen conforme al modelo de cooperación de agencia.', share_title: 'Compartir página', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Mira esta oferta: ', card_link: 'Ver parcela →', loading_h: 'Cargando ofertas…', loading_p: 'Por favor espera.', empty_h: 'No hay propiedades visibles', empty_p: 'Revisa plots-index.json o añade la primera propiedad.'
       },
       en: {
         html_lang: 'en', title: 'Costa Blanca plots | Building plots and investment land in Spain', description: 'Costa Blanca plots and investment land in Spain.',
@@ -462,7 +491,7 @@
         loc1t: 'Finestrat', loc1d: 'Prestigious location with views and proximity to Benidorm.', loc2t: 'San Juan and Alicante', loc2d: 'Strong areas for a private home or second home.', loc3t: 'El Campello and surroundings', loc3d: 'Attractive areas for buyers seeking more privacy and calm.',
         faq_title: 'FAQ — Costa Blanca plots', f1t: 'Is it worth buying a plot?', f1d: 'Yes, a well-located plot can offer flexibility and future value growth.', f2t: 'What should you check?', f2d: 'Planning status, utilities, access and building limits.', f3t: 'Do you help with construction?', f3d: 'Yes, we can support from plot selection to delivery.',
         seo_h2: 'Costa Blanca plots — how to buy land safely in Spain', seo_h3_1: 'Costa Blanca plot market', seo_p1: 'Costa Blanca plots are drawing growing interest from private buyers and investors.', seo_h3_2: 'Plot in Alicante Spain — what to review', seo_p2: 'Buying land in Spain requires technical and planning due diligence.', seo_h3_3: 'Why verification matters', seo_p3: 'We analyse every plot comprehensively.', seo_h3_4: 'Building plots and investment land', seo_p4: 'We offer both private building plots and larger developer sites.',
-        contact_title: 'Sales department', contact_intro: 'Get in touch to receive plots matched to your budget, location and goal.', contact_note: '💡 I reply in 10–15 minutes', contact_role: 'Costa Blanca investment specialist', call_cta: '📞 Call now', wa_cta: '💬 Message on WhatsApp', footer_copy: 'Costa Blanca Invest is an investment project in the Spanish property market.', footer_bottom: '© 2026 | Site personally created by Olga Chernyshenko.', share_title: 'Share page', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'See this listing: ', card_link: 'View plot →', loading_h: 'Loading listings…', loading_p: 'Please wait.', empty_h: 'No visible listings', empty_p: 'Check plots-index.json or add the first listing.'
+        contact_title: 'Sales department', contact_intro: 'Get in touch to receive plots matched to your budget, location and goal.', contact_note: '💡 I reply in 10–15 minutes', contact_role: 'Costa Blanca investment specialist', call_cta: '📞 Call now', wa_cta: '💬 Message on WhatsApp', footer_copy: 'Partnership with Celebrity Real Estate — the presented properties are part of the agency portfolio.', footer_bottom: '© 2026 | Site personally created by Olga Chernyshenko. The project, concept and execution are the author’s intellectual property. The website operates within a strategic partnership with the real estate agency Celebrity Real Estate — the presented properties and plots are part of the partner portfolio and are offered according to the agency cooperation model.', share_title: 'Share page', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'See this listing: ', card_link: 'View plot →', loading_h: 'Loading listings…', loading_p: 'Please wait.', empty_h: 'No visible listings', empty_p: 'Check plots-index.json or add the first listing.'
       },
       ru: {
         html_lang: 'ru', title: 'Участки Costa Blanca | Земля под строительство и инвестиции в Испании', description: 'Участки Costa Blanca и инвестиционная земля в Испании.',
@@ -473,7 +502,7 @@
         loc1t: 'Finestrat', loc1d: 'Престижная локация с видами и близостью к Benidorm.', loc2t: 'San Juan и Alicante', loc2d: 'Сильные локации под частный дом или second home.', loc3t: 'El Campello и окрестности', loc3d: 'Районы для тех, кто ищет приватность и спокойствие.',
         faq_title: 'FAQ — участки Costa Blanca', f1t: 'Стоит ли покупать участок?', f1d: 'Да, хорошо расположенный участок может дать гибкость и рост стоимости.', f2t: 'Что нужно проверить?', f2d: 'Статус земли, коммуникации, подъезд и ограничения по застройке.', f3t: 'Помогаете ли вы со строительством?', f3d: 'Да, мы можем сопровождать от выбора участка до строительства.',
         seo_h2: 'Участки Costa Blanca — как безопасно купить землю в Испании', seo_h3_1: 'Рынок участков Costa Blanca', seo_p1: 'Участки Costa Blanca вызывают всё больший интерес у частных покупателей и инвесторов.', seo_h3_2: 'Участок в Alicante — что проверять', seo_p2: 'Покупка земли в Испании требует технического и градостроительного анализа.', seo_h3_3: 'Почему проверка критически важна', seo_p3: 'Мы комплексно анализируем каждый участок.', seo_h3_4: 'Участки под строительство и инвестиционная земля', seo_p4: 'Мы предлагаем как участки под частную застройку, так и крупные девелоперские площадки.',
-        contact_title: 'Отдел продаж', contact_intro: 'Свяжитесь с нами, чтобы получить участки под ваш бюджет, локацию и цель покупки.', contact_note: '💡 Отвечаю за 10–15 минут', contact_role: 'Специалист по инвестициям Costa Blanca', call_cta: '📞 Позвонить сейчас', wa_cta: '💬 Написать в WhatsApp', footer_copy: 'Costa Blanca Invest — инвестиционный проект на рынке недвижимости Испании.', footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко.', share_title: 'Поделиться страницей', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Посмотрите этот объект: ', card_link: 'Смотреть участок →', loading_h: 'Загрузка объектов…', loading_p: 'Пожалуйста, подождите.', empty_h: 'Нет видимых объектов', empty_p: 'Проверьте plots-index.json или добавьте первый объект.'
+        contact_title: 'Отдел продаж', contact_intro: 'Свяжитесь с нами, чтобы получить участки под ваш бюджет, локацию и цель покупки.', contact_note: '💡 Отвечаю за 10–15 минут', contact_role: 'Специалист по инвестициям Costa Blanca', call_cta: '📞 Позвонить сейчас', wa_cta: '💬 Написать в WhatsApp', footer_copy: 'Партнёрство с Celebrity Real Estate — представленные объекты входят в портфель агентства.', footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко. Проект, концепция и реализация являются объектом авторской интеллектуальной собственности. Сервис функционирует в рамках стратегического сотрудничества с агентством недвижимости Celebrity Real Estate — представленные объекты и участки входят в партнёрский портфель и предлагаются в соответствии с агентской моделью сотрудничества.', share_title: 'Поделиться страницей', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Посмотрите этот объект: ', card_link: 'Смотреть участок →', loading_h: 'Загрузка объектов…', loading_p: 'Пожалуйста, подождите.', empty_h: 'Нет видимых объектов', empty_p: 'Проверьте plots-index.json или добавьте первый объект.'
       }
     };
     const PREVIEW_PLOTS = [
@@ -697,28 +726,38 @@
     };
 
     const normalizePlotHref = (plot, lang) => {
-      const rawHref = String(plot?.href || '').trim();
-      const slug = String(plot?.slug || '').trim();
-      let baseHref = rawHref;
+  const rawHref = String(plot?.href || '').trim();
+  const slug = String(plot?.slug || '').trim();
 
-      if (!baseHref && slug) baseHref = `/pl/plots/${slug}/`;
-      if (!baseHref) return '#';
+  let baseHref = rawHref;
 
-      if (!/^https?:\/\//i.test(baseHref) && !baseHref.startsWith('/')) {
-        baseHref = `/${baseHref}`;
-      }
+  // если нет href — строим ЧИСТЫЙ URL под GitHub Pages
+  if (!baseHref && slug) {
+    baseHref = `/pl/plots/${slug}/`;
+  }
 
-      if (/^https?:\/\//i.test(baseHref)) {
-        const url = new URL(baseHref);
-        if (lang !== 'pl') url.searchParams.set('lang', lang);
-        else url.searchParams.delete('lang');
-        return url.toString();
-      }
+  if (!baseHref) return '#';
 
-      const cleanPath = baseHref.replace(/\?.*$/, '').replace(/\/+$/, '') + '/';
-      if (lang === 'pl') return cleanPath;
-      return `${cleanPath}?lang=${lang}`;
-    };
+  // нормализуем относительный путь
+  if (!/^https?:\/\//i.test(baseHref) && !baseHref.startsWith('/')) {
+    baseHref = `/${baseHref}`;
+  }
+
+  // ❗ ВАЖНО: НЕ добавляем index.html — GitHub Pages сам открывает его
+
+  // абсолютные ссылки
+  if (/^https?:\/\//i.test(baseHref)) {
+    const url = new URL(baseHref);
+    if (lang !== 'pl') url.searchParams.set('lang', lang);
+    else url.searchParams.delete('lang');
+    return url.toString();
+  }
+
+  // локальные ссылки
+  if (lang === 'pl') return baseHref;
+
+  return `${baseHref}?lang=${lang}`;
+};
 
     const makeCardHtml = (plot) => {
       const ui = UI[currentLang] || UI.pl;
