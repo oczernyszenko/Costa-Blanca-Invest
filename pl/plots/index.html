@@ -207,7 +207,7 @@
       .brand{justify-self:center;text-align:center;font-size:15px}
       .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;justify-content:stretch;align-items:stretch;overflow:visible;padding:0}
       .nav a{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 8px;text-align:center;font-size:13px;line-height:1.15;white-space:normal;border-radius:8px;background:rgba(255,255,255,.55)}
-      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px}
+      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px;flex-wrap:wrap;max-width:100%}
       .hero-copy{padding:22px 20px;align-items:center;text-align:center;overflow:hidden}
       .hero-copy h1{width:100%;max-width:100%;padding:0 12px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
       .center-text,.lead{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 20px;text-align:center !important;overflow-wrap:anywhere}
@@ -218,13 +218,14 @@
       .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:1fr}
       .plots-grid{grid-template-columns:1fr;gap:18px;min-height:220px}
       .plot-card{min-height:unset}
-      .contact-inline-wrap,.cta-actions{flex-direction:column}
-      .btn,.contact-inline{width:100%;min-height:52px}
+      .plot-card .card-body{padding:20px 18px}
+      .contact-inline-wrap,.cta-actions,.share-actions{flex-direction:column}
+      .btn,.contact-inline,.share-btn{width:100%;min-height:52px}
       .sticky-contact{display:block;right:12px;bottom:12px}
       body{padding-bottom:74px}
     }
     @media (max-width:560px){
-      .lang-switcher{gap:4px;padding:4px;min-height:44px}
+      .lang-switcher{gap:4px;padding:4px;min-height:44px;display:grid;grid-template-columns:repeat(4,36px);justify-content:center}
       .lang-btn{flex:0 0 36px;width:36px;height:36px;font-size:11px}
       .hero-copy{padding:18px 16px}
       .eyebrow{padding:8px 12px;font-size:11px}
@@ -240,9 +241,22 @@
       .hero-image,.hero-image img{min-height:220px}
       .plot-card img{aspect-ratio:16/10;min-height:180px}
       .plot-card .card-body{padding:18px 16px}
+      .plot-card h3{font-size:19px;line-height:1.2}
+      .plot-card .card-meta,.plot-card .card-price,.plot-card .card-link{font-size:14px}
+      .share-title{font-size:13px}
       .contact-links a{font-size:16px}
       .footer-links{flex-direction:column;align-items:center}
       .footer-bottom{font-size:11px}
+    }
+    @media (max-width:390px){
+      .container{padding:0 8px}
+      .nav{grid-template-columns:1fr 1fr}
+      .nav a{font-size:12px;min-height:34px;padding:6px}
+      .hero-copy{padding:16px 14px}
+      .section-card,.cta-box,.footer-card,.contact-box{padding:16px}
+      .plot-card .card-body{padding:16px 14px}
+      .contact-avatar img{width:92px;height:92px}
+      .share-actions{gap:10px}
     }
   </style>
 </head>
@@ -472,7 +486,12 @@
         title: 'Działka — Playa San Juan (1260 m²)',
         meta: 'Playa San Juan · 1260 m² · willa',
         price: '€ 1 100 000',
-        desc: 'Działka 1260 m² pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.'
+        desc: 'Działka 1260 m² pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.',
+        translations: {
+          es: { chip: 'Villa Plot', title: 'Parcela — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: 'Parcela de 1260 m² para construir una villa privada en una ubicación prestigiosa junto al mar.', alt: 'Parcela para villa en Playa San Juan' },
+          en: { chip: 'Villa Plot', title: 'Plot — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: '1260 m² plot for building a private villa in a prestigious seaside location.', alt: 'Villa plot in Playa San Juan' },
+          ru: { chip: 'Участок под виллу', title: 'Участок — Playa San Juan (1260 м²)', meta: 'Playa San Juan · 1260 м² · вилла', desc: 'Участок 1260 м² под строительство частной виллы в престижной локации у моря.', alt: 'Участок под виллу в Playa San Juan' }
+        }
       },
       {
         slug: 'preview-2',
@@ -483,9 +502,87 @@
         title: 'Działka — Finestrat (3 wille)',
         meta: 'Finestrat · widok na morze i góry · 3 wille',
         price: '€ 500 000',
-        desc: 'Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry.'
+        desc: 'Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry.',
+        translations: {
+          es: { chip: 'Sea View Plot', title: 'Parcela — Finestrat (3 villas)', meta: 'Finestrat · vistas al mar y montaña · 3 villas', desc: 'Parcela para construir 3 villas con vistas panorámicas al mar y a la montaña.', alt: 'Parcela en Finestrat con vistas al mar y la montaña' },
+          en: { chip: 'Sea View Plot', title: 'Plot — Finestrat (3 villas)', meta: 'Finestrat · sea and mountain view · 3 villas', desc: 'Plot for building 3 villas with panoramic sea and mountain views.', alt: 'Plot in Finestrat with sea and mountain views' },
+          ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид на море и горы · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
+        }
       }
     ];
+
+    const PLOT_TRANSLATIONS = {
+      santabarbara: {
+        es: { chip: 'Premium Plot', title: 'Parcela + proyecto + licencia en Alicante junto a Santa Bárbara para aparthotel', meta: 'Alicante · Santa Bárbara · proyecto de inversión', desc: 'Parcela con proyecto y licencia en Alicante junto a Santa Bárbara para aparthotel.', alt: 'Parcela con proyecto y licencia en Alicante junto a Santa Bárbara' },
+        en: { chip: 'Premium Plot', title: 'Plot + project + licence in Alicante by Santa Bárbara for an aparthotel', meta: 'Alicante · Santa Bárbara · investment project', desc: 'Plot with project and licence in Alicante by Santa Bárbara for an aparthotel.', alt: 'Plot with project and licence in Alicante by Santa Bárbara' },
+        ru: { chip: 'Премиальный участок', title: 'Участок + проект + лицензия в Alicante у Santa Bárbara под апарт-отель', meta: 'Alicante · Santa Bárbara · инвестиционный проект', desc: 'Участок с проектом и лицензией в Alicante у Santa Bárbara под апарт-отель.', alt: 'Участок с проектом и лицензией в Alicante у Santa Bárbara' }
+      },
+      'alicante-plot-630k': {
+        es: { chip: 'City Plot', title: 'Parcela de 465 m² en Alicante', meta: 'Alicante · parcela urbana', desc: 'Parcela lista para construir una casa.', alt: 'Parcela de 465 m² en Alicante' },
+        en: { chip: 'City Plot', title: '465 m² plot in Alicante', meta: 'Alicante · urban plot', desc: 'Plot ready for building a house.', alt: '465 m² plot in Alicante' },
+        ru: { chip: 'Городской участок', title: 'Участок 465 м² в Alicante', meta: 'Alicante · городской участок', desc: 'Участок готов под строительство дома.', alt: 'Участок 465 м² в Alicante' }
+      },
+      BenidormPlanet: {
+        es: { chip: 'Villa Plot', title: 'Parcela para construir villa — Benidorm', meta: 'Benidorm · parcela urbanística', desc: 'Suelo urbano para construir una vivienda.', alt: 'Parcela para villa en Benidorm' },
+        en: { chip: 'Villa Plot', title: 'Plot for villa construction — Benidorm', meta: 'Benidorm · urban plot', desc: 'Urban land for building a house.', alt: 'Villa plot in Benidorm' },
+        ru: { chip: 'Участок под виллу', title: 'Участок под строительство виллы — Benidorm', meta: 'Benidorm · городской участок', desc: 'Городской участок под строительство дома.', alt: 'Участок под виллу в Benidorm' }
+      },
+      NouNazareth: {
+        es: { chip: 'Development Plot', title: 'Parcela premium — Nou Nazareth', meta: 'San Joan · 4 936 m²', desc: 'Gran suelo para inversión.', alt: 'Parcela premium Nou Nazareth' },
+        en: { chip: 'Development Plot', title: 'Premium land plot — Nou Nazareth', meta: 'San Joan · 4,936 m²', desc: 'Large investment land plot.', alt: 'Premium land plot Nou Nazareth' },
+        ru: { chip: 'Девелоперский участок', title: 'Премиальный земельный участок — Nou Nazareth', meta: 'San Joan · 4 936 м²', desc: 'Крупный инвестиционный участок.', alt: 'Премиальный участок Nou Nazareth' }
+      },
+      Polop: {
+        es: { chip: 'Ready Project', title: 'Parcela — Polop', meta: 'Polop · proyecto', desc: 'Proyecto de inversión listo.', alt: 'Parcela en Polop' },
+        en: { chip: 'Ready Project', title: 'Plot — Polop', meta: 'Polop · project', desc: 'Ready investment project.', alt: 'Plot in Polop' },
+        ru: { chip: 'Готовый проект', title: 'Участок — Polop', meta: 'Polop · проект', desc: 'Готовый инвестиционный проект.', alt: 'Участок в Polop' }
+      },
+      Campella: {
+        es: { chip: 'Building Plot', title: 'Parcela — El Campello', meta: '950 m²', desc: 'Parcela para construir.', alt: 'Parcela en Campello' },
+        en: { chip: 'Building Plot', title: 'Plot — El Campello', meta: '950 m²', desc: 'Building plot.', alt: 'Plot in Campello' },
+        ru: { chip: 'Участок под застройку', title: 'Участок — El Campello', meta: '950 м²', desc: 'Участок под строительство.', alt: 'Участок в Campello' }
+      },
+      CovetaFuma: {
+        es: { chip: 'Sea View Plot', title: 'Parcela — Coveta Fuma', meta: 'Costa Blanca', desc: 'Parcela atractiva junto al mar.', alt: 'Parcela en Coveta Fuma' },
+        en: { chip: 'Sea View Plot', title: 'Plot — Coveta Fuma', meta: 'Costa Blanca', desc: 'Attractive plot by the sea.', alt: 'Plot in Coveta Fuma' },
+        ru: { chip: 'Участок у моря', title: 'Участок — Coveta Fuma', meta: 'Costa Blanca', desc: 'Привлекательный участок у моря.', alt: 'Участок в Coveta Fuma' }
+      },
+      SanJuan: {
+        es: { chip: 'Project Plot', title: 'Parcela — San Juan', meta: 'San Juan', desc: 'Parcela de inversión.', alt: 'Parcela en San Juan' },
+        en: { chip: 'Project Plot', title: 'Plot — San Juan', meta: 'San Juan', desc: 'Investment plot.', alt: 'Plot in San Juan' },
+        ru: { chip: 'Инвестиционный участок', title: 'Участок — San Juan', meta: 'San Juan', desc: 'Инвестиционный участок.', alt: 'Участок в San Juan' }
+      },
+      Alicante: {
+        es: { chip: 'Investment Plot', title: 'Parcela de 512 m² en Alicante para villa o casa unifamiliar', meta: 'Alicante · parcela edificable · 3 plantas', desc: 'Parcela en Alicante para vivienda unifamiliar con hasta 3 plantas y hasta 400 m² construibles.', alt: 'Parcela de 512 m² en Alicante para villa o casa unifamiliar' },
+        en: { chip: 'Investment Plot', title: '512 m² plot in Alicante for a villa or single-family house', meta: 'Alicante · building plot · 3 floors', desc: 'Plot in Alicante for a single-family home with up to 3 floors and up to 400 m² buildable area.', alt: '512 m² plot in Alicante for a villa or single-family house' },
+        ru: { chip: 'Инвестиционный участок', title: 'Участок 512 м² в Alicante под виллу или частный дом', meta: 'Alicante · участок под застройку · 3 этажа', desc: 'Участок в Alicante под частную застройку до 3 этажей и до 400 м² строительства.', alt: 'Участок 512 м² в Alicante под виллу или частный дом' }
+      },
+      AlicanteCityPlot: {
+        es: { chip: 'City Plot', title: 'Parcela — Alicante City', meta: 'centro', desc: 'Suelo de inversión.', alt: 'Parcela en Alicante City' },
+        en: { chip: 'City Plot', title: 'Plot — Alicante City', meta: 'city centre', desc: 'Investment land plot.', alt: 'Plot in Alicante City' },
+        ru: { chip: 'Городской участок', title: 'Участок — Alicante City', meta: 'центр', desc: 'Инвестиционный участок.', alt: 'Участок в Alicante City' }
+      },
+      'villajoyosa-first-line-plot-3-2m': {
+        es: { chip: 'First Line Plot', title: 'Parcela — Villajoyosa (1ª línea de mar)', meta: 'Villajoyosa · 1ª línea · proyecto promotor', desc: 'Parcela en primera línea de mar para 2 edificios y 24 apartamentos.', alt: 'Parcela en primera línea de mar en Villajoyosa' },
+        en: { chip: 'First Line Plot', title: 'Plot — Villajoyosa (first sea line)', meta: 'Villajoyosa · first line · development project', desc: 'First-line sea plot for building 2 buildings and 24 apartments.', alt: 'First-line sea plot in Villajoyosa' },
+        ru: { chip: 'Участок на 1-й линии', title: 'Участок — Villajoyosa (1 линия моря)', meta: 'Villajoyosa · 1 линия · девелоперский проект', desc: 'Участок на первой линии моря под строительство 2 зданий и 24 апартаментов.', alt: 'Участок на первой линии моря в Villajoyosa' }
+      },
+      'alicante-residential-building-plot-470k': {
+        es: { chip: 'Development Plot', title: 'Parcela — Alicante (8 viviendas + parking)', meta: 'Alicante · 4 plantas · 8 viviendas · parking', desc: 'Parcela para edificio residencial con 8 viviendas y parking subterráneo.', alt: 'Parcela para edificio residencial en Alicante' },
+        en: { chip: 'Development Plot', title: 'Plot — Alicante (8 apartments + parking)', meta: 'Alicante · 4 floors · 8 apartments · parking', desc: 'Plot for a residential building with 8 apartments and underground parking.', alt: 'Residential building plot in Alicante' },
+        ru: { chip: 'Девелоперский участок', title: 'Участок — Alicante (8 квартир + паркинг)', meta: 'Alicante · 4 этажа · 8 квартир · паркинг', desc: 'Участок под строительство жилого дома на 8 квартир с подземным паркингом.', alt: 'Участок под жилой дом в Alicante' }
+      },
+      'playa-san-juan-villa-plot-1260m': {
+        es: { chip: 'Villa Plot', title: 'Parcela — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: 'Parcela de 1260 m² para construir una villa privada en una de las mejores zonas junto al mar.', alt: 'Parcela para villa en Playa San Juan' },
+        en: { chip: 'Villa Plot', title: 'Plot — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: '1260 m² plot for building a private villa in one of the best seaside areas.', alt: 'Villa plot in Playa San Juan' },
+        ru: { chip: 'Участок под виллу', title: 'Участок — Playa San Juan (1260 м²)', meta: 'Playa San Juan · 1260 м² · вилла', desc: 'Участок 1260 м² под строительство частной виллы в одной из лучших прибрежных локаций.', alt: 'Участок под виллу в Playa San Juan' }
+      },
+      'finestrat-plot-3-villas-sea-mountain-view': {
+        es: { chip: 'Sea View Plot', title: 'Parcela — Finestrat (3 villas)', meta: 'Finestrat · vistas al mar y montaña · 3 villas', desc: 'Parcela para construir 3 villas con vistas panorámicas al mar y la montaña.', alt: 'Parcela en Finestrat con vistas al mar y la montaña' },
+        en: { chip: 'Sea View Plot', title: 'Plot — Finestrat (3 villas)', meta: 'Finestrat · sea and mountain view · 3 villas', desc: 'Plot for building 3 villas with panoramic sea and mountain views.', alt: 'Plot in Finestrat with sea and mountain views' },
+        ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид на море и горы · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
+      }
+    };
 
     let cachedPlots = null;
     let currentLang = 'pl';
@@ -579,35 +676,55 @@
     };
 
     const localizePlot = (plot, lang) => {
-      const map = {
-        pl: plot,
-        es: {
-          ...plot,
-          title: plot.title,
-          desc: plot.desc,
-          meta: plot.meta
-        },
-        en: {
-          ...plot,
-          title: plot.title,
-          desc: plot.desc,
-          meta: plot.meta
-        },
-        ru: {
-          ...plot,
-          title: plot.title,
-          desc: plot.desc,
-          meta: plot.meta
-        }
+      if (lang === 'pl') return plot;
+
+      const fromJson = plot?.translations?.[lang] || null;
+      const fromSlug = plot?.slug ? (PLOT_TRANSLATIONS[plot.slug]?.[lang] || null) : null;
+      const translated = fromJson || fromSlug;
+
+      if (!translated) return plot;
+
+      return {
+        ...plot,
+        ...translated,
+        chip: translated.chip || plot.chip,
+        title: translated.title || plot.title,
+        meta: translated.meta || plot.meta,
+        price: translated.price || plot.price,
+        desc: translated.desc || plot.desc,
+        alt: translated.alt || plot.alt
       };
-      return map[lang] || plot;
+    };
+
+    const normalizePlotHref = (plot, lang) => {
+      const rawHref = String(plot?.href || '').trim();
+      const slug = String(plot?.slug || '').trim();
+      let baseHref = rawHref;
+
+      if (!baseHref && slug) baseHref = `/pl/plots/${slug}/`;
+      if (!baseHref) return '#';
+
+      if (!/^https?:\/\//i.test(baseHref) && !baseHref.startsWith('/')) {
+        baseHref = `/${baseHref}`;
+      }
+
+      if (/^https?:\/\//i.test(baseHref)) {
+        const url = new URL(baseHref);
+        if (lang !== 'pl') url.searchParams.set('lang', lang);
+        else url.searchParams.delete('lang');
+        return url.toString();
+      }
+
+      const cleanPath = baseHref.replace(/\?.*$/, '').replace(/\/+$/, '') + '/';
+      if (lang === 'pl') return cleanPath;
+      return `${cleanPath}?lang=${lang}`;
     };
 
     const makeCardHtml = (plot) => {
       const ui = UI[currentLang] || UI.pl;
       const localizedPlot = localizePlot(plot, currentLang);
       const image = localizedPlot.image || (localizedPlot.href ? localizedPlot.href.replace(/\/$/, '') + '/1.jpg' : fallbackImage);
-      const link = currentLang === 'pl' ? (localizedPlot.href || '#') : `${localizedPlot.href || '#'}?lang=${currentLang}`;
+      const link = normalizePlotHref(localizedPlot, currentLang);
       return `
         <a href="${escapeHtml(link)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
           <img src="${escapeHtml(image)}" alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}'">
@@ -737,7 +854,9 @@
 
       document.querySelectorAll('.lang-btn').forEach((btn, index) => {
         const langs = ['pl','es','en','ru'];
-        btn.classList.toggle('active', langs[index] === currentLang);
+        const isActive = langs[index] === currentLang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
       });
 
       updateUrlLang(currentLang);
@@ -804,5 +923,4 @@
     });
   </script>
 </body>
-</html>
 </html>
