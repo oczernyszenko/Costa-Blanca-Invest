@@ -111,7 +111,7 @@
       -webkit-backdrop-filter:blur(18px);
       box-shadow:0 6px 24px rgba(15,23,42,.08);
     }
-    .topbar.hide{transform:translateY(-100%)}
+    .topbar.hide{transform:translateY(-100%);opacity:0;background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important;border-bottom-color:transparent;pointer-events:none}
     .topbar-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:82px}
     .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
@@ -141,10 +141,13 @@
     .contact-inline-wrap,.cta-actions,.footer-links,.inline-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
     .contact-inline-wrap{margin:12px 0 18px;gap:14px}
     .inline-list{margin-top:18px}
-    .contact-inline,.btn,.sticky-btn,.submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background .25s ease;cursor:pointer}
+    .contact-inline,.btn,.sticky-btn,.submit-btn,.share-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-height);padding:0 20px;border-radius:999px;font-size:15px;font-weight:800;line-height:1;white-space:nowrap;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:var(--primary-dark);box-shadow:0 10px 22px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background .25s ease;cursor:pointer}
     .contact-inline:first-child,.btn-main,.submit-btn{background:linear-gradient(135deg,rgba(208,122,52,.92),rgba(192,107,42,1));color:#fff}
-    .contact-inline:last-child,.btn-light,.sticky-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff}
-    .contact-inline:hover,.btn:hover,.sticky-btn:hover,.submit-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12)}
+    .contact-inline:last-child,.btn-light,.sticky-wa,.share-btn.share-wa{background:linear-gradient(135deg,rgba(37,211,102,.96) 0%,rgba(20,158,72,1) 100%);color:#fff}
+    .share-btn.share-fb{background:linear-gradient(135deg,#1877f2,#0e5fd1);color:#fff}
+    .contact-inline:hover,.btn:hover,.sticky-btn:hover,.submit-btn:hover,.share-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px rgba(15,23,42,.12)}
+    .share-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:16px}
+    .share-title{margin:18px 0 0;color:var(--text-soft);font-size:14px;font-weight:700;text-align:center}
 
     .benefits-grid,.plots-grid,.locations-grid,.faq-grid,.contact-form-grid{display:grid;gap:22px}
     .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -353,6 +356,11 @@
           <a class="btn btn-main" href="tel:+34604158859">📞 Zadzwoń teraz</a>
           <a class="btn btn-light" href="https://wa.me/34604158859?text=Interesuje%20mnie%20działka%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer">💬 Napisz na WhatsApp</a>
         </div>
+        <div class="share-title" id="shareTitle">Udostępnij stronę</div>
+        <div class="share-actions">
+          <a class="share-btn share-fb" id="shareFacebookBtn" href="#" target="_blank" rel="noopener noreferrer">f Facebook</a>
+          <a class="share-btn share-wa" id="shareWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        </div>
       </section>
     </div>
   </main>
@@ -382,6 +390,78 @@
   <script>
     const fallbackImage = '/pl/plots/plots-hero.png';
     const JSON_URL = '/pl/plots/plots-index.json';
+    const SUPPORTED_LANGS = ['pl','es','en','ru'];
+    const SITE_ORIGIN = 'https://costa-blanca-invest.com';
+    const UI = {
+      pl: {
+        html_lang: 'pl',
+        title: 'Działki Costa Blanca | Działki budowlane i grunt inwestycyjny w Hiszpanii',
+        description: 'Działki Costa Blanca, działki budowlane Hiszpania i grunt inwestycyjny Hiszpania. Kup działkę Alicante Hiszpania — wybrane plots for sale Costa Blanca i buy land Alicante Spain.',
+        nav_home: 'Strona główna', nav_categories: 'Kategorie', nav_contact: 'Kontakt', nav_new: 'Nowe inwestycje', nav_plots: 'Działki', nav_build: 'Budowa domu',
+        breadcrumb_home: 'Strona główna', breadcrumb_current: 'Działki',
+        eyebrow: 'Działki premium · Costa Blanca',
+        hero_title: 'Działki Costa Blanca — ekskluzywne grunty pod willę, inwestycję i życie w Hiszpanii',
+        hero_lead: 'Pracujemy wyłącznie na sprawdzonych działkach — analizujemy grunt, możliwości zabudowy i realny potencjał inwestycji, abyś kupował świadomie i bez ryzyka.',
+        call_now: '📞 +34 604 15 88 59', wa_now: '💬 WhatsApp',
+        benefits_title: 'Dlaczego warto kupić działkę Costa Blanca i grunt inwestycyjny Hiszpania',
+        b1t: 'Elastyczność projektu', b1d: 'Działka daje większą swobodę niż gotowa nieruchomość — możesz zrealizować własny dom, willę premium lub projekt inwestycyjny dopasowany do budżetu i strategii.',
+        b2t: 'Wzrost wartości', b2d: 'Dobrze położone grunty w regionie Alicante–Benidorm należą do najbardziej poszukiwanych aktywów na Costa Blanca, szczególnie blisko morza i rozwiniętej infrastruktury.',
+        b3t: 'Bezpieczny wybór', b3d: 'Weryfikujemy status urbanistyczny, dojazd, media i możliwości zabudowy, aby zakup działki był przejrzysty i bezpieczny od początku do końca.',
+        plots_title: 'Wybrane działki Costa Blanca i plots for sale Alicante Spain',
+        plots_intro: 'Każda działka prowadzi do osobnej strony oferty z opisem, zdjęciami, parametrami i lokalizacją.',
+        locations_title: 'Najlepsze lokalizacje: działka Alicante Hiszpania i Costa Blanca plots',
+        locations_intro: 'Finestrat, San Juan, Alicante, El Campello i okolice Benidormu należą do najczęściej wybieranych lokalizacji dla klientów szukających działki pod budowę domu lub inwestycję.',
+        loc1t: 'Finestrat', loc1d: 'Prestiżowa lokalizacja z widokami, nową zabudową i bliskością Benidormu — idealna pod willę premium lub projekt inwestycyjny.',
+        loc2t: 'San Juan i Alicante', loc2d: 'Mocne lokalizacje pod dom prywatny lub second home, z dostępem do plaż, usług, szkół i całorocznej infrastruktury miejskiej.',
+        loc3t: 'El Campello i okolice', loc3d: 'Obszary atrakcyjne dla klientów szukających większej prywatności, spokoju i dobrej relacji między lokalizacją a potencjałem wzrostu wartości.',
+        faq_title: 'FAQ — działki na Costa Blanca',
+        f1t: 'Czy warto kupić działkę na Costa Blanca?', f1d: 'Tak. Dobrze położony grunt może dać dużą elastyczność inwestycyjną, wzrost wartości i możliwość realizacji domu dokładnie dopasowanego do potrzeb klienta.',
+        f2t: 'Na co zwrócić uwagę przy zakupie działki?', f2d: 'Najważniejsze są: status urbanistyczny, media, dojazd, ograniczenia zabudowy, koszty przygotowania gruntu oraz lokalizacja względem infrastruktury i morza.',
+        f3t: 'Czy pomagacie w budowie po zakupie działki?', f3d: 'Tak. Możemy przeprowadzić klienta od wyboru działki przez koncepcję domu aż po realizację budowy w Hiszpanii.',
+        seo_h2: 'Działki Costa Blanca — jak bezpiecznie kupić grunt w Hiszpanii',
+        seo_h3_1: 'Rynek działek na Costa Blanca', seo_p1: 'Działki Costa Blanca cieszą się rosnącym zainteresowaniem zarówno wśród klientów prywatnych, jak i inwestorów. Region Alicante–Benidorm oferuje unikalne połączenie klimatu, infrastruktury oraz stabilnego popytu na nieruchomości.',
+        seo_h3_2: 'Działka Alicante Hiszpania — na co uważać', seo_p2: 'Zakup działki w Hiszpanii wymaga dokładnej analizy technicznej i urbanistycznej. Jednym z kluczowych aspektów jest struktura gruntu oraz realne możliwości zabudowy.',
+        seo_h3_3: 'Dlaczego weryfikacja działki jest kluczowa', seo_p3: 'Każdą działkę analizujemy kompleksowo — od dokumentacji urbanistycznej po wizję lokalną z udziałem specjalistów.',
+        seo_h3_4: 'Działki budowlane Hiszpania i grunt inwestycyjny', seo_p4: 'Oferujemy zarówno działki pod zabudowę prywatną, jak i większe grunty inwestycyjne pod projekty deweloperskie i urbanizacje.',
+        contact_title: 'Dział sprzedaży', contact_intro: 'Skontaktuj się, aby otrzymać działki dopasowane do budżetu, lokalizacji i celu zakupu — pod dom prywatny lub inwestycję.', contact_note: '💡 Odpowiadam w 10–15 minut',
+        contact_role: 'Specjalista ds. inwestycji Costa Blanca', call_cta: '📞 Zadzwoń teraz', wa_cta: '💬 Napisz na WhatsApp',
+        footer_copy: 'Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów.',
+        footer_bottom: '© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko.', share_title: 'Udostępnij stronę', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Zobacz ofertę: ', card_link: 'Zobacz działkę →', loading_h: 'Ładowanie ofert…', loading_p: 'Proszę czekać.', empty_h: 'Brak widocznych obiektów', empty_p: 'Sprawdź plik plots-index.json lub dodaj pierwszy obiekt.'
+      },
+      es: {
+        html_lang: 'es', title: 'Parcelas Costa Blanca | Parcelas urbanizables y suelo de inversión en España', description: 'Parcelas Costa Blanca y suelo de inversión en España.',
+        nav_home: 'Inicio', nav_categories: 'Categorías', nav_contact: 'Contacto', nav_new: 'Obra nueva', nav_plots: 'Parcelas', nav_build: 'Construcción',
+        breadcrumb_home: 'Inicio', breadcrumb_current: 'Parcelas', eyebrow: 'Parcelas premium · Costa Blanca', hero_title: 'Parcelas Costa Blanca — suelo exclusivo para villa, inversión y vida en España', hero_lead: 'Trabajamos solo con parcelas verificadas para que compres con seguridad.', call_now: '📞 +34 604 15 88 59', wa_now: '💬 WhatsApp',
+        benefits_title: 'Por qué comprar parcela en Costa Blanca', b1t: 'Flexibilidad del proyecto', b1d: 'Una parcela ofrece más libertad que una propiedad terminada.', b2t: 'Crecimiento del valor', b2d: 'Los suelos bien ubicados siguen siendo muy demandados en Costa Blanca.', b3t: 'Elección segura', b3d: 'Verificamos el estado urbanístico, acceso y posibilidades de construcción.',
+        plots_title: 'Selección de parcelas Costa Blanca', plots_intro: 'Cada parcela lleva a una página individual con descripción, fotos y parámetros.', locations_title: 'Mejores ubicaciones', locations_intro: 'Finestrat, San Juan, Alicante, El Campello y Benidorm están entre las zonas más demandadas.',
+        loc1t: 'Finestrat', loc1d: 'Ubicación prestigiosa con vistas y cercanía a Benidorm.', loc2t: 'San Juan y Alicante', loc2d: 'Zonas potentes para vivienda privada o second home.', loc3t: 'El Campello y alrededores', loc3d: 'Áreas atractivas para quienes buscan más privacidad y tranquilidad.',
+        faq_title: 'FAQ — parcelas en Costa Blanca', f1t: '¿Vale la pena comprar una parcela?', f1d: 'Sí, un suelo bien ubicado puede ofrecer flexibilidad y revalorización.', f2t: '¿Qué hay que revisar?', f2d: 'Estado urbanístico, suministros, acceso y limitaciones de construcción.', f3t: '¿Ayudáis con la construcción?', f3d: 'Sí, podemos acompañar desde la selección hasta la construcción.',
+        seo_h2: 'Parcelas Costa Blanca — cómo comprar suelo con seguridad en España', seo_h3_1: 'Mercado de parcelas en Costa Blanca', seo_p1: 'Las parcelas en Costa Blanca interesan cada vez más a compradores privados e inversores.', seo_h3_2: 'Parcela Alicante España — qué revisar', seo_p2: 'La compra de suelo en España requiere análisis técnico y urbanístico.', seo_h3_3: 'Por qué la verificación es clave', seo_p3: 'Analizamos cada parcela de forma integral.', seo_h3_4: 'Parcelas urbanizables y suelo de inversión', seo_p4: 'Ofrecemos parcelas para uso privado y grandes suelos para promotores.',
+        contact_title: 'Departamento comercial', contact_intro: 'Contacta para recibir parcelas adaptadas a tu presupuesto, ubicación y objetivo.', contact_note: '💡 Respondo en 10–15 minutos', contact_role: 'Especialista en inversión Costa Blanca', call_cta: '📞 Llamar ahora', wa_cta: '💬 Escribir por WhatsApp', footer_copy: 'Costa Blanca Invest es un proyecto de inversión en el mercado inmobiliario español.', footer_bottom: '© 2026 | Sitio creado personalmente por Olga Chernyshenko.', share_title: 'Compartir página', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Mira esta oferta: ', card_link: 'Ver parcela →', loading_h: 'Cargando ofertas…', loading_p: 'Por favor espera.', empty_h: 'No hay propiedades visibles', empty_p: 'Revisa plots-index.json o añade la primera propiedad.'
+      },
+      en: {
+        html_lang: 'en', title: 'Costa Blanca plots | Building plots and investment land in Spain', description: 'Costa Blanca plots and investment land in Spain.',
+        nav_home: 'Home', nav_categories: 'Categories', nav_contact: 'Contact', nav_new: 'New developments', nav_plots: 'Plots', nav_build: 'Build house',
+        breadcrumb_home: 'Home', breadcrumb_current: 'Plots', eyebrow: 'Premium plots · Costa Blanca', hero_title: 'Costa Blanca plots — exclusive land for villas, investment and living in Spain', hero_lead: 'We work only with verified plots so you can buy with confidence.', call_now: '📞 +34 604 15 88 59', wa_now: '💬 WhatsApp',
+        benefits_title: 'Why buy a Costa Blanca plot', b1t: 'Project flexibility', b1d: 'A plot gives you more freedom than a finished property.', b2t: 'Value growth', b2d: 'Well-located land remains highly sought after on Costa Blanca.', b3t: 'Safer choice', b3d: 'We verify planning status, access and building options.',
+        plots_title: 'Selected Costa Blanca plots', plots_intro: 'Each plot leads to a dedicated page with photos and details.', locations_title: 'Best locations', locations_intro: 'Finestrat, San Juan, Alicante, El Campello and Benidorm are among the top choices.',
+        loc1t: 'Finestrat', loc1d: 'Prestigious location with views and proximity to Benidorm.', loc2t: 'San Juan and Alicante', loc2d: 'Strong areas for a private home or second home.', loc3t: 'El Campello and surroundings', loc3d: 'Attractive areas for buyers seeking more privacy and calm.',
+        faq_title: 'FAQ — Costa Blanca plots', f1t: 'Is it worth buying a plot?', f1d: 'Yes, a well-located plot can offer flexibility and future value growth.', f2t: 'What should you check?', f2d: 'Planning status, utilities, access and building limits.', f3t: 'Do you help with construction?', f3d: 'Yes, we can support from plot selection to delivery.',
+        seo_h2: 'Costa Blanca plots — how to buy land safely in Spain', seo_h3_1: 'Costa Blanca plot market', seo_p1: 'Costa Blanca plots are drawing growing interest from private buyers and investors.', seo_h3_2: 'Plot in Alicante Spain — what to review', seo_p2: 'Buying land in Spain requires technical and planning due diligence.', seo_h3_3: 'Why verification matters', seo_p3: 'We analyse every plot comprehensively.', seo_h3_4: 'Building plots and investment land', seo_p4: 'We offer both private building plots and larger developer sites.',
+        contact_title: 'Sales department', contact_intro: 'Get in touch to receive plots matched to your budget, location and goal.', contact_note: '💡 I reply in 10–15 minutes', contact_role: 'Costa Blanca investment specialist', call_cta: '📞 Call now', wa_cta: '💬 Message on WhatsApp', footer_copy: 'Costa Blanca Invest is an investment project in the Spanish property market.', footer_bottom: '© 2026 | Site personally created by Olga Chernyshenko.', share_title: 'Share page', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'See this listing: ', card_link: 'View plot →', loading_h: 'Loading listings…', loading_p: 'Please wait.', empty_h: 'No visible listings', empty_p: 'Check plots-index.json or add the first listing.'
+      },
+      ru: {
+        html_lang: 'ru', title: 'Участки Costa Blanca | Земля под строительство и инвестиции в Испании', description: 'Участки Costa Blanca и инвестиционная земля в Испании.',
+        nav_home: 'Главная', nav_categories: 'Категории', nav_contact: 'Контакт', nav_new: 'Новостройки', nav_plots: 'Участки', nav_build: 'Строительство дома',
+        breadcrumb_home: 'Главная', breadcrumb_current: 'Участки', eyebrow: 'Премиальные участки · Costa Blanca', hero_title: 'Участки Costa Blanca — эксклюзивная земля под виллу, инвестиции и жизнь в Испании', hero_lead: 'Мы работаем только с проверенными участками, чтобы вы покупали уверенно.', call_now: '📞 +34 604 15 88 59', wa_now: '💬 WhatsApp',
+        benefits_title: 'Почему стоит покупать участок Costa Blanca', b1t: 'Гибкость проекта', b1d: 'Участок даёт больше свободы, чем готовая недвижимость.', b2t: 'Рост стоимости', b2d: 'Хорошо расположенная земля остаётся востребованным активом на Costa Blanca.', b3t: 'Безопасный выбор', b3d: 'Мы проверяем градостроительный статус, подъезд и возможности застройки.',
+        plots_title: 'Подборка участков Costa Blanca', plots_intro: 'Каждый участок ведёт на отдельную страницу с фото и параметрами.', locations_title: 'Лучшие локации', locations_intro: 'Finestrat, San Juan, Alicante, El Campello и Benidorm входят в число самых востребованных зон.',
+        loc1t: 'Finestrat', loc1d: 'Престижная локация с видами и близостью к Benidorm.', loc2t: 'San Juan и Alicante', loc2d: 'Сильные локации под частный дом или second home.', loc3t: 'El Campello и окрестности', loc3d: 'Районы для тех, кто ищет приватность и спокойствие.',
+        faq_title: 'FAQ — участки Costa Blanca', f1t: 'Стоит ли покупать участок?', f1d: 'Да, хорошо расположенный участок может дать гибкость и рост стоимости.', f2t: 'Что нужно проверить?', f2d: 'Статус земли, коммуникации, подъезд и ограничения по застройке.', f3t: 'Помогаете ли вы со строительством?', f3d: 'Да, мы можем сопровождать от выбора участка до строительства.',
+        seo_h2: 'Участки Costa Blanca — как безопасно купить землю в Испании', seo_h3_1: 'Рынок участков Costa Blanca', seo_p1: 'Участки Costa Blanca вызывают всё больший интерес у частных покупателей и инвесторов.', seo_h3_2: 'Участок в Alicante — что проверять', seo_p2: 'Покупка земли в Испании требует технического и градостроительного анализа.', seo_h3_3: 'Почему проверка критически важна', seo_p3: 'Мы комплексно анализируем каждый участок.', seo_h3_4: 'Участки под строительство и инвестиционная земля', seo_p4: 'Мы предлагаем как участки под частную застройку, так и крупные девелоперские площадки.',
+        contact_title: 'Отдел продаж', contact_intro: 'Свяжитесь с нами, чтобы получить участки под ваш бюджет, локацию и цель покупки.', contact_note: '💡 Отвечаю за 10–15 минут', contact_role: 'Специалист по инвестициям Costa Blanca', call_cta: '📞 Позвонить сейчас', wa_cta: '💬 Написать в WhatsApp', footer_copy: 'Costa Blanca Invest — инвестиционный проект на рынке недвижимости Испании.', footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко.', share_title: 'Поделиться страницей', share_fb: 'f Facebook', share_wa: '💬 WhatsApp', share_whatsapp_text: 'Посмотрите этот объект: ', card_link: 'Смотреть участок →', loading_h: 'Загрузка объектов…', loading_p: 'Пожалуйста, подождите.', empty_h: 'Нет видимых объектов', empty_p: 'Проверьте plots-index.json или добавьте первый объект.'
+      }
+    };
     const PREVIEW_PLOTS = [
       {
         slug: 'preview-1',
@@ -408,6 +488,7 @@
     ];
 
     let cachedPlots = null;
+    let currentLang = 'pl';
 
     const escapeHtml = (v) => String(v ?? '')
       .replace(/&/g, '&amp;')
@@ -419,6 +500,61 @@
     const isPreviewEnvironment = () => {
       const host = window.location.hostname;
       return !host || host === 'localhost' || host === '127.0.0.1' || host.includes('openai') || window.location.protocol === 'file:';
+    };
+
+    const getLangFromUrl = () => {
+      const lang = new URL(window.location.href).searchParams.get('lang');
+      return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+    };
+
+    const updateUrlLang = (lang) => {
+      const url = new URL(window.location.href);
+      if (lang === 'pl') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    };
+
+    const getCurrentShareUrl = () => {
+      const url = new URL('/pl/plots/', SITE_ORIGIN);
+      if (currentLang !== 'pl') url.searchParams.set('lang', currentLang);
+      return url.toString();
+    };
+
+    const updateShareMeta = async () => {
+      const ui = UI[currentLang] || UI.pl;
+      const shareUrl = getCurrentShareUrl();
+      const plots = await getPlots();
+      const firstPlot = plots && plots.length ? plots[0] : null;
+      const shareImage = firstPlot?.image ? new URL(firstPlot.image, SITE_ORIGIN).toString() : new URL(fallbackImage, SITE_ORIGIN).toString();
+      const shareTitle = ui.title;
+
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', shareUrl);
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', shareUrl);
+      const twUrl = document.querySelector('meta[name="twitter:url"]');
+      if (twUrl) twUrl.setAttribute('content', shareUrl);
+      const ogImg = document.querySelector('meta[property="og:image"]');
+      const ogImgUrl = document.querySelector('meta[property="og:image:url"]');
+      const ogImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
+      const twImg = document.querySelector('meta[name="twitter:image"]');
+      if (ogImg) ogImg.setAttribute('content', shareImage);
+      if (ogImgUrl) ogImgUrl.setAttribute('content', shareImage);
+      if (ogImgSecure) ogImgSecure.setAttribute('content', shareImage);
+      if (twImg) twImg.setAttribute('content', shareImage);
+
+      const shareTitleEl = document.getElementById('shareTitle');
+      const fbBtn = document.getElementById('shareFacebookBtn');
+      const waBtn = document.getElementById('shareWhatsappBtn');
+      if (shareTitleEl) shareTitleEl.textContent = ui.share_title;
+      if (fbBtn) {
+        fbBtn.textContent = ui.share_fb;
+        fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+      }
+      if (waBtn) {
+        waBtn.textContent = ui.share_wa;
+        waBtn.href = `https://wa.me/?text=${encodeURIComponent(`${ui.share_whatsapp_text}${shareTitle} ${shareUrl}`)}`;
+      }
     };
 
     const getPlots = async () => {
@@ -442,19 +578,46 @@
       return cachedPlots;
     };
 
+    const localizePlot = (plot, lang) => {
+      const map = {
+        pl: plot,
+        es: {
+          ...plot,
+          title: plot.title,
+          desc: plot.desc,
+          meta: plot.meta
+        },
+        en: {
+          ...plot,
+          title: plot.title,
+          desc: plot.desc,
+          meta: plot.meta
+        },
+        ru: {
+          ...plot,
+          title: plot.title,
+          desc: plot.desc,
+          meta: plot.meta
+        }
+      };
+      return map[lang] || plot;
+    };
+
     const makeCardHtml = (plot) => {
-      const image = plot.image || (plot.href ? plot.href.replace(/\/$/, '') + '/1.jpg' : fallbackImage);
-      const link = plot.href || '#';
+      const ui = UI[currentLang] || UI.pl;
+      const localizedPlot = localizePlot(plot, currentLang);
+      const image = localizedPlot.image || (localizedPlot.href ? localizedPlot.href.replace(/\/$/, '') + '/1.jpg' : fallbackImage);
+      const link = currentLang === 'pl' ? (localizedPlot.href || '#') : `${localizedPlot.href || '#'}?lang=${currentLang}`;
       return `
-        <a href="${escapeHtml(link)}" class="plot-card" aria-label="${escapeHtml(plot.alt || plot.title || 'Plot')}">
-          <img src="${escapeHtml(image)}" alt="${escapeHtml(plot.alt || plot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}'">
+        <a href="${escapeHtml(link)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
+          <img src="${escapeHtml(image)}" alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}'">
           <div class="card-body">
-            ${plot.chip ? `<div class="chip">${escapeHtml(plot.chip)}</div>` : ''}
-            <h3>${escapeHtml(plot.title || '')}</h3>
-            ${plot.meta ? `<div class="card-meta">${escapeHtml(plot.meta)}</div>` : ''}
-            ${plot.price ? `<div class="card-price">${escapeHtml(plot.price)}</div>` : ''}
-            ${plot.desc ? `<p>${escapeHtml(plot.desc)}</p>` : ''}
-            <div class="card-link">Zobacz działkę →</div>
+            ${localizedPlot.chip ? `<div class="chip">${escapeHtml(localizedPlot.chip)}</div>` : ''}
+            <h3>${escapeHtml(localizedPlot.title || '')}</h3>
+            ${localizedPlot.meta ? `<div class="card-meta">${escapeHtml(localizedPlot.meta)}</div>` : ''}
+            ${localizedPlot.price ? `<div class="card-price">${escapeHtml(localizedPlot.price)}</div>` : ''}
+            ${localizedPlot.desc ? `<p>${escapeHtml(localizedPlot.desc)}</p>` : ''}
+            <div class="card-link">${escapeHtml(ui.card_link)}</div>
           </div>
         </a>
       `;
@@ -463,20 +626,133 @@
     const renderPlots = async () => {
       const grid = document.getElementById('plotsGrid');
       if (!grid) return;
+      const ui = UI[currentLang] || UI.pl;
 
-      grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>Ładowanie ofert…</h3><p>Proszę czekać.</p></div></div>`;
+      grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(ui.loading_h)}</h3><p>${escapeHtml(ui.loading_p)}</p></div></div>`;
 
       const plots = await getPlots();
       if (!plots.length) {
-        grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>Brak widocznych obiektów</h3><p>Sprawdź plik <strong>plots-index.json</strong> lub dodaj pierwszy obiekt.</p></div></div>`;
+        grid.innerHTML = `<div class="plot-card"><div class="card-body"><h3>${escapeHtml(ui.empty_h)}</h3><p>${escapeHtml(ui.empty_p)}</p></div></div>`;
         return;
       }
 
       grid.innerHTML = plots.map(makeCardHtml).join('');
     };
 
+    const applyLanguage = async (lang) => {
+      currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      const ui = UI[currentLang] || UI.pl;
+
+      document.documentElement.lang = ui.html_lang;
+      document.title = ui.title;
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute('content', ui.description);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', ui.title);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', ui.description);
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute('content', ui.title);
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute('content', ui.description);
+
+      const navLinks = document.querySelectorAll('.nav a');
+      if (navLinks.length >= 6) {
+        navLinks[0].textContent = ui.nav_home;
+        navLinks[1].textContent = ui.nav_categories;
+        navLinks[2].textContent = ui.nav_contact;
+        navLinks[3].textContent = ui.nav_new;
+        navLinks[4].textContent = ui.nav_plots;
+        navLinks[5].textContent = ui.nav_build;
+      }
+
+      const breadcrumbs = document.querySelectorAll('.breadcrumbs a, .breadcrumbs span');
+      if (breadcrumbs.length >= 3) {
+        breadcrumbs[0].textContent = ui.breadcrumb_home;
+        breadcrumbs[2].textContent = ui.breadcrumb_current;
+      }
+
+      document.querySelector('.eyebrow').textContent = ui.eyebrow;
+      document.querySelector('.hero-copy h1').textContent = ui.hero_title;
+      document.querySelector('.hero-copy .lead').textContent = ui.hero_lead;
+      const topContacts = document.querySelectorAll('.contact-inline-wrap .contact-inline');
+      if (topContacts.length >= 2) {
+        topContacts[0].textContent = ui.call_now;
+        topContacts[1].textContent = ui.wa_now;
+      }
+
+      const benefitTitle = document.querySelector('#benefits h2');
+      if (benefitTitle) benefitTitle.textContent = ui.benefits_title;
+      const benefitCards = document.querySelectorAll('#benefits .benefit-item');
+      if (benefitCards.length >= 3) {
+        benefitCards[0].querySelector('h3').textContent = ui.b1t; benefitCards[0].querySelector('p').textContent = ui.b1d;
+        benefitCards[1].querySelector('h3').textContent = ui.b2t; benefitCards[1].querySelector('p').textContent = ui.b2d;
+        benefitCards[2].querySelector('h3').textContent = ui.b3t; benefitCards[2].querySelector('p').textContent = ui.b3d;
+      }
+
+      document.querySelector('#plots-list h2').textContent = ui.plots_title;
+      document.querySelector('#plots-list .center-text').textContent = ui.plots_intro;
+      document.querySelector('#locations h2').textContent = ui.locations_title;
+      document.querySelector('#locations .center-text').textContent = ui.locations_intro;
+      const locs = document.querySelectorAll('#locations .location-card');
+      if (locs.length >= 3) {
+        locs[0].querySelector('h3').textContent = ui.loc1t; locs[0].querySelector('p').textContent = ui.loc1d;
+        locs[1].querySelector('h3').textContent = ui.loc2t; locs[1].querySelector('p').textContent = ui.loc2d;
+        locs[2].querySelector('h3').textContent = ui.loc3t; locs[2].querySelector('p').textContent = ui.loc3d;
+      }
+
+      document.querySelector('#faq h2').textContent = ui.faq_title;
+      const faqs = document.querySelectorAll('#faq .faq-card');
+      if (faqs.length >= 3) {
+        faqs[0].querySelector('h3').textContent = ui.f1t; faqs[0].querySelector('p').textContent = ui.f1d;
+        faqs[1].querySelector('h3').textContent = ui.f2t; faqs[1].querySelector('p').textContent = ui.f2d;
+        faqs[2].querySelector('h3').textContent = ui.f3t; faqs[2].querySelector('p').textContent = ui.f3d;
+      }
+
+      const seo = document.querySelector('#seo-content');
+      if (seo) {
+        const h2 = seo.querySelector('h2');
+        const h3s = seo.querySelectorAll('h3');
+        const ps = seo.querySelectorAll('p');
+        if (h2) h2.textContent = ui.seo_h2;
+        if (h3s.length >= 4 && ps.length >= 4) {
+          h3s[0].textContent = ui.seo_h3_1; ps[0].textContent = ui.seo_p1;
+          h3s[1].textContent = ui.seo_h3_2; ps[1].textContent = ui.seo_p2;
+          h3s[2].textContent = ui.seo_h3_3; ps[2].textContent = ui.seo_p3;
+          h3s[3].textContent = ui.seo_h3_4; ps[3].textContent = ui.seo_p4;
+        }
+      }
+
+      document.querySelector('.contact-title').textContent = ui.contact_title;
+      document.querySelector('#contact .center-text').textContent = ui.contact_intro;
+      document.querySelector('.contact-note').textContent = ui.contact_note;
+      document.querySelector('.contact-avatar-role').textContent = ui.contact_role;
+      const contactBtns = document.querySelectorAll('#contact .cta-actions .btn');
+      if (contactBtns.length >= 2) {
+        contactBtns[0].textContent = ui.call_cta;
+        contactBtns[1].textContent = ui.wa_cta;
+      }
+      document.querySelector('.footer-copy').textContent = ui.footer_copy;
+      document.querySelector('.footer-bottom').textContent = ui.footer_bottom;
+
+      document.querySelectorAll('.lang-btn').forEach((btn, index) => {
+        const langs = ['pl','es','en','ru'];
+        btn.classList.toggle('active', langs[index] === currentLang);
+      });
+
+      updateUrlLang(currentLang);
+      await renderPlots();
+      await updateShareMeta();
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
-      renderPlots();
+      const initialLang = getLangFromUrl();
+      applyLanguage(initialLang);
+
+      document.querySelectorAll('.lang-btn').forEach((btn, index) => {
+        const langs = ['pl','es','en','ru'];
+        btn.addEventListener('click', () => applyLanguage(langs[index]));
+      });
 
       const header = document.querySelector('.topbar');
       const animatedCards = Array.from(document.querySelectorAll('.fade-up'));
@@ -528,4 +804,5 @@
     });
   </script>
 </body>
+</html>
 </html>
