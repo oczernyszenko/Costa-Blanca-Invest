@@ -765,15 +765,25 @@
       return Array.from(set).filter(Boolean);
     }
 
-    function buildImageCandidates(plot) {
-      const list = [];
-      const add = (src) => {
-        if (!src) return;
-        const normalized = String(src).trim();
-        if (!normalized || list.includes(normalized)) return;
-        list.push(normalized);
-      };
+   function buildImageCandidates(plot) {
+  const list = [];
 
+  const add = (src) => {
+    if (!src) return;
+    const normalized = String(src).trim();
+    if (!normalized || list.includes(normalized)) return;
+    list.push(normalized);
+  };
+
+  if (Array.isArray(plot?.gallery)) {
+    plot.gallery.forEach(add);
+  }
+
+  add(plot?.image);
+  add(FALLBACK_IMAGE);
+
+  return list;
+}
       add(plot?.image);
 
       const folders = toFolderCandidates(plot);
