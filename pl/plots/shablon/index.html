@@ -396,6 +396,7 @@
     const IMAGE_EXTENSIONS = ['jpg','jpeg','png','webp','avif','gif','JPG','JPEG','PNG','WEBP'];
     const JSON_CANDIDATES = [
       '/pl/plots/plots-index.json',
+      '/pl/plots-index.json',
       '/plots/plots-index.json',
       '/plots-index.json',
       '../../plots-index.json',
@@ -536,15 +537,43 @@
       const image = String(plot?.image || '').trim();
       const href = String(plot?.href || plot?.url_path || '').trim();
       const slug = String(plot?.slug || '').trim();
+      const addVariants = (value) => {
+        if (!value) return;
+        const raw = String(value).trim().replace(/^\/+|\/+$/g, '');
+        if (!raw) return;
+        set.add(raw);
+        set.add(slugify(raw));
+      };
+
       if (image) {
         const p = image.split('/').filter(Boolean);
-        if (p.length >= 3) set.add(p[2]);
+        if (p.length >= 3) addVariants(p[2]);
       }
       if (href) {
         const p = href.split('/').filter(Boolean);
-        if (p.length >= 3) set.add(p[2]);
+        if (p.length >= 3) addVariants(p[2]);
       }
-      if (slug) set.add(slug);
+      if (slug) addVariants(slug);
+
+      const aliases = {
+        'nou-nazareth': 'NouNazareth',
+        'san-juan': 'SanJuan',
+        'san-juan-investment-plot-1-5m': 'SanJuan',
+        'alicante-city-plot-700k': 'AlicanteCityPlot',
+        'benidorm-villa-plot-420k': 'BenidormPlanet',
+        'coveta-fuma-plot': 'CovetaFuma',
+        'alicante-plot-512m': 'Alicante',
+        'polop-plot': 'Polop',
+        'el-campello-plot-115k': 'Campella'
+      };
+
+      Object.entries(aliases).forEach(([key, value]) => {
+        if (set.has(key) || set.has(value) || set.has(slugify(value))) {
+          addVariants(key);
+          addVariants(value);
+        }
+      });
+
       return Array.from(set).filter(Boolean);
     }
 
@@ -553,15 +582,16 @@
       const add = (v) => { if (v && !list.includes(v)) list.push(v); };
       add(plot?.image);
       const folders = toFolderCandidates(plot);
+      const imageNames = ['1','2','3','4','5'];
+
       folders.forEach(folder => {
-        IMAGE_EXTENSIONS.forEach(ext => {
-          add(`/pl/plots/${folder}/1.${ext}`);
-          add(`/pl/plots/${folder}/2.${ext}`);
-          add(`/pl/plots/${folder}/3.${ext}`);
-          add(`/pl/plots/${folder}/4.${ext}`);
-          add(`/pl/plots/${folder}/5.${ext}`);
+        imageNames.forEach(num => {
+          IMAGE_EXTENSIONS.forEach(ext => {
+            add(`/pl/plots/${folder}/${num}.${ext}`);
+          });
         });
       });
+
       add(FALLBACK_IMAGE);
       return list;
     }
@@ -793,6 +823,8 @@
       console.assert(Array.isArray(buildImageCandidates(PREVIEW_PLOTS[0])), 'buildImageCandidates should return array');
       console.assert(buildCategoryUrl('pl').includes('/pl/plots/'), 'buildCategoryUrl should point to /pl/plots/');
       console.assert(typeof getSlugFromUrl() === 'string', 'getSlugFromUrl should return a string');
+      console.assert(toFolderCandidates({ slug: 'nou-nazareth' }).includes('NouNazareth'), 'alias map should support legacy folder names');
+      console.assert(toFolderCandidates({ href: '/pl/plots/SanJuan/' }).includes('san-juan'), 'folder candidates should include normalized variants');
     }
 
     async function init() {
@@ -801,9 +833,15 @@
         currentLang = getLangFromUrl();
         const slug = getSlugFromUrl();
         const plots = await getPlots();
-        currentPlot = plots.find(p => slugify(p.slug || '') === slug) || plots.find(p => slugify((p.href || '').split('/').filter(Boolean).pop() || '') === slug) || plots[0] || null;
+        const folderSlug = (plot) => slugify((String(plot?.href || plot?.url_path || '').split('/').filter(Boolean)[2]) || '');
+        currentPlot = plots.find(p => slugify(p.slug || '') === slug)
+          || plots.find(p => slugify((p.href || '').split('/').filter(Boolean).pop() || '') === slug)
+          || plots.find(p => folderSlug(p) === slug)
+          || plots[0]
+          || null;
         if (!currentPlot) throw new Error('No listings available');
 
+        qs('#loadingScreen').style.display = 'none';
         qs('#loadingScreen').hidden = true;
         qs('#propertyPage').hidden = false;
         applyLanguage(currentLang);
