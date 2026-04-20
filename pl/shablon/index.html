@@ -1096,5 +1096,111 @@
     ]
   }
   </script>
+  <!-- CATEGORY CARD TEMPLATE -->
+  <script>
+    window.CATEGORY_CARD_TEMPLATE = function categoryCardTemplate(data) {
+      return `
+        <a class="category-card" href="${data.url}" aria-label="${data.title}">
+          <div class="category-card-media">
+            <img src="${data.image}" alt="${data.title}" loading="lazy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">${data.title}</h3>
+            <div class="category-card-price">${data.price}</div>
+            <div class="category-card-meta">${data.meta}</div>
+          </div>
+        </a>
+      `;
+    };
+
+    window.CATEGORY_CARD_STYLES = `
+      .category-card {
+        display: block;
+        overflow: hidden;
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,246,238,.92));
+        border: 1px solid rgba(217,181,109,.18);
+        box-shadow: 0 16px 36px rgba(15,23,42,.08);
+        transition: transform .25s ease, box-shadow .25s ease;
+      }
+      .category-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 46px rgba(15,23,42,.12);
+      }
+      .category-card-media {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        background: #edf1f4;
+      }
+      .category-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .category-card-body {
+        padding: 18px 18px 20px;
+      }
+      .category-card-title {
+        margin: 0 0 10px;
+        color: var(--primary);
+        font-size: 22px;
+        line-height: 1.15;
+        letter-spacing: -.03em;
+      }
+      .category-card-price {
+        margin-bottom: 8px;
+        color: var(--gold-dark);
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.1;
+      }
+      .category-card-meta {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+      @media (max-width:768px) {
+        .category-card-title { font-size: 20px; }
+        .category-card-price { font-size: 22px; }
+      }
+    `;
+
+    window.renderCategoryCard = function renderCategoryCard(targetSelector, data = window.__CATEGORY_CARD_DATA__) {
+      const target = document.querySelector(targetSelector);
+      if (!target || !data) return;
+
+      if (!document.getElementById('category-card-styles')) {
+        const style = document.createElement('style');
+        style.id = 'category-card-styles';
+        style.textContent = window.CATEGORY_CARD_STYLES;
+        document.head.appendChild(style);
+      }
+
+      target.innerHTML = window.CATEGORY_CARD_TEMPLATE(data);
+    };
+
+    /*
+      USAGE IN CATEGORY PAGE:
+
+      1. Put a container where the card should appear:
+         <div id="plotCard1"></div>
+
+      2. Include this page data or pass your own object:
+         renderCategoryCard('#plotCard1', window.__CATEGORY_CARD_DATA__);
+
+      3. Expected object format:
+         {
+           image: 'https://.../1.png',
+           title: 'Działka inwestycyjna w El Campello (Amerador)',
+           price: '€ 3 700 000',
+           meta: '5 965 m² · do 30 domów',
+           url: 'https://...'
+         }
+
+      4. Main image for the category card always comes from image 1.
+    */
+  </script>
 </body>
 </html>
