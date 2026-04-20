@@ -25,7 +25,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Działka inwestycyjna w El Campello (Amerador)">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:type" id="ogImageTypeMeta" content="image/png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Działka inwestycyjna w El Campello (Amerador) | 5 965 m² | € 3 700 000">
@@ -44,7 +44,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="./1.png" fetchpriority="high">
+  <link rel="preload" as="image" id="heroPreload" href="./1.png" fetchpriority="high">
 
   <style>
     :root {
@@ -897,7 +897,11 @@
     }
   };
 
-  const PROPERTY_DATA = { slug: 'el-campello-amerador-plot-3-7m', images: ['1.png','2.png','3.png','4.png'], contact_phone: '+34604158859' };
+  const PROPERTY_DATA = {
+    slug: 'el-campello-amerador-plot-3-7m',
+    images: ['1.png','2.png','3.png','4.png'],
+    contact_phone: '+34604158859'
+  };
 
   document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
@@ -917,14 +921,46 @@
     function imageBaseRelative() { return './'; }
     function listingUrl() { return LIVE_URL; }
 
+    function getFileExtension(fileName = '') {
+      const clean = String(fileName).split('?')[0].split('#')[0];
+      const parts = clean.split('.');
+      return parts.length > 1 ? parts.pop().toLowerCase() : '';
+    }
+
+    function getMimeType(fileName = '') {
+      const ext = getFileExtension(fileName);
+      if (ext === 'png') return 'image/png';
+      if (ext === 'webp') return 'image/webp';
+      if (ext === 'avif') return 'image/avif';
+      if (ext === 'gif') return 'image/gif';
+      return 'image/jpeg';
+    }
+
+    function getMainImage() {
+      return PROPERTY_DATA.images[0] || '1.jpg';
+    }
+
+    function getImageAbsolute(fileName, lang = currentLang) {
+      return `${imageBaseAbsolute(lang)}${fileName}`;
+    }
+
+    function getImageRelative(fileName) {
+      return `${imageBaseRelative()}${fileName}`;
+    }
+
     window.handleBrokenImage = function(img) {
-      if (img.dataset.fallbackApplied === 'true') return;
-      img.dataset.fallbackApplied = 'true';
+      if (!img) return;
       if (img.classList.contains('agent-avatar')) {
+        if (img.dataset.fallbackApplied === 'true') return;
+        img.dataset.fallbackApplied = 'true';
         img.src = fallbackAvatar;
         return;
       }
-      img.src = '1.png';
+
+      const fallback = getImageRelative(getMainImage());
+      if ((img.getAttribute('src') || '') === fallback) return;
+      img.dataset.fallbackApplied = 'true';
+      img.src = fallback;
     };
 
     function setAttr(selector, attr, value) {
@@ -933,22 +969,27 @@
     }
 
     function applyMeta(t) {
+      const mainImage = getMainImage();
+      const mainImageAbsolute = getImageAbsolute(mainImage, currentLang);
+      const mainImageType = getMimeType(mainImage);
       document.documentElement.lang = t.lang;
       document.title = t.page_title;
       setAttr('meta[name="description"]', 'content', t.meta_description);
       setAttr('link[rel="canonical"]', 'href', LIVE_URL);
-      setAttr('link[rel="image_src"]', 'href', `${imageBaseAbsolute(currentLang)}1.png`);
+      setAttr('link[rel="image_src"]', 'href', mainImageAbsolute);
+      setAttr('#heroPreload', 'href', getImageRelative(mainImage));
       setAttr('meta[property="og:locale"]', 'content', t.locale);
       setAttr('meta[property="og:title"]', 'content', t.og_title);
       setAttr('meta[property="og:description"]', 'content', t.og_description);
       setAttr('meta[property="og:url"]', 'content', LIVE_URL);
-      setAttr('meta[property="og:image"]', 'content', `${imageBaseAbsolute(currentLang)}1.png`);
-      setAttr('meta[property="og:image:url"]', 'content', `${imageBaseAbsolute(currentLang)}1.png`);
-      setAttr('meta[property="og:image:secure_url"]', 'content', `${imageBaseAbsolute(currentLang)}1.png`);
+      setAttr('meta[property="og:image"]', 'content', mainImageAbsolute);
+      setAttr('meta[property="og:image:url"]', 'content', mainImageAbsolute);
+      setAttr('meta[property="og:image:secure_url"]', 'content', mainImageAbsolute);
       setAttr('meta[property="og:image:alt"]', 'content', t.og_image_alt);
+      setAttr('#ogImageTypeMeta', 'content', mainImageType);
       setAttr('meta[name="twitter:title"]', 'content', t.og_title);
       setAttr('meta[name="twitter:description"]', 'content', t.og_description);
-      setAttr('meta[name="twitter:image"]', 'content', `${imageBaseAbsolute(currentLang)}1.png`);
+      setAttr('meta[name="twitter:image"]', 'content', mainImageAbsolute);
       setAttr('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
       setAttr('meta[name="twitter:url"]', 'content', LIVE_URL);
     }
@@ -971,16 +1012,18 @@
     }
 
     function applyImages() {
-      const relative = imageBaseRelative();
       const currentText = TRANSLATIONS[currentLang] || TRANSLATIONS.pl;
       const heroImage = document.getElementById('heroImage');
+      const mainImage = getMainImage();
+
       if (heroImage) {
-        heroImage.src = `${relative}${PROPERTY_DATA.images[0]}`;
+        heroImage.src = getImageRelative(mainImage);
         heroImage.alt = currentText.og_image_alt;
       }
+
       mediaTriggers.forEach((item, index) => {
-        const fileName = PROPERTY_DATA.images[index] || PROPERTY_DATA.images[0];
-        const src = `${relative}${fileName}`;
+        const fileName = PROPERTY_DATA.images[index] || mainImage;
+        const src = getImageRelative(fileName);
         item.dataset.mediaSrc = src;
         const img = item.querySelector('img');
         if (img) {
@@ -996,6 +1039,13 @@
       applyMeta(t);
       applyText(t);
       applyImages();
+      window.__CATEGORY_CARD_DATA__ = {
+        image: getImageAbsolute(getMainImage(), 'pl'),
+        title: t.share_note_title || t.page_title,
+        price: t.price_range,
+        meta: t.price_soft,
+        url: LIVE_URL
+      };
       langButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === currentLang));
     }
 
@@ -1096,111 +1146,7 @@
     ]
   }
   </script>
-  <!-- CATEGORY CARD TEMPLATE -->
-  <script>
-    window.CATEGORY_CARD_TEMPLATE = function categoryCardTemplate(data) {
-      return `
-        <a class="category-card" href="${data.url}" aria-label="${data.title}">
-          <div class="category-card-media">
-            <img src="${data.image}" alt="${data.title}" loading="lazy">
-          </div>
-          <div class="category-card-body">
-            <h3 class="category-card-title">${data.title}</h3>
-            <div class="category-card-price">${data.price}</div>
-            <div class="category-card-meta">${data.meta}</div>
-          </div>
-        </a>
-      `;
-    };
 
-    window.CATEGORY_CARD_STYLES = `
-      .category-card {
-        display: block;
-        overflow: hidden;
-        border-radius: 24px;
-        background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,246,238,.92));
-        border: 1px solid rgba(217,181,109,.18);
-        box-shadow: 0 16px 36px rgba(15,23,42,.08);
-        transition: transform .25s ease, box-shadow .25s ease;
-      }
-      .category-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 24px 46px rgba(15,23,42,.12);
-      }
-      .category-card-media {
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 4 / 3;
-        background: #edf1f4;
-      }
-      .category-card-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .category-card-body {
-        padding: 18px 18px 20px;
-      }
-      .category-card-title {
-        margin: 0 0 10px;
-        color: var(--primary);
-        font-size: 22px;
-        line-height: 1.15;
-        letter-spacing: -.03em;
-      }
-      .category-card-price {
-        margin-bottom: 8px;
-        color: var(--gold-dark);
-        font-size: 24px;
-        font-weight: 900;
-        line-height: 1.1;
-      }
-      .category-card-meta {
-        color: var(--text-soft);
-        font-size: 14px;
-        line-height: 1.55;
-      }
-      @media (max-width:768px) {
-        .category-card-title { font-size: 20px; }
-        .category-card-price { font-size: 22px; }
-      }
-    `;
-
-    window.renderCategoryCard = function renderCategoryCard(targetSelector, data = window.__CATEGORY_CARD_DATA__) {
-      const target = document.querySelector(targetSelector);
-      if (!target || !data) return;
-
-      if (!document.getElementById('category-card-styles')) {
-        const style = document.createElement('style');
-        style.id = 'category-card-styles';
-        style.textContent = window.CATEGORY_CARD_STYLES;
-        document.head.appendChild(style);
-      }
-
-      target.innerHTML = window.CATEGORY_CARD_TEMPLATE(data);
-    };
-
-    /*
-      USAGE IN CATEGORY PAGE:
-
-      1. Put a container where the card should appear:
-         <div id="plotCard1"></div>
-
-      2. Include this page data or pass your own object:
-         renderCategoryCard('#plotCard1', window.__CATEGORY_CARD_DATA__);
-
-      3. Expected object format:
-         {
-           image: 'https://.../1.png',
-           title: 'Działka inwestycyjna w El Campello (Amerador)',
-           price: '€ 3 700 000',
-           meta: '5 965 m² · do 30 domów',
-           url: 'https://...'
-         }
-
-      4. Main image for the category card always comes from image 1.
-    */
-  </script>
+  
 </body>
 </html>
