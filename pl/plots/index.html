@@ -130,7 +130,6 @@
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(200,116,47,.15);flex:0 0 auto}
     .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
     .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease, transform .22s ease, box-shadow .22s ease}
-    .nav-icon{display:none}
     .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
     .nav a:hover{transform:translateY(-1px)}
@@ -466,11 +465,6 @@
     const SUPPORTED_LANGS = ['pl','es','en','ru'];
     const SITE_ORIGIN = 'https://costa-blanca-invest.com';
     const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'avif', 'gif', 'JPG', 'JPEG', 'PNG', 'WEBP', 'AVIF', 'GIF'];
-    const ROUTE_ALIASES = {
-      'villajoyosa-first-line-plot-3-2m': '/pl/plots/villajoyosa-sea-plot-3-2m/',
-      'alicante-residential-building-plot-470k': '/pl/plots/residential-building-plot-8-units-470k/',
-      'playa-san-juan-villa-plot-1260m': '/pl/plots/playa-san-juan-villa-plot-1-1m/'
-    };
 
     const UI = {
       pl: {
@@ -544,28 +538,16 @@
 
     const PREVIEW_PLOTS = [
       {
-        slug: 'playa-san-juan-villa-plot-1-1m',
-        href: '/pl/plots/playa-san-juan-villa-plot-1-1m/',
-        image: '/pl/plots/playa-san-juan-villa-plot-1-1m/1.jpg',
-        alt: 'Działka pod willę w Playa San Juan',
-        chip: 'Villa Plot',
-        title: 'Działka — Playa San Juan (1260 m²)',
-        meta: 'Playa San Juan · 1260 m² · willa',
-        price: '€ 1 100 000',
-        price_value: 1100000,
-        desc: 'Działka 1260 m² pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.'
-      },
-      {
-        slug: 'finestrat-plot-3-villas-sea-mountain-view',
-        href: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/',
-        image: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg',
-        alt: 'Działka w Finestrat z widokiem na morze i góry',
-        chip: 'Sea View Plot',
-        title: 'Działka — Finestrat (3 wille)',
-        meta: 'Finestrat · widok na morze i góry · 3 wille',
+        slug: 'preview-plot',
+        href: '/pl/plots/shablon/?slug=preview-plot',
+        image: '/pl/plots/plots-hero.png',
+        alt: 'Działka demonstracyjna',
+        chip: 'Działka',
+        title: 'Oferta demonstracyjna',
+        meta: 'Costa Blanca',
         price: '€ 500 000',
         price_value: 500000,
-        desc: 'Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry.'
+        desc: 'To podgląd awaryjny, gdy plik plots-index.json nie jest dostępny.'
       }
     ];
 
@@ -609,12 +591,23 @@
 
     const normalizePathname = (value) => {
       if (!value) return '';
+
+      if (/^https?:\/\//i.test(value)) {
+        const url = new URL(value);
+        url.pathname = url.pathname.replace(/\/+/g, '/');
+        if (!url.pathname.endsWith('/')) url.pathname += '/';
+        return url.toString();
+      }
+
       let path = String(value).trim();
       if (!path.startsWith('/')) path = `/${path}`;
-      path = path.replace(/\/+/g, '/');
-      path = path.replace(/\?.*$/, '');
-      if (!path.endsWith('/')) path = `${path}/`;
-      return path;
+
+      const [pathname, search = ''] = path.split('?');
+      let cleanPath = pathname.replace(/\/+/g, '/');
+
+      if (!cleanPath.endsWith('/')) cleanPath = `${cleanPath}/`;
+
+      return search ? `${cleanPath}?${search}` : cleanPath;
     };
 
     const sanitizeFolderName = (value) => String(value || '')
@@ -644,8 +637,14 @@
       }
 
       if (href) {
-        const parts = normalizePathname(href).split('/').filter(Boolean);
-        if (parts.length >= 3) set.add(parts[2]);
+        try {
+          const hrefUrl = new URL(href, SITE_ORIGIN);
+          const slugFromHref = hrefUrl.searchParams.get('slug');
+          if (slugFromHref) set.add(slugFromHref);
+
+          const parts = hrefUrl.pathname.split('/').filter(Boolean);
+          if (parts.length >= 3 && parts[2] !== 'shablon') set.add(parts[2]);
+        } catch {}
       }
 
       if (slug) {
@@ -660,6 +659,7 @@
           .replace(/^Plot\s*[—-]\s*/i, '')
           .replace(/^Участок\s*[—-]\s*/i, '')
           .trim();
+
         if (titleClean) {
           set.add(toPascalFolder(titleClean));
           set.add(slugifyPathSegment(titleClean));
@@ -680,8 +680,7 @@
         candidates.push(normalized);
       };
 
-      const explicitImage = String(plot?.image || '').trim();
-      add(explicitImage);
+      add(plot?.image);
 
       const folderNames = getFolderNameCandidates(plot);
       folderNames.forEach((folder) => {
@@ -692,40 +691,25 @@
         });
       });
 
-      const normalizedHref = normalizePathname(plot?.href || plot?.url_path || '');
-      if (normalizedHref) {
-        const folderPath = normalizedHref.replace(/\/$/, '');
-        IMAGE_EXTENSIONS.forEach((ext) => {
-          add(`${folderPath}/1.${ext}`);
-          add(`${folderPath}/cover.${ext}`);
-          add(`${folderPath}/hero.${ext}`);
-        });
-      }
-
       add(fallbackImage);
       return candidates;
     };
 
-    const applyRouteAlias = (path) => {
-      const normalized = normalizePathname(path);
-      const aliasMap = {
-        '/pl/plots/villajoyosa-first-line-plot-3-2m/': '/pl/plots/villajoyosa-sea-plot-3-2m/',
-        '/pl/plots/alicante-residential-building-plot-470k/': '/pl/plots/residential-building-plot-8-units-470k/',
-        '/pl/plots/playa-san-juan-villa-plot-1260m/': '/pl/plots/playa-san-juan-villa-plot-1-1m/'
-      };
-      return aliasMap[normalized] || normalized;
-    };
-
     const withLangParam = (urlLike, lang) => {
       if (!urlLike || urlLike === '#') return '#';
+
+      const url = /^https?:\/\//i.test(urlLike)
+        ? new URL(urlLike)
+        : new URL(urlLike, SITE_ORIGIN);
+
+      if (lang !== 'pl') url.searchParams.set('lang', lang);
+      else url.searchParams.delete('lang');
+
       if (/^https?:\/\//i.test(urlLike)) {
-        const url = new URL(urlLike);
-        if (lang !== 'pl') url.searchParams.set('lang', lang);
-        else url.searchParams.delete('lang');
         return url.toString();
       }
-      if (lang === 'pl') return urlLike;
-      return `${urlLike}?lang=${lang}`;
+
+      return `${url.pathname}${url.search}${url.hash}`;
     };
 
     const buildInternalUrl = (path, lang = currentLang) => withLangParam(normalizePathname(path), lang);
@@ -752,22 +736,22 @@
 
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) canonical.setAttribute('href', shareUrl);
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      if (ogUrl) ogUrl.setAttribute('content', shareUrl);
-      const twUrl = document.querySelector('meta[name="twitter:url"]');
-      if (twUrl) twUrl.setAttribute('content', shareUrl);
-      const ogImg = document.querySelector('meta[property="og:image"]');
-      const ogImgUrl = document.querySelector('meta[property="og:image:url"]');
-      const ogImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
-      const twImg = document.querySelector('meta[name="twitter:image"]');
-      if (ogImg) ogImg.setAttribute('content', shareImage);
-      if (ogImgUrl) ogImgUrl.setAttribute('content', shareImage);
-      if (ogImgSecure) ogImgSecure.setAttribute('content', shareImage);
-      if (twImg) twImg.setAttribute('content', shareImage);
+
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', shareUrl);
+      document.querySelector('meta[name="twitter:url"]')?.setAttribute('content', shareUrl);
+      document.querySelector('meta[property="og:image"]')?.setAttribute('content', shareImage);
+      document.querySelector('meta[property="og:image:url"]')?.setAttribute('content', shareImage);
+      document.querySelector('meta[property="og:image:secure_url"]')?.setAttribute('content', shareImage);
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', shareImage);
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', shareTitle);
+      document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', shareTitle);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', ui.description);
+      document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', ui.description);
 
       const shareTitleEl = document.getElementById('shareTitle');
       const fbBtn = document.getElementById('shareFacebookBtn');
       const waBtn = document.getElementById('shareWhatsappBtn');
+
       if (shareTitleEl) shareTitleEl.textContent = ui.share_title;
       if (fbBtn) {
         fbBtn.textContent = ui.share_fb;
@@ -828,24 +812,19 @@
       const normalizedSlug = slugifyPathSegment(rawSlug);
 
       if (explicitDetailPath) {
-        return withLangParam(applyRouteAlias(explicitDetailPath), lang);
+        return withLangParam(explicitDetailPath, lang);
       }
 
       if (explicitPath) {
-        return withLangParam(applyRouteAlias(explicitPath), lang);
+        return withLangParam(explicitPath, lang);
       }
 
       if (rawHref) {
-        if (/^https?:\/\//i.test(rawHref)) return withLangParam(rawHref, lang);
-        return withLangParam(applyRouteAlias(rawHref), lang);
-      }
-
-      if (rawSlug && ROUTE_ALIASES[rawSlug]) {
-        return withLangParam(normalizePathname(ROUTE_ALIASES[rawSlug]), lang);
+        return withLangParam(rawHref, lang);
       }
 
       if (normalizedSlug) {
-        return withLangParam(applyRouteAlias(`/pl/plots/${normalizedSlug}/`), lang);
+        return withLangParam(`/pl/plots/shablon/?slug=${encodeURIComponent(normalizedSlug)}`, lang);
       }
 
       return '#';
@@ -885,12 +864,11 @@
       let candidates = [];
       try {
         candidates = JSON.parse(img.getAttribute('data-image-candidates') || '[]');
-      } catch (error) {
+      } catch {
         candidates = [];
       }
 
-      let currentIndex = Number(img.getAttribute('data-image-index') || 0);
-      currentIndex += 1;
+      let currentIndex = Number(img.getAttribute('data-image-index') || 0) + 1;
 
       if (currentIndex < candidates.length) {
         img.setAttribute('data-image-index', String(currentIndex));
@@ -972,20 +950,11 @@
         document.documentElement.lang = ui.html_lang;
         document.title = ui.title;
 
-        const desc = document.querySelector('meta[name="description"]');
-        if (desc) desc.setAttribute('content', ui.description);
-
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute('content', ui.title);
-
-        const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute('content', ui.description);
-
-        const twTitle = document.querySelector('meta[name="twitter:title"]');
-        if (twTitle) twTitle.setAttribute('content', ui.title);
-
-        const twDesc = document.querySelector('meta[name="twitter:description"]');
-        if (twDesc) twDesc.setAttribute('content', ui.description);
+        document.querySelector('meta[name="description"]')?.setAttribute('content', ui.description);
+        document.querySelector('meta[property="og:title"]')?.setAttribute('content', ui.title);
+        document.querySelector('meta[property="og:description"]')?.setAttribute('content', ui.description);
+        document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', ui.title);
+        document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', ui.description);
 
         const navLinks = document.querySelectorAll('.nav a');
         if (navLinks.length >= 6) {
@@ -1013,8 +982,8 @@
 
         const topContacts = document.querySelectorAll('.contact-inline-wrap .contact-inline');
         if (topContacts.length >= 2) {
-          topContacts[0].innerHTML = `${ui.call_now}`;
-          topContacts[1].innerHTML = `${ui.wa_now}`;
+          topContacts[0].innerHTML = ui.call_now;
+          topContacts[1].innerHTML = ui.wa_now;
         }
 
         setText('#benefits h2', ui.benefits_title);
