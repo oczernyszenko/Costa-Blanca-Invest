@@ -671,31 +671,53 @@
       return Array.from(set).filter(Boolean);
     };
 
-    const buildImageCandidates = (plot) => {
-      const candidates = [];
-      const add = (src) => {
-        if (!src) return;
-        const normalized = String(src).trim();
-        if (!normalized || candidates.includes(normalized)) return;
-        candidates.push(normalized);
-      };
+   const buildImageCandidates = (plot) => {
+  const candidates = [];
+  const add = (src) => {
+    if (!src) return;
+    const normalized = String(src).trim();
+    if (!normalized || candidates.includes(normalized)) return;
+    candidates.push(normalized);
+  };
 
-      add(plot?.image);
+  add(plot?.image);
 
-      const folderNames = getFolderNameCandidates(plot);
-      folderNames.forEach((folder) => {
-        IMAGE_EXTENSIONS.forEach((ext) => {
-          add(`/pl/plots/${folder}/1.${ext}`);
-          add(`/pl/plots/${folder}/cover.${ext}`);
-          add(`/pl/plots/${folder}/hero.${ext}`);
-        });
+  const folderNames = getFolderNameCandidates(plot);
+
+ const buildImageCandidates = (plot) => {
+  const candidates = [];
+  const add = (src) => {
+    if (!src) return;
+    const normalized = String(src).trim();
+    if (!normalized || candidates.includes(normalized)) return;
+    candidates.push(normalized);
+  };
+
+  add(plot?.image);
+
+  const folderNames = getFolderNameCandidates(plot);
+
+  folderNames.forEach((folder) => {
+    // перебор 1–12
+    for (let i = 1; i <= 12; i++) {
+      IMAGE_EXTENSIONS.forEach((ext) => {
+        add(`/pl/plots/${folder}/${i}.${ext}`);
       });
+    }
 
-      add(fallbackImage);
-      return candidates;
-    };
+    // спец названия
+    IMAGE_EXTENSIONS.forEach((ext) => {
+      add(`/pl/plots/${folder}/cover.${ext}`);
+      add(`/pl/plots/${folder}/hero.${ext}`);
+      add(`/pl/plots/${folder}/main.${ext}`);
+      add(`/pl/plots/${folder}/preview.${ext}`);
+    });
+  });
 
-    const withLangParam = (urlLike, lang) => {
+  add(fallbackImage);
+  return candidates;
+};
+     const withLangParam = (urlLike, lang) => {
       if (!urlLike || urlLike === '#') return '#';
 
       const url = /^https?:\/\//i.test(urlLike)
