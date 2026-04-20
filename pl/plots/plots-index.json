@@ -2,14 +2,37 @@
   {
     "slug": "nou-nazareth",
     "href": "/pl/plots/shablon/?slug=nou-nazareth",
-    "image": "/pl/plots/NouNazareth/1.jpg",
+    "image": "/pl/plots/NouNazareth/1.png",
     "alt": "Działka inwestycyjna Nou Nazareth",
     "chip": "Działka deweloperska",
     "title": "Działka inwestycyjna — Nou Nazareth",
     "meta": "San Juan · 4 936 m²",
     "price": "€ 3 760 000",
     "price_value": 3760000,
-    "desc": "Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski."
+    "desc": "Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski.",
+    "translations": {
+      "en": {
+        "alt": "Nou Nazareth investment plot",
+        "chip": "Development plot",
+        "title": "Investment plot — Nou Nazareth",
+        "meta": "San Juan · 4,936 m²",
+        "desc": "Large investment plot in a prestigious location, suitable for a development project."
+      },
+      "es": {
+        "alt": "Parcela de inversión Nou Nazareth",
+        "chip": "Parcela promotora",
+        "title": "Parcela de inversión — Nou Nazareth",
+        "meta": "San Juan · 4.936 m²",
+        "desc": "Gran parcela de inversión en una ubicación prestigiosa, adecuada para un proyecto promotor."
+      },
+      "ru": {
+        "alt": "Инвестиционный участок Nou Nazareth",
+        "chip": "Девелоперский участок",
+        "title": "Инвестиционный участок — Nou Nazareth",
+        "meta": "San Juan · 4 936 м²",
+        "desc": "Крупный инвестиционный участок в престижной локации, подходящий под девелоперский проект."
+      }
+    }
   },
   {
     "slug": "el-campello-amerador-plot-3-7m",
@@ -21,7 +44,30 @@
     "meta": "El Campello · Amerador · projekt deweloperski",
     "price": "€ 3 700 000",
     "price_value": 3700000,
-    "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza."
+    "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza.",
+    "translations": {
+      "en": {
+        "alt": "El Campello Amerador investment plot",
+        "chip": "Development plot",
+        "title": "Plot — El Campello (Amerador)",
+        "meta": "El Campello · Amerador · development project",
+        "desc": "Large investment plot in El Campello, in the Amerador area, for a development project close to the sea."
+      },
+      "es": {
+        "alt": "Parcela de inversión El Campello Amerador",
+        "chip": "Parcela promotora",
+        "title": "Parcela — El Campello (Amerador)",
+        "meta": "El Campello · Amerador · proyecto promotor",
+        "desc": "Gran parcela de inversión en El Campello, en la zona de Amerador, para un proyecto promotor cerca del mar."
+      },
+      "ru": {
+        "alt": "Инвестиционный участок El Campello Amerador",
+        "chip": "Девелоперский участок",
+        "title": "Участок — El Campello (Amerador)",
+        "meta": "El Campello · Amerador · девелоперский проект",
+        "desc": "Крупный инвестиционный участок в El Campello, в районе Amerador, под девелоперский проект рядом с морем."
+      }
+    }
   },
   {
     "slug": "villajoyosa-sea-plot-3-2m",
@@ -33,7 +79,30 @@
     "meta": "Villajoyosa · 1 linia · projekt deweloperski",
     "price": "€ 3 200 000",
     "price_value": 3200000,
-    "desc": "Działka na pierwszej linii morza pod budowę 2 budynków i 24 apartamentów."
+    "desc": "Działka na pierwszej linii morza pod budowę 2 budynków i 24 apartamentów.",
+    "translations": {
+      "en": {
+        "alt": "First-line sea plot in Villajoyosa",
+        "chip": "First-line sea plot",
+        "title": "Plot — Villajoyosa (first sea line)",
+        "meta": "Villajoyosa · first line · development project",
+        "desc": "First-line sea plot for the construction of 2 buildings and 24 apartments."
+      },
+      "es": {
+        "alt": "Parcela en primera línea de mar en Villajoyosa",
+        "chip": "Parcela en 1ª línea de mar",
+        "title": "Parcela — Villajoyosa (1ª línea de mar)",
+        "meta": "Villajoyosa · 1ª línea · proyecto promotor",
+        "desc": "Parcela en primera línea de mar para la construcción de 2 edificios y 24 apartamentos."
+      },
+      "ru": {
+        "alt": "Участок на первой линии моря в Villajoyosa",
+        "chip": "Участок на 1-й линии моря",
+        "title": "Участок — Villajoyosa (1 линия моря)",
+        "meta": "Villajoyosa · 1 линия · девелоперский проект",
+        "desc": "Участок на первой линии моря под строительство 2 зданий и 24 апартаментов."
+      }
+    }
   },
   {
     "slug": "benidorm-finestrat-plot-1-6m",
@@ -45,19 +114,65 @@
     "meta": "Benidorm · Finestrat · premium investment",
     "price": "€ 1 600 000",
     "price_value": 1600000,
-    "desc": "Premium działka inwestycyjna pod zabudowę mieszkaniową lub kompleks willowy."
+    "desc": "Premium działka inwestycyjna pod zabudowę mieszkaniową lub kompleks willowy.",
+    "translations": {
+      "en": {
+        "alt": "Premium investment plot Benidorm Finestrat",
+        "chip": "Premium plot",
+        "title": "Plot — Benidorm / Finestrat",
+        "meta": "Benidorm · Finestrat · premium investment",
+        "desc": "Premium investment plot for residential development or a villa complex."
+      },
+      "es": {
+        "alt": "Parcela premium de inversión Benidorm Finestrat",
+        "chip": "Parcela premium",
+        "title": "Parcela — Benidorm / Finestrat",
+        "meta": "Benidorm · Finestrat · inversión premium",
+        "desc": "Parcela premium de inversión para desarrollo residencial o complejo de villas."
+      },
+      "ru": {
+        "alt": "Премиальный инвестиционный участок Benidorm Finestrat",
+        "chip": "Премиальный участок",
+        "title": "Участок — Benidorm / Finestrat",
+        "meta": "Benidorm · Finestrat · премиальная инвестиция",
+        "desc": "Премиальный инвестиционный участок под жилую застройку или комплекс вилл."
+      }
+    }
   },
   {
     "slug": "san-juan-investment-plot-1-5m",
     "href": "/pl/plots/shablon/?slug=san-juan-investment-plot-1-5m",
-    "image": "/pl/plots/SanJuan/1.jpg",
+    "image": "/pl/plots/SanJuan/1.png",
     "alt": "Działka inwestycyjna San Juan",
     "chip": "Działka inwestycyjna",
     "title": "Działka — San Juan",
     "meta": "San Juan",
     "price": "€ 1 500 000",
     "price_value": 1500000,
-    "desc": "Działka inwestycyjna w prestiżowej lokalizacji San Juan."
+    "desc": "Działka inwestycyjna w prestiżowej lokalizacji San Juan.",
+    "translations": {
+      "en": {
+        "alt": "San Juan investment plot",
+        "chip": "Investment plot",
+        "title": "Plot — San Juan",
+        "meta": "San Juan",
+        "desc": "Investment plot in the prestigious San Juan location."
+      },
+      "es": {
+        "alt": "Parcela de inversión San Juan",
+        "chip": "Parcela de inversión",
+        "title": "Parcela — San Juan",
+        "meta": "San Juan",
+        "desc": "Parcela de inversión en la prestigiosa zona de San Juan."
+      },
+      "ru": {
+        "alt": "Инвестиционный участок San Juan",
+        "chip": "Инвестиционный участок",
+        "title": "Участок — San Juan",
+        "meta": "San Juan",
+        "desc": "Инвестиционный участок в престижной локации San Juan."
+      }
+    }
   },
   {
     "slug": "finestrat-benidorm-plot-1-4m",
@@ -69,7 +184,30 @@
     "meta": "Finestrat · Benidorm",
     "price": "€ 1 400 000",
     "price_value": 1400000,
-    "desc": "Duża działka inwestycyjna pod projekt mieszkaniowy lub wille premium."
+    "desc": "Duża działka inwestycyjna pod projekt mieszkaniowy lub wille premium.",
+    "translations": {
+      "en": {
+        "alt": "Finestrat Benidorm investment plot",
+        "chip": "Investment plot",
+        "title": "Plot — Finestrat / Benidorm",
+        "meta": "Finestrat · Benidorm",
+        "desc": "Large investment plot for a residential project or premium villas."
+      },
+      "es": {
+        "alt": "Parcela de inversión Finestrat Benidorm",
+        "chip": "Parcela de inversión",
+        "title": "Parcela — Finestrat / Benidorm",
+        "meta": "Finestrat · Benidorm",
+        "desc": "Gran parcela de inversión para proyecto residencial o villas premium."
+      },
+      "ru": {
+        "alt": "Инвестиционный участок Finestrat Benidorm",
+        "chip": "Инвестиционный участок",
+        "title": "Участок — Finestrat / Benidorm",
+        "meta": "Finestrat · Benidorm",
+        "desc": "Крупный инвестиционный участок под жилой проект или премиальные виллы."
+      }
+    }
   },
   {
     "slug": "vistahermosa-alicante-plot-2850m",
@@ -81,7 +219,30 @@
     "meta": "Alicante · Vistahermosa",
     "price": "€ 1 350 000",
     "price_value": 1350000,
-    "desc": "Przestronna działka w prestiżowej dzielnicy Alicante."
+    "desc": "Przestronna działka w prestiżowej dzielnicy Alicante.",
+    "translations": {
+      "en": {
+        "alt": "2,850 m² plot in Vistahermosa Alicante",
+        "chip": "Premium plot",
+        "title": "Plot — Vistahermosa (2,850 m²)",
+        "meta": "Alicante · Vistahermosa",
+        "desc": "Spacious plot in the prestigious district of Alicante."
+      },
+      "es": {
+        "alt": "Parcela de 2.850 m² en Vistahermosa Alicante",
+        "chip": "Parcela premium",
+        "title": "Parcela — Vistahermosa (2.850 m²)",
+        "meta": "Alicante · Vistahermosa",
+        "desc": "Amplia parcela en una prestigiosa zona de Alicante."
+      },
+      "ru": {
+        "alt": "Участок 2850 м² в Vistahermosa Alicante",
+        "chip": "Премиальный участок",
+        "title": "Участок — Vistahermosa (2 850 м²)",
+        "meta": "Alicante · Vistahermosa",
+        "desc": "Просторный участок в престижном районе Alicante."
+      }
+    }
   },
   {
     "slug": "playa-san-juan-villa-plot-1-1m",
@@ -93,7 +254,30 @@
     "meta": "Playa San Juan · willa",
     "price": "€ 1 100 000",
     "price_value": 1100000,
-    "desc": "Działka pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem."
+    "desc": "Działka pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.",
+    "translations": {
+      "en": {
+        "alt": "Villa plot Playa San Juan",
+        "chip": "Villa plot",
+        "title": "Plot — Playa San Juan (1,260 m²)",
+        "meta": "Playa San Juan · villa",
+        "desc": "Plot for the construction of a private villa in a prestigious seaside location."
+      },
+      "es": {
+        "alt": "Parcela para villa Playa San Juan",
+        "chip": "Parcela para villa",
+        "title": "Parcela — Playa San Juan (1.260 m²)",
+        "meta": "Playa San Juan · villa",
+        "desc": "Parcela para la construcción de una villa privada en una ubicación prestigiosa junto al mar."
+      },
+      "ru": {
+        "alt": "Участок под виллу Playa San Juan",
+        "chip": "Участок под виллу",
+        "title": "Участок — Playa San Juan (1260 м²)",
+        "meta": "Playa San Juan · вилла",
+        "desc": "Участок под строительство частной виллы в престижной локации у моря."
+      }
+    }
   },
   {
     "slug": "finestrat-plot-1600m-750k",
@@ -105,19 +289,65 @@
     "meta": "Finestrat",
     "price": "€ 750 000",
     "price_value": 750000,
-    "desc": "Działka pod budowę domu lub projektu inwestycyjnego."
+    "desc": "Działka pod budowę domu lub projektu inwestycyjnego.",
+    "translations": {
+      "en": {
+        "alt": "1,600 m² plot Finestrat",
+        "chip": "Building plot",
+        "title": "Plot — Finestrat (1,600 m²)",
+        "meta": "Finestrat",
+        "desc": "Plot for building a house or an investment project."
+      },
+      "es": {
+        "alt": "Parcela de 1.600 m² Finestrat",
+        "chip": "Parcela urbanizable",
+        "title": "Parcela — Finestrat (1.600 m²)",
+        "meta": "Finestrat",
+        "desc": "Parcela para construir una casa o un proyecto de inversión."
+      },
+      "ru": {
+        "alt": "Участок 1600 м² Finestrat",
+        "chip": "Строительный участок",
+        "title": "Участок — Finestrat (1600 м²)",
+        "meta": "Finestrat",
+        "desc": "Участок под строительство дома или инвестиционного проекта."
+      }
+    }
   },
   {
     "slug": "alicante-city-plot-700k",
     "href": "/pl/plots/shablon/?slug=alicante-city-plot-700k",
-    "image": "/pl/plots/AlicanteCityPlot/1.jpg",
+    "image": "/pl/plots/AlicanteCityPlot/1.png",
     "alt": "Działka Alicante City",
     "chip": "Działka miejska",
     "title": "Działka — Alicante City",
     "meta": "centrum",
     "price": "€ 700 000",
     "price_value": 700000,
-    "desc": "Grunt inwestycyjny w miejskiej lokalizacji."
+    "desc": "Grunt inwestycyjny w miejskiej lokalizacji.",
+    "translations": {
+      "en": {
+        "alt": "Alicante City plot",
+        "chip": "Urban plot",
+        "title": "Plot — Alicante City",
+        "meta": "city centre",
+        "desc": "Investment land in an urban location."
+      },
+      "es": {
+        "alt": "Parcela Alicante City",
+        "chip": "Parcela urbana",
+        "title": "Parcela — Alicante City",
+        "meta": "centro",
+        "desc": "Suelo de inversión en ubicación urbana."
+      },
+      "ru": {
+        "alt": "Участок Alicante City",
+        "chip": "Городской участок",
+        "title": "Участок — Alicante City",
+        "meta": "центр",
+        "desc": "Инвестиционная земля в городской локации."
+      }
+    }
   },
   {
     "slug": "alicante-plot-630k",
@@ -129,7 +359,30 @@
     "meta": "Alicante",
     "price": "€ 630 000",
     "price_value": 630000,
-    "desc": "Działka gotowa pod budowę domu."
+    "desc": "Działka gotowa pod budowę domu.",
+    "translations": {
+      "en": {
+        "alt": "465 m² plot Alicante",
+        "chip": "Urban plot",
+        "title": "465 m² plot in Alicante",
+        "meta": "Alicante",
+        "desc": "Plot ready for house construction."
+      },
+      "es": {
+        "alt": "Parcela de 465 m² Alicante",
+        "chip": "Parcela urbana",
+        "title": "Parcela de 465 m² en Alicante",
+        "meta": "Alicante",
+        "desc": "Parcela lista para construir una casa."
+      },
+      "ru": {
+        "alt": "Участок 465 м² Alicante",
+        "chip": "Городской участок",
+        "title": "Участок 465 м² в Alicante",
+        "meta": "Alicante",
+        "desc": "Участок, готовый под строительство дома."
+      }
+    }
   },
   {
     "slug": "san-juan-plot-600k",
@@ -141,7 +394,30 @@
     "meta": "San Juan",
     "price": "€ 600 000",
     "price_value": 600000,
-    "desc": "Działka pod budowę domu lub inwestycję."
+    "desc": "Działka pod budowę domu lub inwestycję.",
+    "translations": {
+      "en": {
+        "alt": "San Juan plot",
+        "chip": "Investment plot",
+        "title": "Plot — San Juan",
+        "meta": "San Juan",
+        "desc": "Plot for building a house or for investment."
+      },
+      "es": {
+        "alt": "Parcela San Juan",
+        "chip": "Parcela de inversión",
+        "title": "Parcela — San Juan",
+        "meta": "San Juan",
+        "desc": "Parcela para construir una casa o para inversión."
+      },
+      "ru": {
+        "alt": "Участок San Juan",
+        "chip": "Инвестиционный участок",
+        "title": "Участок — San Juan",
+        "meta": "San Juan",
+        "desc": "Участок под строительство дома или инвестицию."
+      }
+    }
   },
   {
     "slug": "finestrat-plot-3-villas",
@@ -153,7 +429,30 @@
     "meta": "Finestrat",
     "price": "€ 500 000",
     "price_value": 500000,
-    "desc": "Działka pod 3 wille z widokiem na morze i góry."
+    "desc": "Działka pod 3 wille z widokiem na morze i góry.",
+    "translations": {
+      "en": {
+        "alt": "Finestrat plot with sea view",
+        "chip": "View plot",
+        "title": "Plot — Finestrat (3 villas)",
+        "meta": "Finestrat",
+        "desc": "Plot for 3 villas with sea and mountain views."
+      },
+      "es": {
+        "alt": "Parcela Finestrat con vistas al mar",
+        "chip": "Parcela con vistas",
+        "title": "Parcela — Finestrat (3 villas)",
+        "meta": "Finestrat",
+        "desc": "Parcela para 3 villas con vistas al mar y a la montaña."
+      },
+      "ru": {
+        "alt": "Участок Finestrat с видом на море",
+        "chip": "Участок с видом",
+        "title": "Участок — Finestrat (3 виллы)",
+        "meta": "Finestrat",
+        "desc": "Участок под 3 виллы с видом на море и горы."
+      }
+    }
   },
   {
     "slug": "alicante-building-plot-470k",
@@ -165,7 +464,30 @@
     "meta": "Alicante",
     "price": "€ 470 000",
     "price_value": 470000,
-    "desc": "Działka pod budowę budynku mieszkalnego."
+    "desc": "Działka pod budowę budynku mieszkalnego.",
+    "translations": {
+      "en": {
+        "alt": "Plot for residential building Alicante",
+        "chip": "Development plot",
+        "title": "Plot — Alicante (8 units)",
+        "meta": "Alicante",
+        "desc": "Plot for the construction of a residential building."
+      },
+      "es": {
+        "alt": "Parcela para edificio residencial Alicante",
+        "chip": "Parcela promotora",
+        "title": "Parcela — Alicante (8 viviendas)",
+        "meta": "Alicante",
+        "desc": "Parcela para la construcción de un edificio residencial."
+      },
+      "ru": {
+        "alt": "Участок под жилой дом Alicante",
+        "chip": "Девелоперский участок",
+        "title": "Участок — Alicante (8 квартир)",
+        "meta": "Alicante",
+        "desc": "Участок под строительство жилого здания."
+      }
+    }
   },
   {
     "slug": "benidorm-villa-plot-420k",
@@ -177,19 +499,65 @@
     "meta": "Benidorm",
     "price": "€ 420 000",
     "price_value": 420000,
-    "desc": "Działka miejska pod budowę willi."
+    "desc": "Działka miejska pod budowę willi.",
+    "translations": {
+      "en": {
+        "alt": "Villa plot Benidorm",
+        "chip": "Villa plot",
+        "title": "Plot — Benidorm",
+        "meta": "Benidorm",
+        "desc": "Urban plot for villa construction."
+      },
+      "es": {
+        "alt": "Parcela para villa Benidorm",
+        "chip": "Parcela para villa",
+        "title": "Parcela — Benidorm",
+        "meta": "Benidorm",
+        "desc": "Parcela urbana para construir una villa."
+      },
+      "ru": {
+        "alt": "Участок под виллу Benidorm",
+        "chip": "Участок под виллу",
+        "title": "Участок — Benidorm",
+        "meta": "Benidorm",
+        "desc": "Городской участок под строительство виллы."
+      }
+    }
   },
   {
     "slug": "coveta-fuma-plot",
     "href": "/pl/plots/shablon/?slug=coveta-fuma-plot",
-    "image": "/pl/plots/CovetaFuma/1.jpg",
+    "image": "/pl/plots/plots-hero.png",
     "alt": "Działka Coveta Fuma",
     "chip": "Widok na morze",
     "title": "Działka — Coveta Fuma",
     "meta": "Costa Blanca",
     "price": "€ 394 000",
     "price_value": 394000,
-    "desc": "Działka nad morzem."
+    "desc": "Działka nad morzem.",
+    "translations": {
+      "en": {
+        "alt": "Coveta Fuma plot",
+        "chip": "Sea view",
+        "title": "Plot — Coveta Fuma",
+        "meta": "Costa Blanca",
+        "desc": "Plot by the sea."
+      },
+      "es": {
+        "alt": "Parcela Coveta Fuma",
+        "chip": "Vistas al mar",
+        "title": "Parcela — Coveta Fuma",
+        "meta": "Costa Blanca",
+        "desc": "Parcela junto al mar."
+      },
+      "ru": {
+        "alt": "Участок Coveta Fuma",
+        "chip": "Вид на море",
+        "title": "Участок — Coveta Fuma",
+        "meta": "Costa Blanca",
+        "desc": "Участок у моря."
+      }
+    }
   },
   {
     "slug": "alicante-plot-512m",
@@ -201,7 +569,30 @@
     "meta": "Alicante",
     "price": "€ 350 000",
     "price_value": 350000,
-    "desc": "Działka pod zabudowę jednorodzinną."
+    "desc": "Działka pod zabudowę jednorodzinną.",
+    "translations": {
+      "en": {
+        "alt": "512 m² plot Alicante",
+        "chip": "Building plot",
+        "title": "512 m² plot in Alicante",
+        "meta": "Alicante",
+        "desc": "Plot for single-family housing."
+      },
+      "es": {
+        "alt": "Parcela de 512 m² Alicante",
+        "chip": "Parcela urbanizable",
+        "title": "Parcela de 512 m² en Alicante",
+        "meta": "Alicante",
+        "desc": "Parcela para vivienda unifamiliar."
+      },
+      "ru": {
+        "alt": "Участок 512 м² Alicante",
+        "chip": "Строительный участок",
+        "title": "Участок 512 м² в Alicante",
+        "meta": "Alicante",
+        "desc": "Участок под индивидуальную застройку."
+      }
+    }
   },
   {
     "slug": "santabarbara-plot",
@@ -213,7 +604,30 @@
     "meta": "Alicante",
     "price": "€ 345 000",
     "price_value": 345000,
-    "desc": "Działka z projektem i licencją."
+    "desc": "Działka z projektem i licencją.",
+    "translations": {
+      "en": {
+        "alt": "Santa Barbara plot",
+        "chip": "Premium plot",
+        "title": "Plot — Santa Bárbara",
+        "meta": "Alicante",
+        "desc": "Plot with project and licence."
+      },
+      "es": {
+        "alt": "Parcela Santa Barbara",
+        "chip": "Parcela premium",
+        "title": "Parcela — Santa Bárbara",
+        "meta": "Alicante",
+        "desc": "Parcela con proyecto y licencia."
+      },
+      "ru": {
+        "alt": "Участок Santa Barbara",
+        "chip": "Премиальный участок",
+        "title": "Участок — Santa Bárbara",
+        "meta": "Alicante",
+        "desc": "Участок с проектом и лицензией."
+      }
+    }
   },
   {
     "slug": "polop-plot",
@@ -225,7 +639,30 @@
     "meta": "Polop",
     "price": "€ 250 000",
     "price_value": 250000,
-    "desc": "Gotowy projekt inwestycyjny."
+    "desc": "Gotowy projekt inwestycyjny.",
+    "translations": {
+      "en": {
+        "alt": "Polop plot",
+        "chip": "Ready project",
+        "title": "Plot — Polop",
+        "meta": "Polop",
+        "desc": "Ready investment project."
+      },
+      "es": {
+        "alt": "Parcela Polop",
+        "chip": "Proyecto listo",
+        "title": "Parcela — Polop",
+        "meta": "Polop",
+        "desc": "Proyecto de inversión listo."
+      },
+      "ru": {
+        "alt": "Участок Polop",
+        "chip": "Готовый проект",
+        "title": "Участок — Polop",
+        "meta": "Polop",
+        "desc": "Готовый инвестиционный проект."
+      }
+    }
   },
   {
     "slug": "el-campello-plot-115k",
@@ -237,6 +674,29 @@
     "meta": "950 m²",
     "price": "€ 115 000",
     "price_value": 115000,
-    "desc": "Działka pod budowę."
+    "desc": "Działka pod budowę.",
+    "translations": {
+      "en": {
+        "alt": "El Campello plot",
+        "chip": "Building plot",
+        "title": "Plot — El Campello",
+        "meta": "950 m²",
+        "desc": "Plot for construction."
+      },
+      "es": {
+        "alt": "Parcela El Campello",
+        "chip": "Parcela urbanizable",
+        "title": "Parcela — El Campello",
+        "meta": "950 m²",
+        "desc": "Parcela para construir."
+      },
+      "ru": {
+        "alt": "Участок El Campello",
+        "chip": "Строительный участок",
+        "title": "Участок — El Campello",
+        "meta": "950 м²",
+        "desc": "Участок под строительство."
+      }
+    }
   }
 ]
