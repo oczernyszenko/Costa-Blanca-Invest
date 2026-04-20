@@ -177,20 +177,9 @@
     .share-actions{margin-top:16px}
     .share-title{margin:18px 0 0;color:var(--text-soft);font-size:14px;font-weight:700;text-align:center}
 
-    .benefits-grid,.plots-grid,.locations-grid,.faq-grid{
-      display:grid;
-      gap:22px;
-    }
-    .benefits-grid,.locations-grid,.faq-grid{
-      grid-template-columns:repeat(3,minmax(0,1fr));
-    }
-    .plots-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:22px;
-      align-items:stretch;
-      min-height:120px;
-    }
+    .benefits-grid,.plots-grid,.locations-grid,.faq-grid{display:grid;gap:22px}
+    .benefits-grid,.locations-grid,.faq-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .plots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:stretch;min-height:120px}
     .plots-grid > *{min-width:0}
     .status-card{grid-column:1 / -1;min-height:160px}
 
@@ -239,19 +228,9 @@
     .sticky-contact{position:fixed;right:14px;bottom:14px;z-index:1200;display:none}
     .sticky-wa{min-width:132px;min-height:52px;padding:0 18px}
 
-    .fade-up{
-      opacity:1;
-      transform:none;
-      transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);
-    }
-    .js .fade-up{
-      opacity:0;
-      transform:translateY(30px);
-    }
-    .js .fade-up.show{
-      opacity:1;
-      transform:translateY(0);
-    }
+    .fade-up{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+    .js .fade-up{opacity:0;transform:translateY(30px)}
+    .js .fade-up.show{opacity:1;transform:translateY(0)}
 
     @media (max-width:1100px){
       .hero-card{grid-template-columns:1fr;min-height:auto}
@@ -267,126 +246,24 @@
     @media (max-width:768px){
       .nav a span:last-child{display:block}
       .nav a{flex-direction:column;gap:0}
-
-      .topbar{
-        position:sticky;
-        top:0;
-        bottom:auto;
-        width:100%;
-        background:rgba(255,255,255,.16);
-        backdrop-filter:blur(14px) saturate(1.14);
-        -webkit-backdrop-filter:blur(14px) saturate(1.14);
-        border-bottom:1px solid rgba(255,255,255,.25);
-      }
-      .topbar.scrolled{
-        background:rgba(255,255,255,.82);
-        backdrop-filter:blur(22px) saturate(1.18);
-        -webkit-backdrop-filter:blur(22px) saturate(1.18);
-        box-shadow:0 10px 30px rgba(15,23,42,.10);
-      }
-      .topbar.hide{
-        transform:translateY(-100%);
-        opacity:0;
-        background:transparent !important;
-        backdrop-filter:none !important;
-        -webkit-backdrop-filter:none !important;
-        box-shadow:none !important;
-        border-bottom-color:transparent;
-        pointer-events:none;
-      }
-      .topbar-inner{
-        width:100%;
-        grid-template-columns:1fr;
-        gap:8px;
-        padding:10px 0 12px;
-        min-height:auto;
-        justify-items:center;
-      }
-      .brand{
-        justify-self:center;
-        text-align:center;
-        font-size:15px;
-        gap:10px;
-      }
-      .brand::before{
-        width:16px;
-        height:16px;
-      }
-      .nav{
-        display:grid;
-        grid-template-columns:repeat(3,minmax(0,1fr));
-        gap:8px;
-        width:100%;
-        justify-content:stretch;
-        align-items:stretch;
-        overflow:visible;
-        padding:0;
-      }
-      .nav a{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        min-height:44px;
-        padding:8px 10px;
-        text-align:center;
-        font-size:13px;
-        line-height:1.15;
-        white-space:normal;
-        border-radius:10px;
-        background:rgba(255,255,255,.55);
-      }
-      .lang-switcher{
-        order:2;
-        justify-content:center;
-        gap:4px;
-        padding:5px;
-        min-height:46px;
-        flex-wrap:nowrap;
-        max-width:100%;
-        margin-top:2px;
-      }
-      .lang-btn{
-        flex:0 0 38px;
-        width:38px;
-        height:38px;
-        min-width:38px;
-        min-height:38px;
-        max-width:38px;
-        max-height:38px;
-        font-size:11px;
-        line-height:1;
-      }
-      .lang-btn:hover{
-        transform:translateY(-2px) scale(1.03);
-        box-shadow:0 10px 22px rgba(199,154,58,.5);
-      }
-      .lang-btn.active{
-        box-shadow:0 8px 20px rgba(200,116,47,.45);
-        transform:scale(1.05);
-      }
+      .topbar{position:sticky;top:0;bottom:auto;width:100%;background:rgba(255,255,255,.16);backdrop-filter:blur(14px) saturate(1.14);-webkit-backdrop-filter:blur(14px) saturate(1.14);border-bottom:1px solid rgba(255,255,255,.25)}
+      .topbar.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(22px) saturate(1.18);-webkit-backdrop-filter:blur(22px) saturate(1.18);box-shadow:0 10px 30px rgba(15,23,42,.10)}
+      .topbar.hide{transform:translateY(-100%);opacity:0;background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important;border-bottom-color:transparent;pointer-events:none}
+      .topbar-inner{width:100%;grid-template-columns:1fr;gap:8px;padding:10px 0 12px;min-height:auto;justify-items:center}
+      .brand{justify-self:center;text-align:center;font-size:15px;gap:10px}
+      .brand::before{width:16px;height:16px}
+      .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;justify-content:stretch;align-items:stretch;overflow:visible;padding:0}
+      .nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 10px;text-align:center;font-size:13px;line-height:1.15;white-space:normal;border-radius:10px;background:rgba(255,255,255,.55)}
+      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px;flex-wrap:nowrap;max-width:100%;margin-top:2px}
+      .lang-btn{flex:0 0 38px;width:38px;height:38px;min-width:38px;min-height:38px;max-width:38px;max-height:38px;font-size:11px;line-height:1}
+      .lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 22px rgba(199,154,58,.5)}
+      .lang-btn.active{box-shadow:0 8px 20px rgba(200,116,47,.45);transform:scale(1.05)}
       .hero-card{grid-template-columns:1fr;min-height:auto}
       .hero-image{order:-1}
       .hero-image,.hero-image img{min-height:300px}
       .hero-copy{padding:24px 20px 26px}
-      .hero-copy h1{
-        width:100%;
-        max-width:100%;
-        padding:0 8px;
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
-        overflow-wrap:anywhere;
-        word-break:break-word;
-      }
-      .center-text,.lead{
-        max-width:100%;
-        width:100%;
-        margin-left:auto;
-        margin-right:auto;
-        padding:0 14px;
-        text-align:center !important;
-        overflow-wrap:anywhere;
-      }
+      .hero-copy h1{width:100%;max-width:100%;padding:0 8px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
+      .center-text,.lead{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 14px;text-align:center !important;overflow-wrap:anywhere}
       .container{padding:0 14px}
       .page{padding:14px 0 56px}
       .section-card,.cta-box,.footer-card,.contact-box{padding:22px}
@@ -405,25 +282,8 @@
     }
 
     @media (max-width:560px){
-      .lang-switcher{
-        gap:4px;
-        padding:4px;
-        min-height:44px;
-        display:grid;
-        grid-template-columns:repeat(4,36px);
-        justify-content:center;
-      }
-      .lang-btn{
-        flex:0 0 36px;
-        width:36px;
-        height:36px;
-        min-width:36px;
-        min-height:36px;
-        max-width:36px;
-        max-height:36px;
-        border-radius:50%;
-        font-size:11px;
-      }
+      .lang-switcher{gap:4px;padding:4px;min-height:44px;display:grid;grid-template-columns:repeat(4,36px);justify-content:center}
+      .lang-btn{flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;max-width:36px;max-height:36px;border-radius:50%;font-size:11px}
       .hero-copy{padding:20px 16px 22px}
       .eyebrow{padding:8px 12px;font-size:11px}
       .hero-copy h1{padding:0 6px}
@@ -605,6 +465,7 @@
     const JSON_URL = '/pl/plots/plots-index.json';
     const SUPPORTED_LANGS = ['pl','es','en','ru'];
     const SITE_ORIGIN = 'https://costa-blanca-invest.com';
+    const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'avif', 'gif', 'JPG', 'JPEG', 'PNG', 'WEBP', 'AVIF', 'GIF'];
     const ROUTE_ALIASES = {
       'villajoyosa-first-line-plot-3-2m': '/pl/plots/villajoyosa-sea-plot-3-2m/',
       'alicante-residential-building-plot-470k': '/pl/plots/residential-building-plot-8-units-470k/',
@@ -684,35 +545,27 @@
     const PREVIEW_PLOTS = [
       {
         slug: 'playa-san-juan-villa-plot-1-1m',
-        url_path: '/pl/plots/playa-san-juan-villa-plot-1-1m/',
+        href: '/pl/plots/playa-san-juan-villa-plot-1-1m/',
         image: '/pl/plots/playa-san-juan-villa-plot-1-1m/1.jpg',
         alt: 'Działka pod willę w Playa San Juan',
         chip: 'Villa Plot',
         title: 'Działka — Playa San Juan (1260 m²)',
         meta: 'Playa San Juan · 1260 m² · willa',
         price: '€ 1 100 000',
-        desc: 'Działka 1260 m² pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.',
-        translations: {
-          es: { chip: 'Villa Plot', title: 'Parcela — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: 'Parcela de 1260 m² para construir una villa privada en una ubicación prestigiosa junto al mar.', alt: 'Parcela para villa en Playa San Juan' },
-          en: { chip: 'Villa Plot', title: 'Plot — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: '1260 m² plot for building a private villa in a prestigious seaside location.', alt: 'Villa plot in Playa San Juan' },
-          ru: { chip: 'Участок под виллу', title: 'Участок — Playa San Juan (1260 м²)', meta: 'Playa San Juan · 1260 м² · вилла', desc: 'Участок 1260 м² под строительство частной виллы в престижной локации у моря.', alt: 'Участок под виллу в Playa San Juan' }
-        }
+        price_value: 1100000,
+        desc: 'Działka 1260 m² pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.'
       },
       {
         slug: 'finestrat-plot-3-villas-sea-mountain-view',
-        url_path: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/',
+        href: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/',
         image: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg',
         alt: 'Działka w Finestrat z widokiem na morze i góry',
         chip: 'Sea View Plot',
         title: 'Działka — Finestrat (3 wille)',
         meta: 'Finestrat · widok na morze i góry · 3 wille',
         price: '€ 500 000',
-        desc: 'Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry.',
-        translations: {
-          es: { chip: 'Sea View Plot', title: 'Parcela — Finestrat (3 villas)', meta: 'Finestrat · vistas al mar y montaña · 3 villas', desc: 'Parcela para construir 3 villas con vistas panorámicas al mar y a la montaña.', alt: 'Parcela en Finestrat con vistas al mar y la montaña' },
-          en: { chip: 'Sea View Plot', title: 'Plot — Finestrat (3 villas)', meta: 'Finestrat · sea and mountain view · 3 villas', desc: 'Plot for building 3 villas with panoramic sea and mountain views.', alt: 'Plot in Finestrat with sea and mountain views' },
-          ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид na morze i góry · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
-        }
+        price_value: 500000,
+        desc: 'Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry.'
       }
     ];
 
@@ -721,71 +574,6 @@
         es: { chip: 'Premium Plot', title: 'Parcela + proyecto + licencia en Alicante junto a Santa Bárbara para aparthotel', meta: 'Alicante · Santa Bárbara · proyecto de inversión', desc: 'Parcela con proyecto y licencia en Alicante junto a Santa Bárbara para aparthotel.', alt: 'Parcela con proyecto y licencia en Alicante junto a Santa Bárbara' },
         en: { chip: 'Premium Plot', title: 'Plot + project + licence in Alicante by Santa Bárbara for an aparthotel', meta: 'Alicante · Santa Bárbara · investment project', desc: 'Plot with project and licence in Alicante by Santa Bárbara for an aparthotel.', alt: 'Plot with project and licence in Alicante by Santa Bárbara' },
         ru: { chip: 'Премиальный участок', title: 'Участок + проект + лицензия в Alicante у Santa Bárbara под апарт-отель', meta: 'Alicante · Santa Bárbara · инвестиционный проект', desc: 'Участок с проектом и лицензией в Alicante у Santa Bárbara под апарт-отель.', alt: 'Участок с проектом и лицензией в Alicante у Santa Bárbara' }
-      },
-      'alicante-plot-630k': {
-        es: { chip: 'City Plot', title: 'Parcela de 465 m² en Alicante', meta: 'Alicante · parcela urbana', desc: 'Parcela lista para construir una casa.', alt: 'Parcela de 465 m² en Alicante' },
-        en: { chip: 'City Plot', title: '465 m² plot in Alicante', meta: 'Alicante · urban plot', desc: 'Plot ready for building a house.', alt: '465 m² plot in Alicante' },
-        ru: { chip: 'Городской участок', title: 'Участок 465 м² в Alicante', meta: 'Alicante · городской участок', desc: 'Участок готов под строительство дома.', alt: 'Участок 465 м² в Alicante' }
-      },
-      BenidormPlanet: {
-        es: { chip: 'Villa Plot', title: 'Parcela para construir villa — Benidorm', meta: 'Benidorm · parcela urbanística', desc: 'Suelo urbano para construir una vivienda.', alt: 'Parcela para villa en Benidorm' },
-        en: { chip: 'Villa Plot', title: 'Plot for villa construction — Benidorm', meta: 'Benidorm · urban plot', desc: 'Urban land for building a house.', alt: 'Villa plot in Benidorm' },
-        ru: { chip: 'Участок под виллу', title: 'Участок под строительство виллы — Benidorm', meta: 'Benidorm · городской участок', desc: 'Городской участок под строительство дома.', alt: 'Участок под виллу в Benidorm' }
-      },
-      NouNazareth: {
-        es: { chip: 'Development Plot', title: 'Parcela premium — Nou Nazareth', meta: 'San Joan · 4 936 m²', desc: 'Gran suelo para inversión.', alt: 'Parcela premium Nou Nazareth' },
-        en: { chip: 'Development Plot', title: 'Premium land plot — Nou Nazareth', meta: 'San Joan · 4,936 m²', desc: 'Large investment land plot.', alt: 'Premium land plot Nou Nazareth' },
-        ru: { chip: 'Девелоперский участок', title: 'Премиальный земельный участок — Nou Nazareth', meta: 'San Joan · 4 936 м²', desc: 'Крупный инвестиционный участок.', alt: 'Премиальный участок Nou Nazareth' }
-      },
-      Polop: {
-        es: { chip: 'Ready Project', title: 'Parcela — Polop', meta: 'Polop · proyecto', desc: 'Proyecto de inversión listo.', alt: 'Parcela en Polop' },
-        en: { chip: 'Ready Project', title: 'Plot — Polop', meta: 'Polop · project', desc: 'Ready investment project.', alt: 'Plot in Polop' },
-        ru: { chip: 'Готовый проект', title: 'Участок — Polop', meta: 'Polop · проект', desc: 'Готовый инвестиционный проект.', alt: 'Участок в Polop' }
-      },
-      Campella: {
-        es: { chip: 'Building Plot', title: 'Parcela — El Campello', meta: '950 m²', desc: 'Parcela para construir.', alt: 'Parcela en Campello' },
-        en: { chip: 'Building Plot', title: 'Plot — El Campello', meta: '950 m²', desc: 'Building plot.', alt: 'Plot in Campello' },
-        ru: { chip: 'Участок под застройку', title: 'Участок — El Campello', meta: '950 м²', desc: 'Участок под строительство.', alt: 'Участок в Campello' }
-      },
-      CovetaFuma: {
-        es: { chip: 'Sea View Plot', title: 'Parcela — Coveta Fuma', meta: 'Costa Blanca', desc: 'Parcela atractiva junto al mar.', alt: 'Parcela en Coveta Fuma' },
-        en: { chip: 'Sea View Plot', title: 'Plot — Coveta Fuma', meta: 'Costa Blanca', desc: 'Attractive plot by the sea.', alt: 'Plot in Coveta Fuma' },
-        ru: { chip: 'Участок у моря', title: 'Участок — Coveta Fuma', meta: 'Costa Blanca', desc: 'Привлекательный участок у моря.', alt: 'Участок в Coveta Fuma' }
-      },
-      SanJuan: {
-        es: { chip: 'Project Plot', title: 'Parcela — San Juan', meta: 'San Juan', desc: 'Parcela de inversión.', alt: 'Parcela en San Juan' },
-        en: { chip: 'Project Plot', title: 'Plot — San Juan', meta: 'San Juan', desc: 'Investment plot.', alt: 'Plot in San Juan' },
-        ru: { chip: 'Инвестиционный участок', title: 'Участок — San Juan', meta: 'San Juan', desc: 'Инвестиционный участок.', alt: 'Участок в San Juan' }
-      },
-      Alicante: {
-        es: { chip: 'Investment Plot', title: 'Parcela de 512 m² en Alicante para villa o casa unifamiliar', meta: 'Alicante · parcela edificable · 3 plantas', desc: 'Parcela en Alicante para vivienda unifamiliar con hasta 3 plantas y hasta 400 m² construibles.', alt: 'Parcela de 512 m² en Alicante para villa o casa unifamiliar' },
-        en: { chip: 'Investment Plot', title: '512 m² plot in Alicante for a villa or single-family house', meta: 'Alicante · building plot · 3 floors', desc: 'Plot in Alicante for a single-family home with up to 3 floors and up to 400 m² buildable area.', alt: '512 m² plot in Alicante for a villa or single-family house' },
-        ru: { chip: 'Инвестиционный участок', title: 'Участок 512 м² в Alicante под виллу или частный дом', meta: 'Alicante · участок под застройку · 3 этажа', desc: 'Участок в Alicante под частную застройку до 3 этажей и до 400 м² строительства.', alt: 'Участок 512 м² в Alicante под виллу или частный дом' }
-      },
-      AlicanteCityPlot: {
-        es: { chip: 'City Plot', title: 'Parcela — Alicante City', meta: 'centro', desc: 'Suelo de inversión.', alt: 'Parcela en Alicante City' },
-        en: { chip: 'City Plot', title: 'Plot — Alicante City', meta: 'city centre', desc: 'Investment land plot.', alt: 'Plot in Alicante City' },
-        ru: { chip: 'Городской участок', title: 'Участок — Alicante City', meta: 'центр', desc: 'Инвестиционный участок.', alt: 'Участок в Alicante City' }
-      },
-      'villajoyosa-first-line-plot-3-2m': {
-        es: { chip: 'First Line Plot', title: 'Parcela — Villajoyosa (1ª línea de mar)', meta: 'Villajoyosa · 1ª línea · proyecto promotor', desc: 'Parcela en primera línea de mar para 2 edificios y 24 apartamentos.', alt: 'Parcela en primera línea de mar en Villajoyosa' },
-        en: { chip: 'First Line Plot', title: 'Plot — Villajoyosa (first sea line)', meta: 'Villajoyosa · first line · development project', desc: 'First-line sea plot for building 2 buildings and 24 apartments.', alt: 'First-line sea plot in Villajoyosa' },
-        ru: { chip: 'Участок на 1-й линии', title: 'Участок — Villajoyosa (1 линия моря)', meta: 'Villajoyosa · 1 линия · девелоперский проект', desc: 'Участок на первой линии моря под строительство 2 зданий и 24 апартаментов.', alt: 'Участок на первой линии моря в Villajoyosa' }
-      },
-      'alicante-residential-building-plot-470k': {
-        es: { chip: 'Development Plot', title: 'Parcela — Alicante (8 viviendas + parking)', meta: 'Alicante · 4 plantas · 8 viviendas · parking', desc: 'Parcela para edificio residencial con 8 viviendas y parking subterráneo.', alt: 'Parcela para edificio residencial en Alicante' },
-        en: { chip: 'Development Plot', title: 'Plot — Alicante (8 apartments + parking)', meta: 'Alicante · 4 floors · 8 apartments · parking', desc: 'Plot for a residential building with 8 apartments and underground parking.', alt: 'Residential building plot in Alicante' },
-        ru: { chip: 'Девелоперский участок', title: 'Участок — Alicante (8 квартир + паркинг)', meta: 'Alicante · 4 этажа · 8 квартир · паркинг', desc: 'Участок под строительство жилого дома на 8 квартир с подземным паркингом.', alt: 'Участок под жилой дом в Alicante' }
-      },
-      'playa-san-juan-villa-plot-1260m': {
-        es: { chip: 'Villa Plot', title: 'Parcela — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: 'Parcela de 1260 m² para construir una villa privada en una de las mejores zonas junto al mar.', alt: 'Parcela para villa en Playa San Juan' },
-        en: { chip: 'Villa Plot', title: 'Plot — Playa San Juan (1260 m²)', meta: 'Playa San Juan · 1260 m² · villa', desc: '1260 m² plot for building a private villa in one of the best seaside areas.', alt: 'Villa plot in Playa San Juan' },
-        ru: { chip: 'Участок под виллу', title: 'Участок — Playa San Juan (1260 м²)', meta: 'Playa San Juan · 1260 м² · вилла', desc: 'Участок 1260 м² под строительство частной виллы в одной из лучших прибрежных локаций.', alt: 'Участок под виллу в Playa San Juan' }
-      },
-      'finestrat-plot-3-villas-sea-mountain-view': {
-        es: { chip: 'Sea View Plot', title: 'Parcela — Finestrat (3 villas)', meta: 'Finestrat · vistas al mar y montaña · 3 villas', desc: 'Parcela para construir 3 villas con vistas panorámicas al mar y la montaña.', alt: 'Parcela en Finestrat con vistas al mar y la montaña' },
-        en: { chip: 'Sea View Plot', title: 'Plot — Finestrat (3 villas)', meta: 'Finestrat · sea and mountain view · 3 villas', desc: 'Plot for building 3 villas with panoramic sea and mountain views.', alt: 'Plot in Finestrat with sea and mountain views' },
-        ru: { chip: 'Участок с видом на море', title: 'Участок — Finestrat (3 виллы)', meta: 'Finestrat · вид на море и горы · 3 виллы', desc: 'Участок под строительство 3 вилл с панорамным видом на море и горы.', alt: 'Участок в Finestrat с видом на море и горы' }
       }
     };
 
@@ -796,7 +584,7 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
+      .replace(/\"/g, '&quot;')
       .replace(/'/g, '&#39;');
 
     const isPreviewEnvironment = () => {
@@ -827,6 +615,95 @@
       path = path.replace(/\?.*$/, '');
       if (!path.endsWith('/')) path = `${path}/`;
       return path;
+    };
+
+    const sanitizeFolderName = (value) => String(value || '')
+      .replace(/[“”"'`]/g, '')
+      .replace(/[()]/g, '')
+      .replace(/[–—]/g, '-')
+      .replace(/[^\p{L}\p{N}\s\-]/gu, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    const toPascalFolder = (value) => sanitizeFolderName(value)
+      .split(/\s+/)
+      .filter(Boolean)
+      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+      .join('');
+
+    const getFolderNameCandidates = (plot) => {
+      const set = new Set();
+      const href = String(plot?.href || plot?.url_path || '').trim();
+      const slug = String(plot?.slug || '').trim();
+      const image = String(plot?.image || '').trim();
+      const title = String(plot?.title || '').trim();
+
+      if (image) {
+        const parts = image.split('/').filter(Boolean);
+        if (parts.length >= 3) set.add(parts[2]);
+      }
+
+      if (href) {
+        const parts = normalizePathname(href).split('/').filter(Boolean);
+        if (parts.length >= 3) set.add(parts[2]);
+      }
+
+      if (slug) {
+        set.add(slug);
+        set.add(toPascalFolder(slug.replace(/-/g, ' ')));
+      }
+
+      if (title) {
+        const titleClean = sanitizeFolderName(title)
+          .replace(/^Działka\s*[—-]\s*/i, '')
+          .replace(/^Parcela\s*[—-]\s*/i, '')
+          .replace(/^Plot\s*[—-]\s*/i, '')
+          .replace(/^Участок\s*[—-]\s*/i, '')
+          .trim();
+        if (titleClean) {
+          set.add(toPascalFolder(titleClean));
+          set.add(slugifyPathSegment(titleClean));
+          const firstChunk = titleClean.split('-')[0].trim();
+          if (firstChunk) set.add(toPascalFolder(firstChunk));
+        }
+      }
+
+      return Array.from(set).filter(Boolean);
+    };
+
+    const buildImageCandidates = (plot) => {
+      const candidates = [];
+      const add = (src) => {
+        if (!src) return;
+        const normalized = String(src).trim();
+        if (!normalized || candidates.includes(normalized)) return;
+        candidates.push(normalized);
+      };
+
+      const explicitImage = String(plot?.image || '').trim();
+      add(explicitImage);
+
+      const folderNames = getFolderNameCandidates(plot);
+      folderNames.forEach((folder) => {
+        IMAGE_EXTENSIONS.forEach((ext) => {
+          add(`/pl/plots/${folder}/1.${ext}`);
+          add(`/pl/plots/${folder}/cover.${ext}`);
+          add(`/pl/plots/${folder}/hero.${ext}`);
+        });
+      });
+
+      const normalizedHref = normalizePathname(plot?.href || plot?.url_path || '');
+      if (normalizedHref) {
+        const folderPath = normalizedHref.replace(/\/$/, '');
+        IMAGE_EXTENSIONS.forEach((ext) => {
+          add(`${folderPath}/1.${ext}`);
+          add(`${folderPath}/cover.${ext}`);
+          add(`${folderPath}/hero.${ext}`);
+        });
+      }
+
+      add(fallbackImage);
+      return candidates;
     };
 
     const applyRouteAlias = (path) => {
@@ -973,12 +850,19 @@
       const ui = UI[currentLang] || UI.pl;
       const localizedPlot = localizePlot(plot, currentLang);
       const cardLink = normalizePlotHref(localizedPlot, currentLang);
-      const imageBaseForFallback = normalizePlotHref(localizedPlot, 'pl').replace(/\?.*$/, '').replace(/\/$/, '');
-      const image = localizedPlot.image || `${imageBaseForFallback}/1.jpg`;
+      const imageCandidates = buildImageCandidates(localizedPlot);
+      const firstImage = imageCandidates[0] || fallbackImage;
 
       return `
         <a href="${escapeHtml(cardLink)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
-          <img src="${escapeHtml(image)}" alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHtml(fallbackImage)}'">
+          <img
+            src="${escapeHtml(firstImage)}"
+            alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}"
+            loading="lazy"
+            decoding="async"
+            data-image-candidates='${escapeHtml(JSON.stringify(imageCandidates))}'
+            data-image-index="0"
+            onerror="window.handlePlotCardImageError && window.handlePlotCardImageError(this)">
           <div class="card-body">
             ${localizedPlot.chip ? `<div class="chip">${escapeHtml(localizedPlot.chip)}</div>` : ''}
             <h3>${escapeHtml(localizedPlot.title || '')}</h3>
@@ -989,6 +873,28 @@
           </div>
         </a>
       `;
+    };
+
+    window.handlePlotCardImageError = (img) => {
+      if (!img) return;
+      let candidates = [];
+      try {
+        candidates = JSON.parse(img.getAttribute('data-image-candidates') || '[]');
+      } catch (error) {
+        candidates = [];
+      }
+
+      let currentIndex = Number(img.getAttribute('data-image-index') || 0);
+      currentIndex += 1;
+
+      if (currentIndex < candidates.length) {
+        img.setAttribute('data-image-index', String(currentIndex));
+        img.src = candidates[currentIndex];
+        return;
+      }
+
+      img.onerror = null;
+      img.src = fallbackImage;
     };
 
     const renderPlots = async () => {
