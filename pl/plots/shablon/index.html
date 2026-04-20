@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- COSTA BLANCA INVEST • PROPERTY DETAIL TEMPLATE -->
+<!-- COSTA BLANCA INVEST • PROPERTY DETAIL TEMPLATE (JSON DRIVEN, SAFE FALLBACK) -->
 <html lang="pl" translate="no" class="notranslate">
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" id="ogImageAlt" content="Działka Costa Blanca">
-  <meta property="og:image:type" id="ogImageTypeMeta" content="image/jpeg">
+  <meta property="og:image:type" content="image/jpeg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" id="twitterTitle" content="Działka | Costa Blanca Invest">
@@ -207,7 +207,8 @@
     .media-lightbox-inner { position: relative; width: min(1100px, 92vw); max-height: 90vh; border-radius: 24px; overflow: hidden; background: #0b141c; box-shadow: 0 28px 70px rgba(0,0,0,.35); }
     .media-lightbox img { width: 100%; max-height: 90vh; object-fit: contain; background: #0b141c; }
     .media-lightbox-close { position: absolute; top: 14px; right: 14px; z-index: 2; width: 42px; height: 42px; border: none; border-radius: 999px; background: rgba(255,255,255,.16); color: #fff; font-size: 24px; cursor: pointer; }
-    .loading-screen { min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--text-soft); }
+    .loading-screen { min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--text-soft); flex-direction: column; gap: 10px; }
+    .loading-screen small { max-width: 720px; padding: 0 20px; }
     .topbar, .breadcrumbs, .footer, .footer-card, .contact-links, .footer-bottom, .footer-copy, .footer-brand { display: none !important; }
     @media (max-width:1100px) { .hero-media, .hero-media img { min-height: 520px; } .why-grid, .audience-grid { grid-template-columns: 1fr; } }
     @media (max-width:980px) { .hero-media, .hero-media img { min-height: 430px; } .hero-overlay { left: 18px; right: 18px; bottom: 18px; } .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -238,7 +239,10 @@
 <body>
   <main class="page">
     <div class="container" id="appRoot">
-      <div class="loading-screen" id="loadingScreen">Ładowanie oferty…</div>
+      <div class="loading-screen" id="loadingScreen">
+        <div>Ładowanie oferty…</div>
+        <small id="loadingHint"></small>
+      </div>
 
       <div id="propertyPage" hidden>
         <div class="top-controls">
@@ -365,7 +369,7 @@
           <div class="share-block">
             <div class="share-actions" role="group" aria-label="Share">
               <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
-              <button class="share-btn" type="button" id="nativeShareBtn"><span id="shareBtnLabel">Facebook</span></button>
+              <button class="share-btn" type="button" id="nativeShareBtn"><span id="shareBtnLabel">Udostępnij</span></button>
             </div>
             <p class="share-note">
               <span id="shareNoteTitle"></span><br>
@@ -384,202 +388,536 @@
       <div id="mediaLightboxContent"></div>
     </div>
   </div>
-<!-- Структурированные данные оставляем отдельно -->
-<script type="application/ld+json" id="schemaJson">
-{
-  "@context":"[schema.org](https://schema.org)",
-  "@type":"Product",
-  "name":"Plot",
-  "description":"Plot listing",
-  "brand":{"@type":"Organization","name":"Costa Blanca Invest"},
-  "offers":{"@type":"Offer","priceCurrency":"EUR","price":"0","availability":"[schema.org](https://schema.org/InStock)","url":"[costa-blanca-invest.com](https://costa-blanca-invest.com/pl/plots/shablon/)"},
-  "image":["[costa-blanca-invest.com](https://costa-blanca-invest.com/pl/plots/plots-hero.png)"]
-}
-</script>
 
-<!-- Исполняемый код -->
-<script>
-// --- Константы и настройки ---------------------------------------------------
-const SITE_ORIGIN = '[costa-blanca-invest.com](https://costa-blanca-invest.com)';
-const FALLBACK_IMAGE = '/pl/plots/plots-hero.png';
-const SUPPORTED_LANGS = ['pl', 'en', 'es', 'ru'];
-const CONTACT_PHONE = '+34604158859';
-const CONTACT_EMAIL = 'o.czernyszenko@gmail.com';
-const IMAGE_EXTENSIONS = ['jpg','jpeg','png','webp','avif','gif',
-                           'JPG','JPEG','PNG','WEBP','AVIF','GIF'];
+  <script type="application/ld+json" id="schemaJson">{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Plot",
+    "description": "Plot listing",
+    "brand": {"@type": "Organization", "name": "Costa Blanca Invest"},
+    "offers": {"@type": "Offer", "priceCurrency": "EUR", "price": "0", "availability": "https://schema.org/InStock", "url": "https://costa-blanca-invest.com/pl/plots/shablon/"},
+    "image": ["https://costa-blanca-invest.com/pl/plots/plots-hero.png"]
+  }</script>
 
-const JSON_CANDIDATES = [
-  '/pl/plots/plots-index.json',
-  '/pl/plots-index.json',
-  '/plots/plots-index.json',
-  '/plots-index.json',
-  '../../plots-index.json',
-  '../plots-index.json',
-  './plots-index.json',
-  'plots-index.json'
-];
+  <script>
+    const SITE_ORIGIN = 'https://costa-blanca-invest.com';
+    const CATEGORY_FALLBACK_IMAGE = '/pl/plots/plots-hero.png';
+    const SUPPORTED_LANGS = ['pl', 'en', 'es', 'ru'];
+    const CONTACT_PHONE = '+34604158859';
+    const IMAGE_EXTENSIONS = ['jpg','jpeg','png','webp','avif','gif','JPG','JPEG','PNG','WEBP','AVIF','GIF'];
 
-// --- UI‑языки ---------------------------------------------------------------
-const UI = { /* (весь объект UI как в исходнике — не трогаем) */ };
+    const FALLBACK_PLOTS = [
+      {
+        slug: 'nou-nazareth',
+        href: '/pl/plots/shablon/?slug=nou-nazareth',
+        image: '/pl/plots/NouNazareth/1.png',
+        alt: 'Działka inwestycyjna Nou Nazareth',
+        chip: 'Działka deweloperska',
+        title: 'Działka inwestycyjna — Nou Nazareth',
+        meta: 'San Juan · 4 936 m²',
+        price: '€ 3 760 000',
+        price_value: 3760000,
+        desc: 'Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski.',
+        translations: {
+          en: { alt: 'Nou Nazareth investment plot', chip: 'Development plot', title: 'Investment plot — Nou Nazareth', meta: 'San Juan · 4,936 m²', desc: 'Large investment plot in a prestigious location, suitable for a development project.' },
+          es: { alt: 'Parcela de inversión Nou Nazareth', chip: 'Parcela promotora', title: 'Parcela de inversión — Nou Nazareth', meta: 'San Juan · 4.936 m²', desc: 'Gran parcela de inversión en una ubicación prestigiosa, adecuada para un proyecto promotor.' },
+          ru: { alt: 'Инвестиционный участок Nou Nazareth', chip: 'Девелоперский участок', title: 'Инвестиционный участок — Nou Nazareth', meta: 'San Juan · 4 936 м²', desc: 'Крупный инвестиционный участок в престижной локации, подходящий под девелоперский проект.' }
+        }
+      },
+      {
+        slug: 'alicante-building-plot-470k',
+        href: '/pl/plots/shablon/?slug=alicante-building-plot-470k',
+        image: '/pl/plots/alicante-residential-building-plot-470k/1.jpg',
+        alt: 'Działka pod budynek Alicante',
+        chip: 'Działka deweloperska',
+        title: 'Działka — Alicante (8 mieszkań)',
+        meta: 'Alicante',
+        price: '€ 470 000',
+        price_value: 470000,
+        desc: 'Działka pod budowę budynku mieszkalnego.',
+        translations: {
+          en: { alt: 'Plot for residential building Alicante', chip: 'Development plot', title: 'Plot — Alicante (8 units)', meta: 'Alicante', desc: 'Plot for the construction of a residential building.' },
+          es: { alt: 'Parcela para edificio residencial Alicante', chip: 'Parcela promotora', title: 'Parcela — Alicante (8 viviendas)', meta: 'Alicante', desc: 'Parcela para la construcción de un edificio residencial.' },
+          ru: { alt: 'Участок под жилой дом Alicante', chip: 'Девелоперский участок', title: 'Участок — Alicante (8 квартир)', meta: 'Alicante', desc: 'Участок под строительство жилого здания.' }
+        }
+      },
+      {
+        slug: 'coveta-fuma-plot',
+        href: '/pl/plots/shablon/?slug=coveta-fuma-plot',
+        image: '/pl/plots/plots-hero.png',
+        alt: 'Działka Coveta Fuma',
+        chip: 'Widok na morze',
+        title: 'Działka — Coveta Fuma',
+        meta: 'Costa Blanca',
+        price: '€ 394 000',
+        price_value: 394000,
+        desc: 'Działka nad morzem.',
+        translations: {
+          en: { alt: 'Coveta Fuma plot', chip: 'Sea view', title: 'Plot — Coveta Fuma', meta: 'Costa Blanca', desc: 'Plot by the sea.' },
+          es: { alt: 'Parcela Coveta Fuma', chip: 'Vistas al mar', title: 'Parcela — Coveta Fuma', meta: 'Costa Blanca', desc: 'Parcela junto al mar.' },
+          ru: { alt: 'Участок Coveta Fuma', chip: 'Вид на море', title: 'Участок — Coveta Fuma', meta: 'Costa Blanca', desc: 'Участок у моря.' }
+        }
+      }
+    ];
 
-// --- Вспомогательные переменные ---------------------------------------------
-let cachedPlots = null;
-let currentLang = 'pl';
-let currentPlot = null;
+    const UI = {
+      pl: { locale:'pl_PL', loading:'Ładowanie oferty…', fallbackHint:'Nie udało się pobrać plots-index.json. Pokazuję bezpieczne dane zapasowe.', backLink:'Zobacz inne działki', badgeText:'DZIAŁKA', heroKicker:'COSTA BLANCA · DZIAŁKA', heroPriceBoxTitle:'CENA', heroPriceSep:'→', heroPriceNote:'Szczegóły oferty', paramsTitle:'Parametry działki', whySectionTitle:'Dlaczego ta działka jest atrakcyjna?', specTitle:'Co obejmuje oferta?', roiTitle:'Potencjał nieruchomości', audienceTitle:'Dla kogo jest ta działka?', contactTitle:'Otrzymaj szczegóły działki', contactIntro:'Skontaktuj się ze mną, aby otrzymać szczegóły oferty, dodatkowe zdjęcia oraz pełną prezentację inwestycyjną.', agentRole:'Ekspert ds. nieruchomości na Costa Blanca', agentMeta:'Dobór nieruchomości, wsparcie przy zakupie i pomoc na każdym etapie transakcji w Hiszpanii.', callBtn:'Zadzwoń', waBtn:'WhatsApp', formName:'Imię', formPhone:'Telefon', formEmail:'Email', formMessage:'Napisz wiadomość', formSubmit:'Wyślij przez WhatsApp', copyLink:'Kopiuj link', shareBtn:'Udostępnij', shareCopied:'Skopiowano', shareNoteText:'Cena, tytuł i główne zdjęcie gotowe do udostępnienia.', urgencyNote:'Dostępność i szczegóły warto potwierdzić bezpośrednio', kpiFallback4:'Sprawdzona oferta' },
+      en: { locale:'en_US', loading:'Loading property…', fallbackHint:'plots-index.json could not be loaded. Showing safe fallback data.', backLink:'View other plots', badgeText:'PLOT', heroKicker:'COSTA BLANCA · PLOT', heroPriceBoxTitle:'PRICE', heroPriceSep:'→', heroPriceNote:'Offer details', paramsTitle:'Plot parameters', whySectionTitle:'Why is this plot attractive?', specTitle:'What does the offer include?', roiTitle:'Property potential', audienceTitle:'Who is this plot for?', contactTitle:'Receive plot details', contactIntro:'Contact me to receive property details, extra photos and the full investment presentation.', agentRole:'Costa Blanca property expert', agentMeta:'Property selection, purchase guidance and support at every stage in Spain.', callBtn:'Call', waBtn:'WhatsApp', formName:'Name', formPhone:'Phone', formEmail:'Email', formMessage:'Write a message', formSubmit:'Send via WhatsApp', copyLink:'Copy link', shareBtn:'Share', shareCopied:'Copied', shareNoteText:'Price, title and main image are ready for sharing.', urgencyNote:'Availability and details should be confirmed directly', kpiFallback4:'Verified offer' },
+      es: { locale:'es_ES', loading:'Cargando propiedad…', fallbackHint:'No se pudo cargar plots-index.json. Se muestran datos de respaldo seguros.', backLink:'Ver otras parcelas', badgeText:'PARCELA', heroKicker:'COSTA BLANCA · PARCELA', heroPriceBoxTitle:'PRECIO', heroPriceSep:'→', heroPriceNote:'Detalles de la oferta', paramsTitle:'Parámetros de la parcela', whySectionTitle:'¿Por qué es atractiva esta parcela?', specTitle:'¿Qué incluye la oferta?', roiTitle:'Potencial de la propiedad', audienceTitle:'¿Para quién es esta parcela?', contactTitle:'Recibir detalles de la parcela', contactIntro:'Contáctame para recibir detalles de la propiedad, fotos adicionales y la presentación completa de inversión.', agentRole:'Experta inmobiliaria en Costa Blanca', agentMeta:'Selección de propiedades, apoyo en la compra y acompañamiento en cada etapa en España.', callBtn:'Llamar', waBtn:'WhatsApp', formName:'Nombre', formPhone:'Teléfono', formEmail:'Email', formMessage:'Escribe un mensaje', formSubmit:'Enviar por WhatsApp', copyLink:'Copiar enlace', shareBtn:'Compartir', shareCopied:'Copiado', shareNoteText:'Precio, título e imagen principal listos para compartir.', urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente', kpiFallback4:'Oferta verificada' },
+      ru: { locale:'ru_RU', loading:'Загрузка объекта…', fallbackHint:'Не удалось загрузить plots-index.json. Показаны безопасные резервные данные.', backLink:'Смотреть другие участки', badgeText:'УЧАСТОК', heroKicker:'COSTA BLANCA · УЧАСТОК', heroPriceBoxTitle:'ЦЕНА', heroPriceSep:'→', heroPriceNote:'Детали предложения', paramsTitle:'Параметры участка', whySectionTitle:'Почему этот участок интересен?', specTitle:'Что включает предложение?', roiTitle:'Потенциал объекта', audienceTitle:'Для кого этот участок?', contactTitle:'Получить детали участка', contactIntro:'Свяжитесь со мной, чтобы получить детали объекта, дополнительные фото и полную инвестиционную презентацию.', agentRole:'Эксперт по недвижимости на Costa Blanca', agentMeta:'Подбор объектов, сопровождение покупки и помощь на каждом этапе сделки в Испании.', callBtn:'Позвонить', waBtn:'WhatsApp', formName:'Имя', formPhone:'Телефон', formEmail:'Email', formMessage:'Напишите сообщение', formSubmit:'Отправить в WhatsApp', copyLink:'Копировать ссылку', shareBtn:'Поделиться', shareCopied:'Скопировано', shareNoteText:'Цена, заголовок и главное фото готовы для шеринга.', urgencyNote:'Наличие и детали лучше подтвердить напрямую', kpiFallback4:'Проверенное предложение' }
+    };
 
-const qs = (sel) => document.querySelector(sel);
+    let cachedPlots = null;
+    let currentLang = 'pl';
+    let currentPlot = null;
+    let currentGallery = [];
+    let usingFallbackData = false;
 
-// --- Служебные функции ------------------------------------------------------
-const slugify = (value) => String(value || '')
-  .trim()
-  .toLowerCase()
-  .replace(/\s+/g, '-')
-  .replace(/_/g, '-')
-  .replace(/[^a-z0-9\-\/]/g, '-')
-  .replace(/-+/g, '-')
-  .replace(/\/+/g, '/')
-  .replace(/^-|-$/g, '');
+    const byId = (id) => document.getElementById(id);
+    const slugify = (value) => String(value || '').trim().toLowerCase().replace(/\s+/g, '-').replace(/_/g, '-').replace(/[^a-z0-9\-\/]/g, '-').replace(/-+/g, '-').replace(/\/+/g, '/').replace(/^-|-$/g, '');
+    const absoluteUrl = (path) => /^https?:\/\//i.test(path || '') ? path : new URL(path || CATEGORY_FALLBACK_IMAGE, SITE_ORIGIN).toString();
 
-const escapeHtml = (value) => String(value ?? '')
-  .replace(/&/g, '&amp;')
-  .replace(/</g, '&lt;')
-  .replace(/>/g, '&gt;')
-  .replace(/\"/g, '&quot;')
-  .replace(/'/g, '&#39;');
+    function buildCategoryUrl(lang = 'pl') {
+      const url = new URL('/pl/plots/', SITE_ORIGIN);
+      if (lang !== 'pl') url.searchParams.set('lang', lang);
+      return url.toString();
+    }
 
-const absoluteUrl = (path) => /^https?:\/\//i.test(path || '')
-  ? path
-  : new URL(path || FALLBACK_IMAGE, SITE_ORIGIN).toString();
+    function getLangFromUrl() {
+      const lang = new URL(window.location.href).searchParams.get('lang');
+      return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+    }
 
-const buildCategoryUrl = (lang = 'pl') => {
-  const url = new URL('/pl/plots/', SITE_ORIGIN);
-  if (lang !== 'pl') url.searchParams.set('lang', lang);
-  return url.toString();
-};
+    function getSlugFromUrl() {
+      const url = new URL(window.location.href);
+      const slugFromQuery = slugify(url.searchParams.get('slug') || '');
+      if (slugFromQuery) return slugFromQuery;
+      const parts = url.pathname.split('/').filter(Boolean);
+      const last = slugify(parts[parts.length - 1] || '');
+      const prev = slugify(parts[parts.length - 2] || '');
+      if (last && !['shablon','index.html','plots','pl'].includes(last)) return last;
+      if (prev && !['plots','pl'].includes(prev)) return prev;
+      return '';
+    }
 
-// --- Язык, slug, загрузка данных -------------------------------------------
-function getLangFromUrl() {
-  const lang = new URL(window.location.href).searchParams.get('lang');
-  return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-}
+    function getPathSegments() {
+      return window.location.pathname.split('/').filter(Boolean);
+    }
 
-function getSlugFromUrl() {
-  const url = new URL(window.location.href);
-  const slugFromQuery = slugify(url.searchParams.get('slug') || '');
-  if (slugFromQuery) return slugFromQuery;
-  const parts = url.pathname.split('/').filter(Boolean);
-  const last = slugify(parts[parts.length - 1] || '');
-  const prev = slugify(parts[parts.length - 2] || '');
-  if (last && !['shablon','index.html','plots','pl'].includes(last)) return last;
-  if (prev && !['plots','pl'].includes(prev)) return prev;
-  return '';
-}
+    function resolveJsonUrls() {
+      const urls = [];
+      const add = (value) => {
+        try {
+          const finalUrl = new URL(value, window.location.href).toString();
+          if (!urls.includes(finalUrl)) urls.push(finalUrl);
+        } catch {}
+      };
 
-function resolveJsonUrls() {
-  const base = window.location.href;
-  return JSON_CANDIDATES.map(c=>{
-    try { return new URL(c,base).toString(); } catch { return null; }
-  }).filter(Boolean);
-}
+      add('./plots-index.json');
+      add('../plots-index.json');
+      add('../../plots-index.json');
+      add('../../../plots-index.json');
+      add('/pl/plots/plots-index.json');
+      add('/pl/plots-index.json');
+      add('/plots-index.json');
 
-async function fetchFirstJson(urls) {
-  const errors = [];
-  for (const url of urls) {
-    try {
-      const res = await fetch(url, { cache:'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
-      const data = await res.json();
-      if (!Array.isArray(data)) throw new Error(`Invalid JSON @ ${url}`);
-      return data;
-    } catch(err) { errors.push(String(err)); }
-  }
-  throw new Error(errors.join(' | '));
-}
+      const segments = getPathSegments();
+      const plotsIndex = segments.lastIndexOf('plots');
+      if (plotsIndex !== -1) {
+        const baseSegments = segments.slice(0, plotsIndex + 1);
+        add(`/${baseSegments.join('/')}/plots-index.json`);
+      }
 
-async function getPlots() {
-  if (cachedPlots) return cachedPlots;
-  try {
-    cachedPlots = await fetchFirstJson(resolveJsonUrls());
-  } catch (err) {
-    console.warn('plots-index fallback mode:', err);
-    cachedPlots = PREVIEW_PLOTS;
-    window.__PLOTS_JSON_ERROR__ = String(err);
-  }
-  return cachedPlots;
-}
+      return urls;
+    }
 
-// --- Folder, изображения ----------------------------------------------------
-function toFolderCandidates(plot) {
-  const set = new Set();
-  const image = String(plot?.image || '').trim();
-  const href  = String(plot?.href || plot?.url_path || '').trim();
-  const slug  = String(plot?.slug || '').trim();
+    async function fetchJsonFromCandidates(urls) {
+      const errors = [];
+      for (const url of urls) {
+        try {
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
+          const data = await res.json();
+          if (!Array.isArray(data)) throw new Error(`Invalid JSON @ ${url}`);
+          return data;
+        } catch (err) {
+          errors.push(String(err));
+        }
+      }
+      throw new Error(errors.join(' | '));
+    }
 
-  const add = (val)=>{
-    if (!val) return;
-    const raw = val.trim().replace(/^\/+|\/+$/g,'');
-    if (!raw) return;
-    set.add(raw);
-    set.add(slugify(raw));
-  };
+    async function getPlots() {
+      if (cachedPlots) return cachedPlots;
+      try {
+        cachedPlots = await fetchJsonFromCandidates(resolveJsonUrls());
+        usingFallbackData = false;
+      } catch (error) {
+        console.warn('plots-index fallback mode:', error);
+        cachedPlots = FALLBACK_PLOTS;
+        usingFallbackData = true;
+      }
+      return cachedPlots;
+    }
 
-  if (image) {
-    const p=image.split('/').filter(Boolean);
-    if (p.length>=3) add(p[2]);
-  }
-  if (href) {
-    const hrefUrl = new URL(href, SITE_ORIGIN);
-    const qSlug = hrefUrl.searchParams.get('slug');
-    if (qSlug) add(qSlug);
-    const p=hrefUrl.pathname.split('/').filter(Boolean);
-    if (p.length>=3 && p[2]!=='shablon') add(p[2]);
-  }
-  if (slug) add(slug);
+    function localizePlot(plot, lang = currentLang) {
+      const t = plot?.translations?.[lang] || {};
+      return {
+        ...plot,
+        image: plot.image || CATEGORY_FALLBACK_IMAGE,
+        alt: t.alt || plot.alt || plot.title || 'Plot',
+        chip: t.chip || plot.chip || UI[lang].badgeText,
+        title: t.title || plot.title || 'Plot',
+        meta: t.meta || plot.meta || 'Costa Blanca',
+        desc: t.desc || plot.desc || 'Plot on Costa Blanca.'
+      };
+    }
 
-  // алиасы
-  const aliases={ 'nou-nazareth':'NouNazareth','san-juan':'SanJuan',
-    'san-juan-investment-plot-1-5m':'SanJuan',
-    'alicante-city-plot-700k':'AlicanteCityPlot',
-    'benidorm-villa-plot-420k':'BenidormPlanet',
-    'coveta-fuma-plot':'CovetaFuma','alicante-plot-512m':'Alicante',
-    'polop-plot':'Polop','el-campello-plot-115k':'Campella',
-    'playa-san-juan-villa-plot-1-1m':'playa-san-juan-villa-plot-1260m',
-    'villajoyosa-sea-plot-3-2m':'villajoyosa-first-line-plot-3-2m',
-    'alicante-building-plot-470k':'alicante-residential-building-plot-470k'
-  };
-  Object.entries(aliases).forEach(([k,v])=>{
-    if(set.has(k)||set.has(v)||set.has(slugify(v))){add(k);add(v);}
-  });
-  return Array.from(set).filter(Boolean);
-}
+    function parseFolderFromImage(imagePath) {
+      const parts = String(imagePath || '').split('/').filter(Boolean);
+      return parts.length >= 4 ? parts[2] : '';
+    }
 
-// ✅ исправленная функция без дубликата
-function buildImageCandidates(plot) {
-  const list=[];
-  const add=(src)=>{ if(!src) return; const n=String(src).trim(); if(n&&!list.includes(n))list.push(n); };
-  if(Array.isArray(plot?.gallery)&&plot.gallery.length) plot.gallery.forEach(add);
-  add(plot?.image);
+    function buildImageCandidates(plot) {
+      const localized = localizePlot(plot, currentLang);
+      const result = [];
+      const seen = new Set();
+      const add = (src) => {
+        const val = String(src || '').trim();
+        if (!val || seen.has(val)) return;
+        seen.add(val);
+        result.push(val);
+      };
 
-  const folders=toFolderCandidates(plot);
-  const imageNames=['1','2','3','4','5','6','7','8'];
-  folders.forEach(folder=>{
-    imageNames.forEach(num=>{
-      IMAGE_EXTENSIONS.forEach(ext=>{
-        add(`/pl/plots/${folder}/${num}.${ext}`);
+      const mainImage = localized.image || CATEGORY_FALLBACK_IMAGE;
+      add(mainImage);
+
+      const folder = parseFolderFromImage(mainImage);
+      if (folder) {
+        for (let i = 1; i <= 8; i += 1) {
+          for (const ext of IMAGE_EXTENSIONS) {
+            add(`/pl/plots/${folder}/${i}.${ext}`);
+          }
+        }
+      }
+
+      while (result.length < 8) add(mainImage || CATEGORY_FALLBACK_IMAGE);
+      return result.slice(0, 8);
+    }
+
+    function normalizeGallery(plot) {
+      const localized = localizePlot(plot, currentLang);
+      const mainImage = localized.image || CATEGORY_FALLBACK_IMAGE;
+      const gallery = buildImageCandidates(plot).map((src, index) => ({
+        src: src || mainImage || CATEGORY_FALLBACK_IMAGE,
+        alt: index === 0 ? localized.alt : `${localized.title} ${index + 1}`
+      }));
+      return { mainImage: gallery[0]?.src || mainImage || CATEGORY_FALLBACK_IMAGE, gallery };
+    }
+
+    function formatPrice(value, lang = currentLang) {
+      const direct = String(value || '').trim();
+      if (direct.startsWith('€')) return direct;
+      const numeric = Number(value);
+      if (!Number.isFinite(numeric)) return '€ 0';
+      const locale = { pl:'pl-PL', en:'en-US', es:'es-ES', ru:'ru-RU' }[lang] || 'pl-PL';
+      return new Intl.NumberFormat(locale, { style:'currency', currency:'EUR', maximumFractionDigits:0 }).format(numeric);
+    }
+
+    function extractArea(meta = '') {
+      const match = String(meta).match(/(\d[\d\s.,]*\s?(?:m²|м²))/i);
+      return match ? match[1] : '';
+    }
+
+    function buildShareData(plot) {
+      const p = localizePlot(plot, currentLang);
+      const { mainImage } = normalizeGallery(plot);
+      const url = new URL(window.location.href);
+      if (plot.slug) url.searchParams.set('slug', plot.slug);
+      if (currentLang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', currentLang);
+      const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
+      return { title: `${p.title} · ${price}`, text: `${p.title} · ${price}`, url: url.toString(), image: absoluteUrl(mainImage) };
+    }
+
+    function updateMeta(plot) {
+      const ui = UI[currentLang];
+      const p = localizePlot(plot, currentLang);
+      const share = buildShareData(plot);
+      const description = p.desc || 'Plot on Costa Blanca.';
+      const pageTitle = `${p.title} | ${formatPrice(plot.price || plot.price_value || 0, currentLang)} | Costa Blanca Invest`;
+
+      document.documentElement.lang = currentLang;
+      document.title = pageTitle;
+      byId('pageTitle').textContent = pageTitle;
+      byId('metaDescription').setAttribute('content', description);
+      byId('canonicalLink').setAttribute('href', share.url);
+      byId('imageSrcLink').setAttribute('href', share.image);
+      byId('ogLocale').setAttribute('content', ui.locale);
+      byId('ogTitle').setAttribute('content', pageTitle);
+      byId('ogDescription').setAttribute('content', description);
+      byId('ogUrl').setAttribute('content', share.url);
+      byId('ogImage').setAttribute('content', share.image);
+      byId('ogImageUrl').setAttribute('content', share.image);
+      byId('ogImageSecure').setAttribute('content', share.image);
+      byId('ogImageAlt').setAttribute('content', p.alt || p.title);
+      byId('twitterTitle').setAttribute('content', pageTitle);
+      byId('twitterDescription').setAttribute('content', description);
+      byId('twitterImage').setAttribute('content', share.image);
+      byId('twitterImageAlt').setAttribute('content', p.alt || p.title);
+      byId('twitterUrl').setAttribute('content', share.url);
+      byId('heroPreload').setAttribute('href', share.image);
+
+      byId('schemaJson').textContent = JSON.stringify({
+        '@context':'https://schema.org',
+        '@type':'Product',
+        name:p.title,
+        description,
+        brand:{'@type':'Organization', name:'Costa Blanca Invest'},
+        offers:{'@type':'Offer', priceCurrency:'EUR', price:String(plot.price_value || String(plot.price || '').replace(/[^\d]/g, '') || '0'), availability:'https://schema.org/InStock', url:share.url},
+        image: currentGallery.map(item => absoluteUrl(item.src))
+      }, null, 2);
+    }
+
+    function renderGallery(plot) {
+      const p = localizePlot(plot, currentLang);
+      const normalized = normalizeGallery(plot);
+      currentGallery = normalized.gallery;
+      const heroImage = byId('heroImage');
+      heroImage.src = normalized.mainImage || CATEGORY_FALLBACK_IMAGE;
+      heroImage.alt = p.alt || p.title;
+      heroImage.onerror = () => { heroImage.src = CATEGORY_FALLBACK_IMAGE; };
+
+      const grid = byId('galleryGrid');
+      grid.innerHTML = '';
+      normalized.gallery.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'gallery-item';
+        card.dataset.mediaSrc = item.src;
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.alt;
+        img.loading = 'lazy';
+        img.onerror = () => { img.src = normalized.mainImage || CATEGORY_FALLBACK_IMAGE; };
+        card.appendChild(img);
+        card.addEventListener('click', () => openMediaLightbox(item.src, item.alt));
+        grid.appendChild(card);
+      });
+    }
+
+    function renderContent(plot) {
+      const ui = UI[currentLang];
+      const p = localizePlot(plot, currentLang);
+      const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
+      const area = extractArea(p.meta);
+      const share = buildShareData(plot);
+
+      byId('backLink').href = buildCategoryUrl(currentLang);
+      byId('backLinkLabel').textContent = ui.backLink;
+      byId('badgeText').textContent = p.chip || ui.badgeText;
+      byId('heroKicker').textContent = `${ui.heroKicker}${p.meta ? ' · ' + p.meta : ''}`;
+      byId('heroDisplay').textContent = p.title;
+      byId('heroSub').textContent = p.desc;
+      byId('heroPriceBoxTitle').textContent = ui.heroPriceBoxTitle;
+      byId('heroPriceFrom').textContent = price;
+      byId('heroPriceSep').textContent = ui.heroPriceSep;
+      byId('heroPriceTo').textContent = area || p.meta || 'Costa Blanca';
+      byId('heroPriceNote').textContent = p.meta || ui.heroPriceNote;
+      byId('heroPriceMeta').textContent = 'Costa Blanca Invest';
+
+      byId('pageH1').textContent = p.title;
+      byId('subtitle').textContent = p.meta || 'Costa Blanca';
+      byId('priceRange').textContent = price;
+      byId('priceSoft').textContent = p.desc;
+      byId('kpi1').textContent = price.replace('€', '').trim();
+      byId('kpi2').textContent = area || '—';
+      byId('kpi3').textContent = p.meta || 'Costa Blanca';
+      byId('kpi4').textContent = ui.kpiFallback4;
+
+      const parts = String(p.desc || '').split(/(?<=[.!?])\s+/).filter(Boolean);
+      byId('lead1').textContent = parts[0] || p.desc;
+      byId('lead2').textContent = parts[1] || p.desc;
+      byId('lead3').textContent = parts[2] || p.desc;
+
+      byId('paramsTitle').textContent = ui.paramsTitle;
+      byId('paramsBlock').innerHTML = `
+        <span class="label">Slug:</span><span class="value">${plot.slug || '—'}</span>
+        <span class="label">Meta:</span><span class="value">${p.meta || '—'}</span>
+        <span class="label">Cena:</span><span class="value">${price}</span>
+        <span class="label">Kontakt:</span><span class="value">${CONTACT_PHONE}</span>`;
+
+      byId('whySectionTitle').textContent = ui.whySectionTitle;
+      const why = [
+        { title: p.chip || ui.badgeText, text: p.desc },
+        { title: p.meta || 'Costa Blanca', text: usingFallbackData ? ui.fallbackHint : 'Dane są pobierane bezpośrednio z JSON i aktualizowane po zmianie języka.' },
+        { title: 'Sharing', text: 'Meta, preview i przyciski udostępniania używają tytułu, ceny i głównego zdjęcia.' }
+      ];
+      [1,2,3].forEach((n) => { byId(`whyTitle${n}`).textContent = why[n-1].title; byId(`whyText${n}`).textContent = why[n-1].text; });
+
+      byId('specTitle').textContent = ui.specTitle;
+      byId('specList').innerHTML = ['1 główne zdjęcie z JSON','Do 8 zdjęć generowanych z folderu obiektu','Fallback na główne zdjęcie kategorii, jeśli zdjęć brakuje'].map(item => `<li>${item}</li>`).join('');
+      byId('specParagraph').textContent = p.desc;
+
+      byId('roiTitle').textContent = ui.roiTitle;
+      byId('roiParagraph1').textContent = p.desc;
+      byId('roiList').innerHTML = [
+        ['Cena', price],
+        ['Meta', p.meta || '—'],
+        ['Slug', plot.slug || '—'],
+        ['Share URL', share.url]
+      ].map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('');
+      byId('roiParagraph2').textContent = p.desc;
+
+      byId('audienceTitle').textContent = ui.audienceTitle;
+      const audience = [
+        { title:'Dla inwestora', text:'Dla klienta analizującego lokalizację, cenę i format działki.' },
+        { title:'Dla dewelopera', text:'Dla podmiotu szukającego gruntu pod projekt mieszkaniowy lub willowy.' },
+        { title:'Dla klienta prywatnego', text:'Dla osoby zainteresowanej działką pod własną inwestycję.' }
+      ];
+      [1,2,3].forEach((n) => { byId(`audienceCard${n}Title`).textContent = audience[n-1].title; byId(`audienceCard${n}Text`).textContent = audience[n-1].text; });
+
+      byId('urgencyNote').textContent = ui.urgencyNote;
+      byId('contactTitle').textContent = ui.contactTitle;
+      byId('contactIntro').textContent = ui.contactIntro;
+      byId('agentRole').textContent = ui.agentRole;
+      byId('agentMeta').textContent = ui.agentMeta;
+      byId('callBtn').href = `tel:${CONTACT_PHONE.replace(/\s+/g, '')}`;
+      byId('callBtnLabel').textContent = ui.callBtn;
+      byId('waBtnLabel').textContent = ui.waBtn;
+      byId('formName').placeholder = ui.formName;
+      byId('formPhone').placeholder = ui.formPhone;
+      byId('formEmail').placeholder = ui.formEmail;
+      byId('formMessage').placeholder = ui.formMessage;
+      byId('formSubmitLabel').textContent = ui.formSubmit;
+      byId('copyLinkLabel').textContent = ui.copyLink;
+      byId('shareBtnLabel').textContent = ui.shareBtn;
+      byId('shareNoteTitle').textContent = p.title;
+      byId('shareNoteStrong').textContent = `${price} · ${p.meta || 'Costa Blanca'}`;
+      byId('shareNoteText').textContent = ui.shareNoteText;
+
+      byId('waBtn').href = `https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}?text=${encodeURIComponent(`${p.title} · ${price}\n${share.url}`)}`;
+    }
+
+    function openMediaLightbox(src, alt = '') {
+      byId('mediaLightboxContent').innerHTML = `<img src="${src}" alt="${alt.replace(/"/g, '&quot;')}">`;
+      byId('mediaLightbox').classList.add('open');
+      byId('mediaLightbox').setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMediaLightbox() {
+      byId('mediaLightbox').classList.remove('open');
+      byId('mediaLightbox').setAttribute('aria-hidden', 'true');
+      byId('mediaLightboxContent').innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    function bindInteractions() {
+      byId('heroMedia').onclick = () => { const first = currentGallery[0]; if (first) openMediaLightbox(first.src, first.alt); };
+      byId('mediaLightboxClose').onclick = closeMediaLightbox;
+      byId('mediaLightbox').onclick = (e) => { if (e.target === byId('mediaLightbox')) closeMediaLightbox(); };
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && byId('mediaLightbox').classList.contains('open')) closeMediaLightbox(); });
+
+      byId('copyLinkBtn').onclick = async () => {
+        const share = buildShareData(currentPlot);
+        try {
+          await navigator.clipboard.writeText(share.url);
+          byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
+          setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
+        } catch {
+          window.prompt('Copy link', share.url);
+        }
+      };
+
+      byId('nativeShareBtn').onclick = async () => {
+        const share = buildShareData(currentPlot);
+        if (navigator.share) {
+          try { await navigator.share({ title: share.title, text: share.text, url: share.url }); } catch {}
+        } else {
+          try {
+            await navigator.clipboard.writeText(share.url);
+            byId('shareBtnLabel').textContent = UI[currentLang].shareCopied;
+            setTimeout(() => { byId('shareBtnLabel').textContent = UI[currentLang].shareBtn; }, 1500);
+          } catch {
+            window.prompt('Copy link', share.url);
+          }
+        }
+      };
+
+      byId('contactForm').onsubmit = (event) => {
+        event.preventDefault();
+        const fd = new FormData(byId('contactForm'));
+        const p = localizePlot(currentPlot, currentLang);
+        const price = formatPrice(currentPlot.price || currentPlot.price_value || 0, currentLang);
+        const share = buildShareData(currentPlot);
+        const text = [
+          'Nowe zapytanie ze strony',
+          '',
+          `${UI[currentLang].formName}: ${String(fd.get('name') || '').trim()}`,
+          `${UI[currentLang].formPhone}: ${String(fd.get('phone') || '').trim()}`,
+          `${UI[currentLang].formEmail}: ${String(fd.get('email') || '').trim()}`,
+          '',
+          `${p.title}`,
+          `${price}`,
+          `${share.url}`,
+          '',
+          `${String(fd.get('message') || '').trim()}`
+        ].join('\n');
+        window.open(`https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+      };
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.onclick = () => applyLanguage(btn.dataset.lang);
+      });
+    }
+
+    function applyLanguage(lang) {
+      currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+      byId('loadingHint').textContent = usingFallbackData ? UI[currentLang].fallbackHint : '';
+      if (!currentPlot) return;
+      renderGallery(currentPlot);
+      renderContent(currentPlot);
+      updateMeta(currentPlot);
+      const url = new URL(window.location.href);
+      if (currentLang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', currentLang);
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    function runSelfTests() {
+      const tests = [];
+      tests.push(resolveJsonUrls().length > 0);
+      tests.push(Array.isArray(FALLBACK_PLOTS) && FALLBACK_PLOTS.length > 0);
+      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).length === 8);
+      tests.push(localizePlot(FALLBACK_PLOTS[0], 'en').title.includes('Nou Nazareth'));
+      tests.push(Boolean(buildShareData(FALLBACK_PLOTS[0]).url));
+      if (tests.some(result => !result)) {
+        console.warn('Self-tests failed', tests);
+      }
+    }
+
+    async function init() {
+      currentLang = getLangFromUrl();
+      byId('loadingScreen').firstElementChild.textContent = UI[currentLang].loading;
+      const plots = await getPlots();
+      byId('loadingHint').textContent = usingFallbackData ? UI[currentLang].fallbackHint : '';
+      const slug = getSlugFromUrl();
+      currentPlot = plots.find(item => slugify(item.slug) === slugify(slug)) || plots[0];
+      renderGallery(currentPlot);
+      renderContent(currentPlot);
+      updateMeta(currentPlot);
+      bindInteractions();
+      runSelfTests();
+      byId('loadingScreen').hidden = true;
+      byId('propertyPage').hidden = false;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      init().catch((err) => {
+        console.error(err);
+        byId('loadingScreen').firstElementChild.textContent = 'JSON load error';
+        byId('loadingHint').textContent = String(err);
       });
     });
-  });
-  add(FALLBACK_IMAGE);
-  return list;
-}
-
-// --- Далее: локализация, meta, отрисовка, формы, init() --------------------
-// (весь оставшийся код остается идентичным твоей версии:
-//  функции localizePlot, guessArea, buildTitle, buildDescription,
-//  buildMetaLine, updateMeta, applyLanguage, renderGallery,
-//  openMediaLightbox / closeMediaLightbox, init(), runSelfTests() и т. д.)
-
-</script>
-  
+  </script>
 </body>
 </html>
