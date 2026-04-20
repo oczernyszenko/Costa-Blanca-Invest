@@ -459,7 +459,7 @@
     <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20działka%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa" aria-label="WhatsApp — szybki kontakt">💬 WhatsApp</a>
   </div>
 
- <script>
+<script>
   const fallbackImage = '/pl/plots/plots-hero.png';
   const JSON_URL = '/pl/plots/plots-index.json';
   const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
@@ -492,9 +492,9 @@
       loc2t: 'San Juan i Alicante', loc2d: 'Mocne lokalizacje pod dom prywatny lub second home, z dostępem do plaż, usług, szkół i całorocznej infrastruktury miejskiej.',
       loc3t: 'El Campello i okolice', loc3d: 'Obszary atrakcyjne dla klientów szukających większej prywatności, spokoju i dobrej relacji między lokalizacją a potencjałem wzrostu wartości.',
       faq_title: 'FAQ — działki na Costa Blanca',
-      f1t: 'Czy warto kupić działkę na Costa Blanca?', f1d: 'Tak. Dobrze położony grunt może dać dużą elastyczność inwestycyjną, wzrost wartości i możliwość realizacji domu dokładnie dopasowanego do potrzeb klienta.',
+      f1t: 'Czy warto kupić działkę na Costa Blanca?', f1d: 'Tak. Dobrze położony grunt może dać dużą elastyczność inwestycyjną, wzrost wartości i możliwość realizacji domu dokładnie dopasowanego do potrzeb klientа.',
       f2t: 'Na co zwrócić uwagę przy zakupie działki?', f2d: 'Najważniejsze są: status urbanistyczny, media, dojazd, ograniczenia zabudowy, koszty przygotowania gruntu oraz lokalizacja względem infrastruktury i morza.',
-      f3t: 'Czy pomagacie w budowie po zakupie działki?', f3d: 'Tak. Możemy przeprowadzić klienta od wyboru działki przez koncepcję domu aż po realizację budowy w Hiszpanii.',
+      f3t: 'Czy pomagacie w budowie po zakupie działki?', f3d: 'Tak. Możemy przeprowadzić klientа od wyboru działki przez koncepcję domu aż po realizację budowy w Hiszpanii.',
       seo_h2: 'Działki Costa Blanca — jak bezpiecznie kupić grunt w Hiszpanii',
       seo_h3_1: 'Rynek działek na Costa Blanca', seo_p1: 'Działki Costa Blanca cieszą się rosnącym zainteresowaniem zarówno wśród klientów prywatnych, jak i inwestorów. Region Alicante–Benidorm oferuje unikalne połączenie klimatu, infrastruktury oraz stabilnego popytu na nieruchomości.',
       seo_h3_2: 'Działka Alicante Hiszpania — na co uważać', seo_p2: 'Zakup działki w Hiszpanii wymaga dokładnej analizy technicznej i urbanistycznej. Jednym z kluczowych aspektów jest struktura gruntu oraz realne możliwości zabudowy.',
@@ -662,7 +662,7 @@
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/\"/g, '&quot;')
+    .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
   const isPreviewEnvironment = () => {
@@ -768,6 +768,10 @@
       if (!normalized || candidates.includes(normalized)) return;
       candidates.push(normalized);
     };
+
+    if (Array.isArray(plot?.gallery) && plot.gallery.length) {
+      plot.gallery.forEach(add);
+    }
 
     add(plot?.image);
 
@@ -1249,6 +1253,6 @@
     onScroll();
   });
 </script>
-
+  
 </body>
 </html>
