@@ -1,7 +1,7 @@
 [
   {
     "slug": "nou-nazareth",
-    "href": "/pl/plots/NouNazareth/",
+    "href": "/pl/plots/shablon/?slug=nou-nazareth",
     "image": "/pl/plots/NouNazareth/1.jpg",
     "alt": "Działka inwestycyjna Nou Nazareth",
     "chip": "Działka deweloperska",
@@ -13,7 +13,7 @@
   },
   {
     "slug": "el-campello-amerador-plot-3-7m",
-    "href": "/pl/plots/el-campello-amerador-plot-3-7m/",
+    "href": "/pl/plots/shablon/?slug=el-campello-amerador-plot-3-7m",
     "image": "/pl/plots/el-campello-amerador-plot-3-7m/1.png",
     "alt": "Działka inwestycyjna El Campello Amerador",
     "chip": "Działka deweloperska",
@@ -25,8 +25,8 @@
   },
   {
     "slug": "villajoyosa-sea-plot-3-2m",
-    "href": "/pl/plots/villajoyosa-sea-plot-3-2m/",
-    "image": "/pl/plots/villajoyosa-sea-plot-3-2m/1.jpg",
+    "href": "/pl/plots/shablon/?slug=villajoyosa-sea-plot-3-2m",
+    "image": "/pl/plots/villajoyosa-first-line-plot-3-2m/1.jpg",
     "alt": "Działka na pierwszej linii morza w Villajoyosa",
     "chip": "Działka na 1. linii morza",
     "title": "Działka — Villajoyosa (1 linia morza)",
@@ -37,7 +37,7 @@
   },
   {
     "slug": "benidorm-finestrat-plot-1-6m",
-    "href": "/pl/plots/benidorm-finestrat-plot-1-6m/",
+    "href": "/pl/plots/shablon/?slug=benidorm-finestrat-plot-1-6m",
     "image": "/pl/plots/benidorm-finestrat-plot-1-6m/1.jpg",
     "alt": "Premium działka inwestycyjna Benidorm Finestrat",
     "chip": "Premium działka",
@@ -49,7 +49,7 @@
   },
   {
     "slug": "san-juan-investment-plot-1-5m",
-    "href": "/pl/plots/SanJuan/",
+    "href": "/pl/plots/shablon/?slug=san-juan-investment-plot-1-5m",
     "image": "/pl/plots/SanJuan/1.jpg",
     "alt": "Działka inwestycyjna San Juan",
     "chip": "Działka inwestycyjna",
@@ -61,7 +61,7 @@
   },
   {
     "slug": "finestrat-benidorm-plot-1-4m",
-    "href": "/pl/plots/finestrat-benidorm-plot-1-4m/",
+    "href": "/pl/plots/shablon/?slug=finestrat-benidorm-plot-1-4m",
     "image": "/pl/plots/finestrat-benidorm-plot-1-4m/1.jpg",
     "alt": "Działka inwestycyjna Finestrat Benidorm",
     "chip": "Działka inwestycyjna",
@@ -73,7 +73,7 @@
   },
   {
     "slug": "vistahermosa-alicante-plot-2850m",
-    "href": "/pl/plots/vistahermosa-alicante-plot-2850m-1-35m/",
+    "href": "/pl/plots/shablon/?slug=vistahermosa-alicante-plot-2850m",
     "image": "/pl/plots/vistahermosa-alicante-plot-2850m-1-35m/1.jpg",
     "alt": "Działka 2850 m² w Vistahermosa Alicante",
     "chip": "Premium działka",
@@ -85,8 +85,8 @@
   },
   {
     "slug": "playa-san-juan-villa-plot-1-1m",
-    "href": "/pl/plots/playa-san-juan-villa-plot-1-1m/",
-    "image": "/pl/plots/playa-san-juan-villa-plot-1-1m/1.jpg",
+    "href": "/pl/plots/shablon/?slug=playa-san-juan-villa-plot-1-1m",
+    "image": "/pl/plots/playa-san-juan-villa-plot-1260m/1.jpg",
     "alt": "Działka pod willę Playa San Juan",
     "chip": "Działka pod willę",
     "title": "Działka — Playa San Juan (1260 m²)",
@@ -97,7 +97,7 @@
   },
   {
     "slug": "finestrat-plot-1600m-750k",
-    "href": "/pl/plots/finestrat-benidorm-plot-1600m-750k/",
+    "href": "/pl/plots/shablon/?slug=finestrat-plot-1600m-750k",
     "image": "/pl/plots/finestrat-benidorm-plot-1600m-750k/1.jpg",
     "alt": "Działka 1600 m² Finestrat",
     "chip": "Działka budowlana",
@@ -109,7 +109,7 @@
   },
   {
     "slug": "alicante-city-plot-700k",
-    "href": "/pl/plots/AlicanteCityPlot/",
+    "href": "/pl/plots/shablon/?slug=alicante-city-plot-700k",
     "image": "/pl/plots/AlicanteCityPlot/1.jpg",
     "alt": "Działka Alicante City",
     "chip": "Działka miejska",
@@ -121,7 +121,7 @@
   },
   {
     "slug": "alicante-plot-630k",
-    "href": "/pl/plots/alicante-plot-630k/",
+    "href": "/pl/plots/shablon/?slug=alicante-plot-630k",
     "image": "/pl/plots/alicante-plot-630k/1.jpg",
     "alt": "Działka 465 m² Alicante",
     "chip": "Działka miejska",
@@ -133,7 +133,7 @@
   },
   {
     "slug": "san-juan-plot-600k",
-    "href": "/pl/plots/san-juan-plot-600k/",
+    "href": "/pl/plots/shablon/?slug=san-juan-plot-600k",
     "image": "/pl/plots/san-juan-plot-600k/1.jpg",
     "alt": "Działka San Juan",
     "chip": "Działka inwestycyjna",
@@ -145,7 +145,7 @@
   },
   {
     "slug": "finestrat-plot-3-villas",
-    "href": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/",
+    "href": "/pl/plots/shablon/?slug=finestrat-plot-3-villas",
     "image": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg",
     "alt": "Działka Finestrat widok morze",
     "chip": "Działka z widokiem",
@@ -157,8 +157,8 @@
   },
   {
     "slug": "alicante-building-plot-470k",
-    "href": "/pl/plots/residential-building-plot-8-units-470k/",
-    "image": "/pl/plots/residential-building-plot-8-units-470k/1.jpg",
+    "href": "/pl/plots/shablon/?slug=alicante-building-plot-470k",
+    "image": "/pl/plots/alicante-residential-building-plot-470k/1.jpg",
     "alt": "Działka pod budynek Alicante",
     "chip": "Działka deweloperska",
     "title": "Działka — Alicante (8 mieszkań)",
@@ -169,7 +169,7 @@
   },
   {
     "slug": "benidorm-villa-plot-420k",
-    "href": "/pl/plots/BenidormPlanet/",
+    "href": "/pl/plots/shablon/?slug=benidorm-villa-plot-420k",
     "image": "/pl/plots/BenidormPlanet/1.png",
     "alt": "Działka pod willę Benidorm",
     "chip": "Działka pod willę",
@@ -181,7 +181,7 @@
   },
   {
     "slug": "coveta-fuma-plot",
-    "href": "/pl/plots/CovetaFuma/",
+    "href": "/pl/plots/shablon/?slug=coveta-fuma-plot",
     "image": "/pl/plots/CovetaFuma/1.jpg",
     "alt": "Działka Coveta Fuma",
     "chip": "Widok na morze",
@@ -193,7 +193,7 @@
   },
   {
     "slug": "alicante-plot-512m",
-    "href": "/pl/plots/Alicante/",
+    "href": "/pl/plots/shablon/?slug=alicante-plot-512m",
     "image": "/pl/plots/Alicante/1.jpg",
     "alt": "Działka 512 m² Alicante",
     "chip": "Działka budowlana",
@@ -205,7 +205,7 @@
   },
   {
     "slug": "santabarbara-plot",
-    "href": "/pl/plots/santabarbara/",
+    "href": "/pl/plots/shablon/?slug=santabarbara-plot",
     "image": "/pl/plots/santabarbara/1.jpg",
     "alt": "Działka Santa Barbara",
     "chip": "Premium działka",
@@ -217,7 +217,7 @@
   },
   {
     "slug": "polop-plot",
-    "href": "/pl/plots/Polop/",
+    "href": "/pl/plots/shablon/?slug=polop-plot",
     "image": "/pl/plots/Polop/1.jpg",
     "alt": "Działka Polop",
     "chip": "Gotowy projekt",
@@ -229,7 +229,7 @@
   },
   {
     "slug": "el-campello-plot-115k",
-    "href": "/pl/plots/Campella/",
+    "href": "/pl/plots/shablon/?slug=el-campello-plot-115k",
     "image": "/pl/plots/Campella/1.jpg",
     "alt": "Działka El Campello",
     "chip": "Działka budowlana",
