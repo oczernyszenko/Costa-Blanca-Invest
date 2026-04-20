@@ -787,9 +787,8 @@
       add(plot?.image);
 
       const folders = toFolderCandidates(plot);
-      const imageNames = ['1','2','3','4','5'];
-
-      folders.forEach(folder => {
+      const imageNames = ['1','2','3','4','5','6','7','8'];
+    folders.forEach(folder => {
         imageNames.forEach(num => {
           IMAGE_EXTENSIONS.forEach(ext => {
             add(`/pl/plots/${folder}/${num}.${ext}`);
