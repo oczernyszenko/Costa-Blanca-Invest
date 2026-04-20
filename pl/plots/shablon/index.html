@@ -505,30 +505,7 @@
     }
 
     function resolveJsonUrls() {
-      const urls = [];
-      const add = (value) => {
-        try {
-          const finalUrl = new URL(value, window.location.href).toString();
-          if (!urls.includes(finalUrl)) urls.push(finalUrl);
-        } catch {}
-      };
-
-      add('./plots-index.json');
-      add('../plots-index.json');
-      add('../../plots-index.json');
-      add('../../../plots-index.json');
-      add('/pl/plots/plots-index.json');
-      add('/pl/plots-index.json');
-      add('/plots-index.json');
-
-      const segments = getPathSegments();
-      const plotsIndex = segments.lastIndexOf('plots');
-      if (plotsIndex !== -1) {
-        const baseSegments = segments.slice(0, plotsIndex + 1);
-        add(`/${baseSegments.join('/')}/plots-index.json`);
-      }
-
-      return urls;
+      return [new URL('/pl/plots/plots-index.json', window.location.origin).toString()];
     }
 
     async function fetchJsonFromCandidates(urls) {
@@ -885,7 +862,9 @@
 
     function runSelfTests() {
       const tests = [];
-      tests.push(resolveJsonUrls().length > 0);
+      const resolved = resolveJsonUrls();
+      tests.push(Array.isArray(resolved) && resolved.length === 1);
+      tests.push(resolved[0].endsWith('/pl/plots/plots-index.json'));
       tests.push(Array.isArray(FALLBACK_PLOTS) && FALLBACK_PLOTS.length > 0);
       tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).length === 8);
       tests.push(localizePlot(FALLBACK_PLOTS[0], 'en').title.includes('Nou Nazareth'));
