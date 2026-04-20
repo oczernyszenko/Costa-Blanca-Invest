@@ -765,7 +765,7 @@
       return Array.from(set).filter(Boolean);
     }
 
-   function buildImageCandidates(plot) {
+function buildImageCandidates(plot) {
   const list = [];
 
   const add = (src) => {
@@ -775,16 +775,28 @@
     list.push(normalized);
   };
 
-  if (Array.isArray(plot?.gallery)) {
+  if (Array.isArray(plot?.gallery) && plot.gallery.length) {
     plot.gallery.forEach(add);
   }
 
   add(plot?.image);
-  add(FALLBACK_IMAGE);
 
+  const folders = toFolderCandidates(plot);
+  const imageNames = ['1','2','3','4','5','6','7','8'];
+
+  folders.forEach(folder => {
+    imageNames.forEach(num => {
+      IMAGE_EXTENSIONS.forEach(ext => {
+        add(`/pl/plots/${folder}/${num}.${ext}`);
+      });
+    });
+  });
+
+  add(FALLBACK_IMAGE);
   return list;
 }
-      add(plot?.image);
+    
+    add(plot?.image);
 
       const folders = toFolderCandidates(plot);
       const imageNames = ['1','2','3','4','5','6','7','8'];
