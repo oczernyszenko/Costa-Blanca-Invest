@@ -760,15 +760,25 @@
     return Array.from(set).filter(Boolean);
   };
 
-  const buildImageCandidates = (plot) => {
-    const candidates = [];
-    const add = (src) => {
-      if (!src) return;
-      const normalized = String(src).trim();
-      if (!normalized || candidates.includes(normalized)) return;
-      candidates.push(normalized);
-    };
+ const buildImageCandidates = (plot) => {
+  const candidates = [];
 
+  const add = (src) => {
+    if (!src) return;
+    const normalized = String(src).trim();
+    if (!normalized || candidates.includes(normalized)) return;
+    candidates.push(normalized);
+  };
+
+  if (Array.isArray(plot?.gallery)) {
+    plot.gallery.forEach(add);
+  }
+
+  add(plot?.image);
+  add(fallbackImage);
+
+  return candidates;
+};
     if (Array.isArray(plot?.gallery) && plot.gallery.length) {
       plot.gallery.forEach(add);
     }
