@@ -11,18 +11,16 @@
     "price_value": 3760000,
     "desc": "Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski."
   },
+
   {
-    "slug": "el-campello-amerador-plot-3-7m",
-    "href": "/pl/plots/el-campello-amerador-plot-3-7m/",
-    "image": "/pl/plots/el-campello-amerador-plot-3-7m/1.jpg",
-    "alt": "Działka inwestycyjna w El Campello Amerador",
-    "chip": "Działka deweloperska",
-    "title": "Działka — El Campello (Amerador)",
-    "meta": "El Campello · Amerador · projekt deweloperski",
-    "price": "€ 3 700 000",
-    "price_value": 3700000,
-    "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza."
-  },
+  "slug": "el-campello-amerador-plot-3-7m",
+  "title": "Działka — El Campello (Amerador)",
+  "meta": "El Campello · Amerador · projekt deweloperski",
+  "price": "€ 3 700 000",
+  "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza.",
+  "image": "/pl/plots/el-campello-amerador-plot-3-7m/1.png",
+  "price_value": 3700000
+} ,
   {
     "slug": "villajoyosa-first-line-plot-3-2m",
     "href": "/pl/plots/villajoyosa-first-line-plot-3-2m/",
