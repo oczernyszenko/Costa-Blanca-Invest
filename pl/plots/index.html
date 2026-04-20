@@ -309,8 +309,8 @@
 
     @media (max-width:390px){
       .container{padding:0 8px}
-      .nav{grid-template-columns:1fr 1fr;gap:6px}
-      .nav a{font-size:12px;min-height:42px;padding:6px 8px;border-radius:10px}
+      .nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+      .nav a{font-size:11px;min-height:42px;padding:6px 6px;border-radius:10px}
       .hero-copy{padding:18px 14px 20px}
       .section-card,.cta-box,.footer-card,.contact-box{padding:16px}
       .plot-card .card-body{padding:16px 14px}
@@ -821,10 +821,29 @@
     };
 
     const normalizePlotHref = (plot, lang) => {
+      const explicitDetailPath = String(plot?.detail_path || plot?.page_path || '').trim();
+      const explicitPageFolder = String(plot?.page_folder || '').trim();
       const explicitPath = String(plot?.url_path || '').trim();
       const rawHref = String(plot?.href || '').trim();
       const rawSlug = String(plot?.slug || '').trim();
+      const explicitImage = String(plot?.image || '').trim();
       const normalizedSlug = slugifyPathSegment(rawSlug);
+
+      if (explicitDetailPath) {
+        return withLangParam(applyRouteAlias(explicitDetailPath), lang);
+      }
+
+      if (explicitPageFolder) {
+        return withLangParam(applyRouteAlias(`/pl/plots/${explicitPageFolder}/`), lang);
+      }
+
+      if (explicitImage) {
+        const imageParts = explicitImage.split('/').filter(Boolean);
+        if (imageParts.length >= 3) {
+          const imageFolder = imageParts[2];
+          return withLangParam(applyRouteAlias(`/pl/plots/${imageFolder}/`), lang);
+        }
+      }
 
       if (explicitPath) {
         return withLangParam(applyRouteAlias(explicitPath), lang);
