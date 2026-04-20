@@ -1,29 +1,31 @@
 [
   {
-    "slug": "NouNazareth",
-    "href": "/pl/plots/NouNazareth/",
+    "slug": "nou-nazareth",
+    "href": "/pl/plots/nou-nazareth/",
     "image": "/pl/plots/NouNazareth/1.jpg",
     "alt": "Działka inwestycyjna Nou Nazareth",
     "chip": "Działka deweloperska",
     "title": "Działka inwestycyjna — Nou Nazareth",
-    "meta": "San Joan · 4 936 m²",
+    "meta": "San Juan · 4 936 m²",
     "price": "€ 3 760 000",
     "price_value": 3760000,
     "desc": "Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski."
   },
-
   {
-  "slug": "el-campello-amerador-plot-3-7m",
-  "title": "Działka — El Campello (Amerador)",
-  "meta": "El Campello · Amerador · projekt deweloperski",
-  "price": "€ 3 700 000",
-  "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza.",
-  "image": "/pl/plots/el-campello-amerador-plot-3-7m/1.png",
-  "price_value": 3700000
-} ,
+    "slug": "el-campello-amerador-plot-3-7m",
+    "href": "/pl/plots/el-campello-amerador-plot-3-7m/",
+    "image": "/pl/plots/el-campello-amerador-plot-3-7m/1.png",
+    "alt": "Działka inwestycyjna El Campello Amerador",
+    "chip": "Działka deweloperska",
+    "title": "Działka — El Campello (Amerador)",
+    "meta": "El Campello · Amerador · projekt deweloperski",
+    "price": "€ 3 700 000",
+    "price_value": 3700000,
+    "desc": "Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza."
+  },
   {
-    "slug": "villajoyosa-first-line-plot-3-2m",
-    "href": "/pl/plots/villajoyosa-first-line-plot-3-2m/",
+    "slug": "villajoyosa-sea-plot-3-2m",
+    "href": "/pl/plots/villajoyosa-sea-plot-3-2m/",
     "image": "/pl/plots/villajoyosa-first-line-plot-3-2m/1.jpg",
     "alt": "Działka na pierwszej linii morza w Villajoyosa",
     "chip": "Działka na 1. linii morza",
@@ -31,7 +33,7 @@
     "meta": "Villajoyosa · 1 linia · projekt deweloperski",
     "price": "€ 3 200 000",
     "price_value": 3200000,
-    "desc": "Działka na pierwszej linii morza pod budowę 2 budynków i 24 apartamentów. Idealna inwestycja deweloperska z widokiem na morze."
+    "desc": "Działka na pierwszej linii morza pod budowę 2 budynków i 24 apartamentów."
   },
   {
     "slug": "benidorm-finestrat-plot-1-6m",
@@ -43,11 +45,11 @@
     "meta": "Benidorm · Finestrat · premium investment",
     "price": "€ 1 600 000",
     "price_value": 1600000,
-    "desc": "Premium działka inwestycyjna w rejonie Benidorm–Finestrat pod zabudowę mieszkaniową lub kompleks willowy."
+    "desc": "Premium działka inwestycyjna pod zabudowę mieszkaniową lub kompleks willowy."
   },
   {
-    "slug": "SanJuan",
-    "href": "/pl/plots/SanJuan/",
+    "slug": "san-juan-investment-plot-1-5m",
+    "href": "/pl/plots/san-juan/",
     "image": "/pl/plots/SanJuan/1.jpg",
     "alt": "Działka inwestycyjna San Juan",
     "chip": "Działka inwestycyjna",
@@ -61,55 +63,55 @@
     "slug": "finestrat-benidorm-plot-1-4m",
     "href": "/pl/plots/finestrat-benidorm-plot-1-4m/",
     "image": "/pl/plots/finestrat-benidorm-plot-1-4m/1.jpg",
-    "alt": "Działka inwestycyjna w Finestrat Benidorm",
+    "alt": "Działka inwestycyjna Finestrat Benidorm",
     "chip": "Działka inwestycyjna",
     "title": "Działka — Finestrat / Benidorm",
-    "meta": "Finestrat · Benidorm · grunt inwestycyjny",
+    "meta": "Finestrat · Benidorm",
     "price": "€ 1 400 000",
     "price_value": 1400000,
-    "desc": "Duża działka inwestycyjna w rejonie Finestrat–Benidorm pod projekt mieszkaniowy lub wille premium."
+    "desc": "Duża działka inwestycyjna pod projekt mieszkaniowy lub wille premium."
   },
   {
-    "slug": "vistahermosa-alicante-plot-2850m-1-35m",
+    "slug": "vistahermosa-alicante-plot-2850m",
     "href": "/pl/plots/vistahermosa-alicante-plot-2850m-1-35m/",
     "image": "/pl/plots/vistahermosa-alicante-plot-2850m-1-35m/1.jpg",
     "alt": "Działka 2850 m² w Vistahermosa Alicante",
     "chip": "Premium działka",
-    "title": "Działka — Vistahermosa, Alicante (2850 m²)",
-    "meta": "Alicante · Vistahermosa · 2850 m²",
+    "title": "Działka — Vistahermosa (2850 m²)",
+    "meta": "Alicante · Vistahermosa",
     "price": "€ 1 350 000",
     "price_value": 1350000,
-    "desc": "Przestronna działka 2850 m² w prestiżowej dzielnicy Vistahermosa w Alicante, odpowiednia pod willę premium lub inwestycję."
+    "desc": "Przestronna działka w prestiżowej dzielnicy Alicante."
   },
   {
-    "slug": "playa-san-juan-villa-plot-1260m",
-    "href": "/pl/plots/playa-san-juan-villa-plot-1260m/",
+    "slug": "playa-san-juan-villa-plot-1-1m",
+    "href": "/pl/plots/playa-san-juan-villa-plot-1-1m/",
     "image": "/pl/plots/playa-san-juan-villa-plot-1260m/1.jpg",
-    "alt": "Działka pod willę w Playa San Juan",
+    "alt": "Działka pod willę Playa San Juan",
     "chip": "Działka pod willę",
     "title": "Działka — Playa San Juan (1260 m²)",
-    "meta": "Playa San Juan · 1260 m² · willa",
+    "meta": "Playa San Juan · willa",
     "price": "€ 1 100 000",
     "price_value": 1100000,
-    "desc": "Działka 1260 m² pod budowę prywatnej willi w Playa San Juan. Jedna z najbardziej prestiżowych lokalizacji nad morzem na Costa Blanca."
+    "desc": "Działka pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem."
   },
   {
-    "slug": "finestrat-benidorm-plot-1600m-750k",
+    "slug": "finestrat-plot-1600m-750k",
     "href": "/pl/plots/finestrat-benidorm-plot-1600m-750k/",
     "image": "/pl/plots/finestrat-benidorm-plot-1600m-750k/1.jpg",
-    "alt": "Działka 1600 m² w Finestrat Benidorm",
+    "alt": "Działka 1600 m² Finestrat",
     "chip": "Działka budowlana",
-    "title": "Działka — Finestrat / Benidorm (1600 m²)",
-    "meta": "Finestrat · 1600 m² · pod budowę",
+    "title": "Działka — Finestrat (1600 m²)",
+    "meta": "Finestrat",
     "price": "€ 750 000",
     "price_value": 750000,
-    "desc": "Działka o powierzchni 1600 m² w rejonie Finestrat–Benidorm pod budowę domu lub projektu inwestycyjnego."
+    "desc": "Działka pod budowę domu lub projektu inwestycyjnego."
   },
   {
-    "slug": "AlicanteCityPlot",
-    "href": "/pl/plots/AlicanteCityPlot/",
+    "slug": "alicante-city-plot-700k",
+    "href": "/pl/plots/alicantecityplot/",
     "image": "/pl/plots/AlicanteCityPlot/1.jpg",
-    "alt": "Działka inwestycyjna Alicante City",
+    "alt": "Działka Alicante City",
     "chip": "Działka miejska",
     "title": "Działka — Alicante City",
     "meta": "centrum",
@@ -121,10 +123,10 @@
     "slug": "alicante-plot-630k",
     "href": "/pl/plots/alicante-plot-630k/",
     "image": "/pl/plots/alicante-plot-630k/1.jpg",
-    "alt": "Działka 465 m² w Alicante",
+    "alt": "Działka 465 m² Alicante",
     "chip": "Działka miejska",
     "title": "Działka 465 m² w Alicante",
-    "meta": "Alicante · działka miejska",
+    "meta": "Alicante",
     "price": "€ 630 000",
     "price_value": 630000,
     "desc": "Działka gotowa pod budowę domu."
@@ -133,101 +135,101 @@
     "slug": "san-juan-plot-600k",
     "href": "/pl/plots/san-juan-plot-600k/",
     "image": "/pl/plots/san-juan-plot-600k/1.jpg",
-    "alt": "Działka w San Juan",
+    "alt": "Działka San Juan",
     "chip": "Działka inwestycyjna",
     "title": "Działka — San Juan",
-    "meta": "San Juan · działka inwestycyjna",
+    "meta": "San Juan",
     "price": "€ 600 000",
     "price_value": 600000,
-    "desc": "Działka w San Juan pod budowę domu prywatnego lub projektu inwestycyjnego w jednej z najbardziej poszukiwanych lokalizacji."
+    "desc": "Działka pod budowę domu lub inwestycję."
   },
   {
-    "slug": "finestrat-plot-3-villas-sea-mountain-view",
+    "slug": "finestrat-plot-3-villas",
     "href": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/",
     "image": "/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg",
-    "alt": "Działka w Finestrat z widokiem na morze i góry",
+    "alt": "Działka Finestrat widok morze",
     "chip": "Działka z widokiem",
     "title": "Działka — Finestrat (3 wille)",
-    "meta": "Finestrat · widok na morze i góry · 3 wille",
+    "meta": "Finestrat",
     "price": "€ 500 000",
     "price_value": 500000,
-    "desc": "Działka pod budowę 3 willi z panoramicznym widokiem na morze i góry. Prestiżowa lokalizacja na Costa Blanca."
+    "desc": "Działka pod 3 wille z widokiem na morze i góry."
   },
   {
-    "slug": "alicante-residential-building-plot-470k",
-    "href": "/pl/plots/alicante-residential-building-plot-470k/",
+    "slug": "alicante-building-plot-470k",
+    "href": "/pl/plots/residential-building-plot-8-units-470k/",
     "image": "/pl/plots/alicante-residential-building-plot-470k/1.jpg",
-    "alt": "Działka pod budowę budynku mieszkalnego w Alicante",
+    "alt": "Działka pod budynek Alicante",
     "chip": "Działka deweloperska",
-    "title": "Działka — Alicante (8 mieszkań + parking)",
-    "meta": "Alicante · 4 piętra · 8 mieszkań · parking",
+    "title": "Działka — Alicante (8 mieszkań)",
+    "meta": "Alicante",
     "price": "€ 470 000",
     "price_value": 470000,
-    "desc": "Działka pod budowę budynku mieszkalnego: 4 piętra, 8 mieszkań i parking podziemny. Idealna inwestycja deweloperska."
+    "desc": "Działka pod budowę budynku mieszkalnego."
   },
   {
-    "slug": "BenidormPlanet",
-    "href": "/pl/plots/BenidormPlanet/",
+    "slug": "benidorm-villa-plot-420k",
+    "href": "/pl/plots/benidormplanet/",
     "image": "/pl/plots/BenidormPlanet/1.png",
-    "alt": "Działka pod budowę willi w Benidorm",
+    "alt": "Działka pod willę Benidorm",
     "chip": "Działka pod willę",
-    "title": "Działka pod budowę willi — Benidorm",
-    "meta": "Benidorm · działka urbanistyczna",
+    "title": "Działka — Benidorm",
+    "meta": "Benidorm",
     "price": "€ 420 000",
     "price_value": 420000,
-    "desc": "Działka miejska pod budowę domu lub willi w Benidorm."
+    "desc": "Działka miejska pod budowę willi."
   },
   {
-    "slug": "CovetaFuma",
-    "href": "/pl/plots/CovetaFuma/",
+    "slug": "coveta-fuma-plot",
+    "href": "/pl/plots/covetafuma/",
     "image": "/pl/plots/CovetaFuma/1.jpg",
     "alt": "Działka Coveta Fuma",
-    "chip": "Działka z widokiem na morze",
+    "chip": "Widok na morze",
     "title": "Działka — Coveta Fuma",
     "meta": "Costa Blanca",
     "price": "€ 394 000",
     "price_value": 394000,
-    "desc": "Atrakcyjna działka nad morzem w Coveta Fuma."
+    "desc": "Działka nad morzem."
   },
   {
-    "slug": "Alicante",
-    "href": "/pl/plots/Alicante/",
+    "slug": "alicante-plot-512m",
+    "href": "/pl/plots/alicante/",
     "image": "/pl/plots/Alicante/1.jpg",
-    "alt": "Działka 512 m² w Alicante pod willę lub dom jednorodzinny",
+    "alt": "Działka 512 m² Alicante",
     "chip": "Działka budowlana",
-    "title": "Działka 512 m² w Alicante pod willę lub dom jednorodzinny",
-    "meta": "Alicante · działka budowlana · 3 kondygnacje",
-    "price": "€ 350 000 · potencjał 400 m²",
+    "title": "Działka 512 m² w Alicante",
+    "meta": "Alicante",
+    "price": "€ 350 000",
     "price_value": 350000,
-    "desc": "Działka w Alicante pod zabudowę jednorodzinną do 3 kondygnacji. 512 m² działki i do 400 m² zabudowy."
+    "desc": "Działka pod zabudowę jednorodzinną."
   },
   {
-    "slug": "santabarbara",
+    "slug": "santabarbara-plot",
     "href": "/pl/plots/santabarbara/",
     "image": "/pl/plots/santabarbara/1.jpg",
-    "alt": "Działka z projektem i licencją w Alicante przy Santa Bárbara pod aparthotel",
+    "alt": "Działka Santa Barbara",
     "chip": "Premium działka",
-    "title": "Działka + projekt + licencja w Alicante przy Santa Bárbara pod aparthotel",
-    "meta": "Alicante · Santa Bárbara · projekt inwestycyjny",
-    "price": "€ 345 000 · projekt + licencja",
+    "title": "Działka — Santa Bárbara",
+    "meta": "Alicante",
+    "price": "€ 345 000",
     "price_value": 345000,
-    "desc": "Działka z projektem i licencją w Alicante przy Santa Bárbara pod aparthotel."
+    "desc": "Działka z projektem i licencją."
   },
   {
-    "slug": "Polop",
-    "href": "/pl/plots/Polop/",
+    "slug": "polop-plot",
+    "href": "/pl/plots/polop/",
     "image": "/pl/plots/Polop/1.jpg",
-    "alt": "Działka inwestycyjna Polop",
+    "alt": "Działka Polop",
     "chip": "Gotowy projekt",
     "title": "Działka — Polop",
-    "meta": "Polop · projekt",
+    "meta": "Polop",
     "price": "€ 250 000",
     "price_value": 250000,
-    "desc": "Gotowy projekt inwestycyjny w Polop."
+    "desc": "Gotowy projekt inwestycyjny."
   },
   {
-    "slug": "Campella",
-    "href": "/pl/plots/Campella/",
+    "slug": "el-campello-plot-115k",
+    "href": "/pl/plots/campella/",
     "image": "/pl/plots/Campella/1.jpg",
     "alt": "Działka El Campello",
     "chip": "Działka budowlana",
@@ -235,6 +237,6 @@
     "meta": "950 m²",
     "price": "€ 115 000",
     "price_value": 115000,
-    "desc": "Działka pod budowę w El Campello."
+    "desc": "Działka pod budowę."
   }
 ]
