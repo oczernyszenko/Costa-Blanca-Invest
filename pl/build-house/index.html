@@ -23,18 +23,21 @@
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Budowa domów w Hiszpanii na Costa Blanca | Costa Blanca Invest">
   <meta property="og:description" content="Budowa domów, gotowe projekty, wnętrza, działki i inwestycje na Costa Blanca. Zobacz realizacje i skontaktuj się z nami.">
-  <meta property="og:image" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png">
+  <meta property="og:image" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
+  <meta property="og:image:url" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
+  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Budowa domów w Hiszpanii na Costa Blanca — Costa Blanca Invest">
+  <meta itemprop="image" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
   <meta property="og:url" content="https://costa-blanca-invest.com/pl/build-house/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Budowa domów w Hiszpanii na Costa Blanca | Costa Blanca Invest">
   <meta name="twitter:description" content="Budowa domów, gotowe projekty, wnętrza, działki i inwestycje na Costa Blanca. Zobacz realizacje i skontaktuj się z nami.">
-  <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png">
+  <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
+  <meta name="twitter:image:src" content="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4">
   <meta name="twitter:image:alt" content="Budowa domów w Hiszpanii na Costa Blanca — Costa Blanca Invest">
   <meta name="twitter:url" content="https://costa-blanca-invest.com/pl/build-house/">
 
@@ -54,7 +57,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="//www.facebook.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png" fetchpriority="high">
+  <link rel="preload" as="image" href="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4" fetchpriority="high">
 
   <style>
     :root {
@@ -1372,7 +1375,7 @@
         </div>
 
         <div class="hero-image">
-          <img src="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png" alt="Budowa nowoczesnego domu w Hiszpanii na Costa Blanca" width="1200" height="900" fetchpriority="high" loading="eager" decoding="async">
+          <img src="https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4" alt="Budowa nowoczesnego domu w Hiszpanii na Costa Blanca" width="1200" height="900" fetchpriority="high" loading="eager" decoding="async">
         </div>
       </section>
 
@@ -1727,6 +1730,7 @@
       const navLinks = Array.from(document.querySelectorAll('.nav a'));
       const breadcrumbs = Array.from(document.querySelectorAll('.breadcrumbs a, .breadcrumbs span'));
       const state = { currentLang: 'pl' };
+      const SHARE_IMAGE = 'https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png?v=4';
       const META = {
         pl: {
           title: 'Budowa domów w Hiszpanii na Costa Blanca | Domy drewniane, prefabrykowane i szkieletowe',
@@ -1811,13 +1815,23 @@
         const desc = document.querySelector('meta[name="description"]');
         const ogTitle = document.querySelector('meta[property="og:title"]');
         const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        const ogImageUrl = document.querySelector('meta[property="og:image:url"]');
+        const ogImageSecure = document.querySelector('meta[property="og:image:secure_url"]');
         const twTitle = document.querySelector('meta[name="twitter:title"]');
         const twDesc = document.querySelector('meta[name="twitter:description"]');
+        const twImage = document.querySelector('meta[name="twitter:image"]');
+        const twImageSrc = document.querySelector('meta[name="twitter:image:src"]');
         if (desc) desc.setAttribute('content', meta.description);
         if (ogTitle) ogTitle.setAttribute('content', meta.ogTitle);
         if (ogDesc) ogDesc.setAttribute('content', meta.ogDescription);
         if (twTitle) twTitle.setAttribute('content', meta.ogTitle);
         if (twDesc) twDesc.setAttribute('content', meta.ogDescription);
+        if (ogImage) ogImage.setAttribute('content', SHARE_IMAGE);
+        if (ogImageUrl) ogImageUrl.setAttribute('content', SHARE_IMAGE);
+        if (ogImageSecure) ogImageSecure.setAttribute('content', SHARE_IMAGE);
+        if (twImage) twImage.setAttribute('content', SHARE_IMAGE);
+        if (twImageSrc) twImageSrc.setAttribute('content', SHARE_IMAGE);
 
         if (navLinks.length >= 6) {
           [t.nav_home, t.nav_categories, t.nav_contact, t.nav_plots, t.nav_build, t.nav_new].forEach((text, index) => {
