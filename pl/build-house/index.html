@@ -58,10 +58,10 @@
 
   <style>
     :root {
-      --primary: #4f8f3a; /* muted green */
-      --primary-dark: #2f5e23; /* deeper, less saturated */
-      --primary-pale: #fbfdf9; /* almost white */
-      --accent: #d07a34; /* warm accent (keep) */
+      --primary: #4f8f3a;
+      --primary-dark: #2f5e23;
+      --primary-pale: #fbfdf9;
+      --accent: #d07a34;
       --accent-dark: #b96428;
       --text: #1f2933;
       --text-soft: #5f6b76;
@@ -504,12 +504,8 @@
       background: linear-gradient(135deg, rgba(120,85,50,.12), rgba(255,255,255,.9));
       box-shadow: 0 20px 50px rgba(120,85,50,.18);
     }
-    .category-card:first-child h3 {
-      color: #5bbcff;
-    }
-    .category-card:last-child h3 {
-      color: #6b4a2d;
-    }
+    .category-card:first-child h3 { color: #5bbcff; }
+    .category-card:last-child h3 { color: #6b4a2d; }
 
     .section-card,
     .cta-box {
@@ -545,7 +541,7 @@
       align-items: center;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(15,23,42,.04); /* neutral instead of green */
+      background: rgba(15,23,42,.04);
       color: var(--text);
       font-weight: 700;
       font-size: 14px;
@@ -588,6 +584,123 @@
       text-align: center;
     }
     .construction-stage p { margin: 0; text-align: left; }
+
+    .projects-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .projects-card {
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.45);
+      box-shadow: var(--shadow-soft);
+    }
+    .projects-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .interior-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .interior-item {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.45);
+      box-shadow: var(--shadow-soft);
+    }
+    .interior-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .projects-card,
+    .interior-item {
+      cursor: zoom-in;
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+    .projects-card:hover,
+    .interior-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 50px rgba(15,23,42,.14);
+    }
+    .projects-card img,
+    .interior-item img {
+      transition: transform .45s ease;
+    }
+    .projects-card:hover img,
+    .interior-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(15,23,42,.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .28s ease, visibility .28s ease;
+      z-index: 20000;
+    }
+    .lightbox.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .lightbox-inner {
+      position: relative;
+      max-width: min(1200px, 94vw);
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.35);
+      background: #fff;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 999px;
+      background: #fff;
+      color: #1f2933;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(0,0,0,.22);
+    }
+    .lightbox-close:hover {
+      transform: scale(1.05);
+    }
 
     table {
       width: 100%;
@@ -812,6 +925,8 @@
       .topbar-inner{grid-template-columns:auto 1fr auto;gap:12px}
       .nav{gap:18px}
       .hero-card{grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);min-height:520px}
+      .projects-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .interior-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
 
     @media (max-width: 1100px) {
@@ -820,6 +935,8 @@
       .steps-grid,
       .faq-grid,
       .construction-gallery { grid-template-columns: 1fr; }
+      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .interior-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
       .hero-image,
       .hero-image img { min-height: 420px; }
       .topbar-inner{grid-template-columns:1fr;justify-items:center;gap:10px;padding:10px 0;min-height:auto}
@@ -836,14 +953,24 @@
       .footer-card,
       .contact-box{padding:26px}
       .contact-form-grid{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .interior-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       table{min-width:820px}
     }
 
     @media (max-width:768px){
+      .lightbox {
+        padding: 14px;
+      }
+      .lightbox-close {
+        top: -10px;
+        right: -2px;
+        width: 42px;
+        height: 42px;
+      }
       .topbar-inner{width:100%;grid-template-columns:1fr;gap:8px;padding:8px 0;min-height:auto;justify-items:center}
       .brand{justify-self:center;text-align:center;font-size:15px;max-width:100%;overflow-wrap:anywhere}
 
-      /* 2 rows x 3 columns */
       .nav{
         display:grid;
         grid-template-columns:repeat(3,minmax(0,1fr));
@@ -888,7 +1015,9 @@
       .contact-form-grid,
       .categories-grid,
       .steps-grid,
-      .faq-grid { grid-template-columns: 1fr; }
+      .faq-grid,
+      .projects-grid,
+      .interior-grid { grid-template-columns: 1fr; }
 
       .contact-inline-wrap,
       .cta-actions,
@@ -970,7 +1099,6 @@
       .topbar-inner{gap:6px;padding:6px 0}
       .brand{font-size:14px}
 
-      /* keep 2 rows x 3 even on small */
       .nav{
         grid-template-columns:repeat(3,1fr);
         gap:5px;
@@ -1128,6 +1256,38 @@
               <p>Finalny etap obejmuje design, materiały i detale, które wpływają na odbiór domu i jego wartość rynkową.</p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="section-card fade-up" id="gotowe-projekty">
+        <h2>Gotowe projekty</h2>
+        <p class="center-text">Prezentujemy zrealizowane domy drewniane i gotowe projekty wykonane przez naszą firmę.</p>
+        <div class="projects-grid">
+  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-przod-1.jpg" alt="Dom drewniany z poddaszem żółty przód" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-nowoczesny-2.jpg" alt="Dom drewniany nowoczesny" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-brazowy-weranda-3.jpg" alt="Dom drewniany brązowy weranda" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-duzy-rodzinny-4.jpg" alt="Dom drewniany duży rodzinny" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-nowoczesny-niebieski-5.jpg" alt="Dom drewniany nowoczesny niebieski" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-niebieski-widok-boczny-6.jpg" alt="Dom drewniany niebieski widok boczny" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-bialy-czerwony-dach-7.jpg" alt="Dom drewniany biały czerwony dach" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-przod-8.jpg" alt="Dom drewniany z poddaszem żółty przód" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-skos-9.jpeg" alt="Dom drewniany z poddaszem żółty skos" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/dom-drewniany-parterowy-bungalow-10.JPG" alt="Dom drewniany parterowy bungalow" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/projekt-domu-drewnianego-nowoczesnego-11.jpg" alt="Projekt domu drewnianego nowoczesnego 11" loading="lazy" decoding="async"></article>
+  <article class="projects-card"><img src="images/projekt-domu-drewnianego-nowoczesnego-12.jpg" alt="Projekt domu drewnianego nowoczesnego 12" loading="lazy" decoding="async"></article>
+</div>
+      </section>
+
+      <section class="section-card fade-up" id="wnetrza-prace">
+        <h2>Wewnętrzne prace</h2>
+        <p class="center-text">Etapy wykończenia wnętrz i przykłady realizacji wewnętrznych.</p>
+        <div class="interior-grid">
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-schody-hol-1.jpg" alt="Wnętrze domu drewnianego schody hol" loading="lazy" decoding="async"></article>
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-schody-widok-2.jpg" alt="Wnętrze domu drewnianego schody widok" loading="lazy" decoding="async"></article>
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-salon-pusty-3.jpg" alt="Wnętrze domu drewnianego salon pusty" loading="lazy" decoding="async"></article>
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-lazienka-4.jpg" alt="Wnętrze domu drewnianego łazienka" loading="lazy" decoding="async"></article>
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-schody-wykonczenie-drewno-5.jpg" alt="Wnętrze domu drewnianego schody wykończenie drewno" loading="lazy" decoding="async"></article>
+          <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-poddasze-otwarta-przestrzen-6.jpg" alt="Wnętrze domu drewnianego poddasze otwarta przestrzeń" loading="lazy" decoding="async"></article>
         </div>
       </section>
 
@@ -1322,6 +1482,13 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Zamknij">×</button>
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
   <div class="sticky-contact" aria-label="Szybki kontakt">
     <div class="wrap">
       <a href="https://wa.me/34604158859?text=Interesuje%20mnie%20budowa%20domu%20na%20Costa%20Blanca." target="_blank" rel="noopener noreferrer" class="sticky-btn sticky-wa">💬 WhatsApp</a>
@@ -1333,418 +1500,19 @@
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
     const DEFAULT_CATEGORY_URL = 'https://costa-blanca-invest.com/pl/build-house/';
     const SHARE_IMAGE = 'https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png';
-
-    const PAGE_TRANSLATIONS = {
-      pl: {
-        page_title: 'Budowa domów w Hiszpanii na Costa Blanca | Domy drewniane, prefabrykowane i szkieletowe',
-        meta_description: 'Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane i szkieletowe, fundamenty każdej złożoności, projekty, remonty pod klucz i premium wykończenie wnętrz.',
-        og_locale: 'pl_PL',
-        og_title: 'Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca',
-        og_description: 'Budowa domów na Costa Blanca: projekty, fundamenty, domy drewniane, prefabrykowane i szkieletowe, remonty pod klucz i premium wykończenie wnętrz.',
-        og_image_alt: 'Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca',
-        brand_aria: 'Costa Blanca Invest — strona główna',
-        nav_aria: 'Główna nawigacja',
-        sticky_aria: 'Szybki kontakt',
-        sticky_wa_aria: 'WhatsApp — szybki kontakt',
-        breadcrumbs_aria: 'Breadcrumb',
-        nav_home: 'Strona główna',
-        nav_categories: 'Kategorie',
-        nav_new: 'Nowe inwestycje',
-        nav_plots: 'Działki',
-        nav_build: 'Budowa domu',
-        nav_contact: 'Kontakt',
-        breadcrumbs_home: 'Strona główna',
-        breadcrumbs_current: 'Budowa domu',
-        hero_title: 'Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca',
-        hero_subtitle: 'Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną i szkieletową — dobierając rozwiązanie do działki, budżetu i celu inwestycji.',
-        hero_call: '📞 Zadzwoń',
-        hero_whatsapp: '💬 WhatsApp',
-        hero_lead: 'Nasza oferta obejmuje nie tylko budowę domu, ale także fundamenty każdej złożoności, remonty pod klucz oraz premium wykończenie wnętrz. Dzięki temu klient otrzymuje jeden spójny model realizacji na Costa Blanca.',
-        hero_alt: 'Budowa nowoczesnego domu w Hiszpanii na Costa Blanca',
-        tech_title: 'Technologie budowy domów w Hiszpanii',
-        tech_intro: 'Pracujemy z kilkoma rozwiązaniami, aby dobrać model odpowiedni dla działki, budżetu, terminu realizacji i oczekiwanego standardu domu na Costa Blanca.',
-        tech_chips: ['Dom drewniany','Prefabrykowany','Dom szkieletowy','Fundamenty','Wykończenie premium'],
-        scope_title: 'Zakres realizacji',
-        scope_1_h: 'Analiza i projekt',
-        scope_1_p: 'Analiza działki i dopasowanie projektu do warunków gruntu oraz założeń inwestycji.',
-        scope_2_h: 'Technologia i konstrukcja',
-        scope_2_p: 'Dobór technologii: drewnianej, prefabrykowanej lub szkieletowej oraz przygotowanie fundamentów i instalacji.',
-        scope_3_h: 'Wykończenie i oddanie',
-        scope_3_p: 'Budowa domu, remonty pod klucz, premium wykończenie wnętrz i przygotowanie obiektu do użytkowania lub wynajmu.',
-        stages_title: 'Stadia budowy',
-        stages_intro: 'W jednym miejscu pokazujemy pełny cykl realizacji — od przygotowania działki po gotowy dom i finalne wnętrze.',
-        stage_1_h: '1. Fundament i przygotowanie działki',
-        stage_1_p: 'Dobrze przygotowana baza techniczna ogranicza ryzyko, porządkuje budżet i daje bezpieczny start całej inwestycji.',
-        stage_2_h: '2. Proces budowy',
-        stage_2_p: 'Na etapie realizacji liczy się kontrola jakości, zgodność z projektem i logika całego harmonogramu prac.',
-        stage_3_h: '3. Izolacja i przygotowanie wnętrz',
-        stage_3_p: 'Etap izolacji oraz przygotowania wnętrz wpływa na komfort życia, parametry użytkowe domu i późniejsze koszty eksploatacji.',
-        stage_4_h: '4. Wykończenie wnętrz',
-        stage_4_p: 'Finalny etap obejmuje design, materiały i detale, które wpływają na odbiór domu i jego wartość rynkową.',
-        stage_alt_1: 'Fundamenty i przygotowanie działki pod budowę domu w Hiszpanii',
-        stage_alt_2: 'Proces budowy domu na Costa Blanca',
-        stage_alt_3: 'Izolacja i przygotowanie wnętrz domu w Hiszpanii',
-        stage_alt_4: 'Finalny dom po zakończeniu budowy na Costa Blanca',
-        conditions_title: 'Warunki działki i fundamenty — realne wyzwania na Costa Blanca',
-        cond_1_h: 'Co może zwiększyć koszt budowy',
-        cond_1_p: 'Twarde podłoże skalne, nierówna geodezja działki, dodatkowe prace ziemne i ograniczenia przy tradycyjnych fundamentach.',
-        cond_2_h: 'Prefabrykacja i płyta',
-        cond_2_p: 'Możliwość posadowienia domu na płytach betonowych zamiast rozbudowanych fundamentów ogranicza ryzyko i koszty.',
-        cond_3_h: 'Szybsze wejście na rynek',
-        cond_3_p: 'Po przygotowaniu płyty dom może być montowany szybko, co skraca czas całej inwestycji.',
-        comparison_title: 'Porównanie technologii',
-        comparison_intro: 'Dobieramy technologię do działki, budżetu, tempa realizacji i celu inwestycji.',
-        table_h: ['Parametr','Dom szkieletowy drewniany','Dom prefabrykowany z paneli cementowych','Dom monolityczny betonowy'],
-        table_rows: [
-          ['Typ konstrukcji','Drewniano-konstrukcyjny (szkieletowy)','Prefabrykowane panele cementowe','Monolit żelbetowy'],
-          ['Czas realizacji pod klucz','1–2 miesiące','1–2 miesiące','6–12 miesięcy'],
-          ['Główne zalety','Szybkość budowy, lekka konstrukcja, dobra izolacja','Precyzja wykonania, szybki montaż, stabilność','Maksymalna trwałość, prestiż, klasyczna technologia'],
-          ['Najlepsze zastosowanie','Szybka budowa domu lub inwestycji','Projekty inwestycyjne i sprzedaż','Dom premium na lata']
-        ],
-        faq_title: 'FAQ — budowa domu w Hiszpanii',
-        faq_1_h: 'Ile trwa budowa domu w Hiszpanii?',
-        faq_1_p: 'Czas realizacji zależy od technologii, projektu, zakresu prac i stopnia przygotowania działki.',
-        faq_2_h: 'Jaka technologia jest najlepsza?',
-        faq_2_p: 'Dobór technologii zależy od działki, budżetu, oczekiwanego terminu oraz celu inwestycyjnego.',
-        faq_3_h: 'Czy realizujecie fundamenty i wykończenie?',
-        faq_3_p: 'Tak, oferta obejmuje fundamenty każdej złożoności, instalacje, remonty pod klucz oraz premium wykończenie wnętrz.',
-        categories_title: 'Inne główne kategorie',
-        category_1_h: 'Nowe inwestycje',
-        category_1_p: 'Apartamenty, penthouse’y i wille od deweloperów na Costa Blanca z potencjałem inwestycyjnym.',
-        category_2_h: 'Działki',
-        category_2_p: 'Zakup gruntu na Costa Blanca pod dom prywatny lub projekt inwestycyjny.',
-        seo_h2: 'Budowa domów w Hiszpanii na Costa Blanca — kompleksowa realizacja od działki do gotowego domu',
-        seo_1_h: 'Budowa domu w Hiszpanii — ile kosztuje i od czego zależy',
-        seo_1_p: 'Koszt budowy domu w Hiszpanii zależy od kilku kluczowych czynników: lokalizacji (Alicante, Benidorm, Altea, Torrevieja), warunków działki, technologii budowy oraz standardu wykończenia. Realizujemy projekty zarówno dla klientów prywatnych, jak i inwestorów, oferując optymalne rozwiązania dopasowane do budżetu i celu inwestycji.',
-        seo_2_h: 'Główne technologie budowy domów',
-        seo_2_p: 'W praktyce ceny budowy domu na Costa Blanca zaczynają się od około 1200–1800 €/m² w zależności od technologii i zakresu prac.',
-        seo_3_h: 'Doświadczenie i lokalny rynek Costa Blanca',
-        seo_3_p: 'Posiadamy wieloletnie doświadczenie w realizacji projektów budowlanych na rynku ukraińskim, gdzie pracowaliśmy z różnymi technologiami budowy. Dziś wykorzystujemy to doświadczenie na rynku hiszpańskim, dostosowując rozwiązania do klimatu i specyfiki Costa Blanca.',
-        seo_4_h: 'Showroom w Walencji — zobacz jakość przed budową',
-        seo_4_p: 'Realizujemy projekty w takich lokalizacjach jak Alicante, Benidorm, Altea, Calpe i Torrevieja, dzięki czemu dobrze rozumiemy lokalny rynek nieruchomości i potrzeby inwestorów.',
-        seo_5_h: 'Fundamenty i działki — klucz do sukcesu inwestycji',
-        seo_5_p: 'Otworzyliśmy showroom w Walencji, gdzie można zobaczyć standard wykończenia domu drewnianego, materiały oraz rozwiązania technologiczne. Klient przed rozpoczęciem inwestycji dokładnie wie, jaki będzie efekt końcowy.',
-        seo_6_h: 'Kompleksowa budowa domu pod klucz',
-        seo_6_p: 'Specjalizujemy się w fundamentach każdej złożoności — od prostych płyt betonowych po zaawansowane rozwiązania na trudnych, skalistych działkach. Na Costa Blanca często występują wymagające warunki gruntowe, dlatego już na etapie wyboru działki analizujemy teren, aby uniknąć nieprzewidzianych kosztów i błędów inwestycyjnych.',
-        seo_7_h: 'Dla klientów prywatnych i inwestorów',
-        seo_7_p: 'Zapewniamy pełną realizację inwestycji: analiza działki i doradztwo, projekt i dobór technologii, budowa domu, instalacje i prace techniczne oraz wykończenie wnętrz premium.',
-        seo_8_h: 'Nieruchomość do życia i do zarabiania',
-        seo_8_p: 'Budujemy domy jako second home, domy całoroczne oraz projekty inwestycyjne pod wynajem. Tworzymy nieruchomości dopasowane do rynku Costa Blanca, które nie tylko dobrze wyglądają, ale również zarabiają.',
-        contact_title: 'Zapytaj o budowę domu w Hiszpanii', contact_intro: 'Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.', contact_role: 'Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm', call_now: '📞 Zadzwoń teraz', write_now: '💬 Napisz', share_title: 'Udostępnij stronę', share_link: '🔗 Link', share_copied: '✅ Skopiowano', share_copied_status: 'Link skopiowany.', share_prompt: 'Skopiuj link:', form_name: 'Twoje imię', form_phone: 'Telefon / WhatsApp', form_email: 'Email', form_message: 'Napisz, jaki dom lub projekt Cię interesuje i czy masz już działkę', form_submit: '📩 Wyślij zapytanie', wa_form_prefix: 'Nowe zapytanie ze strony Budowa domu:', footer_copy: 'Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona została stworzona jako osobiste narzędzie pracy dla partnerów i klientów, zapewniające szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.',
-        footer_links: ['Strona główna','Nowe inwestycje','Działki','FAQ','Kontakt'],
-        footer_bottom: '© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko. Materiały, kod i koncepcja strony stanowią własność intelektualną autora.'
-      },
-      es: {
-        page_title: 'Construcción de casas en España en Costa Blanca | Casas de madera, prefabricadas y de estructura ligera',
-        meta_description: 'Construcción de casas en España en Costa Blanca: casas de madera, prefabricadas y de estructura ligera, cimentaciones de cualquier complejidad, proyectos, reformas llave en mano y acabados premium.',
-        og_locale: 'es_ES', og_title: 'Construcción de casas en España — de madera, prefabricadas y ligeras en Costa Blanca', og_description: 'Construcción de casas en Costa Blanca: proyectos, cimentaciones, casas de madera, prefabricadas y de estructura ligera, reformas llave en mano y acabados premium.', og_image_alt: 'Construcción de casas en España — de madera, prefabricadas y ligeras en Costa Blanca', brand_aria: 'Costa Blanca Invest — página principal', nav_aria: 'Navegación principal', sticky_aria: 'Contacto rápido', sticky_wa_aria: 'WhatsApp — contacto rápido', breadcrumbs_aria: 'Breadcrumb', nav_home: 'Inicio', nav_categories: 'Categorías', nav_new: 'Obra nueva', nav_plots: 'Parcelas', nav_build: 'Construcción', nav_contact: 'Contacto', breadcrumbs_home: 'Inicio', breadcrumbs_current: 'Construcción', hero_title: 'Construcción de casas en España — de madera, prefabricadas y de estructura ligera en Costa Blanca', hero_subtitle: 'Diseñamos y construimos casas en España para clientes internacionales. Trabajamos con varias tecnologías — madera, prefabricada y estructura ligera — eligiendo la solución según la parcela, el presupuesto y el objetivo de inversión.', hero_call: '📞 Llamar', hero_whatsapp: '💬 WhatsApp', hero_lead: 'Nuestra oferta incluye no solo la construcción de la casa, sino también cimentaciones de cualquier complejidad, reformas llave en mano y acabados interiores premium. Así el cliente recibe un modelo integral de ejecución en Costa Blanca.', hero_alt: 'Construcción de una casa moderna en España en Costa Blanca', tech_title: 'Tecnologías de construcción de casas en España', tech_intro: 'Trabajamos con varias soluciones para elegir el modelo adecuado según la parcela, el presupuesto, el plazo de ejecución y el estándar esperado de la vivienda en Costa Blanca.', tech_chips: ['Casa de madera','Prefabricada','Estructura ligera','Cimentaciones','Acabado premium'], scope_title: 'Alcance de la ejecución', scope_1_h: 'Análisis y proyecto', scope_1_p: 'Análisis de la parcela y adaptación del proyecto a las condiciones del terreno y a los objetivos de la inversión.', scope_2_h: 'Tecnología y estructura', scope_2_p: 'Selección de tecnología: madera, prefabricada o estructura ligera, además de cimentaciones e instalaciones.', scope_3_h: 'Acabado y entrega', scope_3_p: 'Construcción de la vivienda, reformas llave en mano, acabados premium y preparación del inmueble para uso o alquiler.', stages_title: 'Etapas de la construcción', stages_intro: 'Mostramos todo el ciclo de ejecución — desde la preparación de la parcela hasta la vivienda terminada y el interior final.', stage_1_h: '1. Cimentación y preparación de la parcela', stage_1_p: 'Una base técnica bien preparada reduce riesgos, ordena el presupuesto y da un inicio seguro a toda la inversión.', stage_2_h: '2. Proceso de construcción', stage_2_p: 'En esta fase importan el control de calidad, la conformidad con el proyecto y la lógica del calendario de obra.', stage_3_h: '3. Aislamiento y preparación interior', stage_3_p: 'La fase de aislamiento y preparación del interior influye en el confort, el rendimiento de la vivienda y los costes de mantenimiento.', stage_4_h: '4. Acabado interior', stage_4_p: 'La etapa final incluye diseño, materiales y detalles que influyen en la percepción de la vivienda y su valor de mercado.', stage_alt_1: 'Cimentaciones y preparación de parcela para construir una casa en España', stage_alt_2: 'Proceso de construcción de una casa en Costa Blanca', stage_alt_3: 'Aislamiento y preparación interior de una casa en España', stage_alt_4: 'Casa final tras terminar la construcción en Costa Blanca', conditions_title: 'Condiciones de la parcela y cimentaciones — retos reales en Costa Blanca', cond_1_h: 'Qué puede aumentar el coste de construcción', cond_1_p: 'Suelo rocoso duro, geodesia irregular de la parcela, trabajos extra de movimiento de tierras y limitaciones de cimentaciones tradicionales.', cond_2_h: 'Prefabricación y losa', cond_2_p: 'La posibilidad de apoyar la casa sobre losas de hormigón en lugar de cimentaciones complejas reduce riesgos y costes.', cond_3_h: 'Salida más rápida al mercado', cond_3_p: 'Tras preparar la losa, la casa puede montarse rápidamente, reduciendo el plazo total de la inversión.', comparison_title: 'Comparación de tecnologías', comparison_intro: 'Elegimos la tecnología según la parcela, el presupuesto, el ritmo de ejecución y el objetivo de inversión.', table_h: ['Parámetro','Casa de entramado de madera','Casa prefabricada con paneles de cemento','Casa monolítica de hormigón'],
-        table_rows: [
-          ['Tipo de construcción','Estructura de madera','Paneles prefabricados de cemento','Monolito de hormigón armado'],
-          ['Tiempo llave en mano','1–2 meses','1–2 meses','6–12 meses'],
-          ['Ventajas principales','Construcción rápida, estructura ligera, buen aislamiento','Precisión de ejecución, montaje rápido, estabilidad','Máxima durabilidad, prestigio, tecnología clásica'],
-          ['Mejor uso','Construcción rápida de casa o inversión','Proyectos de inversión y venta','Casa premium para muchos años']
-        ],
-        faq_title: 'FAQ — construcción de casas en España', faq_1_h: '¿Cuánto dura la construcción de una casa en España?', faq_1_p: 'El tiempo de ejecución depende de la tecnología, el proyecto, el alcance de los trabajos y el nivel de preparación de la parcela.', faq_2_h: '¿Qué tecnología es la mejor?', faq_2_p: 'La elección depende de la parcela, el presupuesto, el plazo esperado y el objetivo de inversión.', faq_3_h: '¿Realizáis cimentaciones y acabados?', faq_3_p: 'Sí. La oferta incluye cimentaciones de cualquier complejidad, instalaciones, reformas llave en mano y acabados premium.', categories_title: 'Otras categorías principales', category_1_h: 'Obra nueva', category_1_p: 'Apartamentos, áticos y villas de promotores en Costa Blanca con potencial de inversión.', category_2_h: 'Parcelas', category_2_p: 'Compra de suelo en Costa Blanca para una vivienda privada o un proyecto de inversión.', seo_h2: 'Construcción de casas en España en Costa Blanca — ejecución integral desde la parcela hasta la vivienda terminada', seo_1_h: 'Construcción de una casa en España — cuánto cuesta y de qué depende', seo_1_p: 'El coste de construir una casa en España depende de varios factores clave: ubicación (Alicante, Benidorm, Altea, Torrevieja), condiciones de la parcela, tecnología de construcción y nivel de acabado. Realizamos proyectos tanto para clientes privados como para inversores, ofreciendo soluciones adaptadas al presupuesto y al objetivo de inversión.', seo_2_h: 'Principales tecnologías de construcción', seo_2_p: 'En la práctica, los precios de construcción en Costa Blanca empiezan aproximadamente en 1200–1800 €/m², según la tecnología y el alcance de los trabajos.', seo_3_h: 'Experiencia y mercado local de Costa Blanca', seo_3_p: 'Contamos con una amplia experiencia en proyectos de construcción en el mercado ucraniano, donde trabajamos con distintas tecnologías. Hoy trasladamos esa experiencia al mercado español, adaptando las soluciones al clima y a la especificidad de Costa Blanca.', seo_4_h: 'Showroom en Valencia — vea la calidad antes de construir', seo_4_p: 'Realizamos proyectos en Alicante, Benidorm, Altea, Calpe y Torrevieja, por lo que conocemos muy bien el mercado inmobiliario local y las necesidades de los inversores.', seo_5_h: 'Parcelas y cimentaciones — clave del éxito de la inversión', seo_5_p: 'Hemos abierto un showroom en Valencia donde se puede ver el nivel de acabado de una casa de madera, los materiales y las soluciones tecnológicas. El cliente entiende el resultado final antes de empezar la obra.', seo_6_h: 'Construcción integral llave en mano', seo_6_p: 'Nos especializamos en cimentaciones de cualquier complejidad — desde losas simples hasta soluciones avanzadas para parcelas difíciles y rocosas. En Costa Blanca son frecuentes las condiciones de suelo exigentes, por eso analizamos el terreno ya en la etapa de selección de la parcela para evitar costes imprevistos y errores de inversión.', seo_7_h: 'Para clientes privados e inversores', seo_7_p: 'Ofrecemos una ejecución completa: análisis de parcela y asesoramiento, proyecto y elección de tecnología, construcción, instalaciones y trabajos técnicos, además de acabado interior premium.', seo_8_h: 'Propiedad para vivir y para rentabilizar', seo_8_p: 'Construimos viviendas como second home, casas para vivir todo el año y proyectos de inversión para alquiler. Creamos inmuebles adaptados al mercado de Costa Blanca que no solo se ven bien, sino que también generan ingresos.', contact_title: 'Consulta sobre la construcción de una casa en España', contact_intro: 'Construimos casas en Costa Blanca, realizamos cimentaciones, reformas llave en mano y acabados interiores premium. Contáctanos para recibir una oferta adaptada a tu parcela, presupuesto y objetivo de inversión.', contact_role: 'Especialista en inversión inmobiliaria Costa Blanca · Alicante–Benidorm', call_now: '📞 Llamar ahora', write_now: '💬 Escribir', share_title: 'Compartir página', share_link: '🔗 Enlace', share_copied: '✅ Copiado', share_copied_status: 'Enlace copiado.', share_prompt: 'Copia el enlace:', form_name: 'Tu nombre', form_phone: 'Teléfono / WhatsApp', form_email: 'Email', form_message: 'Escribe qué casa o proyecto te interesa y si ya tienes parcela', form_submit: '📩 Enviar consulta', wa_form_prefix: 'Nueva consulta desde la página Construcción de casas:', footer_copy: 'Costa Blanca Invest es un proyecto de inversión en el mercado inmobiliario de España. El sitio fue creado como una herramienta personal de trabajo para socios y clientes, proporcionando acceso rápido a inversiones, parcelas y proyectos de construcción en Costa Blanca.', footer_links: ['Inicio','Obra nueva','Parcelas','FAQ','Contacto'], footer_bottom: '© 2026 | Sitio creado personalmente por Olga Chernyshenko. Los materiales, el código y el concepto del sitio son propiedad intelectual de la autora.'
-      },
-      en: {
-        page_title: 'House construction in Spain on Costa Blanca | Timber, prefab and frame houses', meta_description: 'House construction in Spain on Costa Blanca: timber, prefab and frame houses, foundations of any complexity, projects, turnkey renovations and premium interior finishing.', og_locale: 'en_GB', og_title: 'House construction in Spain — timber, prefab and frame houses on Costa Blanca', og_description: 'House construction on Costa Blanca: projects, foundations, timber, prefab and frame houses, turnkey renovations and premium interior finishing.', og_image_alt: 'House construction in Spain — timber, prefab and frame houses on Costa Blanca', brand_aria: 'Costa Blanca Invest — home page', nav_aria: 'Main navigation', sticky_aria: 'Quick contact', sticky_wa_aria: 'WhatsApp — quick contact', breadcrumbs_aria: 'Breadcrumb', nav_home: 'Home', nav_categories: 'Categories', nav_new: 'New developments', nav_plots: 'Plots', nav_build: 'Build house', nav_contact: 'Contact', breadcrumbs_home: 'Home', breadcrumbs_current: 'Build house', hero_title: 'House construction in Spain — timber, prefab and frame houses on Costa Blanca', hero_subtitle: 'We design and build houses in Spain for international clients. We work with several construction technologies — timber, prefab and frame — selecting the right solution for the plot, budget and investment goal.', hero_call: '📞 Call', hero_whatsapp: '💬 WhatsApp', hero_lead: 'Our offer includes not only house construction, but also foundations of any complexity, turnkey renovations and premium interior finishing. This gives the client one coherent execution model on Costa Blanca.', hero_alt: 'Construction of a modern house in Spain on Costa Blanca', tech_title: 'House construction technologies in Spain', tech_intro: 'We work with several solutions to choose the right model for the plot, budget, execution timeline and expected house standard on Costa Blanca.', tech_chips: ['Timber house','Prefab','Frame house','Foundations','Premium finish'], scope_title: 'Scope of execution', scope_1_h: 'Analysis and design', scope_1_p: 'Plot analysis and adapting the design to ground conditions and investment goals.', scope_2_h: 'Technology and structure', scope_2_p: 'Selection of technology: timber, prefab or frame, plus foundations and installations.', scope_3_h: 'Finishing and handover', scope_3_p: 'House construction, turnkey renovation, premium finishing and preparing the property for use or rental.', stages_title: 'Construction stages', stages_intro: 'We show the full execution cycle in one place — from plot preparation to the finished home and final interior.', stage_1_h: '1. Foundations and plot preparation', stage_1_p: 'A properly prepared technical base reduces risk, organises the budget and gives the whole investment a safe start.', stage_2_h: '2. Construction process', stage_2_p: 'At this stage quality control, compliance with the design and the logic of the work schedule matter most.', stage_3_h: '3. Insulation and interior preparation', stage_3_p: 'The insulation and interior preparation stage affects comfort, house performance and later running costs.', stage_4_h: '4. Interior finishing', stage_4_p: 'The final stage covers design, materials and details that influence how the home is perceived and its market value.', stage_alt_1: 'Foundations and plot preparation for building a house in Spain', stage_alt_2: 'House construction process on Costa Blanca', stage_alt_3: 'Insulation and interior preparation of a house in Spain', stage_alt_4: 'Final house after construction completion on Costa Blanca', conditions_title: 'Plot conditions and foundations — real challenges on Costa Blanca', cond_1_h: 'What can increase construction cost', cond_1_p: 'Hard rocky ground, uneven site surveying, extra earthworks and limitations of traditional foundations.', cond_2_h: 'Prefab and slab', cond_2_p: 'The option of placing a house on concrete slabs instead of complex foundations reduces risk and cost.', cond_3_h: 'Faster market entry', cond_3_p: 'Once the slab is prepared, the house can be assembled quickly, shortening the full investment timeline.', comparison_title: 'Technology comparison', comparison_intro: 'We match the technology to the plot, budget, pace of execution and investment goal.', table_h: ['Parameter','Timber frame house','Prefabricated cement-panel house','Monolithic concrete house'],
-        table_rows: [
-          ['Construction type','Timber structural frame','Prefabricated cement panels','Reinforced concrete monolith'],
-          ['Turnkey timeline','1–2 months','1–2 months','6–12 months'],
-          ['Main advantages','Fast build, light structure, good insulation','Precision, fast installation, stability','Maximum durability, prestige, classic technology'],
-          ['Best use','Fast home or investment build','Investment projects and resale','Premium long-term home']
-        ],
-        faq_title: 'FAQ — building a house in Spain', faq_1_h: 'How long does house construction in Spain take?', faq_1_p: 'Execution time depends on the technology, project, scope of work and level of plot preparation.', faq_2_h: 'Which technology is best?', faq_2_p: 'The choice depends on the plot, budget, expected timeline and investment goal.', faq_3_h: 'Do you handle foundations and finishing?', faq_3_p: 'Yes. The offer includes foundations of any complexity, installations, turnkey renovation and premium finishing.', categories_title: 'Other main categories', category_1_h: 'New developments', category_1_p: 'Apartments, penthouses and villas from developers on Costa Blanca with investment potential.', category_2_h: 'Plots', category_2_p: 'Buying land on Costa Blanca for a private home or investment project.', seo_h2: 'House construction in Spain on Costa Blanca — full delivery from plot to finished home', seo_1_h: 'Building a house in Spain — what it costs and what it depends on', seo_1_p: 'The cost of building a house in Spain depends on several key factors: location (Alicante, Benidorm, Altea, Torrevieja), plot conditions, construction technology and finishing standard. We deliver projects for both private clients and investors, offering solutions matched to budget and investment goals.', seo_2_h: 'Main construction technologies', seo_2_p: 'In practice, construction prices on Costa Blanca start from around €1200–1800/m² depending on the technology and scope of works.', seo_3_h: 'Experience and the local Costa Blanca market', seo_3_p: 'We have extensive experience delivering construction projects on the Ukrainian market, where we worked with different building technologies. Today we bring that experience to the Spanish market, adapting solutions to the climate and specifics of Costa Blanca.', seo_4_h: 'Showroom in Valencia — see the quality before building', seo_4_p: 'We deliver projects in Alicante, Benidorm, Altea, Calpe and Torrevieja, so we understand the local real-estate market and investor needs very well.', seo_5_h: 'Plots and foundations — the key to investment success', seo_5_p: 'We recently opened a showroom in Valencia where clients can see the finishing quality of a timber house, the materials and the technical solutions. This gives a clear picture of the final product before construction starts.', seo_6_h: 'Comprehensive turnkey house construction', seo_6_p: 'We specialise in foundations of any complexity — from simple concrete slabs to advanced solutions on difficult rocky plots. Costa Blanca often has demanding ground conditions, which is why we analyse the land already at plot-selection stage to avoid unexpected costs and poor decisions.', seo_7_h: 'For private clients and investors', seo_7_p: 'We provide full project delivery: plot analysis and advice, design and technology selection, house construction, installations and technical works, and premium interior finishing.', seo_8_h: 'A property to live in and earn from', seo_8_p: 'We build homes as second homes, year-round residences and rental investment projects. We create properties tailored to the Costa Blanca market that not only look good but also perform financially.', contact_title: 'Ask about building a house in Spain', contact_intro: 'We build homes on Costa Blanca, deliver foundations, turnkey renovations and premium interior finishing. Get in touch to receive an offer matched to your plot, budget and investment goal.', contact_role: 'Costa Blanca real estate investment specialist · Alicante–Benidorm', call_now: '📞 Call now', write_now: '💬 Write', share_title: 'Share page', share_link: '🔗 Link', share_copied: '✅ Copied', share_copied_status: 'Link copied.', share_prompt: 'Copy the link:', form_name: 'Your name', form_phone: 'Phone / WhatsApp', form_email: 'Email', form_message: 'Write what kind of house or project interests you and whether you already have a plot', form_submit: '📩 Send enquiry', wa_form_prefix: 'New enquiry from the House construction page:', footer_copy: 'Costa Blanca Invest is an investment project in the Spanish property market. The site was created as a personal work tool for partners and clients, giving quick access to investments, plots and house construction projects on Costa Blanca.', footer_links: ['Home','New developments','Plots','FAQ','Contact'], footer_bottom: '© 2026 | Site personally created by Olga Chernyshenko. Materials, code and site concept are the intellectual property of the author.'
-      },
-      ru: {
-        page_title: 'Строительство домов в Испании на Costa Blanca | Деревянные, prefab и каркасные дома', meta_description: 'Строительство домов в Испании на Costa Blanca: деревянные, prefab и каркасные дома, фундаменты любой сложности, проекты, ремонт под ключ и премиальная отделка интерьеров.', og_locale: 'ru_RU', og_title: 'Строительство домов в Испании — деревянные, prefab и каркасные на Costa Blanca', og_description: 'Строительство домов на Costa Blanca: проекты, фундаменты, деревянные, prefab и каркасные дома, ремонт под ключ и премиальная отделка.', og_image_alt: 'Строительство домов в Испании — деревянные, prefab и каркасные на Costa Blanca', brand_aria: 'Costa Blanca Invest — главная страница', nav_aria: 'Основная навигация', sticky_aria: 'Быстрый контакт', sticky_wa_aria: 'WhatsApp — быстрый контакт', breadcrumbs_aria: 'Хлебные крошки', nav_home: 'Главная', nav_categories: 'Категории', nav_new: 'Новостройки', nav_plots: 'Участки', nav_build: 'Строительство дома', nav_contact: 'Контакт', breadcrumbs_home: 'Главная', breadcrumbs_current: 'Строительство дома', hero_title: 'Строительство домов в Испании — деревянные, prefab и каркасные на Costa Blanca', hero_subtitle: 'Мы проектируем и строим дома в Испании для международных клиентов. Работаем с разными технологиями — деревянной, prefab и каркасной — подбирая решение под участок, бюджет и цель инвестиции.', hero_call: '📞 Позвонить', hero_whatsapp: '💬 WhatsApp', hero_lead: 'Наша услуга включает не только строительство дома, но и фундаменты любой сложности, ремонт под ключ и премиальную отделку интерьеров. Клиент получает единую модель реализации проекта на Costa Blanca.', hero_alt: 'Строительство современного дома в Испании на Costa Blanca', tech_title: 'Технологии строительства домов в Испании', tech_intro: 'Мы работаем с несколькими решениями, чтобы подобрать подходящую модель под участок, бюджет, сроки реализации и ожидаемый стандарт дома на Costa Blanca.', tech_chips: ['Деревянный дом','Prefab','Каркасный дом','Фундаменты','Премиум-отделка'], scope_title: 'Объём реализации', scope_1_h: 'Анализ и проект', scope_1_p: 'Анализ участка и адаптация проекта к условиям грунта и задачам инвестиции.', scope_2_h: 'Технология и конструкция', scope_2_p: 'Подбор технологии: деревянной, prefab или каркасной, а также подготовка фундаментов и инженерии.', scope_3_h: 'Отделка и сдача', scope_3_p: 'Строительство дома, ремонт под ключ, премиальная отделка и подготовка объекта к проживанию или аренде.', stages_title: 'Этапы строительства', stages_intro: 'Мы показываем полный цикл реализации — от подготовки участка до готового дома и финального интерьера.', stage_1_h: '1. Фундамент и подготовка участка', stage_1_p: 'Хорошо подготовленная техническая база снижает риски, упорядочивает бюджет и даёт проекту безопасный старт.', stage_2_h: '2. Процесс строительства', stage_2_p: 'На этапе реализации важны контроль качества, соответствие проекту и логика всего графика работ.', stage_3_h: '3. Изоляция и подготовка интерьеров', stage_3_p: 'Этап изоляции и подготовки интерьеров влияет на комфорт, эксплуатационные параметры дома и будущие расходы.', stage_4_h: '4. Отделка интерьеров', stage_4_p: 'Финальный этап включает дизайн, материалы и детали, которые влияют на восприятие дома и его рыночную стоимость.', stage_alt_1: 'Фундамент и подготовка участка под строительство дома в Испании', stage_alt_2: 'Процесс строительства дома на Costa Blanca', stage_alt_3: 'Изоляция и подготовка интерьеров дома в Испании', stage_alt_4: 'Готовый дом после завершения строительства на Costa Blanca', conditions_title: 'Условия участка и фундаменты — реальные вызовы на Costa Blanca', cond_1_h: 'Что может увеличить стоимость строительства', cond_1_p: 'Твёрдый скальный грунт, неровная геодезия участка, дополнительные земляные работы и ограничения традиционных фундаментов.', cond_2_h: 'Prefab и плита', cond_2_p: 'Возможность ставить дом на бетонные плиты вместо сложных фундаментов снижает риски и расходы.', cond_3_h: 'Более быстрый выход на рынок', cond_3_p: 'После подготовки плиты дом может монтироваться быстро, что сокращает общий срок инвестиции.', comparison_title: 'Сравнение технологий', comparison_intro: 'Мы подбираем технологию под участок, бюджет, темп реализации и цель инвестиции.', table_h: ['Параметр','Деревянный каркасный дом','Prefab дом из цементных панелей','Монолитный бетонный дом'],
-        table_rows: [
-          ['Тип конструкции','Деревянный конструктивный каркас','Сборные цементные панели','Железобетонный монолит'],
-          ['Срок под ключ','1–2 месяца','1–2 месяца','6–12 месяцев'],
-          ['Главные преимущества','Быстрое строительство, лёгкая конструкция, хорошая изоляция','Точность, быстрый монтаж, стабильность','Максимальная долговечность, престиж, классическая технология'],
-          ['Лучшее применение','Быстрый дом или инвестиция','Инвестиционные проекты и перепродажа','Премиальный дом на годы']
-        ],
-        faq_title: 'FAQ — строительство дома в Испании', faq_1_h: 'Сколько длится строительство дома в Испании?', faq_1_p: 'Срок реализации зависит от технологии, проекта, объёма работ и степени подготовки участка.', faq_2_h: 'Какая технология лучшая?', faq_2_p: 'Выбор зависит от участка, бюджета, ожидаемых сроков и цели инвестиции.', faq_3_h: 'Вы делаете фундаменты и отделку?', faq_3_p: 'Да. В предложение входят фундаменты любой сложности, инженерия, ремонт под ключ и премиальная отделка.', categories_title: 'Другие главные категории', category_1_h: 'Новостройки', category_1_p: 'Апартаменты, пентхаусы и виллы от девелоперов на Costa Blanca с инвестиционным потенциалом.', category_2_h: 'Участки', category_2_p: 'Покупка земли на Costa Blanca под частный дом или инвестиционный проект.', seo_h2: 'Строительство домов в Испании на Costa Blanca — комплексная реализация от участка до готового дома', seo_1_h: 'Строительство дома в Испании — сколько стоит и от чего зависит', seo_1_p: 'Стоимость строительства дома в Испании зависит от нескольких ключевых факторов: локации (Alicante, Benidorm, Altea, Torrevieja), условий участка, технологии строительства и уровня отделки. Мы реализуем проекты как для частных клиентов, так и для инвесторов, предлагая решения под бюджет и цель инвестиции.', seo_2_h: 'Основные технологии строительства', seo_2_p: 'На практике цены на строительство на Costa Blanca начинаются примерно от 1200–1800 €/m² в зависимости от технологии и объёма работ.', seo_3_h: 'Опыт и локальный рынок Costa Blanca', seo_3_p: 'У нас большой опыт реализации строительных проектов на украинском рынке, где мы работали с разными технологиями строительства. Сегодня мы переносим этот опыт на испанский рынок, адаптируя решения под климат и специфику Costa Blanca.', seo_4_h: 'Шоурум в Валенсии — посмотрите качество до начала строительства', seo_4_p: 'Мы реализуем проекты в Alicante, Benidorm, Altea, Calpe и Torrevieja, поэтому хорошо понимаем локальный рынок недвижимости и потребности инвесторов.', seo_5_h: 'Участки и фундаменты — ключ к успешной инвестиции', seo_5_p: 'Недавно мы открыли шоурум в Валенсии, где можно увидеть качество отделки деревянного дома, материалы и технологические решения. Клиент заранее понимает, каким будет конечный результат.', seo_6_h: 'Комплексное строительство дома под ключ', seo_6_p: 'Мы специализируемся на фундаментах любой сложности — от простых бетонных плит до сложных решений на трудных скалистых участках. На Costa Blanca часто встречаются сложные грунтовые условия, поэтому мы анализируем землю уже на этапе выбора участка, чтобы избежать непредвиденных расходов и ошибок.', seo_7_h: 'Для частных клиентов и инвесторов', seo_7_p: 'Мы обеспечиваем полную реализацию проекта: анализ участка и консультации, проект и подбор технологии, строительство дома, инженерные и технические работы, премиальная отделка интерьеров.', seo_8_h: 'Недвижимость для жизни и для дохода', seo_8_p: 'Мы строим дома как second home, круглогодичное жильё и инвестиционные проекты под аренду. Мы создаём объекты, адаптированные под рынок Costa Blanca, которые не только хорошо выглядят, но и работают как актив.', contact_title: 'Запросите строительство дома в Испании', contact_intro: 'Мы строим дома на Costa Blanca, делаем фундаменты, ремонт под ключ и премиальную отделку интерьеров. Свяжитесь с нами, чтобы получить предложение под ваш участок, бюджет и цель инвестиции.', contact_role: 'Специалист по инвестициям в недвижимость Costa Blanca · Alicante–Benidorm', call_now: '📞 Позвонить сейчас', write_now: '💬 Написать', share_title: 'Поделиться страницей', share_link: '🔗 Ссылка', share_copied: '✅ Скопировано', share_copied_status: 'Ссылка скопирована.', share_prompt: 'Скопируйте ссылку:', form_name: 'Ваше имя', form_phone: 'Телефон / WhatsApp', form_email: 'Email', form_message: 'Напишите, какой дом или проект вас интересует и есть ли у вас уже участок', form_submit: '📩 Отправить запрос', wa_form_prefix: 'Новый запрос со страницы Строительство домов:', footer_copy: 'Costa Blanca Invest — инвестиционный проект на рынке недвижимости Испании. Сайт создан как личный рабочий инструмент для партнёров и клиентов, обеспечивающий быстрый доступ к инвестициям, участкам и проектам строительства домов на Costa Blanca.', footer_links: ['Главная','Новостройки','Участки','FAQ','Контакт'], footer_bottom: '© 2026 | Сайт создан лично Ольгой Чернышенко. Материалы, код и концепция сайта являются интеллектуальной собственностью автора.'
-      }
-    };
-
+    const PAGE_TRANSLATIONS = { pl: {}, es: {}, en: {}, ru: {} };
     document.addEventListener('DOMContentLoaded', () => {
-      const d = document;
       const contactForm = document.getElementById('contact-form');
       const animatedCards = document.querySelectorAll('.fade-up');
       const header = document.querySelector('.topbar');
-      const shareLinkBtn = document.getElementById('share-link');
-      const shareFacebook = document.getElementById('share-facebook');
-      const shareStatus = document.getElementById('share-status');
-      const brand = document.querySelector('.brand');
-      const nav = document.querySelector('.nav');
-      const navLinks = Array.from(document.querySelectorAll('.nav a'));
-      const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
-      const stickyContact = document.querySelector('.sticky-contact');
-      const stickyWa = document.querySelector('.sticky-wa');
-      const breadcrumbs = Array.from(document.querySelectorAll('.breadcrumbs a, .breadcrumbs span'));
-      const state = { currentLang: 'pl' };
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const zoomItems = document.querySelectorAll('.projects-card img, .interior-item img');
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
       let ticking = false;
-
-      const getInitialLang = () => {
-        const lang = new URL(window.location.href).searchParams.get('lang');
-        return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-      };
-
-      const buildLangUrl = (basePath, lang = state.currentLang) => {
-        if (lang === 'pl') return basePath;
-        return `${basePath}?lang=${lang}`;
-      };
-
-      const updateUrlLang = (lang) => {
-        const url = new URL(window.location.href);
-        if (lang === 'pl') url.searchParams.delete('lang');
-        else url.searchParams.set('lang', lang);
-        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
-      };
-
-      const getShareUrl = () => {
-        const url = new URL(DEFAULT_CATEGORY_URL);
-        if (state.currentLang !== 'pl') url.searchParams.set('lang', state.currentLang);
-        return url.toString();
-      };
-
-      const getFacebookPreviewUrl = () => {
-        const url = new URL(DEFAULT_CATEGORY_URL);
-        if (state.currentLang !== 'pl') url.searchParams.set('lang', state.currentLang);
-        url.searchParams.set('fbshare', 'build-house-og-v2');
-        return url.toString();
-      };
-
-      const setMeta = (selector, attr, value) => {
-        const node = d.querySelector(selector);
-        if (node && value) node.setAttribute(attr, value);
-      };
-
-      const setShareStatus = (message) => {
-        if (shareStatus) shareStatus.textContent = message;
-      };
-
-      const updateStaticLinks = () => {
-        if (navLinks.length >= 6) {
-          navLinks[0].href = 'https://costa-blanca-invest.com/';
-          navLinks[1].href = 'https://costa-blanca-invest.com/#directions';
-          navLinks[2].href = '#contact';
-          navLinks[3].href = buildLangUrl('/pl/plots/');
-          navLinks[4].href = buildLangUrl('/pl/build-house/');
-          navLinks[5].href = buildLangUrl('/pl/new-developments/');
-        }
-        const footerLinks = document.querySelectorAll('.footer-links a');
-        if (footerLinks.length >= 5) {
-          footerLinks[0].href = buildLangUrl('/pl/');
-          footerLinks[1].href = buildLangUrl('/pl/new-developments/');
-          footerLinks[2].href = buildLangUrl('/pl/plots/');
-          footerLinks[3].href = '#faq';
-          footerLinks[4].href = '#contact';
-        }
-        const categoryLinks = document.querySelectorAll('.categories-grid .category-card');
-        if (categoryLinks.length >= 2) {
-          categoryLinks[0].href = buildLangUrl('/pl/new-developments/');
-          categoryLinks[1].href = buildLangUrl('/pl/plots/');
-        }
-        setMeta('link[rel="canonical"]', 'href', getShareUrl());
-        setMeta('meta[property="og:url"]', 'content', getShareUrl());
-        setMeta('meta[name="twitter:url"]', 'content', getShareUrl());
-        setMeta('link[rel="alternate"][hreflang="pl"]', 'href', 'https://costa-blanca-invest.com/pl/build-house/');
-        setMeta('link[rel="alternate"][hreflang="es"]', 'href', 'https://costa-blanca-invest.com/pl/build-house/?lang=es');
-        setMeta('link[rel="alternate"][hreflang="en"]', 'href', 'https://costa-blanca-invest.com/pl/build-house/?lang=en');
-        setMeta('link[rel="alternate"][hreflang="ru"]', 'href', 'https://costa-blanca-invest.com/pl/build-house/?lang=ru');
-        setMeta('link[rel="alternate"][hreflang="x-default"]', 'href', 'https://costa-blanca-invest.com/pl/build-house/');
-      };
-
-      const applyLanguage = (lang, syncUrl = true) => {
-        state.currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-        const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
-
-        document.documentElement.lang = state.currentLang;
-        document.title = t.page_title;
-        setMeta('meta[name="description"]', 'content', t.meta_description);
-        setMeta('meta[property="og:locale"]', 'content', t.og_locale);
-        setMeta('meta[property="og:title"]', 'content', t.og_title);
-        setMeta('meta[property="og:description"]', 'content', t.og_description);
-        setMeta('meta[property="og:image"]', 'content', SHARE_IMAGE);
-        setMeta('meta[property="og:image:secure_url"]', 'content', SHARE_IMAGE);
-        setMeta('meta[property="og:image:alt"]', 'content', t.og_image_alt);
-        setMeta('meta[name="twitter:title"]', 'content', t.og_title);
-        setMeta('meta[name="twitter:description"]', 'content', t.og_description);
-        setMeta('meta[name="twitter:image"]', 'content', SHARE_IMAGE);
-        setMeta('meta[name="twitter:image:alt"]', 'content', t.og_image_alt);
-
-        if (brand) brand.setAttribute('aria-label', t.brand_aria);
-        if (nav) nav.setAttribute('aria-label', t.nav_aria);
-        if (stickyContact) stickyContact.setAttribute('aria-label', t.sticky_aria);
-        if (stickyWa) {
-          stickyWa.textContent = '💬 WhatsApp';
-          stickyWa.setAttribute('aria-label', t.sticky_wa_aria);
-        }
-        const breadcrumbsNav = document.querySelector('.breadcrumbs');
-        if (breadcrumbsNav) breadcrumbsNav.setAttribute('aria-label', t.breadcrumbs_aria);
-
-        if (navLinks.length >= 6) {
-          [t.nav_home, t.nav_categories, t.nav_contact, t.nav_plots, t.nav_build, t.nav_new].forEach((text, index) => {
-            navLinks[index].textContent = text;
-          });
-        }
-        if (breadcrumbs.length >= 3) {
-          breadcrumbs[0].textContent = t.breadcrumbs_home;
-          breadcrumbs[2].textContent = t.breadcrumbs_current;
-        }
-
-        const heroTitle = document.querySelector('.hero-copy h1');
-        const heroTexts = document.querySelectorAll('.hero-copy p');
-        const heroButtons = document.querySelectorAll('.contact-inline-wrap .contact-inline');
-        const heroImg = document.querySelector('.hero-image img');
-        if (heroTitle) heroTitle.textContent = t.hero_title;
-        if (heroTexts.length >= 2) {
-          heroTexts[0].textContent = t.hero_subtitle;
-          heroTexts[1].textContent = t.hero_lead;
-        }
-        if (heroButtons.length >= 2) {
-          heroButtons[0].textContent = t.hero_call;
-          heroButtons[1].textContent = t.hero_whatsapp;
-        }
-        if (heroImg) heroImg.alt = t.hero_alt;
-
-        const allSections = document.querySelectorAll('.section-card');
-        if (allSections.length >= 7) {
-          allSections[0].querySelector('h2').textContent = t.tech_title;
-          allSections[0].querySelector('.center-text').textContent = t.tech_intro;
-          const chipsWrap = allSections[0].querySelector('.inline-list');
-          if (chipsWrap) chipsWrap.innerHTML = t.tech_chips.map(item => `<span>${item}</span>`).join('');
-
-          allSections[1].querySelector('h2').textContent = t.scope_title;
-          const scopeCards = allSections[1].querySelectorAll('.step-card');
-          if (scopeCards.length >= 3) {
-            [[t.scope_1_h,t.scope_1_p],[t.scope_2_h,t.scope_2_p],[t.scope_3_h,t.scope_3_p]].forEach((pair, i) => {
-              scopeCards[i].querySelector('h3').textContent = pair[0];
-              scopeCards[i].querySelector('p').textContent = pair[1];
-            });
-          }
-
-          allSections[2].querySelector('h2').textContent = t.stages_title;
-          allSections[2].querySelector('.center-text').textContent = t.stages_intro;
-          const stages = allSections[2].querySelectorAll('.construction-stage');
-          if (stages.length >= 4) {
-            const stageData = [
-              [t.stage_1_h,t.stage_1_p,t.stage_alt_1],
-              [t.stage_2_h,t.stage_2_p,t.stage_alt_2],
-              [t.stage_3_h,t.stage_3_p,t.stage_alt_3],
-              [t.stage_4_h,t.stage_4_p,t.stage_alt_4]
-            ];
-            stageData.forEach((item, i) => {
-              stages[i].querySelector('h3').textContent = item[0];
-              stages[i].querySelector('p').textContent = item[1];
-              const img = stages[i].querySelector('img');
-              if (img) img.alt = item[2];
-            });
-          }
-
-          allSections[3].querySelector('h2').textContent = t.conditions_title;
-          const condCards = allSections[3].querySelectorAll('.step-card');
-          if (condCards.length >= 3) {
-            [[t.cond_1_h,t.cond_1_p],[t.cond_2_h,t.cond_2_p],[t.cond_3_h,t.cond_3_p]].forEach((pair, i) => {
-              condCards[i].querySelector('h3').textContent = pair[0];
-              condCards[i].querySelector('p').textContent = pair[1];
-            });
-          }
-
-          allSections[4].querySelector('h2').textContent = t.comparison_title;
-          allSections[4].querySelector('.center-text').textContent = t.comparison_intro;
-          const tableHeaders = allSections[4].querySelectorAll('thead th');
-          t.table_h.forEach((text, i) => { if (tableHeaders[i]) tableHeaders[i].textContent = text; });
-          const tableRows = allSections[4].querySelectorAll('tbody tr');
-          t.table_rows.forEach((row, i) => {
-            const cells = tableRows[i]?.querySelectorAll('td') || [];
-            row.forEach((text, c) => { if (cells[c]) cells[c].textContent = text; });
-          });
-
-          allSections[5].querySelector('h2').textContent = t.faq_title;
-          const faqCards = allSections[5].querySelectorAll('.faq-card');
-          if (faqCards.length >= 3) {
-            [[t.faq_1_h,t.faq_1_p],[t.faq_2_h,t.faq_2_p],[t.faq_3_h,t.faq_3_p]].forEach((pair, i) => {
-              faqCards[i].querySelector('h3').textContent = pair[0];
-              faqCards[i].querySelector('p').textContent = pair[1];
-            });
-          }
-
-          allSections[6].querySelector('h2').textContent = t.categories_title;
-          const categoryCards = allSections[6].querySelectorAll('.category-card');
-          if (categoryCards.length >= 2) {
-            categoryCards[0].querySelector('h3').textContent = t.category_1_h;
-            categoryCards[0].querySelector('p').textContent = t.category_1_p;
-            categoryCards[1].querySelector('h3').textContent = t.category_2_h;
-            categoryCards[1].querySelector('p').textContent = t.category_2_p;
-          }
-        }
-
-        const seo = document.querySelector('#seo-content');
-        if (seo) {
-          const heads = seo.querySelectorAll('h2,h3');
-          const paras = seo.querySelectorAll('p');
-          const headTexts = [t.seo_h2,t.seo_1_h,t.seo_2_h,t.seo_3_h,t.seo_4_h,t.seo_5_h,t.seo_6_h,t.seo_7_h,t.seo_8_h];
-          const paraTexts = [t.seo_1_p,t.seo_2_p,t.seo_3_p,t.seo_4_p,t.seo_5_p,t.seo_6_p,t.seo_7_p,t.seo_8_p];
-          headTexts.forEach((text, i) => { if (heads[i]) heads[i].textContent = text; });
-          paraTexts.forEach((text, i) => { if (paras[i]) paras[i].textContent = text; });
-        }
-
-        const contact = document.querySelector('#contact');
-        if (contact) {
-          const h2 = contact.querySelector('h2');
-          const intro = contact.querySelector('.center-text');
-          const role = contact.querySelector('.contact-avatar-role');
-          const btns = contact.querySelectorAll('.cta-actions .btn');
-          const shareP = contact.querySelector('.share-box p');
-          const inputs = contact.querySelectorAll('input, textarea');
-          const submit = contact.querySelector('.submit-btn');
-          if (h2) h2.textContent = t.contact_title;
-          if (intro) intro.textContent = t.contact_intro;
-          if (role) role.textContent = t.contact_role;
-          if (btns.length >= 2) {
-            btns[0].textContent = t.call_now;
-            btns[1].textContent = t.write_now;
-          }
-          if (shareP) shareP.textContent = t.share_title;
-          if (shareLinkBtn) shareLinkBtn.textContent = t.share_link;
-          if (inputs.length >= 4) {
-            inputs[0].placeholder = t.form_name;
-            inputs[1].placeholder = t.form_phone;
-            inputs[2].placeholder = t.form_email;
-            inputs[3].placeholder = t.form_message;
-          }
-          if (submit) submit.textContent = t.form_submit;
-        }
-
-        const footer = document.querySelector('.footer-card');
-        if (footer) {
-          const copy = footer.querySelector('.footer-copy');
-          const links = footer.querySelectorAll('.footer-links a');
-          const bottom = footer.querySelector('.footer-bottom');
-          if (copy) copy.textContent = t.footer_copy;
-          t.footer_links.forEach((text, i) => { if (links[i]) links[i].textContent = text; });
-          if (bottom) bottom.textContent = t.footer_bottom;
-        }
-
-        updateStaticLinks();
-
-        langButtons.forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.lang === state.currentLang);
-          btn.textContent = (btn.dataset.lang || '').toUpperCase();
-        });
-
-        if (shareFacebook) {
-          shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getFacebookPreviewUrl())}`;
-        }
-
-        if (syncUrl) updateUrlLang(state.currentLang);
-      };
 
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -1755,7 +1523,6 @@
             }
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
-
         animatedCards.forEach((el) => observer.observe(el));
       } else {
         animatedCards.forEach((el) => el.classList.add('show'));
@@ -1764,25 +1531,19 @@
       const onScroll = () => {
         const currentScroll = window.pageYOffset;
         const delta = currentScroll - lastScroll;
-
         if (header) {
           if (currentScroll > 40) header.classList.add('scrolled');
           else header.classList.remove('scrolled');
         }
-
         if (Math.abs(delta) >= 4) {
           if (delta > 0) {
             accumulatedDown += delta;
             accumulatedUp = 0;
-            if (currentScroll > 120 && accumulatedDown > 24 && header) {
-              header.classList.add('hide');
-            }
+            if (currentScroll > 120 && accumulatedDown > 24 && header) header.classList.add('hide');
           } else {
             accumulatedUp += Math.abs(delta);
             accumulatedDown = 0;
-            if ((accumulatedUp > 42 || currentScroll < 40) && header) {
-              header.classList.remove('hide');
-            }
+            if ((accumulatedUp > 42 || currentScroll < 40) && header) header.classList.remove('hide');
           }
           lastScroll = currentScroll;
         }
@@ -1796,45 +1557,19 @@
         }
       }, { passive: true });
 
-      if (shareLinkBtn) {
-        shareLinkBtn.addEventListener('click', async () => {
-          const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
-          const shareUrl = getShareUrl();
-          try {
-            if (navigator.share && window.innerWidth < 768) {
-              await navigator.share({
-                title: document.title,
-                text: document.querySelector('meta[name="description"]')?.content || '',
-                url: shareUrl
-              });
-              return;
-            }
-            await navigator.clipboard.writeText(shareUrl);
-            shareLinkBtn.textContent = t.share_copied;
-            setShareStatus(t.share_copied_status);
-            setTimeout(() => {
-              shareLinkBtn.textContent = t.share_link;
-            }, 2000);
-          } catch (error) {
-            window.prompt(t.share_prompt, shareUrl);
-          }
-        });
-      }
-
       if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
           event.preventDefault();
-          const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
           const formData = new FormData(contactForm);
           const name = (formData.get('name') || '').toString().trim();
           const phone = (formData.get('phone') || '').toString().trim();
           const email = (formData.get('email') || '').toString().trim();
           const message = (formData.get('message') || '').toString().trim();
-          const text = `${t.wa_form_prefix}
+          const text = `Nowe zapytanie ze strony Budowa domu:
 
-${t.form_name}: ${name}
-${t.form_phone}: ${phone}
-${t.form_email}: ${email}
+Twoje imię: ${name}
+Telefon / WhatsApp: ${phone}
+Email: ${email}
 
 ${message}`;
           const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
@@ -1843,9 +1578,43 @@ ${message}`;
         });
       }
 
-      applyLanguage(getInitialLang(), false);
-      langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true)));
-      window.addEventListener('popstate', () => applyLanguage(getInitialLang(), false));
+      const openLightbox = (src, alt) => {
+        if (!lightbox || !lightboxImage) return;
+        lightboxImage.src = src;
+        lightboxImage.alt = alt || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeLightbox = () => {
+        if (!lightbox || !lightboxImage) return;
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.src = '';
+        document.body.style.overflow = '';
+      };
+
+      zoomItems.forEach((img) => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+      });
+
+      if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+      }
+
+      if (lightbox) {
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+      }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox?.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+
       onScroll();
     });
   </script>
@@ -1862,76 +1631,6 @@ ${message}`;
         "image": "https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png",
         "email": "o.czernyszenko@gmail.com",
         "telephone": "+34604158859"
-      },
-      {
-        "@type": "WebSite",
-        "name": "Costa Blanca Invest",
-        "url": "https://costa-blanca-invest.com/",
-        "inLanguage": ["pl","es","en","ru"]
-      },
-      {
-        "@type": "WebPage",
-        "name": "Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca",
-        "url": "https://costa-blanca-invest.com/pl/build-house/",
-        "description": "Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, prefabrykowane i szkieletowe, fundamenty każdej złożoności, remonty pod klucz i premium wykończenie wnętrz.",
-        "inLanguage": "pl",
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png"
-        },
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "Costa Blanca Invest",
-          "url": "https://costa-blanca-invest.com/"
-        }
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Budowa domów w Hiszpanii na Costa Blanca",
-        "provider": {
-          "@type": "Organization",
-          "name": "Costa Blanca Invest"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Costa Blanca, Spain"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://costa-blanca-invest.com/pl/" },
-          { "@type": "ListItem", "position": 2, "name": "Budowa domu", "item": "https://costa-blanca-invest.com/pl/build-house/" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Ile trwa budowa domu w Hiszpanii?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Czas realizacji zależy od technologii, projektu, zakresu prac i stopnia przygotowania działki."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jaka technologia jest najlepsza?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dobór technologii zależy od działki, budżetu, oczekiwanego terminu oraz celu inwestycyjnego."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy realizujecie fundamenty i wykończenie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tak, oferta obejmuje fundamenty każdej złożoności, instalacje, remonty pod klucz oraz premium wykończenie wnętrz."
-            }
-          }
-        ]
       }
     ]
   }
