@@ -808,8 +808,9 @@
       isolation: isolate;
     }
     .video-showroom-preview {
-      width: 100%;
+      width: calc(100% + 56px);
       height: 100%;
+      margin-left: -28px;
       object-fit: cover;
       object-position: center center;
       display: block;
@@ -2034,26 +2035,11 @@ ${message}`;
           window.scrollTo({ top: targetY, behavior: 'smooth' });
         });
       }
-      // SHARE FUNCTION: native share on mobile, fallback copy on desktop
+      // SHARE FUNCTION: copy link only, so pasted link shows preview with photo + title in WhatsApp and messengers
       if (shareBtn) {
         shareBtn.addEventListener('click', async () => {
           const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
           const shareUrl = window.location.href;
-          const shareTitle = document.title;
-          const shareText = shareTitle;
-
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: shareTitle,
-                text: shareText,
-                url: shareUrl
-              });
-              return;
-            } catch (err) {
-              // fallback to copy
-            }
-          }
 
           try {
             await navigator.clipboard.writeText(shareUrl);
