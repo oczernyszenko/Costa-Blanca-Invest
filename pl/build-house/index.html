@@ -152,10 +152,45 @@
     .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--primary-dark)}
     .brand::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(103,181,76,.15);flex:0 0 auto}
     .nav{display:flex;align-items:center;justify-content:center;gap:24px;width:100%;min-width:0;flex-wrap:nowrap}
-    .nav a{position:relative;font-size:15px;font-weight:700;color:var(--text-soft);white-space:nowrap;transition:color .22s ease}
+    .nav a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:50px;
+        padding:4px 6px;
+        text-align:center;
+        font-size:13px;
+        line-height:1.1;
+        white-space:normal;
+        border-radius:14px;
+        background:rgba(255,255,255,.82);
+        box-shadow:0 4px 10px rgba(15,23,42,.05);
+        overflow-wrap:anywhere;
+        word-break:break-word;
+      }
     .nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary-dark)}
     .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+    .nav a[aria-current="page"]{
+      background: linear-gradient(135deg, rgba(79,143,58,.16), rgba(255,255,255,.96));
+      border: 1px solid rgba(79,143,58,.18);
+      box-shadow: 0 10px 24px rgba(79,143,58,.14);
+      transform: translateY(-1px);
+    }
+    .nav a[aria-current="page"]::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:inherit;
+      background: linear-gradient(120deg, rgba(255,255,255,0) 20%, rgba(255,255,255,.45) 48%, rgba(255,255,255,0) 76%);
+      transform: translateX(-140%);
+      animation: activeNavShine 3.2s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes activeNavShine {
+      0%, 70%, 100% { transform: translateX(-140%); }
+      82% { transform: translateX(140%); }
+    }
 
     .lang-switcher{
       position:relative;
@@ -183,24 +218,24 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      flex:0 0 44px;
-      width:44px;
-      height:44px;
-      min-width:44px;
-      min-height:44px;
-      max-width:44px;
-      max-height:44px;
+      flex:0 0 38px;
+      width:38px;
+      height:38px;
+      min-width:38px;
+      min-height:38px;
+      max-width:38px;
+      max-height:38px;
       border-radius:50%;
       border:none;
       padding:0;
       margin:0;
-      font-size:13px;
-      line-height:44px;
+      font-size:12px;
+      line-height:38px;
       font-weight:800;
       cursor:pointer;
       color:#fff;
       background:linear-gradient(135deg,#9cd27a,#67b54c);
-      box-shadow:0 6px 14px rgba(103,181,76,.35);
+      box-shadow:0 4px 10px rgba(103,181,76,.3);
       transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
       white-space:nowrap;
       text-transform:uppercase;
@@ -702,6 +737,23 @@
       transform: scale(1.05);
     }
 
+    .site-video-wrap {
+      width: min(360px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 24px 60px rgba(15,23,42,.18);
+      border: 1px solid rgba(255,255,255,.2);
+    }
+    .site-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+
     table {
       width: 100%;
       min-width: 960px;
@@ -959,6 +1011,23 @@
     }
 
     @media (max-width:768px){
+      /* MOBILE TEXT ALIGN FIX */
+      p{
+        text-align:justify !important;
+      }
+      .center-text{
+        text-align:justify !important;
+      }
+      h1, h2, h3{
+        text-align:center !important;
+      }
+      .section-card, .hero-copy{
+        text-align:justify;
+      }
+      .section-card h2,
+      .hero-copy h1{
+        text-align:center !important;
+      }
       .lightbox {
         padding: 14px;
       }
@@ -968,62 +1037,89 @@
         width: 42px;
         height: 42px;
       }
-      .topbar-inner{width:100%;grid-template-columns:1fr;gap:8px;padding:8px 0;min-height:auto;justify-items:center}
-      .brand{justify-self:center;text-align:center;font-size:15px;max-width:100%;overflow-wrap:anywhere}
-
+      .topbar{
+        background: rgba(255,255,255,.74);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: 0 6px 24px rgba(15,23,42,.08);
+      }
+      .topbar-inner{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:10px;
+        padding:8px 0 12px;
+        min-height:auto;
+        justify-items:center;
+      }
+      .brand{
+        justify-self:center;
+        text-align:center;
+        justify-content:center;
+        font-size:15px;
+        max-width:100%;
+        overflow-wrap:anywhere;
+      }
       .nav{
         display:grid;
         grid-template-columns:repeat(3,minmax(0,1fr));
-        gap:6px;
+        gap:8px;
         width:100%;
       }
-
       .nav a{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        min-height:38px;
-        padding:6px 6px;
-        text-align:center;
-        font-size:12px;
-        line-height:1.15;
-        white-space:normal;
-        border-radius:10px;
-        background:rgba(255,255,255,.62);
-        overflow-wrap:anywhere;
-        word-break:break-word;
+        min-height:44px;
+        padding:3px 6px;
+        font-size:11px;
+        line-height:1.05;
+        border-radius:12px;
+        box-shadow:0 4px 10px rgba(15,23,42,.04);
       }
-
-      .lang-switcher{order:2;justify-content:center;gap:4px;padding:5px;min-height:46px;max-width:100%}
-
+      .nav a::after{display:none}
+      .lang-switcher{
+        order:2;
+        justify-content:center;
+        gap:5px;
+        padding:5px;
+        min-height:0;
+        width:auto;
+        margin:0 auto;
+        border-radius:999px;
+        background:#eaf3de;
+        box-shadow:0 8px 18px rgba(15,23,42,.08);
+      }
+      .lang-switcher::before{background:#eaf3de}
+      .lang-btn{
+        flex:0 0 48px;
+        width:48px;
+        height:48px;
+        min-width:48px;
+        min-height:48px;
+        max-width:48px;
+        max-height:48px;
+        font-size:13px;
+        line-height:48px;
+      }
       .container { padding: 0 14px; }
       .page { padding: 14px 0 56px; }
-
       .hero-copy,
       .section-card,
       .cta-box,
       .footer-card,
       .contact-box { padding: 22px; }
-
       .hero-copy{align-items:center;text-align:center;overflow:hidden}
       .hero-copy h1{width:100%;max-width:100%;padding:0 8px;margin-left:auto;margin-right:auto;text-align:center;overflow-wrap:anywhere;word-break:break-word}
       .subtitle,.lead,.center-text{max-width:100%;width:100%;margin-left:auto;margin-right:auto;padding:0 10px;text-align:center !important;overflow-wrap:anywhere;word-break:break-word}
-
       .hero-image,
       .hero-image img { min-height: 300px; }
-
       .contact-form-grid,
       .categories-grid,
       .steps-grid,
       .faq-grid,
       .projects-grid,
       .interior-grid { grid-template-columns: 1fr; }
-
       .contact-inline-wrap,
       .cta-actions,
       .share-actions,
       .footer-links { flex-direction: column; }
-
       .btn,
       .contact-inline,
       .share-btn,
@@ -1031,15 +1127,12 @@
         width: 100%;
         min-height: 52px;
       }
-
       .contact-links a{font-size:16px;overflow-wrap:anywhere}
-
       .sticky-contact {
         display: block;
         right: 12px;
         bottom: 12px;
       }
-
       body { padding-bottom: 78px; }
     }
 
@@ -1058,8 +1151,18 @@
     }
 
     @media (max-width:560px){
-      .lang-switcher{gap:4px;padding:4px;min-height:44px}
-      .lang-btn{flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;max-width:36px;max-height:36px;border-radius:50%;font-size:11px;line-height:36px}
+      .lang-switcher{gap:4px;padding:4px;}
+      .lang-btn{
+        flex:0 0 42px;
+        width:42px;
+        height:42px;
+        min-width:42px;
+        min-height:42px;
+        max-width:42px;
+        max-height:42px;
+        font-size:12px;
+        line-height:42px;
+      }
       .container { padding: 0 10px; }
       .hero-card,
       .section-card,
@@ -1075,7 +1178,12 @@
       h2 { font-size: clamp(24px, 7vw, 32px); }
       .subtitle, .lead, p { font-size: 15px; }
       .nav { gap: 6px; }
-      .nav a { font-size: 13px; min-height:38px; }
+      .nav a {
+        min-height: 40px;
+        padding: 2px 5px;
+        font-size: 10.5px;
+        border-radius: 11px;
+      }
       .hero-image,
       .hero-image img { min-height: 220px; }
       .contact-links a { font-size: 16px; }
@@ -1096,45 +1204,71 @@
 
     @media (max-width: 420px){
       .container{padding:0 8px}
-      .topbar-inner{gap:6px;padding:6px 0}
+      .topbar-inner{gap:8px;padding:8px 0 10px}
       .brand{font-size:14px}
-
       .nav{
         grid-template-columns:repeat(3,1fr);
-        gap:5px;
+        gap:6px;
       }
-
       .nav a{
-        min-height:36px;
-        font-size:11px;
-        padding:6px;
+        min-height:38px;
+        font-size:10px;
+        padding:2px 4px;
+        border-radius:10px;
       }
-
-      .lang-switcher{padding:3px;gap:3px;min-height:42px}
-      .lang-btn{flex:0 0 34px;width:34px;height:34px;min-width:34px;min-height:34px;max-width:34px;max-height:34px;line-height:34px;font-size:10px}
-
+      .lang-switcher{padding:4px;gap:4px;min-height:0}
+      .lang-btn{
+        flex:0 0 38px;
+        width:38px;
+        height:38px;
+        min-width:38px;
+        min-height:38px;
+        max-width:38px;
+        max-height:38px;
+        line-height:38px;
+        font-size:11px;
+      }
       .hero-copy,
       .section-card,
       .cta-box,
       .footer-card,
       .contact-box{padding:16px}
-
       h1{font-size:clamp(26px,8.6vw,32px)}
       h2{font-size:clamp(22px,7.5vw,28px)}
-
       .contact-inline,.btn,.share-btn,.submit-btn{padding:0 14px;font-size:14px}
       .inline-list span{width:100%;justify-content:center}
       .contact-avatar-role{font-size:13px}
       .contact-form input,.contact-form textarea{padding:14px;font-size:16px}
-
       .hero-image,.hero-image img{min-height:200px}
       table{min-width:620px}
     }
 
     @media (max-width: 360px){
-      .nav{grid-template-columns:1fr}
-      .lang-switcher{width:auto}
+      .nav{
+        grid-template-columns:repeat(3,1fr);
+        gap:5px;
+      }
+      .nav a{
+        min-height:36px;
+        font-size:9.5px;
+        padding:2px 3px;
+        border-radius:9px;
+      }
+      .lang-switcher{width:auto;padding:3px;gap:3px}
+      .lang-btn{
+        flex:0 0 34px;
+        width:34px;
+        height:34px;
+        min-width:34px;
+        min-height:34px;
+        max-width:34px;
+        max-height:34px;
+        font-size:10px;
+        line-height:34px;
+      }
       .hero-image,.hero-image img{min-height:180px}
+      .sticky-wa{min-width:0;width:auto;max-width:calc(100vw - 20px)}
+    }
       .sticky-wa{min-width:0;width:auto;max-width:calc(100vw - 20px)}
     }
 
@@ -1224,63 +1358,11 @@
         </div>
       </section>
 
-      <section class="section-card fade-up" id="construction-stages">
-        <h2>Stadia budowy</h2>
-        <p class="center-text">W jednym miejscu pokazujemy pełny cykl realizacji — od przygotowania działki po gotowy dom i finalne wnętrze.</p>
-        <div class="construction-gallery">
-          <article class="construction-stage">
-            <img src="https://costa-blanca-invest.com/pl/build-house/images/foundation.jpg" alt="Fundamenty i przygotowanie działki pod budowę domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
-            <div class="stage-copy">
-              <h3>1. Fundament i przygotowanie działki</h3>
-              <p>Dobrze przygotowana baza techniczna ogranicza ryzyko, porządkuje budżet i daje bezpieczny start całej inwestycji.</p>
-            </div>
-          </article>
-          <article class="construction-stage">
-            <img src="https://costa-blanca-invest.com/pl/build-house/images/construction.jpg" alt="Proces budowy domu na Costa Blanca" width="1200" height="900" loading="lazy" decoding="async">
-            <div class="stage-copy">
-              <h3>2. Proces budowy</h3>
-              <p>Na etapie realizacji liczy się kontrola jakości, zgodność z projektem i logika całego harmonogramu prac.</p>
-            </div>
-          </article>
-          <article class="construction-stage">
-            <img src="https://costa-blanca-invest.com/pl/build-house/images/interior.jpg" alt="Izolacja i przygotowanie wnętrz domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
-            <div class="stage-copy">
-              <h3>3. Izolacja i przygotowanie wnętrz</h3>
-              <p>Etap izolacji oraz przygotowania wnętrz wpływa na komfort życia, parametry użytkowe domu i późniejsze koszty eksploatacji.</p>
-            </div>
-          </article>
-          <article class="construction-stage">
-            <img src="https://costa-blanca-invest.com/pl/build-house/images/final-house.jpg" alt="Finalny dom po zakończeniu budowy na Costa Blanca" width="1200" height="900" loading="lazy" decoding="async">
-            <div class="stage-copy">
-              <h3>4. Wykończenie wnętrz</h3>
-              <p>Finalny etap obejmuje design, materiały i detale, które wpływają na odbiór domu i jego wartość rynkową.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-card fade-up" id="gotowe-projekty">
-        <h2>Gotowe projekty</h2>
-        <p class="center-text">Prezentujemy zrealizowane domy drewniane i gotowe projekty wykonane przez naszą firmę.</p>
-        <div class="projects-grid">
-  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-przod-1.jpg" alt="Dom drewniany z poddaszem żółty przód" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-nowoczesny-2.jpg" alt="Dom drewniany nowoczesny" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-brazowy-weranda-3.jpg" alt="Dom drewniany brązowy weranda" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-duzy-rodzinny-4.jpg" alt="Dom drewniany duży rodzinny" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-nowoczesny-niebieski-5.jpg" alt="Dom drewniany nowoczesny niebieski" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-niebieski-widok-boczny-6.jpg" alt="Dom drewniany niebieski widok boczny" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-bialy-czerwony-dach-7.jpg" alt="Dom drewniany biały czerwony dach" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-przod-8.jpg" alt="Dom drewniany z poddaszem żółty przód" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-z-poddaszem-zolty-skos-9.jpeg" alt="Dom drewniany z poddaszem żółty skos" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/dom-drewniany-parterowy-bungalow-10.JPG" alt="Dom drewniany parterowy bungalow" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/projekt-domu-drewnianego-nowoczesnego-11.jpg" alt="Projekt domu drewnianego nowoczesnego 11" loading="lazy" decoding="async"></article>
-  <article class="projects-card"><img src="images/projekt-domu-drewnianego-nowoczesnego-12.jpg" alt="Projekt domu drewnianego nowoczesnego 12" loading="lazy" decoding="async"></article>
-</div>
-      </section>
+      
 
       <section class="section-card fade-up" id="wnetrza-prace">
-        <h2>Wewnętrzne prace</h2>
-        <p class="center-text">Etapy wykończenia wnętrz i przykłady realizacji wewnętrznych.</p>
+        <h2 data-i18n="interior_title">Wewnętrzne prace</h2>
+        <p class="center-text" data-i18n="interior_intro">Etapy wykończenia wnętrz i przykłady realizacji wewnętrznych.</p>
         <div class="interior-grid">
           <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-schody-hol-1.jpg" alt="Wnętrze domu drewnianego schody hol" loading="lazy" decoding="async"></article>
           <article class="interior-item"><img src="images/wnetrze-domu-drewnianego-schody-widok-2.jpg" alt="Wnętrze domu drewnianego schody widok" loading="lazy" decoding="async"></article>
@@ -1424,6 +1506,56 @@
         <p>Budujemy domy jako second home, domy całoroczne oraz projekty inwestycyjne pod wynajem (rental premium). Tworzymy nieruchomości dopasowane do rynku Costa Blanca, które nie tylko dobrze wyglądają, ale również zarabiają.</p>
       </section>
 
+      <section class="section-card fade-up" id="construction-stages">
+        <h2 data-i18n="stages_title">Stadia budowy</h2>
+        <p class="center-text" data-i18n="stages_intro">W jednym miejscu pokazujemy pełny cykl realizacji — od przygotowania działki po gotowy dom i finalne wnętrze.</p>
+        <div class="construction-gallery">
+          <article class="construction-stage">
+            <img src="https://costa-blanca-invest.com/pl/build-house/images/foundation.jpg" alt="Fundamenty i przygotowanie działki pod budowę domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
+            <div class="stage-copy">
+              <h3 data-i18n="stage_1_h">1. Fundament i przygotowanie działki</h3>
+              <p data-i18n="stage_1_p">Dobrze przygotowana baza techniczna ogranicza ryzyko, porządkuje budżet i daje bezpieczny start całej inwestycji.</p>
+            </div>
+          </article>
+          <article class="construction-stage">
+            <img src="https://costa-blanca-invest.com/pl/build-house/images/construction.jpg" alt="Proces budowy domu na Costa Blanca" width="1200" height="900" loading="lazy" decoding="async">
+            <div class="stage-copy">
+              <h3 data-i18n="stage_2_h">2. Proces budowy</h3>
+              <p data-i18n="stage_2_p">Na etapie realizacji liczy się kontrola jakości, zgodność z projektem i logika całego harmonogramu prac.</p>
+            </div>
+          </article>
+          <article class="construction-stage">
+            <img src="https://costa-blanca-invest.com/pl/build-house/images/interior.jpg" alt="Izolacja i przygotowanie wnętrz domu w Hiszpanii" width="1200" height="900" loading="lazy" decoding="async">
+            <div class="stage-copy">
+              <h3 data-i18n="stage_3_h">3. Izolacja i przygotowanie wnętrz</h3>
+              <p data-i18n="stage_3_p">Etap izolacji oraz przygotowania wnętrz wpływa na komfort życia, parametry użytkowe domu i późniejsze koszty eksploatacji.</p>
+            </div>
+          </article>
+          <article class="construction-stage">
+            <img src="https://costa-blanca-invest.com/pl/build-house/images/final-house.jpg" alt="Finalny dom po zakończeniu budowy na Costa Blanca" width="1200" height="900" loading="lazy" decoding="async">
+            <div class="stage-copy">
+              <h3 data-i18n="stage_4_h">4. Wykończenie wnętrz</h3>
+              <p data-i18n="stage_4_p">Finalny etap obejmuje design, materiały i detale, które wpływają na odbiór domu i jego wartość rynkową.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card fade-up" id="video">
+  <h2 data-i18n="video_title">Wideo realizacji</h2>
+  <p class="center-text" data-i18n="video_desc">Zobacz krótkie wideo z realizacji — otwiera się bezpośrednio w TikTok.</p>
+  <div style="display:flex;justify-content:center;margin-top:20px;">
+    <a href="https://vm.tiktok.com/ZNRqCxH14/" target="_blank" rel="noopener noreferrer" style="display:block;position:relative;width:min(360px,100%);aspect-ratio:9/16;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(15,23,42,.18);">
+      <img src="images/wood-hero.jpg" alt="Wideo budowy domu" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);">
+        <div style="width:70px;height:70px;border-radius:50%;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;">
+          ▶
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
       <section class="cta-box contact-box fade-up show" id="contact">
         <h2>Zapytaj o budowę domu w Hiszpanii</h2>
         <p class="center-text">Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.</p>
@@ -1500,7 +1632,66 @@
     const SUPPORTED_LANGS = ['pl', 'es', 'en', 'ru'];
     const DEFAULT_CATEGORY_URL = 'https://costa-blanca-invest.com/pl/build-house/';
     const SHARE_IMAGE = 'https://costa-blanca-invest.com/pl/build-house/images/build-house-hero.png';
-    const PAGE_TRANSLATIONS = { pl: {}, es: {}, en: {}, ru: {} };
+    const PAGE_TRANSLATIONS = {
+      pl: {
+        nav_home:'Strona główna', nav_categories:'Kategorie', nav_contact:'Kontakt', nav_plots:'Działki', nav_build:'Budowa domu', nav_new:'Nowe inwestycje',
+        breadcrumbs_home:'Strona główna', breadcrumbs_current:'Budowa domu',
+        hero_title:'Budowa domów w Hiszpanii — drewniane, prefabrykowane i szkieletowe na Costa Blanca',
+        hero_subtitle:'Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, prefabrykowaną i szkieletową — dobierając rozwiązanie do działki, budżetu i celu inwestycji.',
+        hero_call:'📞 Zadzwoń', hero_whatsapp:'💬 WhatsApp',
+        hero_lead:'Nasza oferta obejmuje nie tylko budowę domu, ale także fundamenty każdej złożoności, remonty pod klucz oraz premium wykończenie wnętrz. Dzięki temu klient otrzymuje jeden spójny model realizacji na Costa Blanca.',
+        tech_title:'Technologie budowy domów w Hiszpanii',
+        tech_intro:'Pracujemy z kilkoma rozwiązaniami, aby dobrać model odpowiedni dla działki, budżetu, terminu realizacji i oczekiwanego standardu domu na Costa Blanca.',
+        scope_title:'Zakres realizacji', scope_1_h:'Analiza i projekt', scope_1_p:'Analiza działki i dopasowanie projektu do warunków gruntu oraz założeń inwestycji.', scope_2_h:'Technologia i konstrukcja', scope_2_p:'Dobór technologii: drewnianej, prefabrykowanej lub szkieletowej oraz przygotowanie fundamentów i instalacji.', scope_3_h:'Wykończenie i oddanie', scope_3_p:'Budowa domu, remonty pod klucz, premium wykończenie wnętrz i przygotowanie obiektu do użytkowania lub wynajmu.',
+        projects_title:'Gotowe projekty', projects_intro:'Prezentujemy zrealizowane domy drewniane i gotowe projekty wykonane przez naszą firmę.',
+        stages_title:'Stadia budowy', stages_intro:'W jednym miejscu pokazujemy pełny cykl realizacji — od przygotowania działki po gotowy dom i finalne wnętrze.', stage_1_h:'1. Fundament i przygotowanie działki', stage_1_p:'Dobrze przygotowana baza techniczna ogranicza ryzyko, porządkuje budżet i daje bezpieczny start całej inwestycji.', stage_2_h:'2. Proces budowy', stage_2_p:'Na etapie realizacji liczy się kontrola jakości, zgodność z projektem i logika całego harmonogramu prac.', stage_3_h:'3. Izolacja i przygotowanie wnętrz', stage_3_p:'Etap izolacji oraz przygotowania wnętrz wpływa na komfort życia, parametry użytkowe domu i późniejsze koszty eksploatacji.', stage_4_h:'4. Wykończenie wnętrz', stage_4_p:'Finalny etap obejmuje design, materiały i detale, które wpływają na odbiór domu i jego wartość rynkową.',
+        video_title:'Wideo realizacji', video_desc:'Zobacz krótkie wideo z realizacji — otwiera się bezpośrednio w TikTok.',
+        interior_title:'Wewnętrzne prace', interior_intro:'Etapy wykończenia wnętrz i przykłady realizacji wewnętrznych.'
+      },
+      es: {
+        nav_home:'Inicio', nav_categories:'Categorías', nav_contact:'Contacto', nav_plots:'Parcelas', nav_build:'Construcción', nav_new:'Obra nueva',
+        breadcrumbs_home:'Inicio', breadcrumbs_current:'Construcción',
+        hero_title:'Construcción de casas en España — de madera, prefabricadas y de estructura ligera en Costa Blanca',
+        hero_subtitle:'Diseñamos y construimos casas en España para clientes internacionales. Trabajamos con varias tecnologías — madera, prefabricada y estructura ligera — eligiendo la solución según la parcela, el presupuesto y el objetivo de inversión.',
+        hero_call:'📞 Llamar', hero_whatsapp:'💬 WhatsApp',
+        hero_lead:'Nuestra oferta incluye no solo la construcción de la casa, sino también cimentaciones de cualquier complejidad, reformas llave en mano y acabados interiores premium.',
+        tech_title:'Tecnologías de construcción de casas en España', tech_intro:'Trabajamos con varias soluciones para elegir el modelo adecuado según la parcela, el presupuesto, el plazo y el estándar esperado en Costa Blanca.',
+        scope_title:'Alcance de la ejecución', scope_1_h:'Análisis y proyecto', scope_1_p:'Análisis de la parcela y adaptación del proyecto a las condiciones del terreno y a los objetivos de la inversión.', scope_2_h:'Tecnología y estructura', scope_2_p:'Selección de tecnología: madera, prefabricada o estructura ligera, además de cimentaciones e instalaciones.', scope_3_h:'Acabado y entrega', scope_3_p:'Construcción, reformas llave en mano y acabados premium.',
+        projects_title:'Proyectos terminados', projects_intro:'Presentamos casas de madera ya realizadas y proyectos terminados por nuestra empresa.',
+        stages_title:'Etapas de la construcción', stages_intro:'Mostramos todo el ciclo de ejecución — desde la preparación de la parcela hasta la vivienda terminada y el interior final.', stage_1_h:'1. Cimentación y preparación de la parcela', stage_1_p:'Una base técnica bien preparada reduce riesgos, ordena el presupuesto y da un inicio seguro a toda la inversión.', stage_2_h:'2. Proceso de construcción', stage_2_p:'En esta fase importan el control de calidad, la conformidad con el proyecto y la lógica del calendario de obra.', stage_3_h:'3. Aislamiento y preparación interior', stage_3_p:'La fase de aislamiento y preparación del interior influye en el confort y los costes de mantenimiento.', stage_4_h:'4. Acabado interior', stage_4_p:'La etapa final incluye diseño, materiales y detalles que influyen en la percepción y el valor de la vivienda.',
+        video_title:'Vídeo de la realización', video_desc:'Mira un vídeo corto de la realización — se abre directamente en TikTok.',
+        interior_title:'Trabajos interiores', interior_intro:'Etapas del acabado interior y ejemplos de realizaciones internas.'
+      },
+      en: {
+        nav_home:'Home', nav_categories:'Categories', nav_contact:'Contact', nav_plots:'Plots', nav_build:'Build house', nav_new:'New developments',
+        breadcrumbs_home:'Home', breadcrumbs_current:'Build house',
+        hero_title:'House construction in Spain — timber, prefab and frame houses on Costa Blanca',
+        hero_subtitle:'We design and build houses in Spain for international clients. We work with several construction technologies — timber, prefab and frame — selecting the right solution for the plot, budget and investment goal.',
+        hero_call:'📞 Call', hero_whatsapp:'💬 WhatsApp',
+        hero_lead:'Our offer includes not only house construction, but also foundations of any complexity, turnkey renovations and premium interior finishing.',
+        tech_title:'House construction technologies in Spain', tech_intro:'We work with several solutions to choose the right model for the plot, budget, execution timeline and expected standard on Costa Blanca.',
+        scope_title:'Scope of execution', scope_1_h:'Analysis and design', scope_1_p:'Plot analysis and adapting the design to ground conditions and investment goals.', scope_2_h:'Technology and structure', scope_2_p:'Selection of technology: timber, prefab or frame, plus foundations and installations.', scope_3_h:'Finishing and handover', scope_3_p:'House construction, turnkey renovation and premium finishing.',
+        projects_title:'Completed projects', projects_intro:'We present completed timber houses and finished projects delivered by our company.',
+        stages_title:'Construction stages', stages_intro:'We show the full execution cycle — from plot preparation to the finished home and final interior.', stage_1_h:'1. Foundations and plot preparation', stage_1_p:'A properly prepared technical base reduces risk, organises the budget and gives the whole investment a safe start.', stage_2_h:'2. Construction process', stage_2_p:'At this stage quality control, compliance with the design and the logic of the work schedule matter most.', stage_3_h:'3. Insulation and interior preparation', stage_3_p:'This stage affects comfort, house performance and later running costs.', stage_4_h:'4. Interior finishing', stage_4_p:'The final stage covers design, materials and details that influence perception and market value.',
+        video_title:'Project video', video_desc:'Watch a short project video — it opens directly in TikTok.',
+        interior_title:'Interior works', interior_intro:'Stages of interior finishing and examples of completed internal works.'
+      },
+      ru: {
+        nav_home:'Главная', nav_categories:'Категории', nav_contact:'Контакт', nav_plots:'Участки', nav_build:'Строительство дома', nav_new:'Новостройки',
+        breadcrumbs_home:'Главная', breadcrumbs_current:'Строительство дома',
+        hero_title:'Строительство домов в Испании — деревянные, prefab и каркасные на Costa Blanca',
+        hero_subtitle:'Мы проектируем и строим дома в Испании для международных клиентов. Работаем с разными технологиями — деревянной, prefab и каркасной — подбирая решение под участок, бюджет и цель инвестиции.',
+        hero_call:'📞 Позвонить', hero_whatsapp:'💬 WhatsApp',
+        hero_lead:'Наша услуга включает не только строительство дома, но и фундаменты любой сложности, ремонт под ключ и премиальную отделку интерьеров.',
+        tech_title:'Технологии строительства домов в Испании', tech_intro:'Мы работаем с несколькими решениями, чтобы подобрать подходящую модель под участок, бюджет, сроки реализации и ожидаемый стандарт дома.',
+        scope_title:'Объём реализации', scope_1_h:'Анализ и проект', scope_1_p:'Анализ участка и адаптация проекта к условиям грунта и задачам инвестиции.', scope_2_h:'Технология и конструкция', scope_2_p:'Подбор технологии: деревянной, prefab или каркасной, а также подготовка фундаментов и инженерии.', scope_3_h:'Отделка и сдача', scope_3_p:'Строительство дома, ремонт под ключ и премиальная отделка.',
+        projects_title:'Готовые проекты', projects_intro:'Показываем реализованные деревянные дома и готовые проекты нашей компании.',
+        stages_title:'Этапы строительства', stages_intro:'Мы показываем полный цикл реализации — от подготовки участка до готового дома и финального интерьера.', stage_1_h:'1. Фундамент и подготовка участка', stage_1_p:'Хорошо подготовленная техническая база снижает риски, упорядочивает бюджет и даёт проекту безопасный старт.', stage_2_h:'2. Процесс строительства', stage_2_p:'На этапе реализации важны контроль качества, соответствие проекту и логика всего графика работ.', stage_3_h:'3. Изоляция и подготовка интерьеров', stage_3_p:'Этап влияет на комфорт, эксплуатационные параметры дома и будущие расходы.', stage_4_h:'4. Отделка интерьеров', stage_4_p:'Финальный этап включает дизайн, материалы и детали, влияющие на восприятие и стоимость дома.',
+        video_title:'Видео реализации', video_desc:'Смотрите короткое видео реализации — оно открывается прямо в TikTok.',
+        interior_title:'Внутренние работы', interior_intro:'Этапы внутренней отделки и примеры выполненных внутренних работ.'
+      }
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
       const contactForm = document.getElementById('contact-form');
       const animatedCards = document.querySelectorAll('.fade-up');
@@ -1509,10 +1700,66 @@
       const lightboxImage = document.getElementById('lightbox-image');
       const lightboxClose = document.getElementById('lightbox-close');
       const zoomItems = document.querySelectorAll('.projects-card img, .interior-item img');
+      const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
+      const navLinks = Array.from(document.querySelectorAll('.nav a'));
+      const breadcrumbs = Array.from(document.querySelectorAll('.breadcrumbs a, .breadcrumbs span'));
+      const state = { currentLang: 'pl' };
       let lastScroll = window.pageYOffset;
       let accumulatedUp = 0;
       let accumulatedDown = 0;
       let ticking = false;
+
+      const getInitialLang = () => {
+        const lang = new URL(window.location.href).searchParams.get('lang');
+        return SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+      };
+      const updateUrlLang = (lang) => {
+        const url = new URL(window.location.href);
+        if (lang === 'pl') url.searchParams.delete('lang');
+        else url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+      };
+      const applyLanguage = (lang, syncUrl = true) => {
+        state.currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
+        const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
+        document.documentElement.lang = state.currentLang;
+        if (navLinks.length >= 6) {
+          [t.nav_home, t.nav_categories, t.nav_contact, t.nav_plots, t.nav_build, t.nav_new].forEach((text, index) => navLinks[index].textContent = text);
+        }
+        if (breadcrumbs.length >= 3) {
+          breadcrumbs[0].textContent = t.breadcrumbs_home;
+          breadcrumbs[2].textContent = t.breadcrumbs_current;
+        }
+        const heroTitle = document.querySelector('.hero-copy h1');
+        const heroTexts = document.querySelectorAll('.hero-copy p');
+        const heroButtons = document.querySelectorAll('.contact-inline-wrap .contact-inline');
+        if (heroTitle) heroTitle.textContent = t.hero_title;
+        if (heroTexts.length >= 2) {
+          heroTexts[0].textContent = t.hero_subtitle;
+          heroTexts[1].textContent = t.hero_lead;
+        }
+        if (heroButtons.length >= 2) {
+          heroButtons[0].textContent = t.hero_call;
+          heroButtons[1].textContent = t.hero_whatsapp;
+        }
+        const techSection = document.querySelectorAll('.section-card')[0];
+        if (techSection) {
+          techSection.querySelector('h2').textContent = t.tech_title;
+          techSection.querySelector('.center-text').textContent = t.tech_intro;
+        }
+        const scopeCards = document.querySelectorAll('.steps-grid .step-card');
+        if (scopeCards.length >= 3) {
+          scopeCards[0].querySelector('h3').textContent = t.scope_1_h; scopeCards[0].querySelector('p').textContent = t.scope_1_p;
+          scopeCards[1].querySelector('h3').textContent = t.scope_2_h; scopeCards[1].querySelector('p').textContent = t.scope_2_p;
+          scopeCards[2].querySelector('h3').textContent = t.scope_3_h; scopeCards[2].querySelector('p').textContent = t.scope_3_p;
+        }
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key]) el.textContent = t[key];
+        });
+        langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.currentLang));
+        if (syncUrl) updateUrlLang(state.currentLang);
+      };
 
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -1586,7 +1833,6 @@ ${message}`;
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
       };
-
       const closeLightbox = () => {
         if (!lightbox || !lightboxImage) return;
         lightbox.classList.remove('open');
@@ -1594,27 +1840,13 @@ ${message}`;
         lightboxImage.src = '';
         document.body.style.overflow = '';
       };
-
-      zoomItems.forEach((img) => {
-        img.addEventListener('click', () => openLightbox(img.src, img.alt));
-      });
-
-      if (lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-      }
-
-      if (lightbox) {
-        lightbox.addEventListener('click', (event) => {
-          if (event.target === lightbox) closeLightbox();
-        });
-      }
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && lightbox?.classList.contains('open')) {
-          closeLightbox();
-        }
-      });
-
+      zoomItems.forEach((img) => img.addEventListener('click', () => openLightbox(img.src, img.alt)));
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && lightbox?.classList.contains('open')) closeLightbox(); });
+      langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true)));
+      window.addEventListener('popstate', () => applyLanguage(getInitialLang(), false));
+      applyLanguage(getInitialLang(), false);
       onScroll();
     });
   </script>
