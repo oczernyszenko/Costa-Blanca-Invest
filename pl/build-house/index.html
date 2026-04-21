@@ -611,6 +611,23 @@
       border-top: 1px solid rgba(15,23,42,.08);
     }
     .share-box p { margin-bottom: 12px; text-align: center; }
+    .share-toast {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 20px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .share-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .sr-only {
       position: absolute !important;
       width: 1px;
@@ -767,11 +784,15 @@
       isolation: isolate;
     }
     .video-showroom-preview {
-      width: 100%;
+      width: calc(100% + 36px);
+      max-width: none;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
       background: #000;
+      transform: translateX(-18px) scale(1.02);
+      transform-origin: center;
     }
     .video-showroom-overlay {
       position: absolute;
@@ -1567,8 +1588,8 @@
           <p data-i18n="share_title">Udostępnij stronę</p>
           <div class="share-actions">
             <button class="share-btn" type="button" id="share-link" data-i18n="share_link">🔗 Link</button>
-            
           </div>
+          <div id="share-toast" class="share-toast" aria-live="polite"></div>
           <div id="share-status" class="sr-only" aria-live="polite"></div>
         </div>
 
@@ -1655,6 +1676,7 @@
       const contactForm = document.getElementById('contact-form');
       const shareBtn = document.getElementById('share-link');
       const shareStatus = document.getElementById('share-status');
+      const shareToast = document.getElementById('share-toast');
       const animatedCards = document.querySelectorAll('.fade-up');
       const header = document.querySelector('.topbar');
       const videoSection = document.getElementById('video');
@@ -1940,28 +1962,44 @@ ${message}`;
         });
       }
 
-            // SHARE FUNCTION (link + title + image support)
+                  // SHARE FUNCTION: copy simple link with visual confirmation
       if (shareBtn) {
         shareBtn.addEventListener('click', async () => {
           const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
-          const shareData = {
-            title: document.title,
-            text: document.querySelector('meta[name="description"]')?.content || document.title,
-            url: window.location.href
-          };
+          const shareUrl = window.location.href;
 
           try {
-            if (navigator.share) {
-              await navigator.share(shareData);
-            } else {
-              await navigator.clipboard.writeText(window.location.href);
-              if (shareStatus) {
-                shareStatus.textContent = t.share_copied || 'Link copied';
-                setTimeout(() => shareStatus.textContent = '', 2000);
-              }
+            await navigator.clipboard.writeText(shareUrl);
+            if (shareToast) {
+              shareToast.textContent = t.share_copied || 'Link copied';
+              shareToast.classList.add('show');
+              setTimeout(() => {
+                shareToast.classList.remove('show');
+                setTimeout(() => {
+                  shareToast.textContent = '';
+                }, 200);
+              }, 1800);
             }
+            if (shareStatus) shareStatus.textContent = t.share_copied || 'Link copied';
           } catch (e) {
-            console.log('Share cancelled');
+            const tempInput = document.createElement('input');
+            tempInput.value = shareUrl;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            if (shareToast) {
+              shareToast.textContent = t.share_copied || 'Link copied';
+              shareToast.classList.add('show');
+              setTimeout(() => {
+                shareToast.classList.remove('show');
+                setTimeout(() => {
+                  shareToast.textContent = '';
+                }, 200);
+              }, 1800);
+            }
+            if (shareStatus) shareStatus.textContent = t.share_copied || 'Link copied';
           }
         });
       }
