@@ -1985,45 +1985,51 @@ ${message}`;
           window.scrollTo({ top: targetY, behavior: 'smooth' });
         });
       }
-
-                  // SHARE FUNCTION: copy simple link with visual confirmation
+      // SHARE FUNCTION: native share on mobile, fallback copy on desktop
       if (shareBtn) {
         shareBtn.addEventListener('click', async () => {
           const t = PAGE_TRANSLATIONS[state.currentLang] || PAGE_TRANSLATIONS.pl;
           const shareUrl = window.location.href;
+          const shareTitle = document.title;
+          const shareText = shareTitle;
+
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: shareTitle,
+                text: shareText,
+                url: shareUrl
+              });
+              return;
+            } catch (err) {
+              // fallback to copy
+            }
+          }
 
           try {
             await navigator.clipboard.writeText(shareUrl);
-            if (shareToast) {
-              shareToast.textContent = t.share_copied || 'Link copied';
-              shareToast.classList.add('show');
-              setTimeout(() => {
-                shareToast.classList.remove('show');
-                setTimeout(() => {
-                  shareToast.textContent = '';
-                }, 200);
-              }, 1800);
-            }
-            if (shareStatus) shareStatus.textContent = t.share_copied || 'Link copied';
           } catch (e) {
             const tempInput = document.createElement('input');
             tempInput.value = shareUrl;
             document.body.appendChild(tempInput);
             tempInput.select();
-            tempInput.setSelectionRange(0, 99999);
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-            if (shareToast) {
-              shareToast.textContent = t.share_copied || 'Link copied';
-              shareToast.classList.add('show');
+          }
+
+          if (shareToast) {
+            shareToast.textContent = t.share_copied || 'Link copied';
+            shareToast.classList.add('show');
+            setTimeout(() => {
+              shareToast.classList.remove('show');
               setTimeout(() => {
-                shareToast.classList.remove('show');
-                setTimeout(() => {
-                  shareToast.textContent = '';
-                }, 200);
-              }, 1800);
-            }
-            if (shareStatus) shareStatus.textContent = t.share_copied || 'Link copied';
+                shareToast.textContent = '';
+              }, 200);
+            }, 1800);
+          }
+
+          if (shareStatus) {
+            shareStatus.textContent = t.share_copied || 'Link copied';
           }
         });
       }
