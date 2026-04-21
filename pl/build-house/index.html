@@ -469,6 +469,30 @@
       letter-spacing: -.02em;
       text-align: center;
     }
+    /* CATEGORY COLORS (subtle, not full fill) */
+    .category-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      background: rgba(255,255,255,.88); /* keep clean */
+    }
+
+    /* SKY BLUE - New developments */
+    .categories-grid a:nth-child(1) {
+      border: 1px solid rgba(56,189,248,.35);
+      box-shadow: 0 10px 25px rgba(56,189,248,.12);
+    }
+    .categories-grid a:nth-child(1) h3 {
+      color: #38bdf8;
+    }
+
+    /* BROWN - Plots */
+    .categories-grid a:nth-child(2) {
+      border: 1px solid rgba(120,53,15,.35);
+      box-shadow: 0 10px 25px rgba(120,53,15,.10);
+    }
+    .categories-grid a:nth-child(2) h3 {
+      color: #92400e;
+    }
+
     .category-card:hover,
     .projects-card:hover,
     .interior-item:hover,
