@@ -154,7 +154,9 @@
     .hero-price-meta { display: block; margin-top: 8px; font-size: 12px; line-height: 1.55; opacity: .94; }
     .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
     .gallery-item { position: relative; overflow: hidden; border-radius: 22px; background: #edf1f4; border: 1px solid rgba(255,255,255,.34); box-shadow: 0 20px 44px rgba(15,23,42,.10); cursor: zoom-in; min-height: 220px; }
-    .gallery-item img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .gallery-item img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s ease, filter .3s ease; transform-origin: center; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item:hover { box-shadow: 0 26px 54px rgba(15,23,42,.14); }
     .content { margin-top: 34px; }
     .hero-title, .subtitle, .price, .price-soft { text-align: center; }
     .hero-title { max-width: 980px; margin: 0 auto 12px; color: var(--primary); font-size: clamp(38px, 5.2vw, 60px); letter-spacing: -.04em; text-wrap: balance; }
@@ -184,6 +186,7 @@
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 15px; font-weight: 800; letter-spacing: .02em; }
     .agent-meta { margin: 0; color: var(--text-soft); font-size: 14px; line-height: 1.7; }
     .cta-actions, .share-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .share-actions { max-width: 320px; margin: 0 auto; }
     .cta-actions { margin: 4px 0 18px; max-width: 520px; margin-left: auto; margin-right: auto; }
     .cta-actions .btn { flex: 1 1 0; min-width: 220px; }
     .btn, .share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; min-height: 52px; border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1; position: relative; cursor: pointer; text-align: center; border: 1px solid rgba(255,255,255,.34); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%); box-shadow: 0 10px 24px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.28); transition: all .25s ease; }
@@ -237,9 +240,6 @@
 <body>
   <main class="page">
     <div class="container" id="appRoot">
-<small id="loadingHint"></small>
-      </div>
-
       <div id="propertyPage" hidden>
         <div class="top-controls">
           <a class="back-link" id="backLink" href="https://costa-blanca-invest.com/pl/plots/" translate="no">
@@ -365,8 +365,7 @@
           <div class="share-block">
             <div class="share-actions" role="group" aria-label="Share">
               <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
-              <button class="share-btn" type="button" id="nativeShareBtn"><span id="shareBtnLabel">Udostępnij</span></button>
-            </div>
+              </div>
             <p class="share-note">
               <span id="shareNoteTitle"></span><br>
               <strong id="shareNoteStrong"></strong><br>
@@ -400,7 +399,7 @@
     const CATEGORY_FALLBACK_IMAGE = '/pl/plots/plots-hero.png';
     const SUPPORTED_LANGS = ['pl', 'en', 'es', 'ru'];
     const CONTACT_PHONE = '+34604158859';
-    const IMAGE_EXTENSIONS = ['jpg','jpeg','png','webp','avif','gif','JPG','JPEG','PNG','WEBP','AVIF','GIF'];
+    const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'avif', 'gif', 'bmp', 'svg'];
 
     const FALLBACK_PLOTS = [
       {
@@ -1106,10 +1105,214 @@
     ];
 
     const UI = {
-      pl: { locale:'pl_PL', backLink:'Zobacz inne działki', badgeText:'DZIAŁKA', heroKicker:'COSTA BLANCA · DZIAŁKA', heroPriceBoxTitle:'CENA', heroPriceSep:'→', heroPriceNote:'Szczegóły oferty', paramsTitle:'Parametry działki', whySectionTitle:'Dlaczego ta działka jest atrakcyjna?', specTitle:'Co obejmuje oferta?', roiTitle:'Potencjał nieruchomości', audienceTitle:'Dla kogo jest ta działka?', contactTitle:'Otrzymaj szczegóły działki', contactIntro:'Skontaktuj się ze mną, aby otrzymać szczegóły oferty, dodatkowe zdjęcia oraz pełną prezentację inwestycyjną.', agentRole:'Ekspert ds. nieruchomości na Costa Blanca', agentMeta:'Dobór nieruchomości, wsparcie przy zakupie i pomoc na każdym etapie transakcji w Hiszpanii.', callBtn:'Zadzwoń', waBtn:'WhatsApp', formName:'Imię', formPhone:'Telefon', formEmail:'Email', formMessage:'Napisz wiadomość', formSubmit:'Wyślij przez WhatsApp', copyLink:'Kopiuj link', shareBtn:'Udostępnij', shareCopied:'Skopiowano', shareNoteText:'Cena, tytuł i główne zdjęcie gotowe do udostępnienia.', urgencyNote:'Dostępność i szczegóły warto potwierdzić bezpośrednio', kpiFallback4:'Sprawdzona oferta' },
-      en: { locale:'en_US', backLink:'View other plots', badgeText:'PLOT', heroKicker:'COSTA BLANCA · PLOT', heroPriceBoxTitle:'PRICE', heroPriceSep:'→', heroPriceNote:'Offer details', paramsTitle:'Plot parameters', whySectionTitle:'Why is this plot attractive?', specTitle:'What does the offer include?', roiTitle:'Property potential', audienceTitle:'Who is this plot for?', contactTitle:'Receive plot details', contactIntro:'Contact me to receive property details, extra photos and the full investment presentation.', agentRole:'Costa Blanca property expert', agentMeta:'Property selection, purchase guidance and support at every stage in Spain.', callBtn:'Call', waBtn:'WhatsApp', formName:'Name', formPhone:'Phone', formEmail:'Email', formMessage:'Write a message', formSubmit:'Send via WhatsApp', copyLink:'Copy link', shareBtn:'Share', shareCopied:'Copied', shareNoteText:'Price, title and main image are ready for sharing.', urgencyNote:'Availability and details should be confirmed directly', kpiFallback4:'Verified offer' },
-      es: { locale:'es_ES', backLink:'Ver otras parcelas', badgeText:'PARCELA', heroKicker:'COSTA BLANCA · PARCELA', heroPriceBoxTitle:'PRECIO', heroPriceSep:'→', heroPriceNote:'Detalles de la oferta', paramsTitle:'Parámetros de la parcela', whySectionTitle:'¿Por qué es atractiva esta parcela?', specTitle:'¿Qué incluye la oferta?', roiTitle:'Potencial de la propiedad', audienceTitle:'¿Para quién es esta parcela?', contactTitle:'Recibir detalles de la parcela', contactIntro:'Contáctame para recibir detalles de la propiedad, fotos adicionales y la presentación completa de inversión.', agentRole:'Experta inmobiliaria en Costa Blanca', agentMeta:'Selección de propiedades, apoyo en la compra y acompañamiento en cada etapa en España.', callBtn:'Llamar', waBtn:'WhatsApp', formName:'Nombre', formPhone:'Teléfono', formEmail:'Email', formMessage:'Escribe un mensaje', formSubmit:'Enviar por WhatsApp', copyLink:'Copiar enlace', shareBtn:'Compartir', shareCopied:'Copiado', shareNoteText:'Precio, título e imagen principal listos para compartir.', urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente', kpiFallback4:'Oferta verificada' },
-      ru: { locale:'ru_RU', backLink:'Смотреть другие участки', badgeText:'УЧАСТОК', heroKicker:'COSTA BLANCA · УЧАСТОК', heroPriceBoxTitle:'ЦЕНА', heroPriceSep:'→', heroPriceNote:'Детали предложения', paramsTitle:'Параметры участка', whySectionTitle:'Почему этот участок интересен?', specTitle:'Что включает предложение?', roiTitle:'Потенциал объекта', audienceTitle:'Для кого этот участок?', contactTitle:'Получить детали участка', contactIntro:'Свяжитесь со мной, чтобы получить детали объекта, дополнительные фото и полную инвестиционную презентацию.', agentRole:'Эксперт по недвижимости на Costa Blanca', agentMeta:'Подбор объектов, сопровождение покупки и помощь на каждом этапе сделки в Испании.', callBtn:'Позвонить', waBtn:'WhatsApp', formName:'Имя', formPhone:'Телефон', formEmail:'Email', formMessage:'Напишите сообщение', formSubmit:'Отправить в WhatsApp', copyLink:'Копировать ссылку', shareBtn:'Поделиться', shareCopied:'Скопировано', shareNoteText:'Цена, заголовок и главное фото готовы для шеринга.', urgencyNote:'Наличие и детали лучше подтвердить напрямую', kpiFallback4:'Проверенное предложение' }
+      pl: {
+        locale:'pl_PL',
+        backLink:'Zobacz inne działki',
+        badgeText:'DZIAŁKA',
+        heroKicker:'COSTA BLANCA · DZIAŁKA',
+        heroPriceBoxTitle:'CENA',
+        heroPriceSep:'→',
+        heroPriceNote:'Szczegóły oferty',
+        paramsTitle:'Parametry działki',
+        paramsSlug:'Slug',
+        paramsMeta:'Lokalizacja',
+        paramsPrice:'Cena',
+        paramsContact:'Kontakt',
+        whySectionTitle:'Dlaczego ta działka jest atrakcyjna?',
+        whyDynamicTitle:'Atuty oferty',
+        whyDynamicText:'Zdjęcia i treści są pobierane dynamicznie z JSON oraz z folderu konkretnej działki.',
+        whyShareTitle:'Udostępnianie',
+        whyShareText:'Link do oferty udostępnia zdjęcie 1, cenę i tytuł danej działki.',
+        specTitle:'Co obejmuje oferta?',
+        specItem1:'1 główne zdjęcie z JSON',
+        specItem2:'Do 8 zdjęć z pola images lub z folderu obiektu',
+        specItem3:'Brak pustych kafelków, jeśli zdjęć jest mniej',
+        specItem4:'Obsługa różnych formatów plików',
+        roiTitle:'Opis inwestycyjny',
+        roiParagraph2Fallback:'Skontaktuj się, aby otrzymać pełne materiały inwestycyjne, warunki zakupu i dodatkowe zdjęcia.',
+        audienceTitle:'Dla kogo jest ta działka?',
+        audience1Title:'Dla inwestora',
+        audience1Text:'Dla klienta analizującego lokalizację, cenę i format działki.',
+        audience2Title:'Dla dewelopera',
+        audience2Text:'Dla podmiotu szukającego gruntu pod projekt mieszkaniowy lub willowy.',
+        audience3Title:'Dla klienta prywatnego',
+        audience3Text:'Dla osoby zainteresowanej działką pod własną inwestycję.',
+        contactTitle:'Otrzymaj szczegóły działki',
+        contactIntro:'Skontaktuj się ze mną, aby otrzymać szczegóły oferty, dodatkowe zdjęcia oraz pełną prezentację inwestycyjną.',
+        agentRole:'Ekspert ds. nieruchomości na Costa Blanca',
+        agentMeta:'Dobór nieruchomości, wsparcie przy zakupie i pomoc na każdym etapie transakcji w Hiszpanii.',
+        callBtn:'Zadzwoń',
+        waBtn:'WhatsApp',
+        formName:'Imię',
+        formPhone:'Telefon',
+        formEmail:'Email',
+        formMessage:'Napisz wiadomość',
+        formSubmit:'Wyślij przez WhatsApp',
+        copyLink:'Kopiuj link',
+        shareCopied:'Skopiowano',
+        shareNoteText:'Cena, tytuł i główne zdjęcie gotowe do udostępnienia.',
+        urgencyNote:'Dostępność i szczegóły warto potwierdzić bezpośrednio',
+        kpiFallback4:'Sprawdzona oferta',
+        copyPrompt:'Kopiuj',
+        newInquiry:'Nowe zapytanie ze strony',
+        lightboxClose:'Zamknij'
+      },
+      en: {
+        locale:'en_US',
+        backLink:'View other plots',
+        badgeText:'PLOT',
+        heroKicker:'COSTA BLANCA · PLOT',
+        heroPriceBoxTitle:'PRICE',
+        heroPriceSep:'→',
+        heroPriceNote:'Offer details',
+        paramsTitle:'Plot parameters',
+        paramsSlug:'Slug',
+        paramsMeta:'Location',
+        paramsPrice:'Price',
+        paramsContact:'Contact',
+        whySectionTitle:'Why is this plot attractive?',
+        whyDynamicTitle:'Key benefits',
+        whyDynamicText:'Images and content are loaded dynamically from JSON and from the specific plot folder.',
+        whyShareTitle:'Sharing',
+        whyShareText:'The property link shares photo 1, the price and the title of the selected plot.',
+        specTitle:'What does the offer include?',
+        specItem1:'1 main image from JSON',
+        specItem2:'Up to 8 images from the images field or the property folder',
+        specItem3:'No empty tiles when fewer photos are available',
+        specItem4:'Support for multiple file formats',
+        roiTitle:'Investment description',
+        roiParagraph2Fallback:'Contact me to receive full investment materials, purchase terms and additional photos.',
+        audienceTitle:'Who is this plot for?',
+        audience1Title:'For investors',
+        audience1Text:'For clients analyzing the location, price and plot format.',
+        audience2Title:'For developers',
+        audience2Text:'For buyers looking for land for a residential project or villa development.',
+        audience3Title:'For private buyers',
+        audience3Text:'For clients interested in a plot for their own investment.',
+        contactTitle:'Receive plot details',
+        contactIntro:'Contact me to receive property details, extra photos and the full investment presentation.',
+        agentRole:'Costa Blanca property expert',
+        agentMeta:'Property selection, purchase guidance and support at every stage in Spain.',
+        callBtn:'Call',
+        waBtn:'WhatsApp',
+        formName:'Name',
+        formPhone:'Phone',
+        formEmail:'Email',
+        formMessage:'Write a message',
+        formSubmit:'Send via WhatsApp',
+        copyLink:'Copy link',
+        shareCopied:'Copied',
+        shareNoteText:'Price, title and main image are ready for sharing.',
+        urgencyNote:'Availability and details should be confirmed directly',
+        kpiFallback4:'Verified offer',
+        copyPrompt:'Copy',
+        newInquiry:'New inquiry from the website',
+        lightboxClose:'Close'
+      },
+      es: {
+        locale:'es_ES',
+        backLink:'Ver otras parcelas',
+        badgeText:'PARCELA',
+        heroKicker:'COSTA BLANCA · PARCELA',
+        heroPriceBoxTitle:'PRECIO',
+        heroPriceSep:'→',
+        heroPriceNote:'Detalles de la oferta',
+        paramsTitle:'Parámetros de la parcela',
+        paramsSlug:'Slug',
+        paramsMeta:'Ubicación',
+        paramsPrice:'Precio',
+        paramsContact:'Contacto',
+        whySectionTitle:'¿Por qué es atractiva esta parcela?',
+        whyDynamicTitle:'Ventajas clave',
+        whyDynamicText:'Las imágenes y el contenido se cargan dinámicamente desde JSON y desde la carpeta específica de la parcela.',
+        whyShareTitle:'Compartir',
+        whyShareText:'El enlace de la propiedad comparte la foto 1, el precio y el título de la parcela seleccionada.',
+        specTitle:'¿Qué incluye la oferta?',
+        specItem1:'1 imagen principal desde JSON',
+        specItem2:'Hasta 8 imágenes desde el campo images o la carpeta del inmueble',
+        specItem3:'Sin bloques vacíos si hay menos fotos',
+        specItem4:'Compatibilidad con varios formatos de archivo',
+        roiTitle:'Descripción de inversión',
+        roiParagraph2Fallback:'Contáctame para recibir el material completo de inversión, condiciones de compra y fotos adicionales.',
+        audienceTitle:'¿Para quién es esta parcela?',
+        audience1Title:'Para inversores',
+        audience1Text:'Para clientes que analizan la ubicación, el precio y el formato de la parcela.',
+        audience2Title:'Para promotores',
+        audience2Text:'Para compradores que buscan suelo para un proyecto residencial o un conjunto de villas.',
+        audience3Title:'Para clientes privados',
+        audience3Text:'Para personas interesadas en una parcela para su propia inversión.',
+        contactTitle:'Recibir detalles de la parcela',
+        contactIntro:'Contáctame para recibir detalles de la propiedad, fotos adicionales y la presentación completa de inversión.',
+        agentRole:'Experta inmobiliaria en Costa Blanca',
+        agentMeta:'Selección de propiedades, apoyo en la compra y acompañamiento en cada etapa en España.',
+        callBtn:'Llamar',
+        waBtn:'WhatsApp',
+        formName:'Nombre',
+        formPhone:'Teléfono',
+        formEmail:'Email',
+        formMessage:'Escribe un mensaje',
+        formSubmit:'Enviar por WhatsApp',
+        copyLink:'Copiar enlace',
+        shareCopied:'Copiado',
+        shareNoteText:'Precio, título e imagen principal listos para compartir.',
+        urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente',
+        kpiFallback4:'Oferta verificada',
+        copyPrompt:'Copiar',
+        newInquiry:'Nueva consulta desde la web',
+        lightboxClose:'Cerrar'
+      },
+      ru: {
+        locale:'ru_RU',
+        backLink:'Смотреть другие участки',
+        badgeText:'УЧАСТОК',
+        heroKicker:'COSTA BLANCA · УЧАСТОК',
+        heroPriceBoxTitle:'ЦЕНА',
+        heroPriceSep:'→',
+        heroPriceNote:'Детали предложения',
+        paramsTitle:'Параметры участка',
+        paramsSlug:'Slug',
+        paramsMeta:'Локация',
+        paramsPrice:'Цена',
+        paramsContact:'Контакт',
+        whySectionTitle:'Почему этот участок интересен?',
+        whyDynamicTitle:'Ключевые преимущества',
+        whyDynamicText:'Фото и контент подгружаются динамически из JSON и из папки конкретного участка.',
+        whyShareTitle:'Поделиться',
+        whyShareText:'Ссылка на объект передает фото 1, цену и заголовок выбранного участка.',
+        specTitle:'Что включает предложение?',
+        specItem1:'1 главное фото из JSON',
+        specItem2:'До 8 фото из поля images или из папки объекта',
+        specItem3:'Без пустых блоков, если фото меньше',
+        specItem4:'Поддержка разных форматов файлов',
+        roiTitle:'Инвестиционное описание',
+        roiParagraph2Fallback:'Свяжитесь со мной, чтобы получить полные инвестиционные материалы, условия покупки и дополнительные фото.',
+        audienceTitle:'Для кого этот участок?',
+        audience1Title:'Для инвестора',
+        audience1Text:'Для клиента, который анализирует локацию, цену и формат участка.',
+        audience2Title:'Для девелопера',
+        audience2Text:'Для покупателя, который ищет землю под жилой проект или комплекс вилл.',
+        audience3Title:'Для частного клиента',
+        audience3Text:'Для клиента, которому нужен участок под собственную инвестицию.',
+        contactTitle:'Получить детали участка',
+        contactIntro:'Свяжитесь со мной, чтобы получить детали объекта, дополнительные фото и полную инвестиционную презентацию.',
+        agentRole:'Эксперт по недвижимости на Costa Blanca',
+        agentMeta:'Подбор объектов, сопровождение покупки и помощь на каждом этапе сделки в Испании.',
+        callBtn:'Позвонить',
+        waBtn:'WhatsApp',
+        formName:'Имя',
+        formPhone:'Телефон',
+        formEmail:'Email',
+        formMessage:'Напишите сообщение',
+        formSubmit:'Отправить в WhatsApp',
+        copyLink:'Копировать ссылку',
+        shareCopied:'Скопировано',
+        shareNoteText:'Цена, заголовок и главное фото готовы для шеринга.',
+        urgencyNote:'Наличие и детали лучше подтвердить напрямую',
+        kpiFallback4:'Проверенное предложение',
+        copyPrompt:'Копировать',
+        newInquiry:'Новая заявка с сайта',
+        lightboxClose:'Закрыть'
+      }
     };
 
     let cachedPlots = null;
@@ -1186,12 +1389,14 @@
       const t = plot?.translations?.[lang] || {};
       return {
         ...plot,
-        image: plot.image || CATEGORY_FALLBACK_IMAGE,
-        alt: t.alt || plot.alt || plot.title || 'Plot',
-        chip: t.chip || plot.chip || UI[lang].badgeText,
-        title: t.title || plot.title || 'Plot',
-        meta: t.meta || plot.meta || 'Costa Blanca',
-        desc: t.desc || plot.desc || 'Plot on Costa Blanca.'
+        image: plot?.image || CATEGORY_FALLBACK_IMAGE,
+        alt: t.alt || plot?.alt || plot?.title || 'Plot',
+        chip: t.chip || plot?.chip || UI[lang].badgeText,
+        title: t.title || plot?.title || 'Plot',
+        meta: t.meta || plot?.meta || 'Costa Blanca',
+        desc: t.desc || plot?.desc || 'Plot on Costa Blanca.',
+        seoDescription: t.seoDescription || plot?.seoDescription || t.desc || plot?.desc || '',
+        seoDescription2: t.seoDescription2 || plot?.seoDescription2 || ''
       };
     }
 
@@ -1212,28 +1417,37 @@
       };
 
       const mainImage = localized.image || CATEGORY_FALLBACK_IMAGE;
+      const jsonImages = Array.isArray(plot?.images) ? plot.images : [];
+      const localizedImages = Array.isArray(plot?.translations?.[currentLang]?.images) ? plot.translations[currentLang].images : [];
+
       add(mainImage);
+      [...jsonImages, ...localizedImages].forEach(add);
 
       const folder = parseFolderFromImage(mainImage);
       if (folder) {
         for (let i = 1; i <= 8; i += 1) {
           for (const ext of IMAGE_EXTENSIONS) {
             add(`/pl/plots/${folder}/${i}.${ext}`);
+            add(`/pl/plots/${folder}/${i}.${ext.toUpperCase()}`);
           }
         }
       }
 
-      while (result.length < 8) add(mainImage || CATEGORY_FALLBACK_IMAGE);
       return result.slice(0, 8);
     }
 
+    const imageCache = new Map();
+
     async function imageExists(src) {
-      try {
-        const res = await fetch(src, { method: 'HEAD', cache: 'no-store' });
-        return res.ok;
-      } catch {
-        return false;
-      }
+      if (imageCache.has(src)) return imageCache.get(src);
+      const promise = new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = src;
+      });
+      imageCache.set(src, promise);
+      return promise;
     }
 
     async function normalizeGallery(plot) {
@@ -1243,12 +1457,18 @@
       const existing = [];
 
       for (const src of candidates) {
+        if (existing.length >= 8) break;
         if (existing.includes(src)) continue;
+        if (existing.length === 0) {
+          existing.push(src);
+          continue;
+        }
         if (await imageExists(src)) existing.push(src);
       }
 
-      const finalImages = existing.length ? existing : [mainImage || CATEGORY_FALLBACK_IMAGE];
-      const gallery = finalImages.map((src, index) => ({
+      if (!existing.length) existing.push(mainImage || CATEGORY_FALLBACK_IMAGE);
+
+      const gallery = existing.map((src, index) => ({
         src,
         alt: index === 0 ? localized.alt : `${localized.title} ${index + 1}`
       }));
@@ -1276,18 +1496,24 @@
     function buildShareData(plot) {
       const p = localizePlot(plot, currentLang);
       const mainImage = plot?.image || CATEGORY_FALLBACK_IMAGE;
-      const url = new URL(window.location.href);
-      if (plot.slug) url.searchParams.set('slug', plot.slug);
-      if (currentLang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', currentLang);
       const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
-      return { title: `${p.title} · ${price}`, text: `${p.title} · ${price}`, url: url.toString(), image: absoluteUrl(mainImage) };
+      const url = new URL(plot?.href || '/pl/plots/shablon/', SITE_ORIGIN);
+      if (plot?.slug) url.searchParams.set('slug', plot.slug);
+      if (currentLang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', currentLang);
+      return {
+        title: p.title,
+        text: price,
+        url: url.toString(),
+        image: absoluteUrl(mainImage)
+      };
     }
 
     function updateMeta(plot) {
       const ui = UI[currentLang];
       const p = localizePlot(plot, currentLang);
       const share = buildShareData(plot);
-      const description = p.desc || 'Plot on Costa Blanca.';
+      const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
+      const description = p.seoDescription || p.desc || `${p.title}. ${price}. ${p.meta || 'Costa Blanca'}. Costa Blanca Invest.`;
       const pageTitle = `${p.title} | ${formatPrice(plot.price || plot.price_value || 0, currentLang)} | Costa Blanca Invest`;
 
       document.documentElement.lang = currentLang;
@@ -1371,7 +1597,7 @@
       byId('pageH1').textContent = p.title;
       byId('subtitle').textContent = p.meta || 'Costa Blanca';
       byId('priceRange').textContent = price;
-      byId('priceSoft').textContent = p.desc;
+      byId('priceSoft').textContent = p.seoDescription || p.desc;
       byId('kpi1').textContent = price.replace('€', '').trim();
       byId('kpi2').textContent = area || '—';
       byId('kpi3').textContent = p.meta || 'Costa Blanca';
@@ -1384,38 +1610,33 @@
 
       byId('paramsTitle').textContent = ui.paramsTitle;
       byId('paramsBlock').innerHTML = `
-        <span class="label">Slug:</span><span class="value">${plot.slug || '—'}</span>
-        <span class="label">Meta:</span><span class="value">${p.meta || '—'}</span>
-        <span class="label">Cena:</span><span class="value">${price}</span>
-        <span class="label">Kontakt:</span><span class="value">${CONTACT_PHONE}</span>`;
+        <span class="label">${ui.paramsSlug}:</span><span class="value">${plot.slug || '—'}</span>
+        <span class="label">${ui.paramsMeta}:</span><span class="value">${p.meta || '—'}</span>
+        <span class="label">${ui.paramsPrice}:</span><span class="value">${price}</span>
+        <span class="label">${ui.paramsContact}:</span><span class="value">${CONTACT_PHONE}</span>`;
 
       byId('whySectionTitle').textContent = ui.whySectionTitle;
       const why = [
         { title: p.chip || ui.badgeText, text: p.desc },
-        { title: p.meta || 'Costa Blanca', text: usingFallbackData ? ui.fallbackHint : 'Dane są pobierane bezpośrednio z JSON i aktualizowane po zmianie języka.' },
-        { title: 'Sharing', text: 'Meta, preview i przyciski udostępniania używają tytułu, ceny i głównego zdjęcia.' }
+        { title: p.meta || ui.whyDynamicTitle, text: ui.whyDynamicText },
+        { title: ui.whyShareTitle, text: ui.whyShareText }
       ];
       [1,2,3].forEach((n) => { byId(`whyTitle${n}`).textContent = why[n-1].title; byId(`whyText${n}`).textContent = why[n-1].text; });
 
       byId('specTitle').textContent = ui.specTitle;
-      byId('specList').innerHTML = ['1 główne zdjęcie z JSON','Do 8 zdjęć generowanych z folderu obiektu','Fallback na główne zdjęcie kategorii, jeśli zdjęć brakuje'].map(item => `<li>${item}</li>`).join('');
-      byId('specParagraph').textContent = p.desc;
+      byId('specList').innerHTML = [ui.specItem1, ui.specItem2, ui.specItem3, ui.specItem4].map(item => `<li>${item}</li>`).join('');
+      byId('specParagraph').textContent = p.seoDescription || p.desc;
 
       byId('roiTitle').textContent = ui.roiTitle;
-      byId('roiParagraph1').textContent = p.desc;
-      byId('roiList').innerHTML = [
-        ['Cena', price],
-        ['Meta', p.meta || '—'],
-        ['Slug', plot.slug || '—'],
-        ['Share URL', share.url]
-      ].map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('');
-      byId('roiParagraph2').textContent = p.desc;
+      byId('roiParagraph1').textContent = p.seoDescription || p.desc;
+      byId('roiList').innerHTML = '';
+      byId('roiParagraph2').textContent = p.seoDescription2 || ui.roiParagraph2Fallback;
 
       byId('audienceTitle').textContent = ui.audienceTitle;
       const audience = [
-        { title:'Dla inwestora', text:'Dla klienta analizującego lokalizację, cenę i format działki.' },
-        { title:'Dla dewelopera', text:'Dla podmiotu szukającego gruntu pod projekt mieszkaniowy lub willowy.' },
-        { title:'Dla klienta prywatnego', text:'Dla osoby zainteresowanej działką pod własną inwestycję.' }
+        { title: ui.audience1Title, text: ui.audience1Text },
+        { title: ui.audience2Title, text: ui.audience2Text },
+        { title: ui.audience3Title, text: ui.audience3Text }
       ];
       [1,2,3].forEach((n) => { byId(`audienceCard${n}Title`).textContent = audience[n-1].title; byId(`audienceCard${n}Text`).textContent = audience[n-1].text; });
 
@@ -1433,15 +1654,19 @@
       byId('formMessage').placeholder = ui.formMessage;
       byId('formSubmitLabel').textContent = ui.formSubmit;
       byId('copyLinkLabel').textContent = ui.copyLink;
-      byId('shareBtnLabel').textContent = ui.shareBtn;
       byId('shareNoteTitle').textContent = p.title;
-      byId('shareNoteStrong').textContent = `${price} · ${p.meta || 'Costa Blanca'}`;
+      byId('shareNoteStrong').textContent = `${price} · ${p.title}`;
       byId('shareNoteText').textContent = ui.shareNoteText;
 
-      byId('waBtn').href = `https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}?text=${encodeURIComponent(`${p.title} · ${price}\n${share.url}`)}`;
+      const waText = `📍 ${p.title}
+💶 ${price}
+📷 ${share.image}
+🔗 ${share.url}`;
+      byId('waBtn').href = `https://wa.me/${CONTACT_PHONE.replace(/\D/g,'')}?text=${encodeURIComponent(waText)}`;
     }
 
     function openMediaLightbox(src, alt = '') {
+      byId('mediaLightboxClose').setAttribute('aria-label', UI[currentLang].lightboxClose);
       byId('mediaLightboxContent').innerHTML = `<img src="${src}" alt="${alt.replace(/"/g, '&quot;')}">`;
       byId('mediaLightbox').classList.add('open');
       byId('mediaLightbox').setAttribute('aria-hidden', 'false');
@@ -1464,26 +1689,11 @@
       byId('copyLinkBtn').onclick = async () => {
         const share = buildShareData(currentPlot);
         try {
-          await navigator.clipboard.writeText(share.url);
+          await navigator.clipboard.writeText([share.title,share.text,share.url].join('\n'));
           byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
           setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
         } catch {
-          window.prompt('Copy link', share.url);
-        }
-      };
-
-      byId('nativeShareBtn').onclick = async () => {
-        const share = buildShareData(currentPlot);
-        if (navigator.share) {
-          try { await navigator.share({ title: share.title, text: share.text, url: share.url }); } catch {}
-        } else {
-          try {
-            await navigator.clipboard.writeText(share.url);
-            byId('shareBtnLabel').textContent = UI[currentLang].shareCopied;
-            setTimeout(() => { byId('shareBtnLabel').textContent = UI[currentLang].shareBtn; }, 1500);
-          } catch {
-            window.prompt('Copy link', share.url);
-          }
+          window.prompt(UI[currentLang].copyPrompt,[share.title,share.text,share.url].join('\n'));
         }
       };
 
@@ -1494,7 +1704,7 @@
         const price = formatPrice(currentPlot.price || currentPlot.price_value || 0, currentLang);
         const share = buildShareData(currentPlot);
         const text = [
-          'Nowe zapytanie ze strony',
+          UI[currentLang].newInquiry,
           '',
           `${UI[currentLang].formName}: ${String(fd.get('name') || '').trim()}`,
           `${UI[currentLang].formPhone}: ${String(fd.get('phone') || '').trim()}`,
@@ -1502,6 +1712,7 @@
           '',
           `${p.title}`,
           `${price}`,
+          `${share.image}`,
           `${share.url}`,
           '',
           `${String(fd.get('message') || '').trim()}`
@@ -1516,7 +1727,9 @@
 
     async function applyLanguage(lang) {
       currentLang = SUPPORTED_LANGS.includes(lang) ? lang : 'pl';
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === currentLang));      if (!currentPlot) return;
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+      byId('mediaLightboxClose').setAttribute('aria-label', UI[currentLang].lightboxClose);
+      if (!currentPlot) return;
       await renderGallery(currentPlot);
       renderContent(currentPlot);
       updateMeta(currentPlot);
@@ -1540,20 +1753,22 @@
     }
 
     async function init() {
-      currentLang = getLangFromUrl();      const plots = await getPlots();
-      byId('loadingHint').textContent = usingFallbackData ? UI[currentLang].fallbackHint : '';
+      currentLang = getLangFromUrl();
+      const plots = await getPlots();
       const slug = getSlugFromUrl();
       currentPlot = plots.find(item => slugify(item.slug) === slugify(slug)) || plots[0];
       await renderGallery(currentPlot);
       renderContent(currentPlot);
       updateMeta(currentPlot);
       bindInteractions();
-      runSelfTests();      byId('propertyPage').hidden = false;
+      byId('mediaLightboxClose').setAttribute('aria-label', UI[currentLang].lightboxClose);
+      runSelfTests();
+      byId('propertyPage').hidden = false;
     }
 
     window.addEventListener('DOMContentLoaded', () => {
       init().catch((err) => {
-        console.error(err);        console.error('JSON load error', err);
+        console.error('JSON load error', err);
       });
     });
   </script>
