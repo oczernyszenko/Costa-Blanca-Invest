@@ -312,7 +312,7 @@
           <div class="kpi-row" aria-label="Kluczowe parametry działki">
             <div class="kpi"><strong>€</strong><div class="value" id="kpi1">0</div></div>
             <div class="kpi"><strong>M²</strong><div class="value" id="kpi2">0 m²</div></div>
-            <div class="kpi"><strong>i</strong><div class="value" id="kpi3">Costa Blanca</div></div>
+            <div class="kpi"><strong>📍</strong><div class="value" id="kpi3">Costa Blanca</div></div>
             <div class="kpi"><strong>✓</strong><div class="value" id="kpi4">Sprawdzona oferta</div></div>
           </div>
 
@@ -321,7 +321,7 @@
           <p class="lead" id="lead3"></p>
 
           <h2 class="params-title" id="paramsTitle">Parametry działki</h2>
-          <div class="params-accent"></div>
+          <div class="params-accent" id="paramsAccent"></div>
           <div class="param" id="paramsBlock"></div>
         </div>
 
@@ -340,12 +340,7 @@
           <p id="specParagraph"></p>
         </section>
 
-        <section class="section-card" id="roiSection">
-          <h2 id="roiTitle">Potencjał nieruchomości</h2>
-          <p class="lead" id="roiParagraph1"></p>
-          <ul id="roiList"></ul>
-          <p class="lead" id="roiParagraph2"></p>
-        </section>
+        
 
         <section class="section-card" id="audienceSection">
           <h2 id="audienceTitle">Dla kogo jest ta działka?</h2>
@@ -388,7 +383,7 @@
           <div class="share-block">
             <div class="share-actions" role="group" aria-label="Share">
               <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
-              </div>
+            </div>
             <p class="share-note">
               <span id="shareNoteTitle"></span><br>
               <strong id="shareNoteStrong"></strong><br>
@@ -426,702 +421,44 @@
 
     const FALLBACK_PLOTS = [
       {
-        slug: 'nou-nazareth',
-        href: '/pl/plots/shablon/?slug=nou-nazareth',
-        image: '/pl/plots/NouNazareth/1.png',
-        alt: 'Działka inwestycyjna Nou Nazareth',
-        chip: 'Działka deweloperska',
-        title: 'Działka inwestycyjna — Nou Nazareth',
-        meta: 'San Juan · 4 936 m²',
-        price: '€ 3 760 000',
-        price_value: 3760000,
-        desc: 'Duży grunt inwestycyjny w prestiżowej lokalizacji, odpowiedni pod projekt deweloperski.',
-        translations: {
-          en: {
-            alt: 'Nou Nazareth investment plot',
-            chip: 'Development plot',
-            title: 'Investment plot — Nou Nazareth',
-            meta: 'San Juan · 4,936 m²',
-            desc: 'Large investment plot in a prestigious location, suitable for a development project.'
-          },
-          es: {
-            alt: 'Parcela de inversión Nou Nazareth',
-            chip: 'Parcela promotora',
-            title: 'Parcela de inversión — Nou Nazareth',
-            meta: 'San Juan · 4.936 m²',
-            desc: 'Gran parcela de inversión en una ubicación prestigiosa, adecuada para un proyecto promotor.'
-          },
-          ru: {
-            alt: 'Инвестиционный участок Nou Nazareth',
-            chip: 'Девелоперский участок',
-            title: 'Инвестиционный участок — Nou Nazareth',
-            meta: 'San Juan · 4 936 м²',
-            desc: 'Крупный инвестиционный участок в престижной локации, подходящий под девелоперский проект.'
-          }
-        }
-      },
-      {
-        slug: 'el-campello-amerador-plot-3-7m',
-        href: '/pl/plots/shablon/?slug=el-campello-amerador-plot-3-7m',
-        image: '/pl/plots/el-campello-amerador-plot-3-7m/1.png',
-        alt: 'Działka inwestycyjna El Campello Amerador',
-        chip: 'Działka deweloperska',
-        title: 'Działka — El Campello (Amerador)',
-        meta: 'El Campello · Amerador · projekt deweloperski',
-        price: '€ 3 700 000',
-        price_value: 3700000,
-        desc: 'Duża działka inwestycyjna w El Campello, w rejonie Amerador, pod projekt deweloperski blisko morza.',
-        translations: {
-          en: {
-            alt: 'El Campello Amerador investment plot',
-            chip: 'Development plot',
-            title: 'Plot — El Campello (Amerador)',
-            meta: 'El Campello · Amerador · development project',
-            desc: 'Large investment plot in El Campello, in the Amerador area, for a development project close to the sea.'
-          },
-          es: {
-            alt: 'Parcela de inversión El Campello Amerador',
-            chip: 'Parcela promotora',
-            title: 'Parcela — El Campello (Amerador)',
-            meta: 'El Campello · Amerador · proyecto promotor',
-            desc: 'Gran parcela de inversión en El Campello, en la zona de Amerador, para un proyecto promotor cerca del mar.'
-          },
-          ru: {
-            alt: 'Инвестиционный участок El Campello Amerador',
-            chip: 'Девелоперский участок',
-            title: 'Участок — El Campello (Amerador)',
-            meta: 'El Campello · Amerador · девелоперский проект',
-            desc: 'Крупный инвестиционный участок в El Campello, в районе Amerador, под девелоперский проект рядом с морем.'
-          }
-        }
-      },
-      {
-        slug: 'villajoyosa-sea-plot-3-2m',
-        href: '/pl/plots/shablon/?slug=villajoyosa-sea-plot-3-2m',
-        image: '/pl/plots/villajoyosa-first-line-plot-3-2m/1.jpg',
-        alt: 'Działka na pierwszej linii morza w Villajoyosa',
-        chip: 'Działka na 1. linii morza',
-        title: 'Działka — Villajoyosa (1 linia morza)',
-        meta: 'Villajoyosa · 1 linia · projekt deweloperski',
-        price: '€ 3 200 000',
-        price_value: 3200000,
-        desc: 'Działka na pierwszej linii morza pod budowę 2 budynków i 24 apartamentów.',
-        translations: {
-          en: {
-            alt: 'First-line sea plot in Villajoyosa',
-            chip: 'First-line sea plot',
-            title: 'Plot — Villajoyosa (first sea line)',
-            meta: 'Villajoyosa · first line · development project',
-            desc: 'First-line sea plot for the construction of 2 buildings and 24 apartments.'
-          },
-          es: {
-            alt: 'Parcela en primera línea de mar en Villajoyosa',
-            chip: 'Parcela en 1ª línea de mar',
-            title: 'Parcela — Villajoyosa (1ª línea de mar)',
-            meta: 'Villajoyosa · 1ª línea · proyecto promotor',
-            desc: 'Parcela en primera línea de mar para la construcción de 2 edificios y 24 apartamentos.'
-          },
-          ru: {
-            alt: 'Участок на первой линии моря в Villajoyosa',
-            chip: 'Участок на 1-й линии моря',
-            title: 'Участок — Villajoyosa (1 линия моря)',
-            meta: 'Villajoyosa · 1 линия · девелоперский проект',
-            desc: 'Участок на первой линии моря под строительство 2 зданий и 24 апартаментов.'
-          }
-        }
-      },
-      {
-        slug: 'benidorm-finestrat-plot-1-6m',
-        href: '/pl/plots/shablon/?slug=benidorm-finestrat-plot-1-6m',
-        image: '/pl/plots/benidorm-finestrat-plot-1-6m/1.jpg',
-        alt: 'Premium działka inwestycyjna Benidorm Finestrat',
-        chip: 'Premium działka',
-        title: 'Działka — Benidorm / Finestrat',
-        meta: 'Benidorm · Finestrat · premium investment',
-        price: '€ 1 600 000',
-        price_value: 1600000,
-        desc: 'Premium działka inwestycyjna pod zabudowę mieszkaniową lub kompleks willowy.',
-        translations: {
-          en: {
-            alt: 'Premium investment plot Benidorm Finestrat',
-            chip: 'Premium plot',
-            title: 'Plot — Benidorm / Finestrat',
-            meta: 'Benidorm · Finestrat · premium investment',
-            desc: 'Premium investment plot for residential development or a villa complex.'
-          },
-          es: {
-            alt: 'Parcela premium de inversión Benidorm Finestrat',
-            chip: 'Parcela premium',
-            title: 'Parcela — Benidorm / Finestrat',
-            meta: 'Benidorm · Finestrat · inversión premium',
-            desc: 'Parcela premium de inversión para desarrollo residencial o complejo de villas.'
-          },
-          ru: {
-            alt: 'Премиальный инвестиционный участок Benidorm Finestrat',
-            chip: 'Премиальный участок',
-            title: 'Участок — Benidorm / Finestrat',
-            meta: 'Benidorm · Finestrat · премиальная инвестиция',
-            desc: 'Премиальный инвестиционный участок под жилую застройку или комплекс вилл.'
-          }
-        }
-      },
-      {
-        slug: 'san-juan-investment-plot-1-5m',
-        href: '/pl/plots/shablon/?slug=san-juan-investment-plot-1-5m',
-        image: '/pl/plots/SanJuan/1.png',
-        alt: 'Działka inwestycyjna San Juan',
-        chip: 'Działka inwestycyjna',
-        title: 'Działka — San Juan',
-        meta: 'San Juan',
-        price: '€ 1 500 000',
-        price_value: 1500000,
-        desc: 'Działka inwestycyjna w prestiżowej lokalizacji San Juan.',
-        translations: {
-          en: {
-            alt: 'San Juan investment plot',
-            chip: 'Investment plot',
-            title: 'Plot — San Juan',
-            meta: 'San Juan',
-            desc: 'Investment plot in the prestigious San Juan location.'
-          },
-          es: {
-            alt: 'Parcela de inversión San Juan',
-            chip: 'Parcela de inversión',
-            title: 'Parcela — San Juan',
-            meta: 'San Juan',
-            desc: 'Parcela de inversión en la prestigiosa zona de San Juan.'
-          },
-          ru: {
-            alt: 'Инвестиционный участок San Juan',
-            chip: 'Инвестиционный участок',
-            title: 'Участок — San Juan',
-            meta: 'San Juan',
-            desc: 'Инвестиционный участок в престижной локации San Juan.'
-          }
-        }
-      },
-      {
-        slug: 'finestrat-benidorm-plot-1-4m',
-        href: '/pl/plots/shablon/?slug=finestrat-benidorm-plot-1-4m',
-        image: '/pl/plots/finestrat-benidorm-plot-1-4m/1.jpg',
-        alt: 'Działka inwestycyjna Finestrat Benidorm',
-        chip: 'Działka inwestycyjna',
-        title: 'Działka — Finestrat / Benidorm',
-        meta: 'Finestrat · Benidorm',
-        price: '€ 1 400 000',
-        price_value: 1400000,
-        desc: 'Duża działka inwestycyjna pod projekt mieszkaniowy lub wille premium.',
-        translations: {
-          en: {
-            alt: 'Finestrat Benidorm investment plot',
-            chip: 'Investment plot',
-            title: 'Plot — Finestrat / Benidorm',
-            meta: 'Finestrat · Benidorm',
-            desc: 'Large investment plot for a residential project or premium villas.'
-          },
-          es: {
-            alt: 'Parcela de inversión Finestrat Benidorm',
-            chip: 'Parcela de inversión',
-            title: 'Parcela — Finestrat / Benidorm',
-            meta: 'Finestrat · Benidorm',
-            desc: 'Gran parcela de inversión para proyecto residencial o villas premium.'
-          },
-          ru: {
-            alt: 'Инвестиционный участок Finestrat Benidorm',
-            chip: 'Инвестиционный участок',
-            title: 'Участок — Finestrat / Benidorm',
-            meta: 'Finestrat · Benidorm',
-            desc: 'Крупный инвестиционный участок под жилой проект или премиальные виллы.'
-          }
-        }
-      },
-      {
-        slug: 'vistahermosa-alicante-plot-2850m',
-        href: '/pl/plots/shablon/?slug=vistahermosa-alicante-plot-2850m',
-        image: '/pl/plots/vistahermosa-alicante-plot-2850m-1-35m/1.jpg',
-        alt: 'Działka 2850 m² w Vistahermosa Alicante',
-        chip: 'Premium działka',
-        title: 'Działka — Vistahermosa (2850 m²)',
-        meta: 'Alicante · Vistahermosa',
-        price: '€ 1 350 000',
-        price_value: 1350000,
-        desc: 'Przestronna działka w prestiżowej dzielnicy Alicante.',
-        translations: {
-          en: {
-            alt: '2,850 m² plot in Vistahermosa Alicante',
-            chip: 'Premium plot',
-            title: 'Plot — Vistahermosa (2,850 m²)',
-            meta: 'Alicante · Vistahermosa',
-            desc: 'Spacious plot in the prestigious district of Alicante.'
-          },
-          es: {
-            alt: 'Parcela de 2.850 m² en Vistahermosa Alicante',
-            chip: 'Parcela premium',
-            title: 'Parcela — Vistahermosa (2.850 m²)',
-            meta: 'Alicante · Vistahermosa',
-            desc: 'Amplia parcela en una prestigiosa zona de Alicante.'
-          },
-          ru: {
-            alt: 'Участок 2850 м² в Vistahermosa Alicante',
-            chip: 'Премиальный участок',
-            title: 'Участок — Vistahermosa (2 850 м²)',
-            meta: 'Alicante · Vistahermosa',
-            desc: 'Просторный участок в престижном районе Alicante.'
-          }
-        }
-      },
-      {
-        slug: 'playa-san-juan-villa-plot-1-1m',
-        href: '/pl/plots/shablon/?slug=playa-san-juan-villa-plot-1-1m',
-        image: '/pl/plots/playa-san-juan-villa-plot-1260m/1.jpg',
-        alt: 'Działka pod willę Playa San Juan',
-        chip: 'Działka pod willę',
-        title: 'Działka — Playa San Juan (1260 m²)',
-        meta: 'Playa San Juan · willa',
-        price: '€ 1 100 000',
-        price_value: 1100000,
-        desc: 'Działka pod budowę prywatnej willi w prestiżowej lokalizacji nad morzem.',
-        translations: {
-          en: {
-            alt: 'Villa plot Playa San Juan',
-            chip: 'Villa plot',
-            title: 'Plot — Playa San Juan (1,260 m²)',
-            meta: 'Playa San Juan · villa',
-            desc: 'Plot for the construction of a private villa in a prestigious seaside location.'
-          },
-          es: {
-            alt: 'Parcela para villa Playa San Juan',
-            chip: 'Parcela para villa',
-            title: 'Parcela — Playa San Juan (1.260 m²)',
-            meta: 'Playa San Juan · villa',
-            desc: 'Parcela para la construcción de una villa privada en una ubicación prestigiosa junto al mar.'
-          },
-          ru: {
-            alt: 'Участок под виллу Playa San Juan',
-            chip: 'Участок под виллу',
-            title: 'Участок — Playa San Juan (1260 м²)',
-            meta: 'Playa San Juan · вилла',
-            desc: 'Участок под строительство частной виллы в престижной локации у моря.'
-          }
-        }
-      },
-      {
-        slug: 'finestrat-plot-1600m-750k',
-        href: '/pl/plots/shablon/?slug=finestrat-plot-1600m-750k',
-        image: '/pl/plots/finestrat-benidorm-plot-1600m-750k/1.jpg',
-        alt: 'Działka 1600 m² Finestrat',
-        chip: 'Działka budowlana',
-        title: 'Działka — Finestrat (1600 m²)',
-        meta: 'Finestrat',
-        price: '€ 750 000',
-        price_value: 750000,
-        desc: 'Działka pod budowę domu lub projektu inwestycyjnego.',
-        translations: {
-          en: {
-            alt: '1,600 m² plot Finestrat',
-            chip: 'Building plot',
-            title: 'Plot — Finestrat (1,600 m²)',
-            meta: 'Finestrat',
-            desc: 'Plot for building a house or an investment project.'
-          },
-          es: {
-            alt: 'Parcela de 1.600 m² Finestrat',
-            chip: 'Parcela urbanizable',
-            title: 'Parcela — Finestrat (1.600 m²)',
-            meta: 'Finestrat',
-            desc: 'Parcela para construir una casa o un proyecto de inversión.'
-          },
-          ru: {
-            alt: 'Участок 1600 м² Finestrat',
-            chip: 'Строительный участок',
-            title: 'Участок — Finestrat (1600 м²)',
-            meta: 'Finestrat',
-            desc: 'Участок под строительство дома или инвестиционного проекта.'
-          }
-        }
-      },
-      {
-        slug: 'alicante-city-plot-700k',
-        href: '/pl/plots/shablon/?slug=alicante-city-plot-700k',
-        image: '/pl/plots/AlicanteCityPlot/1.png',
-        alt: 'Działka Alicante City',
-        chip: 'Działka miejska',
-        title: 'Działka — Alicante City',
-        meta: 'centrum',
-        price: '€ 700 000',
-        price_value: 700000,
-        desc: 'Grunt inwestycyjny w miejskiej lokalizacji.',
-        translations: {
-          en: {
-            alt: 'Alicante City plot',
-            chip: 'Urban plot',
-            title: 'Plot — Alicante City',
-            meta: 'city centre',
-            desc: 'Investment land in an urban location.'
-          },
-          es: {
-            alt: 'Parcela Alicante City',
-            chip: 'Parcela urbana',
-            title: 'Parcela — Alicante City',
-            meta: 'centro',
-            desc: 'Suelo de inversión en ubicación urbana.'
-          },
-          ru: {
-            alt: 'Участок Alicante City',
-            chip: 'Городской участок',
-            title: 'Участок — Alicante City',
-            meta: 'центр',
-            desc: 'Инвестиционная земля в городской локации.'
-          }
-        }
-      },
-      {
         slug: 'alicante-plot-630k',
         href: '/pl/plots/shablon/?slug=alicante-plot-630k',
         image: '/pl/plots/alicante-plot-630k/1.jpg',
         alt: 'Działka 465 m² Alicante',
         chip: 'Działka miejska',
-        title: 'Działka 465 m² w Alicante',
+        title: 'Działka w Alicante',
         meta: 'Alicante',
+        area: '465 m²',
         price: '€ 630 000',
         price_value: 630000,
-        desc: 'Działka gotowa pod budowę domu.',
+        desc: 'Atrakcyjna działka budowlana w Alicante na Costa Blanca z potencjałem inwestycyjnym i doskonałą lokalizacją pod projekt mieszkaniowy lub willowy.',
+        seoDescription: 'Działka inwestycyjna w Alicante oferuje doskonałe położenie, potencjał wzrostu wartości oraz możliwość realizacji prywatnej lub deweloperskiej inwestycji na Costa Blanca.',
+        seoDescription2: 'Nieruchomość gruntowa idealna dla inwestora poszukującego bezpiecznego aktywa w Hiszpanii — prestiżowa lokalizacja, rozwijająca się okolica i wysoki potencjał przyszłej rentowności.',
+        minimal_layout: false,
         translations: {
           en: {
             alt: '465 m² plot Alicante',
             chip: 'Urban plot',
-            title: '465 m² plot in Alicante',
+            title: 'Plot in Alicante',
             meta: 'Alicante',
-            desc: 'Plot ready for house construction.'
+            area: '465 m²',
+            desc: ''
           },
           es: {
             alt: 'Parcela de 465 m² Alicante',
             chip: 'Parcela urbana',
-            title: 'Parcela de 465 m² en Alicante',
+            title: 'Parcela en Alicante',
             meta: 'Alicante',
-            desc: 'Parcela lista para construir una casa.'
+            area: '465 m²',
+            desc: ''
           },
           ru: {
             alt: 'Участок 465 м² Alicante',
             chip: 'Городской участок',
-            title: 'Участок 465 м² в Alicante',
+            title: 'Участок в Alicante',
             meta: 'Alicante',
-            desc: 'Участок, готовый под строительство дома.'
-          }
-        }
-      },
-      {
-        slug: 'san-juan-plot-600k',
-        href: '/pl/plots/shablon/?slug=san-juan-plot-600k',
-        image: '/pl/plots/san-juan-plot-600k/1.jpg',
-        alt: 'Działka San Juan',
-        chip: 'Działka inwestycyjna',
-        title: 'Działka — San Juan',
-        meta: 'San Juan',
-        price: '€ 600 000',
-        price_value: 600000,
-        desc: 'Działka pod budowę domu lub inwestycję.',
-        translations: {
-          en: {
-            alt: 'San Juan plot',
-            chip: 'Investment plot',
-            title: 'Plot — San Juan',
-            meta: 'San Juan',
-            desc: 'Plot for building a house or for investment.'
-          },
-          es: {
-            alt: 'Parcela San Juan',
-            chip: 'Parcela de inversión',
-            title: 'Parcela — San Juan',
-            meta: 'San Juan',
-            desc: 'Parcela para construir una casa o para inversión.'
-          },
-          ru: {
-            alt: 'Участок San Juan',
-            chip: 'Инвестиционный участок',
-            title: 'Участок — San Juan',
-            meta: 'San Juan',
-            desc: 'Участок под строительство дома или инвестицию.'
-          }
-        }
-      },
-      {
-        slug: 'finestrat-plot-3-villas',
-        href: '/pl/plots/shablon/?slug=finestrat-plot-3-villas',
-        image: '/pl/plots/finestrat-plot-3-villas-sea-mountain-view/1.jpg',
-        alt: 'Działka Finestrat widok morze',
-        chip: 'Działka z widokiem',
-        title: 'Działka — Finestrat (3 wille)',
-        meta: 'Finestrat',
-        price: '€ 500 000',
-        price_value: 500000,
-        desc: 'Działka pod 3 wille z widokiem na morze i góry.',
-        translations: {
-          en: {
-            alt: 'Finestrat plot with sea view',
-            chip: 'View plot',
-            title: 'Plot — Finestrat (3 villas)',
-            meta: 'Finestrat',
-            desc: 'Plot for 3 villas with sea and mountain views.'
-          },
-          es: {
-            alt: 'Parcela Finestrat con vistas al mar',
-            chip: 'Parcela con vistas',
-            title: 'Parcela — Finestrat (3 villas)',
-            meta: 'Finestrat',
-            desc: 'Parcela para 3 villas con vistas al mar y a la montaña.'
-          },
-          ru: {
-            alt: 'Участок Finestrat с видом на море',
-            chip: 'Участок с видом',
-            title: 'Участок — Finestrat (3 виллы)',
-            meta: 'Finestrat',
-            desc: 'Участок под 3 виллы с видом на море и горы.'
-          }
-        }
-      },
-      {
-        slug: 'alicante-building-plot-470k',
-        href: '/pl/plots/shablon/?slug=alicante-building-plot-470k',
-        image: '/pl/plots/alicante-residential-building-plot-470k/1.jpg',
-        alt: 'Działka pod budynek Alicante',
-        chip: 'Działka deweloperska',
-        title: 'Działka — Alicante (8 mieszkań)',
-        meta: 'Alicante',
-        price: '€ 470 000',
-        price_value: 470000,
-        desc: 'Działka pod budowę budynku mieszkalnego.',
-        translations: {
-          en: {
-            alt: 'Plot for residential building Alicante',
-            chip: 'Development plot',
-            title: 'Plot — Alicante (8 units)',
-            meta: 'Alicante',
-            desc: 'Plot for the construction of a residential building.'
-          },
-          es: {
-            alt: 'Parcela para edificio residencial Alicante',
-            chip: 'Parcela promotora',
-            title: 'Parcela — Alicante (8 viviendas)',
-            meta: 'Alicante',
-            desc: 'Parcela para la construcción de un edificio residencial.'
-          },
-          ru: {
-            alt: 'Участок под жилой дом Alicante',
-            chip: 'Девелоперский участок',
-            title: 'Участок — Alicante (8 квартир)',
-            meta: 'Alicante',
-            desc: 'Участок под строительство жилого здания.'
-          }
-        }
-      },
-      {
-        slug: 'benidorm-villa-plot-420k',
-        href: '/pl/plots/shablon/?slug=benidorm-villa-plot-420k',
-        image: '/pl/plots/BenidormPlanet/1.png',
-        alt: 'Działka pod willę Benidorm',
-        chip: 'Działka pod willę',
-        title: 'Działka — Benidorm',
-        meta: 'Benidorm',
-        price: '€ 420 000',
-        price_value: 420000,
-        desc: 'Działka miejska pod budowę willi.',
-        translations: {
-          en: {
-            alt: 'Villa plot Benidorm',
-            chip: 'Villa plot',
-            title: 'Plot — Benidorm',
-            meta: 'Benidorm',
-            desc: 'Urban plot for villa construction.'
-          },
-          es: {
-            alt: 'Parcela para villa Benidorm',
-            chip: 'Parcela para villa',
-            title: 'Parcela — Benidorm',
-            meta: 'Benidorm',
-            desc: 'Parcela urbana para construir una villa.'
-          },
-          ru: {
-            alt: 'Участок под виллу Benidorm',
-            chip: 'Участок под виллу',
-            title: 'Участок — Benidorm',
-            meta: 'Benidorm',
-            desc: 'Городской участок под строительство виллы.'
-          }
-        }
-      },
-      {
-        slug: 'coveta-fuma-plot',
-        href: '/pl/plots/shablon/?slug=coveta-fuma-plot',
-        image: '/pl/plots/plots-hero.png',
-        alt: 'Działka Coveta Fuma',
-        chip: 'Widok na morze',
-        title: 'Działka — Coveta Fuma',
-        meta: 'Costa Blanca',
-        price: '€ 394 000',
-        price_value: 394000,
-        desc: 'Działka nad morzem.',
-        translations: {
-          en: {
-            alt: 'Coveta Fuma plot',
-            chip: 'Sea view',
-            title: 'Plot — Coveta Fuma',
-            meta: 'Costa Blanca',
-            desc: 'Plot by the sea.'
-          },
-          es: {
-            alt: 'Parcela Coveta Fuma',
-            chip: 'Vistas al mar',
-            title: 'Parcela — Coveta Fuma',
-            meta: 'Costa Blanca',
-            desc: 'Parcela junto al mar.'
-          },
-          ru: {
-            alt: 'Участок Coveta Fuma',
-            chip: 'Вид на море',
-            title: 'Участок — Coveta Fuma',
-            meta: 'Costa Blanca',
-            desc: 'Участок у моря.'
-          }
-        }
-      },
-      {
-        slug: 'alicante-plot-512m',
-        href: '/pl/plots/shablon/?slug=alicante-plot-512m',
-        image: '/pl/plots/Alicante/1.jpg',
-        alt: 'Działka 512 m² Alicante',
-        chip: 'Działka budowlana',
-        title: 'Działka 512 m² w Alicante',
-        meta: 'Alicante',
-        price: '€ 350 000',
-        price_value: 350000,
-        desc: 'Działka pod zabudowę jednorodzinną.',
-        translations: {
-          en: {
-            alt: '512 m² plot Alicante',
-            chip: 'Building plot',
-            title: '512 m² plot in Alicante',
-            meta: 'Alicante',
-            desc: 'Plot for single-family housing.'
-          },
-          es: {
-            alt: 'Parcela de 512 m² Alicante',
-            chip: 'Parcela urbanizable',
-            title: 'Parcela de 512 m² en Alicante',
-            meta: 'Alicante',
-            desc: 'Parcela para vivienda unifamiliar.'
-          },
-          ru: {
-            alt: 'Участок 512 м² Alicante',
-            chip: 'Строительный участок',
-            title: 'Участок 512 м² в Alicante',
-            meta: 'Alicante',
-            desc: 'Участок под индивидуальную застройку.'
-          }
-        }
-      },
-      {
-        slug: 'santabarbara-plot',
-        href: '/pl/plots/shablon/?slug=santabarbara-plot',
-        image: '/pl/plots/santabarbara/1.jpg',
-        alt: 'Działka Santa Barbara',
-        chip: 'Premium działka',
-        title: 'Działka — Santa Bárbara',
-        meta: 'Alicante',
-        price: '€ 345 000',
-        price_value: 345000,
-        desc: 'Działka z projektem i licencją.',
-        translations: {
-          en: {
-            alt: 'Santa Barbara plot',
-            chip: 'Premium plot',
-            title: 'Plot — Santa Bárbara',
-            meta: 'Alicante',
-            desc: 'Plot with project and licence.'
-          },
-          es: {
-            alt: 'Parcela Santa Barbara',
-            chip: 'Parcela premium',
-            title: 'Parcela — Santa Bárbara',
-            meta: 'Alicante',
-            desc: 'Parcela con proyecto y licencia.'
-          },
-          ru: {
-            alt: 'Участок Santa Barbara',
-            chip: 'Премиальный участок',
-            title: 'Участок — Santa Bárbara',
-            meta: 'Alicante',
-            desc: 'Участок с проектом и лицензией.'
-          }
-        }
-      },
-      {
-        slug: 'polop-plot',
-        href: '/pl/plots/shablon/?slug=polop-plot',
-        image: '/pl/plots/Polop/1.jpg',
-        alt: 'Działka Polop',
-        chip: 'Gotowy projekt',
-        title: 'Działka — Polop',
-        meta: 'Polop',
-        price: '€ 250 000',
-        price_value: 250000,
-        desc: 'Gotowy projekt inwestycyjny.',
-        translations: {
-          en: {
-            alt: 'Polop plot',
-            chip: 'Ready project',
-            title: 'Plot — Polop',
-            meta: 'Polop',
-            desc: 'Ready investment project.'
-          },
-          es: {
-            alt: 'Parcela Polop',
-            chip: 'Proyecto listo',
-            title: 'Parcela — Polop',
-            meta: 'Polop',
-            desc: 'Proyecto de inversión listo.'
-          },
-          ru: {
-            alt: 'Участок Polop',
-            chip: 'Готовый проект',
-            title: 'Участок — Polop',
-            meta: 'Polop',
-            desc: 'Готовый инвестиционный проект.'
-          }
-        }
-      },
-      {
-        slug: 'el-campello-plot-115k',
-        href: '/pl/plots/shablon/?slug=el-campello-plot-115k',
-        image: '/pl/plots/Campella/1.jpg',
-        alt: 'Działka El Campello',
-        chip: 'Działka budowlana',
-        title: 'Działka — El Campello',
-        meta: '950 m²',
-        price: '€ 115 000',
-        price_value: 115000,
-        desc: 'Działka pod budowę.',
-        translations: {
-          en: {
-            alt: 'El Campello plot',
-            chip: 'Building plot',
-            title: 'Plot — El Campello',
-            meta: '950 m²',
-            desc: 'Plot for construction.'
-          },
-          es: {
-            alt: 'Parcela El Campello',
-            chip: 'Parcela urbanizable',
-            title: 'Parcela — El Campello',
-            meta: '950 m²',
-            desc: 'Parcela para construir.'
-          },
-          ru: {
-            alt: 'Участок El Campello',
-            chip: 'Строительный участок',
-            title: 'Участок — El Campello',
-            meta: '950 м²',
-            desc: 'Участок под строительство.'
+            area: '465 м²',
+            desc: ''
           }
         }
       }
@@ -1137,29 +474,12 @@
         heroPriceSep:'→',
         heroPriceNote:'Szczegóły oferty',
         paramsTitle:'Parametry działki',
-        paramsSlug:'Slug',
         paramsMeta:'Lokalizacja',
         paramsPrice:'Cena',
-        paramsContact:'Kontakt',
         whySectionTitle:'Dlaczego ta działka jest atrakcyjna?',
-        whyDynamicTitle:'Atuty oferty',
-        whyDynamicText:'Zdjęcia i treści są pobierane dynamicznie z JSON oraz z folderu konkretnej działki.',
-        whyShareTitle:'Udostępnianie',
-        whyShareText:'Link do oferty udostępnia zdjęcie 1, cenę i tytuł danej działki.',
         specTitle:'Co obejmuje oferta?',
-        specItem1:'1 główne zdjęcie z JSON',
-        specItem2:'Do 8 zdjęć z pola images lub z folderu obiektu',
-        specItem3:'Brak pustych kafelków, jeśli zdjęć jest mniej',
-        specItem4:'Obsługa różnych formatów plików',
         roiTitle:'Opis inwestycyjny',
-        roiParagraph2Fallback:'Skontaktuj się, aby otrzymać pełne materiały inwestycyjne, warunki zakupu i dodatkowe zdjęcia.',
         audienceTitle:'Dla kogo jest ta działka?',
-        audience1Title:'Dla inwestora',
-        audience1Text:'Dla klienta analizującego lokalizację, cenę i format działki.',
-        audience2Title:'Dla dewelopera',
-        audience2Text:'Dla podmiotu szukającego gruntu pod projekt mieszkaniowy lub willowy.',
-        audience3Title:'Dla klienta prywatnego',
-        audience3Text:'Dla osoby zainteresowanej działką pod własną inwestycję.',
         contactTitle:'Otrzymaj szczegóły działki',
         contactIntro:'Skontaktuj się ze mną, aby otrzymać szczegóły oferty, dodatkowe zdjęcia oraz pełną prezentację inwestycyjną.',
         agentRole:'Ekspert ds. nieruchomości na Costa Blanca',
@@ -1173,168 +493,21 @@
         formSubmit:'Wyślij przez WhatsApp',
         copyLink:'Kopiuj link',
         shareCopied:'Skopiowano',
-        shareNoteText:'Udostępnianie pokazuje zdjęcie główne, tytuł i cenę oferty.',
+        shareNoteText:'Udostępnianie pokazuje główne zdjęcie, tytuł i cenę oferty.',
         urgencyNote:'Dostępność i szczegóły warto potwierdzić bezpośrednio',
-        kpiFallback4:'Sprawdzona oferta',
+        kpiFallback4:'Zweryfik.',
         copyPrompt:'Kopiuj',
         newInquiry:'Nowe zapytanie ze strony',
         lightboxClose:'Zamknij'
       },
       en: {
-        locale:'en_US',
-        backLink:'View other plots',
-        badgeText:'PLOT',
-        heroKicker:'COSTA BLANCA · PLOT',
-        heroPriceBoxTitle:'PRICE',
-        heroPriceSep:'→',
-        heroPriceNote:'Offer details',
-        paramsTitle:'Plot parameters',
-        paramsSlug:'Slug',
-        paramsMeta:'Location',
-        paramsPrice:'Price',
-        paramsContact:'Contact',
-        whySectionTitle:'Why is this plot attractive?',
-        whyDynamicTitle:'Key benefits',
-        whyDynamicText:'Images and content are loaded dynamically from JSON and from the specific plot folder.',
-        whyShareTitle:'Sharing',
-        whyShareText:'The property link shares photo 1, the price and the title of the selected plot.',
-        specTitle:'What does the offer include?',
-        specItem1:'1 main image from JSON',
-        specItem2:'Up to 8 images from the images field or the property folder',
-        specItem3:'No empty tiles when fewer photos are available',
-        specItem4:'Support for multiple file formats',
-        roiTitle:'Investment description',
-        roiParagraph2Fallback:'Contact me to receive full investment materials, purchase terms and additional photos.',
-        audienceTitle:'Who is this plot for?',
-        audience1Title:'For investors',
-        audience1Text:'For clients analyzing the location, price and plot format.',
-        audience2Title:'For developers',
-        audience2Text:'For buyers looking for land for a residential project or villa development.',
-        audience3Title:'For private buyers',
-        audience3Text:'For clients interested in a plot for their own investment.',
-        contactTitle:'Receive plot details',
-        contactIntro:'Contact me to receive property details, extra photos and the full investment presentation.',
-        agentRole:'Costa Blanca property expert',
-        agentMeta:'Property selection, purchase guidance and support at every stage in Spain.',
-        callBtn:'Call',
-        waBtn:'WhatsApp',
-        formName:'Name',
-        formPhone:'Phone',
-        formEmail:'Email',
-        formMessage:'Write a message',
-        formSubmit:'Send via WhatsApp',
-        copyLink:'Copy link',
-        shareCopied:'Copied',
-        shareNoteText:'Sharing shows the main image, title and price of the property.',
-        urgencyNote:'Availability and details should be confirmed directly',
-        kpiFallback4:'Verified offer',
-        copyPrompt:'Copy',
-        newInquiry:'New inquiry from the website',
-        lightboxClose:'Close'
+        locale:'en_US', backLink:'View other plots', badgeText:'PLOT', heroKicker:'COSTA BLANCA · PLOT', heroPriceBoxTitle:'PRICE', heroPriceSep:'→', paramsTitle:'Plot parameters', paramsMeta:'Location', paramsPrice:'Price', whySectionTitle:'Why is this plot attractive?', specTitle:'What does the offer include?', roiTitle:'Investment description', audienceTitle:'Who is this plot for?', contactTitle:'Receive plot details', contactIntro:'Contact me to receive property details, extra photos and the full investment presentation.', agentRole:'Costa Blanca property expert', agentMeta:'Property selection, purchase guidance and support at every stage in Spain.', callBtn:'Call', waBtn:'WhatsApp', formName:'Name', formPhone:'Phone', formEmail:'Email', formMessage:'Write a message', formSubmit:'Send via WhatsApp', copyLink:'Copy link', shareCopied:'Copied', shareNoteText:'Sharing shows the main image, title and price of the property.', urgencyNote:'Availability and details should be confirmed directly', kpiFallback4:'Verified', copyPrompt:'Copy', newInquiry:'New inquiry from the website', lightboxClose:'Close'
       },
       es: {
-        locale:'es_ES',
-        backLink:'Ver otras parcelas',
-        badgeText:'PARCELA',
-        heroKicker:'COSTA BLANCA · PARCELA',
-        heroPriceBoxTitle:'PRECIO',
-        heroPriceSep:'→',
-        heroPriceNote:'Detalles de la oferta',
-        paramsTitle:'Parámetros de la parcela',
-        paramsSlug:'Slug',
-        paramsMeta:'Ubicación',
-        paramsPrice:'Precio',
-        paramsContact:'Contacto',
-        whySectionTitle:'¿Por qué es atractiva esta parcela?',
-        whyDynamicTitle:'Ventajas clave',
-        whyDynamicText:'Las imágenes y el contenido se cargan dinámicamente desde JSON y desde la carpeta específica de la parcela.',
-        whyShareTitle:'Compartir',
-        whyShareText:'El enlace de la propiedad comparte la foto 1, el precio y el título de la parcela seleccionada.',
-        specTitle:'¿Qué incluye la oferta?',
-        specItem1:'1 imagen principal desde JSON',
-        specItem2:'Hasta 8 imágenes desde el campo images o la carpeta del inmueble',
-        specItem3:'Sin bloques vacíos si hay menos fotos',
-        specItem4:'Compatibilidad con varios formatos de archivo',
-        roiTitle:'Descripción de inversión',
-        roiParagraph2Fallback:'Contáctame para recibir el material completo de inversión, condiciones de compra y fotos adicionales.',
-        audienceTitle:'¿Para quién es esta parcela?',
-        audience1Title:'Para inversores',
-        audience1Text:'Para clientes que analizan la ubicación, el precio y el formato de la parcela.',
-        audience2Title:'Para promotores',
-        audience2Text:'Para compradores que buscan suelo para un proyecto residencial o un conjunto de villas.',
-        audience3Title:'Para clientes privados',
-        audience3Text:'Para personas interesadas en una parcela para su propia inversión.',
-        contactTitle:'Recibir detalles de la parcela',
-        contactIntro:'Contáctame para recibir detalles de la propiedad, fotos adicionales y la presentación completa de inversión.',
-        agentRole:'Experta inmobiliaria en Costa Blanca',
-        agentMeta:'Selección de propiedades, apoyo en la compra y acompañamiento en cada etapa en España.',
-        callBtn:'Llamar',
-        waBtn:'WhatsApp',
-        formName:'Nombre',
-        formPhone:'Teléfono',
-        formEmail:'Email',
-        formMessage:'Escribe un mensaje',
-        formSubmit:'Enviar por WhatsApp',
-        copyLink:'Copiar enlace',
-        shareCopied:'Copiado',
-        shareNoteText:'El contenido compartido muestra la imagen principal, el título y el precio de la propiedad.',
-        urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente',
-        kpiFallback4:'Oferta verificada',
-        copyPrompt:'Copiar',
-        newInquiry:'Nueva consulta desde la web',
-        lightboxClose:'Cerrar'
+        locale:'es_ES', backLink:'Ver otras parcelas', badgeText:'PARCELA', heroKicker:'COSTA BLANCA · PARCELA', heroPriceBoxTitle:'PRECIO', heroPriceSep:'→', paramsTitle:'Parámetros de la parcela', paramsMeta:'Ubicación', paramsPrice:'Precio', whySectionTitle:'¿Por qué es atractiva esta parcela?', specTitle:'¿Qué incluye la oferta?', roiTitle:'Descripción de inversión', audienceTitle:'¿Para quién es esta parcela?', contactTitle:'Recibir detalles de la parcela', contactIntro:'Contáctame para recibir detalles de la propiedad, fotos adicionales y la presentación completa de inversión.', agentRole:'Experta inmobiliaria en Costa Blanca', agentMeta:'Selección de propiedades, apoyo en la compra y acompañamiento en cada etapa en España.', callBtn:'Llamar', waBtn:'WhatsApp', formName:'Nombre', formPhone:'Teléfono', formEmail:'Email', formMessage:'Escribe un mensaje', formSubmit:'Enviar por WhatsApp', copyLink:'Copiar enlace', shareCopied:'Copiado', shareNoteText:'El contenido compartido muestra la imagen principal, el título y el precio de la propiedad.', urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente', kpiFallback4:'Verificada', copyPrompt:'Copiar', newInquiry:'Nueva consulta desde la web', lightboxClose:'Cerrar'
       },
       ru: {
-        locale:'ru_RU',
-        backLink:'Смотреть другие участки',
-        badgeText:'УЧАСТОК',
-        heroKicker:'COSTA BLANCA · УЧАСТОК',
-        heroPriceBoxTitle:'ЦЕНА',
-        heroPriceSep:'→',
-        heroPriceNote:'Детали предложения',
-        paramsTitle:'Параметры участка',
-        paramsSlug:'Slug',
-        paramsMeta:'Локация',
-        paramsPrice:'Цена',
-        paramsContact:'Контакт',
-        whySectionTitle:'Почему этот участок интересен?',
-        whyDynamicTitle:'Ключевые преимущества',
-        whyDynamicText:'Фото и контент подгружаются динамически из JSON и из папки конкретного участка.',
-        whyShareTitle:'Поделиться',
-        whyShareText:'Ссылка на объект передает фото 1, цену и заголовок выбранного участка.',
-        specTitle:'Что включает предложение?',
-        specItem1:'1 главное фото из JSON',
-        specItem2:'До 8 фото из поля images или из папки объекта',
-        specItem3:'Без пустых блоков, если фото меньше',
-        specItem4:'Поддержка разных форматов файлов',
-        roiTitle:'Инвестиционное описание',
-        roiParagraph2Fallback:'Свяжитесь со мной, чтобы получить полные инвестиционные материалы, условия покупки и дополнительные фото.',
-        audienceTitle:'Для кого этот участок?',
-        audience1Title:'Для инвестора',
-        audience1Text:'Для клиента, который анализирует локацию, цену и формат участка.',
-        audience2Title:'Для девелопера',
-        audience2Text:'Для покупателя, который ищет землю под жилой проект или комплекс вилл.',
-        audience3Title:'Для частного клиента',
-        audience3Text:'Для клиента, которому нужен участок под собственную инвестицию.',
-        contactTitle:'Получить детали участка',
-        contactIntro:'Свяжитесь со мной, чтобы получить детали объекта, дополнительные фото и полную инвестиционную презентацию.',
-        agentRole:'Эксперт по недвижимости на Costa Blanca',
-        agentMeta:'Подбор объектов, сопровождение покупки и помощь на каждом этапе сделки в Испании.',
-        callBtn:'Позвонить',
-        waBtn:'WhatsApp',
-        formName:'Имя',
-        formPhone:'Телефон',
-        formEmail:'Email',
-        formMessage:'Напишите сообщение',
-        formSubmit:'Отправить в WhatsApp',
-        copyLink:'Копировать ссылку',
-        shareCopied:'Скопировано',
-        shareNoteText:'В шаринге показываются главное фото, заголовок и цена объекта.',
-        urgencyNote:'Наличие и детали лучше подтвердить напрямую',
-        kpiFallback4:'Проверенное предложение',
-        copyPrompt:'Копировать',
-        newInquiry:'Новая заявка с сайта',
-        lightboxClose:'Закрыть'
+        locale:'ru_RU', backLink:'Смотреть другие участки', badgeText:'УЧАСТОК', heroKicker:'COSTA BLANCA · УЧАСТОК', heroPriceBoxTitle:'ЦЕНА', heroPriceSep:'→', paramsTitle:'Параметры участка', paramsMeta:'Локация', paramsPrice:'Цена', whySectionTitle:'Почему этот участок интересен?', specTitle:'Что включает предложение?', roiTitle:'Инвестиционное описание', audienceTitle:'Для кого этот участок?', contactTitle:'Получить детали участка', contactIntro:'Свяжитесь со мной, чтобы получить детали объекта, дополнительные фото и полную инвестиционную презентацию.', agentRole:'Эксперт по недвижимости на Costa Blanca', agentMeta:'Подбор объектов, сопровождение покупки и помощь на каждом этапе сделки в Испании.', callBtn:'Позвонить', waBtn:'WhatsApp', formName:'Имя', formPhone:'Телефон', formEmail:'Email', formMessage:'Напишите сообщение', formSubmit:'Отправить в WhatsApp', copyLink:'Копировать ссылку', shareCopied:'Скопировано', shareNoteText:'В шаринге показываются главное фото, заголовок и цена объекта.', urgencyNote:'Наличие и детали лучше подтвердить напрямую', kpiFallback4:'Проверено', copyPrompt:'Копировать', newInquiry:'Новая заявка с сайта', lightboxClose:'Закрыть'
       }
     };
 
@@ -1342,7 +515,6 @@
     let currentLang = 'pl';
     let currentPlot = null;
     let currentGallery = [];
-    let usingFallbackData = false;
 
     const byId = (id) => document.getElementById(id);
     const slugify = (value) => String(value || '').trim().toLowerCase().replace(/\s+/g, '-').replace(/_/g, '-').replace(/[^a-z0-9\-\/]/g, '-').replace(/-+/g, '-').replace(/\/+/g, '/').replace(/^-|-$/g, '');
@@ -1371,10 +543,6 @@
       return '';
     }
 
-    function getPathSegments() {
-      return window.location.pathname.split('/').filter(Boolean);
-    }
-
     function resolveJsonUrls() {
       return [new URL('/pl/plots/plots-index.json', window.location.origin).toString()];
     }
@@ -1399,11 +567,9 @@
       if (cachedPlots) return cachedPlots;
       try {
         cachedPlots = await fetchJsonFromCandidates(resolveJsonUrls());
-        usingFallbackData = false;
       } catch (error) {
         console.warn('plots-index fallback mode:', error);
         cachedPlots = FALLBACK_PLOTS;
-        usingFallbackData = true;
       }
       return cachedPlots;
     }
@@ -1417,8 +583,9 @@
         chip: t.chip || plot?.chip || UI[lang].badgeText,
         title: t.title || plot?.title || 'Plot',
         meta: t.meta || plot?.meta || 'Costa Blanca',
-        desc: t.desc || plot?.desc || 'Plot on Costa Blanca.',
-        seoDescription: t.seoDescription || plot?.seoDescription || t.desc || plot?.desc || '',
+        area: t.area || plot?.area || '',
+        desc: t.desc || plot?.desc || '',
+        seoDescription: t.seoDescription || plot?.seoDescription || '',
         seoDescription2: t.seoDescription2 || plot?.seoDescription2 || ''
       };
     }
@@ -1511,8 +678,8 @@
       return new Intl.NumberFormat(locale, { style:'currency', currency:'EUR', maximumFractionDigits:0 }).format(numeric);
     }
 
-    function extractArea(meta = '') {
-      const match = String(meta).match(/(\d[\d\s.,]*\s?(?:m²|м²))/i);
+    function extractArea(source = '') {
+      const match = String(source).match(/(\d[\d\s.,]*\s?(?:m²|м²))/i);
       return match ? match[1] : '';
     }
 
@@ -1536,7 +703,8 @@
       const p = localizePlot(plot, currentLang);
       const share = buildShareData(plot);
       const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
-      const description = p.seoDescription || p.desc || `${p.title}. ${price}. ${p.meta || 'Costa Blanca'}. Costa Blanca Invest.`;
+      const areaText = p.area || extractArea(p.meta) || extractArea(p.title) || '';
+      const description = p.seoDescription || p.desc || `${p.title}. ${price}.${areaText ? ` ${areaText}.` : ''} ${p.meta || 'Costa Blanca'}. Costa Blanca Invest.`;
       const socialDescription = price;
       const pageTitle = `${p.title} | ${formatPrice(plot.price || plot.price_value || 0, currentLang)} | Costa Blanca Invest`;
 
@@ -1602,59 +770,55 @@
       const ui = UI[currentLang];
       const p = localizePlot(plot, currentLang);
       const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
-      const area = extractArea(p.meta);
+      const area = p.area || extractArea(p.meta) || extractArea(p.title) || extractArea(p.alt);
       const share = buildShareData(plot);
+      const isMinimalLayout = Boolean(plot.minimal_layout);
 
       byId('backLink').href = buildCategoryUrl(currentLang);
       byId('backLinkLabel').textContent = ui.backLink;
       byId('badgeText').textContent = p.chip || ui.badgeText;
       byId('heroKicker').textContent = `${ui.heroKicker}${p.meta ? ' · ' + p.meta : ''}`;
       byId('heroDisplay').textContent = p.title;
-      byId('heroSub').textContent = p.desc;
+      byId('heroSub').textContent = isMinimalLayout ? '' : (p.desc || '');
+      byId('heroSub').style.display = isMinimalLayout || !p.desc ? 'none' : 'block';
       byId('heroPriceBoxTitle').textContent = ui.heroPriceBoxTitle;
       byId('heroPriceFrom').textContent = price;
       byId('heroPriceSep').textContent = ui.heroPriceSep;
       byId('heroPriceTo').textContent = area || p.meta || 'Costa Blanca';
-      byId('heroPriceNote').textContent = p.meta || ui.heroPriceNote;
+      byId('heroPriceNote').textContent = area ? 'M²' : (p.meta || '');
       byId('heroPriceMeta').textContent = 'Costa Blanca Invest';
 
       byId('pageH1').textContent = p.title;
       byId('subtitle').textContent = p.meta || 'Costa Blanca';
       byId('priceRange').textContent = price;
-      byId('priceSoft').textContent = p.seoDescription || p.desc;
+      byId('priceSoft').textContent = area || '';
+      byId('priceSoft').style.display = area ? 'block' : 'none';
       byId('kpi1').textContent = price.replace('€', '').trim();
       byId('kpi2').textContent = area || '—';
       byId('kpi3').textContent = p.meta || 'Costa Blanca';
       byId('kpi4').textContent = ui.kpiFallback4;
 
       const leadEls = [byId('lead1'), byId('lead2'), byId('lead3')];
-      const leadTexts = [p.desc, p.seoDescription, p.seoDescription2].filter(Boolean);
+      const leadTexts = isMinimalLayout ? [] : [p.desc, p.seoDescription, p.seoDescription2].filter(Boolean);
       leadEls.forEach((el, index) => {
         if (!el) return;
         const value = leadTexts[index] || '';
-        if (value) {
-          el.textContent = value;
-          el.style.display = 'block';
-        } else {
-          el.textContent = '';
-          el.style.display = 'none';
-        }
+        el.textContent = value;
+        el.style.display = value ? 'block' : 'none';
       });
 
       byId('paramsTitle').textContent = ui.paramsTitle;
       byId('paramsBlock').innerHTML = `
-        <span class="label">${ui.paramsSlug}:</span><span class="value">${plot.slug || '—'}</span>
+        ${area ? `<span class="label">M²:</span><span class="value">${area}</span>` : ''}
         <span class="label">${ui.paramsMeta}:</span><span class="value">${p.meta || '—'}</span>
         <span class="label">${ui.paramsPrice}:</span><span class="value">${price}</span>
-        `;
+      `;
+      byId('paramsTitle').style.display = isMinimalLayout ? 'none' : '';
+      byId('paramsAccent').style.display = isMinimalLayout ? 'none' : '';
+      byId('paramsBlock').style.display = isMinimalLayout ? 'none' : '';
 
       const whySection = byId('investmentBenefits');
-      byId('whySectionTitle').textContent = ui.whySectionTitle;
-      const why = Array.isArray(plot.features) && plot.features.length ? plot.features.slice(0, 3) : [
-        { title: p.chip || ui.badgeText, text: p.desc },
-        { title: p.meta || ui.whyDynamicTitle, text: ui.whyDynamicText },
-        { title: ui.whyShareTitle, text: ui.whyShareText }
-      ];
+      const why = Array.isArray(plot.features) && plot.features.length ? plot.features.slice(0, 3) : [];
       let visibleWhy = 0;
       [1,2,3].forEach((n) => {
         const card = byId(`whyTitle${n}`)?.closest('.why-item');
@@ -1667,34 +831,18 @@
           byId(`whyText${n}`).textContent = item.text || '';
         }
       });
-      if (whySection) whySection.style.display = visibleWhy ? '' : 'none';
+      if (whySection) whySection.style.display = (!isMinimalLayout && visibleWhy) ? '' : 'none';
 
       const specSection = byId('specSection');
-      const specItems = Array.isArray(plot.offerIncludes) && plot.offerIncludes.length ? plot.offerIncludes : [ui.specItem1, ui.specItem2, ui.specItem3, ui.specItem4].filter(Boolean);
-      const specParagraph = p.seoDescription || p.desc || '';
+      const specItems = Array.isArray(plot.offerIncludes) && plot.offerIncludes.length ? plot.offerIncludes : [];
+      const specParagraph = (!isMinimalLayout && (p.seoDescription || p.desc)) || '';
       byId('specTitle').textContent = ui.specTitle;
       byId('specList').innerHTML = specItems.map(item => `<li>${item}</li>`).join('');
       byId('specParagraph').textContent = specParagraph;
-      if (specSection) specSection.style.display = (specItems.length || specParagraph) ? '' : 'none';
-
-      const roiSection = byId('roiSection');
-      const roiParagraph1 = p.seoDescription || p.desc || '';
-      const roiParagraph2 = p.seoDescription2 || '';
-      byId('roiTitle').textContent = ui.roiTitle;
-      byId('roiParagraph1').textContent = roiParagraph1;
-      byId('roiList').innerHTML = '';
-      byId('roiParagraph2').textContent = roiParagraph2;
-      byId('roiParagraph1').style.display = roiParagraph1 ? 'block' : 'none';
-      byId('roiParagraph2').style.display = roiParagraph2 ? 'block' : 'none';
-      if (roiSection) roiSection.style.display = (roiParagraph1 || roiParagraph2) ? '' : 'none';
+      if (specSection) specSection.style.display = (!isMinimalLayout && (specItems.length || specParagraph)) ? '' : 'none';
 
       const audienceSection = byId('audienceSection');
-      byId('audienceTitle').textContent = ui.audienceTitle;
-      const audience = Array.isArray(plot.audience) && plot.audience.length ? plot.audience.slice(0, 3) : [
-        { title: ui.audience1Title, text: ui.audience1Text },
-        { title: ui.audience2Title, text: ui.audience2Text },
-        { title: ui.audience3Title, text: ui.audience3Text }
-      ];
+      const audience = Array.isArray(plot.audience) && plot.audience.length ? plot.audience.slice(0, 3) : [];
       let visibleAudience = 0;
       [1,2,3].forEach((n) => {
         const card = byId(`audienceCard${n}Title`)?.closest('.audience-card');
@@ -1707,9 +855,10 @@
           byId(`audienceCard${n}Text`).textContent = item.text || '';
         }
       });
-      if (audienceSection) audienceSection.style.display = visibleAudience ? '' : 'none';
+      if (audienceSection) audienceSection.style.display = (!isMinimalLayout && visibleAudience) ? '' : 'none';
 
       byId('urgencyNote').textContent = ui.urgencyNote;
+      byId('urgencyNote').style.display = isMinimalLayout ? 'none' : 'inline-flex';
       byId('contactTitle').textContent = ui.contactTitle;
       byId('contactIntro').textContent = ui.contactIntro;
       byId('agentRole').textContent = ui.agentRole;
@@ -1724,14 +873,10 @@
       byId('formSubmitLabel').textContent = ui.formSubmit;
       byId('copyLinkLabel').textContent = ui.copyLink;
       byId('shareNoteTitle').textContent = p.title;
-      byId('shareNoteStrong').textContent = `${price} · ${p.title}`;
-      byId('shareNoteText').textContent = ui.shareNoteText;
       byId('shareNoteStrong').textContent = `${p.title} · ${price}`;
+      byId('shareNoteText').textContent = ui.shareNoteText;
 
-      const waText = `📍 ${p.title}
-💶 ${price}
-📷 ${share.image}
-🔗 ${share.url}`;
+      const waText = `📍 ${p.title}\n💶 ${price}\n📷 ${share.image}\n🔗 ${share.url}`;
       byId('waBtn').href = `https://wa.me/${CONTACT_PHONE.replace(/\D/g,'')}?text=${encodeURIComponent(waText)}`;
     }
 
@@ -1750,6 +895,17 @@
       document.body.style.overflow = '';
     }
 
+    function runSelfTests() {
+      const tests = [];
+      tests.push(Array.isArray(FALLBACK_PLOTS) && FALLBACK_PLOTS.length > 0);
+      tests.push(typeof renderContent === 'function');
+      tests.push(byId('roiSection') === null);
+      tests.push(Boolean(byId('propertyPage')));
+      if (tests.some(result => !result)) {
+        console.warn('Self-tests failed', tests);
+      }
+    }
+
     function bindInteractions() {
       byId('heroMedia').onclick = () => { const first = currentGallery[0]; if (first) openMediaLightbox(first.src, first.alt); };
       byId('mediaLightboxClose').onclick = closeMediaLightbox;
@@ -1759,31 +915,6 @@
       byId('copyLinkBtn').onclick = async () => {
         const share = buildShareData(currentPlot);
         const text = [share.title, share.text, share.url].join('\n');
-
-        const fallbackCopy = () => {
-          try {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.setAttribute('readonly', '');
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            textarea.style.pointerEvents = 'none';
-            textarea.style.left = '-9999px';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            textarea.setSelectionRange(0, textarea.value.length);
-            const copied = document.execCommand('copy');
-            document.body.removeChild(textarea);
-            if (copied) {
-              byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
-              setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
-              return true;
-            }
-          } catch {}
-          return false;
-        };
-
         try {
           if (navigator.clipboard && window.isSecureContext) {
             await navigator.clipboard.writeText(text);
@@ -1792,10 +923,7 @@
             return;
           }
         } catch {}
-
-        if (!fallbackCopy()) {
-          window.prompt(UI[currentLang].copyPrompt, text);
-        }
+        window.prompt(UI[currentLang].copyPrompt, text);
       };
 
       byId('contactForm').onsubmit = (event) => {
@@ -1837,20 +965,6 @@
       const url = new URL(window.location.href);
       if (currentLang === 'pl') url.searchParams.delete('lang'); else url.searchParams.set('lang', currentLang);
       window.history.replaceState({}, '', url.toString());
-    }
-
-    function runSelfTests() {
-      const tests = [];
-      const resolved = resolveJsonUrls();
-      tests.push(Array.isArray(resolved) && resolved.length === 1);
-      tests.push(resolved[0].endsWith('/pl/plots/plots-index.json'));
-      tests.push(Array.isArray(FALLBACK_PLOTS) && FALLBACK_PLOTS.length > 0);
-      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).length >= 1);
-      tests.push(localizePlot(FALLBACK_PLOTS[0], 'en').title.includes('Nou Nazareth'));
-      tests.push(Boolean(buildShareData(FALLBACK_PLOTS[0]).url));
-      if (tests.some(result => !result)) {
-        console.warn('Self-tests failed', tests);
-      }
     }
 
     async function init() {
