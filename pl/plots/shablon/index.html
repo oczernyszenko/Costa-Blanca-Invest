@@ -1627,10 +1627,19 @@
       byId('kpi3').textContent = p.meta || 'Costa Blanca';
       byId('kpi4').textContent = ui.kpiFallback4;
 
-      const parts = String(p.desc || '').split(/(?<=[.!?])\s+/).filter(Boolean);
-      byId('lead1').textContent = parts[0] || p.desc;
-      byId('lead2').textContent = parts[1] || p.desc;
-      byId('lead3').textContent = parts[2] || p.desc;
+      const leadEls = [byId('lead1'), byId('lead2'), byId('lead3')];
+      const leadTexts = [p.desc, p.seoDescription, p.seoDescription2].filter(Boolean);
+      leadEls.forEach((el, index) => {
+        if (!el) return;
+        const value = leadTexts[index] || '';
+        if (value) {
+          el.textContent = value;
+          el.style.display = 'block';
+        } else {
+          el.textContent = '';
+          el.style.display = 'none';
+        }
+      });
 
       byId('paramsTitle').textContent = ui.paramsTitle;
       byId('paramsBlock').innerHTML = `
@@ -1639,30 +1648,66 @@
         <span class="label">${ui.paramsPrice}:</span><span class="value">${price}</span>
         `;
 
+      const whySection = byId('investmentBenefits');
       byId('whySectionTitle').textContent = ui.whySectionTitle;
-      const why = [
+      const why = Array.isArray(plot.features) && plot.features.length ? plot.features.slice(0, 3) : [
         { title: p.chip || ui.badgeText, text: p.desc },
         { title: p.meta || ui.whyDynamicTitle, text: ui.whyDynamicText },
         { title: ui.whyShareTitle, text: ui.whyShareText }
       ];
-      [1,2,3].forEach((n) => { byId(`whyTitle${n}`).textContent = why[n-1].title; byId(`whyText${n}`).textContent = why[n-1].text; });
+      let visibleWhy = 0;
+      [1,2,3].forEach((n) => {
+        const card = byId(`whyTitle${n}`)?.closest('.why-item');
+        const item = why[n - 1] || {};
+        const hasContent = Boolean(item.title || item.text);
+        if (card) card.style.display = hasContent ? '' : 'none';
+        if (hasContent) {
+          visibleWhy += 1;
+          byId(`whyTitle${n}`).textContent = item.title || '';
+          byId(`whyText${n}`).textContent = item.text || '';
+        }
+      });
+      if (whySection) whySection.style.display = visibleWhy ? '' : 'none';
 
+      const specSection = byId('specSection');
+      const specItems = Array.isArray(plot.offerIncludes) && plot.offerIncludes.length ? plot.offerIncludes : [ui.specItem1, ui.specItem2, ui.specItem3, ui.specItem4].filter(Boolean);
+      const specParagraph = p.seoDescription || p.desc || '';
       byId('specTitle').textContent = ui.specTitle;
-      byId('specList').innerHTML = [ui.specItem1, ui.specItem2, ui.specItem3, ui.specItem4].map(item => `<li>${item}</li>`).join('');
-      byId('specParagraph').textContent = p.seoDescription || p.desc;
+      byId('specList').innerHTML = specItems.map(item => `<li>${item}</li>`).join('');
+      byId('specParagraph').textContent = specParagraph;
+      if (specSection) specSection.style.display = (specItems.length || specParagraph) ? '' : 'none';
 
+      const roiSection = byId('roiSection');
+      const roiParagraph1 = p.seoDescription || p.desc || '';
+      const roiParagraph2 = p.seoDescription2 || '';
       byId('roiTitle').textContent = ui.roiTitle;
-      byId('roiParagraph1').textContent = p.seoDescription || p.desc;
+      byId('roiParagraph1').textContent = roiParagraph1;
       byId('roiList').innerHTML = '';
-      byId('roiParagraph2').textContent = p.seoDescription2 || ui.roiParagraph2Fallback;
+      byId('roiParagraph2').textContent = roiParagraph2;
+      byId('roiParagraph1').style.display = roiParagraph1 ? 'block' : 'none';
+      byId('roiParagraph2').style.display = roiParagraph2 ? 'block' : 'none';
+      if (roiSection) roiSection.style.display = (roiParagraph1 || roiParagraph2) ? '' : 'none';
 
+      const audienceSection = byId('audienceSection');
       byId('audienceTitle').textContent = ui.audienceTitle;
-      const audience = [
+      const audience = Array.isArray(plot.audience) && plot.audience.length ? plot.audience.slice(0, 3) : [
         { title: ui.audience1Title, text: ui.audience1Text },
         { title: ui.audience2Title, text: ui.audience2Text },
         { title: ui.audience3Title, text: ui.audience3Text }
       ];
-      [1,2,3].forEach((n) => { byId(`audienceCard${n}Title`).textContent = audience[n-1].title; byId(`audienceCard${n}Text`).textContent = audience[n-1].text; });
+      let visibleAudience = 0;
+      [1,2,3].forEach((n) => {
+        const card = byId(`audienceCard${n}Title`)?.closest('.audience-card');
+        const item = audience[n - 1] || {};
+        const hasContent = Boolean(item.title || item.text);
+        if (card) card.style.display = hasContent ? '' : 'none';
+        if (hasContent) {
+          visibleAudience += 1;
+          byId(`audienceCard${n}Title`).textContent = item.title || '';
+          byId(`audienceCard${n}Text`).textContent = item.text || '';
+        }
+      });
+      if (audienceSection) audienceSection.style.display = visibleAudience ? '' : 'none';
 
       byId('urgencyNote').textContent = ui.urgencyNote;
       byId('contactTitle').textContent = ui.contactTitle;
