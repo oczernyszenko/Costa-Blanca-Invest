@@ -88,13 +88,36 @@
     .top-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: nowrap; margin-bottom: 20px; }
     .lang-switcher { display: flex; gap: 10px; align-items: center; justify-content: flex-end; margin: 0; }
     .lang-btn {
-      width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(217,181,109,.5);
-      font-size: 12px; font-weight: 700; cursor: pointer;
-      background: linear-gradient(135deg, rgba(217,181,109,.6), rgba(184,146,69,.6));
-      color: #fff; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      box-shadow: 0 10px 24px rgba(0,0,0,.12); transition: all .2s ease;
+      position: relative;
+      width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.55);
+      font-size: 12px; font-weight: 800; cursor: pointer;
+      background:
+        radial-gradient(circle at 30% 28%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.26) 18%, rgba(217,181,109,.96) 42%, rgba(184,146,69,.94) 72%, rgba(118,86,31,.94) 100%);
+      color: #fff; backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
+      box-shadow: 0 14px 30px rgba(0,0,0,.16), inset 0 1px 2px rgba(255,255,255,.32), inset 0 -8px 18px rgba(0,0,0,.10);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, border-color .18s ease;
     }
-    .lang-btn.active { background: #fff; color: var(--gold-dark); box-shadow: 0 6px 16px rgba(0,0,0,.12); }
+    .lang-btn::before {
+      content: "";
+      position:absolute;
+      inset:6px 9px auto 9px;
+      height:7px;
+      border-radius:999px;
+      background:linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,255,255,0));
+      pointer-events:none;
+      filter:blur(.15px);
+      opacity:.55;
+    }
+    .lang-btn:hover { transform: translateY(-1px) scale(1.03); box-shadow: 0 18px 34px rgba(0,0,0,.18), inset 0 1px 3px rgba(255,255,255,.36), inset 0 -8px 18px rgba(0,0,0,.12); filter: saturate(1.08); }
+    .lang-btn:active,
+    .lang-btn.active {
+      transform: translateY(1px) scale(.98);
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,.58) 0%, rgba(255,255,255,.18) 16%, rgba(250,250,250,.96) 34%, rgba(237,240,244,.98) 66%, rgba(194,200,208,.98) 100%);
+      color: var(--gold-dark);
+      border-color: rgba(255,255,255,.9);
+      box-shadow: inset 0 10px 18px rgba(0,0,0,.08), inset 0 1px 2px rgba(255,255,255,.46), 0 6px 12px rgba(0,0,0,.08);
+    }
     .back-link {
       position: sticky; top: 14px; z-index: 20; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       margin: 0; padding: 12px 18px; border-radius: 999px;
@@ -189,14 +212,14 @@
     .share-actions { max-width: 320px; margin: 0 auto; }
     .cta-actions { margin: 4px 0 18px; max-width: 520px; margin-left: auto; margin-right: auto; }
     .cta-actions .btn { flex: 1 1 0; min-width: 220px; }
-    .btn, .share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; min-height: 52px; border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1; position: relative; cursor: pointer; text-align: center; border: 1px solid rgba(255,255,255,.34); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%); box-shadow: 0 10px 24px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.28); transition: all .25s ease; }
+    .btn, .share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; min-height: 52px; border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1; position: relative; cursor: pointer; text-align: center; border:1px solid rgba(255,255,255,.42); backdrop-filter:blur(28px) saturate(185%); -webkit-backdrop-filter: blur(18px) saturate(140%); box-shadow:0 14px 34px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.55), inset 0 -8px 16px rgba(255,255,255,.08); transition: all .25s ease; }
     .btn::before, .share-btn::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.06)); pointer-events: none; }
     .btn > *, .share-btn > * { position: relative; z-index: 1; }
-    .btn:hover, .share-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.34); }
-    .btn-main { background: linear-gradient(135deg, rgba(24,55,70,.74), rgba(35,78,99,.60)); color: #fff; }
-    .btn-light { background: linear-gradient(135deg, rgba(24,55,70,.60), rgba(35,78,99,.46)); color: #fff; }
+    .btn:hover, .share-btn:hover { transform:translateY(-2px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.34); }
+    .btn-main { background:linear-gradient(135deg, rgba(24,55,70,.55), rgba(35,78,99,.32)); color: #fff; }
+    .btn-light { background:linear-gradient(135deg, rgba(173,205,219,.26), rgba(35,78,99,.22)); color: #fff; }
     #waBtn, .contact-form .btn-main { background: linear-gradient(135deg, rgba(37,211,102,.88), rgba(18,140,126,.78)); color: #fff; border: 1px solid rgba(255,255,255,.24); box-shadow: 0 12px 28px rgba(18,140,126,.24), inset 0 1px 0 rgba(255,255,255,.18); }
-    .share-btn { background: linear-gradient(135deg, rgba(255,255,255,.86), rgba(255,255,255,.58)); color: var(--primary); border: 1px solid rgba(255,255,255,.74); box-shadow: 0 10px 24px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.74); }
+    .share-btn { background:linear-gradient(135deg, rgba(255,255,255,.42), rgba(255,255,255,.14)); color: var(--primary); border: 1px solid rgba(255,255,255,.74); box-shadow: 0 10px 24px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.74); }
     .share-block { max-width: 760px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid rgba(15,23,42,.08); }
     .share-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
     .urgency-note { margin: 0 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: rgba(217,181,109,.12); border: 1px solid rgba(217,181,109,.22); color: var(--gold-dark); font-size: 13px; font-weight: 800; letter-spacing: .02em; }
@@ -1150,7 +1173,7 @@
         formSubmit:'Wyślij przez WhatsApp',
         copyLink:'Kopiuj link',
         shareCopied:'Skopiowano',
-        shareNoteText:'Cena, tytuł i główne zdjęcie gotowe do udostępnienia.',
+        shareNoteText:'Udostępnianie pokazuje zdjęcie główne, tytuł i cenę oferty.',
         urgencyNote:'Dostępność i szczegóły warto potwierdzić bezpośrednio',
         kpiFallback4:'Sprawdzona oferta',
         copyPrompt:'Kopiuj',
@@ -1202,7 +1225,7 @@
         formSubmit:'Send via WhatsApp',
         copyLink:'Copy link',
         shareCopied:'Copied',
-        shareNoteText:'Price, title and main image are ready for sharing.',
+        shareNoteText:'Sharing shows the main image, title and price of the property.',
         urgencyNote:'Availability and details should be confirmed directly',
         kpiFallback4:'Verified offer',
         copyPrompt:'Copy',
@@ -1254,7 +1277,7 @@
         formSubmit:'Enviar por WhatsApp',
         copyLink:'Copiar enlace',
         shareCopied:'Copiado',
-        shareNoteText:'Precio, título e imagen principal listos para compartir.',
+        shareNoteText:'El contenido compartido muestra la imagen principal, el título y el precio de la propiedad.',
         urgencyNote:'La disponibilidad y los detalles deben confirmarse directamente',
         kpiFallback4:'Oferta verificada',
         copyPrompt:'Copiar',
@@ -1306,7 +1329,7 @@
         formSubmit:'Отправить в WhatsApp',
         copyLink:'Копировать ссылку',
         shareCopied:'Скопировано',
-        shareNoteText:'Цена, заголовок и главное фото готовы для шеринга.',
+        shareNoteText:'В шаринге показываются главное фото, заголовок и цена объекта.',
         urgencyNote:'Наличие и детали лучше подтвердить напрямую',
         kpiFallback4:'Проверенное предложение',
         copyPrompt:'Копировать',
@@ -1514,6 +1537,7 @@
       const share = buildShareData(plot);
       const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
       const description = p.seoDescription || p.desc || `${p.title}. ${price}. ${p.meta || 'Costa Blanca'}. Costa Blanca Invest.`;
+      const socialDescription = price;
       const pageTitle = `${p.title} | ${formatPrice(plot.price || plot.price_value || 0, currentLang)} | Costa Blanca Invest`;
 
       document.documentElement.lang = currentLang;
@@ -1524,14 +1548,14 @@
       byId('imageSrcLink').setAttribute('href', share.image);
       byId('ogLocale').setAttribute('content', ui.locale);
       byId('ogTitle').setAttribute('content', pageTitle);
-      byId('ogDescription').setAttribute('content', description);
+      byId('ogDescription').setAttribute('content', socialDescription);
       byId('ogUrl').setAttribute('content', share.url);
       byId('ogImage').setAttribute('content', share.image);
       byId('ogImageUrl').setAttribute('content', share.image);
       byId('ogImageSecure').setAttribute('content', share.image);
       byId('ogImageAlt').setAttribute('content', p.alt || p.title);
       byId('twitterTitle').setAttribute('content', pageTitle);
-      byId('twitterDescription').setAttribute('content', description);
+      byId('twitterDescription').setAttribute('content', socialDescription);
       byId('twitterImage').setAttribute('content', share.image);
       byId('twitterImageAlt').setAttribute('content', p.alt || p.title);
       byId('twitterUrl').setAttribute('content', share.url);
@@ -1613,7 +1637,7 @@
         <span class="label">${ui.paramsSlug}:</span><span class="value">${plot.slug || '—'}</span>
         <span class="label">${ui.paramsMeta}:</span><span class="value">${p.meta || '—'}</span>
         <span class="label">${ui.paramsPrice}:</span><span class="value">${price}</span>
-        <span class="label">${ui.paramsContact}:</span><span class="value">${CONTACT_PHONE}</span>`;
+        `;
 
       byId('whySectionTitle').textContent = ui.whySectionTitle;
       const why = [
@@ -1657,6 +1681,7 @@
       byId('shareNoteTitle').textContent = p.title;
       byId('shareNoteStrong').textContent = `${price} · ${p.title}`;
       byId('shareNoteText').textContent = ui.shareNoteText;
+      byId('shareNoteStrong').textContent = `${p.title} · ${price}`;
 
       const waText = `📍 ${p.title}
 💶 ${price}
@@ -1688,12 +1713,43 @@
 
       byId('copyLinkBtn').onclick = async () => {
         const share = buildShareData(currentPlot);
+        const text = [share.title, share.text, share.url].join('\n');
+
+        const fallbackCopy = () => {
+          try {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            textarea.style.pointerEvents = 'none';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            textarea.setSelectionRange(0, textarea.value.length);
+            const copied = document.execCommand('copy');
+            document.body.removeChild(textarea);
+            if (copied) {
+              byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
+              setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
+              return true;
+            }
+          } catch {}
+          return false;
+        };
+
         try {
-          await navigator.clipboard.writeText([share.title,share.text,share.url].join('\n'));
-          byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
-          setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
-        } catch {
-          window.prompt(UI[currentLang].copyPrompt,[share.title,share.text,share.url].join('\n'));
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            byId('copyLinkLabel').textContent = UI[currentLang].shareCopied;
+            setTimeout(() => { byId('copyLinkLabel').textContent = UI[currentLang].copyLink; }, 1500);
+            return;
+          }
+        } catch {}
+
+        if (!fallbackCopy()) {
+          window.prompt(UI[currentLang].copyPrompt, text);
         }
       };
 
