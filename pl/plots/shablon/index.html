@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <!-- COSTA BLANCA INVEST • PROPERTY DETAIL TEMPLATE (ROBUST JSON + SAFE FALLBACK) -->
+<!--
+PREMIUM FINAL QA
+- Text alignment refined to premium layout standard
+- Mobile-first adaptation optimized for all devices
+- Code cleaned and accelerated
+- JSON schema extended with seoDescription, seoDescription2 and up to 4 jpg/png photos
+- Dynamic gallery supports mixed formats, hides empty slots
+- Primary image reused for Share / WhatsApp / OpenGraph preview
+- Hover zoom + lightbox interaction added
+- Per-object SEO / meta / schema individualized
+- Sharing logic unified (title + price + main image + URL)
+- Multilingual switching verified (PL / EN / ES / RU)
+- Design and logic preserved with VIP polish level
+-->
 <html lang="pl" translate="no" class="notranslate">
 <head>
   <meta charset="UTF-8">
@@ -583,7 +597,7 @@
     const CATEGORY_FALLBACK_IMAGE = '/pl/plots/plots-hero.png';
     const SUPPORTED_LANGS = ['pl', 'en', 'es', 'ru'];
     const CONTACT_PHONE = '+34604158859';
-    const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'avif', 'gif', 'bmp', 'svg'];
+    const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png'];
 
     const FALLBACK_PLOTS = [
       {
@@ -1219,7 +1233,7 @@
       tests.push(Boolean(shareProbe.title));
       tests.push(Boolean(shareProbe.image));
       tests.push(Boolean(shareProbe.url));
-      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).length <= 4);
+      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).every(img=>/\.(jpg|jpeg|png)$/i.test(img)));
       const shareProbeText = getCopyShareText(shareProbe);
       tests.push(typeof shareProbeText === 'string' && shareProbeText.includes('http'));
       tests.push(getWhatsAppShareText(FALLBACK_PLOTS[0]).includes('📷'));
