@@ -503,7 +503,7 @@ PREMIUM FINAL QA
 
         <section class="hero-card">
           <div class="hero-media" id="heroMedia">
-            <img id="heroImage" src="/pl/plots/plots-hero.png" alt="Działka Costa Blanca" fetchpriority="high" decoding="async">
+            <img id="heroImage" src="/pl/plots/plots-hero.png" alt="Działka Costa Blanca" fetchpriority="high" loading="eager" decoding="async">
             <div class="hero-badge" id="badgeText">DZIAŁKA</div>
             <div class="hero-overlay">
               <div class="hero-copy">
@@ -622,7 +622,7 @@ PREMIUM FINAL QA
     const CATEGORY_FALLBACK_IMAGE = '/pl/plots/plots-hero.png';
     const SUPPORTED_LANGS = ['pl', 'en', 'es', 'ru'];
     const CONTACT_PHONE = '+34604158859';
-    const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png'];
+    const IMAGE_EXTENSIONS = ['avif', 'webp', 'jpg', 'jpeg', 'png'];
 
     const FALLBACK_PLOTS = [
       {
@@ -952,22 +952,23 @@ PREMIUM FINAL QA
       for (const src of candidates) {
         if (existing.length >= 4) break;
         if (existing.includes(src)) continue;
+        if (src === mainImage) {
+          existing.push(src);
+          continue;
+        }
         if (await imageExists(src)) existing.push(src);
       }
 
       if (!existing.length) existing.push(mainImage || CATEGORY_FALLBACK_IMAGE);
+      while (existing.length < 4) existing.push(existing[existing.length - 1]);
 
-      while (existing.length < 4) {
-        existing.push(existing[existing.length - 1]);
-      }
-
-      const gallery = existing.slice(0,4).map((src,index)=>({
+      const gallery = existing.slice(0, 4).map((src, index) => ({
         src,
-        alt: index===0 ? localized.alt : `${localized.title} ${index+1}`
+        alt: index === 0 ? localized.alt : `${localized.title} ${index + 1}`
       }));
 
       return {
-        mainImage: gallery[0].src,
+        mainImage: mainImage || gallery[0].src,
         gallery
       };
     }
@@ -1094,25 +1095,33 @@ PREMIUM FINAL QA
 
     async function renderGallery(plot) {
       const p = localizePlot(plot, currentLang);
-      const normalized = await normalizeGallery(plot);
-      currentGallery = normalized.gallery;
       const heroImage = byId('heroImage');
+      const fastMainImage = p.image || CATEGORY_FALLBACK_IMAGE;
+
       if (heroImage) {
-        heroImage.src = normalized.mainImage || CATEGORY_FALLBACK_IMAGE;
+        heroImage.src = fastMainImage;
         heroImage.alt = p.alt || p.title;
         heroImage.onerror = () => { heroImage.src = CATEGORY_FALLBACK_IMAGE; };
+      }
+
+      const normalized = await normalizeGallery(plot);
+      currentGallery = normalized.gallery;
+
+      if (heroImage && normalized.mainImage) {
+        heroImage.src = normalized.mainImage;
       }
 
       const grid = byId('galleryGrid');
       if (!grid) return;
       grid.innerHTML = '';
-      normalized.gallery.forEach((item) => {
+      normalized.gallery.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'gallery-item';
         const img = document.createElement('img');
         img.src = item.src;
         img.alt = item.alt;
-        img.loading = 'lazy';
+        img.loading = index === 0 ? 'eager' : 'lazy';
+        img.decoding = 'async';
         img.onerror = () => { img.src = normalized.mainImage || CATEGORY_FALLBACK_IMAGE; };
         card.appendChild(img);
         card.addEventListener('click', () => openMediaLightbox(item.src, item.alt));
@@ -1360,9 +1369,9 @@ PREMIUM FINAL QA
       const plots = await getPlots();
       currentPlot = Array.isArray(plots) && plots.length ? plots.find(item => slugify(item.slug) === slugify(getSlugFromUrl())) || plots[0] : FALLBACK_PLOTS[0];
       if (!currentPlot) throw new Error('No plot data available');
-      await renderGallery(currentPlot);
       renderContent(currentPlot);
       updateMeta(currentPlot);
+      renderGallery(currentPlot).then(() => updateMeta(currentPlot));
       bindInteractions();
       byId('mediaLightboxClose')?.setAttribute('aria-label', UI[currentLang].lightboxClose);
       runSelfTests();
