@@ -82,9 +82,7 @@ PREMIUM FINAL QA
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(217,181,109,.12), transparent 24%),
-        radial-gradient(circle at top right, rgba(158,199,212,.14), transparent 28%),
-        linear-gradient(180deg, #fdfbf8 0%, var(--bg) 52%, #fff 100%);
+        linear-gradient(180deg,#fcfaf7 0%,var(--bg) 55%,#fff 100%);
       line-height: 1.6;
     }
     img { display: block; max-width: 100%; height: auto; }
@@ -142,25 +140,10 @@ PREMIUM FINAL QA
       box-shadow: 0 20px 50px rgba(15,23,42,.08);
       padding: 20px;
     }
-    .hero-media {
-      position: relative;
-      overflow: hidden;
-      min-height: 670px;
-      aspect-ratio: 16 / 9;
-      border-radius: 28px;
-      background: #e7edf1;
-      box-shadow: 0 30px 90px rgba(15,23,42,.22);
+    .hero-media {$1background: transparent;$2box-shadow:0 18px 48px rgba(15,23,42,.14);
       cursor: zoom-in;
     }
-    .hero-media::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      box-shadow: inset 0 0 0 1px rgba(217,181,109,.28);
-      pointer-events: none;
-      z-index: 2;
-    }
+    
     .hero-media img { width: 100%; height: 100%; min-height: 670px; object-fit: cover; object-position: center center; }
     .hero-badge {
       position: absolute;
@@ -247,7 +230,7 @@ PREMIUM FINAL QA
     .hero-price-note, .hero-price-meta { display: block; font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.96); font-weight: 700; }
     .hero-price-meta { margin-top: 2px; font-size: 12px; opacity: .94; }
     .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: -44px; padding: 0 18px 0; position: relative; z-index: 5; }
-    .gallery-item { overflow: hidden; border-radius: 18px; background: #edf1f4; border: 2px solid rgba(217,181,109,.55); box-shadow: 0 16px 30px rgba(15,23,42,.10); cursor: zoom-in; min-height: 118px; aspect-ratio: 2.15 / 1; }
+    .gallery-item { overflow:hidden; border-radius:18px; background:transparent; border:1px solid rgba(217,181,109,.35); box-shadow:0 8px 18px rgba(15,23,42,.06); cursor: zoom-in; min-height: 118px; aspect-ratio: 2.15 / 1; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
     .gallery-item:hover img { transform: scale(1.05); }
     .content { margin-top: 6px; }
@@ -285,13 +268,15 @@ PREMIUM FINAL QA
     .kpi .value { color: var(--primary); font-size: clamp(18px, 2.2vw, 22px); font-weight: 900; }
     .lead-wrap { max-width: 1280px; margin: 0 auto 18px; padding: 0 8px; }
     .lead { font-size: 15px; line-height: 1.45; margin-bottom: 1px; text-align: left; color: #606b75; }
-    .bottom-grid { display: grid; grid-template-columns: 1.12fr 1.06fr 1fr 1fr; gap: 16px; margin-top: 16px; align-items: stretch; }
+    .bottom-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px; align-items: stretch; }
     .panel-card {
       padding: 20px;
       border-radius: 22px;
       background: rgba(255,255,255,.94);
       border: 1px solid rgba(217,181,109,.12);
       box-shadow: 0 10px 24px rgba(15,23,42,.05);
+      min-width: 0;
+      height: 100%;
     }
     .panel-card h2 {
       position: relative;
@@ -343,7 +328,7 @@ PREMIUM FINAL QA
       max-width: 420px;
       text-align: left;
     }
-    .agent-avatar { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,.75); box-shadow: 0 16px 32px rgba(15,23,42,.14); }
+    .agent-avatar { width:82px; height:82px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.65); }
     .agent-name { margin: 0 0 2px; color: var(--primary); font-size: 17px; font-weight: 900; }
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 11px; font-weight: 800; }
     .agent-meta { margin: 0; color: var(--text-soft); font-size: 12px; line-height: 1.45; }
@@ -408,8 +393,8 @@ PREMIUM FINAL QA
       box-shadow: inset 0 1px 0 rgba(255,255,255,.38), 0 16px 30px rgba(34,93,192,.24);
     }
     .share-block { display: grid; grid-template-columns: 1fr; gap: 14px; align-items: start; justify-items: center; }
-    .share-note { margin: 0; color: var(--muted); font-size: 12px; text-align: center; line-height: 1.45; max-width: 360px; }
-    .contact-form { display: grid; gap: 10px; }
+    .share-note { margin: 0; color: var(--muted); font-size: 12px; text-align: center; line-height: 1.45; max-width: 100%; word-break: break-word; }
+    .contact-form { display: grid; gap: 10px; min-width: 0; }
     .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .contact-form input, .contact-form textarea {
       width: 100%;
@@ -430,7 +415,7 @@ PREMIUM FINAL QA
     .media-lightbox img { width: 100%; max-height: 90vh; object-fit: contain; background: #0b141c; }
     .media-lightbox-close { position: absolute; top: 14px; right: 14px; z-index: 2; width: 42px; height: 42px; border: none; border-radius: 999px; background: rgba(255,255,255,.16); color: #fff; font-size: 24px; cursor: pointer; }
     .topbar, .breadcrumbs, .footer, .footer-card, .contact-links, .footer-bottom, .footer-copy, .footer-brand { display: none !important; }
-    @media (max-width:1200px) { .bottom-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:1200px) { .bottom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width:1100px) { .hero-media, .hero-media img { min-height: 520px; } }
     @media (max-width:980px) {
       .hero-media, .hero-media img { min-height: 430px; aspect-ratio: 16 / 10; }
@@ -589,17 +574,7 @@ PREMIUM FINAL QA
                 <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer"><span id="waBtnLabel">WhatsApp</span></a>
               </div>
 
-              <div class="share-block">
-                <div class="share-actions" role="group" aria-label="Share">
-                  <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
-                </div>
-                <p class="share-note">
-                  <strong id="shareNoteTitle"></strong><br>
-                  <span id="shareNoteStrong"></span><br>
-                  <span id="shareNoteText"></span>
-                </p>
-              </div>
-            </section>
+              </section>
 
             <section class="panel-card">
               <form class="contact-form" id="contactForm" action="#" method="post">
@@ -611,6 +586,17 @@ PREMIUM FINAL QA
                 <textarea name="message" id="formMessage" placeholder="Napisz wiadomość"></textarea>
                 <button class="btn btn-main" type="submit"><span id="formSubmitLabel">Wyślij przez WhatsApp</span></button>
               </form>
+
+              <div class="share-block" style="margin-top:18px; padding-top:10px; border-top:1px solid rgba(217,181,109,.18);">
+                <div class="share-actions" role="group" aria-label="Share">
+                  <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
+                </div>
+                <p class="share-note">
+                  <strong id="shareNoteTitle"></strong><br>
+                  <span id="shareNoteStrong"></span><br>
+                  <span id="shareNoteText"></span>
+                </p>
+              </div>
             </section>
           </div>
         </div>
@@ -795,7 +781,7 @@ PREMIUM FINAL QA
     let currentPlot = null;
     let currentGallery = [];
 
-    const byId = (id) => document.getElementById(id);
+    const d=document, byId=id=>d.getElementById(id);
 
     function slugify(value) {
       return String(value || '')
@@ -944,7 +930,7 @@ PREMIUM FINAL QA
         }
       }
 
-      return result; // don't cut before validation, we'll enforce exactly 4 real images later
+      return result;
     }
 
     const imageCache = new Map();
@@ -1311,7 +1297,7 @@ PREMIUM FINAL QA
         };
       }
 
-      document.addEventListener('keydown', (e) => {
+      d.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && byId('mediaLightbox')?.classList.contains('open')) closeMediaLightbox();
       });
 
@@ -1360,7 +1346,7 @@ PREMIUM FINAL QA
         };
       }
 
-      document.querySelectorAll('.lang-btn').forEach((btn) => {
+      d.querySelectorAll('.lang-btn').forEach((btn) => {
         btn.onclick = () => applyLanguage(btn.dataset.lang);
       });
     }
@@ -1394,7 +1380,7 @@ PREMIUM FINAL QA
       if (propertyPage) propertyPage.hidden = false;
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
+    addEventListener('DOMContentLoaded',()=>{
       init().catch((err) => {
         console.error('Init error', err);
         showInitError(UI[getLangFromUrl()]?.initError || 'Failed to load listing.');
