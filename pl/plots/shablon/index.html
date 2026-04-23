@@ -1379,7 +1379,7 @@ PREMIUM FINAL QA
       tests.push(Boolean(shareProbe.title));
       tests.push(Boolean(shareProbe.image));
       tests.push(Boolean(shareProbe.url));
-      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).every(img=>/\.(jpg|jpeg|png)$/i.test(img)));
+      tests.push(buildImageCandidates(FALLBACK_PLOTS[0]).every(img=>/\.(avif|webp|jpg|jpeg|png)$/i.test(img)));
       const shareProbeText = getCopyShareText(shareProbe);
       tests.push(typeof shareProbeText === 'string' && shareProbeText.includes('http'));
       tests.push(getWhatsAppShareText(FALLBACK_PLOTS[0]).includes('📷'));
@@ -1442,7 +1442,7 @@ PREMIUM FINAL QA
             if (navigator.clipboard && window.isSecureContext) {
               await navigator.clipboard.writeText(text);
               setText('copyLinkLabel', UI[currentLang].shareCopied);
-              setTimeout(() => { setText('copyLinkLabel', UI[currentLang].copyLink); }, 1500);
+              setTimeout(() => { setText('copyLinkLabel', '🔗'); }, 1500);
               return;
             }
           } catch (error) {
