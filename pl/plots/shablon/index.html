@@ -283,7 +283,7 @@ PREMIUM FINAL QA
     .content { margin-top: 6px; }
     .hero-title, .subtitle, .price, .price-soft { text-align: center; }
     .hero-title { max-width: 980px; margin: 0 auto 4px; color: var(--primary); font-size: clamp(42px, 5vw, 62px); letter-spacing: -.045em; line-height: .95; }
-    .subtitle { margin-bottom: 6px; color: var(--gold-dark); font-size: 16px; font-weight: 800; }
+    .subtitle { margin-bottom: 6px; color: var(--gold-dark); font-size: 24px; font-weight: 800; }
     .price { margin-bottom: 14px; color: var(--gold); font-size: clamp(30px, 4vw, 40px); font-weight: 900; letter-spacing: -.03em; }
     .price-soft { color: var(--text-soft); font-size: 17px; font-weight: 700; opacity: .88; }
     .kpi-row { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin: 0 auto 18px; max-width: 940px; }
@@ -316,8 +316,23 @@ PREMIUM FINAL QA
     .lead-wrap { max-width: 1100px; margin: 10px auto 28px; padding: 0 18px; }
     .lead { font-size: 15px; line-height: 1.72; margin-bottom: 14px; text-align: justify; text-justify: inter-word; max-width: 980px; margin-left: auto; margin-right: auto; color: #606b75; hyphens: auto; }
     .bottom-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px; align-items: stretch; }
+    #contact,
+    .bottom-grid > section:last-child {
+      display: flex;
+      flex-direction: column;
+    }
+    #contact .cta-actions {
+      margin-top: auto;
+      padding-bottom: 0;
+    }
+    .bottom-grid > section:last-child .contact-form {
+      margin-bottom: 14px;
+    }
+    .bottom-grid > section:last-child .share-block {
+      margin-top: auto !important;
+    }
     .panel-card {
-      padding: 20px;
+      padding: 22px;
       border-radius: 22px;
       background: rgba(255,255,255,.94);
       border: 1px solid rgba(217,181,109,.12);
@@ -325,6 +340,7 @@ PREMIUM FINAL QA
       min-width: 0;
       height: 100%;
     }
+    .panel-card > :last-child { margin-bottom: 0; }
     .panel-card h2 {
       position: relative;
       padding-bottom: 10px;
@@ -346,7 +362,7 @@ PREMIUM FINAL QA
     }
     .panel-card p { font-size: 13px; line-height: 1.5; }
     .spec-card ul li { margin-bottom: 10px; }
-    .audience-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .audience-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
     .audience-card { display: flex; gap: 14px; align-items: flex-start; }
     .audience-icon {
       display: inline-flex;
@@ -360,9 +376,9 @@ PREMIUM FINAL QA
       font-size: 22px;
       flex: 0 0 46px;
     }
-    .audience-card strong { display: block; margin-bottom: 3px; color: var(--primary); font-size: 16px; }
+    .audience-card strong { display: block; margin-bottom: 3px; color: var(--primary); font-size: 24px; }
     .audience-card p { margin: 0; font-size: 14px; }
-    .contact-box.compact { text-align: center; padding: 20px; }
+    .contact-box.compact { text-align: center; padding: 22px; }
     .contact-box.compact #contactTitle,
     .contact-box.compact #contactIntro,
     .contact-box.compact #urgencyNote { display: none !important; }
@@ -371,7 +387,7 @@ PREMIUM FINAL QA
       grid-template-columns: 82px 1fr;
       gap: 16px;
       align-items: center;
-      margin: 0 auto 18px;
+      margin: 0 auto 16px;
       max-width: 420px;
       text-align: left;
     }
@@ -379,57 +395,52 @@ PREMIUM FINAL QA
     .agent-name { margin: 0 0 2px; color: var(--primary); font-size: 17px; font-weight: 900; }
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 11px; font-weight: 800; }
     .agent-meta { margin: 0; color: var(--text-soft); font-size: 12px; line-height: 1.45; }
-    .cta-actions, .share-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; width: 100%; }
+    .cta-actions, .share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; width:100%; margin-bottom:0; padding-bottom:0; }
     .cta-actions > *, .share-actions > * { width: 100%; }
     .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-width: 0;
-      height: 72px;
-      min-height: 72px;
-      padding: 0 26px;
-      line-height: 1;
-      margin: 0;
-      flex: 0 0 100%;
+      width:100%;
+      height:78px !important;
+      min-height:78px !important;
+      max-height:78px !important;
+      padding:0;
+      border-radius:999px;
+      font-size:30px;
+      margin:0;
     }
-    .cta-actions { margin: 0 0 14px; }
+    .cta-actions { margin:0; padding:0 0 10px; }
     .cta-actions .btn { flex: 0 0 100%; }
     .btn, .share-btn {
       position: relative;
       overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-width: 0;
-      min-height: 74px;
-      height: 74px;
-      padding: 0 26px;
-      border-radius: 999px;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 1;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.34);
-      cursor: pointer;
-      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
-      white-space: nowrap;
-      box-sizing: border-box;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      flex:0 0 100%;
+      min-width:100%;
+      max-width:100%;
+      height:78px !important;
+      min-height:78px !important;
+      max-height:78px !important;
+      padding:0;
+      border-radius:999px;
+      font-weight:900;
+      font-size:30px;
+      line-height:1;
+      box-sizing:border-box;
     }
     .share-actions { align-items: stretch; }
     #copyLinkBtn {
-      width: 100%;
-      min-width: 0;
-      min-height: 74px;
-      height: 74px;
-      margin: 0;
-      padding: 0 26px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
+      margin-bottom:0 !important;
+      width:100%;
+      height:78px !important;
+      min-height:78px !important;
+      max-height:78px !important;
+      padding:0;
+      margin:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
     .share-btn {
       position: relative;
@@ -443,7 +454,7 @@ PREMIUM FINAL QA
       padding: 0 26px;
       border-radius: 999px;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 28px;
       line-height: 1;
       color: #fff;
       border: 1px solid rgba(255,255,255,.34);
@@ -453,19 +464,23 @@ PREMIUM FINAL QA
       background:
         linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 38%),
         linear-gradient(135deg, rgba(54,133,255,.95) 0%, rgba(39,112,228,.92) 52%, rgba(26,83,178,.96) 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.38), 0 16px 30px rgba(34,93,192,.24);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.5), inset 0 -4px 8px rgba(20,60,150,.18), 0 10px 18px rgba(34,93,192,.28), 0 2px 0 rgba(26,83,178,.35);
     }
     .btn::before, .share-btn::before {
       content:none;
     }
     .btn:hover, .share-btn:hover { transform: translateY(-2px) scale(1.01); filter: saturate(1.03); }
+    .btn:active, .share-btn:active {
+      transform: translateY(3px) scale(.985);
+      box-shadow: inset 0 6px 12px rgba(0,0,0,.18), inset 0 -1px 2px rgba(255,255,255,.18), 0 2px 4px rgba(0,0,0,.14) !important;
+    }
     .btn-main {
       color: #fff;
       background:
         linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%),
         linear-gradient(135deg, #e6a565 0%, #d98938 52%, #b96e28 100%);
       border-color: rgba(255,255,255,.42);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.42), 0 18px 36px rgba(195,120,46,.28), 0 0 0 1px rgba(185,110,40,.18);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.55), inset 0 -4px 8px rgba(120,70,20,.18), 0 10px 18px rgba(195,120,46,.30), 0 2px 0 rgba(140,82,30,.35);
     }
     .btn-light, #waBtn, .contact-form .btn-main {
       color: #fff;
@@ -473,7 +488,7 @@ PREMIUM FINAL QA
         linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%),
         linear-gradient(135deg, #63db7d 0%, #35c55d 52%, #1ea84b 100%);
       border-color: rgba(255,255,255,.42);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.42), 0 18px 36px rgba(45,196,92,.26), 0 0 0 1px rgba(24,168,73,.18);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.55), inset 0 -4px 8px rgba(18,120,50,.18), 0 10px 18px rgba(45,196,92,.28), 0 2px 0 rgba(24,168,73,.35);
     }
     .share-btn {
       min-width: 164px;
@@ -482,19 +497,19 @@ PREMIUM FINAL QA
         linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 38%),
         linear-gradient(135deg, rgba(54,133,255,.95) 0%, rgba(39,112,228,.92) 52%, rgba(26,83,178,.96) 100%);
       border-color: rgba(255,255,255,.34);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.38), 0 16px 30px rgba(34,93,192,.24);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.5), inset 0 -4px 8px rgba(20,60,150,.18), 0 10px 18px rgba(34,93,192,.28), 0 2px 0 rgba(26,83,178,.35);
     }
-    .share-block {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      align-items: stretch;
-      justify-items: stretch;
-      width: 100%;
+    /* removed extra wrapper/box around copy button */
+.share-block {
+      padding:0 !important;
+      margin:0 !important;
+      width:100%;
+      min-height:auto;
+      align-self:end;
     }
     .share-note { margin: 0; color: var(--muted); font-size: 12px; text-align: center; line-height: 1.45; max-width: 100%; word-break: break-word; }
-    .contact-form { display: grid; gap: 10px; min-width: 0; }
-    .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .contact-form { display:grid; gap:12px; min-width:0; margin-bottom:12px; }
+    .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .contact-form input, .contact-form textarea {
       width: 100%;
       padding: 14px;
@@ -512,7 +527,7 @@ PREMIUM FINAL QA
       min-height: 74px;
       height: 74px;
       border-radius: 999px;
-      font-size: 18px;
+      font-size: 28px;
       padding: 0 26px;
       box-sizing: border-box;
     }
@@ -568,12 +583,12 @@ PREMIUM FINAL QA
       .hero-display { font-size: clamp(30px, 10vw, 40px); }
       .hero-price-range { gap: 4px; }
       .hero-price-from, .hero-price-to { width: auto; font-size: 28px; }
-      .hero-price-sep { width: auto; text-align: center; padding: 0; font-size: 16px; }
+      .hero-price-sep { width: auto; text-align: center; padding: 0; font-size: 24px; }
       .hero-title { font-size: clamp(30px, 9vw, 38px); }
       .price { font-size: 24px; }
       .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
       .gallery-item { min-height: 96px; aspect-ratio: 1 / 1; }
-      .btn, .share-btn, .contact-form .btn-main { min-height: 64px; height: 64px; font-size: 16px; padding: 0 20px; }
+      .btn, .share-btn, .contact-form .btn-main { min-height: 64px; height: 64px; font-size: 24px; padding: 0 20px; }
       .subtitle, .price-soft, .share-note { font-size: 13px; }
       .top-controls { grid-template-columns: minmax(0,1fr) auto; gap: 8px; }
       .lang-btn { width: 28px; height: 28px; font-size: 9px; }
@@ -670,8 +685,8 @@ PREMIUM FINAL QA
               </div>
 
               <div class="cta-actions">
-                <a class="btn btn-main" id="callBtn" href="tel:+34604158859"><span id="callBtnLabel">Zadzwoń</span></a>
-                <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer"><span id="waBtnLabel">WhatsApp</span></a>
+                <a class="btn btn-main" id="callBtn" href="tel:+34604158859" aria-label="Call"><span id="callBtnLabel" style="font-size:34px;line-height:1;">📞</span></a>
+                <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span id="waBtnLabel" style="font-size:34px;line-height:1;">💬</span></a>
               </div>
             </section>
 
@@ -683,12 +698,12 @@ PREMIUM FINAL QA
                 </div>
                 <input type="email" name="email" id="formEmail" placeholder="Email">
                 <textarea name="message" id="formMessage" placeholder="Napisz wiadomość"></textarea>
-                <button class="btn btn-main" type="submit"><span id="formSubmitLabel">Wyślij przez WhatsApp</span></button>
+                <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel" style="font-size:34px;line-height:1;">✉️</span></button>
               </form>
 
-              <div class="share-block" style="margin-top:18px; padding-top:10px; border-top:1px solid rgba(217,181,109,.18);">
+              <div class="share-block">
                 <div class="share-actions" role="group" aria-label="Share">
-                  <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
+                  <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel" style="font-size:34px;line-height:1;">🔗</span></button>
                 </div>
                 
               </div>
@@ -1300,8 +1315,8 @@ PREMIUM FINAL QA
       setText('agentMeta', ui.agentMeta);
       const callBtn = byId('callBtn');
       if (callBtn) callBtn.href = `tel:${CONTACT_PHONE.replace(/\s+/g, '')}`;
-      setText('callBtnLabel', ui.callBtn);
-      setText('waBtnLabel', ui.waBtn);
+      setText('callBtnLabel', '📞');
+      setText('waBtnLabel', '💬');
       const formName = byId('formName');
       const formPhone = byId('formPhone');
       const formEmail = byId('formEmail');
@@ -1310,8 +1325,8 @@ PREMIUM FINAL QA
       if (formPhone) formPhone.placeholder = ui.formPhone;
       if (formEmail) formEmail.placeholder = ui.formEmail;
       if (formMessage) formMessage.placeholder = ui.formMessage;
-      setText('formSubmitLabel', ui.formSubmit);
-      setText('copyLinkLabel', ui.copyLink);
+      setText('formSubmitLabel', '✉️');
+      setText('copyLinkLabel', '🔗');
       
 
       const waText = getWhatsAppShareText(plot);
