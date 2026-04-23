@@ -75,14 +75,14 @@ PREMIUM FINAL QA
       --container: 1280px;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; background: #f7f5f1 !important; background-image: none !important; }
     body {
       margin: 0;
       overflow-x: hidden;
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
-      background:
-        linear-gradient(180deg,#fcfaf7 0%,var(--bg) 55%,#fff 100%);
+      background: #f7f5f1 !important;
+      background-image: none !important;
       line-height: 1.6;
     }
     img { display: block; max-width: 100%; height: auto; }
@@ -92,9 +92,9 @@ PREMIUM FINAL QA
     ul { margin: 0; padding-left: 0; list-style: none; color: var(--text-soft); }
     ul li { position: relative; padding-left: 28px; margin-bottom: 10px; }
     ul li::before { content: "✔"; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 900; }
-    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
-    .page { padding: 24px 0 80px; }
-    .top-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; background: transparent !important; background-image: none !important; }
+    .page { padding: 24px 0 80px; background: transparent !important; background-image: none !important; }
+    .top-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; background: transparent !important; background-image: none !important; }
     .lang-switcher { display: flex; gap: 10px; align-items: center; }
     .lang-btn {
       width: 42px;
@@ -104,7 +104,7 @@ PREMIUM FINAL QA
       font-size: 12px;
       font-weight: 800;
       cursor: pointer;
-      background: radial-gradient(circle at 30% 28%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.26) 18%, rgba(217,181,109,.96) 42%, rgba(184,146,69,.94) 72%, rgba(118,86,31,.94) 100%);
+      background: linear-gradient(135deg, #d9b56d 0%, #b89245 100%);
       color: #fff;
       box-shadow: 0 14px 30px rgba(0,0,0,.16);
       transition: transform .18s ease, box-shadow .18s ease;
@@ -112,7 +112,7 @@ PREMIUM FINAL QA
     .lang-btn:hover { transform: translateY(-1px) scale(1.03); }
     .lang-btn.active {
       transform: translateY(1px) scale(.98);
-      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.58) 0%, rgba(250,250,250,.96) 34%, rgba(194,200,208,.98) 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #e9edf1 100%);
       color: var(--gold-dark);
     }
     .back-link {
@@ -135,23 +135,63 @@ PREMIUM FINAL QA
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,.40);
-      box-shadow: 0 20px 50px rgba(15,23,42,.08);
-      padding: 20px;
+      background: #fff !important;
+      background-image: none !important;
+      border: 1px solid rgba(24,55,70,.08);
+      box-shadow: 0 18px 40px rgba(15,23,42,.06);
+      padding: 18px;
+    }
+    #propertyPage{
+      background: transparent !important;
+      background-image: none !important;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero-card::before,
+    .hero-card::after,
+    .page::before,
+    .page::after,
+    .container::before,
+    .container::after,
+    #propertyPage::before,
+    #propertyPage::after,
+    .top-controls::before,
+    .top-controls::after,
+    main::before,
+    main::after{
+      content:none !important;
+      display:none !important;
+      background:none !important;
+      background-image:none !important;
+      box-shadow:none !important;
+      border-radius:0 !important;
     }
     .hero-media {
+      background:#dfe6ea;
       position: relative;
       overflow: hidden;
       min-height: 670px;
       aspect-ratio: 16 / 9;
       border-radius: 28px;
-      background: transparent;
-      box-shadow: 0 18px 48px rgba(15,23,42,.14);
+      background: #dfe6ea;
+      box-shadow: none;
       cursor: zoom-in;
     }
     
     .hero-media img { width: 100%; height: 100%; min-height: 670px; object-fit: cover; object-position: center center; display: block; }
+    .hero-media::after {
+      content:"";
+      display:block;
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(8,18,28,0.02) 0%, rgba(10,20,30,0.10) 35%, rgba(12,22,32,0.42) 100%);
+      pointer-events:none;
+      z-index:1;
+    }
+    .hero-media::before{
+      content:none !important;
+      display:none !important;
+    }
     .hero-badge {
       position: absolute;
       top: 22px;
@@ -339,39 +379,84 @@ PREMIUM FINAL QA
     .agent-name { margin: 0 0 2px; color: var(--primary); font-size: 17px; font-weight: 900; }
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 11px; font-weight: 800; }
     .agent-meta { margin: 0; color: var(--text-soft); font-size: 12px; line-height: 1.45; }
-    .cta-actions, .share-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .cta-actions, .share-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; width: 100%; }
+    .cta-actions > *, .share-actions > * { width: 100%; }
+    .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+      height: 72px;
+      min-height: 72px;
+      padding: 0 26px;
+      line-height: 1;
+      margin: 0;
+      flex: 0 0 100%;
+    }
     .cta-actions { margin: 0 0 14px; }
-    .cta-actions .btn { flex: 1 1 calc(50% - 6px); min-width: 0; }
+    .cta-actions .btn { flex: 0 0 100%; }
     .btn, .share-btn {
       position: relative;
       overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 16px 26px;
-      min-height: 58px;
+      width: 100%;
+      min-width: 0;
+      min-height: 74px;
+      height: 74px;
+      padding: 0 26px;
       border-radius: 999px;
       font-weight: 900;
       font-size: 18px;
-      border: 1px solid rgba(255,255,255,.46);
+      line-height: 1;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.34);
       cursor: pointer;
       transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
       white-space: nowrap;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.34), 0 18px 36px rgba(15,23,42,.16);
+      box-sizing: border-box;
+    }
+    .share-actions { align-items: stretch; }
+    #copyLinkBtn {
+      width: 100%;
+      min-width: 0;
+      min-height: 74px;
+      height: 74px;
+      margin: 0;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .share-btn {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+      min-height: 72px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.34);
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+      white-space: nowrap;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 38%),
+        linear-gradient(135deg, rgba(54,133,255,.95) 0%, rgba(39,112,228,.92) 52%, rgba(26,83,178,.96) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.38), 0 16px 30px rgba(34,93,192,.24);
     }
     .btn::before, .share-btn::before {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      top: 7px;
-      height: 45%;
-      border-radius: inherit;
-      background: linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,0));
-      pointer-events: none;
+      content:none;
     }
     .btn:hover, .share-btn:hover { transform: translateY(-2px) scale(1.01); filter: saturate(1.03); }
     .btn-main {
@@ -399,7 +484,14 @@ PREMIUM FINAL QA
       border-color: rgba(255,255,255,.34);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.38), 0 16px 30px rgba(34,93,192,.24);
     }
-    .share-block { display: grid; grid-template-columns: 1fr; gap: 14px; align-items: start; justify-items: center; }
+    .share-block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items: stretch;
+      justify-items: stretch;
+      width: 100%;
+    }
     .share-note { margin: 0; color: var(--muted); font-size: 12px; text-align: center; line-height: 1.45; max-width: 100%; word-break: break-word; }
     .contact-form { display: grid; gap: 10px; min-width: 0; }
     .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -415,7 +507,15 @@ PREMIUM FINAL QA
       font-size: 15px;
     }
     .contact-form textarea { min-height: 120px; resize: vertical; }
-    .contact-form .btn-main { width: 100%; min-height: 52px; border-radius: 12px; }
+    .contact-form .btn-main {
+      width: 100%;
+      min-height: 74px;
+      height: 74px;
+      border-radius: 999px;
+      font-size: 18px;
+      padding: 0 26px;
+      box-sizing: border-box;
+    }
     .media-lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(5,10,16,.94); z-index: 9999; }
     .media-lightbox.open { display: flex; }
     .media-lightbox-inner { position: relative; width: min(1100px, 92vw); max-height: 90vh; border-radius: 24px; overflow: hidden; background: #0b141c; box-shadow: 0 28px 70px rgba(0,0,0,.35); }
@@ -454,7 +554,7 @@ PREMIUM FINAL QA
       .lead-wrap { padding: 0 2px; }
       .lead { font-size: 14px; line-height: 1.62; text-align: left; }
       .cta-actions { flex-direction: column; }
-      .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main { width: 100%; }
+      .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main { width: 100%; min-width: 0; }
       .share-block { grid-template-columns: 1fr; gap: 10px; }
       .back-link { width: 100%; justify-content: center; position: static; padding: 11px 14px; font-size: 14px; }
     }
@@ -473,7 +573,7 @@ PREMIUM FINAL QA
       .price { font-size: 24px; }
       .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
       .gallery-item { min-height: 96px; aspect-ratio: 1 / 1; }
-      .btn, .share-btn { min-height: 54px; font-size: 16px; padding: 14px 20px; }
+      .btn, .share-btn, .contact-form .btn-main { min-height: 64px; height: 64px; font-size: 16px; padding: 0 20px; }
       .subtitle, .price-soft, .share-note { font-size: 13px; }
       .top-controls { grid-template-columns: minmax(0,1fr) auto; gap: 8px; }
       .lang-btn { width: 28px; height: 28px; font-size: 9px; }
@@ -573,8 +673,7 @@ PREMIUM FINAL QA
                 <a class="btn btn-main" id="callBtn" href="tel:+34604158859"><span id="callBtnLabel">Zadzwoń</span></a>
                 <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer"><span id="waBtnLabel">WhatsApp</span></a>
               </div>
-
-              </section>
+            </section>
 
             <section class="panel-card">
               <form class="contact-form" id="contactForm" action="#" method="post">
