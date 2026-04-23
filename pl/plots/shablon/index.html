@@ -376,7 +376,10 @@ PREMIUM FINAL QA
       font-size: 22px;
       flex: 0 0 46px;
     }
-    .audience-card strong { display: block; margin-bottom: 3px; color: var(--primary); font-size: 24px; }
+    .audience-card strong { display:block; margin:0 0 8px; color:var(--primary); font-size:24px; line-height:1.28; letter-spacing:-.015em; }
+    .audience-card div{display:flex;flex-direction:column;justify-content:flex-start;gap:0;}
+    .audience-card{align-items:flex-start;min-height:144px;}
+    .audience-card p{margin:0; font-size:14px; line-height:1.62;} 
     .audience-card p { margin: 0; font-size: 14px; }
     .contact-box.compact { text-align: center; padding: 22px; }
     .contact-box.compact #contactTitle,
@@ -394,8 +397,8 @@ PREMIUM FINAL QA
     .agent-avatar { width:82px; height:82px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.65); }
     .agent-name { margin: 0 0 2px; color: var(--primary); font-size: 17px; font-weight: 900; }
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 11px; font-weight: 800; }
-    .agent-meta { margin: 0; color: var(--text-soft); font-size: 12px; line-height: 1.45; }
-    .cta-actions, .share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; width:100%; margin-bottom:0; padding-bottom:0; }
+    .agent-meta { margin:0; color:var(--text-soft); font-size:12px; line-height:1.6; }
+    .cta-actions, .share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:18px; width:100%; margin:0; padding:0; }
     .cta-actions > *, .share-actions > * { width: 100%; }
     .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main {
       width:100%;
@@ -407,9 +410,10 @@ PREMIUM FINAL QA
       font-size:30px;
       margin:0;
     }
-    .cta-actions { margin:0; padding:0 0 10px; }
+    .cta-actions { margin:0; padding:6px 0 6px; }
     .cta-actions .btn { flex: 0 0 100%; }
     .btn, .share-btn {
+      vertical-align:middle;
       position: relative;
       overflow: hidden;
       display:flex;
