@@ -140,11 +140,18 @@ PREMIUM FINAL QA
       box-shadow: 0 20px 50px rgba(15,23,42,.08);
       padding: 20px;
     }
-    .hero-media {$1background: transparent;$2box-shadow:0 18px 48px rgba(15,23,42,.14);
+    .hero-media {
+      position: relative;
+      overflow: hidden;
+      min-height: 670px;
+      aspect-ratio: 16 / 9;
+      border-radius: 28px;
+      background: transparent;
+      box-shadow: 0 18px 48px rgba(15,23,42,.14);
       cursor: zoom-in;
     }
     
-    .hero-media img { width: 100%; height: 100%; min-height: 670px; object-fit: cover; object-position: center center; }
+    .hero-media img { width: 100%; height: 100%; min-height: 670px; object-fit: cover; object-position: center center; display: block; }
     .hero-badge {
       position: absolute;
       top: 22px;
@@ -229,9 +236,9 @@ PREMIUM FINAL QA
     .hero-price-sep { font-size: 32px; font-weight: 900; color: #fff; opacity: .92; }
     .hero-price-note, .hero-price-meta { display: block; font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.96); font-weight: 700; }
     .hero-price-meta { margin-top: 2px; font-size: 12px; opacity: .94; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: -44px; padding: 0 18px 0; position: relative; z-index: 5; }
-    .gallery-item { overflow:hidden; border-radius:18px; background:transparent; border:1px solid rgba(217,181,109,.35); box-shadow:0 8px 18px rgba(15,23,42,.06); cursor: zoom-in; min-height: 118px; aspect-ratio: 2.15 / 1; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:16px; padding:0; position:relative; z-index:1; }
+    .gallery-item { overflow:hidden; border-radius:18px; background:#fff; border:1px solid rgba(217,181,109,.28); box-shadow:0 8px 18px rgba(15,23,42,.06); cursor:zoom-in; min-height:118px; aspect-ratio:1.35 / 1; }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
     .gallery-item:hover img { transform: scale(1.05); }
     .content { margin-top: 6px; }
     .hero-title, .subtitle, .price, .price-soft { text-align: center; }
@@ -266,8 +273,8 @@ PREMIUM FINAL QA
       flex: 0 0 40px;
     }
     .kpi .value { color: var(--primary); font-size: clamp(18px, 2.2vw, 22px); font-weight: 900; }
-    .lead-wrap { max-width: 1280px; margin: 0 auto 18px; padding: 0 8px; }
-    .lead { font-size: 15px; line-height: 1.45; margin-bottom: 1px; text-align: left; color: #606b75; }
+    .lead-wrap { max-width: 1100px; margin: 10px auto 28px; padding: 0 18px; }
+    .lead { font-size: 15px; line-height: 1.72; margin-bottom: 14px; text-align: justify; text-justify: inter-word; max-width: 980px; margin-left: auto; margin-right: auto; color: #606b75; hyphens: auto; }
     .bottom-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px; align-items: stretch; }
     .panel-card {
       padding: 20px;
@@ -445,7 +452,7 @@ PREMIUM FINAL QA
       .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin-top: 10px; }
       .gallery-item { min-height: 110px; border-radius: 14px; aspect-ratio: 1 / 1; }
       .lead-wrap { padding: 0 2px; }
-      .lead { font-size: 14px; line-height: 1.42; }
+      .lead { font-size: 14px; line-height: 1.62; text-align: left; }
       .cta-actions { flex-direction: column; }
       .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main { width: 100%; }
       .share-block { grid-template-columns: 1fr; gap: 10px; }
@@ -526,13 +533,6 @@ PREMIUM FINAL QA
           <div class="price" id="priceRange">€ 0</div>
           <div class="price-soft" id="priceSoft">Parametry</div>
 
-          <div class="kpi-row" aria-label="Kluczowe parametry działki">
-            <div class="kpi"><strong>€</strong><div class="value" id="kpi1">0</div></div>
-            <div class="kpi"><strong>M²</strong><div class="value" id="kpi2">0 m²</div></div>
-            <div class="kpi"><strong>📍</strong><div class="value" id="kpi3">Costa Blanca</div></div>
-            <div class="kpi"><strong>✓</strong><div class="value" id="kpi4">Zweryfik.</div></div>
-          </div>
-
           <div class="lead-wrap">
             <p class="lead" id="lead1"></p>
             <p class="lead" id="lead2"></p>
@@ -543,7 +543,7 @@ PREMIUM FINAL QA
             <section class="panel-card spec-card" id="specSection">
               <h2 id="specTitle">Co otrzymuje kupujący</h2>
               <ul id="specList"></ul>
-              <p id="specParagraph"></p>
+              
             </section>
 
             <section class="panel-card" id="audienceSection">
@@ -591,11 +591,7 @@ PREMIUM FINAL QA
                 <div class="share-actions" role="group" aria-label="Share">
                   <button class="share-btn" type="button" id="copyLinkBtn"><span id="copyLinkLabel">Kopiuj link</span></button>
                 </div>
-                <p class="share-note">
-                  <strong id="shareNoteTitle"></strong><br>
-                  <span id="shareNoteStrong"></span><br>
-                  <span id="shareNoteText"></span>
-                </p>
+                
               </div>
             </section>
           </div>
@@ -1167,12 +1163,8 @@ PREMIUM FINAL QA
       });
 
       const specItems = Array.isArray(p.offerIncludes) ? p.offerIncludes : [];
-      const specParagraph = (!isMinimalLayout && (p.seoDescription || p.desc)) || '';
-      setText('specTitle', ui.specTitle);
-      setHtml('specList', specItems.map(item => `<li>${item}</li>`).join(''));
-      setText('specParagraph', specParagraph);
       const specSection = byId('specSection');
-      if (specSection) specSection.style.display = (!isMinimalLayout && (specItems.length || specParagraph)) ? '' : 'none';
+      if (specSection) specSection.style.display = (!isMinimalLayout && specItems.length) ? '' : 'none';
 
       const audience = Array.isArray(p.audience) ? p.audience.slice(0, 3) : [];
       setText('audienceTitle', ui.audienceTitle);
@@ -1212,9 +1204,7 @@ PREMIUM FINAL QA
       if (formMessage) formMessage.placeholder = ui.formMessage;
       setText('formSubmitLabel', ui.formSubmit);
       setText('copyLinkLabel', ui.copyLink);
-      setText('shareNoteTitle', p.title);
-      setText('shareNoteStrong', `${p.title} · ${price}`);
-      setText('shareNoteText', ui.shareNoteText);
+      
 
       const waText = getWhatsAppShareText(plot);
       const waBtn = byId('waBtn');
