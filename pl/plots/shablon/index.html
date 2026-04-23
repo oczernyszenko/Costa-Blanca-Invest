@@ -811,8 +811,13 @@
           const res = await fetch(url, { cache: 'no-store' });
           if (!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
           const data = await res.json();
-          if (!Array.isArray(data)) throw new Error(`Invalid JSON @ ${url}`);
-          return data;
+
+          if (Array.isArray(data)) return data;
+          if (Array.isArray(data?.plots)) return data.plots;
+          if (Array.isArray(data?.items)) return data.items;
+          if (Array.isArray(data?.data)) return data.data;
+
+          throw new Error(`Invalid JSON shape @ ${url}`);
         } catch (err) {
           errors.push(String(err));
         }
@@ -882,7 +887,7 @@
         }
       }
 
-      return result.slice(0, 4);
+      return result; // don't cut before validation, we'll enforce exactly 4 real images later
     }
 
     const imageCache = new Map();
@@ -908,22 +913,22 @@
       for (const src of candidates) {
         if (existing.length >= 4) break;
         if (existing.includes(src)) continue;
-        if (existing.length === 0) {
-          existing.push(src);
-          continue;
-        }
         if (await imageExists(src)) existing.push(src);
       }
 
       if (!existing.length) existing.push(mainImage || CATEGORY_FALLBACK_IMAGE);
 
-      const gallery = existing.map((src, index) => ({
+      while (existing.length < 4) {
+        existing.push(existing[existing.length - 1]);
+      }
+
+      const gallery = existing.slice(0,4).map((src,index)=>({
         src,
-        alt: index === 0 ? localized.alt : `${localized.title} ${index + 1}`
+        alt: index===0 ? localized.alt : `${localized.title} ${index+1}`
       }));
 
       return {
-        mainImage: gallery[0]?.src || mainImage || CATEGORY_FALLBACK_IMAGE,
+        mainImage: gallery[0].src,
         gallery
       };
     }
@@ -1218,6 +1223,7 @@
       const shareProbeText = getCopyShareText(shareProbe);
       tests.push(typeof shareProbeText === 'string' && shareProbeText.includes('http'));
       tests.push(getWhatsAppShareText(FALLBACK_PLOTS[0]).includes('📷'));
+      tests.push(slugify('/pl/plots/test///') === '/pl/plots/test/');
       const fd = new FormData();
       fd.set('name', 'Test');
       fd.set('phone', '123');
