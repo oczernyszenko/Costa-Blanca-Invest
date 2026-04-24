@@ -187,7 +187,7 @@
       transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .lang-btn:hover { transform: translateY(-1px) scale(1.03); }
+    .lang-btn:hover { transform: translateY(-2px) scale(1.01); filter: brightness(1.04); }
 
     .lang-btn.active {
       transform: translateY(1px) scale(.98);
@@ -634,18 +634,37 @@
     }
 
     .premium-contact-actions .btn {
-      width: auto;
-      min-width: 142px;
-      max-width: none;
-      flex: 0 0 auto;
-      height: 54px !important;
-      min-height: 54px !important;
-      max-height: 54px !important;
-      padding: 0 24px;
-      font-size: 15px;
-      border-radius: 999px;
-      gap: 8px;
-    }
+all: unset;
+box-sizing:border-box;
+width:auto;
+min-width:142px;
+height:54px;
+padding:0 24px;
+border-radius:999px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+font-size:15px;
+font-weight:900;
+line-height:1;
+color:#fff;
+cursor:pointer;
+border:1px solid rgba(255,255,255,.35);
+}
+#callBtn{background:linear-gradient(135deg,#d9b56d 0%,#b89245 100%);border:1px solid rgba(255,255,255,.55)}
+#waBtn{background:linear-gradient(135deg,#63db7d 0%,#1ea84b 100%)}
+.message-link-row .btn-main{background:linear-gradient(135deg,#e6a565 0%,#c9782e 100%);border:1px solid rgba(255,255,255,.35);box-shadow:none!important;text-shadow:none!important}
+#copyLinkBtn{background:linear-gradient(135deg,#4e8fb2 0%,#28586a 100%);border:1px solid rgba(255,255,255,.35)}
+#contactForm .btn-main:hover{
+transform:translateY(-2px) scale(1.02) !important;
+background-image:linear-gradient(135deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.18) 35%,rgba(255,255,255,.04) 55%,rgba(255,255,255,.28) 100%),linear-gradient(135deg,#e6a565 0%,#c9782e 100%);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(255,255,255,.18) inset,0 8px 24px rgba(0,0,0,.14) !important;
+border-color:rgba(255,255,255,.55);
+filter:brightness(1.06);
+}
 
     .premium-contact-form {
       display: grid;
@@ -691,67 +710,49 @@
       border-radius: 18px;
       resize: vertical;
     }
+    .message-link-row{display:flex;justify-content:center;align-items:center;gap:12px;grid-column:1/-1;flex-wrap:wrap;margin-top:10px;position:relative;z-index:5}
+.message-link-row .btn-main,.message-link-row .share-btn{
+pointer-events:auto;
+position:relative;
+z-index:5;
+all:unset;
+box-sizing:border-box;
+width:auto;
+min-width:142px;
+height:54px;
+padding:0 24px;
+border-radius:999px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+font-size:15px;
+font-weight:900;
+color:#fff;
+cursor:pointer;
+transition:all .25s ease;
+}
 
-    .premium-contact-form input[name="email"],
-    .premium-contact-form .btn-main {
+.premium-contact-form .btn-main {
+      width: auto !important;
+      min-width: 142px !important;
+      max-width: none !important;
+      justify-self: center;
       grid-column: 1 / -1;
-    }
-
-    .premium-contact-form .btn-main {
-      width: 100%;
-      min-width: 100%;
-      height: 56px !important;
-      min-height: 56px !important;
-      max-height: 56px !important;
-      border-radius: 999px;
-      font-size: 15px;
-      margin-top: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #e3bd63 0%, #d4a341 52%, #bd8f2f 100%);
-      box-shadow: inset 0 3px 6px rgba(255,255,255,.46), inset 0 -4px 8px rgba(120,80,20,.15), 0 14px 24px rgba(176,124,43,.24);
-    }
-
-    .btn-main:hover,
-    .btn-light:hover,
-    .share-btn:hover {
-      animation: vipSoftPulse 1.6s ease infinite;
-    }
-
-    .premium-share-area {
-      max-width: 760px;
-      margin: 24px auto 0;
-      padding-top: 22px;
-      border-top: 1px solid rgba(24,55,70,.10);
-      text-align: center;
-    }
-
-    .premium-share-area .share-actions {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 12px;
-    }
-
-    .premium-share-area .share-btn {
-      width: auto;
-      min-width: 132px;
-      max-width: none;
-      flex: 0 0 auto;
       height: 54px !important;
       min-height: 54px !important;
       max-height: 54px !important;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-size: 15px;
-      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #28586a 0%, #183746 100%);
-      box-shadow: inset 0 3px 6px rgba(255,255,255,.22), 0 14px 28px rgba(24,55,70,.22);
+      padding: 0 24px !important;
+      border-radius: 999px !important;
+      font-size: 15px !important;
+      font-weight: 900 !important;
+      color: #fff !important;
+      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #e6a565 0%, #d98938 52%, #b96e28 100%) !important;
+      border: 1px solid rgba(255,255,255,.42) !important;
+      box-shadow:none !important;
     }
 
-    .share-property-summary {
-      margin: 0;
-      color: #8a98a5;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.55;
-    }
+    
 
     .sticky-inquiry-bar {
       position: fixed;
@@ -1034,11 +1035,13 @@
       padding: 0;
     }
 
-    .cta-actions > *,
-    .share-actions > * { width: 100%; }
+    .cta-actions > * { width: 100%; }
+
+    .premium-share-area .share-actions > * {
+      width: auto;
+    }
 
     .cta-actions .btn,
-    .share-actions .share-btn,
     .contact-form .btn-main {
       width: 100%;
       height: 78px !important;
@@ -1053,8 +1056,7 @@
     .cta-actions { margin: 0; padding: 6px 0 6px; }
     .cta-actions .btn { flex: 0 0 100%; }
 
-    .btn,
-    .share-btn {
+    .btn {
       vertical-align: middle;
       position: relative;
       overflow: hidden;
@@ -1078,43 +1080,37 @@
       border: 1px solid rgba(255,255,255,.34);
     }
 
-    .btn::before,
-    .share-btn::before { content: none; }
+    .btn::before { content:none; }
 
-    .btn:hover,
-    .share-btn:hover {
-      transform: translateY(-2px) scale(1.01);
-      filter: saturate(1.03);
+    .lang-btn,
+    .premium-contact-actions .btn,
+    .message-link-row .btn-main,
+    .message-link-row .share-btn,
+    .sticky-inquiry-btn {
+      transition: transform .25s ease, filter .25s ease, box-shadow .25s ease;
     }
 
-    .btn:active,
-    .share-btn:active {
-      transform: translateY(3px) scale(.985);
-      box-shadow: inset 0 6px 12px rgba(0,0,0,.18), inset 0 -1px 2px rgba(255,255,255,.18), 0 2px 4px rgba(0,0,0,.14) !important;
-    }
+    .lang-btn:hover,
+.premium-contact-actions .btn:hover,
+.message-link-row .btn-main:hover,
+.message-link-row .share-btn:hover,
+.sticky-inquiry-btn:hover {
+transform:translateY(-2px) scale(1.02);
+background-image:linear-gradient(135deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.18) 35%,rgba(255,255,255,.04) 55%,rgba(255,255,255,.28) 100%);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(255,255,255,.18) inset,0 8px 24px rgba(0,0,0,.14);
+border-color:rgba(255,255,255,.55);
+filter:brightness(1.06);
+}
 
-    .btn-main {
-      color: #fff;
-      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #e6a565 0%, #d98938 52%, #b96e28 100%);
-      border-color: rgba(255,255,255,.42);
-      box-shadow: inset 0 3px 6px rgba(255,255,255,.55), inset 0 -4px 8px rgba(120,70,20,.18), 0 10px 18px rgba(195,120,46,.30), 0 2px 0 rgba(140,82,30,.35);
-    }
-
-    .btn-light,
-    #waBtn,
-    .contact-form .btn-main {
-      color: #fff;
-      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #63db7d 0%, #35c55d 52%, #1ea84b 100%);
-      border-color: rgba(255,255,255,.42);
-      box-shadow: inset 0 3px 6px rgba(255,255,255,.55), inset 0 -4px 8px rgba(18,120,50,.18), 0 10px 18px rgba(45,196,92,.28), 0 2px 0 rgba(24,168,73,.35);
-    }
-
-    .share-btn {
-      min-width: 164px;
-      color: #fff;
-      background: linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, rgba(54,133,255,.95) 0%, rgba(39,112,228,.92) 52%, rgba(26,83,178,.96) 100%);
-      border-color: rgba(255,255,255,.34);
-      box-shadow: inset 0 3px 6px rgba(255,255,255,.5), inset 0 -4px 8px rgba(20,60,150,.18), 0 10px 18px rgba(34,93,192,.28), 0 2px 0 rgba(26,83,178,.35);
+    .lang-btn:active,
+    .premium-contact-actions .btn:active,
+    .message-link-row .btn-main:active,
+    .message-link-row .share-btn:active,
+    .sticky-inquiry-btn:active {
+      transform: translateY(2px) scale(.985);
+      filter: brightness(.98);
     }
 
     .share-block {
@@ -1502,7 +1498,7 @@
         height: 74px;
       }
 
-      .share-btn { min-width: 100%; }
+      .share-btn { min-width: 164px; }
 
       .sticky-inquiry-bar {
         grid-template-columns: 1fr 48px 48px;
@@ -1620,15 +1616,11 @@
               <input type="tel" name="phone" id="formPhone" placeholder="Telefon" required>
               <input type="email" name="email" id="formEmail" placeholder="Email">
               <textarea name="message" id="formMessage" placeholder="Jakiej nieruchomości szukasz?"></textarea>
-              <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel">Wyślij przez WhatsApp</span></button>
-            </form>
-
-            <div class="premium-share-area">
-              <div class="share-actions" role="group" aria-label="Share">
-                <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel">Kopiuj link</span></button>
-              </div>
-              <p class="share-property-summary" id="sharePropertySummary"></p>
-            </div>
+              <div class="message-link-row">
+  <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel">✉️ Wyślij wiadomość</span></button>
+  <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel">🔗</span></button>
+</div>
+</form>
           </section>
         </div>
       </div>
@@ -1802,8 +1794,8 @@
         formPhone: 'Telefon',
         formEmail: 'Email',
         formMessage: 'Napisz wiadomość',
-        formSubmit: 'Wyślij przez WhatsApp',
-        copyLink: 'Kopiuj link',
+        formSubmit: '✉️ Wyślij wiadomość',
+        copyLink: '🔗 Link',
         shareCopied: 'Skopiowano',
         shareNoteText: 'Udostępnianie pokazuje główne zdjęcie, tytuł i cenę oferty.',
         urgencyNote: 'Dostępność i szczegóły warto potwierdzić bezpośrednio',
