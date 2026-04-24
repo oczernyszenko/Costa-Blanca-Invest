@@ -487,25 +487,227 @@
 
     .bottom-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
       margin-top: 16px;
       align-items: stretch;
     }
 
-    #contact,
-    .bottom-grid > section:last-child {
+    .premium-contact-section {
+      margin-top: 32px;
+      padding: 42px 44px 46px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(217,181,109,.16);
+      box-shadow: 0 24px 70px rgba(15,23,42,.08);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-contact-section::before {
+      content: "";
+      position: absolute;
+      left: 44px;
+      top: 118px;
+      width: 72px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      margin: 0 auto 18px;
+      padding: 0 20px;
+      border-radius: 999px;
+      color: var(--gold-dark);
+      background: rgba(217,181,109,.10);
+      border: 1px solid rgba(217,181,109,.24);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .premium-contact-section #contactTitle {
+      margin: 0 0 18px;
+      color: var(--primary);
+      font-size: clamp(34px, 4.2vw, 48px);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .premium-contact-section #contactIntro {
+      max-width: 920px;
+      margin: 0 auto 22px;
+      color: #5f6f7e;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .premium-agent-box {
+      display: grid;
+      grid-template-columns: 1fr 118px;
+      gap: 24px;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto 28px;
+      padding: 24px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(217,181,109,.16);
+      box-shadow: 0 18px 46px rgba(15,23,42,.06);
+      text-align: left;
+    }
+
+    .premium-agent-box .agent-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,.88);
+      box-shadow: 0 14px 38px rgba(15,23,42,.16);
+    }
+
+    .premium-agent-box .agent-name {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -.035em;
+    }
+
+    .premium-agent-box .agent-role {
+      margin: 0 0 10px;
+      color: var(--gold-dark);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .premium-agent-box .agent-meta {
+      margin: 0;
+      color: #62707c;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .premium-contact-actions {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin: 0 auto 22px;
+      flex-wrap: wrap;
     }
 
-    #contact .cta-actions {
-      margin-top: auto;
-      padding-bottom: 0;
+    .premium-contact-actions .btn {
+      width: auto;
+      min-width: 142px;
+      max-width: none;
+      flex: 0 0 auto;
+      height: 54px !important;
+      min-height: 54px !important;
+      max-height: 54px !important;
+      padding: 0 24px;
+      font-size: 15px;
+      border-radius: 999px;
+      gap: 8px;
     }
 
-    .bottom-grid > section:last-child .contact-form { margin-bottom: 14px; }
-    .bottom-grid > section:last-child .share-block { margin-top: auto !important; }
+    .premium-contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 1160px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .premium-contact-form input,
+    .premium-contact-form textarea {
+      width: 100%;
+      border: 1px solid rgba(24,55,70,.12);
+      background: rgba(255,255,255,.78);
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 500;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.75);
+    }
+
+    .premium-contact-form input {
+      min-height: 54px;
+      padding: 0 18px;
+      border-radius: 18px;
+    }
+
+    .premium-contact-form textarea {
+      grid-column: 1 / -1;
+      min-height: 128px;
+      padding: 18px;
+      border-radius: 18px;
+      resize: vertical;
+    }
+
+    .premium-contact-form input[name="email"],
+    .premium-contact-form .btn-main {
+      grid-column: 1 / -1;
+    }
+
+    .premium-contact-form .btn-main {
+      width: 100%;
+      min-width: 100%;
+      height: 56px !important;
+      min-height: 56px !important;
+      max-height: 56px !important;
+      border-radius: 999px;
+      font-size: 15px;
+      margin-top: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #e3bd63 0%, #d4a341 52%, #bd8f2f 100%);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.46), inset 0 -4px 8px rgba(120,80,20,.15), 0 14px 24px rgba(176,124,43,.24);
+    }
+
+    .premium-share-area {
+      max-width: 760px;
+      margin: 24px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(24,55,70,.10);
+      text-align: center;
+    }
+
+    .premium-share-area .share-actions {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .premium-share-area .share-btn {
+      width: auto;
+      min-width: 132px;
+      max-width: none;
+      flex: 0 0 auto;
+      height: 54px !important;
+      min-height: 54px !important;
+      max-height: 54px !important;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 15px;
+      background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #28586a 0%, #183746 100%);
+      box-shadow: inset 0 3px 6px rgba(255,255,255,.22), 0 14px 28px rgba(24,55,70,.22);
+    }
+
+    .share-property-summary {
+      margin: 0;
+      color: #8a98a5;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.55;
+    }
 
     .panel-card {
       padding: 22px;
@@ -940,9 +1142,41 @@
       .subtitle { font-size: 15px; }
       .price { font-size: 28px; }
 
-      .contact-form-grid {
+      .contact-form-grid,
+      .premium-contact-form {
         grid-template-columns: 1fr;
         gap: 12px;
+      }
+
+      .premium-contact-section {
+        padding: 30px 18px 34px;
+      }
+
+      .premium-contact-section::before {
+        display: none;
+      }
+
+      .premium-agent-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        padding: 22px 18px;
+      }
+
+      .premium-agent-box .agent-avatar {
+        order: -1;
+        width: 96px;
+        height: 96px;
+      }
+
+      .premium-contact-actions {
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .premium-contact-actions .btn {
+        min-width: 0;
+        flex: 1 1 140px;
       }
 
       .gallery-grid {
@@ -1161,45 +1395,42 @@
                 <div class="audience-card"><span class="audience-icon">🏢</span><div><strong id="audienceCard3Title"></strong><p id="audienceCard3Text"></p></div></div>
               </div>
             </section>
-
-            <section class="panel-card contact-box compact" id="contact">
-              <div class="urgency-note" id="urgencyNote"></div>
-              <h2 id="contactTitle">Otrzymaj szczegóły działki</h2>
-              <p id="contactIntro"></p>
-
-              <div class="agent-card">
-                <img class="agent-avatar" src="https://costa-blanca-invest.com/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
-                <div>
-                  <div class="agent-name">Olga Chernyshenko</div>
-                  <div class="agent-role" id="agentRole"></div>
-                  <p class="agent-meta" id="agentMeta"></p>
-                </div>
-              </div>
-
-              <div class="cta-actions">
-                <a class="btn btn-main" id="callBtn" href="tel:+34604158859" aria-label="Call"><span id="callBtnLabel" style="font-size:34px;line-height:1;">📞</span></a>
-                <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span id="waBtnLabel" style="font-size:34px;line-height:1;">💬</span></a>
-              </div>
-            </section>
-
-            <section class="panel-card">
-              <form class="contact-form" id="contactForm" action="#" method="post">
-                <div class="contact-form-grid">
-                  <input type="text" name="name" id="formName" placeholder="Imię" required>
-                  <input type="tel" name="phone" id="formPhone" placeholder="Telefon" required>
-                </div>
-                <input type="email" name="email" id="formEmail" placeholder="Email">
-                <textarea name="message" id="formMessage" placeholder="Napisz wiadomość"></textarea>
-                <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel" style="font-size:34px;line-height:1;">✉️</span></button>
-              </form>
-
-              <div class="share-block">
-                <div class="share-actions" role="group" aria-label="Share">
-                  <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel" style="font-size:34px;line-height:1;">🔗</span></button>
-                </div>
-              </div>
-            </section>
           </div>
+
+          <section class="premium-contact-section" id="contact">
+            <div class="contact-pill" id="urgencyNote">Wybrane apartamenty dostępne</div>
+            <h2 id="contactTitle">Otrzymaj aktualną ofertę</h2>
+            <p id="contactIntro">Skontaktuj się, aby otrzymać dostępne apartamenty, ceny oraz rzuty — dopasowane do Twojego budżetu i celu zakupu.</p>
+
+            <div class="premium-agent-box">
+              <div>
+                <div class="agent-name">Olga Chernyshenko</div>
+                <div class="agent-role" id="agentRole"></div>
+                <p class="agent-meta" id="agentMeta"></p>
+              </div>
+              <img class="agent-avatar" src="https://costa-blanca-invest.com/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
+            </div>
+
+            <div class="premium-contact-actions">
+              <a class="btn btn-main" id="callBtn" href="tel:+34604158859" aria-label="Call"><span id="callBtnLabel">📞 Zadzwoń</span></a>
+              <a class="btn btn-light" id="waBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span id="waBtnLabel">💬 WhatsApp</span></a>
+            </div>
+
+            <form class="premium-contact-form" id="contactForm" action="#" method="post">
+              <input type="text" name="name" id="formName" placeholder="Imię" required>
+              <input type="tel" name="phone" id="formPhone" placeholder="Telefon" required>
+              <input type="email" name="email" id="formEmail" placeholder="Email">
+              <textarea name="message" id="formMessage" placeholder="Jakiej nieruchomości szukasz?"></textarea>
+              <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel">Wyślij przez WhatsApp</span></button>
+            </form>
+
+            <div class="premium-share-area">
+              <div class="share-actions" role="group" aria-label="Share">
+                <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel">Kopiuj link</span></button>
+              </div>
+              <p class="share-property-summary" id="sharePropertySummary"></p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -1958,8 +2189,8 @@
       const callBtn = byId('callBtn');
       if (callBtn) callBtn.href = `tel:${CONTACT_PHONE.replace(/\s+/g, '')}`;
 
-      setText('callBtnLabel', '📞');
-      setText('waBtnLabel', '💬');
+      setText('callBtnLabel', `📞 ${ui.callBtn}`);
+      setText('waBtnLabel', `💬 ${ui.waBtn}`);
 
       const formName = byId('formName');
       const formPhone = byId('formPhone');
@@ -1971,8 +2202,9 @@
       if (formEmail) formEmail.placeholder = ui.formEmail;
       if (formMessage) formMessage.placeholder = ui.formMessage;
 
-      setText('formSubmitLabel', '✉️');
-      setText('copyLinkLabel', '🔗');
+      setText('formSubmitLabel', ui.formSubmit);
+      setText('copyLinkLabel', ui.copyLink);
+      setText('sharePropertySummary', `${p.title}<br>${price}<br>${p.meta || 'Costa Blanca'}${area ? ' · ' + area : ''}`);
 
       const waText = getWhatsAppShareText(plot);
       const waBtn = byId('waBtn');
@@ -2095,7 +2327,7 @@
               await navigator.clipboard.writeText(text);
               setText('copyLinkLabel', UI[currentLang].shareCopied);
               setTimeout(() => {
-                setText('copyLinkLabel', '🔗');
+                setText('copyLinkLabel', UI[currentLang].copyLink);
               }, 1500);
               return;
             }
