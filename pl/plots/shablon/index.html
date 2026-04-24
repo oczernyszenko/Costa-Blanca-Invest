@@ -1827,8 +1827,8 @@ filter:brightness(1.06);
         formPhone: 'Phone',
         formEmail: 'Email',
         formMessage: 'Write a message',
-        formSubmit: '✉️ Wyślij',
-        copyLink: 'Copy link',
+        formSubmit: '✉️ Send',
+        copyLink: '🔗 Link',
         shareCopied: 'Copied',
         shareNoteText: 'Sharing shows the main image, title and price of the property.',
         urgencyNote: 'Availability and details should be confirmed directly',
@@ -1858,8 +1858,8 @@ filter:brightness(1.06);
         formPhone: 'Teléfono',
         formEmail: 'Email',
         formMessage: 'Escribe un mensaje',
-        formSubmit: '✉️ Wyślij',
-        copyLink: 'Copiar enlace',
+        formSubmit: '✉️ Enviar',
+        copyLink: '🔗 Link',
         shareCopied: 'Copiado',
         shareNoteText: 'El contenido compartido muestra la imagen principal, el título y el precio de la propiedad.',
         urgencyNote: 'La disponibilidad y los detalles deben confirmarse directamente',
@@ -1889,8 +1889,8 @@ filter:brightness(1.06);
         formPhone: 'Телефон',
         formEmail: 'Email',
         formMessage: 'Напишите сообщение',
-        formSubmit: '✉️ Wyślij',
-        copyLink: '🔗 Копировать ссылку',
+        formSubmit: '✉️ Отправить',
+        copyLink: '🔗 Link',
         shareCopied: 'Скопировано',
         shareNoteText: 'В шаринге показываются главное фото, заголовок и цена объекта.',
         urgencyNote: 'Наличие и детали лучше подтвердить напрямую',
@@ -2174,16 +2174,13 @@ filter:brightness(1.06);
     }
 
     function getWhatsAppShareText(plot) {
-      const p = localizePlot(plot, currentLang);
       const share = buildShareData(plot);
-      const price = formatPrice(plot.price || plot.price_value || 0, currentLang);
-
       return [
-        String(p.title || ''),
-        String(price || ''),
+        share.title,
+        share.text,
         `📷 ${share.image}`,
         `🔗 ${share.url}`
-      ].join('\n');
+      ].filter(Boolean).join('\n');
     }
 
     function getInquiryText(formData, plot) {
@@ -2539,8 +2536,7 @@ filter:brightness(1.06);
             if (navigator.share) {
               await navigator.share({
                 title: share.title,
-                text: `${share.title} · ${share.text}
-📷 ${share.image}`,
+                text: `${share.text}\n📷 ${share.image}`,
                 url: share.url
               });
               return;
