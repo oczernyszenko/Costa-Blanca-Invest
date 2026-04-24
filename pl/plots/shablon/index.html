@@ -656,6 +656,8 @@ border:1px solid rgba(255,255,255,.35);
 #waBtn{background:linear-gradient(135deg,#63db7d 0%,#1ea84b 100%)}
 .message-link-row .btn-main{background:linear-gradient(135deg,#e6a565 0%,#c9782e 100%);border:1px solid rgba(255,255,255,.35);box-shadow:none!important;text-shadow:none!important}
 #copyLinkBtn{background:linear-gradient(135deg,#4e8fb2 0%,#28586a 100%);border:1px solid rgba(255,255,255,.35);width:auto!important;min-width:142px!important;height:54px!important;padding:0 24px!important;flex:0 0 auto!important}
+.message-link-row .btn-main{min-width:255px!important;width:255px!important;height:54px!important;padding:0 24px!important;justify-content:center!important;}
+#copyLinkBtn{width:auto!important;min-width:142px!important;}
 #contactForm .btn-main:hover{
 transform:translateY(-2px) scale(1.02) !important;
 background-image:linear-gradient(135deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.18) 35%,rgba(255,255,255,.04) 55%,rgba(255,255,255,.28) 100%),linear-gradient(135deg,#e6a565 0%,#c9782e 100%);
@@ -710,7 +712,7 @@ filter:brightness(1.06);
       border-radius: 18px;
       resize: vertical;
     }
-    .message-link-row{display:flex;justify-content:center;align-items:center;gap:12px;grid-column:1/-1;flex-wrap:wrap;margin-top:10px;position:relative;z-index:5}
+    .message-link-row{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;grid-column:1/-1;flex-wrap:nowrap;margin-top:10px;position:relative;z-index:5}
 .message-link-row .btn-main,.message-link-row .share-btn{
 pointer-events:auto;
 position:relative;
@@ -1613,11 +1615,11 @@ filter:brightness(1.06);
 
             <form class="premium-contact-form" id="contactForm" action="#" method="post">
               <input type="text" name="name" id="formName" placeholder="Imię" required>
-              <input type="tel" name="phone" id="formPhone" placeholder="Telefon" required>
+              
               <input type="email" name="email" id="formEmail" placeholder="Email">
               <textarea name="message" id="formMessage" placeholder="Jakiej nieruchomości szukasz?"></textarea>
               <div class="message-link-row">
-  <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel">✉️ Wyślij wiadomość</span></button>
+  <button class="btn btn-main" type="submit" aria-label="Send via WhatsApp"><span id="formSubmitLabel">✉️ Wyślij</span></button>
   <button class="share-btn" type="button" id="copyLinkBtn" aria-label="Copy link"><span id="copyLinkLabel">🔗</span></button>
 </div>
 </form>
@@ -1794,7 +1796,7 @@ filter:brightness(1.06);
         formPhone: 'Telefon',
         formEmail: 'Email',
         formMessage: 'Napisz wiadomość',
-        formSubmit: '✉️ Wyślij wiadomość',
+        formSubmit: '✉️ Wyślij',
         copyLink: '🔗 Link',
         shareCopied: 'Skopiowano',
         shareNoteText: 'Udostępnianie pokazuje główne zdjęcie, tytuł i cenę oferty.',
@@ -1825,7 +1827,7 @@ filter:brightness(1.06);
         formPhone: 'Phone',
         formEmail: 'Email',
         formMessage: 'Write a message',
-        formSubmit: 'Send via WhatsApp',
+        formSubmit: '✉️ Wyślij',
         copyLink: 'Copy link',
         shareCopied: 'Copied',
         shareNoteText: 'Sharing shows the main image, title and price of the property.',
@@ -1856,7 +1858,7 @@ filter:brightness(1.06);
         formPhone: 'Teléfono',
         formEmail: 'Email',
         formMessage: 'Escribe un mensaje',
-        formSubmit: 'Enviar por WhatsApp',
+        formSubmit: '✉️ Wyślij',
         copyLink: 'Copiar enlace',
         shareCopied: 'Copiado',
         shareNoteText: 'El contenido compartido muestra la imagen principal, el título y el precio de la propiedad.',
@@ -1887,8 +1889,8 @@ filter:brightness(1.06);
         formPhone: 'Телефон',
         formEmail: 'Email',
         formMessage: 'Напишите сообщение',
-        formSubmit: 'Отправить в WhatsApp',
-        copyLink: 'Копировать ссылку',
+        formSubmit: '✉️ Wyślij',
+        copyLink: '🔗 Копировать ссылку',
         shareCopied: 'Скопировано',
         shareNoteText: 'В шаринге показываются главное фото, заголовок и цена объекта.',
         urgencyNote: 'Наличие и детали лучше подтвердить напрямую',
@@ -2165,9 +2167,10 @@ filter:brightness(1.06);
     function getCopyShareText(share) {
       return [
         String(share.title || ''),
-        String(share.image || ''),
-        String(share.url || '')
-      ].join('\n');
+        String(share.text || ''),
+        `📷 ${String(share.image || '')}`,
+        `🔗 ${String(share.url || '')}`
+      ].filter(Boolean).join('\n');
     }
 
     function getWhatsAppShareText(plot) {
@@ -2188,7 +2191,6 @@ filter:brightness(1.06);
         UI[currentLang].newInquiry,
         '',
         `${UI[currentLang].formName}: ${String(formData.get('name') || '').trim()}`,
-        `${UI[currentLang].formPhone}: ${String(formData.get('phone') || '').trim()}`,
         `${UI[currentLang].formEmail}: ${String(formData.get('email') || '').trim()}`,
         '',
         getWhatsAppShareText(plot),
@@ -2537,7 +2539,8 @@ filter:brightness(1.06);
             if (navigator.share) {
               await navigator.share({
                 title: share.title,
-                text: share.text,
+                text: `${share.title} · ${share.text}
+📷 ${share.image}`,
                 url: share.url
               });
               return;
