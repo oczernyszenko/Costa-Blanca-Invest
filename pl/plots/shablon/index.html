@@ -398,8 +398,8 @@ PREMIUM FINAL QA
     .agent-name { margin: 0 0 2px; color: var(--primary); font-size: 17px; font-weight: 900; }
     .agent-role { margin: 0 0 6px; color: var(--gold-dark); font-size: 11px; font-weight: 800; }
     .agent-meta { margin:0; color:var(--text-soft); font-size:12px; line-height:1.6; }
-    .cta-actions, .share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:18px; width:100%; margin:0; padding:0; }
-    .cta-actions > *, .share-actions > * { width: 100%; }
+    .cta-actions, .share-actions { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; width:100%; margin:0; padding:0; }
+    .cta-actions > *, .share-actions > * { width:100%; }
     .cta-actions .btn, .share-actions .share-btn, .contact-form .btn-main {
       width:100%;
       height:78px !important;
@@ -411,7 +411,7 @@ PREMIUM FINAL QA
       margin:0;
     }
     .cta-actions { margin:0; padding:6px 0 6px; }
-    .cta-actions .btn { flex: 0 0 100%; }
+    .cta-actions .btn { flex:none; min-width:0; }
     .btn, .share-btn {
       vertical-align:middle;
       position: relative;
@@ -549,6 +549,7 @@ PREMIUM FINAL QA
       .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: 14px; padding: 0; }
       .bottom-grid { grid-template-columns: 1fr; }
     }
+    @media (max-width:980px){ .cta-actions,.share-actions{grid-template-columns:1fr;} }
     @media (max-width:768px) {
       body { padding-bottom: 24px; }
       .container { padding: 0 14px; }
@@ -659,12 +660,6 @@ PREMIUM FINAL QA
           </div>
 
           <div class="bottom-grid">
-            <section class="panel-card spec-card" id="specSection">
-              <h2 id="specTitle">Co otrzymuje kupujący</h2>
-              <ul id="specList"></ul>
-              
-            </section>
-
             <section class="panel-card" id="audienceSection">
               <h2 id="audienceTitle">Dla kogo jest ta działka?</h2>
               <div class="audience-grid">
