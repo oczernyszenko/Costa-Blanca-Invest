@@ -64,6 +64,25 @@
 
     * { box-sizing: border-box; }
 
+    @keyframes vipFadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes vipSoftPulse {
+      0%, 100% { box-shadow: 0 14px 28px rgba(217,181,109,.18); }
+      50% { box-shadow: 0 18px 40px rgba(217,181,109,.30); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
     html {
       scroll-behavior: smooth;
       background: #f7f5f1 !important;
@@ -194,6 +213,7 @@
     }
 
     .hero-card {
+      animation: vipFadeUp .7s ease both;
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
@@ -493,7 +513,16 @@
       align-items: stretch;
     }
 
+    .bottom-grid .panel-card {
+      min-height: 420px;
+      padding: 38px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     .premium-contact-section {
+      animation: vipFadeUp .7s ease both;
       margin-top: 32px;
       padding: 42px 44px 46px;
       border-radius: 28px;
@@ -638,6 +667,15 @@
       font-size: 16px;
       font-weight: 500;
       box-shadow: inset 0 1px 0 rgba(255,255,255,.75);
+      transition: border-color .22s ease, box-shadow .22s ease, background .22s ease, transform .22s ease;
+    }
+
+    .premium-contact-form input:focus,
+    .premium-contact-form textarea:focus {
+      border-color: rgba(217,181,109,.68);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 0 0 4px rgba(217,181,109,.13), inset 0 1px 0 rgba(255,255,255,.9);
+      transform: translateY(-1px);
     }
 
     .premium-contact-form input {
@@ -670,6 +708,12 @@
       margin-top: 0;
       background: linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%), linear-gradient(135deg, #e3bd63 0%, #d4a341 52%, #bd8f2f 100%);
       box-shadow: inset 0 3px 6px rgba(255,255,255,.46), inset 0 -4px 8px rgba(120,80,20,.15), 0 14px 24px rgba(176,124,43,.24);
+    }
+
+    .btn-main:hover,
+    .btn-light:hover,
+    .share-btn:hover {
+      animation: vipSoftPulse 1.6s ease infinite;
     }
 
     .premium-share-area {
@@ -709,6 +753,85 @@
       line-height: 1.55;
     }
 
+    .sticky-inquiry-bar {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 900;
+      transform: translateX(-50%) translateY(120px);
+      opacity: 0;
+      pointer-events: none;
+      width: min(720px, calc(100vw - 28px));
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(217,181,109,.24);
+      box-shadow: 0 24px 70px rgba(15,23,42,.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: opacity .28s ease, transform .28s ease;
+    }
+
+    .sticky-inquiry-bar.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sticky-inquiry-text {
+      min-width: 0;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    .sticky-inquiry-title {
+      display: block;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sticky-inquiry-meta {
+      display: block;
+      color: var(--gold-dark);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sticky-inquiry-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+      box-shadow: 0 12px 24px rgba(15,23,42,.14);
+    }
+
+    .sticky-call {
+      background: linear-gradient(135deg, #e3bd63 0%, #bd8f2f 100%);
+    }
+
+    .sticky-wa {
+      background: linear-gradient(135deg, #63db7d 0%, #1ea84b 100%);
+    }
+
     .panel-card {
       padding: 22px;
       border-radius: 22px;
@@ -723,12 +846,14 @@
 
     .panel-card h2 {
       position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 16px;
+      padding-bottom: 18px;
+      margin-bottom: 28px;
       color: var(--primary);
-      font-size: clamp(20px, 2vw, 24px);
-      letter-spacing: -.03em;
-      line-height: 1.05;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 3vw, 42px);
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: 1.04;
     }
 
     .panel-card h2::after {
@@ -736,10 +861,10 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 64px;
-      height: 3px;
+      width: 82px;
+      height: 4px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--gold), transparent);
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
     }
 
     .panel-card p {
@@ -747,54 +872,105 @@
       line-height: 1.5;
     }
 
-    .spec-card ul li { margin-bottom: 10px; }
+    .spec-card ul {
+      display: grid;
+      gap: 0;
+      margin-top: 10px;
+    }
+
+    .spec-card ul li {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      align-items: center;
+      min-height: 92px;
+      margin: 0;
+      padding: 0;
+      color: #243748;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.42;
+      border-bottom: 1px solid rgba(24,55,70,.10);
+    }
+
+    .spec-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .spec-card ul li::before {
+      position: static;
+      content: "✔";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(217,181,109,.86);
+      color: var(--gold-dark);
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1;
+      background: rgba(255,255,255,.72);
+    }
 
     .audience-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 0;
+      margin-top: 8px;
     }
 
     .audience-card {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      min-height: 144px;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 22px;
+      align-items: center;
+      min-height: 128px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(24,55,70,.10);
+    }
+
+    .audience-card:last-child {
+      border-bottom: none;
     }
 
     .audience-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 46px;
-      height: 46px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
-      border: 1px solid rgba(217,181,109,.55);
+      border: 1.5px solid rgba(217,181,109,.86);
       color: var(--gold-dark);
-      font-size: 22px;
-      flex: 0 0 46px;
+      font-size: 34px;
+      flex: 0 0 76px;
+      background: rgba(255,255,255,.76);
     }
 
     .audience-card strong {
       display: block;
       margin: 0 0 8px;
       color: var(--primary);
-      font-size: 24px;
-      line-height: 1.28;
-      letter-spacing: -.015em;
+      font-size: clamp(24px, 2vw, 30px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+      font-weight: 900;
     }
 
     .audience-card div {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 0;
+      min-width: 0;
     }
 
     .audience-card p {
       margin: 0;
-      font-size: 14px;
-      line-height: 1.62;
+      font-size: 17px;
+      line-height: 1.48;
+      color: #4f5f6f;
     }
 
     .contact-box.compact {
@@ -1071,8 +1247,16 @@
       body { padding-bottom: 24px; }
       .container { padding: 0 14px; }
       .page { padding: 18px 0 50px; }
-      .hero-card,
-      .panel-card { padding: 16px; }
+      .hero-card { padding: 16px; }
+      .panel-card { padding: 26px 22px; }
+      .bottom-grid .panel-card { min-height: auto; padding: 28px 22px; }
+      .panel-card h2 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 22px; }
+      .spec-card ul li { grid-template-columns: 58px 1fr; min-height: 76px; font-size: 17px; }
+      .spec-card ul li::before { width: 42px; height: 42px; font-size: 20px; }
+      .audience-card { grid-template-columns: 58px 1fr; gap: 14px; min-height: 104px; padding: 16px 0; }
+      .audience-icon { width: 46px; height: 46px; flex-basis: 46px; font-size: 22px; }
+      .audience-card strong { font-size: 23px; }
+      .audience-card p { font-size: 15px; }
 
       .top-controls {
         display: grid;
@@ -1319,6 +1503,21 @@
       }
 
       .share-btn { min-width: 100%; }
+
+      .sticky-inquiry-bar {
+        grid-template-columns: 1fr 48px 48px;
+        width: calc(100vw - 20px);
+        bottom: 10px;
+        padding: 9px;
+        border-radius: 24px;
+      }
+
+      .sticky-inquiry-btn {
+        min-height: 48px;
+        width: 48px;
+        padding: 0;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -1435,6 +1634,15 @@
       </div>
     </div>
   </main>
+
+  <div class="sticky-inquiry-bar" id="stickyInquiryBar" aria-hidden="true">
+    <div class="sticky-inquiry-text">
+      <span class="sticky-inquiry-title" id="stickyInquiryTitle">Costa Blanca Invest</span>
+      <span class="sticky-inquiry-meta" id="stickyInquiryMeta">Otrzymaj aktualną ofertę</span>
+    </div>
+    <a class="sticky-inquiry-btn sticky-call" id="stickyCallBtn" href="tel:+34604158859">📞</a>
+    <a class="sticky-inquiry-btn sticky-wa" id="stickyWaBtn" href="https://wa.me/34604158859" target="_blank" rel="noopener noreferrer">💬</a>
+  </div>
 
   <div class="media-lightbox" id="mediaLightbox" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="media-lightbox-inner">
@@ -2204,7 +2412,15 @@
 
       setText('formSubmitLabel', ui.formSubmit);
       setText('copyLinkLabel', ui.copyLink);
-      setText('sharePropertySummary', `${p.title}<br>${price}<br>${p.meta || 'Costa Blanca'}${area ? ' · ' + area : ''}`);
+      setHtml('sharePropertySummary', `${escapeHtml(p.title)}<br>${escapeHtml(price)}<br>${escapeHtml(p.meta || 'Costa Blanca')}${area ? ' · ' + escapeHtml(area) : ''}`);
+      setText('stickyInquiryTitle', p.title);
+      setText('stickyInquiryMeta', `${price}${area ? ' · ' + area : ''}`);
+
+      const stickyCallBtn = byId('stickyCallBtn');
+      if (stickyCallBtn) stickyCallBtn.href = `tel:${CONTACT_PHONE.replaceAll(' ', '')}`;
+
+      const stickyWaBtn = byId('stickyWaBtn');
+      if (stickyWaBtn) stickyWaBtn.href = `https://wa.me/${CONTACT_PHONE.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(getWhatsAppShareText(plot))}`;
 
       const waText = getWhatsAppShareText(plot);
       const waBtn = byId('waBtn');
@@ -2272,6 +2488,24 @@
       if (tests.some(result => !result)) {
         console.warn('Self-tests failed', tests);
       }
+    }
+
+    function bindStickyInquiryBar() {
+      const bar = byId('stickyInquiryBar');
+      const contact = byId('contact');
+      if (!bar || !contact) return;
+
+      const update = () => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        const contactRect = contact.getBoundingClientRect();
+        const shouldShow = scrollY > 520 && contactRect.top > window.innerHeight * 0.72;
+        bar.classList.toggle('visible', shouldShow);
+        bar.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+      };
+
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
     }
 
     function bindInteractions() {
@@ -2398,6 +2632,7 @@
 
       renderGallery(currentPlot).then(() => updateMeta(currentPlot));
       bindInteractions();
+      bindStickyInquiryBar();
 
       byId('mediaLightboxClose')?.setAttribute('aria-label', UI[currentLang].lightboxClose);
       runSelfTests();
