@@ -1104,6 +1104,20 @@
           "Suitable for a private home or investment project",
           "Strong base for building in an attractive part of Finestrat",
           "Prepared for a clear online presentation"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers seeking a larger plot for building a home in Finestrat."
+          },
+          {
+            "title": "Investors",
+            "text": "For clients planning a residential or villa project on Costa Blanca."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers who want to combine space, location and comfortable living."
+          }
         ]
       },
       "es": {
@@ -1120,6 +1134,20 @@
           "Adecuada para vivienda privada o proyecto de inversión",
           "Buena base para construir en una zona atractiva de Finestrat",
           "Preparada para una presentación online clara"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para compradores que buscan una parcela más grande para construir en Finestrat."
+          },
+          {
+            "title": "Inversores",
+            "text": "Para clientes que planean un proyecto residencial o de villas en Costa Blanca."
+          },
+          {
+            "title": "Familias",
+            "text": "Para quienes desean combinar espacio, ubicación y calidad de vida."
+          }
         ]
       },
       "ru": {
@@ -1136,9 +1164,37 @@
           "Подходит под частный дом или инвестиционный проект",
           "Хорошая база для строительства в привлекательной части Finestrat",
           "Подготовлен для понятной онлайн-презентации"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для покупателей, которым нужен большой участок под строительство дома в Finestrat."
+          },
+          {
+            "title": "Инвесторы",
+            "text": "Для клиентов, планирующих жилой или вилловый проект на Costa Blanca."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для тех, кто хочет объединить пространство, локацию и комфорт жизни."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób szukających większej działki pod budowę domu w Finestrat."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla klientów planujących projekt mieszkaniowy lub willowy na Costa Blanca."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących, którzy chcą połączyć przestrzeń, lokalizację i komfort życia."
+      }
+    ]
   },
   {
     "slug": "alicante-city-plot-700k",
@@ -1290,7 +1346,7 @@
     "area": "465 m²",
     "price": "€ 630 000",
     "price_value": 630000,
-    "desc": "Działka gotowa pod budowę domu.",
+    "desc": "Działka 465 m² w Alicante gotowa pod budowę prywatnego domu w miejskiej lokalizacji Costa Blanca.",
     "seoDescription": "Działka 465 m² w Alicante to atrakcyjna propozycja dla kupującego, który szuka gotowej bazy pod budowę domu w dobrej lokalizacji.",
     "seoDescription2": "Połączenie prostego formatu oferty, czytelnego metrażu i lokalizacji w Alicante sprawia, że obiekt dobrze prezentuje się w katalogu premium entry-level.",
     "offerIncludes": [
@@ -1306,7 +1362,7 @@
         "title": "465 m² plot in Alicante",
         "meta": "Alicante",
         "area": "465 m²",
-        "desc": "Plot ready for house construction.",
+        "desc": "465 m² plot in Alicante ready for building a private home in an urban Costa Blanca location.",
         "seoDescription": "A 465 m² Alicante opportunity for buyers seeking a straightforward plot ready to support a private home project.",
         "seoDescription2": "The clear format, practical size and Alicante location make this a strong premium entry-level listing.",
         "offerIncludes": [
@@ -1314,6 +1370,20 @@
           "Ready base for a private home project in Alicante",
           "Clear listing for buyers seeking an urban plot",
           "Prepared for an elegant online presentation"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers seeking land to build a private home in Alicante."
+          },
+          {
+            "title": "Investors",
+            "text": "For clients looking for an urban land asset with growth potential."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers planning their own home on Costa Blanca."
+          }
         ]
       },
       "es": {
@@ -1322,7 +1392,7 @@
         "title": "Parcela de 465 m² en Alicante",
         "meta": "Alicante",
         "area": "465 m²",
-        "desc": "Parcela lista para construir una casa.",
+        "desc": "Parcela de 465 m² en Alicante lista para construir una vivienda privada en ubicación urbana de Costa Blanca.",
         "seoDescription": "Una oportunidad de 465 m² en Alicante para compradores que buscan una parcela clara y lista para un proyecto de vivienda privada.",
         "seoDescription2": "El formato claro, metraje práctico y ubicación en Alicante la convierten en una sólida oferta premium de entrada.",
         "offerIncludes": [
@@ -1330,6 +1400,20 @@
           "Base lista para proyecto privado en Alicante",
           "Oferta clara para comprador que busca parcela urbana",
           "Preparada para una presentación online elegante"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes buscan una parcela para construir una vivienda privada en Alicante."
+          },
+          {
+            "title": "Inversores",
+            "text": "Para clientes que buscan un activo urbano con potencial de crecimiento."
+          },
+          {
+            "title": "Familias",
+            "text": "Para compradores que planean su propia casa en Costa Blanca."
+          }
         ]
       },
       "ru": {
@@ -1338,7 +1422,7 @@
         "title": "Участок 465 м² в Alicante",
         "meta": "Alicante",
         "area": "465 м²",
-        "desc": "Участок, готовый под строительство дома.",
+        "desc": "Участок 465 м² в Alicante, готовый под строительство частного дома в городской локации Costa Blanca.",
         "seoDescription": "Участок 465 м² в Alicante — привлекательный вариант для покупателя, которому нужен понятный объект под частный дом в хорошей локации.",
         "seoDescription2": "Чёткий формат предложения, практичный метраж и локация в Alicante делают объект сильной premium entry-level позицией.",
         "offerIncludes": [
@@ -1346,9 +1430,37 @@
           "Готовая база под частный проект в Alicante",
           "Понятное предложение для покупателя городского участка",
           "Подготовлен для эстетичной онлайн-презентации"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто ищет участок под строительство частного дома в Alicante."
+          },
+          {
+            "title": "Инвесторы",
+            "text": "Для клиентов, которым нужен городской земельный актив с потенциалом роста."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для покупателей, планирующих собственный дом на Costa Blanca."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób szukających działki pod budowę prywatnego domu w Alicante."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla klientów szukających miejskiego aktywa gruntowego z potencjałem wzrostu."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących planujących własny dom na Costa Blanca."
+      }
+    ]
   },
   {
     "slug": "san-juan-plot-600k",
@@ -1391,6 +1503,20 @@
           "Suitable for a private home or investment project",
           "Value-growth potential in a strong Costa Blanca market",
           "Prepared for premium online presentation and fast contact"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers planning a home in the prestigious San Juan area."
+          },
+          {
+            "title": "Investors",
+            "text": "For clients seeking a secure land asset with upside potential."
+          },
+          {
+            "title": "Local developers",
+            "text": "For firms considering a smaller project in a strong demand area."
+          }
         ]
       },
       "es": {
@@ -1407,6 +1533,20 @@
           "Adecuada para vivienda privada o proyecto de inversión",
           "Potencial de revalorización en un mercado sólido de Costa Blanca",
           "Preparada para presentación online premium y contacto rápido"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes planean una casa en la prestigiosa zona de San Juan."
+          },
+          {
+            "title": "Inversores",
+            "text": "Para clientes que buscan un activo de suelo seguro con potencial."
+          },
+          {
+            "title": "Promotores locales",
+            "text": "Para empresas que valoran un proyecto pequeño en zona de fuerte demanda."
+          }
         ]
       },
       "ru": {
@@ -1423,9 +1563,37 @@
           "Подходит под частный дом или инвестиционный проект",
           "Потенциал роста стоимости на сильном рынке Costa Blanca",
           "Подготовлен для премиальной онлайн-презентации и быстрого контакта"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто планирует дом в престижной локации San Juan."
+          },
+          {
+            "title": "Инвесторы",
+            "text": "Для клиентов, которым нужен надёжный участок с потенциалом роста."
+          },
+          {
+            "title": "Локальные девелоперы",
+            "text": "Для компаний, рассматривающих небольшой проект в зоне высокого спроса."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób planujących dom w prestiżowej lokalizacji San Juan."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla klientów szukających bezpiecznego gruntu z potencjałem wzrostu."
+      },
+      {
+        "title": "Deweloperzy lokalni",
+        "text": "Dla firm rozważających mniejszy projekt w silnej strefie popytu."
+      }
+    ]
   },
   {
     "slug": "finestrat-plot-3-villas",
@@ -1468,6 +1636,20 @@
           "Sea and mountain views increase the appeal",
           "Strong base for premium resale or private use",
           "Prepared for a polished premium catalog presentation"
+        ],
+        "audience": [
+          {
+            "title": "Villa investors",
+            "text": "For clients planning a boutique multi-villa project in Finestrat."
+          },
+          {
+            "title": "Premium buyers",
+            "text": "For buyers seeking a plot with sea and mountain views."
+          },
+          {
+            "title": "Boutique developers",
+            "text": "For firms aiming to create a compact project with strong visual appeal."
+          }
         ]
       },
       "es": {
@@ -1484,6 +1666,20 @@
           "Las vistas al mar y montaña elevan el atractivo",
           "Buena base para venta premium o uso privado",
           "Preparada para una presentación cuidada en catálogo"
+        ],
+        "audience": [
+          {
+            "title": "Inversores en villas",
+            "text": "Para clientes que planean un proyecto boutique de varias villas en Finestrat."
+          },
+          {
+            "title": "Compradores premium",
+            "text": "Para quienes buscan una parcela con vistas al mar y montaña."
+          },
+          {
+            "title": "Promotores boutique",
+            "text": "Para empresas que quieren crear un proyecto pequeño con gran atractivo visual."
+          }
         ]
       },
       "ru": {
@@ -1500,9 +1696,37 @@
           "Вид на море и горы усиливает привлекательность",
           "Сильная база под премиальную продажу или личное использование",
           "Подготовлен для эстетичной презентации в каталоге"
+        ],
+        "audience": [
+          {
+            "title": "Инвесторы в виллы",
+            "text": "Для клиентов, планирующих камерный проект нескольких вилл в Finestrat."
+          },
+          {
+            "title": "Премиальные покупатели",
+            "text": "Для тех, кто ищет участок с видом на море и горы."
+          },
+          {
+            "title": "Бутик-девелоперы",
+            "text": "Для компаний, создающих небольшой проект с сильной визуальной привлекательностью."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Inwestorzy willowi",
+        "text": "Dla klientów planujących kameralny projekt kilku will w Finestrat."
+      },
+      {
+        "title": "Kupujący premium",
+        "text": "Dla osób szukających działki z widokiem na morze i góry."
+      },
+      {
+        "title": "Deweloperzy butikowi",
+        "text": "Dla firm chcących stworzyć niewielki projekt o wysokiej atrakcyjności wizualnej."
+      }
+    ]
   },
   {
     "slug": "alicante-building-plot-470k",
@@ -1545,6 +1769,20 @@
           "Urban setting improves market liquidity",
           "Strong potential for a development investor",
           "Ready for a polished catalog presentation"
+        ],
+        "audience": [
+          {
+            "title": "Developers",
+            "text": "For firms planning a residential building in an urban Alicante location."
+          },
+          {
+            "title": "Urban investors",
+            "text": "For clients seeking a project with a clear development profile."
+          },
+          {
+            "title": "Strategic buyers",
+            "text": "For buyers building a portfolio of urban land assets."
+          }
         ]
       },
       "es": {
@@ -1561,6 +1799,20 @@
           "El carácter urbano mejora la liquidez de la oferta",
           "Buen potencial para inversor promotor",
           "Lista para una presentación cuidada en catálogo"
+        ],
+        "audience": [
+          {
+            "title": "Promotores",
+            "text": "Para empresas que planean un edificio residencial en ubicación urbana de Alicante."
+          },
+          {
+            "title": "Inversores urbanos",
+            "text": "Para clientes que buscan un proyecto con claro perfil promotor."
+          },
+          {
+            "title": "Compradores estratégicos",
+            "text": "Para quienes construyen una cartera de activos urbanos de suelo."
+          }
         ]
       },
       "ru": {
@@ -1577,9 +1829,37 @@
           "Городской формат локации повышает ликвидность",
           "Хороший потенциал для девелоперского инвестора",
           "Подготовлен для аккуратной каталоговой презентации"
+        ],
+        "audience": [
+          {
+            "title": "Девелоперы",
+            "text": "Для компаний, планирующих жилое здание в городской локации Alicante."
+          },
+          {
+            "title": "Городские инвесторы",
+            "text": "Для клиентов, которым нужен проект с понятным девелоперским профилем."
+          },
+          {
+            "title": "Стратегические покупатели",
+            "text": "Для тех, кто формирует портфель городских земельных активов."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Deweloperzy",
+        "text": "Dla firm planujących budynek mieszkalny w miejskiej lokalizacji Alicante."
+      },
+      {
+        "title": "Inwestorzy miejscy",
+        "text": "Dla klientów szukających projektu o czytelnym profilu deweloperskim."
+      },
+      {
+        "title": "Kupujący strategiczni",
+        "text": "Dla osób budujących portfel miejskich aktywów gruntowych."
+      }
+    ]
   },
   {
     "slug": "benidorm-villa-plot-420k",
@@ -1622,6 +1902,20 @@
           "Recognizable location boosts listing appeal",
           "A good fit for a private buyer or investor",
           "Prepared for a modern online presentation"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers planning a private villa in the recognizable Benidorm area."
+          },
+          {
+            "title": "Lifestyle investors",
+            "text": "For clients combining land purchase with Costa Blanca quality of life."
+          },
+          {
+            "title": "International families",
+            "text": "For buyers seeking a base for a home in a well-known resort city."
+          }
         ]
       },
       "es": {
@@ -1638,6 +1932,20 @@
           "La ubicación reconocible refuerza el atractivo",
           "Buena opción para comprador privado o inversor",
           "Preparada para una presentación online moderna"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes planean una villa privada en la reconocida zona de Benidorm."
+          },
+          {
+            "title": "Inversores lifestyle",
+            "text": "Para clientes que combinan compra de suelo y calidad de vida en Costa Blanca."
+          },
+          {
+            "title": "Familias internacionales",
+            "text": "Para compradores que buscan base para una vivienda en un destino conocido."
+          }
         ]
       },
       "ru": {
@@ -1654,9 +1962,37 @@
           "Узнаваемая локация усиливает привлекательность",
           "Хороший выбор для частного покупателя или инвестора",
           "Подготовлен для современной онлайн-презентации"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто планирует частную виллу в узнаваемой локации Benidorm."
+          },
+          {
+            "title": "Lifestyle-инвесторы",
+            "text": "Для клиентов, сочетающих покупку земли и качество жизни на Costa Blanca."
+          },
+          {
+            "title": "Международные семьи",
+            "text": "Для покупателей, которым нужна база под дом в известном курорте."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób planujących prywatną willę w rozpoznawalnej lokalizacji Benidorm."
+      },
+      {
+        "title": "Inwestorzy lifestyle",
+        "text": "Dla klientów łączących zakup gruntu z jakością życia na Costa Blanca."
+      },
+      {
+        "title": "Rodziny międzynarodowe",
+        "text": "Dla kupujących szukających bazy pod dom w znanym kurorcie."
+      }
+    ]
   },
   {
     "slug": "coveta-fuma-plot",
@@ -1699,6 +2035,20 @@
           "Good base for a private project or lifestyle purchase",
           "The offer stands out through atmosphere and clean premium presentation",
           "Prepared for convenient sharing and fast client contact"
+        ],
+        "audience": [
+          {
+            "title": "Lifestyle buyers",
+            "text": "For buyers seeking a plot with the coastal atmosphere of Coveta Fuma."
+          },
+          {
+            "title": "Private investors",
+            "text": "For clients focused on location, views and long-term value potential."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers planning a calm project close to the sea."
+          }
         ]
       },
       "es": {
@@ -1715,6 +2065,20 @@
           "Buena base para proyecto privado o compra lifestyle",
           "La oferta destaca por ambiente y presentación premium limpia",
           "Preparada para compartir cómodamente y contactar rápido"
+        ],
+        "audience": [
+          {
+            "title": "Compradores lifestyle",
+            "text": "Para quienes buscan una parcela con ambiente costero en Coveta Fuma."
+          },
+          {
+            "title": "Inversores privados",
+            "text": "Para clientes centrados en ubicación, vistas y potencial de valor."
+          },
+          {
+            "title": "Familias",
+            "text": "Para compradores que planean un proyecto tranquilo cerca del mar."
+          }
         ]
       },
       "ru": {
@@ -1731,9 +2095,37 @@
           "Хорошая база под частный проект или lifestyle-покупку",
           "Объект выделяется атмосферой и чистой премиальной подачей",
           "Подготовлен для удобного шаринга и быстрого контакта"
+        ],
+        "audience": [
+          {
+            "title": "Lifestyle-покупатели",
+            "text": "Для тех, кто ищет участок с прибрежной атмосферой Coveta Fuma."
+          },
+          {
+            "title": "Частные инвесторы",
+            "text": "Для клиентов, ориентированных на локацию, виды и потенциал стоимости."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для покупателей, планирующих спокойный проект рядом с морем."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący lifestyle",
+        "text": "Dla osób szukających działki w nadmorskim klimacie Coveta Fuma."
+      },
+      {
+        "title": "Inwestorzy prywatni",
+        "text": "Dla klientów stawiających na lokalizację, widok i potencjał wartości."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących planujących spokojny projekt blisko morza."
+      }
+    ]
   },
   {
     "slug": "alicante-plot-512m",
@@ -1776,6 +2168,20 @@
           "A good option for a buyer planning home construction",
           "Clear listing structure supports presentation and sales",
           "Prepared for convenient use in an online catalog"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers planning a single-family home in Alicante."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers seeking a practical plot size for their own project."
+          },
+          {
+            "title": "Entry-level investors",
+            "text": "For clients seeking a clear entry into the Costa Blanca land market."
+          }
         ]
       },
       "es": {
@@ -1792,6 +2198,20 @@
           "Buena opción para comprador que planea construir casa",
           "La estructura clara facilita presentación y venta",
           "Preparada para uso cómodo en catálogo online"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes planean una vivienda unifamiliar en Alicante."
+          },
+          {
+            "title": "Familias",
+            "text": "Para compradores que buscan un metraje práctico para su propio proyecto."
+          },
+          {
+            "title": "Inversores entry-level",
+            "text": "Para clientes que buscan una entrada clara al mercado de suelo en Costa Blanca."
+          }
         ]
       },
       "ru": {
@@ -1808,9 +2228,37 @@
           "Хороший вариант для покупателя, планирующего дом",
           "Понятная структура предложения облегчает презентацию и продажу",
           "Подготовлен для удобного использования в онлайн-каталоге"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто планирует индивидуальный дом в Alicante."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для покупателей, которым нужен практичный метраж под свой проект."
+          },
+          {
+            "title": "Entry-level инвесторы",
+            "text": "Для клиентов, ищущих понятный вход на рынок земли Costa Blanca."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób planujących budowę domu jednorodzinnego w Alicante."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących szukających praktycznego metrażu pod własny projekt."
+      },
+      {
+        "title": "Inwestorzy entry-level",
+        "text": "Dla klientów szukających przejrzystego wejścia w rynek gruntów Costa Blanca."
+      }
+    ]
   },
   {
     "slug": "santabarbara-plot",
@@ -1853,6 +2301,20 @@
           "Stronger formal readiness supports a faster start",
           "Appealing for a private buyer or investor",
           "Prepared in a premium catalog standard"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers who want to start faster thanks to licence and documentation."
+          },
+          {
+            "title": "Investors",
+            "text": "For clients seeking land with stronger operational readiness."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers planning their own Alicante home with a clearer starting point."
+          }
         ]
       },
       "es": {
@@ -1869,6 +2331,20 @@
           "Mayor preparación formal facilita el inicio",
           "Atractiva para comprador privado o inversor",
           "Preparada con estándar premium de catálogo"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes quieren empezar más rápido gracias a licencia y documentación."
+          },
+          {
+            "title": "Inversores",
+            "text": "Para clientes que buscan suelo con mayor preparación operativa."
+          },
+          {
+            "title": "Familias",
+            "text": "Para compradores que planean su casa en Alicante con inicio más ordenado."
+          }
         ]
       },
       "ru": {
@@ -1885,9 +2361,37 @@
           "Лучшая формальная готовность ускоряет старт",
           "Привлекателен для частного покупателя или инвестора",
           "Подготовлен в премиальном каталожном стандарте"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто хочет быстрее стартовать благодаря лицензии и документации."
+          },
+          {
+            "title": "Инвесторы",
+            "text": "Для клиентов, которым нужен участок с лучшей операционной готовностью."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для покупателей, планирующих свой дом в Alicante с более понятным стартом."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób, które chcą szybciej rozpocząć projekt dzięki licencji i dokumentacji."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla klientów szukających działki z lepszą gotowością operacyjną."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących planujących własny dom w Alicante z uporządkowanym startem."
+      }
+    ]
   },
   {
     "slug": "polop-plot",
@@ -1930,6 +2434,20 @@
           "Good option for an investor seeking a faster start",
           "Practical listing format with clear potential",
           "Organized for convenient online presentation"
+        ],
+        "audience": [
+          {
+            "title": "Investors",
+            "text": "For clients seeking a plot with a ready urbanization concept."
+          },
+          {
+            "title": "Developers",
+            "text": "For firms looking to shorten the project preparation timeline."
+          },
+          {
+            "title": "Strategic buyers",
+            "text": "For buyers seeking functional land with structured potential."
+          }
         ]
       },
       "es": {
@@ -1946,6 +2464,20 @@
           "Buena opción para inversor que busca inicio más rápido",
           "Formato práctico con potencial claro",
           "Organizada para presentación online cómoda"
+        ],
+        "audience": [
+          {
+            "title": "Inversores",
+            "text": "Para clientes que buscan una parcela con concepto de urbanización preparado."
+          },
+          {
+            "title": "Promotores",
+            "text": "Para empresas que quieren reducir el tiempo de preparación del proyecto."
+          },
+          {
+            "title": "Compradores estratégicos",
+            "text": "Para quienes buscan suelo funcional con potencial ordenado."
+          }
         ]
       },
       "ru": {
@@ -1962,9 +2494,37 @@
           "Хороший вариант для инвестора, ищущего быстрый старт",
           "Практичный формат предложения с понятным потенциалом",
           "Организован для удобной онлайн-презентации"
+        ],
+        "audience": [
+          {
+            "title": "Инвесторы",
+            "text": "Для клиентов, которым нужен участок с готовой концепцией урбанизации."
+          },
+          {
+            "title": "Девелоперы",
+            "text": "Для компаний, желающих сократить время подготовки проекта."
+          },
+          {
+            "title": "Стратегические покупатели",
+            "text": "Для тех, кто ищет функциональный участок с понятным потенциалом."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Inwestorzy",
+        "text": "Dla klientów szukających działki z gotową koncepcją urbanizacji."
+      },
+      {
+        "title": "Deweloperzy",
+        "text": "Dla firm chcących skrócić czas przygotowania projektu."
+      },
+      {
+        "title": "Kupujący strategiczni",
+        "text": "Dla osób szukających funkcjonalnego gruntu z uporządkowanym potencjałem."
+      }
+    ]
   },
   {
     "slug": "el-campello-plot-115k",
@@ -2007,6 +2567,20 @@
           "Accessible entry point for a private buyer or investor",
           "Clear listing with building potential",
           "Prepared for convenient online catalog presentation"
+        ],
+        "audience": [
+          {
+            "title": "Private buyers",
+            "text": "For buyers seeking an accessible building plot in El Campello."
+          },
+          {
+            "title": "Entry-level investors",
+            "text": "For clients looking to enter the Costa Blanca market with a lower budget."
+          },
+          {
+            "title": "Families",
+            "text": "For buyers planning a straightforward home project close to the coast."
+          }
         ]
       },
       "es": {
@@ -2023,6 +2597,20 @@
           "Entrada accesible para comprador privado o inversor",
           "Oferta clara con potencial edificable",
           "Preparada para presentación cómoda en catálogo online"
+        ],
+        "audience": [
+          {
+            "title": "Compradores privados",
+            "text": "Para quienes buscan una parcela edificable accesible en El Campello."
+          },
+          {
+            "title": "Inversores entry-level",
+            "text": "Para clientes que quieren entrar al mercado de Costa Blanca con menor presupuesto."
+          },
+          {
+            "title": "Familias",
+            "text": "Para compradores que planean un proyecto sencillo de casa cerca de la costa."
+          }
         ]
       },
       "ru": {
@@ -2039,8 +2627,36 @@
           "Доступный вход для частного покупателя или инвестора",
           "Понятное предложение со строительным потенциалом",
           "Подготовлен для удобной презентации в онлайн-каталоге"
+        ],
+        "audience": [
+          {
+            "title": "Частные покупатели",
+            "text": "Для тех, кто ищет доступный строительный участок в El Campello."
+          },
+          {
+            "title": "Entry-level инвесторы",
+            "text": "Для клиентов, желающих войти на рынок Costa Blanca с меньшим бюджетом."
+          },
+          {
+            "title": "Семьи",
+            "text": "Для покупателей, планирующих простой проект дома рядом с побережьем."
+          }
         ]
       }
-    }
+    },
+    "audience": [
+      {
+        "title": "Kupujący prywatni",
+        "text": "Dla osób szukających przystępnej działki budowlanej w El Campello."
+      },
+      {
+        "title": "Inwestorzy entry-level",
+        "text": "Dla klientów chcących wejść na rynek Costa Blanca z niższym budżetem."
+      },
+      {
+        "title": "Rodziny",
+        "text": "Dla kupujących planujących prosty projekt domu blisko wybrzeża."
+      }
+    ]
   }
 ]
