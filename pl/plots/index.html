@@ -783,6 +783,10 @@
         candidates.push(normalized);
       };
 
+      if (Array.isArray(plot?.images) && plot.images.length) {
+        plot.images.forEach(add);
+      }
+
       if (Array.isArray(plot?.gallery) && plot.gallery.length) {
         plot.gallery.forEach(add);
       }
@@ -886,7 +890,7 @@
         return cachedPlots;
       }
       try {
-        const res = await fetch(JSON_URL, { cache: 'no-store' });
+        const res = await fetch(JSON_URL);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         cachedPlots = Array.isArray(data) ? data.filter((p) => p && (p.url_path || p.href || p.slug) && p.title) : [];
@@ -928,20 +932,28 @@
       return '#';
     };
 
-    const makeCardHtml = (plot) => {
+    const makeCardHtml = (plot, index = 0) => {
       const ui = UI[currentLang] || UI.pl;
       const localizedPlot = localizePlot(plot, currentLang);
       const cardLink = normalizePlotHref(localizedPlot, currentLang);
+      const hasExplicitImage = Boolean(
+        (Array.isArray(localizedPlot.images) && localizedPlot.images.length) ||
+        (Array.isArray(localizedPlot.gallery) && localizedPlot.gallery.length) ||
+        (localizedPlot.image && String(localizedPlot.image).trim())
+      );
       const imageCandidates = buildImageCandidates(localizedPlot);
-      const firstImage = imageCandidates[0] || fallbackImage;
+      const cardImageCandidates = hasExplicitImage ? imageCandidates : [fallbackImage];
+      const firstImage = hasExplicitImage ? (cardImageCandidates[0] || fallbackImage) : fallbackImage;
+      const isPriorityImage = index < 6;
       return `
         <a href="${escapeHtml(cardLink)}" class="plot-card" aria-label="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}">
           <img
             src="${escapeHtml(firstImage)}"
             alt="${escapeHtml(localizedPlot.alt || localizedPlot.title || 'Plot')}"
-            loading="lazy"
+            loading="${isPriorityImage ? 'eager' : 'lazy'}"
             decoding="async"
-            data-image-candidates='${escapeHtml(JSON.stringify(imageCandidates))}'
+            ${isPriorityImage ? 'fetchpriority="high"' : ''}
+            data-image-candidates='${escapeHtml(JSON.stringify(cardImageCandidates))}'
             data-image-index="0"
             onerror="window.handlePlotCardImageError && window.handlePlotCardImageError(this)">
           <div class="card-body">
@@ -1003,7 +1015,7 @@
         }
         const sortedPlots = getSortedPlots(plots);
         currentRenderedPlots = sortedPlots.map((p) => localizePlot(p, currentLang));
-        grid.innerHTML = sortedPlots.map(makeCardHtml).join('') + makePlaceholderHtml();
+        grid.innerHTML = sortedPlots.map((plot, index) => makeCardHtml(plot, index)).join('') + makePlaceholderHtml();
       } catch (error) {
         console.error('renderPlots error:', error);
         currentRenderedPlots = [];
