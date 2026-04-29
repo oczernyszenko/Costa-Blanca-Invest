@@ -1,23 +1,32 @@
 User-agent: *
-Crawl-delay: 2
-
 Allow: /
-Allow: /pl/
-Allow: /en/
-Allow: /es/
 
+# Main public sections
+Allow: /pl/plots/
+Allow: /pl/new-developments/
+Allow: /pl/build-house/
+Allow: /images/
+Allow: /favicon.svg
+Allow: /favicon-32.png
+Allow: /favicon-16.png
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+
+# Technical / private / duplicate URLs
+Disallow: /.git/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /.git/
 Disallow: /tmp/
-Disallow: /json/
-Disallow: /data/
+Disallow: /test/
+Disallow: /draft/
 Disallow: /*?preview=
 Disallow: /*?draft=
-Disallow: /*?utm_*
+Disallow: /*?test=
+Disallow: /*?utm_
+Disallow: /*&utm_
 
-Allow: /images/
-Allow: /css/
-Allow: /js/
+# Keep JSON crawlable only if pages depend on it.
+# Do not block /pl/plots/plots-index.json because the catalog uses it.
+Allow: /pl/plots/plots-index.json
 
 Sitemap: https://costa-blanca-invest.com/sitemap.xml
