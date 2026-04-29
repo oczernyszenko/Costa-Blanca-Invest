@@ -1,4 +1,23 @@
 User-agent: *
+Crawl-delay: 2
+
 Allow: /
+Allow: /pl/
+Allow: /en/
+Allow: /es/
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /tmp/
+Disallow: /json/
+Disallow: /data/
+Disallow: /*?preview=
+Disallow: /*?draft=
+Disallow: /*?utm_*
+
+Allow: /images/
+Allow: /css/
+Allow: /js/
 
 Sitemap: https://costa-blanca-invest.com/sitemap.xml
