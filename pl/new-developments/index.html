@@ -1255,5 +1255,42 @@ ${message}`;
     ]
   }
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dataEl = document.getElementById("projects-data");
+  const grid = document.getElementById("projectsGrid");
+
+  if (!dataEl || !grid) {
+    console.error("Нет data или grid");
+    return;
+  }
+
+  const projects = JSON.parse(dataEl.textContent);
+
+  grid.innerHTML = "";
+
+  projects.forEach(p => {
+    const card = document.createElement("a");
+    card.href = p.href;
+    card.className = "project-card";
+
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.alt}">
+      <div class="card-body">
+        ${p.chip ? `<div class="chip">${p.chip}</div>` : ""}
+        <h3>${p.title}</h3>
+        <div class="card-meta">${p.meta}</div>
+        <div class="card-price">${p.price}</div>
+        <p>${p.desc}</p>
+        <div class="card-link">
+          ${p.isComingSoon ? "Zobacz ofertę →" : "Zobacz inwestycję →"}
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+});
+</script>
 </body>
 </html>
