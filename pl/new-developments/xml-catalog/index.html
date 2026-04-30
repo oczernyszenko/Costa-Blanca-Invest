@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Oferta</title>
+<meta name="description" content="Oferta nieruchomości Costa Blanca">
+
+<style>
+body{font-family:Arial;margin:0;background:#f5f5f5}
+.container{max-width:1100px;margin:auto;padding:20px}
+.card{background:#fff;border-radius:20px;padding:20px;margin-top:20px}
+img{width:100%;border-radius:16px}
+h1{margin:10px 0}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
+.related-card{background:#fff;padding:10px;border-radius:12px;text-decoration:none;color:#000}
+.related-card img{height:150px;object-fit:cover}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<div class="container" id="app"></div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const slug = params.get("slug");
+
+let allProjects = [];
+
+fetch("/pl/new-developments/projects.json")
+.then(r => r.json())
+.then(data => {
+  allProjects = data;
+
+  const item = data.find(p => p.slug === slug);
+
+  if(!item){
+    document.getElementById("app").innerHTML = "Brak oferty";
+    return;
+  }
+
+  // SEO
+  document.title = item.seoTitle || item.title;
+  document.querySelector('meta[name="description"]').setAttribute("content", item.seoDescription || item.desc);
+
+  render(item);
+});
+
+function render(item){
+  const related = item.relatedSlugs
+    ?.map(s => allProjects.find(p => p.slug === s))
+    .filter(Boolean) || [];
+
+  document.getElementById("app").innerHTML = `
+    <div class="card">
+      <img src="${item.image}">
+      <h1>${item.h1 || item.title}</h1>
+      <p><b>${item.price}</b></p>
+      <p>${item.desc}</p>
+    </div>
+
+    ${related.length ? `
+    <div class="card">
+      <h2>Podobne inwestycje</h2>
+      <div class="related-grid">
+        ${related.map(r => `
+          <a class="related-card" href="?slug=${r.slug}">
+            <img src="${r.image}">
+            <h3>${r.title}</h3>
+            <p>${r.price}</p>
+          </a>
+        `).join("")}
+      </div>
+    </div>
+    ` : ""}
+  `;
+}
+</script>
+</body>
+</html>
