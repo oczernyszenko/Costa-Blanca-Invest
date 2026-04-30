@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Oferta</title>
+<meta name="description" content="Nieruchomości Costa Blanca">
+
+<style>
+body{margin:0;font-family:Inter,Arial;background:#f6f3ee;color:#172532}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+/* HERO */
+.hero{position:relative;border-radius:24px;overflow:hidden}
+.hero img{width:100%;height:500px;object-fit:cover}
+.hero-overlay{position:absolute;bottom:20px;left:20px;color:#fff}
+.hero-overlay h1{font-size:40px;margin:0}
+
+/* CARD */
+.card{background:#fff;padding:30px;border-radius:24px;margin-top:25px}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:12px}
+
+/* RELATED */
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.related-card{background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;color:#000}
+.related-card img{width:100%;height:180px;object-fit:cover}
+.related-card div{padding:12px}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero img{height:300px}
+.gallery{grid-template-columns:1fr 1fr}
+.related-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<div class="container" id="app"></div>
+
+<script>
+const slug = new URLSearchParams(location.search).get("slug");
+let allProjects = [];
+
+fetch("/pl/new-developments/projects.json")
+.then(r=>r.json())
+.then(data=>{
+  allProjects = data;
+
+  const item = data.find(p=>p.slug===slug);
+
+  if(!item){
+    document.getElementById("app").innerHTML="Brak oferty";
+    return;
+  }
+
+  // SEO
+  document.title = item.seoTitle || item.title;
+
+  const meta = document.querySelector('meta[name="description"]');
+  if(meta){
+    meta.setAttribute("content", item.seoDescription || item.desc);
+  }
+
+  render(item);
+});
+
+function render(item){
+
+  const related = (item.relatedSlugs || [])
+    .map(s=>allProjects.find(p=>p.slug===s))
+    .filter(Boolean);
+
+  document.getElementById("app").innerHTML = `
+    
+    <!-- HERO -->
+    <div class="hero">
+      <img src="${item.image}">
+      <div class="hero-overlay">
+        <h1>${item.h1 || item.title}</h1>
+        <div>${item.price}</div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      ${(item.images || []).map(img=>`
+        <img src="${img}">
+      `).join("")}
+    </div>
+
+    <!-- CONTENT -->
+    <div class="card">
+      <p>${item.desc}</p>
+    </div>
+
+    <!-- RELATED -->
+    ${related.length ? `
+    <div class="card">
+      <h2>Podobne inwestycje</h2>
+      <div class="related-grid">
+        ${related.map(r=>`
+          <a class="related-card" href="?slug=${r.slug}">
+            <img src="${r.image}">
+            <div>
+              <b>${r.title}</b>
+              <p>${r.price}</p>
+            </div>
+          </a>
+        `).join("")}
+      </div>
+    </div>
+    ` : ""}
+
+  `;
+}
+</script>
+</body>
+</html>
