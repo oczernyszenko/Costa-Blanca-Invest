@@ -1,8 +1,10 @@
 [
   {
-    "href": "/pl/new-developments/bonalba-golf-hills/",
+    "slug": "bonalba-golf-hills",
+    "href": "/pl/new-developments/xml-catalog/?slug=bonalba-golf-hills",
     "image": "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
-    "gallery": [
+    "images": [
+      "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
       "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
       "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
       "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
@@ -12,12 +14,31 @@
     "title": "Bonalba Golf Hills",
     "meta": "Mutxamel koło Alicante",
     "price": "280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje",
-    "desc": "Kameralna inwestycja premium w otoczeniu golfa i natury — styl życia i potencjał inwestycyjny."
+    "desc": "Kameralna inwestycja premium w otoczeniu golfa i natury — styl życia, prywatność i stabilny potencjał inwestycyjny.",
+    "kpi": [
+      "280 800 €",
+      "98–156 m²",
+      "2–3 pokoje"
+    ],
+    "lead": [
+      "Bonalba Golf Hills to kameralna inwestycja premium położona w spokojnym otoczeniu golfa i natury, blisko Alicante.",
+      "Projekt jest odpowiedni dla klientów szukających eleganckiego second home, spokojnego stylu życia oraz stabilnego potencjału inwestycyjnego.",
+      "Lokalizacja łączy prywatność, dobrą komunikację i dostęp do usług Costa Blanca."
+    ],
+    "params": {
+      "Lokalizacja": "Mutxamel koło Alicante",
+      "Typ": "Apartamenty",
+      "Powierzchnia": "98–156 m²",
+      "Pokoje": "2–3",
+      "Cena": "280 800 € – 405 600 €"
+    }
   },
   {
-    "href": "/pl/new-developments/penthouse-torrevieja/",
+    "slug": "penthouse-torrevieja",
+    "href": "/pl/new-developments/xml-catalog/?slug=penthouse-torrevieja",
     "image": "/pl/new-developments/penthouse-torrevieja/1.jpg",
-    "gallery": [
+    "images": [
+      "/pl/new-developments/penthouse-torrevieja/1.jpg",
       "/pl/new-developments/penthouse-torrevieja/2.jpg",
       "/pl/new-developments/penthouse-torrevieja/3.jpg",
       "/pl/new-developments/penthouse-torrevieja/4.jpg"
@@ -25,14 +46,34 @@
     "alt": "Penthouse w Torrevieja — ostatnia jednostka",
     "chip": "🔥 Ostatnia jednostka",
     "title": "Penthouse Torrevieja — 3 sypialnie",
-    "meta": "Centrum · 2026",
+    "meta": "Torrevieja · centrum · odbiór: 2026",
     "price": "305 000 € · 134 m²",
-    "desc": "Penthouse z solarium 71 m² i werandą. 15 min do plaży — idealny do życia lub inwestycji."
+    "desc": "Penthouse z prywatnym solarium 71 m² i werandą. 15 min do plaży — idealny do życia lub inwestycji.",
+    "kpi": [
+      "305 000 €",
+      "134 m²",
+      "3 sypialnie"
+    ],
+    "lead": [
+      "Penthouse w spokojnym centrum Torrevieja to ostatnia dostępna jednostka w projekcie.",
+      "Oferta obejmuje przestronne wnętrze, prywatną werandę oraz solarium o powierzchni 71 m².",
+      "Lokalizacja zapewnia pełną infrastrukturę w zasięgu spaceru i około 15 minut pieszo do plaży."
+    ],
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Penthouse",
+      "Powierzchnia": "134 m²",
+      "Sypialnie": "3",
+      "Łazienki": "2",
+      "Solarium": "71 m²"
+    }
   },
   {
-    "href": "/pl/new-developments/maranon/",
+    "slug": "maranon",
+    "href": "/pl/new-developments/xml-catalog/?slug=maranon",
     "image": "/pl/new-developments/maranon/1.jpg",
-    "gallery": [
+    "images": [
+      "/pl/new-developments/maranon/1.jpg",
       "/pl/new-developments/maranon/2.jpg",
       "/pl/new-developments/maranon/3.jpg",
       "/pl/new-developments/maranon/4.jpg"
@@ -42,12 +83,31 @@
     "title": "Maranon",
     "meta": "Torrevieja · Q2 2027",
     "price": "133 000 € – 310 000 €",
-    "desc": "Nowoczesny budynek blisko morza. Idealny pod inwestycję i wynajem całoroczny."
+    "desc": "Nowoczesny budynek 180 m od morza. Idealny pod inwestycję, wakacje i wynajem całoroczny.",
+    "kpi": [
+      "od 133 000 €",
+      "180 m do morza",
+      "Q2 2027"
+    ],
+    "lead": [
+      "Maranon to nowa inwestycja w Torrevieja położona około 180 metrów od morza.",
+      "Projekt obejmuje apartamenty w różnych układach, od parteru po atico.",
+      "Oferta dobrze pasuje do zakupu wakacyjnego, wynajmu oraz długoterminowej inwestycji."
+    ],
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Apartamenty",
+      "Ceny": "133 000 € – 310 000 €",
+      "Odległość do morza": "około 180 m",
+      "Zakończenie": "Q2 2027"
+    }
   },
   {
-    "href": "/pl/new-developments/monteagudo/",
+    "slug": "monteagudo",
+    "href": "/pl/new-developments/xml-catalog/?slug=monteagudo",
     "image": "/pl/new-developments/monteagudo/1.jpg",
-    "gallery": [
+    "images": [
+      "/pl/new-developments/monteagudo/1.jpg",
       "/pl/new-developments/monteagudo/2.jpg",
       "/pl/new-developments/monteagudo/3.jpg",
       "/pl/new-developments/monteagudo/4.jpg"
@@ -57,17 +117,89 @@
     "title": "Monteagudo",
     "meta": "Torrevieja · elastyczna płatność",
     "price": "od 104 000 €",
-    "desc": "Zakup inwestorski lub ratalny. W cenie wykończenie i klimatyzacja."
+    "desc": "Dwa modele zakupu: inwestorski i ratalny. W cenie pełne wykończenie, klimatyzacja i wyposażenie.",
+    "kpi": [
+      "od 104 000 €",
+      "Torrevieja",
+      "plan ratalny"
+    ],
+    "lead": [
+      "Monteagudo to nowa inwestycja w Torrevieja z elastycznymi warunkami płatności.",
+      "Dostępny jest wariant inwestorski oraz zakup w systemie ratalnym.",
+      "W cenie uwzględniono wykończenie, kuchnię, wyposażoną łazienkę, ogrzewanie podłogowe i klimatyzację centralną."
+    ],
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Apartamenty",
+      "Cena": "od 104 000 €",
+      "Płatność": "inwestorska lub ratalna",
+      "Wykończenie": "w cenie"
+    }
   },
   {
-    "href": "/pl/new-developments/investment-coming-soon/",
+    "slug": "investment-coming-soon",
+    "href": "/pl/new-developments/xml-catalog/?slug=investment-coming-soon",
     "image": "/pl/new-developments/images/new-developments-costa-blanca.jpg",
+    "images": [
+      "/pl/new-developments/images/new-developments-costa-blanca.jpg"
+    ],
     "alt": "Nowe inwestycje na Costa Blanca",
     "chip": "W przygotowaniu",
     "title": "Nowe inwestycje",
     "meta": "Costa Blanca",
     "price": "Aktualizujemy oferty",
-    "desc": "Dodajemy nowe projekty od deweloperów.",
-    "isComingSoon": true
+    "desc": "Dodajemy nowe projekty od deweloperów. Skontaktuj się, aby otrzymać aktualne oferty.",
+    "isComingSoon": true,
+    "kpi": [
+      "Costa Blanca",
+      "nowe projekty",
+      "na zapytanie"
+    ],
+    "lead": [
+      "Aktualizujemy listę nowych inwestycji dostępnych na Costa Blanca.",
+      "Skontaktuj się, aby otrzymać aktualne propozycje dopasowane do budżetu i lokalizacji.",
+      "Nowe projekty będą dodawane sukcesywnie."
+    ],
+    "params": {
+      "Status": "W przygotowaniu",
+      "Region": "Costa Blanca",
+      "Kontakt": "Zapytaj o aktualne oferty"
+    }
+  },
+  {
+    "slug": "iconic-tenerife-phase-2-3-450411",
+    "href": "/pl/new-developments/xml-catalog/?slug=iconic-tenerife-phase-2-3-450411",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207713/conversions/01KCRY5Y3Q44TZ9N8C0M3PNF3H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207714/conversions/01KCRY5Y9BFMX6SPF672WXY9V5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207715/conversions/01KCRY5YFFCM1XGEFTE3STM3QX-medium.jpg"
+    ],
+    "alt": "ICONIC Tenerife phase 2-3 — luksusowy apartament z widokiem na ocean",
+    "chip": "Nowa inwestycja · Tenerife",
+    "title": "ICONIC Tenerife phase 2-3",
+    "meta": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki",
+    "price": "992 500 € · 188 m² · taras 58 m²",
+    "desc": "Ekskluzyjna inwestycja z widokiem na ocean, prywatnym basenem, dużym tarasem i garażem w cenie.",
+    "kpi": [
+      "992 500 €",
+      "188 m²",
+      "2 sypialnie"
+    ],
+    "lead": [
+      "ICONIC Tenerife phase 2-3 to ekskluzyjny projekt mieszkaniowy z panoramicznym widokiem na ocean.",
+      "Oferta obejmuje prywatny basen, duży taras, garaż oraz przestrzeń zaprojektowaną pod komfortowy styl życia.",
+      "Projekt znajduje się w jednej z najbardziej pożądanych lokalizacji południa Teneryfy."
+    ],
+    "params": {
+      "Lokalizacja": "Santa Cruz de Tenerife",
+      "Typ": "Ground floor",
+      "Powierzchnia": "188 m²",
+      "Taras": "58 m²",
+      "Sypialnie": "2",
+      "Łazienki": "2",
+      "Cena": "992 500 €"
+    }
   }
 ]
