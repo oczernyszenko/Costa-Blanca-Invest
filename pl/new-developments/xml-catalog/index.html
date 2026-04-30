@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Property</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog nieruchomości</title>
+
+<style>
+body{font-family:Arial;margin:0;padding:20px;background:#f5f5f5}
+.container{max-width:1000px;margin:auto}
+.card{background:#fff;border-radius:16px;padding:20px;margin-bottom:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+img{width:100%;border-radius:12px}
+h1{font-size:28px;margin:10px 0}
+.price{color:#caa74d;font-weight:bold;font-size:22px}
+</style>
 </head>
+
 <body>
 
-<div id="app">Загрузка...</div>
+<div class="container" id="catalog">
+Ładowanie...
+</div>
 
 <script>
+const container = document.getElementById('catalog');
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug');
+
 fetch('./properties.json')
-  .then(res => res.json())
-  .then(data => {
+.then(res => res.json())
+.then(data => {
 
-    const slug = new URLSearchParams(window.location.search).get('slug');
+  if(!Array.isArray(data)){
+    container.innerHTML = 'Błąd JSON';
+    return;
+  }
 
-    const property = data.find(p => p.slug === slug);
+  const property = data.find(p => p.slug === slug);
 
-    if (!property) {
-      document.getElementById('app').innerHTML = "❌ Obiekt nie znaleziony";
-      return;
-    }
+  if(!property){
+    container.innerHTML = 'Nie znaleziono oferty';
+    return;
+  }
 
-    document.getElementById('app').innerHTML = `
-      <h1>${property.translations.pl.page_h1}</h1>
-      <p><strong>${property.price}</strong></p>
-
-      <img src="${property.images[0]}" style="max-width:400px">
-
-      <p>${property.translations.pl.lead_1}</p>
-    `;
-  });
+  container.innerHTML = `
+    <div class="card">
+      <img src="${property.image}">
+      <h1>${property.title}</h1>
+      <div class="price">${property.price}</div>
+      <p>${property.desc}</p>
+    </div>
+  `;
+})
+.catch(err=>{
+  container.innerHTML = 'Błąd ładowania JSON';
+  console.log(err);
+});
 </script>
 
 </body>
