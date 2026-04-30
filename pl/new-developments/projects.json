@@ -31,7 +31,44 @@
       "Powierzchnia": "98–156 m²",
       "Pokoje": "2–3",
       "Cena": "280 800 € – 405 600 €"
-    }
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Mutxamel koło Alicante"
+      },
+      {
+        "title": "Potencjał",
+        "text": "Kameralna inwestycja premium w otoczeniu golfa i natury — styl życia, prywatność i stabilny potencjał inwestycyjny."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Możliwość sprawdzenia dostępności, dokumentów i warunków zakupu."
+      }
+    ],
+    "specs": [
+      "Kameralna inwestycja premium w otoczeniu golfa i natury — styl życia, prywatność i stabilny potencjał inwestycyjny.",
+      "Cena / zakres: 280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje.",
+      "Lokalizacja: Mutxamel koło Alicante.",
+      "Możliwość sprawdzenia aktualnej dostępności.",
+      "Kontakt bezpośrednio przez telefon lub WhatsApp.",
+      "Oferta przygotowana w jednolitym formacie."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla kupujących analizujących wynajem i wzrost wartości."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla osób szukających komfortowej nieruchomości na Costa Blanca."
+      }
+    ],
+    "roiText": "Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja."
   },
   {
     "slug": "penthouse-torrevieja",
@@ -66,7 +103,44 @@
       "Sypialnie": "3",
       "Łazienki": "2",
       "Solarium": "71 m²"
-    }
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Torrevieja · centrum · odbiór: 2026"
+      },
+      {
+        "title": "Potencjał",
+        "text": "Penthouse z prywatnym solarium 71 m² i werandą. 15 min do plaży — idealny do życia lub inwestycji."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Możliwość sprawdzenia dostępności, dokumentów i warunków zakupu."
+      }
+    ],
+    "specs": [
+      "Penthouse z prywatnym solarium 71 m² i werandą. 15 min do plaży — idealny do życia lub inwestycji.",
+      "Cena / zakres: 305 000 € · 134 m².",
+      "Lokalizacja: Torrevieja · centrum · odbiór: 2026.",
+      "Możliwość sprawdzenia aktualnej dostępności.",
+      "Kontakt bezpośrednio przez telefon lub WhatsApp.",
+      "Oferta przygotowana w jednolitym formacie."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla kupujących analizujących wynajem i wzrost wartości."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla osób szukających komfortowej nieruchomości na Costa Blanca."
+      }
+    ],
+    "roiText": "Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja."
   },
   {
     "slug": "maranon",
@@ -100,7 +174,44 @@
       "Ceny": "133 000 € – 310 000 €",
       "Odległość do morza": "około 180 m",
       "Zakończenie": "Q2 2027"
-    }
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Torrevieja · Q2 2027"
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nowoczesny budynek 180 m od morza. Idealny pod inwestycję, wakacje i wynajem całoroczny."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Możliwość sprawdzenia dostępności, dokumentów i warunków zakupu."
+      }
+    ],
+    "specs": [
+      "Nowoczesny budynek 180 m od morza. Idealny pod inwestycję, wakacje i wynajem całoroczny.",
+      "Cena / zakres: 133 000 € – 310 000 €.",
+      "Lokalizacja: Torrevieja · Q2 2027.",
+      "Możliwość sprawdzenia aktualnej dostępności.",
+      "Kontakt bezpośrednio przez telefon lub WhatsApp.",
+      "Oferta przygotowana w jednolitym formacie."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla kupujących analizujących wynajem i wzrost wartości."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla osób szukających komfortowej nieruchomości na Costa Blanca."
+      }
+    ],
+    "roiText": "Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja."
   },
   {
     "slug": "monteagudo",
@@ -134,7 +245,44 @@
       "Cena": "od 104 000 €",
       "Płatność": "inwestorska lub ratalna",
       "Wykończenie": "w cenie"
-    }
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Torrevieja · elastyczna płatność"
+      },
+      {
+        "title": "Potencjał",
+        "text": "Dwa modele zakupu: inwestorski i ratalny. W cenie pełne wykończenie, klimatyzacja i wyposażenie."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Możliwość sprawdzenia dostępności, dokumentów i warunków zakupu."
+      }
+    ],
+    "specs": [
+      "Dwa modele zakupu: inwestorski i ratalny. W cenie pełne wykończenie, klimatyzacja i wyposażenie.",
+      "Cena / zakres: od 104 000 €.",
+      "Lokalizacja: Torrevieja · elastyczna płatność.",
+      "Możliwość sprawdzenia aktualnej dostępności.",
+      "Kontakt bezpośrednio przez telefon lub WhatsApp.",
+      "Oferta przygotowana w jednolitym formacie."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla kupujących analizujących wynajem i wzrost wartości."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla osób szukających komfortowej nieruchomości na Costa Blanca."
+      }
+    ],
+    "roiText": "Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja."
   },
   {
     "slug": "investment-coming-soon",
@@ -164,42 +312,1312 @@
       "Status": "W przygotowaniu",
       "Region": "Costa Blanca",
       "Kontakt": "Zapytaj o aktualne oferty"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Costa Blanca"
+      },
+      {
+        "title": "Potencjał",
+        "text": "Dodajemy nowe projekty od deweloperów. Skontaktuj się, aby otrzymać aktualne oferty."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Możliwość sprawdzenia dostępności, dokumentów i warunków zakupu."
+      }
+    ],
+    "specs": [
+      "Dodajemy nowe projekty od deweloperów. Skontaktuj się, aby otrzymać aktualne oferty.",
+      "Cena / zakres: Aktualizujemy oferty.",
+      "Lokalizacja: Costa Blanca.",
+      "Możliwość sprawdzenia aktualnej dostępności.",
+      "Kontakt bezpośrednio przez telefon lub WhatsApp.",
+      "Oferta przygotowana w jednolitym formacie."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla kupujących analizujących wynajem i wzrost wartości."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla osób szukających komfortowej nieruchomości na Costa Blanca."
+      }
+    ],
+    "roiText": "Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja."
+  },
+  {
+    "slug": "16-villas-en-polop-polop-430412",
+    "source_id": "430412",
+    "source_url": "https://spain.metainmo.com/pl/alicante/polop/comprar-casas/430412-polop-villas-16-12",
+    "href": "/pl/new-developments/xml-catalog/?slug=16-villas-en-polop-polop-430412",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983658/conversions/01KBN2DEYCS8J2KC5DP9DWEWYE-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983658/conversions/01KBN2DEYCS8J2KC5DP9DWEWYE-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983659/conversions/01KBN2DF40D6P1SZCJDP0D2RZQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983660/conversions/01KBN2DF9XNG4KC0383P1Z9H3V-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983661/conversions/01KBN2DFF9D106994XSKZZ7S4C-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983662/conversions/01KBN2DFKWJYFJTV2BY1G55N0Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983663/conversions/01KBN2DFT6SNKS3Y0FG54FAYBA-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983664/conversions/01KBN2DG01K06768EYY717NEF5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983665/conversions/01KBN2DG414PB4BW61X4ATC7Y7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983666/conversions/01KBN2DG8BK3W3BCJEJH1PZJ9Y-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983667/conversions/01KBN2DGDDS0729H3BR8ZEXHXZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983668/conversions/01KBN2DGH8KKSR8ZTF4W8M1V44-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983669/conversions/01KBN2DGN37KA9VQDV5CEXFC8P-medium.jpg"
+    ],
+    "alt": "16 Villas en Polop — Polop",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "16 Villas en Polop",
+    "meta": "Polop · Willa · odbiór: 2027",
+    "price": "455 926 € · 140 m²",
+    "desc": "W ofercie znajduje się 16 niezależnych willi o nowoczesnej zabudowie, zlokalizowanych w Polop, w otoczeniu naturalnym o wyjątkowych walorach, które łączą spokój, otwarte widoki oraz bliskość...",
+    "kpi": [
+      "455 926 €",
+      "140 m²",
+      "3 sypialnie"
+    ],
+    "lead": [
+      "W ofercie znajduje się 16 niezależnych willi o nowoczesnej zabudowie, zlokalizowanych w Polop, w otoczeniu naturalnym o wyjątkowych walorach, które łączą spokój, otwarte widoki oraz bliskość głównych miejsc na Costa Blanca. Projekt zaprojektowany z myślą o tych, którzy szukają prywatności, przestrzeni i śródziemnomorskiego stylu życia z wszelkimi nowoczesnymi udogodnieniami.",
+      "Każda willa posiada funkcjonalny i jasny układ, duże okna, przestronne wnętrza i współczesny design, który harmonijnie łączy wnętrze z zewnętrzem. Domy oferują:",
+      "Wille zlokalizowane są na prywatnych działkach, które pozwalają w pełni korzystać z klimatu śródziemnomorskiego. Zawierają:"
+    ],
+    "params": {
+      "Lokalizacja": "Polop",
+      "Typ": "Willa",
+      "Powierzchnia": "140 m²",
+      "Sypialnie": "3",
+      "Łazienki": "2",
+      "Status": "Under construction",
+      "Rok budowy": "2027",
+      "Orientacja": "East",
+      "Lotnisko": "44 km",
+      "Garaż": "Included in the price",
+      "Energia": "A"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Polop to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje willa w cenie 455 926 € i powierzchni 140 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 140 m².",
+      "Układ: 3 sypialnie / 2 łazienki.",
+      "Miejsce parkingowe / garaż: Included in the price.",
+      "Udogodnienia: Prywatny basen, Basen.",
+      "Nowoczesny projekt w regionie Costa Blanca.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Polop może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-28 14:53:07",
+    "created": "2025-12-04 16:26:10",
+    "location": {
+      "latitude": "38.622699",
+      "longitude": "-0.144738"
+    },
+    "video_url": "https://youtu.be/ozhmp_8udZY",
+    "translations": {
+      "pl": {
+        "title": "16 Villas en Polop",
+        "hero_title": "16 Villas en Polop",
+        "page_h1": "16 Villas en Polop",
+        "subtitle": "Polop · Willa · odbiór: 2027",
+        "meta": "Polop · Willa · odbiór: 2027",
+        "price": "455 926 € · 140 m²",
+        "price_range": "455 926 € · 140 m²",
+        "desc": "W ofercie znajduje się 16 niezależnych willi o nowoczesnej zabudowie, zlokalizowanych w Polop, w otoczeniu naturalnym o wyjątkowych walorach, które łączą spokój, otwarte widoki oraz bliskość...",
+        "hero_subtext": "W ofercie znajduje się 16 niezależnych willi o nowoczesnej zabudowie, zlokalizowanych w Polop, w otoczeniu naturalnym o wyjątkowych walorach, które łączą spokój, otwarte widoki oraz bliskość...",
+        "lead": [
+          "W ofercie znajduje się 16 niezależnych willi o nowoczesnej zabudowie, zlokalizowanych w Polop, w otoczeniu naturalnym o wyjątkowych walorach, które łączą spokój, otwarte widoki oraz bliskość głównych miejsc na Costa Blanca. Projekt zaprojektowany z myślą o tych, którzy szukają prywatności, przestrzeni i śródziemnomorskiego stylu życia z wszelkimi nowoczesnymi udogodnieniami.",
+          "Każda willa posiada funkcjonalny i jasny układ, duże okna, przestronne wnętrza i współczesny design, który harmonijnie łączy wnętrze z zewnętrzem. Domy oferują:",
+          "Wille zlokalizowane są na prywatnych działkach, które pozwalają w pełni korzystać z klimatu śródziemnomorskiego. Zawierają:"
+        ]
+      },
+      "en": {
+        "title": "16 Villas en Polop",
+        "hero_title": "16 Villas en Polop",
+        "page_h1": "16 Villas en Polop",
+        "subtitle": "Polop · Willa · odbiór: 2027",
+        "meta": "Polop · Willa · odbiór: 2027",
+        "price": "455 926 € · 140 m²",
+        "price_range": "455 926 € · 140 m²",
+        "desc": "This exclusive development of 16 independent new-build villas is set in a privileged natural environment in Polop, offering tranquillity, open views, and proximity to the main areas of the C...",
+        "hero_subtext": "This exclusive development of 16 independent new-build villas is set in a privileged natural environment in Polop, offering tranquillity, open views, and proximity to the main areas of the C...",
+        "lead": [
+          "This exclusive development of 16 independent new-build villas is set in a privileged natural environment in Polop, offering tranquillity, open views, and proximity to the main areas of the Costa Blanca. It is designed for those seeking privacy, spaciousness, and a Mediterranean lifestyle with all modern conveniences.",
+          "Each villa features a functional and bright layout, large windows, spacious areas, and a contemporary design that seamlessly integrates the interior and exterior. The properties offer:",
+          "The villas are located on private plots that allow for maximum enjoyment of the Mediterranean climate. They include:"
+        ]
+      },
+      "es": {
+        "title": "16 Villas en Polop",
+        "hero_title": "16 Villas en Polop",
+        "page_h1": "16 Villas en Polop",
+        "subtitle": "Polop · Willa · odbiór: 2027",
+        "meta": "Polop · Willa · odbiór: 2027",
+        "price": "455 926 € · 140 m²",
+        "price_range": "455 926 € · 140 m²",
+        "desc": "Promoción exclusiva de 16 villas independientes de obra nueva ubicadas en Polop (Alicante), un entorno natural privilegiado que combina tranquilidad, vistas abiertas y la cercanía a las prin...",
+        "hero_subtext": "Promoción exclusiva de 16 villas independientes de obra nueva ubicadas en Polop (Alicante), un entorno natural privilegiado que combina tranquilidad, vistas abiertas y la cercanía a las prin...",
+        "lead": [
+          "Promoción exclusiva de 16 villas independientes de obra nueva ubicadas en Polop (Alicante), un entorno natural privilegiado que combina tranquilidad, vistas abiertas y la cercanía a las principales zonas de la Costa Blanca. Un proyecto pensado para quienes buscan privacidad, amplitud y un estilo de vida mediterráneo con todas las comodidades modernas.",
+          "Cada villa cuenta con una distribución funcional y luminosa, grandes ventanales, espacios amplios y un diseño contemporáneo que integra interior y exterior de manera armoniosa. Las viviendas ofrecen:",
+          "Las villas se ubican en parcelas privadas que permiten disfrutar al máximo del clima mediterráneo. Incluyen:"
+        ]
+      },
+      "ru": {
+        "title": "16 Villas en Polop",
+        "hero_title": "16 Villas en Polop",
+        "page_h1": "16 Villas en Polop",
+        "subtitle": "Polop · Willa · odbiór: 2027",
+        "meta": "Polop · Willa · odbiór: 2027",
+        "price": "455 926 € · 140 m²",
+        "price_range": "455 926 € · 140 m²",
+        "desc": "Эксклюзивное предложение из 16 новых вилл, расположенных в Полопе (Аликанте), уникальном природном окружении, сочетающем спокойствие, открытые виды и близость к основным районам Коста-Бланки...",
+        "hero_subtext": "Эксклюзивное предложение из 16 новых вилл, расположенных в Полопе (Аликанте), уникальном природном окружении, сочетающем спокойствие, открытые виды и близость к основным районам Коста-Бланки...",
+        "lead": [
+          "Эксклюзивное предложение из 16 новых вилл, расположенных в Полопе (Аликанте), уникальном природном окружении, сочетающем спокойствие, открытые виды и близость к основным районам Коста-Бланки. Проект предназначен для тех, кто ищет уединение, простор и средиземноморский образ жизни с современными удобствами.",
+          "Виллы, спроектированные для комфорта",
+          "Каждая вилла имеет функциональную и светлую планировку, большие окна, просторные помещения и современный дизайн, который гармонично интегрирует внутреннее и внешнее пространство. В каждой вилле предусмотрено:"
+        ]
+      }
     }
   },
   {
-    "slug": "iconic-tenerife-phase-2-3-450411",
-    "href": "/pl/new-developments/xml-catalog/?slug=iconic-tenerife-phase-2-3-450411",
-    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+    "slug": "residencial-los-balcones-de-calpe-calpe-395273",
+    "source_id": "395273",
+    "source_url": "https://spain.metainmo.com/pl/alicante/calpe/comprar-pisos/395273-residencial-los-balcones-de-calpe-46",
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe-calpe-395273",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
     "images": [
-      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
-      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207713/conversions/01KCRY5Y3Q44TZ9N8C0M3PNF3H-medium.jpg",
-      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207714/conversions/01KCRY5Y9BFMX6SPF672WXY9V5-medium.jpg",
-      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207715/conversions/01KCRY5YFFCM1XGEFTE3STM3QX-medium.jpg"
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692631/conversions/01JRNKQ8BEX4QM1ERA7FC3FKQK-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692630/conversions/01JRNKQ85P244NHJV2TERHVSZG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692626/conversions/01JRNKQ62M1571ZZGWQ2BHHR02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692627/conversions/01JRNKQ6QDJDGBHAPVKAX8S13Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692624/conversions/01JRNKQ59J66QJPNEY7E5R1QD6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692629/conversions/01JRNKQ7JCC6H68C2BT409484M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800309/conversions/01JTQYJ78A87TV3426P6KGF75G-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800310/conversions/01JTQYJ7SZNBP1Y2EANG23NRD8-medium.jpg"
     ],
-    "alt": "ICONIC Tenerife phase 2-3 — luksusowy apartament z widokiem na ocean",
-    "chip": "Nowa inwestycja · Tenerife",
-    "title": "ICONIC Tenerife phase 2-3",
-    "meta": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki",
-    "price": "992 500 € · 188 m² · taras 58 m²",
-    "desc": "Ekskluzyjna inwestycja z widokiem na ocean, prywatnym basenem, dużym tarasem i garażem w cenie.",
+    "alt": "Residencial Los Balcones De Calpe — Calpe",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Residencial Los Balcones De Calpe",
+    "meta": "Calpe · Penthouse · odbiór: 2027",
+    "price": "599 106 € · 168 m²",
+    "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
     "kpi": [
-      "992 500 €",
-      "188 m²",
+      "599 106 €",
+      "168 m²",
       "2 sypialnie"
     ],
     "lead": [
-      "ICONIC Tenerife phase 2-3 to ekskluzyjny projekt mieszkaniowy z panoramicznym widokiem na ocean.",
-      "Oferta obejmuje prywatny basen, duży taras, garaż oraz przestrzeń zaprojektowaną pod komfortowy styl życia.",
-      "Projekt znajduje się w jednej z najbardziej pożądanych lokalizacji południa Teneryfy."
+      "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+      "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+      "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
     ],
     "params": {
-      "Lokalizacja": "Santa Cruz de Tenerife",
-      "Typ": "Ground floor",
-      "Powierzchnia": "188 m²",
-      "Taras": "58 m²",
+      "Lokalizacja": "Calpe",
+      "Typ": "Penthouse",
+      "Powierzchnia": "168 m²",
+      "Pow. użytkowa": "89 m²",
       "Sypialnie": "2",
       "Łazienki": "2",
-      "Cena": "992 500 €"
+      "Taras": "78 m²",
+      "Status": "In project",
+      "Rok budowy": "2027",
+      "Plaża": "400 m",
+      "Lotnisko": "77.10 km",
+      "Energia": "A"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Calpe to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje penthouse w cenie 599 106 € i powierzchni 168 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 168 m².",
+      "Taras: 78 m².",
+      "Układ: 2 sypialnie / 2 łazienki.",
+      "Odległość do plaży: 400 m.",
+      "Udogodnienia: Air Conditioning, Storage Room, Taras, Balcon, Basen.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Calpe może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-24 09:19:25",
+    "created": "2025-09-25 12:59:19",
+    "location": {
+      "latitude": "38.644798",
+      "longitude": "0.047717"
+    },
+    "video_url": "https://youtu.be/gbUa3ER3ftM",
+    "translations": {
+      "pl": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "599 106 € · 168 m²",
+        "price_range": "599 106 € · 168 m²",
+        "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "hero_subtext": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "lead": [
+          "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+          "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+          "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
+        ]
+      },
+      "en": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "599 106 € · 168 m²",
+        "price_range": "599 106 € · 168 m²",
+        "desc": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "hero_subtext": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "lead": [
+          "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsurpassed quality, and a dream location in the heart of the coast.",
+          "The innovative building offers personalised apartments with one to three bedrooms, designed for those who value privacy and comfort. With areas ranging from 62 m² to 194 m², each space reflects a sophisticated lifestyle.",
+          "Located near the Arenal-Bol Beach and the centre of the city, and 50 minutes from Alicante airport, the residence features communal areas such as a pool with solarium, spa, gym, and children's play area."
+        ]
+      },
+      "es": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "599 106 € · 168 m²",
+        "price_range": "599 106 € · 168 m²",
+        "desc": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "hero_subtext": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "lead": [
+          "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno, calidad insuperable y una ubicación de ensueño en el corazón de la costa.",
+          "El innovador edificio ofrece apartamentos personalizados de uno a tres dormitorios, diseñados para quienes valoran la privacidad y el confort. Con áreas que van desde los 62 m² hasta los 194 m², cada espacio refleja un estilo de vida sofisticado.",
+          "Se encuentra cerca de la Playa del Arenal-Bol y del centro de Calpe, y a 50 minutos del aeropuerto de Alicante. El residencial cuenta con zonas comunes como piscina con solárium, spa, gimnasio y zona de juegos infantiles."
+        ]
+      },
+      "ru": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "599 106 € · 168 m²",
+        "price_range": "599 106 € · 168 m²",
+        "desc": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "hero_subtext": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "lead": [
+          "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный дизайн, непревзойденное качество и мечтательное расположение в сердце побережья.",
+          "Инновационное здание предлагает персонализированные апартаменты с одной, двумя или тремя спальнями, предназначенные для тех, кто ценит приватность и комфорт. С площадью от 62 м² до 194 м², каждый уголок отражает изысканный образ жизни.",
+          "Комплекс находится недалеко от Пляжа Ареналь-Боль и центра города, а также в 50 минутах от аэропорта. Резиденция располагает общей зоной с бассейном, солярием, спа, тренажерным залом и игровой зоной для детей."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "residencial-los-balcones-de-calpe-calpe-395266",
+    "source_id": "395266",
+    "source_url": "https://spain.metainmo.com/pl/alicante/calpe/comprar-pisos/395266-residencial-los-balcones-de-calpe-39",
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe-calpe-395266",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692631/conversions/01JRNKQ8BEX4QM1ERA7FC3FKQK-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692630/conversions/01JRNKQ85P244NHJV2TERHVSZG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692626/conversions/01JRNKQ62M1571ZZGWQ2BHHR02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692627/conversions/01JRNKQ6QDJDGBHAPVKAX8S13Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692624/conversions/01JRNKQ59J66QJPNEY7E5R1QD6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692629/conversions/01JRNKQ7JCC6H68C2BT409484M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800309/conversions/01JTQYJ78A87TV3426P6KGF75G-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800310/conversions/01JTQYJ7SZNBP1Y2EANG23NRD8-medium.jpg"
+    ],
+    "alt": "Residencial Los Balcones De Calpe — Calpe",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Residencial Los Balcones De Calpe",
+    "meta": "Calpe · Penthouse · odbiór: 2027",
+    "price": "438 891 € · 112 m²",
+    "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+    "kpi": [
+      "438 891 €",
+      "112 m²",
+      "1 sypialnie"
+    ],
+    "lead": [
+      "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+      "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+      "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
+    ],
+    "params": {
+      "Lokalizacja": "Calpe",
+      "Typ": "Penthouse",
+      "Powierzchnia": "112 m²",
+      "Pow. użytkowa": "67 m²",
+      "Sypialnie": "1",
+      "Łazienki": "1",
+      "Taras": "46 m²",
+      "Status": "In project",
+      "Rok budowy": "2027",
+      "Plaża": "400 m",
+      "Lotnisko": "77.10 km",
+      "Energia": "A"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Calpe to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje penthouse w cenie 438 891 € i powierzchni 112 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 112 m².",
+      "Taras: 46 m².",
+      "Układ: 1 sypialnie / 1 łazienki.",
+      "Odległość do plaży: 400 m.",
+      "Udogodnienia: Air Conditioning, Storage Room, Taras, Balcon, Basen.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Calpe może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-24 09:19:25",
+    "created": "2025-09-25 12:59:17",
+    "location": {
+      "latitude": "38.644798",
+      "longitude": "0.047717"
+    },
+    "video_url": "https://youtu.be/gbUa3ER3ftM",
+    "translations": {
+      "pl": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "438 891 € · 112 m²",
+        "price_range": "438 891 € · 112 m²",
+        "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "hero_subtext": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "lead": [
+          "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+          "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+          "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
+        ]
+      },
+      "en": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "438 891 € · 112 m²",
+        "price_range": "438 891 € · 112 m²",
+        "desc": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "hero_subtext": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "lead": [
+          "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsurpassed quality, and a dream location in the heart of the coast.",
+          "The innovative building offers personalised apartments with one to three bedrooms, designed for those who value privacy and comfort. With areas ranging from 62 m² to 194 m², each space reflects a sophisticated lifestyle.",
+          "Located near the Arenal-Bol Beach and the centre of the city, and 50 minutes from Alicante airport, the residence features communal areas such as a pool with solarium, spa, gym, and children's play area."
+        ]
+      },
+      "es": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "438 891 € · 112 m²",
+        "price_range": "438 891 € · 112 m²",
+        "desc": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "hero_subtext": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "lead": [
+          "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno, calidad insuperable y una ubicación de ensueño en el corazón de la costa.",
+          "El innovador edificio ofrece apartamentos personalizados de uno a tres dormitorios, diseñados para quienes valoran la privacidad y el confort. Con áreas que van desde los 62 m² hasta los 194 m², cada espacio refleja un estilo de vida sofisticado.",
+          "Se encuentra cerca de la Playa del Arenal-Bol y del centro de Calpe, y a 50 minutos del aeropuerto de Alicante. El residencial cuenta con zonas comunes como piscina con solárium, spa, gimnasio y zona de juegos infantiles."
+        ]
+      },
+      "ru": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Penthouse · odbiór: 2027",
+        "meta": "Calpe · Penthouse · odbiór: 2027",
+        "price": "438 891 € · 112 m²",
+        "price_range": "438 891 € · 112 m²",
+        "desc": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "hero_subtext": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "lead": [
+          "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный дизайн, непревзойденное качество и мечтательное расположение в сердце побережья.",
+          "Инновационное здание предлагает персонализированные апартаменты с одной, двумя или тремя спальнями, предназначенные для тех, кто ценит приватность и комфорт. С площадью от 62 м² до 194 м², каждый уголок отражает изысканный образ жизни.",
+          "Комплекс находится недалеко от Пляжа Ареналь-Боль и центра города, а также в 50 минутах от аэропорта. Резиденция располагает общей зоной с бассейном, солярием, спа, тренажерным залом и игровой зоной для детей."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "residencial-los-balcones-de-calpe-calpe-395242",
+    "source_id": "395242",
+    "source_url": "https://spain.metainmo.com/pl/alicante/calpe/comprar-pisos/395242-residencial-los-balcones-de-calpe-15",
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe-calpe-395242",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692631/conversions/01JRNKQ8BEX4QM1ERA7FC3FKQK-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692630/conversions/01JRNKQ85P244NHJV2TERHVSZG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692626/conversions/01JRNKQ62M1571ZZGWQ2BHHR02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692627/conversions/01JRNKQ6QDJDGBHAPVKAX8S13Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692624/conversions/01JRNKQ59J66QJPNEY7E5R1QD6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692629/conversions/01JRNKQ7JCC6H68C2BT409484M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800309/conversions/01JTQYJ78A87TV3426P6KGF75G-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800310/conversions/01JTQYJ7SZNBP1Y2EANG23NRD8-medium.jpg"
+    ],
+    "alt": "Residencial Los Balcones De Calpe — Calpe",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Residencial Los Balcones De Calpe",
+    "meta": "Calpe · Apartament · odbiór: 2027",
+    "price": "379 000 € · 154 m²",
+    "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+    "kpi": [
+      "379 000 €",
+      "154 m²",
+      "3 sypialnie"
+    ],
+    "lead": [
+      "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+      "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+      "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
+    ],
+    "params": {
+      "Lokalizacja": "Calpe",
+      "Typ": "Apartament",
+      "Powierzchnia": "154 m²",
+      "Pow. użytkowa": "113 m²",
+      "Sypialnie": "3",
+      "Łazienki": "2",
+      "Taras": "41 m²",
+      "Status": "In project",
+      "Rok budowy": "2027",
+      "Plaża": "400 m",
+      "Lotnisko": "77.10 km",
+      "Energia": "A"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Calpe to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje apartament w cenie 379 000 € i powierzchni 154 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 154 m².",
+      "Taras: 41 m².",
+      "Układ: 3 sypialnie / 2 łazienki.",
+      "Odległość do plaży: 400 m.",
+      "Udogodnienia: Air Conditioning, Storage Room, Taras, Balcon, Basen.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Calpe może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-24 09:19:24",
+    "created": "2025-09-25 12:59:09",
+    "location": {
+      "latitude": "38.644798",
+      "longitude": "0.047717"
+    },
+    "video_url": "https://youtu.be/gbUa3ER3ftM",
+    "translations": {
+      "pl": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Apartament · odbiór: 2027",
+        "meta": "Calpe · Apartament · odbiór: 2027",
+        "price": "379 000 € · 154 m²",
+        "price_range": "379 000 € · 154 m²",
+        "desc": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "hero_subtext": "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowocz...",
+        "lead": [
+          "Zamieszkaj zaledwie kilka metrów od plaży na stylowym wybrzeżu alicanteńskim, ciesząc się ekskluzywnym otoczeniem z niepowtarzalnym widokiem na morze. To nowe miejsce mieszkalne łączy nowoczesny design, najwyższą jakość i wymarzoną lokalizację w sercu wybrzeża.",
+          "Nowatorski budynek oferuje personalizowane apartamenty z jednym do trzech sypialni, zaprojektowane dla osób ceniących prywatność i komfort. Powierzchnie wahają się od 62 m² do 194 m², a każdy apartament odzwierciedla wyrafinowany styl życia.",
+          "Zlokalizowany jest blisko Playa del Arenal-Bol oraz centrum, a dojazd do lotniska zajmuje 50 minut. Kompleks oferuje wspólne tereny takie jak basen z solarium, spa, siłownię oraz plac zabaw dla dzieci."
+        ]
+      },
+      "en": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Apartament · odbiór: 2027",
+        "meta": "Calpe · Apartament · odbiór: 2027",
+        "price": "379 000 € · 154 m²",
+        "price_range": "379 000 € · 154 m²",
+        "desc": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "hero_subtext": "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsu...",
+        "lead": [
+          "Live just a stone's throw from the beach on the stylish Alicante coast, enjoying an exclusive environment with unparalleled sea views. This new residential space combines modern design, unsurpassed quality, and a dream location in the heart of the coast.",
+          "The innovative building offers personalised apartments with one to three bedrooms, designed for those who value privacy and comfort. With areas ranging from 62 m² to 194 m², each space reflects a sophisticated lifestyle.",
+          "Located near the Arenal-Bol Beach and the centre of the city, and 50 minutes from Alicante airport, the residence features communal areas such as a pool with solarium, spa, gym, and children's play area."
+        ]
+      },
+      "es": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Apartament · odbiór: 2027",
+        "meta": "Calpe · Apartament · odbiór: 2027",
+        "price": "379 000 € · 154 m²",
+        "price_range": "379 000 € · 154 m²",
+        "desc": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "hero_subtext": "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno...",
+        "lead": [
+          "Viva a escasos metros de la playa en la estilizada costa alicantina, disfrutando de un entorno exclusivo con vistas inigualables al mar. Este nuevo espacio residencial combina diseño moderno, calidad insuperable y una ubicación de ensueño en el corazón de la costa.",
+          "El innovador edificio ofrece apartamentos personalizados de uno a tres dormitorios, diseñados para quienes valoran la privacidad y el confort. Con áreas que van desde los 62 m² hasta los 194 m², cada espacio refleja un estilo de vida sofisticado.",
+          "Se encuentra cerca de la Playa del Arenal-Bol y del centro de Calpe, y a 50 minutos del aeropuerto de Alicante. El residencial cuenta con zonas comunes como piscina con solárium, spa, gimnasio y zona de juegos infantiles."
+        ]
+      },
+      "ru": {
+        "title": "Residencial Los Balcones De Calpe",
+        "hero_title": "Residencial Los Balcones De Calpe",
+        "page_h1": "Residencial Los Balcones De Calpe",
+        "subtitle": "Calpe · Apartament · odbiór: 2027",
+        "meta": "Calpe · Apartament · odbiór: 2027",
+        "price": "379 000 € · 154 m²",
+        "price_range": "379 000 € · 154 m²",
+        "desc": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "hero_subtext": "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный...",
+        "lead": [
+          "Живите в нескольких метрах от пляжа на стильном побережье Аликанте, наслаждаясь эксклюзивной атмосферой с неподражаемыми видами на море. Этот новый жилой комплекс сочетает в себе современный дизайн, непревзойденное качество и мечтательное расположение в сердце побережья.",
+          "Инновационное здание предлагает персонализированные апартаменты с одной, двумя или тремя спальнями, предназначенные для тех, кто ценит приватность и комфорт. С площадью от 62 м² до 194 м², каждый уголок отражает изысканный образ жизни.",
+          "Комплекс находится недалеко от Пляжа Ареналь-Боль и центра города, а также в 50 минутах от аэропорта. Резиденция располагает общей зоной с бассейном, солярием, спа, тренажерным залом и игровой зоной для детей."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "royal-star-guardamar-del-segura-324846",
+    "source_id": "324846",
+    "source_url": "https://spain.metainmo.com/pl/alicante/guardamar-del-segura/comprar-pisos/324846-lepanto-15",
+    "href": "/pl/new-developments/xml-catalog/?slug=royal-star-guardamar-del-segura-324846",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899791/conversions/01J4VVEFXBN4NFE5MPPJD3DQKV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899793/conversions/01J4VVEG98AY52MA3PCAC1P41T-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899795/conversions/01J4VVEGKWX8ZC76RYVCV43YRG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196019/conversions/01JH09AFP31HM6KHK8MA5YAHZM-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196020/conversions/01JH09AFV0DBP4T4SJ95XMS227-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196021/conversions/01JH09AFZ14W8M52GN2KFN3R8M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196022/conversions/01JH09AG31D8FEM6X4HCH33TVV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196023/conversions/01JH09AG755VF41TARA29GE9HZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196024/conversions/01JH09AGB2DBAQQCKXMBVET5D1-medium.jpg"
+    ],
+    "alt": "Royal Star — Guardamar del Segura",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Royal Star",
+    "meta": "Guardamar del Segura · Penthouse · odbiór: 2026",
+    "price": "299 500 € · 105 m²",
+    "desc": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+    "kpi": [
+      "299 500 €",
+      "105 m²",
+      "1 sypialnie"
+    ],
+    "lead": [
+      "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią sobie zarówno komfort, jak i lokalizację.",
+      "Kompleks mieszkalny oferuje 13 wyjątkowych mieszkań z 2 sypialniami i 2 łazienkami. Można zdecydować się na apartamenty na parterze, na piętrach środkowych z przestronnymi tarasami lub w kondygnacji penthouse.",
+      "Rezydencja posiada wspólny solarium z częścią wypoczynkową, co czyni ją idealnym miejscem do relaksu i podziwiania okolicy. Istnieje możliwość zakupu miejsc parkingowych, które znajdują się w dogodnej odległości, co zapewnia dodatkowy komfort mieszkalny."
+    ],
+    "params": {
+      "Lokalizacja": "Guardamar del Segura",
+      "Typ": "Penthouse",
+      "Powierzchnia": "105 m²",
+      "Sypialnie": "1",
+      "Łazienki": "1",
+      "Taras": "113 m²",
+      "Status": "Under construction",
+      "Rok budowy": "2026",
+      "Plaża": "550.00 m",
+      "Lotnisko": "32.60 km"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Guardamar del Segura to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje penthouse w cenie 299 500 € i powierzchni 105 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 105 m².",
+      "Taras: 113 m².",
+      "Układ: 1 sypialnie / 1 łazienki.",
+      "Odległość do plaży: 550.00 m.",
+      "Udogodnienia: Taras, Solarium, Off Street Parking, Street Views.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Guardamar del Segura może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-28 13:17:39",
+    "created": "2025-06-17 18:41:11",
+    "location": {
+      "latitude": "38.084877",
+      "longitude": "-0.653539"
+    },
+    "translations": {
+      "pl": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "meta": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "price": "299 500 € · 105 m²",
+        "price_range": "299 500 € · 105 m²",
+        "desc": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+        "hero_subtext": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+        "lead": [
+          "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią sobie zarówno komfort, jak i lokalizację.",
+          "Kompleks mieszkalny oferuje 13 wyjątkowych mieszkań z 2 sypialniami i 2 łazienkami. Można zdecydować się na apartamenty na parterze, na piętrach środkowych z przestronnymi tarasami lub w kondygnacji penthouse.",
+          "Rezydencja posiada wspólny solarium z częścią wypoczynkową, co czyni ją idealnym miejscem do relaksu i podziwiania okolicy. Istnieje możliwość zakupu miejsc parkingowych, które znajdują się w dogodnej odległości, co zapewnia dodatkowy komfort mieszkalny."
+        ]
+      },
+      "en": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "meta": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "price": "299 500 € · 105 m²",
+        "price_range": "299 500 € · 105 m²",
+        "desc": "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+        "hero_subtext": "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+        "lead": [
+          "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+          "The project features 13 exclusive homes, offering 2 bedrooms and 2 bathrooms. Buyers can choose from ground-floor apartments, mid-floor units with spacious terraces, or top-floor penthouses.",
+          "The complex includes a communal solarium with a relaxing area, perfect for unwinding and taking in the surroundings. Additionally, optional parking spaces are available nearby, just a 4-minute walk from the residential area."
+        ]
+      },
+      "es": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "meta": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "price": "299 500 € · 105 m²",
+        "price_range": "299 500 € · 105 m²",
+        "desc": "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+        "hero_subtext": "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+        "lead": [
+          "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+          "Este proyecto ofrece un conjunto de 13 exclusivas viviendas de dos dormitorios y dos baños, con superficies comprendidas entre 62 m² y 67 m². Los compradores pueden elegir entre residencias en la planta baja, niveles intermedios con amplias terrazas, o en el ático para disfrutar de una vista más elevada. Los precios oscilan entre 199,000 € y 219,000 €, asegurando una excelente relación calidad-precio.",
+          "El complejo ofrece un solárium comunitario, perfecto para relajarse y disfrutar del entorno. Además, se dispone de plazas de aparcamiento opcionales a tan solo 4 minutos de distancia, proporcionando un extra de comodidad."
+        ]
+      },
+      "ru": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "meta": "Guardamar del Segura · Penthouse · odbiór: 2026",
+        "price": "299 500 € · 105 m²",
+        "price_range": "299 500 € · 105 m²",
+        "desc": "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+        "hero_subtext": "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+        "lead": [
+          "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+          "Проект предлагает 13 уникальных квартир с двумя спальнями и двумя ванными комнатами. Вы можете выбрать между квартирами на первом этаже, на промежуточных этажах с просторными террасами или на верхнем этаже.",
+          "В жилом комплексе предусмотрен общий солярий с зоной отдыха, что идеально подходит для расслабления и наслаждения окружающей атмосферой. Также доступны опциональные парковочные места, всего в четырех минутах от комплекса."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "royal-star-guardamar-del-segura-324840",
+    "source_id": "324840",
+    "source_url": "https://spain.metainmo.com/pl/alicante/guardamar-del-segura/comprar-pisos/324840-lepanto-9",
+    "href": "/pl/new-developments/xml-catalog/?slug=royal-star-guardamar-del-segura-324840",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899791/conversions/01J4VVEFXBN4NFE5MPPJD3DQKV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899793/conversions/01J4VVEG98AY52MA3PCAC1P41T-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899795/conversions/01J4VVEGKWX8ZC76RYVCV43YRG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196019/conversions/01JH09AFP31HM6KHK8MA5YAHZM-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196020/conversions/01JH09AFV0DBP4T4SJ95XMS227-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196021/conversions/01JH09AFZ14W8M52GN2KFN3R8M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196022/conversions/01JH09AG31D8FEM6X4HCH33TVV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196023/conversions/01JH09AG755VF41TARA29GE9HZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196024/conversions/01JH09AGB2DBAQQCKXMBVET5D1-medium.jpg"
+    ],
+    "alt": "Royal Star — Guardamar del Segura",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Royal Star",
+    "meta": "Guardamar del Segura · Apartament · odbiór: 2026",
+    "price": "259 500 € · 62 m²",
+    "desc": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+    "kpi": [
+      "259 500 €",
+      "62 m²",
+      "2 sypialnie"
+    ],
+    "lead": [
+      "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią sobie zarówno komfort, jak i lokalizację.",
+      "Kompleks mieszkalny oferuje 13 wyjątkowych mieszkań z 2 sypialniami i 2 łazienkami. Można zdecydować się na apartamenty na parterze, na piętrach środkowych z przestronnymi tarasami lub w kondygnacji penthouse.",
+      "Rezydencja posiada wspólny solarium z częścią wypoczynkową, co czyni ją idealnym miejscem do relaksu i podziwiania okolicy. Istnieje możliwość zakupu miejsc parkingowych, które znajdują się w dogodnej odległości, co zapewnia dodatkowy komfort mieszkalny."
+    ],
+    "params": {
+      "Lokalizacja": "Guardamar del Segura",
+      "Typ": "Apartament",
+      "Powierzchnia": "62 m²",
+      "Sypialnie": "2",
+      "Łazienki": "2",
+      "Taras": "62 m²",
+      "Status": "Under construction",
+      "Rok budowy": "2026",
+      "Plaża": "550.00 m",
+      "Lotnisko": "32.60 km"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Guardamar del Segura to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje apartament w cenie 259 500 € i powierzchni 62 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 62 m².",
+      "Taras: 62 m².",
+      "Układ: 2 sypialnie / 2 łazienki.",
+      "Odległość do plaży: 550.00 m.",
+      "Udogodnienia: Taras, Solarium, Off Street Parking, Street Views.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Guardamar del Segura może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-28 13:17:43",
+    "created": "2025-06-17 18:41:10",
+    "location": {
+      "latitude": "38.084877",
+      "longitude": "-0.653539"
+    },
+    "translations": {
+      "pl": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "meta": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "price": "259 500 € · 62 m²",
+        "price_range": "259 500 € · 62 m²",
+        "desc": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+        "hero_subtext": "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią...",
+        "lead": [
+          "Znajduje się w samym centrum Guardamar del Segura, blisko wszystkich udogodnień oraz zaledwie kilka minut spacerem od plaży. Te nowe apartamenty są doskonałym wyborem dla tych, którzy cenią sobie zarówno komfort, jak i lokalizację.",
+          "Kompleks mieszkalny oferuje 13 wyjątkowych mieszkań z 2 sypialniami i 2 łazienkami. Można zdecydować się na apartamenty na parterze, na piętrach środkowych z przestronnymi tarasami lub w kondygnacji penthouse.",
+          "Rezydencja posiada wspólny solarium z częścią wypoczynkową, co czyni ją idealnym miejscem do relaksu i podziwiania okolicy. Istnieje możliwość zakupu miejsc parkingowych, które znajdują się w dogodnej odległości, co zapewnia dodatkowy komfort mieszkalny."
+        ]
+      },
+      "en": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "meta": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "price": "259 500 € · 62 m²",
+        "price_range": "259 500 € · 62 m²",
+        "desc": "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+        "hero_subtext": "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+        "lead": [
+          "This new residential complex is conveniently located in the heart of Guardamar del Segura, Alicante, just a 5-minute walk from the beach and within easy reach of all local amenities.",
+          "The project features 13 exclusive homes, offering 2 bedrooms and 2 bathrooms. Buyers can choose from ground-floor apartments, mid-floor units with spacious terraces, or top-floor penthouses.",
+          "The complex includes a communal solarium with a relaxing area, perfect for unwinding and taking in the surroundings. Additionally, optional parking spaces are available nearby, just a 4-minute walk from the residential area."
+        ]
+      },
+      "es": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "meta": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "price": "259 500 € · 62 m²",
+        "price_range": "259 500 € · 62 m²",
+        "desc": "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+        "hero_subtext": "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+        "lead": [
+          "Ubicadas en el corazón de Guardamar del Segura, Alicante, estas viviendas están a solo 5 minutos a pie de la playa, con fácil acceso a todos los servicios necesarios para una vida cómoda.",
+          "Este proyecto ofrece un conjunto de 13 exclusivas viviendas de dos dormitorios y dos baños, con superficies comprendidas entre 62 m² y 67 m². Los compradores pueden elegir entre residencias en la planta baja, niveles intermedios con amplias terrazas, o en el ático para disfrutar de una vista más elevada. Los precios oscilan entre 199,000 € y 219,000 €, asegurando una excelente relación calidad-precio.",
+          "El complejo ofrece un solárium comunitario, perfecto para relajarse y disfrutar del entorno. Además, se dispone de plazas de aparcamiento opcionales a tan solo 4 minutos de distancia, proporcionando un extra de comodidad."
+        ]
+      },
+      "ru": {
+        "title": "Royal Star",
+        "hero_title": "Royal Star",
+        "page_h1": "Royal Star",
+        "subtitle": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "meta": "Guardamar del Segura · Apartament · odbiór: 2026",
+        "price": "259 500 € · 62 m²",
+        "price_range": "259 500 € · 62 m²",
+        "desc": "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+        "hero_subtext": "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+        "lead": [
+          "Этот новый жилой комплекс расположен в самом центре города Guardamar del Segura. Всего в пяти минутах ходьбы от пляжа, здесь вы будете окружены всеми необходимыми удобствами.",
+          "Проект предлагает 13 уникальных квартир с двумя спальнями и двумя ванными комнатами. Вы можете выбрать между квартирами на первом этаже, на промежуточных этажах с просторными террасами или на верхнем этаже.",
+          "В жилом комплексе предусмотрен общий солярий с зоной отдыха, что идеально подходит для расслабления и наслаждения окружающей атмосферой. Также доступны опциональные парковочные места, всего в четырех минутах от комплекса."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "nature-views-torrevieja-319004",
+    "source_id": "319004",
+    "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/comprar-casas/319004-obra-nueva-nature-views-mpc-builders-and-real-estate-4",
+    "href": "/pl/new-developments/xml-catalog/?slug=nature-views-torrevieja-319004",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315873/conversions/property-21564-8-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315876/conversions/property-21564-9-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315890/conversions/property-21564-12-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315897/conversions/property-21564-13-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315902/conversions/property-21564-14-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315918/conversions/property-21564-16-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315924/conversions/property-21564-17-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315930/conversions/property-21564-18-medium.jpg"
+    ],
+    "alt": "Nature Views — Torrevieja",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "Nature Views",
+    "meta": "Torrevieja · Bungalows · odbiór: 2025",
+    "price": "315 000 € · 194 m²",
+    "desc": "Zlokalizowana w tętniącym życiem mieście Torrevieja, ta społeczność oferuje szereg opcji mieszkaniowych, które oddają prawdziwy urok Morza Śródziemnego. Dzięki projektowi, który maksymalizuj...",
+    "kpi": [
+      "315 000 €",
+      "194 m²",
+      "2 sypialnie"
+    ],
+    "lead": [
+      "Zlokalizowana w tętniącym życiem mieście Torrevieja, ta społeczność oferuje szereg opcji mieszkaniowych, które oddają prawdziwy urok Morza Śródziemnego. Dzięki projektowi, który maksymalizuje dopływ światła naturalnego, nieruchomości wyróżniają się minimalistycznymi liniami i eleganckim rozkładem. Każda rezydencja oferuje udogodnienia, takie jak parking, piwnica i wyposażona kuchnia amerykańska, wszystko w otoczeniu, które cieszy się spektakularnymi widokami. Ponadto, okolica jest dobrze skomunikowana, zapewniając wygodę i dostępność do pobliskich usług.",
+      "Dostępne mieszkania zaskakują starannie dobraną architekturą, która łączy proste linie z naturalnymi akcentami, osiągając niezrównany estetyczny balans. Dbałość o szczegóły odzwierciedla się w wybranych materiałach i perfekcyjnych wykończeniach, które są dowodem wielu lat doświadczenia w budowie wysokiej jakości domów.",
+      "Mieszkania oferują elastyczność w aranżacji, z możliwością wyboru między imponującymi widokami a lokalizacją maksymalizującą światło dzienne. Zarówno modele parterowe, jak i wyższe piętra oferują przestronny, jasny salon zintegrowany z nowoczesną kuchnią amerykańską. Podczas gdy wyższe piętra posiadają solarium, które zaprasza do korzystania z otoczenia, niższe piętra dodają prywatną piwnicę, idealne miejsce na rekreację lub przyjęcie gości."
+    ],
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Bungalows",
+      "Powierzchnia": "194 m²",
+      "Pow. użytkowa": "74 m²",
+      "Sypialnie": "2",
+      "Łazienki": "3",
+      "Taras": "57 m²",
+      "Status": "Under construction",
+      "Rok budowy": "2025",
+      "Plaża": "4000.00 m",
+      "Lotnisko": "21.61 km",
+      "Energia": "B"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "Torrevieja to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje bungalows w cenie 315 000 € i powierzchni 194 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 194 m².",
+      "Taras: 57 m².",
+      "Układ: 2 sypialnie / 3 łazienki.",
+      "Odległość do plaży: 4000.00 m.",
+      "Udogodnienia: Storage Room, Interior Windows, Taras, Basen, Playground.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji Torrevieja może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-28 08:17:09",
+    "created": "2025-06-11 19:11:14",
+    "location": {
+      "latitude": "37.965598",
+      "longitude": "-0.741385"
+    },
+    "video_url": "https://youtu.be/gbLxy0o2Fqk",
+    "translations": {
+      "pl": {
+        "title": "Nature Views",
+        "hero_title": "Nature Views",
+        "page_h1": "Nature Views",
+        "subtitle": "Torrevieja · Bungalows · odbiór: 2025",
+        "meta": "Torrevieja · Bungalows · odbiór: 2025",
+        "price": "315 000 € · 194 m²",
+        "price_range": "315 000 € · 194 m²",
+        "desc": "Zlokalizowana w tętniącym życiem mieście Torrevieja, ta społeczność oferuje szereg opcji mieszkaniowych, które oddają prawdziwy urok Morza Śródziemnego. Dzięki projektowi, który maksymalizuj...",
+        "hero_subtext": "Zlokalizowana w tętniącym życiem mieście Torrevieja, ta społeczność oferuje szereg opcji mieszkaniowych, które oddają prawdziwy urok Morza Śródziemnego. Dzięki projektowi, który maksymalizuj...",
+        "lead": [
+          "Zlokalizowana w tętniącym życiem mieście Torrevieja, ta społeczność oferuje szereg opcji mieszkaniowych, które oddają prawdziwy urok Morza Śródziemnego. Dzięki projektowi, który maksymalizuje dopływ światła naturalnego, nieruchomości wyróżniają się minimalistycznymi liniami i eleganckim rozkładem. Każda rezydencja oferuje udogodnienia, takie jak parking, piwnica i wyposażona kuchnia amerykańska, wszystko w otoczeniu, które cieszy się spektakularnymi widokami. Ponadto, okolica jest dobrze skomunikowana, zapewniając wygodę i dostępność do pobliskich usług.",
+          "Dostępne mieszkania zaskakują starannie dobraną architekturą, która łączy proste linie z naturalnymi akcentami, osiągając niezrównany estetyczny balans. Dbałość o szczegóły odzwierciedla się w wybranych materiałach i perfekcyjnych wykończeniach, które są dowodem wielu lat doświadczenia w budowie wysokiej jakości domów.",
+          "Mieszkania oferują elastyczność w aranżacji, z możliwością wyboru między imponującymi widokami a lokalizacją maksymalizującą światło dzienne. Zarówno modele parterowe, jak i wyższe piętra oferują przestronny, jasny salon zintegrowany z nowoczesną kuchnią amerykańską. Podczas gdy wyższe piętra posiadają solarium, które zaprasza do korzystania z otoczenia, niższe piętra dodają prywatną piwnicę, idealne miejsce na rekreację lub przyjęcie gości."
+        ]
+      },
+      "en": {
+        "title": "Nature Views",
+        "hero_title": "Nature Views",
+        "page_h1": "Nature Views",
+        "subtitle": "Torrevieja · Bungalows · odbiór: 2025",
+        "meta": "Torrevieja · Bungalows · odbiór: 2025",
+        "price": "315 000 € · 194 m²",
+        "price_range": "315 000 € · 194 m²",
+        "desc": "Located in the vibrant city, this community offers a range of homes that embody the authentic charm of the Mediterranean. With a design that maximises natural light, the properties stand out...",
+        "hero_subtext": "Located in the vibrant city, this community offers a range of homes that embody the authentic charm of the Mediterranean. With a design that maximises natural light, the properties stand out...",
+        "lead": [
+          "Located in the vibrant city, this community offers a range of homes that embody the authentic charm of the Mediterranean. With a design that maximises natural light, the properties stand out for their minimalist lines and elegant layout. Every residence provides amenities such as parking, a storage room, and an equipped American-style kitchen, all set in surroundings that enjoy spectacular views. Additionally, the environment is well-connected, ensuring convenience and accessibility to nearby services.",
+          "The available homes are impressive for their meticulous architecture combining straight lines with natural touches, achieving an unparalleled aesthetic balance. Attention to detail is reflected in the chosen materials and impeccable finishes, a testament to many years of building high-quality homes.",
+          "The homes offer flexibility in their arrangement, with the option to select stunning views or a location that maximises daylight. Both ground floor and upper models feature a spacious and bright living area integrated with a modern American-style kitchen. While the upper floors boast a solarium inviting one to enjoy the surroundings, the ground floors add a private basement, an ideal space for leisure or entertaining guests."
+        ]
+      },
+      "es": {
+        "title": "Nature Views",
+        "hero_title": "Nature Views",
+        "page_h1": "Nature Views",
+        "subtitle": "Torrevieja · Bungalows · odbiór: 2025",
+        "meta": "Torrevieja · Bungalows · odbiór: 2025",
+        "price": "315 000 € · 194 m²",
+        "price_range": "315 000 € · 194 m²",
+        "desc": "Ubicada en la vibrante ciudad de Torrevieja, esta comunidad ofrece una serie de opciones de viviendas que reflejan el auténtico encanto del Mediterráneo. Con un diseño que maximiza la entrad...",
+        "hero_subtext": "Ubicada en la vibrante ciudad de Torrevieja, esta comunidad ofrece una serie de opciones de viviendas que reflejan el auténtico encanto del Mediterráneo. Con un diseño que maximiza la entrad...",
+        "lead": [
+          "Ubicada en la vibrante ciudad de Torrevieja, esta comunidad ofrece una serie de opciones de viviendas que reflejan el auténtico encanto del Mediterráneo. Con un diseño que maximiza la entrada de luz natural, las propiedades destacan por sus líneas minimalistas y su elegante distribución. Cada residencia ofrece amenidades como estacionamiento, trastero y una cocina americana equipada, todo en un entorno que disfruta de espectaculares vistas. Además, su entorno está bien comunicado, asegurando comodidad y accesibilidad a servicios cercanos.",
+          "Las viviendas disponibles sorprenden por su cuidada arquitectura que combina líneas rectas y toques naturales, logrando un balance estético inigualable. La atención al detalle se refleja en los materiales seleccionados y los acabados impecables, testimonio de muchos años en la construcción de hogares de alta calidad.",
+          "Las viviendas ofrecen flexibilidad en su disposición, con la opción de seleccionar vistas impresionantes o una ubicación que maximiza la luz del día. Tanto los modelos de planta baja como alta presentan un espacio de salón amplio y luminoso que se integra con una moderna cocina americana. Mientras que las plantas altas cuentan con un solárium que invita a disfrutar del entorno, las plantas bajas añaden un sótano privado, un espacio ideal para el ocio o recibir visitas."
+        ]
+      },
+      "ru": {
+        "title": "Nature Views",
+        "hero_title": "Nature Views",
+        "page_h1": "Nature Views",
+        "subtitle": "Torrevieja · Bungalows · odbiór: 2025",
+        "meta": "Torrevieja · Bungalows · odbiór: 2025",
+        "price": "315 000 € · 194 m²",
+        "price_range": "315 000 € · 194 m²",
+        "desc": "Расположенная в оживленном городе Torrevieja, эта резиденция предлагает множество вариантов жилья, отражающих подлинное очарование Средиземноморья. С дизайном, который максимизирует поступле...",
+        "hero_subtext": "Расположенная в оживленном городе Torrevieja, эта резиденция предлагает множество вариантов жилья, отражающих подлинное очарование Средиземноморья. С дизайном, который максимизирует поступле...",
+        "lead": [
+          "Расположенная в оживленном городе Torrevieja, эта резиденция предлагает множество вариантов жилья, отражающих подлинное очарование Средиземноморья. С дизайном, который максимизирует поступление естественного света, объекты выделяются своими минималистичными линиями и элегантной планировкой. Каждая резиденция предлагает удобства, такие как парковка, кладовая и оборудованная кухня американского стиля, все это в окружении с потрясающими видами. Кроме того, окружение хорошо связано, обеспечивая комфорт и доступность к близлежащим услугам.",
+          "Доступное жилье поражает своей продуманной архитектурой, которая сочетает прямые линии и натуральные элементы, создавая неповторимый эстетический баланс. Внимание к деталям отражается в выбранных материалах и безупречных отделках, свидетельствующих о многих годах опыта в строительстве качественных домов.",
+          "Жилые объекты предлагают гибкость в планировке, с возможностью выбора впечатляющих видов или расположения, которое максимизирует дневной свет. Как модели на первом этаже, так и на верхних этажах представляют собой просторную и светлую гостиную, которая совмещена с современной кухней американского стиля. В то время как верхние этажи оснащены солярием для наслаждения окрестностями, нижние этажи добавляют частный подвал, идеальное пространство для отдыха или приема гостей."
+        ]
+      }
+    }
+  },
+  {
+    "slug": "alonis-villas-la-villajoyosa-vila-joiosa-230606",
+    "source_id": "230606",
+    "source_url": "https://spain.metainmo.com/pl/alicante/la-villajoyosa-vila-joiosa/comprar-casas/230606-casa-o-chalet-independiente-en-venta-en-partida-torres-sn",
+    "href": "/pl/new-developments/xml-catalog/?slug=alonis-villas-la-villajoyosa-vila-joiosa-230606",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201669/conversions/01JZT5WFGNJEZT21CZ9J00T98E-medium.jpg"
+    ],
+    "alt": "ALONIS VILLAS — La Villajoyosa / Vila Joiosa",
+    "chip": "🏡 Nowa inwestycja · Costa Blanca",
+    "title": "ALONIS VILLAS",
+    "meta": "La Villajoyosa / Vila Joiosa · Willa",
+    "price": "675 000 € · 206 m²",
+    "desc": "Promoción Top pięciu luksusowych willi w uprzywilejowanej lokalizacji nad morzem, w okolicy między Villajoyosa a Benidorm. Te ekskluzywne rezydencje wyróżniają się eleganckim i nowoczesnym d...",
+    "kpi": [
+      "675 000 €",
+      "206 m²",
+      "4 sypialnie"
+    ],
+    "lead": [
+      "Promoción Top pięciu luksusowych willi w uprzywilejowanej lokalizacji nad morzem, w okolicy między Villajoyosa a Benidorm. Te ekskluzywne rezydencje wyróżniają się eleganckim i nowoczesnym designem, stworzonym dla harmonii i osobistego zadowolenia. Każda willa posiada 4 sypialnie, 3 łazienki, przestronny salon z wbudowaną kuchnią, pomieszczenie gospodarcze i solarium.",
+      "Na parterze mieszkańcy znajdą przestronny salon z kuchnią, toaletę, sypialnię, pomieszczenie gospodarcze i ganek. Na piętrze mieszczą się 3 sypialnie, 2 łazienki oraz taras, a na samej górze właściciele mogą cieszyć się dużym solarium, które zapewni przyjemność przez cały rok.",
+      "Wille mają wspaniałe tarasy, basen i tereny zielone, a także strefę parkingową, spełniając tym samym wymagania najbardziej wymagających. Ponadto, osiedle oferuje obszary wspólne do wejścia, tranzytu i rekreacji, gdzie znajduje się obszar do aktywności sportowych i jogi."
+    ],
+    "params": {
+      "Lokalizacja": "La Villajoyosa / Vila Joiosa",
+      "Typ": "Willa",
+      "Powierzchnia": "206 m²",
+      "Pow. użytkowa": "179 m²",
+      "Sypialnie": "4",
+      "Łazienki": "3",
+      "Taras": "54 m²",
+      "Garaż": "Included in the price"
+    },
+    "why": [
+      {
+        "title": "Lokalizacja",
+        "text": "La Villajoyosa / Vila Joiosa to jedna z rozpoznawalnych lokalizacji na Costa Blanca z dostępem do usług, plaż i infrastruktury."
+      },
+      {
+        "title": "Parametry",
+        "text": "Oferta obejmuje willa w cenie 675 000 € i powierzchni 206 m²."
+      },
+      {
+        "title": "Potencjał",
+        "text": "Nieruchomość może być rozważana jako second home, zakup wakacyjny lub inwestycja pod wynajem."
+      }
+    ],
+    "specs": [
+      "Powierzchnia: 206 m².",
+      "Taras: 54 m².",
+      "Układ: 4 sypialnie / 3 łazienki.",
+      "Miejsce parkingowe / garaż: Included in the price.",
+      "Udogodnienia: Prywatny basen, Basen, Landscaped Areas, Ogród, Widok na morze.",
+      "Oferta z potencjałem do życia, wypoczynku lub inwestycji."
+    ],
+    "audience": [
+      {
+        "title": "Second home",
+        "text": "Dla klientów szukających własnego miejsca w Hiszpanii z wygodnym dostępem do morza i usług."
+      },
+      {
+        "title": "Inwestorzy",
+        "text": "Dla osób analizujących zakup pod wynajem, wzrost wartości lub dywersyfikację kapitału."
+      },
+      {
+        "title": "Rodzina",
+        "text": "Dla kupujących, którzy chcą komfortowej bazy na Costa Blanca do życia lub dłuższych pobytów."
+      }
+    ],
+    "roiText": "Oferta w lokalizacji La Villajoyosa / Vila Joiosa może być analizowana jako zakup do własnego użytku, second home lub inwestycja. Przed decyzją warto sprawdzić aktualną dostępność, koszty utrzymania i potencjał wynajmu.",
+    "updated": "2026-04-24 08:27:44",
+    "created": "2025-05-01 23:18:12",
+    "location": {
+      "latitude": "38.521070",
+      "longitude": "-0.203145"
+    },
+    "translations": {
+      "pl": {
+        "title": "ALONIS VILLAS",
+        "hero_title": "ALONIS VILLAS",
+        "page_h1": "ALONIS VILLAS",
+        "subtitle": "La Villajoyosa / Vila Joiosa · Willa",
+        "meta": "La Villajoyosa / Vila Joiosa · Willa",
+        "price": "675 000 € · 206 m²",
+        "price_range": "675 000 € · 206 m²",
+        "desc": "Promoción Top pięciu luksusowych willi w uprzywilejowanej lokalizacji nad morzem, w okolicy między Villajoyosa a Benidorm. Te ekskluzywne rezydencje wyróżniają się eleganckim i nowoczesnym d...",
+        "hero_subtext": "Promoción Top pięciu luksusowych willi w uprzywilejowanej lokalizacji nad morzem, w okolicy między Villajoyosa a Benidorm. Te ekskluzywne rezydencje wyróżniają się eleganckim i nowoczesnym d...",
+        "lead": [
+          "Promoción Top pięciu luksusowych willi w uprzywilejowanej lokalizacji nad morzem, w okolicy między Villajoyosa a Benidorm. Te ekskluzywne rezydencje wyróżniają się eleganckim i nowoczesnym designem, stworzonym dla harmonii i osobistego zadowolenia. Każda willa posiada 4 sypialnie, 3 łazienki, przestronny salon z wbudowaną kuchnią, pomieszczenie gospodarcze i solarium.",
+          "Na parterze mieszkańcy znajdą przestronny salon z kuchnią, toaletę, sypialnię, pomieszczenie gospodarcze i ganek. Na piętrze mieszczą się 3 sypialnie, 2 łazienki oraz taras, a na samej górze właściciele mogą cieszyć się dużym solarium, które zapewni przyjemność przez cały rok.",
+          "Wille mają wspaniałe tarasy, basen i tereny zielone, a także strefę parkingową, spełniając tym samym wymagania najbardziej wymagających. Ponadto, osiedle oferuje obszary wspólne do wejścia, tranzytu i rekreacji, gdzie znajduje się obszar do aktywności sportowych i jogi."
+        ]
+      },
+      "en": {
+        "title": "ALONIS VILLAS",
+        "hero_title": "ALONIS VILLAS",
+        "page_h1": "ALONIS VILLAS",
+        "subtitle": "La Villajoyosa / Vila Joiosa · Willa",
+        "meta": "La Villajoyosa / Vila Joiosa · Willa",
+        "price": "675 000 € · 206 m²",
+        "price_range": "675 000 € · 206 m²",
+        "desc": "Top Featured Promotion of 5 premium villas in a privileged location by the sea, in the area between Villajoyosa and Benidorm. These exclusive residences stand out for their elegant and moder...",
+        "hero_subtext": "Top Featured Promotion of 5 premium villas in a privileged location by the sea, in the area between Villajoyosa and Benidorm. These exclusive residences stand out for their elegant and moder...",
+        "lead": [
+          "Top Featured Promotion of 5 premium villas in a privileged location by the sea, in the area between Villajoyosa and Benidorm. These exclusive residences stand out for their elegant and modern design, created to achieve harmony and personal enjoyment. Each villa features 4 bedrooms, 3 bathrooms, a spacious living room with an integrated kitchen, a storage room, and a solarium.",
+          "On the ground floor, residents will find a spacious living room with a kitchen, a restroom, a bedroom, a storage room, and a porch. The upper floor houses 3 bedrooms, 2 bathrooms, and a terrace, and upon ascending, owners can enjoy a large solarium that promises delight all year round.",
+          "The villas boast magnificent terraces, a pool, landscaped areas, and a parking area, thus meeting the needs of the most demanding. Additionally, the development features communal areas for access, transit, and recreation, which include a space for sports activities and yoga."
+        ]
+      },
+      "es": {
+        "title": "ALONIS VILLAS",
+        "hero_title": "ALONIS VILLAS",
+        "page_h1": "ALONIS VILLAS",
+        "subtitle": "La Villajoyosa / Vila Joiosa · Willa",
+        "meta": "La Villajoyosa / Vila Joiosa · Willa",
+        "price": "675 000 € · 206 m²",
+        "price_range": "675 000 € · 206 m²",
+        "desc": "Promoción Top de 5 villas premium en un lugar privilegiado frente al mar, en la zona entre Villajoyosa y Benidorm. Estas exclusivas residencias destacan por su diseño elegante y moderno, cre...",
+        "hero_subtext": "Promoción Top de 5 villas premium en un lugar privilegiado frente al mar, en la zona entre Villajoyosa y Benidorm. Estas exclusivas residencias destacan por su diseño elegante y moderno, cre...",
+        "lead": [
+          "Promoción Top de 5 villas premium en un lugar privilegiado frente al mar, en la zona entre Villajoyosa y Benidorm. Estas exclusivas residencias destacan por su diseño elegante y moderno, creadas para lograr armonía y disfrute personal. Cada villa dispone de 4 dormitorios, 3 baños, un amplio salón con cocina integrada, trastero y solarium.",
+          "En la planta baja, los residentes encontrarán un espacioso salón con cocina, un aseo, un dormitorio, un trastero y un porche. La planta superior alberga 3 dormitorios, 2 baños y una terraza, y al subir, los propietarios pueden disfrutar de un gran solarium que promete deleitar durante todo el año.",
+          "Las villas tienen magníficas terrazas, piscina y zonas ajardinadas, además de un área de aparcamiento, satisfaciendo así las necesidades de los más exigentes. Asimismo, la urbanización cuenta con zonas comunitarias para acceso, tránsito y recreo donde se destaca un área para actividades deportivas y yoga."
+        ]
+      },
+      "ru": {
+        "title": "ALONIS VILLAS",
+        "hero_title": "ALONIS VILLAS",
+        "page_h1": "ALONIS VILLAS",
+        "subtitle": "La Villajoyosa / Vila Joiosa · Willa",
+        "meta": "La Villajoyosa / Vila Joiosa · Willa",
+        "price": "675 000 € · 206 m²",
+        "price_range": "675 000 € · 206 m²",
+        "desc": "Promoción Top из 5 премиум вилл в привилегированном месте у моря, в районе между Вильяхойосой и Бенидормом. Эти эксклюзивные резиденции выделяются своим элегантным и современным дизайном, со...",
+        "hero_subtext": "Promoción Top из 5 премиум вилл в привилегированном месте у моря, в районе между Вильяхойосой и Бенидормом. Эти эксклюзивные резиденции выделяются своим элегантным и современным дизайном, со...",
+        "lead": [
+          "Promoción Top из 5 премиум вилл в привилегированном месте у моря, в районе между Вильяхойосой и Бенидормом. Эти эксклюзивные резиденции выделяются своим элегантным и современным дизайном, созданным для достижения гармонии и личного наслаждения. Каждая вилла располагает 4 спальнями, 3 ванными комнатами, просторной гостиной с встроенной кухней, кладовкой и солярием.",
+          "На первом этаже резиденты найдут просторную гостиную с кухней, санузел, спальню, кладовку и крыльцо. На верхнем этаже расположены 3 спальни, 2 ванных комнаты и терраса, а поднявшись наверх, владельцы смогут наслаждаться большим солярием, который обещает радовать на протяжении всего года.",
+          "Виллы имеют великолепные террасы, бассейн и ландшафтные зоны, а также парковочную зону, удовлетворяющую потребности самых требовательных. Кроме того, урбанизация располагает общественными зонами для доступа, прохождения и отдыха с выделенной зоной для спортивных занятий и йоги."
+        ]
+      }
     }
   }
 ]
