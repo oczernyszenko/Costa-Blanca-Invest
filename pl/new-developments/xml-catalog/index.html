@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- COSTA BLANCA INVEST • UNIVERSAL PROPERTY CARD TEMPLATE • PREMIUM CLEAN v2026-05-01 • NO KPI BLOCK -->
+<!-- COSTA BLANCA INVEST • UNIVERSAL PROPERTY CARD TEMPLATE • PREMIUM FINAL v2026-05-01 • ICON PARAMS • FULL GALLERY -->
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -104,7 +104,11 @@
     function arr(value,fallback=[]){return Array.isArray(value)?value:fallback;}
     function getTranslation(item){return item?.translations?.[currentLang] || item?.translations?.pl || item || {};}
     function safeLocation(value){return typeof value === 'string' ? value : '';}
-    function getImages(item){const images=arr(item.images,arr(item.gallery,item.image?[item.image]:[]));return images.length?images:[FALLBACK_IMAGE];}
+    function getImages(item){
+      const rawImages = arr(item.images, arr(item.gallery, item.image ? [item.image] : []));
+      const cleanImages = rawImages.filter(src => typeof src === 'string' && src.trim().length > 0);
+      return cleanImages.length ? cleanImages : [FALLBACK_IMAGE];
+    }
     function getImage(item,index=0){return abs(getImages(item)[index] || getImages(item)[0] || FALLBACK_IMAGE);}
     function splitPrice(price){const text=String(price||'');const parts=text.split(/[–—-]/).map(s=>s.trim()).filter(Boolean);if(parts.length>=2)return [parts[0],parts.slice(1).join(' – ')];if(text.includes('·'))return [text.split('·')[0].trim(),text.split('·').slice(1).join(' · ').trim()];return [text,''];}
     function moneyNumber(price){const found=String(price||'').replace(/\s/g,'').match(/\d+/g);return found?found[0]:'';}
@@ -216,10 +220,12 @@
         .map(([k,v]) => [translateParamLabel(k),v]);
 
       const translatedLeads = arr(x.lead,[]).filter(Boolean);
-      const fallbackLeads = arr(item.lead,[desc]).filter(Boolean);
-      const leads = (translatedLeads.length ? translatedLeads : fallbackLeads).slice(0,3);
-      if(seoDescription2 && !leads.includes(seoDescription2)) leads.push(seoDescription2);
-      while(leads.length<3)leads.push(desc || meta || title);
+      const fallbackLeads = arr(item.lead,[]).filter(Boolean);
+      const baseLeads = translatedLeads.length ? translatedLeads : fallbackLeads;
+      const leads = [];
+      [...baseLeads, seoDescription2, desc].filter(Boolean).forEach(text => {
+        if (!leads.includes(text) && leads.length < 3) leads.push(text);
+      });
 
       const defaultWhy = [
         {title: ui.params_title, text: meta || 'Costa Blanca'},
@@ -292,7 +298,7 @@
       currentProperty=item;
       const data=buildData(item);
       applyMeta(data);
-      const gallery=data.images.slice(0,8).map((src,index)=>`<div class="gallery-item" data-media-src="${esc(src)}"><img src="${esc(src)}" alt="${esc(data.title)} ${index+1}" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`).join('');
+      const gallery=data.images.map((src,index)=>`<div class="gallery-item" data-media-src="${esc(src)}"><img src="${esc(src)}" alt="${esc(data.title)} ${index+1}" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`).join('');
       const paramsHtml=data.paramEntries.map(([label,value],i)=>`
         <span class="param-item" title="${esc(label)}">
           <span class="param-icon">${esc(getParamIcon(label))}</span>
