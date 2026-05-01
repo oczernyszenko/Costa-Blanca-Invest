@@ -3,100 +3,591 @@
     "slug": "bonalba-golf-hills",
     "title": "Bonalba Golf Hills",
     "image": "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+    "images": [
+      "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+      "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
+      "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
+      "/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=bonalba-golf-hills",
     "price": "280 800 € – 405 600 €",
     "priceValue": 280800,
     "filterLocation": "alicante",
     "meta": "Mutxamel · Alicante",
-    "desc": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca."
+    "desc": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
+    "chip": "Premium · Golf & Lifestyle",
+    "params": {
+      "Lokalizacja": "Mutxamel",
+      "Typ": "Apartamenty",
+      "Powierzchnia": "98–156 m²",
+      "Pokoje": "2–3 pokoje",
+      "Cena": "280 800 € – 405 600 €"
+    },
+    "seoTitle": "Bonalba Golf Hills | Costa Blanca Invest",
+    "seoDescription": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
+        "seoDescription": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "penthouse-torrevieja",
     "title": "Penthouse Torrevieja",
     "image": "/pl/new-developments/penthouse-torrevieja/1.jpg",
+    "images": [
+      "/pl/new-developments/penthouse-torrevieja/1.jpg",
+      "/pl/new-developments/penthouse-torrevieja/2.jpg",
+      "/pl/new-developments/penthouse-torrevieja/3.jpg",
+      "/pl/new-developments/penthouse-torrevieja/4.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=penthouse-torrevieja",
     "price": "305 000 €",
     "priceValue": 305000,
     "filterLocation": "torrevieja",
     "meta": "Torrevieja · centrum",
-    "desc": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży."
+    "desc": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
+    "chip": "Ostatnia jednostka",
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Penthouse",
+      "Powierzchnia": "134 m²",
+      "Pokoje": "3 sypialnie",
+      "Cena": "305 000 €"
+    },
+    "seoTitle": "Penthouse Torrevieja | Costa Blanca Invest",
+    "seoDescription": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · centrum",
+        "price": "305 000 €",
+        "desc": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
+        "seoDescription": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · centrum",
+        "price": "305 000 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · centrum",
+        "price": "305 000 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · centrum",
+        "price": "305 000 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "maranon",
     "title": "Maranon",
     "image": "/pl/new-developments/maranon/1.jpg",
+    "images": [
+      "/pl/new-developments/maranon/1.jpg",
+      "/pl/new-developments/maranon/2.jpg",
+      "/pl/new-developments/maranon/3.jpg",
+      "/pl/new-developments/maranon/4.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=maranon",
     "price": "133 000 € – 310 000 €",
     "priceValue": 133000,
     "filterLocation": "torrevieja",
     "meta": "Torrevieja · 180 m do morza",
-    "desc": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości."
+    "desc": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
+    "chip": "180 m do morza",
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Apartamenty",
+      "Powierzchnia": "na zapytanie",
+      "Pokoje": "różne układy",
+      "Cena": "133 000 € – 310 000 €"
+    },
+    "seoTitle": "Maranon | Costa Blanca Invest",
+    "seoDescription": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Maranon",
+        "meta": "Torrevieja · 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
+        "seoDescription": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Maranon",
+        "meta": "Torrevieja · 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Maranon",
+        "meta": "Torrevieja · 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Maranon",
+        "meta": "Torrevieja · 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "monteagudo",
     "title": "Monteagudo",
     "image": "/pl/new-developments/monteagudo/1.jpg",
+    "images": [
+      "/pl/new-developments/monteagudo/1.jpg",
+      "/pl/new-developments/monteagudo/2.jpg",
+      "/pl/new-developments/monteagudo/3.jpg",
+      "/pl/new-developments/monteagudo/4.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=monteagudo",
     "price": "od 104 000 €",
     "priceValue": 104000,
     "filterLocation": "torrevieja",
     "meta": "Torrevieja · elastyczna płatność",
-    "desc": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie."
+    "desc": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
+    "chip": "Plan ratalny",
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Apartamenty",
+      "Powierzchnia": "na zapytanie",
+      "Pokoje": "na zapytanie",
+      "Cena": "od 104 000 €"
+    },
+    "seoTitle": "Monteagudo | Costa Blanca Invest",
+    "seoDescription": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · elastyczna płatność",
+        "price": "od 104 000 €",
+        "desc": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
+        "seoDescription": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · elastyczna płatność",
+        "price": "od 104 000 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · elastyczna płatność",
+        "price": "od 104 000 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · elastyczna płatność",
+        "price": "od 104 000 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
-
   {
     "slug": "16-villas-polop",
     "title": "16 Villas en Polop",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983658/conversions/01KBN2DEYCS8J2KC5DP9DWEWYE-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983658/conversions/01KBN2DEYCS8J2KC5DP9DWEWYE-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983659/conversions/01KBN2DF40D6P1SZCJDP0D2RZQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983660/conversions/01KBN2DF9XNG4KC0383P1Z9H3V-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983661/conversions/01KBN2DFF9D106994XSKZZ7S4C-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983662/conversions/01KBN2DFKWJYFJTV2BY1G55N0Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983663/conversions/01KBN2DFT6SNKS3Y0FG54FAYBA-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983664/conversions/01KBN2DG01K06768EYY717NEF5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983665/conversions/01KBN2DG414PB4BW61X4ATC7Y7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983666/conversions/01KBN2DG8BK3W3BCJEJH1PZJ9Y-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983667/conversions/01KBN2DGDDS0729H3BR8ZEXHXZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983668/conversions/01KBN2DGH8KKSR8ZTF4W8M1V44-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983669/conversions/01KBN2DGN37KA9VQDV5CEXFC8P-medium.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=16-villas-en-polop-polop-430412",
     "price": "455 926 €",
     "priceValue": 455926,
     "filterLocation": "polop",
     "meta": "Polop · wille",
-    "desc": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca."
+    "desc": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
+    "chip": "Wille · Polop",
+    "params": {
+      "Lokalizacja": "Polop",
+      "Typ": "Willa",
+      "Powierzchnia": "140 m²",
+      "Pokoje": "3 sypialnie",
+      "Cena": "455 926 €"
+    },
+    "seoTitle": "16 Villas en Polop | Costa Blanca Invest",
+    "seoDescription": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "16 Villas en Polop",
+        "meta": "Polop · wille",
+        "price": "455 926 €",
+        "desc": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
+        "seoDescription": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "16 Villas en Polop",
+        "meta": "Polop · wille",
+        "price": "455 926 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "16 Villas en Polop",
+        "meta": "Polop · wille",
+        "price": "455 926 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "16 Villas en Polop",
+        "meta": "Polop · wille",
+        "price": "455 926 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "calpe-balcones",
     "title": "Balcones de Calpe",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692631/conversions/01JRNKQ8BEX4QM1ERA7FC3FKQK-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692630/conversions/01JRNKQ85P244NHJV2TERHVSZG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692626/conversions/01JRNKQ62M1571ZZGWQ2BHHR02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692627/conversions/01JRNKQ6QDJDGBHAPVKAX8S13Q-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692624/conversions/01JRNKQ59J66QJPNEY7E5R1QD6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692629/conversions/01JRNKQ7JCC6H68C2BT409484M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800309/conversions/01JTQYJ78A87TV3426P6KGF75G-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2800310/conversions/01JTQYJ7SZNBP1Y2EANG23NRD8-medium.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe-calpe-395273",
     "price": "599 106 €",
     "priceValue": 599106,
     "filterLocation": "calpe",
     "meta": "Calpe · 400 m do plaży",
-    "desc": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle."
+    "desc": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
+    "chip": "Calpe · Sea View",
+    "params": {
+      "Lokalizacja": "Calpe",
+      "Typ": "Penthouse",
+      "Powierzchnia": "168 m²",
+      "Pokoje": "2 sypialnie",
+      "Cena": "599 106 €"
+    },
+    "seoTitle": "Balcones de Calpe | Costa Blanca Invest",
+    "seoDescription": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · 400 m do plaży",
+        "price": "599 106 €",
+        "desc": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
+        "seoDescription": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · 400 m do plaży",
+        "price": "599 106 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · 400 m do plaży",
+        "price": "599 106 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · 400 m do plaży",
+        "price": "599 106 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "royal-star",
     "title": "Royal Star",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899791/conversions/01J4VVEFXBN4NFE5MPPJD3DQKV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899793/conversions/01J4VVEG98AY52MA3PCAC1P41T-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899795/conversions/01J4VVEGKWX8ZC76RYVCV43YRG-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196019/conversions/01JH09AFP31HM6KHK8MA5YAHZM-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196020/conversions/01JH09AFV0DBP4T4SJ95XMS227-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196021/conversions/01JH09AFZ14W8M52GN2KFN3R8M-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196022/conversions/01JH09AG31D8FEM6X4HCH33TVV-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196023/conversions/01JH09AG755VF41TARA29GE9HZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/01/2196024/conversions/01JH09AGB2DBAQQCKXMBVET5D1-medium.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=royal-star-guardamar-del-segura-324846",
     "price": "299 500 €",
     "priceValue": 299500,
     "filterLocation": "guardamar",
     "meta": "Guardamar · centrum",
-    "desc": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny."
+    "desc": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
+    "chip": "Guardamar · Centrum",
+    "params": {
+      "Lokalizacja": "Guardamar",
+      "Typ": "Penthouse",
+      "Powierzchnia": "105 m²",
+      "Pokoje": "1 sypialnia",
+      "Cena": "299 500 €"
+    },
+    "seoTitle": "Royal Star | Costa Blanca Invest",
+    "seoDescription": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Royal Star",
+        "meta": "Guardamar · centrum",
+        "price": "299 500 €",
+        "desc": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
+        "seoDescription": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Royal Star",
+        "meta": "Guardamar · centrum",
+        "price": "299 500 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Royal Star",
+        "meta": "Guardamar · centrum",
+        "price": "299 500 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Royal Star",
+        "meta": "Guardamar · centrum",
+        "price": "299 500 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "nature-views",
     "title": "Nature Views",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315873/conversions/property-21564-8-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315876/conversions/property-21564-9-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315890/conversions/property-21564-12-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315897/conversions/property-21564-13-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315902/conversions/property-21564-14-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315918/conversions/property-21564-16-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315924/conversions/property-21564-17-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315930/conversions/property-21564-18-medium.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=nature-views-torrevieja-319004",
     "price": "315 000 €",
     "priceValue": 315000,
     "filterLocation": "torrevieja",
     "meta": "Torrevieja · nowoczesny kompleks",
-    "desc": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort."
+    "desc": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
+    "chip": "Torrevieja · Nature",
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Bungalow",
+      "Powierzchnia": "194 m²",
+      "Pokoje": "2 sypialnie",
+      "Cena": "315 000 €"
+    },
+    "seoTitle": "Nature Views | Costa Blanca Invest",
+    "seoDescription": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · nowoczesny kompleks",
+        "price": "315 000 €",
+        "desc": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
+        "seoDescription": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · nowoczesny kompleks",
+        "price": "315 000 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · nowoczesny kompleks",
+        "price": "315 000 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · nowoczesny kompleks",
+        "price": "315 000 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   },
   {
     "slug": "alonis-villas",
     "title": "Alonis Villas",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201669/conversions/01JZT5WFGNJEZT21CZ9J00T98E-medium.jpg"
+    ],
     "href": "/pl/new-developments/xml-catalog/?slug=alonis-villas-la-villajoyosa-vila-joiosa-230606",
     "price": "675 000 €",
     "priceValue": 675000,
     "filterLocation": "villajoyosa",
     "meta": "Villajoyosa · wille premium",
-    "desc": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia."
+    "desc": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
+    "chip": "Villas Premium",
+    "params": {
+      "Lokalizacja": "Villajoyosa",
+      "Typ": "Willa",
+      "Powierzchnia": "206 m²",
+      "Pokoje": "4 sypialnie",
+      "Cena": "675 000 €"
+    },
+    "seoTitle": "Alonis Villas | Costa Blanca Invest",
+    "seoDescription": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
+    "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem.",
+    "translations": {
+      "pl": {
+        "title": "Alonis Villas",
+        "meta": "Villajoyosa · wille premium",
+        "price": "675 000 €",
+        "desc": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
+        "seoDescription": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
+        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+      },
+      "en": {
+        "title": "Alonis Villas",
+        "meta": "Villajoyosa · wille premium",
+        "price": "675 000 €",
+        "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
+        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+      },
+      "es": {
+        "title": "Alonis Villas",
+        "meta": "Villajoyosa · wille premium",
+        "price": "675 000 €",
+        "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
+        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+      },
+      "ru": {
+        "title": "Alonis Villas",
+        "meta": "Villajoyosa · wille premium",
+        "price": "675 000 €",
+        "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
+        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+      }
+    }
   }
 ]
