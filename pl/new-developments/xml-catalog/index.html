@@ -133,25 +133,42 @@
       ];
 
       const seen = new Set();
-      const cleanImages = rawImages
+      const cleanImages = [];
+
+      rawImages
         .filter(src => typeof src === 'string' && src.trim().length > 0)
         .map(src => src.trim())
-        .map(src => {
-          if(/^https?:\/\//i.test(src)) return src;
-          if(src.startsWith('/pl/')) return src;
-          if(src.startsWith('/')) return src;
-          if(item.slug) return `/pl/new-developments/${item.slug}/images/${src.replace(/^\.\//,'')}`;
-          return src;
-        })
-        .filter(src => {
-          if(seen.has(src)) return false;
-          seen.add(src);
-          return true;
+        .forEach(src => {
+          const add = value => {
+            const finalUrl = abs(value);
+            if(!seen.has(finalUrl)){
+              seen.add(finalUrl);
+              cleanImages.push(finalUrl);
+            }
+          };
+
+          if(/^https?:\/\//i.test(src)){
+            add(src);
+            return;
+          }
+
+          if(src.startsWith('/pl/') || src.startsWith('/')){
+            add(src);
+            return;
+          }
+
+          const file = src.replace(/^\.\//,'');
+          if(item.slug){
+            add(`/pl/new-developments/${item.slug}/images/${file}`);
+            add(`/pl/new-developments/${item.slug}/${file}`);
+          }else{
+            add(file);
+          }
         });
 
-      return cleanImages.length ? cleanImages : [FALLBACK_IMAGE];
+      return cleanImages.length ? cleanImages : [abs(FALLBACK_IMAGE)];
     }
-    function getImage(item,index=0){return abs(getImages(item)[index] || getImages(item)[0] || FALLBACK_IMAGE);}
+    function getImage(item,index=0){return getImages(item)[index] || getImages(item)[0] || abs(FALLBACK_IMAGE);}
     function splitPrice(price){const text=String(price||'');const parts=text.split(/[–—-]/).map(s=>s.trim()).filter(Boolean);if(parts.length>=2)return [parts[0],parts.slice(1).join(' – ')];if(text.includes('·'))return [text.split('·')[0].trim(),text.split('·').slice(1).join(' · ').trim()];return [text,''];}
     function moneyNumber(price){const found=String(price||'').replace(/\s/g,'').match(/\d+/g);return found?found[0]:'';}
     function setAttr(selector,attr,value){const node=document.querySelector(selector);if(node && value)node.setAttribute(attr,value);}
@@ -350,7 +367,7 @@
         'Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja.'
       );
 
-      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,image:getImage(item,0),images:getImages(item).map(abs),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
+      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,image:getImage(item,0),images:getImages(item),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
     }
 
     function applyMeta(data){
