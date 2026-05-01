@@ -129,7 +129,11 @@
       const rawImages = [
         ...arr(item.images, []),
         ...arr(item.gallery, []),
-        item.image
+        ...arr(item.photos, []),
+        item.image,
+        item.image2,
+        item.image3,
+        item.image4
       ];
 
       const seen = new Set();
@@ -147,22 +151,23 @@
             }
           };
 
+          // already full URL
           if(/^https?:\/\//i.test(src)){
             add(src);
             return;
           }
 
-          if(src.startsWith('/pl/') || src.startsWith('/')){
+          // already correct absolute path
+          if(src.startsWith('/pl/')){
             add(src);
             return;
           }
 
-          const file = src.replace(/^\.\//,'');
+          // fallback: build from slug
           if(item.slug){
-            add(`/pl/new-developments/${item.slug}/images/${file}`);
-            add(`/pl/new-developments/${item.slug}/${file}`);
+            add(`/pl/new-developments/${item.slug}/images/${src}`);
           }else{
-            add(file);
+            add(src);
           }
         });
 
