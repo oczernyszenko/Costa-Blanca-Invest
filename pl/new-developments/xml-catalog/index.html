@@ -125,7 +125,19 @@
     function safeLocation(value){return typeof value === 'string' ? value : '';}
     function getImages(item){
       const rawImages = arr(item.images, arr(item.gallery, item.image ? [item.image] : []));
-      const cleanImages = rawImages.filter(src => typeof src === 'string' && src.trim().length > 0);
+      const cleanImages = rawImages
+        .filter(src => typeof src === 'string' && src.trim().length > 0)
+        .map(src => {
+          // FIX: correct relative paths for XML catalog
+          if(/^https?:\/\//i.test(src)) return src;
+          if(src.startsWith('/pl/')) return src;
+          if(src.startsWith('/')) return SITE_ORIGIN + src;
+          // fallback: build path using slug folder
+          if(item.slug){
+            return `/pl/new-developments/${item.slug}/images/${src.replace(/^\.\//,'')}`;
+          }
+          return src;
+        });
       return cleanImages.length ? cleanImages : [FALLBACK_IMAGE];
     }
     function getImage(item,index=0){return abs(getImages(item)[index] || getImages(item)[0] || FALLBACK_IMAGE);}
@@ -402,7 +414,6 @@ ${shareUrl}`);
         </section>
         <div class="share-block">
           <div class="share-actions">
-            <a class="share-btn btn-light" href="https://wa.me/34604158859?text=${waText}" target="_blank" rel="noopener noreferrer">${esc(data.ui.wa_btn)}</a>
             <button class="share-btn" type="button" id="copyLinkBottom" data-share-url="${esc(shareUrl)}">${esc(data.ui.copy_link)}</button>
           </div>
         </div>`;
