@@ -309,7 +309,7 @@ function collectProjectLinks(html = "") {
 
     if (!looksLikeProject && !isLockedProject) continue;
 
-    anchors.push({ href, inner, text, index: m.index });
+    anchors.push({ href, inner, text, index: m.index, locked: isLockedProject });
   }
 
   // Do not dedupe by href: locked Metainmo cards often share the same subscription URL.
@@ -559,34 +559,20 @@ function toProject(raw) {
 }
 
 function dedupeRawProjects(rawProjects) {
-  const map = new Map();
+  const bySlug = new Map();
 
   for (const raw of rawProjects) {
-    const key = raw.sourceUrl || raw.slug;
-    if (!key) continue;
+    if (!raw.slug) continue;
 
-    if (!map.has(key)) {
-      map.set(key, raw);
+    const existing = bySlug.get(raw.slug);
+    if (!existing) {
+      bySlug.set(raw.slug, raw);
       continue;
     }
 
-    const existing = map.get(key);
     const currentImages = raw.images || [];
     const existingImages = existing.images || [];
-
-    if (currentImages.length > existingImages.length) {
-      map.set(key, raw);
-    }
-  }
-
-  const bySlug = new Map();
-  for (const raw of map.values()) {
-    if (!raw.slug) continue;
-    if (!bySlug.has(raw.slug)) bySlug.set(raw.slug, raw);
-    else {
-      const existing = bySlug.get(raw.slug);
-      if ((raw.images || []).length > (existing.images || []).length) bySlug.set(raw.slug, raw);
-    }
+    if (currentImages.length > existingImages.length) bySlug.set(raw.slug, raw);
   }
 
   return [...bySlug.values()];
