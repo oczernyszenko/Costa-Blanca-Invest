@@ -1,60 +1,13 @@
-name: Import Metainmo Batch
+- name: Commit changes
+  run: |
+    git config user.name "github-actions"
+    git config user.email "actions@github.com"
 
-on:
-  workflow_dispatch:
-    inputs:
-      limit:
-        description: 'How many projects to import'
-        required: true
-        default: '50'
+    git add pl/new-developments/projects.json
 
-permissions:
-  contents: write
+    git diff --cached --quiet && echo "No changes to commit" && exit 0
 
-jobs:
-  import:
-    runs-on: ubuntu-latest
+    git commit -m "Import projects batch"
 
-    steps:
-      # 1. Клонируем репозиторий
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      # 2. Node.js
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # 3. Установка зависимостей (если есть)
-      - name: Install dependencies
-        run: npm install || true
-
-      # 4. Запуск PRO-скрипта
-      - name: Run importer
-        env:
-          IMPORT_LIMIT: ${{ github.event.inputs.limit }}
-        run: |
-          echo "🚀 START IMPORT"
-          node pl/new-developments/scripts/scrape-metainmo-to-projects.js
-          echo "✅ IMPORT DONE"
-
-      # 5. Проверка файла
-      - name: Check projects.json
-        run: |
-          echo "📂 FILE CONTENT:"
-          ls -la pl/new-developments/
-          echo "------"
-          cat pl/new-developments/projects.json || echo "❌ projects.json NOT FOUND"
-
-      # 6. Коммит (с форсом)
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-
-          git add pl/new-developments/projects.json
-
-          git diff --cached --quiet && echo "⚠️ No changes to commit" || git commit -m "🔥 AUTO IMPORT: update projects"
-
-          git push
+    git pull --rebase origin main
+    git push origin main
