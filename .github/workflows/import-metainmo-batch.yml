@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: 'How many new public projects to import'
+        description: 'How many projects to import'
         required: true
         default: '50'
 
@@ -24,28 +24,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Puppeteer
-        run: npm install puppeteer
-
-      - name: Install Chrome dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libnss3 \
-            libatk-bridge2.0-0 \
-            libgtk-3-0 \
-            libxss1 \
-            libasound2t64
-
       - name: Run importer
         env:
           IMPORT_LIMIT: ${{ github.event.inputs.limit }}
         run: node pl/new-developments/scripts/scrape-metainmo-to-projects.js
 
-      - name: Commit imported projects
+      - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add pl/new-developments/projects.json
-          git commit -m "Import Metainmo public projects batch" || echo "No changes"
+          git commit -m "Import projects batch" || echo "No changes"
           git push
