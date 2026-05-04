@@ -244,13 +244,17 @@
         .sort((a,b) => parseInt(a.replace('image',''),10) - parseInt(b.replace('image',''),10))
         .map(key => item[key]);
 
+      // IMPORTANT FOR SHARING:
+      // The first image in this array becomes data.image and is used for og:image,
+      // Twitter image, schema image and the share preview. Put property/card images
+      // before generic category images from projects.json.
       const rawImages = [
+        ...galleryPatch,
+        item.image,
+        ...imageNumberFields,
         ...arr(item.images, []),
         ...arr(item.gallery, []),
-        ...arr(item.photos, []),
-        ...imageNumberFields,
-        ...galleryPatch,
-        item.image
+        ...arr(item.photos, [])
       ];
 
       const seen = new Set();
@@ -548,14 +552,14 @@
       setAttr('#imageSrcLink','href',data.image);
       setAttr('meta[property="og:locale"]','content',currentLang==='pl'?'pl_PL':currentLang==='en'?'en_GB':currentLang==='es'?'es_ES':'ru_RU');
       setAttr('meta[property="og:title"]','content',`${data.title} · ${data.price} | Costa Blanca Invest`);
-      setAttr('meta[property="og:description"]','content',data.desc);
+      setAttr('meta[property="og:description"]','content',`${data.title} · ${data.price}. ${data.desc}`);
       setAttr('meta[property="og:url"]','content',canonical);
       setAttr('meta[property="og:image"]','content',data.image);
       setAttr('meta[property="og:image:url"]','content',data.image);
       setAttr('meta[property="og:image:secure_url"]','content',data.image);
       setAttr('meta[property="og:image:alt"]','content',data.title);
       setAttr('meta[name="twitter:title"]','content',`${data.title} · ${data.price} | Costa Blanca Invest`);
-      setAttr('meta[name="twitter:description"]','content',data.desc);
+      setAttr('meta[name="twitter:description"]','content',`${data.title} · ${data.price}. ${data.desc}`);
       setAttr('meta[name="twitter:image"]','content',data.image);
       setAttr('meta[name="twitter:url"]','content',canonical);
     }
