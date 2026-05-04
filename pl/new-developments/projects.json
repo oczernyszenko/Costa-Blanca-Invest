@@ -4,356 +4,2395 @@
     "sortOrder": 1,
     "title": "Bonalba Golf Hills",
     "image": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+    "imageOptimized": {
+      "src": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+      "loading": "eager",
+      "fetchPriority": "high",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+        "medium": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg"
+      }
+    },
     "images": [
       "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
-    ]
-  }, 
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=bonalba-golf-hills",
+    "price": "280 800 € – 405 600 €",
+    "priceValue": 280800,
+    "currency": "EUR",
+    "filterLocation": "alicante",
+    "meta": "Mutxamel · Alicante · Costa Blanca",
+    "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba — spokojna lokalizacja, nowoczesna architektura i potencjał wynajmu całorocznego.",
+    "chip": "Premium · Golf",
+    "seoTitle": "Bonalba Golf Hills | Nowa inwestycja przy golfie w Mutxamel, Alicante",
+    "seoDescription": "Bonalba Golf Hills w Mutxamel koło Alicante: nowoczesne nieruchomości przy polu golfowym, idealne do życia, wakacji i inwestycji na Costa Blanca.",
+    "keywords": [
+      "Bonalba Golf Hills",
+      "Mutxamel",
+      "Alicante",
+      "golf",
+      "Costa Blanca",
+      "nowe inwestycje"
+    ],
+    "badges": [
+      "Premium · Golf",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante · Costa Blanca",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba — spokojna lokalizacja, nowoczesna architektura i potencjał wynajmu całorocznego.",
+        "chip": "Premium · Golf",
+        "alt": "Bonalba Golf Hills — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante · Costa Blanca",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba — spokojna lokalizacja, nowoczesna architektura i potencjał wynajmu całorocznego.",
+        "chip": "Premium · Golf",
+        "alt": "Bonalba Golf Hills — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante · Costa Blanca",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba — spokojna lokalizacja, nowoczesna architektura i potencjał wynajmu całorocznego.",
+        "chip": "Premium · Golf",
+        "alt": "Bonalba Golf Hills — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Bonalba Golf Hills",
+        "meta": "Mutxamel · Alicante · Costa Blanca",
+        "price": "280 800 € – 405 600 €",
+        "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba — spokojna lokalizacja, nowoczesna architektura i potencjał wynajmu całorocznego.",
+        "chip": "Premium · Golf",
+        "alt": "Bonalba Golf Hills — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
   {
     "slug": "penthouse-torrevieja",
     "sortOrder": 2,
     "title": "Penthouse Torrevieja",
     "image": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+    "imageOptimized": {
+      "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+      "loading": "eager",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+        "medium": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg"
+      }
+    },
     "images": [
       "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/2.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/3.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/4.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/2.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/3.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/4.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=penthouse-torrevieja",
+    "price": "305 000 €",
+    "priceValue": 305000,
+    "currency": "EUR",
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · Costa Blanca South",
+    "desc": "Ostatni penthouse z prywatnym solarium — dużo światła, przestrzeń na tarasie i lokalizacja blisko plaży oraz usług.",
+    "chip": "Penthouse · Solarium",
+    "seoTitle": "Penthouse Torrevieja | Nowy apartament z solarium na Costa Blanca",
+    "seoDescription": "Penthouse w Torrevieja z prywatnym solarium: nowoczesny apartament blisko plaży, idealny do życia, wakacji i wynajmu w Hiszpanii.",
+    "keywords": [
+      "penthouse Torrevieja",
+      "solarium",
+      "Costa Blanca",
+      "apartament w Hiszpanii"
+    ],
+    "badges": [
+      "Penthouse · Solarium",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "305 000 €",
+        "desc": "Ostatni penthouse z prywatnym solarium — dużo światła, przestrzeń na tarasie i lokalizacja blisko plaży oraz usług.",
+        "chip": "Penthouse · Solarium",
+        "alt": "Penthouse Torrevieja — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · Costa Blanca Sur",
+        "price": "305 000 €",
+        "desc": "Ostatni penthouse z prywatnym solarium — dużo światła, przestrzeń na tarasie i lokalizacja blisko plaży oraz usług.",
+        "chip": "Penthouse · Solarium",
+        "alt": "Penthouse Torrevieja — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "305 000 €",
+        "desc": "Ostatni penthouse z prywatnym solarium — dużo światła, przestrzeń na tarasie i lokalizacja blisko plaży oraz usług.",
+        "chip": "Penthouse · Solarium",
+        "alt": "Penthouse Torrevieja — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Penthouse Torrevieja",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "305 000 €",
+        "desc": "Ostatni penthouse z prywatnym solarium — dużo światła, przestrzeń na tarasie i lokalizacja blisko plaży oraz usług.",
+        "chip": "Penthouse · Solarium",
+        "alt": "Penthouse Torrevieja — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "maranon",
     "sortOrder": 3,
     "title": "Marañón",
     "image": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+    "imageOptimized": {
+      "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+      "loading": "eager",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+        "medium": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg"
+      }
+    },
     "images": [
       "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/maranon/2.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/maranon/3.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/maranon/4.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/2.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/3.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/4.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=maranon",
+    "price": "133 000 € – 310 000 €",
+    "priceValue": 133000,
+    "currency": "EUR",
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · ok. 180 m do morza",
+    "desc": "Nowoczesna inwestycja bardzo blisko morza — dobry wybór pod wakacje, wynajem i zakup z niskim progiem wejścia.",
+    "chip": "180 m do morza",
+    "seoTitle": "Marañón Torrevieja | Apartamenty blisko morza na Costa Blanca",
+    "seoDescription": "Marañón w Torrevieja: nowe apartamenty około 180 m od morza, atrakcyjna cena wejścia i potencjał wynajmu wakacyjnego.",
+    "keywords": [
+      "Marañón",
+      "Torrevieja",
+      "apartamenty blisko morza"
+    ],
+    "badges": [
+      "180 m do morza",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Marañón",
+        "meta": "Torrevieja · ok. 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Nowoczesna inwestycja bardzo blisko morza — dobry wybór pod wakacje, wynajem i zakup z niskim progiem wejścia.",
+        "chip": "180 m do morza",
+        "alt": "Marañón — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Marañón",
+        "meta": "Torrevieja · ok. 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Nowoczesna inwestycja bardzo blisko morza — dobry wybór pod wakacje, wynajem i zakup z niskim progiem wejścia.",
+        "chip": "180 m do morza",
+        "alt": "Marañón — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Marañón",
+        "meta": "Torrevieja · ok. 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Nowoczesna inwestycja bardzo blisko morza — dobry wybór pod wakacje, wynajem i zakup z niskim progiem wejścia.",
+        "chip": "180 m do morza",
+        "alt": "Marañón — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Marañón",
+        "meta": "Torrevieja · ok. 180 m do morza",
+        "price": "133 000 € – 310 000 €",
+        "desc": "Nowoczesna inwestycja bardzo blisko morza — dobry wybór pod wakacje, wynajem i zakup z niskim progiem wejścia.",
+        "chip": "180 m do morza",
+        "alt": "Marañón — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "monteagudo",
     "sortOrder": 4,
     "title": "Monteagudo",
     "image": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+    "imageOptimized": {
+      "src": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+        "medium": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg"
+      }
+    },
     "images": [
       "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/monteagudo/2.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/monteagudo/3.jpg",
       "https://costa-blanca-invest.com/pl/new-developments/monteagudo/4.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/2.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/3.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/4.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=monteagudo",
+    "price": "od 104 000 €",
+    "priceValue": 104000,
+    "currency": "EUR",
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · Costa Blanca South",
+    "desc": "Kompaktowa inwestycja z atrakcyjną ceną wejścia i elastycznym planem płatności — praktyczny wybór pod wynajem i wakacje.",
+    "chip": "Plan ratalny",
+    "seoTitle": "Monteagudo | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Monteagudo: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+    "keywords": [
+      "Monteagudo",
+      "torrevieja",
+      "Costa Blanca",
+      "nowe inwestycje"
+    ],
+    "badges": [
+      "Plan ratalny",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "od 104 000 €",
+        "desc": "Kompaktowa inwestycja z atrakcyjną ceną wejścia i elastycznym planem płatności — praktyczny wybór pod wynajem i wakacje.",
+        "chip": "Plan ratalny",
+        "alt": "Monteagudo — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · Costa Blanca Sur",
+        "price": "od 104 000 €",
+        "desc": "Kompaktowa inwestycja z atrakcyjną ceną wejścia i elastycznym planem płatności — praktyczny wybór pod wynajem i wakacje.",
+        "chip": "Plan ratalny",
+        "alt": "Monteagudo — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "from 104 000 €",
+        "desc": "Kompaktowa inwestycja z atrakcyjną ceną wejścia i elastycznym planem płatności — praktyczny wybór pod wynajem i wakacje.",
+        "chip": "Plan ratalny",
+        "alt": "Monteagudo — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Monteagudo",
+        "meta": "Torrevieja · Costa Blanca South",
+        "price": "от 104 000 €",
+        "desc": "Kompaktowa inwestycja z atrakcyjną ceną wejścia i elastycznym planem płatności — praktyczny wybór pod wynajem i wakacje.",
+        "chip": "Plan ratalny",
+        "alt": "Monteagudo — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "calpe-balcones",
     "sortOrder": 5,
     "title": "Balcones de Calpe",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=calpe-balcones",
+    "price": "599 106 €",
+    "priceValue": 599106,
+    "currency": "EUR",
+    "filterLocation": "calpe",
+    "meta": "Calpe · Costa Blanca North",
+    "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze — propozycja premium dla klienta szukającego lokalizacji, designu i komfortu.",
+    "chip": "Sea View · Calpe",
+    "seoTitle": "Balcones de Calpe | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Balcones de Calpe: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+    "keywords": [
+      "Balcones de Calpe",
+      "calpe",
+      "Costa Blanca",
+      "nowe inwestycje"
+    ],
+    "badges": [
+      "Sea View · Calpe",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · Costa Blanca North",
+        "price": "599 106 €",
+        "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze — propozycja premium dla klienta szukającego lokalizacji, designu i komfortu.",
+        "chip": "Sea View · Calpe",
+        "alt": "Balcones de Calpe — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · Costa Blanca Norte",
+        "price": "599 106 €",
+        "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze — propozycja premium dla klienta szukającego lokalizacji, designu i komfortu.",
+        "chip": "Sea View · Calpe",
+        "alt": "Balcones de Calpe — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · Costa Blanca North",
+        "price": "599 106 €",
+        "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze — propozycja premium dla klienta szukającego lokalizacji, designu i komfortu.",
+        "chip": "Sea View · Calpe",
+        "alt": "Balcones de Calpe — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Balcones de Calpe",
+        "meta": "Calpe · Costa Blanca North",
+        "price": "599 106 €",
+        "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze — propozycja premium dla klienta szukającego lokalizacji, designu i komfortu.",
+        "chip": "Sea View · Calpe",
+        "alt": "Balcones de Calpe — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "royal-star",
     "sortOrder": 6,
     "title": "Royal Star",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=royal-star",
+    "price": "299 500 €",
+    "priceValue": 299500,
+    "currency": "EUR",
+    "filterLocation": "guardamar",
+    "meta": "Guardamar del Segura · Costa Blanca South",
+    "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i plaży — komfortowa opcja do życia, wakacji i wynajmu sezonowego.",
+    "chip": "Guardamar · Centrum",
+    "seoTitle": "Royal Star | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Royal Star: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+    "keywords": [
+      "Royal Star",
+      "guardamar",
+      "Costa Blanca",
+      "nowe inwestycje"
+    ],
+    "badges": [
+      "Guardamar · Centrum",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Royal Star",
+        "meta": "Guardamar del Segura · Costa Blanca South",
+        "price": "299 500 €",
+        "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i plaży — komfortowa opcja do życia, wakacji i wynajmu sezonowego.",
+        "chip": "Guardamar · Centrum",
+        "alt": "Royal Star — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Royal Star",
+        "meta": "Guardamar del Segura · Costa Blanca Sur",
+        "price": "299 500 €",
+        "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i plaży — komfortowa opcja do życia, wakacji i wynajmu sezonowego.",
+        "chip": "Guardamar · Centrum",
+        "alt": "Royal Star — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Royal Star",
+        "meta": "Guardamar del Segura · Costa Blanca South",
+        "price": "299 500 €",
+        "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i plaży — komfortowa opcja do życia, wakacji i wynajmu sezonowego.",
+        "chip": "Guardamar · Centrum",
+        "alt": "Royal Star — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Royal Star",
+        "meta": "Guardamar del Segura · Costa Blanca South",
+        "price": "299 500 €",
+        "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i plaży — komfortowa opcja do życia, wakacji i wynajmu sezonowego.",
+        "chip": "Guardamar · Centrum",
+        "alt": "Royal Star — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "residencial-los-balcones-de-calpe",
     "sortOrder": 7,
     "title": "Residencial Los Balcones de Calpe",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-preview.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe",
+    "price": "269 000 € – 922 125 €",
+    "priceValue": 269000,
+    "currency": "EUR",
+    "filterLocation": "calpe",
+    "meta": "Calpe · Avenida de Madrid · Costa Blanca North",
+    "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencjału wzrostu wartości — blisko usług i śródziemnomorskiego stylu życia.",
+    "chip": "Calpe · Investment",
+    "seoTitle": "Residencial Los Balcones de Calpe | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Residencial Los Balcones de Calpe: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Residencial Los Balcones de Calpe",
+      "calpe",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Calpe · Investment",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Residencial Los Balcones de Calpe",
+        "meta": "Calpe · Avenida de Madrid · Costa Blanca North",
+        "price": "269 000 € – 922 125 €",
+        "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencjału wzrostu wartości — blisko usług i śródziemnomorskiego stylu życia.",
+        "chip": "Calpe · Investment",
+        "alt": "Residencial Los Balcones de Calpe — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Residencial Los Balcones de Calpe",
+        "meta": "Calpe · Avenida de Madrid · Costa Blanca Norte",
+        "price": "269 000 € – 922 125 €",
+        "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencjału wzrostu wartości — blisko usług i śródziemnomorskiego stylu życia.",
+        "chip": "Calpe · Investment",
+        "alt": "Residencial Los Balcones de Calpe — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Residencial Los Balcones de Calpe",
+        "meta": "Calpe · Avenida de Madrid · Costa Blanca North",
+        "price": "269 000 € – 922 125 €",
+        "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencjału wzrostu wartości — blisko usług i śródziemnomorskiego stylu życia.",
+        "chip": "Calpe · Investment",
+        "alt": "Residencial Los Balcones de Calpe — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Residencial Los Balcones de Calpe",
+        "meta": "Calpe · Avenida de Madrid · Costa Blanca North",
+        "price": "269 000 € – 922 125 €",
+        "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencjału wzrostu wartości — blisko usług i śródziemnomorskiego stylu życia.",
+        "chip": "Calpe · Investment",
+        "alt": "Residencial Los Balcones de Calpe — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "16-villas-polop",
     "sortOrder": 8,
     "title": "16 Villas Polop",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": false,
+    "href": "/pl/new-developments/xml-catalog/?slug=16-villas-polop",
+    "price": "Cena na zapytanie",
+    "priceValue": 0,
+    "currency": "EUR",
+    "filterLocation": "polop",
+    "meta": "Polop · okolice Benidorm · Costa Blanca",
+    "desc": "Kameralny projekt 16 nowoczesnych willi w Polop — spokojna lokalizacja, widoki na góry i szybki dojazd do Benidorm oraz plaż.",
+    "chip": "Villas · Polop",
+    "seoTitle": "16 Villas Polop | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "16 Villas Polop: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "16 Villas Polop",
+      "polop",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Villas · Polop",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "priceStatus": "on_request",
+    "translations": {
+      "pl": {
+        "title": "16 Villas Polop",
+        "meta": "Polop · okolice Benidorm · Costa Blanca",
+        "price": "Cena na zapytanie",
+        "desc": "Kameralny projekt 16 nowoczesnych willi w Polop — spokojna lokalizacja, widoki na góry i szybki dojazd do Benidorm oraz plaż.",
+        "chip": "Villas · Polop",
+        "alt": "16 Villas Polop — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "16 Villas Polop",
+        "meta": "Polop · okolice Benidorm · Costa Blanca",
+        "price": "Precio bajo consulta",
+        "desc": "Kameralny projekt 16 nowoczesnych willi w Polop — spokojna lokalizacja, widoki na góry i szybki dojazd do Benidorm oraz plaż.",
+        "chip": "Villas · Polop",
+        "alt": "16 Villas Polop — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "16 Villas Polop",
+        "meta": "Polop · near Benidorm · Costa Blanca",
+        "price": "Price on request",
+        "desc": "Kameralny projekt 16 nowoczesnych willi w Polop — spokojna lokalizacja, widoki na góry i szybki dojazd do Benidorm oraz plaż.",
+        "chip": "Villas · Polop",
+        "alt": "16 Villas Polop — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "16 Villas Polop",
+        "meta": "Polop · okolice Benidorm · Costa Blanca",
+        "price": "Цена по запросу",
+        "desc": "Kameralny projekt 16 nowoczesnych willi w Polop — spokojna lokalizacja, widoki na góry i szybki dojazd do Benidorm oraz plaż.",
+        "chip": "Villas · Polop",
+        "alt": "16 Villas Polop — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "nature-views",
     "sortOrder": 9,
     "title": "Nature Views",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-preview.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=nature-views",
+    "price": "330 000 €",
+    "priceValue": 330000,
+    "currency": "EUR",
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · Lago Jardín II · 4 km do plaży",
+    "desc": "Gotowa inwestycja w Torrevieja z dużą powierzchnią, prywatnością i śródziemnomorskim klimatem — dobra propozycja dla klienta szukającego komfortu poza ścisłym centrum.",
+    "chip": "Nature · Lifestyle",
+    "seoTitle": "Nature Views | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Nature Views: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Nature Views",
+      "torrevieja",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Nature · Lifestyle",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · Lago Jardín II · 4 km do plaży",
+        "price": "330 000 €",
+        "desc": "Gotowa inwestycja w Torrevieja z dużą powierzchnią, prywatnością i śródziemnomorskim klimatem — dobra propozycja dla klienta szukającego komfortu poza ścisłym centrum.",
+        "chip": "Nature · Lifestyle",
+        "alt": "Nature Views — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · Lago Jardín II · 4 km do plaży",
+        "price": "330 000 €",
+        "desc": "Gotowa inwestycja w Torrevieja z dużą powierzchnią, prywatnością i śródziemnomorskim klimatem — dobra propozycja dla klienta szukającego komfortu poza ścisłym centrum.",
+        "chip": "Nature · Lifestyle",
+        "alt": "Nature Views — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · Lago Jardín II · 4 km do plaży",
+        "price": "330 000 €",
+        "desc": "Gotowa inwestycja w Torrevieja z dużą powierzchnią, prywatnością i śródziemnomorskim klimatem — dobra propozycja dla klienta szukającego komfortu poza ścisłym centrum.",
+        "chip": "Nature · Lifestyle",
+        "alt": "Nature Views — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Nature Views",
+        "meta": "Torrevieja · Lago Jardín II · 4 km do plaży",
+        "price": "330 000 €",
+        "desc": "Gotowa inwestycja w Torrevieja z dużą powierzchnią, prywatnością i śródziemnomorskim klimatem — dobra propozycja dla klienta szukającego komfortu poza ścisłym centrum.",
+        "chip": "Nature · Lifestyle",
+        "alt": "Nature Views — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "nalia-resort",
     "sortOrder": 10,
     "title": "Nalia Resort",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266734/conversions/property-18216-5-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266741/conversions/property-18216-6-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266746/conversions/property-18216-7-preview.jpg"
-    ]
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266734/conversions/property-18216-5-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266741/conversions/property-18216-6-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266746/conversions/property-18216-7-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=nalia-resort",
+    "price": "309 900 €",
+    "priceValue": 309900,
+    "currency": "EUR",
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · Los Balcones · Costa Blanca South",
+    "desc": "Resortowy projekt w Torrevieja dla klientów szukających komfortu, stref wspólnych i potencjału wynajmu wakacyjnego.",
+    "chip": "Resort · Torrevieja",
+    "seoTitle": "Nalia Resort | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Nalia Resort: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Nalia Resort",
+      "torrevieja",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Resort · Torrevieja",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Nalia Resort",
+        "meta": "Torrevieja · Los Balcones · Costa Blanca South",
+        "price": "309 900 €",
+        "desc": "Resortowy projekt w Torrevieja dla klientów szukających komfortu, stref wspólnych i potencjału wynajmu wakacyjnego.",
+        "chip": "Resort · Torrevieja",
+        "alt": "Nalia Resort — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Nalia Resort",
+        "meta": "Torrevieja · Los Balcones · Costa Blanca Sur",
+        "price": "309 900 €",
+        "desc": "Resortowy projekt w Torrevieja dla klientów szukających komfortu, stref wspólnych i potencjału wynajmu wakacyjnego.",
+        "chip": "Resort · Torrevieja",
+        "alt": "Nalia Resort — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Nalia Resort",
+        "meta": "Torrevieja · Los Balcones · Costa Blanca South",
+        "price": "309 900 €",
+        "desc": "Resortowy projekt w Torrevieja dla klientów szukających komfortu, stref wspólnych i potencjału wynajmu wakacyjnego.",
+        "chip": "Resort · Torrevieja",
+        "alt": "Nalia Resort — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Nalia Resort",
+        "meta": "Torrevieja · Los Balcones · Costa Blanca South",
+        "price": "309 900 €",
+        "desc": "Resortowy projekt w Torrevieja dla klientów szukających komfortu, stref wspólnych i potencjału wynajmu wakacyjnego.",
+        "chip": "Resort · Torrevieja",
+        "alt": "Nalia Resort — новая инвестиция на Costa Blanca"
+      }
+    }
   },
   {
     "slug": "alonis-villas",
     "sortOrder": 11,
     "title": "Alonis Villas",
     "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg"
+      }
+    },
     "images": [
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-preview.jpg",
       "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-preview.jpg"
-    ]
-  }
-  ,
-{
-  "slug": "salinas-towers-calpe",
-  "sortOrder": 12,
-  "title": "Salinas Towers - Calpe",
-  "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
-  "images": [
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220683/conversions/property-454020-1-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220685/conversions/property-454020-3-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220686/conversions/property-454020-4-preview.jpg"
-  ],
-  "href": "/pl/new-developments/xml-catalog/?slug=salinas-towers-calpe",
-  "price": "375 000 € – 624 000 €",
-  "priceValue": 375000,
-  "currency": "EUR",
-  "filterLocation": "calpe",
-  "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
-  "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
-  "chip": "Calpe · Sea View",
-  "seoTitle": "Salinas Towers Calpe | Nowe apartamenty blisko plaży Arenal-Bol",
-  "seoDescription": "Salinas Towers w Calpe: nowoczesne apartamenty blisko plaży Arenal-Bol, z tarasami, widokami i świetnym potencjałem inwestycyjnym na Costa Blanca.",
-  "keywords": ["Salinas Towers", "Calpe", "Arenal-Bol", "apartamenty Calpe", "Costa Blanca North"],
-  "translations": {
-    "pl": {
-      "title": "Salinas Towers - Calpe",
-      "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
-      "price": "375 000 € – 624 000 €",
-      "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
-      "chip": "Calpe · Sea View",
-      "alt": "Salinas Towers Calpe — nowe apartamenty blisko plaży"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=alonis-villas",
+    "price": "675 000 € – 775 000 €",
+    "priceValue": 675000,
+    "currency": "EUR",
+    "filterLocation": "villajoyosa",
+    "meta": "La Villajoyosa · Playa de Torres · Costa Blanca",
+    "desc": "Pięć luksusowych willi w uprzywilejowanej lokalizacji nad morzem między Villajoyosa i Benidorm — elegancja, prywatność i wysoki standard.",
+    "chip": "Premium Villas",
+    "seoTitle": "Alonis Villas | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Alonis Villas: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Alonis Villas",
+      "villajoyosa",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Premium Villas",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
     },
-    "es": {
-      "title": "Salinas Towers - Calpe",
-      "meta": "Calpe · Playa Arenal-Bol · Costa Blanca Norte",
-      "price": "375 000 € – 624 000 €",
-      "desc": "Proyecto residencial moderno en Calpe, cerca de la playa Arenal-Bol: apartamentos con terrazas, vistas y potencial de inversión.",
-      "chip": "Calpe · Vistas",
-      "alt": "Salinas Towers Calpe — apartamentos nuevos cerca de la playa"
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
     },
-    "en": {
-      "title": "Salinas Towers - Calpe",
-      "meta": "Calpe · Arenal-Bol Beach · Costa Blanca North",
-      "price": "€375,000 – €624,000",
-      "desc": "Modern residential project in Calpe, close to Arenal-Bol beach: apartments with terraces, views and strong investment potential.",
-      "chip": "Calpe · Sea View",
-      "alt": "Salinas Towers Calpe — new apartments close to the beach"
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Alonis Villas",
+        "meta": "La Villajoyosa · Playa de Torres · Costa Blanca",
+        "price": "675 000 € – 775 000 €",
+        "desc": "Pięć luksusowych willi w uprzywilejowanej lokalizacji nad morzem między Villajoyosa i Benidorm — elegancja, prywatność i wysoki standard.",
+        "chip": "Premium Villas",
+        "alt": "Alonis Villas — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Alonis Villas",
+        "meta": "La Villajoyosa · Playa de Torres · Costa Blanca",
+        "price": "675 000 € – 775 000 €",
+        "desc": "Pięć luksusowych willi w uprzywilejowanej lokalizacji nad morzem między Villajoyosa i Benidorm — elegancja, prywatność i wysoki standard.",
+        "chip": "Premium Villas",
+        "alt": "Alonis Villas — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Alonis Villas",
+        "meta": "La Villajoyosa · Playa de Torres · Costa Blanca",
+        "price": "675 000 € – 775 000 €",
+        "desc": "Pięć luksusowych willi w uprzywilejowanej lokalizacji nad morzem między Villajoyosa i Benidorm — elegancja, prywatność i wysoki standard.",
+        "chip": "Premium Villas",
+        "alt": "Alonis Villas — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Alonis Villas",
+        "meta": "La Villajoyosa · Playa de Torres · Costa Blanca",
+        "price": "675 000 € – 775 000 €",
+        "desc": "Pięć luksusowych willi w uprzywilejowanej lokalizacji nad morzem między Villajoyosa i Benidorm — elegancja, prywatność i wysoki standard.",
+        "chip": "Premium Villas",
+        "alt": "Alonis Villas — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "salinas-towers-calpe",
+    "sortOrder": 12,
+    "title": "Salinas Towers - Calpe",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-medium.jpg"
+      }
     },
-    "ru": {
-      "title": "Salinas Towers - Calpe",
-      "meta": "Кальпе · пляж Arenal-Bol · север Costa Blanca",
-      "price": "375 000 € – 624 000 €",
-      "desc": "Современный жилой проект в Кальпе рядом с пляжем Arenal-Bol: апартаменты с террасами, видами и инвестиционным потенциалом.",
-      "chip": "Кальпе · Вид",
-      "alt": "Salinas Towers Calpe — новые апартаменты рядом с пляжем"
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220683/conversions/property-454020-1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220685/conversions/property-454020-3-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220686/conversions/property-454020-4-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220683/conversions/property-454020-1-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220685/conversions/property-454020-3-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220686/conversions/property-454020-4-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=salinas-towers-calpe",
+    "price": "375 000 € – 624 000 €",
+    "priceValue": 375000,
+    "currency": "EUR",
+    "filterLocation": "calpe",
+    "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
+    "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
+    "chip": "Calpe · Sea View",
+    "seoTitle": "Salinas Towers - Calpe | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Salinas Towers - Calpe: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Salinas Towers - Calpe",
+      "calpe",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Calpe · Sea View",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Salinas Towers - Calpe",
+        "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
+        "price": "375 000 € – 624 000 €",
+        "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
+        "chip": "Calpe · Sea View",
+        "alt": "Salinas Towers - Calpe — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Salinas Towers - Calpe",
+        "meta": "Calpe · Playa Arenal-Bol · Costa Blanca Norte",
+        "price": "375 000 € – 624 000 €",
+        "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
+        "chip": "Calpe · Sea View",
+        "alt": "Salinas Towers - Calpe — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Salinas Towers - Calpe",
+        "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
+        "price": "375 000 € – 624 000 €",
+        "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
+        "chip": "Calpe · Sea View",
+        "alt": "Salinas Towers - Calpe — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Salinas Towers - Calpe",
+        "meta": "Calpe · Playa Arenal-Bol · Costa Blanca North",
+        "price": "375 000 € – 624 000 €",
+        "desc": "Nowoczesny projekt mieszkaniowy w Calpe, blisko plaży Arenal-Bol — apartamenty z tarasami, widokami i potencjałem inwestycyjnym.",
+        "chip": "Calpe · Sea View",
+        "alt": "Salinas Towers - Calpe — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "alma-bungalow-4",
+    "sortOrder": 13,
+    "title": "Alma Bungalow 4",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254058/conversions/01KKXQDZGH72WD8VKCAVRJ1Y3X-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254059/conversions/01KKXQDZVTYCC86T33B11QJJYY-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254060/conversions/01KKXQE094SSVKJ3CRVB8ZA236-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254058/conversions/01KKXQDZGH72WD8VKCAVRJ1Y3X-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254059/conversions/01KKXQDZVTYCC86T33B11QJJYY-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254060/conversions/01KKXQE094SSVKJ3CRVB8ZA236-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=alma-bungalow-4",
+    "price": "369 900 € – 425 900 €",
+    "priceValue": 369900,
+    "currency": "EUR",
+    "filterLocation": "pilar-de-la-horadada",
+    "meta": "Pilar de la Horadada · Costa Blanca South",
+    "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
+    "chip": "Bungalow · New Build",
+    "seoTitle": "Alma Bungalow 4 | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Alma Bungalow 4: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Alma Bungalow 4",
+      "pilar-de-la-horadada",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Bungalow · New Build",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Alma Bungalow 4",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "369 900 € – 425 900 €",
+        "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
+        "chip": "Bungalow · New Build",
+        "alt": "Alma Bungalow 4 — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Alma Bungalow 4",
+        "meta": "Pilar de la Horadada · Costa Blanca Sur",
+        "price": "369 900 € – 425 900 €",
+        "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
+        "chip": "Bungalow · New Build",
+        "alt": "Alma Bungalow 4 — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Alma Bungalow 4",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "369 900 € – 425 900 €",
+        "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
+        "chip": "Bungalow · New Build",
+        "alt": "Alma Bungalow 4 — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Alma Bungalow 4",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "369 900 € – 425 900 €",
+        "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
+        "chip": "Bungalow · New Build",
+        "alt": "Alma Bungalow 4 — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "mirador-de-relleu",
+    "sortOrder": 14,
+    "title": "Mirador de Relleu",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937340/conversions/01J94QT3XMYPG44J0WMW4BG02V-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937341/conversions/01J94QT43QJTE4KMJSYY5362XH-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937342/conversions/01J94QT5MMWCAJJG86B6Q1PBZE-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937340/conversions/01J94QT3XMYPG44J0WMW4BG02V-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937341/conversions/01J94QT43QJTE4KMJSYY5362XH-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937342/conversions/01J94QT5MMWCAJJG86B6Q1PBZE-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=mirador-de-relleu",
+    "price": "165 000 € – 279 000 €",
+    "priceValue": 165000,
+    "currency": "EUR",
+    "filterLocation": "relleu",
+    "meta": "Relleu · Alicante · Costa Blanca",
+    "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
+    "chip": "Nature · Value",
+    "seoTitle": "Mirador de Relleu | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Mirador de Relleu: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Mirador de Relleu",
+      "relleu",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Nature · Value",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Mirador de Relleu",
+        "meta": "Relleu · Alicante · Costa Blanca",
+        "price": "165 000 € – 279 000 €",
+        "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
+        "chip": "Nature · Value",
+        "alt": "Mirador de Relleu — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Mirador de Relleu",
+        "meta": "Relleu · Alicante · Costa Blanca",
+        "price": "165 000 € – 279 000 €",
+        "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
+        "chip": "Nature · Value",
+        "alt": "Mirador de Relleu — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Mirador de Relleu",
+        "meta": "Relleu · Alicante · Costa Blanca",
+        "price": "165 000 € – 279 000 €",
+        "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
+        "chip": "Nature · Value",
+        "alt": "Mirador de Relleu — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Mirador de Relleu",
+        "meta": "Relleu · Alicante · Costa Blanca",
+        "price": "165 000 € – 279 000 €",
+        "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
+        "chip": "Nature · Value",
+        "alt": "Mirador de Relleu — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "la-nucia-villas",
+    "sortOrder": 15,
+    "title": "La Nucia Villas",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=la-nucia-villas",
+    "price": "449 000 € – 566 000 €",
+    "priceValue": 449000,
+    "currency": "EUR",
+    "filterLocation": "la-nucia",
+    "meta": "La Nucia · okolice Benidorm · Costa Blanca",
+    "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
+    "chip": "Villas · La Nucia",
+    "seoTitle": "La Nucia Villas | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "La Nucia Villas: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "La Nucia Villas",
+      "la-nucia",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Villas · La Nucia",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "La Nucia Villas",
+        "meta": "La Nucia · okolice Benidorm · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
+        "chip": "Villas · La Nucia",
+        "alt": "La Nucia Villas — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "La Nucia Villas",
+        "meta": "La Nucia · okolice Benidorm · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
+        "chip": "Villas · La Nucia",
+        "alt": "La Nucia Villas — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "La Nucia Villas",
+        "meta": "La Nucia · near Benidorm · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
+        "chip": "Villas · La Nucia",
+        "alt": "La Nucia Villas — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "La Nucia Villas",
+        "meta": "La Nucia · okolice Benidorm · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
+        "chip": "Villas · La Nucia",
+        "alt": "La Nucia Villas — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "rambla-beach-iii",
+    "sortOrder": 16,
+    "title": "Rambla Beach III",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767763/conversions/01HTPWQQM28MV4A9SKWSNK345W-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767765/conversions/01HTPWQV4VA6GEK6XB95EMP837-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767766/conversions/01HTPWQX21WTTRR2VE78XVY5W5-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767763/conversions/01HTPWQQM28MV4A9SKWSNK345W-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767765/conversions/01HTPWQV4VA6GEK6XB95EMP837-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767766/conversions/01HTPWQX21WTTRR2VE78XVY5W5-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=rambla-beach-iii",
+    "price": "370 000 €",
+    "priceValue": 370000,
+    "currency": "EUR",
+    "filterLocation": "pilar-de-la-horadada",
+    "meta": "Pilar de la Horadada · Costa Blanca South",
+    "desc": "Nowoczesne bungalowy w prywatnej rezydencji — ogród lub solarium, komfortowa przestrzeń i dobra lokalizacja na południu Costa Blanca.",
+    "chip": "Bungalow · Solarium",
+    "seoTitle": "Rambla Beach III | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Rambla Beach III: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Rambla Beach III",
+      "pilar-de-la-horadada",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Bungalow · Solarium",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Rambla Beach III",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "370 000 €",
+        "desc": "Nowoczesne bungalowy w prywatnej rezydencji — ogród lub solarium, komfortowa przestrzeń i dobra lokalizacja na południu Costa Blanca.",
+        "chip": "Bungalow · Solarium",
+        "alt": "Rambla Beach III — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Rambla Beach III",
+        "meta": "Pilar de la Horadada · Costa Blanca Sur",
+        "price": "370 000 €",
+        "desc": "Nowoczesne bungalowy w prywatnej rezydencji — ogród lub solarium, komfortowa przestrzeń i dobra lokalizacja na południu Costa Blanca.",
+        "chip": "Bungalow · Solarium",
+        "alt": "Rambla Beach III — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Rambla Beach III",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "370 000 €",
+        "desc": "Nowoczesne bungalowy w prywatnej rezydencji — ogród lub solarium, komfortowa przestrzeń i dobra lokalizacja na południu Costa Blanca.",
+        "chip": "Bungalow · Solarium",
+        "alt": "Rambla Beach III — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Rambla Beach III",
+        "meta": "Pilar de la Horadada · Costa Blanca South",
+        "price": "370 000 €",
+        "desc": "Nowoczesne bungalowy w prywatnej rezydencji — ogród lub solarium, komfortowa przestrzeń i dobra lokalizacja na południu Costa Blanca.",
+        "chip": "Bungalow · Solarium",
+        "alt": "Rambla Beach III — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "new-green-finestrat",
+    "sortOrder": 17,
+    "title": "New Green",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768150/conversions/01HTQEWHVG15XWWMYGFDC4BRJX-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768151/conversions/01HTQEWJ5QXZ9115416ZT6V1H6-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768152/conversions/01HTQEWJFWAMC2TKKDPWY1JD1V-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768150/conversions/01HTQEWHVG15XWWMYGFDC4BRJX-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768151/conversions/01HTQEWJ5QXZ9115416ZT6V1H6-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768152/conversions/01HTQEWJFWAMC2TKKDPWY1JD1V-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=new-green-finestrat",
+    "price": "875 000 €",
+    "priceValue": 875000,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · okolice Benidorm · Costa Blanca",
+    "desc": "Nowoczesne wille z prywatnym ogrodem, basenem i wysokim standardem — propozycja premium blisko Benidorm i plaż.",
+    "chip": "Villa · Premium",
+    "seoTitle": "New Green | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "New Green: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "New Green",
+      "finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Villa · Premium",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "New Green",
+        "meta": "Finestrat · okolice Benidorm · Costa Blanca",
+        "price": "875 000 €",
+        "desc": "Nowoczesne wille z prywatnym ogrodem, basenem i wysokim standardem — propozycja premium blisko Benidorm i plaż.",
+        "chip": "Villa · Premium",
+        "alt": "New Green — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "New Green",
+        "meta": "Finestrat · okolice Benidorm · Costa Blanca",
+        "price": "875 000 €",
+        "desc": "Nowoczesne wille z prywatnym ogrodem, basenem i wysokim standardem — propozycja premium blisko Benidorm i plaż.",
+        "chip": "Villa · Premium",
+        "alt": "New Green — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "New Green",
+        "meta": "Finestrat · near Benidorm · Costa Blanca",
+        "price": "875 000 €",
+        "desc": "Nowoczesne wille z prywatnym ogrodem, basenem i wysokim standardem — propozycja premium blisko Benidorm i plaż.",
+        "chip": "Villa · Premium",
+        "alt": "New Green — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "New Green",
+        "meta": "Finestrat · okolice Benidorm · Costa Blanca",
+        "price": "875 000 €",
+        "desc": "Nowoczesne wille z prywatnym ogrodem, basenem i wysokim standardem — propozycja premium blisko Benidorm i plaż.",
+        "chip": "Villa · Premium",
+        "alt": "New Green — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "santa-pola-elegance",
+    "sortOrder": 18,
+    "title": "Santa Pola Elegance",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=santa-pola-elegance",
+    "price": "230 000 € – 340 000 €",
+    "priceValue": 230000,
+    "currency": "EUR",
+    "filterLocation": "santa-pola",
+    "meta": "Santa Pola · Costa Blanca South",
+    "desc": "Nowoczesny kompleks mieszkalny w Santa Pola z basenem, strefami wspólnymi i dobrą lokalizacją około 700 m od plaży.",
+    "chip": "Santa Pola · Beach",
+    "seoTitle": "Santa Pola Elegance | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Santa Pola Elegance: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Santa Pola Elegance",
+      "santa-pola",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Santa Pola · Beach",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Santa Pola Elegance",
+        "meta": "Santa Pola · Costa Blanca South",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Nowoczesny kompleks mieszkalny w Santa Pola z basenem, strefami wspólnymi i dobrą lokalizacją około 700 m od plaży.",
+        "chip": "Santa Pola · Beach",
+        "alt": "Santa Pola Elegance — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Santa Pola Elegance",
+        "meta": "Santa Pola · Costa Blanca Sur",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Nowoczesny kompleks mieszkalny w Santa Pola z basenem, strefami wspólnymi i dobrą lokalizacją około 700 m od plaży.",
+        "chip": "Santa Pola · Beach",
+        "alt": "Santa Pola Elegance — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Santa Pola Elegance",
+        "meta": "Santa Pola · Costa Blanca South",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Nowoczesny kompleks mieszkalny w Santa Pola z basenem, strefami wspólnymi i dobrą lokalizacją około 700 m od plaży.",
+        "chip": "Santa Pola · Beach",
+        "alt": "Santa Pola Elegance — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Santa Pola Elegance",
+        "meta": "Santa Pola · Costa Blanca South",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Nowoczesny kompleks mieszkalny w Santa Pola z basenem, strefami wspólnymi i dobrą lokalizacją około 700 m od plaży.",
+        "chip": "Santa Pola · Beach",
+        "alt": "Santa Pola Elegance — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "miro-gran-alacant",
+    "sortOrder": 19,
+    "title": "Miró",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": false,
+    "href": "/pl/new-developments/xml-catalog/?slug=miro-gran-alacant",
+    "price": "805 000 €",
+    "priceValue": 805000,
+    "currency": "EUR",
+    "filterLocation": "gran-alacant",
+    "meta": "Gran Alacant · Costa Blanca South",
+    "desc": "Trzypiętrowe wille o nowoczesnym i funkcjonalnym designie — dużo światła, otwarte przestrzenie i wyższy segment rynku.",
+    "chip": "Villa · Design",
+    "seoTitle": "Miró | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Miró: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Miró",
+      "gran-alacant",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Villa · Design",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Miró",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "805 000 €",
+        "desc": "Trzypiętrowe wille o nowoczesnym i funkcjonalnym designie — dużo światła, otwarte przestrzenie i wyższy segment rynku.",
+        "chip": "Villa · Design",
+        "alt": "Miró — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Miró",
+        "meta": "Gran Alacant · Costa Blanca Sur",
+        "price": "805 000 €",
+        "desc": "Trzypiętrowe wille o nowoczesnym i funkcjonalnym designie — dużo światła, otwarte przestrzenie i wyższy segment rynku.",
+        "chip": "Villa · Design",
+        "alt": "Miró — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Miró",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "805 000 €",
+        "desc": "Trzypiętrowe wille o nowoczesnym i funkcjonalnym designie — dużo światła, otwarte przestrzenie i wyższy segment rynku.",
+        "chip": "Villa · Design",
+        "alt": "Miró — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Miró",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "805 000 €",
+        "desc": "Trzypiętrowe wille o nowoczesnym i funkcjonalnym designie — dużo światła, otwarte przestrzenie i wyższy segment rynku.",
+        "chip": "Villa · Design",
+        "alt": "Miró — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "marino-gran-alacant",
+    "sortOrder": 20,
+    "title": "Marino",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": false,
+    "href": "/pl/new-developments/xml-catalog/?slug=marino-gran-alacant",
+    "price": "306 000 € – 341 000 €",
+    "priceValue": 306000,
+    "currency": "EUR",
+    "filterLocation": "gran-alacant",
+    "meta": "Gran Alacant · Costa Blanca South",
+    "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
+    "chip": "Modern Homes",
+    "seoTitle": "Marino | Nowa inwestycja na Costa Blanca",
+    "seoDescription": "Marino: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+    "keywords": [
+      "Marino",
+      "gran-alacant",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania"
+    ],
+    "badges": [
+      "Modern Homes",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Marino",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "306 000 € – 341 000 €",
+        "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
+        "chip": "Modern Homes",
+        "alt": "Marino — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Marino",
+        "meta": "Gran Alacant · Costa Blanca Sur",
+        "price": "306 000 € – 341 000 €",
+        "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
+        "chip": "Modern Homes",
+        "alt": "Marino — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Marino",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "306 000 € – 341 000 €",
+        "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
+        "chip": "Modern Homes",
+        "alt": "Marino — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Marino",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "306 000 € – 341 000 €",
+        "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
+        "chip": "Modern Homes",
+        "alt": "Marino — новая инвестиция на Costa Blanca"
+      }
     }
   }
-},
-{
-  "slug": "alma-bungalow-4",
-  "sortOrder": 13,
-  "title": "Alma Bungalow 4",
-  "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
-  "images": [
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254058/conversions/01KKXQDZGH72WD8VKCAVRJ1Y3X-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254059/conversions/01KKXQDZVTYCC86T33B11QJJYY-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254060/conversions/01KKXQE094SSVKJ3CRVB8ZA236-preview.jpg"
-  ],
-  "href": "/pl/new-developments/xml-catalog/?slug=alma-bungalow-4",
-  "price": "369 900 € – 425 900 €",
-  "priceValue": 369900,
-  "currency": "EUR",
-  "filterLocation": "pilar-de-la-horadada",
-  "meta": "Pilar de la Horadada · Costa Blanca South",
-  "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
-  "chip": "Bungalow · New Build",
-  "seoTitle": "Alma Bungalow 4 | Nowe bungalowy w Pilar de la Horadada",
-  "seoDescription": "Alma Bungalow 4: nowe bungalowy w Pilar de la Horadada z 3 sypialniami, prywatnymi tarasami i śródziemnomorskim stylem życia.",
-  "keywords": ["Alma Bungalow 4", "Pilar de la Horadada", "bungalowy", "Costa Blanca South", "nowe inwestycje"],
-  "translations": {
-    "pl": {
-      "title": "Alma Bungalow 4",
-      "meta": "Pilar de la Horadada · Costa Blanca South",
-      "price": "369 900 € – 425 900 €",
-      "desc": "Ekskluzywna oferta nowych bungalowów z prywatnością, komfortem i śródziemnomorskim stylem życia na południu Costa Blanca.",
-      "chip": "Bungalow · New Build",
-      "alt": "Alma Bungalow 4 — nowe bungalowy w Pilar de la Horadada"
-    },
-    "es": {
-      "title": "Alma Bungalow 4",
-      "meta": "Pilar de la Horadada · Costa Blanca Sur",
-      "price": "369 900 € – 425 900 €",
-      "desc": "Oferta exclusiva de nuevos bungalows con privacidad, confort y estilo de vida mediterráneo en el sur de Costa Blanca.",
-      "chip": "Bungalow · Obra nueva",
-      "alt": "Alma Bungalow 4 — bungalows nuevos en Pilar de la Horadada"
-    },
-    "en": {
-      "title": "Alma Bungalow 4",
-      "meta": "Pilar de la Horadada · Costa Blanca South",
-      "price": "€369,900 – €425,900",
-      "desc": "Exclusive collection of new bungalows offering privacy, comfort and Mediterranean lifestyle in southern Costa Blanca.",
-      "chip": "Bungalow · New Build",
-      "alt": "Alma Bungalow 4 — new bungalows in Pilar de la Horadada"
-    },
-    "ru": {
-      "title": "Alma Bungalow 4",
-      "meta": "Пилар-де-ла-Орадада · юг Costa Blanca",
-      "price": "369 900 € – 425 900 €",
-      "desc": "Эксклюзивная коллекция новых бунгало с приватностью, комфортом и средиземноморским стилем жизни на юге Costa Blanca.",
-      "chip": "Бунгало · Новостройка",
-      "alt": "Alma Bungalow 4 — новые бунгало в Пилар-де-ла-Орадада"
-    }
-  }
-},
-{
-  "slug": "mirador-de-relleu",
-  "sortOrder": 14,
-  "title": "Mirador de Relleu",
-  "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
-  "images": [
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937340/conversions/01J94QT3XMYPG44J0WMW4BG02V-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937341/conversions/01J94QT43QJTE4KMJSYY5362XH-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937342/conversions/01J94QT5MMWCAJJG86B6Q1PBZE-preview.jpg"
-  ],
-  "href": "/pl/new-developments/xml-catalog/?slug=mirador-de-relleu",
-  "price": "165 000 € – 279 000 €",
-  "priceValue": 165000,
-  "currency": "EUR",
-  "filterLocation": "relleu",
-  "meta": "Relleu · Alicante · Costa Blanca",
-  "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
-  "chip": "Nature · Value",
-  "seoTitle": "Mirador de Relleu | Apartamenty wśród natury od 165 000 €",
-  "seoDescription": "Mirador de Relleu: nowe apartamenty w Alicante w otoczeniu natury, z atrakcyjną ceną wejścia i potencjałem wzrostu wartości.",
-  "keywords": ["Mirador de Relleu", "Relleu", "apartamenty Alicante", "Costa Blanca", "inwestycja"],
-  "translations": {
-    "pl": {
-      "title": "Mirador de Relleu",
-      "meta": "Relleu · Alicante · Costa Blanca",
-      "price": "165 000 € – 279 000 €",
-      "desc": "Apartamenty w otoczeniu natury, z widokami i atrakcyjną ceną wejścia — dobra opcja pod spokojne życie, wakacje i inwestycję.",
-      "chip": "Nature · Value",
-      "alt": "Mirador de Relleu — apartamenty w otoczeniu natury"
-    },
-    "es": {
-      "title": "Mirador de Relleu",
-      "meta": "Relleu · Alicante · Costa Blanca",
-      "price": "165 000 € – 279 000 €",
-      "desc": "Apartamentos rodeados de naturaleza, con vistas y precio de entrada atractivo: buena opción para vivir, vacaciones e inversión.",
-      "chip": "Naturaleza · Valor",
-      "alt": "Mirador de Relleu — apartamentos rodeados de naturaleza"
-    },
-    "en": {
-      "title": "Mirador de Relleu",
-      "meta": "Relleu · Alicante · Costa Blanca",
-      "price": "€165,000 – €279,000",
-      "desc": "Apartments surrounded by nature, with views and an attractive entry price: a strong option for living, holidays and investment.",
-      "chip": "Nature · Value",
-      "alt": "Mirador de Relleu — apartments surrounded by nature"
-    },
-    "ru": {
-      "title": "Mirador de Relleu",
-      "meta": "Рельеу · Аликанте · Costa Blanca",
-      "price": "165 000 € – 279 000 €",
-      "desc": "Апартаменты в окружении природы, с видами и привлекательной стартовой ценой — хороший вариант для жизни, отдыха и инвестиций.",
-      "chip": "Природа · Цена",
-      "alt": "Mirador de Relleu — апартаменты в окружении природы"
-    }
-  }
-},
-{
-  "slug": "la-nucia-villas",
-  "sortOrder": 15,
-  "title": "La Nucia Villas",
-  "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
-  "images": [
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
-    "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg"
-  ],
-  "href": "/pl/new-developments/xml-catalog/?slug=la-nucia-villas",
-  "price": "449 000 € – 566 000 €",
-  "priceValue": 449000,
-  "currency": "EUR",
-  "filterLocation": "la-nucia",
-  "meta": "La Nucia · okolice Benidorm · Costa Blanca",
-  "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
-  "chip": "Villas · La Nucia",
-  "seoTitle": "La Nucia Villas | Nowe wille blisko Benidorm",
-  "seoDescription": "La Nucia Villas: nowe wille na Costa Blanca, blisko Benidorm, z przestronnymi wnętrzami, widokami i spokojną lokalizacją.",
-  "keywords": ["La Nucia", "wille La Nucia", "Benidorm", "Costa Blanca", "nowe wille"],
-  "translations": {
-    "pl": {
-      "title": "La Nucia Villas",
-      "meta": "La Nucia · okolice Benidorm · Costa Blanca",
-      "price": "449 000 € – 566 000 €",
-      "desc": "Nowa oferta willi w La Nucia z widokami, przestrzenią i szybkim dostępem do Benidorm oraz plaż Costa Blanca.",
-      "chip": "Villas · La Nucia",
-      "alt": "La Nucia Villas — nowe wille blisko Benidorm"
-    },
-    "es": {
-      "title": "La Nucia Villas",
-      "meta": "La Nucia · cerca de Benidorm · Costa Blanca",
-      "price": "449 000 € – 566 000 €",
-      "desc": "Nueva oferta de villas en La Nucia con vistas, amplitud y acceso rápido a Benidorm y las playas de Costa Blanca.",
-      "chip": "Villas · La Nucia",
-      "alt": "La Nucia Villas — villas nuevas cerca de Benidorm"
-    },
-    "en": {
-      "title": "La Nucia Villas",
-      "meta": "La Nucia · near Benidorm · Costa Blanca",
-      "price": "€449,000 – €566,000",
-      "desc": "New villa offer in La Nucia with views, spacious layouts and quick access to Benidorm and Costa Blanca beaches.",
-      "chip": "Villas · La Nucia",
-      "alt": "La Nucia Villas — new villas near Benidorm"
-    },
-    "ru": {
-      "title": "La Nucia Villas",
-      "meta": "Ла-Нусия · рядом с Бенидормом · Costa Blanca",
-      "price": "449 000 € – 566 000 €",
-      "desc": "Новые виллы в Ла-Нусии с видами, просторными планировками и быстрым доступом к Бенидорму и пляжам Costa Blanca.",
-      "chip": "Виллы · Ла-Нусия",
-      "alt": "La Nucia Villas — новые виллы рядом с Бенидормом"
-    }
-  }
-}
 ]
