@@ -2,27 +2,32 @@ const fs = require('fs');
 const path = require('path');
 
 const SOURCE_URL = 'https://spain.metainmo.com/pl/alicante/promociones';
-const SITE = 'https://costa-blanca-invest.com';
 const LIMIT = parseInt(process.env.IMPORT_LIMIT || '50', 10);
 
 const projectsPath = path.join(__dirname, '..', 'projects.json');
 
-function slugify(text = '') {
-  return String(text)
+function clean(v = '') {
+  return String(v)
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function slugify(v = '') {
+  return clean(v)
     .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 90);
 }
 
-function clean(text = '') {
-  return String(text).replace(/\s+/g, ' ').replace(/\u00a0/g, ' ').trim();
-}
-
 function priceValue(price = '') {
-  const match = clean(price).replace(/\s/g, '').match(/\d+/);
-  return match ? Number(match[0]) : 0;
+  const n = clean(price).replace(/\s/g, '').match(/\d+/);
+  return n ? Number(n[0]) : 0;
 }
 
 function abs(url = '') {
@@ -32,113 +37,173 @@ function abs(url = '') {
   return `https://spain.metainmo.com/${url}`;
 }
 
-function cityPriority(text = '') {
-  const t = text.toLowerCase();
-  if (t.includes('alicante')) return 1;
-  if (t.includes('san juan')) return 2;
-  if (t.includes('mutxamel')) return 3;
-  if (t.includes('campello')) return 4;
-  if (t.includes('villajoyosa') || t.includes('vila joiosa')) return 5;
-  if (t.includes('finestrat')) return 20;
-  if (t.includes('benidorm')) return 21;
-  if (t.includes('calpe') || t.includes('kalpe')) return 22;
-  if (t.includes('torrevieja')) return 40;
-  return 99;
+async function fetchHtml(url) {
+  const res = await fetch(url, {
+    headers: {
+      'user-agent': 'Mozilla/5.0 Costa Blanca Invest Importer'
+    }
+  });
+
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
+  return await res.text();
 }
 
-function makeLead(title, meta, price, type = 'Apartamenty') {
+function getMeta(html, property) {
+  const re = new RegExp(`<meta[^>]+(?:property|name)=["']${property}["'][^>]+content=["']([^"']+)["']`, 'i');
+  const m = html.match(re);
+  return m ? clean(m[1]) : '';
+}
+
+function extractListLinks(html) {
+  const links = new Map();
+
+  const re = /<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+
+  while ((m = re.exec(html))) {
+    const href = abs(m[1]);
+    const text = clean(m[2]);
+
+    if (!href.includes('spain.metainmo.com')) continue;
+    if (!/promoc/i.test(href) && !/obra|inmueble|property|promocion/i.test(href)) continue;
+    if (!/nowa inwestycja|promocja|alicante|benidorm|finestrat|calpe|villajoyosa|mutxamel|campello/i.test(text + href)) continue;
+    if (/xxxxxxxx/i.test(text)) continue;
+
+    links.set(href, href);
+  }
+
+  return [...links.values()];
+}
+
+function extractImages(html) {
+  const urls = [];
+
+  const imgRe = /<img[^>]+(?:src|data-src|data-lazy-src)=["']([^"']+)["']/gi;
+  let m;
+
+  while ((m = imgRe.exec(html))) {
+    const url = abs(m[1]);
+
+    if (!url) continue;
+    if (/logo|avatar|favicon|placeholder|svg|base64/i.test(url)) continue;
+    if (!/\.(jpg|jpeg|png|webp)(\?|$)/i.test(url)) continue;
+
+    urls.push(url);
+  }
+
+  const sourceRe = /<source[^>]+srcset=["']([^"']+)["']/gi;
+  while ((m = sourceRe.exec(html))) {
+    const first = m[1].split(',')[0].trim().split(' ')[0];
+    const url = abs(first);
+
+    if (url && /\.(jpg|jpeg|png|webp)(\?|$)/i.test(url)) {
+      urls.push(url);
+    }
+  }
+
+  return [...new Set(urls)].slice(0, 12);
+}
+
+function extractPrice(html) {
+  const text = clean(html);
+  const m =
+    text.match(/(?:od\s*)?[\d\s]{3,}\s*€/i) ||
+    text.match(/[\d\s]{3,}\s*EUR/i);
+
+  return m ? clean(m[0]) : 'na zapytanie';
+}
+
+function extractTitle(html, fallback = '') {
+  return (
+    getMeta(html, 'og:title') ||
+    clean((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1]) ||
+    clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]) ||
+    fallback
+  )
+    .replace(/\s*\|\s*.*$/g, '')
+    .replace(/\s*-\s*MetaInmo.*$/i, '')
+    .trim();
+}
+
+function extractDescription(html, title) {
+  return (
+    getMeta(html, 'og:description') ||
+    getMeta(html, 'description') ||
+    `${title} — wybrana nowa inwestycja na Costa Blanca.`
+  );
+}
+
+function extractLocation(html) {
+  const text = clean(html);
+
+  const cities = [
+    'Alicante',
+    'San Juan',
+    'Mutxamel',
+    'El Campello',
+    'Villajoyosa',
+    'Vila Joiosa',
+    'Finestrat',
+    'Benidorm',
+    'Calpe',
+    'Guardamar',
+    'Torrevieja',
+    'Orihuela'
+  ];
+
+  const city = cities.find(c => text.toLowerCase().includes(c.toLowerCase()));
+  return city ? `Alicante, ${city}` : 'Costa Blanca';
+}
+
+function extractArea(html) {
+  const text = clean(html);
+  const m =
+    text.match(/(\d+[.,]?\d*)\s*m²/i) ||
+    text.match(/(\d+[.,]?\d*)\s*m2/i);
+
+  return m ? `${m[1]} m²` : 'na zapytanie';
+}
+
+function extractRooms(html) {
+  const text = clean(html);
+  const m =
+    text.match(/(\d+)\s*(?:sypialni|pokoj|pokoje|bedroom|habitaciones)/i);
+
+  return m ? `${m[1]} pokoje` : 'różne układy';
+}
+
+function makeLead(title, meta, price) {
   return {
     pl: [
-      `${title} to starannie wybrana nowa inwestycja w lokalizacji ${meta}, przygotowana dla klientów szukających jakości, wygody i dobrego potencjału wartości na Costa Blanca.`,
-      `Projekt łączy nowoczesny standard, praktyczne układy i śródziemnomorski styl życia. Cena ${price} sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.`,
-      `W tej lokalizacji ważne są nie tylko parametry nieruchomości, ale również dostęp do usług, plaż, infrastruktury oraz płynność przyszłej odsprzedaży.`,
-      `${type} w tym segmencie dobrze sprawdza się jako second home, baza wakacyjna lub zakup z myślą o wynajmie i długoterminowym wzroście wartości.`
+      `${title} to wybrana nowa inwestycja w lokalizacji ${meta}, przygotowana dla klientów szukających jakości, komfortu i dobrego potencjału wartości na Costa Blanca.`,
+      `Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena ${price} sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.`,
+      `W tej lokalizacji liczą się nie tylko parametry nieruchomości, ale też dostęp do usług, plaż, infrastruktury i przyszła płynność odsprzedaży.`,
+      `To propozycja dla osób, które chcą kupić nieruchomość w Hiszpanii do życia, wypoczynku lub jako aktywo inwestycyjne.`
     ],
     en: [
-      `${title} is a carefully selected new development in ${meta}, suitable for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.`,
-      `The project combines a modern standard, practical layouts and a Mediterranean lifestyle. With prices at ${price}, it may be attractive both for private buyers and investors.`,
+      `${title} is a selected new development in ${meta}, ideal for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.`,
+      `The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With price ${price}, it may be attractive both for private buyers and investors.`,
       `In this location, the key factors are not only property specifications, but also access to services, beaches, infrastructure and future resale liquidity.`,
-      `${type} in this segment can work well as a second home, holiday base or investment purchase focused on rental and long-term value growth.`
+      `A strong option for buyers considering Spain for living, holidays or investment.`
     ],
     es: [
       `${title} es una promoción seleccionada en ${meta}, pensada para compradores que buscan calidad, comodidad y potencial de valor en la Costa Blanca.`,
-      `El proyecto combina estándar moderno, distribuciones prácticas y estilo de vida mediterráneo. Con precio ${price}, puede ser interesante para uso privado o inversión.`,
-      `En esta ubicación importan no solo los parámetros de la vivienda, sino también el acceso a servicios, playas, infraestructura y liquidez futura.`,
-      `${type} en este segmento puede funcionar como segunda residencia, base vacacional o compra orientada al alquiler y a la revalorización.`
+      `El proyecto combina arquitectura moderna, distribuciones prácticas y estilo de vida mediterráneo. Con precio ${price}, puede ser interesante para uso privado o inversión.`,
+      `En esta ubicación importan no solo los parámetros de la vivienda, sino también servicios, playas, infraestructura y liquidez futura.`,
+      `Una opción atractiva para vivir, disfrutar de vacaciones o invertir en España.`
     ],
     ru: [
-      `${title} — тщательно выбранный новый проект в локации ${meta}, подходящий покупателям, которые ищут качество, комфорт и потенциал роста стоимости на Costa Blanca.`,
-      `Проект сочетает современный стандарт, практичные планировки и средиземноморский стиль жизни. Цена ${price} делает предложение интересным как для личного использования, так и для инвестиций.`,
+      `${title} — выбранный новый проект в локации ${meta}, подходящий покупателям, которые ищут качество, комфорт и потенциал роста стоимости на Costa Blanca.`,
+      `Проект сочетает современную архитектуру, практичные планировки и средиземноморский стиль жизни. Цена ${price} делает его интересным для личного использования и инвестиций.`,
       `В этой локации важны не только параметры объекта, но и доступ к сервисам, пляжам, инфраструктуре и ликвидность при будущей продаже.`,
-      `${type} в этом сегменте может подойти как второй дом, база для отдыха или инвестиционная покупка под аренду и рост стоимости.`
+      `Это вариант для жизни, отдыха или инвестиционной покупки в Испании.`
     ]
   };
 }
 
-async function fetchHtml(url) {
-  const res = await fetch(url, {
-    headers: { 'user-agent': 'Mozilla/5.0 Costa Blanca Invest Importer' }
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return await res.text();
-}
-
-function extractProjects(html) {
-  const linkRegex = /<a[^>]+href="([^"]+)"[^>]*>\s*Nowa inwestycja\s+([^<]+?)\s+promocja w\s+([^<]+?)<\/a>/gi;
-  const matches = [...html.matchAll(linkRegex)];
-
-  const projects = [];
-
-  for (let i = 0; i < matches.length; i++) {
-    const [full, hrefRaw, nameRaw, cityRaw] = matches[i];
-    if (/xxxxxxxx/i.test(full + nameRaw)) continue;
-
-    const start = matches[i].index;
-    const end = matches[i + 1]?.index || html.length;
-    const block = html.slice(start, end);
-
-    const title = clean(nameRaw);
-    const city = clean(cityRaw);
-    const url = abs(hrefRaw);
-
-    const text = clean(block.replace(/<[^>]+>/g, ' '));
-    const priceMatch = text.match(/(?:od\s*)?[\d\s]{3,}\s*€/i);
-    const price = priceMatch ? clean(priceMatch[0]) : 'na zapytanie';
-
-    const locationMatch = text.match(/Alicante,\s*([^*]+?)(?:Rok oddania|Stan|Pozwolenie|m2|Nieruchomość|$)/i);
-    const meta = locationMatch ? clean(`Alicante, ${locationMatch[1]}`) : `Alicante, ${city}`;
-
-    const areaMatch = text.match(/m2 zabudowane:\s*([\d.,]+\s*m²)/i) || text.match(/m2 zabudowane\s*([\d.,]+\s*m²)/i);
-    const area = areaMatch ? clean(areaMatch[1]) : 'na zapytanie';
-
-    const roomsMatch = text.match(/(\d+)-pokojowe/i);
-    const rooms = roomsMatch ? `${roomsMatch[1]} pokoje` : 'różne układy';
-
-    const imgMatches = [...block.matchAll(/<img[^>]+src="([^"]+)"/gi)].map(m => abs(m[1]));
-    const images = [...new Set(imgMatches)].filter(Boolean);
-    const image = images[0] || '';
-
-    projects.push({
-      title,
-      city,
-      url,
-      price,
-      meta,
-      area,
-      rooms,
-      image,
-      images,
-      priority: cityPriority(`${meta} ${title}`)
-    });
-  }
-
-  return projects.sort((a, b) => a.priority - b.priority);
-}
-
 function toProject(raw) {
-  const baseSlug = slugify(raw.title);
-  const slug = baseSlug || slugify(raw.url);
-  const lead = makeLead(raw.title, raw.meta, raw.price, 'Apartamenty');
+  const slug = slugify(raw.title);
+  const lead = makeLead(raw.title, raw.meta, raw.price);
 
   return {
     slug,
@@ -148,12 +213,12 @@ function toProject(raw) {
     shareDescription: `${raw.title} · ${raw.price}`,
     shareImage: raw.image,
     image: raw.image,
-    images: raw.images.length ? raw.images : [raw.image].filter(Boolean),
+    images: raw.images,
     href: `/pl/new-developments/xml-catalog/?slug=${slug}`,
     sourceUrl: raw.url,
     price: raw.price,
     priceValue: priceValue(raw.price),
-    filterLocation: slugify(raw.city || raw.meta).split('-')[0] || 'alicante',
+    filterLocation: slugify(raw.meta).split('-')[0] || 'alicante',
     meta: raw.meta,
     desc: `${raw.title} — wybrana nowa inwestycja na Costa Blanca z potencjałem do życia, wypoczynku i inwestycji.`,
     chip: 'Nowa inwestycja · Costa Blanca',
@@ -178,24 +243,61 @@ function toProject(raw) {
   };
 }
 
+async function parseDetail(url) {
+  const html = await fetchHtml(url);
+
+  const title = extractTitle(html);
+  const price = extractPrice(html);
+  const meta = extractLocation(html);
+  const images = extractImages(html);
+  const description = extractDescription(html, title);
+
+  if (!title || title.length < 3) return null;
+  if (!images.length) return null;
+
+  return {
+    url,
+    title,
+    price,
+    meta,
+    image: images[0],
+    images,
+    area: extractArea(html),
+    rooms: extractRooms(html),
+    description
+  };
+}
+
 async function main() {
-  console.log('Fetching Metainmo...');
-  const html = await fetchHtml(SOURCE_URL);
+  console.log('Fetching list...');
+  const listHtml = await fetchHtml(SOURCE_URL);
+  const links = extractListLinks(listHtml);
+
+  console.log('Project links found:', links.length);
 
   const current = JSON.parse(fs.readFileSync(projectsPath, 'utf8'));
   const existingSlugs = new Set(current.map(p => p.slug));
-
-  const rawProjects = extractProjects(html);
-  console.log('Found public projects:', rawProjects.length);
-
   const imported = [];
 
-  for (const raw of rawProjects) {
-    const project = toProject(raw);
-    if (!project.title || !project.price || existingSlugs.has(project.slug)) continue;
-    imported.push(project);
-    existingSlugs.add(project.slug);
+  for (const url of links) {
     if (imported.length >= LIMIT) break;
+
+    try {
+      console.log('Parsing:', url);
+      const raw = await parseDetail(url);
+      if (!raw) continue;
+
+      const project = toProject(raw);
+
+      if (existingSlugs.has(project.slug)) continue;
+
+      imported.push(project);
+      existingSlugs.add(project.slug);
+
+      await new Promise(r => setTimeout(r, 350));
+    } catch (e) {
+      console.log('Skip:', url, e.message);
+    }
   }
 
   const updated = [...current, ...imported];
