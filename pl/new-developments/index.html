@@ -964,7 +964,25 @@
         if (cachedProjects) return cachedProjects;
 
         const normalizeProjects = (items) => Array.isArray(items)
-          ? items.filter(item => item && item.href && item.title)
+          ? items
+              .filter(item => item && (item.title || item.shareTitle) && (item.slug || item.href))
+              .map(item => {
+                const slug = item.slug || String(item.href || '').split('/').filter(Boolean).pop() || '';
+                const href = (!item.href || item.href === '#')
+                  ? `/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(slug)}`
+                  : item.href;
+
+                return {
+                  ...item,
+                  slug,
+                  href,
+                  title: item.title || item.shareTitle || slug,
+                  image: item.shareImage || item.image || (Array.isArray(item.images) ? item.images[0] : '') || fallbackImage,
+                  price: item.sharePrice || item.price || '',
+                  desc: item.desc || item.seoDescription || item.shareDescription || '',
+                  chip: item.chip || 'Nowa inwestycja'
+                };
+              })
           : [];
 
         if (Array.isArray(externalProjects) && externalProjects.length) {
@@ -986,15 +1004,18 @@
       };
 
       const getActiveProjectText = (project) => {
-        const slug = (project.href || '').split('/').filter(Boolean).pop();
-        const tr = PROJECT_TRANSLATIONS[slug]?.[state.currentLang] || null;
+        const slug = project.slug || (project.href || '').split('/').filter(Boolean).pop();
+        const jsonTranslation = project.translations?.[state.currentLang] || null;
+        const staticTranslation = PROJECT_TRANSLATIONS[slug]?.[state.currentLang] || null;
+        const tr = jsonTranslation || staticTranslation;
+
         return {
           chip: tr?.chip || project.chip || '',
-          title: tr?.title || project.title || '',
+          title: tr?.title || project.title || project.shareTitle || '',
           meta: tr?.meta || project.meta || '',
-          price: tr?.price || project.price || '',
-          desc: tr?.desc || project.desc || '',
-          alt: tr?.alt || project.alt || project.title || ''
+          price: tr?.price || project.price || project.sharePrice || '',
+          desc: tr?.desc || project.desc || project.seoDescription || project.shareDescription || '',
+          alt: tr?.alt || project.alt || project.title || project.shareTitle || ''
         };
       };
 
@@ -1330,20 +1351,26 @@
 
       applyLanguage(getInitialLang(), false);
 
-      const loadExternalProjects = () => fetch('/pl/new-developments/projects.json', { cache: 'force-cache' })
-        .then(response => {
-          if (!response.ok) throw new Error(`projects.json HTTP ${response.status}`);
-          return response.json();
-        })
-        .then(projects => {
-          if (!Array.isArray(projects) || !projects.length) throw new Error('projects.json is empty or invalid');
-          externalProjects = projects;
-          cachedProjects = null;
-          renderProjects();
-        })
-        .catch(error => {
-          console.warn('Nie udało się wczytać /pl/new-developments/projects.json — używam starego #projects-data.', error);
-        });
+      const loadExternalProjects = () => {
+        const url = `/pl/new-developments/projects.json?v=${Date.now()}`;
+
+        return fetch(url, { cache: 'no-store' })
+          .then(response => {
+            if (!response.ok) throw new Error(`projects.json HTTP ${response.status}`);
+            return response.json();
+          })
+          .then(projects => {
+            if (!Array.isArray(projects) || !projects.length) throw new Error('projects.json is empty or invalid');
+            externalProjects = projects;
+            cachedProjects = null;
+            if (el.projectsGrid) el.projectsGrid.dataset.seoPreloaded = 'false';
+            renderProjects();
+            console.log(`Costa Blanca Invest: loaded ${projects.length} projects from projects.json`);
+          })
+          .catch(error => {
+            console.warn('Nie udało się wczytać /pl/new-developments/projects.json — używam starego #projects-data.', error);
+          });
+      };
 
       // Load the live catalog immediately, but asynchronously.
       // The SEO-preloaded cards remain visible while projects.json is loading.
