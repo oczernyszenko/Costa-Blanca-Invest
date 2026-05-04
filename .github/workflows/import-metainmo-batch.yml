@@ -3,10 +3,10 @@ name: Import Metainmo Batch
 on:
   workflow_dispatch:
     inputs:
-      max_pages:
-        description: 'How many pages to scan'
+      limit:
+        description: 'How many projects to import'
         required: true
-        default: '80'
+        default: '50'
 
 permissions:
   contents: write
@@ -16,34 +16,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Клонируем репозиторий
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # 2. Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3. Установка зависимостей (если есть)
+      - name: Install dependencies
+        run: npm install || true
+
+      # 4. Запуск PRO-скрипта
       - name: Run importer
         env:
-          MAX_PAGES: ${{ github.event.inputs.max_pages }}
-          UPDATE_EXISTING: "1"
-          MAX_IMAGES: "60"
-          BACKUP: "0"
-        run: node pl/new-developments/scripts/scrape-metainmo-to-projects.js
-
-      - name: Check generated files
+          IMPORT_LIMIT: ${{ github.event.inputs.limit }}
         run: |
-          echo "=== new-developments folder ==="
-          ls -la pl/new-developments
-          echo "=== projects.json preview ==="
-          test -f pl/new-developments/projects.json && head -c 500 pl/new-developments/projects.json || echo "projects.json NOT FOUND"
+          echo "🚀 START IMPORT"
+          node pl/new-developments/scripts/scrape-metainmo-to-projects.js
+          echo "✅ IMPORT DONE"
 
+      # 5. Проверка файла
+      - name: Check projects.json
+        run: |
+          echo "📂 FILE CONTENT:"
+          ls -la pl/new-developments/
+          echo "------"
+          cat pl/new-developments/projects.json || echo "❌ projects.json NOT FOUND"
+
+      # 6. Коммит (с форсом)
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+
           git add pl/new-developments/projects.json
-          git status
-          git commit -m "Import Metainmo projects" || echo "No changes"
+
+          git diff --cached --quiet && echo "⚠️ No changes to commit" || git commit -m "🔥 AUTO IMPORT: update projects"
+
           git push
