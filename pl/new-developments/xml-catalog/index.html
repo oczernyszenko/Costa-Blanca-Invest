@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Oferta nieruchomości | Costa Blanca Invest</title>
   <meta name="description" content="Szczegóły oferty nieruchomości Costa Blanca Invest.">
-  <link rel="canonical" id="canonicalLink" href="https://costa-blanca-invest.com/pl/new-developments/xml-catalog/">
-  <link rel="image_src" id="imageSrcLink" href="https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg">
+  <link rel="canonical" id="canonicalLink" href="">
+  <link rel="image_src" id="imageSrcLink" href="">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#0f6f85">
@@ -18,10 +18,10 @@
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Oferta nieruchomości | Costa Blanca Invest">
   <meta property="og:description" content="Szczegóły oferty nieruchomości Costa Blanca Invest.">
-  <meta property="og:url" content="https://costa-blanca-invest.com/pl/new-developments/xml-catalog/">
-  <meta property="og:image" content="https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg">
-  <meta property="og:image:url" content="https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg">
-  <meta property="og:image:secure_url" content="https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:url" content="">
+  <meta property="og:image:secure_url" content="">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Costa Blanca Invest — oferta nieruchomości">
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Oferta nieruchomości | Costa Blanca Invest">
   <meta name="twitter:description" content="Szczegóły oferty nieruchomości Costa Blanca Invest.">
-  <meta name="twitter:image" content="https://costa-blanca-invest.com/pl/new-developments/images/new-developments-costa-blanca.jpg">
+  <meta name="twitter:image" content="">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -310,10 +310,18 @@
     function splitPrice(price){const text=String(price||'');const parts=text.split(/[–—-]/).map(s=>s.trim()).filter(Boolean);if(parts.length>=2)return [parts[0],parts.slice(1).join(' – ')];if(text.includes('·'))return [text.split('·')[0].trim(),text.split('·').slice(1).join(' · ').trim()];return [text,''];}
     function moneyNumber(price){const found=String(price||'').replace(/\s/g,'').match(/\d+/g);return found?found[0]:'';}
     function setAttr(selector,attr,value){const node=document.querySelector(selector);if(node && value)node.setAttribute(attr,value);}
-    function getShareUrl(data, options={}){
+    function getPropertyUrl(data, options={}){
       const langPart = currentLang === 'pl' ? '' : `&lang=${encodeURIComponent(currentLang)}`;
       const versionPart = options.cacheBust ? `&v=${Date.now()}` : '';
       return `${SITE_ORIGIN}/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(data.slug)}${langPart}${versionPart}`;
+    }
+
+    function getShareUrl(data, options={}){
+      // Clean static URL for Facebook / WhatsApp previews.
+      // Create this file separately: /pl/new-developments/share/<slug>.html
+      const langPath = currentLang === 'pl' ? '/pl' : `/${currentLang}`;
+      const versionPart = options.cacheBust ? `?v=${Date.now()}` : '';
+      return `${SITE_ORIGIN}${langPath}/new-developments/share/${encodeURIComponent(data.slug)}.html${versionPart}`;
     }
     async function copyText(value){
       try{
@@ -545,7 +553,10 @@
     }
 
     function applyMeta(data){
-  const canonical=getShareUrl(data);
+  const canonical=getPropertyUrl(data);
+
+  // FIX: canonical must match language path (CRITICAL for Facebook)
+  setAttr('#canonicalLink','href',canonical);
 
   // CLEAN SHARE (photo + title + price ONLY)
   document.documentElement.lang=currentLang;
@@ -603,7 +614,8 @@
       const audienceHtml=data.audience.map(item=>`<div class="audience-card"><strong>${esc(item.title)}</strong><p>${esc(item.text)}</p></div>`).join('');
       const relatedHtml=getRelatedCards(data.slug);
       const shareUrl=getShareUrl(data);
-      const waText=encodeURIComponent([data.title,data.price,shareUrl].filter(Boolean).join(String.fromCharCode(10)));
+      const propertyUrl=getPropertyUrl(data);
+      const waText=encodeURIComponent([data.title,data.price,propertyUrl].filter(Boolean).join(String.fromCharCode(10)));
       templateApp.className='';
       templateApp.innerHTML=`
         <section class="hero-card">
@@ -697,7 +709,7 @@
     }
 
     function renderSchema(data){
-      const schema={'@context':'https://schema.org','@graph':[{'@type':'Organization',name:'Costa Blanca Invest',url:SITE_ORIGIN,email:'olga@a1invest4u.com',telephone:'+34604158859'},{'@type':'WebPage',name:data.title,url:`${SITE_ORIGIN}/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(data.slug)}`,description:data.desc,inLanguage:currentLang,primaryImageOfPage:{'@type':'ImageObject',url:data.image}},{'@type':'Product',name:data.title,description:data.desc,image:data.images,brand:{'@type':'Brand',name:'Costa Blanca Invest'},offers:{'@type':'Offer',priceCurrency:'EUR',price:moneyNumber(data.price)||undefined,availability:'https://schema.org/InStock',url:getShareUrl(data)}}]};
+      const schema={'@context':'https://schema.org','@graph':[{'@type':'Organization',name:'Costa Blanca Invest',url:SITE_ORIGIN,email:'olga@a1invest4u.com',telephone:'+34604158859'},{'@type':'WebPage',name:data.title,url:getPropertyUrl(data),description:data.desc,inLanguage:currentLang,primaryImageOfPage:{'@type':'ImageObject',url:data.image}},{'@type':'Product',name:data.title,description:data.desc,image:data.images,brand:{'@type':'Brand',name:'Costa Blanca Invest'},offers:{'@type':'Offer',priceCurrency:'EUR',price:moneyNumber(data.price)||undefined,availability:'https://schema.org/InStock',url:getShareUrl(data)}}]};
       document.getElementById('schemaJson').textContent=JSON.stringify(schema,null,2);
     }
 
