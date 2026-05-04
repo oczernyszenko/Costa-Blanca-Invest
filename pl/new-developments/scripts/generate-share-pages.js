@@ -1,42 +1,52 @@
 const fs = require('fs');
 const path = require('path');
 
-const projects = require('../pl/new-developments/projects.json');
+// путь к projects.json
+const projectsPath = path.join(__dirname, '..', 'projects.json');
 
-const outputDir = path.join(__dirname, '../pl/new-developments/share');
+// куда сохраняем share страницы
+const outputDir = path.join(__dirname, '..', 'share');
 
+// читаем данные
+const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf-8'));
+
+// создаём папку /share если нет
 if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
+  fs.mkdirSync(outputDir);
 }
 
-projects.forEach(project => {
-  if (!project.slug) return;
-
-  const html = `<!DOCTYPE html>
+// шаблон страницы (ВАЖНО — это редирект на твой template)
+function createPage(slug) {
+  return `<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>${project.title}</title>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
 
-<meta property="og:title" content="${project.title}">
-<meta property="og:description" content="${project.price || ''}">
-<meta property="og:image" content="${project.image || ''}">
-<meta property="og:url" content="https://costa-blanca-invest.com/pl/new-developments/share/${project.slug}.html">
+  <!-- 🔥 ВАЖНО ДЛЯ FACEBOOK -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://costa-blanca-invest.com/pl/new-developments/share/${slug}.html">
 
-<meta name="twitter:card" content="summary_large_image">
+  <!-- минимально (остальное подтянет template) -->
+  <meta property="og:title" content="Costa Blanca Invest">
+  <meta property="og:description" content="Property offer">
+  
+  <!-- редирект -->
+  <meta http-equiv="refresh" content="0; url=/pl/new-developments/xml-catalog/?slug=${slug}">
 </head>
 
 <body>
-<script>
-window.location.href = "/pl/new-developments/xml-catalog/?slug=${project.slug}";
-</script>
+  Redirecting...
 </body>
 </html>`;
+}
 
-  fs.writeFileSync(
-    path.join(outputDir, `${project.slug}.html`),
-    html
-  );
+// создаём страницы
+projects.forEach(project => {
+  if (!project.slug) return;
+
+  const filePath = path.join(outputDir, `${project.slug}.html`);
+  fs.writeFileSync(filePath, createPage(project.slug));
 });
 
-console.log('Share pages generated');
+console.log('✅ Share pages generated!');
