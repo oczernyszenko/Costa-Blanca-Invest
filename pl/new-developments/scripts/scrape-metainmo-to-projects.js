@@ -1,8 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 
-const SOURCE_URL = "https://spain.metainmo.com/pl/alicante/promociones";
+const BASE_URL = "https://spain.metainmo.com/pl/alicante/promociones";
 const projectsPath = path.join(__dirname, "..", "projects.json");
+
+const MAX_PAGES = 80;
+const DELAY_MS = 350;
 
 function clean(value = "") {
   return String(value)
@@ -168,14 +171,15 @@ function extractProjectsFromList(html) {
 
     const cityKey = detectCity(`${title} ${locationText} ${block}`);
     const locationLabel = prettyLocation(cityKey);
-
     const text = clean(block);
 
     const priceMatch =
       text.match(/(?:od\s*)?[\d\s]{3,}\s*€/i) ||
       text.match(/[\d\s]{3,}\s*EUR/i);
 
-    const price = priceMatch ? clean(priceMatch[0]).replace(/\s+€/g, " €") : "Cena na zapytanie";
+    const price = priceMatch
+      ? clean(priceMatch[0]).replace(/\s+€/g, " €")
+      : "Cena na zapytanie";
 
     const areaMatch =
       text.match(/m2 zabudowane:\s*([\d.,]+\s*m²)/i) ||
@@ -297,22 +301,64 @@ async function fetchHtml(url) {
   return await res.text();
 }
 
-async function main() {
-  console.log("Fetching Metainmo list...");
-  const html = await fetchHtml(SOURCE_URL);
+function getPageUrl(page) {
+  if (page === 1) return BASE_URL;
+  return `${BASE_URL}?page=${page}`;
+}
 
+function dedupeRawProjects(rawProjects) {
+  const map = new Map();
+
+  for (const raw of rawProjects) {
+    if (!raw.slug) continue;
+    if (!map.has(raw.slug)) map.set(raw.slug, raw);
+  }
+
+  return [...map.values()];
+}
+
+async function main() {
   const current = fs.existsSync(projectsPath)
     ? JSON.parse(fs.readFileSync(projectsPath, "utf8"))
     : [];
 
   const existingSlugs = new Set(current.map(p => p.slug));
-  const rawProjects = extractProjectsFromList(html);
+  const allRaw = [];
+  const seenPageSignatures = new Set();
 
-  console.log("Found public projects:", rawProjects.length);
+  for (let page = 1; page <= MAX_PAGES; page++) {
+    const url = getPageUrl(page);
+    console.log(`Fetching Metainmo page ${page}: ${url}`);
+
+    const html = await fetchHtml(url);
+    const rawPageProjects = extractProjectsFromList(html);
+    const pageProjects = dedupeRawProjects(rawPageProjects);
+
+    console.log(`Page ${page} projects found:`, pageProjects.length);
+
+    if (!pageProjects.length) {
+      console.log("No projects on this page. Stop.");
+      break;
+    }
+
+    const signature = pageProjects.map(p => p.slug).join("|");
+    if (seenPageSignatures.has(signature)) {
+      console.log("Repeated page detected. Stop.");
+      break;
+    }
+
+    seenPageSignatures.add(signature);
+    allRaw.push(...pageProjects);
+
+    await new Promise(resolve => setTimeout(resolve, DELAY_MS));
+  }
+
+  const uniqueRaw = dedupeRawProjects(allRaw);
+  console.log("Found public projects total:", uniqueRaw.length);
 
   const imported = [];
 
-  for (const raw of rawProjects) {
+  for (const raw of uniqueRaw) {
     if (existingSlugs.has(raw.slug)) continue;
 
     const project = toProject(raw);
@@ -331,4 +377,4 @@ async function main() {
 main().catch(error => {
   console.error(error);
   process.exit(1);
-}); 
+});
