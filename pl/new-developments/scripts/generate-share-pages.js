@@ -1,195 +1,131 @@
 const fs = require('fs');
 const path = require('path');
+const sharp = require('sharp');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const SITE = 'https://costa-blanca-invest.com';
 
 const projectsPath = path.join(__dirname, '..', 'projects.json');
-const outputDir = path.join(__dirname, '..', 'share');
+const shareDir = path.join(__dirname, '..', 'share');
+const imagesDir = path.join(__dirname, '..', 'share-images');
 
 const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf8'));
 
-fs.mkdirSync(outputDir, { recursive: true });
+fs.mkdirSync(shareDir, { recursive: true });
+fs.mkdirSync(imagesDir, { recursive: true });
 
-function esc(value = '') {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+function esc(s = '') {
+  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 }
 
 function abs(url) {
-  if (!url) return `${SITE}/pl/new-developments/images/new-developments-costa-blanca.jpg`;
-  if (/^https?:\/\//i.test(url)) return url;
-  if (url.startsWith('/')) return `${SITE}${url}`;
-  return `${SITE}/${url.replace(/^\.?\//, '')}`;
+  if (!url) return '';
+  if (url.startsWith('http')) return url;
+  return SITE + url;
 }
 
-function firstImage(project) {
-  return abs(
-    project.shareImage ||
-    project.ogImage ||
-    project.mainImage ||
-    project.image ||
-    (Array.isArray(project.images) ? project.images[0] : '')
-  );
+async function downloadImage(url) {
+  const res = await fetch(url);
+  return Buffer.from(await res.arrayBuffer());
 }
 
-function cleanPrice(project) {
-  return String(project.sharePrice || project.price || '')
-    .split('·')[0]
-    .trim();
+async function createOgImage(project) {
+  const imageUrl = abs(project.image || project.images?.[0]);
+  const buffer = await downloadImage(imageUrl);
+
+  const width = 1200;
+  const height = 630;
+
+  const title = project.title || '';
+  const price = project.price || '';
+
+  const svg = `
+  <svg width="${width}" height="${height}">
+    <defs>
+      <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(0,0,0,0.2)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.8)"/>
+      </linearGradient>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#grad)"/>
+
+    <text x="60" y="460" font-size="48" fill="white" font-weight="bold">
+      ${esc(title)}
+    </text>
+
+    <text x="60" y="540" font-size="44" fill="#D9B56D" font-weight="bold">
+      ${esc(price)}
+    </text>
+
+    <text x="60" y="80" font-size="28" fill="#ffffff" opacity="0.8">
+      Costa Blanca Invest
+    </text>
+  </svg>
+  `;
+
+  const outputPath = path.join(imagesDir, `${project.slug}.jpg`);
+
+  await sharp(buffer)
+    .resize(width, height)
+    .composite([{ input: Buffer.from(svg), top: 0, left: 0 }])
+    .jpeg({ quality: 90 })
+    .toFile(outputPath);
+
+  return `${SITE}/pl/new-developments/share-images/${project.slug}.jpg`;
 }
 
-function titleWithPrice(project) {
-  const title = project.shareTitle || project.title || project.slug;
-  const price = cleanPrice(project);
+async function generate() {
+  for (const project of projects) {
+    const slug = project.slug;
 
-  if (!price) return title;
-  if (/^(od|from|desde|от)\s/i.test(price)) return `${title} · ${price}`;
+    const ogImage = await createOgImage(project);
 
-  return `${title} · od ${price}`;
-}
+    const shareUrl = `${SITE}/pl/new-developments/share/${slug}.html`;
+    const targetUrl = SITE + project.href;
 
-function targetUrl(project) {
-  if (project.href) {
-    if (/^https?:\/\//i.test(project.href)) return project.href;
-    return `${SITE}${project.href}`;
-  }
+    const title = project.title;
+    const description = project.seoDescription || project.desc || '';
 
-  return `${SITE}/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(project.slug)}`;
-}
-
-for (const project of projects) {
-  if (!project.slug) continue;
-
-  const title = project.shareTitle || project.title || project.slug;
-  const pageTitle = titleWithPrice(project);
-  const image = firstImage(project);
-  const shareUrl = `${SITE}/pl/new-developments/share/${encodeURIComponent(project.slug)}.html`;
-  const finalTargetUrl = targetUrl(project);
-
-  const description =
-    project.shareDescription ||
-    project.seoDescription ||
-    project.desc ||
-    `${pageTitle} | Costa Blanca Invest`;
-
-  const price = cleanPrice(project);
-
-  const html = `<!DOCTYPE html>
+    const html = `
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>${esc(pageTitle)}</title>
-  <meta name="description" content="${esc(description)}">
-  <link rel="canonical" href="${esc(shareUrl)}">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pl_PL">
-  <meta property="og:site_name" content="Costa Blanca Invest">
-  <meta property="og:title" content="${esc(pageTitle)}">
-  <meta property="og:description" content="${esc(description)}">
-  <meta property="og:url" content="${esc(shareUrl)}">
-  <meta property="og:image" content="${esc(image)}">
-  <meta property="og:image:url" content="${esc(image)}">
-  <meta property="og:image:secure_url" content="${esc(image)}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="${esc(pageTitle)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${shareUrl}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:image" content="${ogImage}">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${esc(pageTitle)}">
-  <meta name="twitter:description" content="${esc(description)}">
-  <meta name="twitter:image" content="${esc(image)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${ogImage}">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: #f6f3ee;
-      color: #183746;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 24px;
-    }
-    .card {
-      width: min(720px, 100%);
-      background: #fff;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 22px 60px rgba(15,23,42,.12);
-      border: 1px solid rgba(217,181,109,.22);
-    }
-    .card img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      display: block;
-      background: #e8eef2;
-    }
-    .body {
-      padding: 28px;
-    }
-    .kicker {
-      color: #b89245;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      line-height: 1.05;
-      letter-spacing: -.04em;
-    }
-    .price {
-      margin: 0 0 18px;
-      color: #b89245;
-      font-size: 24px;
-      font-weight: 900;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      border-radius: 999px;
-      background: linear-gradient(135deg,#183746,#234e63);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 900;
-    }
-  </style>
+<link rel="canonical" href="${shareUrl}">
 </head>
+
 <body>
-  <article class="card">
-    <img src="${esc(image)}" alt="${esc(title)}">
-    <div class="body">
-      <div class="kicker">Costa Blanca Invest</div>
-      <h1>${esc(title)}</h1>
-      ${price ? `<div class="price">${esc(price)}</div>` : ''}
-      <a class="btn" href="${esc(finalTargetUrl)}">Zobacz ofertę</a>
-    </div>
-  </article>
 
-  <script>
-    setTimeout(function () {
-      window.location.href = "${esc(finalTargetUrl)}";
-    }, 900);
-  </script>
+<script>
+setTimeout(() => {
+  window.location.href = "${targetUrl}";
+}, 500);
+</script>
+
 </body>
-</html>`;
+</html>
+`;
 
-  fs.writeFileSync(path.join(outputDir, `${project.slug}.html`), html, 'utf8');
+    fs.writeFileSync(path.join(shareDir, `${slug}.html`), html);
+    console.log(`✅ ${slug}`);
+  }
 }
 
-console.log(`Generated ${projects.length} share pages.`);
+generate();
