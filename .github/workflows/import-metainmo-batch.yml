@@ -3,10 +3,10 @@ name: Import Metainmo Batch
 on:
   workflow_dispatch:
     inputs:
-      limit:
-        description: 'How many projects to import'
+      max_pages:
+        description: 'How many pages to scan'
         required: true
-        default: '50'
+        default: '80'
 
 permissions:
   contents: write
@@ -26,7 +26,10 @@ jobs:
 
       - name: Run importer
         env:
-          IMPORT_LIMIT: ${{ github.event.inputs.limit }}
+          MAX_PAGES: ${{ github.event.inputs.max_pages }}
+          UPDATE_EXISTING: "1"
+          MAX_IMAGES: "60"
+          BACKUP: "0"
         run: node pl/new-developments/scripts/scrape-metainmo-to-projects.js
 
       - name: Commit changes
@@ -34,5 +37,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add pl/new-developments/projects.json
-          git commit -m "Import projects batch" || echo "No changes"
+          git commit -m "Import Metainmo projects" || echo "No changes"
           git push
