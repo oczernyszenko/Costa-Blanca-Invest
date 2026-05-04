@@ -1,746 +1,130 @@
 [
-    {
-        "slug": "bonalba-golf-hills",
-        "sortOrder": 1,
-        "title": "Bonalba Golf Hills",
-        "image": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
-        "images": [
-            "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=bonalba-golf-hills",
-        "price": "280 800 \u20ac \u2013 405 600 \u20ac",
-        "priceValue": 280800,
-        "currency": "EUR",
-        "filterLocation": "alicante",
-        "meta": "Mutxamel \u00b7 Alicante \u00b7 Costa Blanca",
-        "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba \u2014 spokojna lokalizacja, nowoczesna architektura i potencja\u0142 wynajmu ca\u0142orocznego.",
-        "chip": "Premium \u00b7 Golf",
-        "seoTitle": "Bonalba Golf Hills | Nowa inwestycja przy golfie w Mutxamel, Alicante",
-        "seoDescription": "Bonalba Golf Hills w Mutxamel ko\u0142o Alicante: nowoczesne nieruchomo\u015bci przy polu golfowym, idealne do \u017cycia, wakacji i inwestycji na Costa Blanca.",
-        "keywords": [
-            "Bonalba Golf Hills",
-            "Mutxamel",
-            "Alicante",
-            "golf",
-            "Costa Blanca",
-            "nowe inwestycje"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Bonalba Golf Hills",
-                "meta": "Mutxamel \u00b7 Alicante \u00b7 Costa Blanca",
-                "price": "280 800 \u20ac \u2013 405 600 \u20ac",
-                "desc": "Elegancka inwestycja premium przy polu golfowym Bonalba \u2014 spokojna lokalizacja, nowoczesna architektura i potencja\u0142 wynajmu ca\u0142orocznego.",
-                "chip": "Premium \u00b7 Golf",
-                "alt": "Bonalba Golf Hills \u2014 nowa inwestycja przy polu golfowym w Mutxamel"
-            },
-            "es": {
-                "title": "Bonalba Golf Hills",
-                "meta": "Mutxamel \u00b7 Alicante \u00b7 Costa Blanca",
-                "price": "280 800 \u20ac \u2013 405 600 \u20ac",
-                "desc": "Promoci\u00f3n premium junto al campo de golf Bonalba: tranquilidad, arquitectura moderna y potencial de alquiler durante todo el a\u00f1o.",
-                "chip": "Premium \u00b7 Golf",
-                "alt": "Bonalba Golf Hills \u2014 obra nueva junto al golf en Mutxamel"
-            },
-            "en": {
-                "title": "Bonalba Golf Hills",
-                "meta": "Mutxamel \u00b7 Alicante \u00b7 Costa Blanca",
-                "price": "\u20ac280,800 \u2013 \u20ac405,600",
-                "desc": "Premium development next to Bonalba Golf: quiet setting, modern architecture and strong year-round rental potential.",
-                "chip": "Premium \u00b7 Golf",
-                "alt": "Bonalba Golf Hills \u2014 new golf development in Mutxamel"
-            },
-            "ru": {
-                "title": "Bonalba Golf Hills",
-                "meta": "\u041c\u0443\u0447\u0430\u043c\u0435\u043b\u044c \u00b7 \u0410\u043b\u0438\u043a\u0430\u043d\u0442\u0435 \u00b7 Costa Blanca",
-                "price": "280 800 \u20ac \u2013 405 600 \u20ac",
-                "desc": "\u041f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0440\u044f\u0434\u043e\u043c \u0441 \u0433\u043e\u043b\u044c\u0444-\u043f\u043e\u043b\u0435\u043c Bonalba: \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u0430\u044f \u043b\u043e\u043a\u0430\u0446\u0438\u044f, \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0430\u044f \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0438 \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b \u043a\u0440\u0443\u0433\u043b\u043e\u0433\u043e\u0434\u0438\u0447\u043d\u043e\u0439 \u0430\u0440\u0435\u043d\u0434\u044b.",
-                "chip": "\u041f\u0440\u0435\u043c\u0438\u0443\u043c \u00b7 \u0413\u043e\u043b\u044c\u0444",
-                "alt": "Bonalba Golf Hills \u2014 \u043d\u043e\u0432\u0430\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f \u0443 \u0433\u043e\u043b\u044c\u0444-\u043f\u043e\u043b\u044f \u0432 \u041c\u0443\u0447\u0430\u043c\u0435\u043b\u0435"
-            }
-        }
-    },
-    {
-        "slug": "penthouse-torrevieja",
-        "sortOrder": 2,
-        "title": "Penthouse Torrevieja",
-        "image": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
-        "images": [
-            "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/2.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/3.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/4.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=penthouse-torrevieja",
-        "price": "305 000 \u20ac",
-        "priceValue": 305000,
-        "currency": "EUR",
-        "filterLocation": "torrevieja",
-        "meta": "Torrevieja \u00b7 Costa Blanca South",
-        "desc": "Ostatni penthouse z prywatnym solarium \u2014 du\u017co \u015bwiat\u0142a, przestrze\u0144 na tarasie i lokalizacja blisko pla\u017cy oraz us\u0142ug.",
-        "chip": "Penthouse \u00b7 Solarium",
-        "seoTitle": "Penthouse Torrevieja | Nowy apartament z solarium na Costa Blanca",
-        "seoDescription": "Penthouse w Torrevieja z prywatnym solarium: nowoczesny apartament blisko pla\u017cy, idealny do \u017cycia, wakacji i wynajmu w Hiszpanii.",
-        "keywords": [
-            "penthouse Torrevieja",
-            "solarium",
-            "Costa Blanca",
-            "apartament w Hiszpanii",
-            "nowe inwestycje"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Penthouse Torrevieja",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "305 000 \u20ac",
-                "desc": "Ostatni penthouse z prywatnym solarium \u2014 du\u017co \u015bwiat\u0142a, przestrze\u0144 na tarasie i lokalizacja blisko pla\u017cy oraz us\u0142ug.",
-                "chip": "Penthouse \u00b7 Solarium",
-                "alt": "Penthouse w Torrevieja z prywatnym solarium"
-            },
-            "es": {
-                "title": "\u00c1tico Torrevieja",
-                "meta": "Torrevieja \u00b7 Costa Blanca Sur",
-                "price": "305 000 \u20ac",
-                "desc": "\u00daltimo \u00e1tico con sol\u00e1rium privado: mucha luz, terraza amplia y ubicaci\u00f3n cerca de la playa y servicios.",
-                "chip": "\u00c1tico \u00b7 Sol\u00e1rium",
-                "alt": "\u00c1tico en Torrevieja con sol\u00e1rium privado"
-            },
-            "en": {
-                "title": "Penthouse Torrevieja",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "\u20ac305,000",
-                "desc": "Last penthouse with private solarium: bright interiors, generous terrace space and a location close to the beach and services.",
-                "chip": "Penthouse \u00b7 Solarium",
-                "alt": "Penthouse in Torrevieja with private solarium"
-            },
-            "ru": {
-                "title": "\u041f\u0435\u043d\u0442\u0445\u0430\u0443\u0441 \u0432 \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0435",
-                "meta": "\u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u00b7 \u044e\u0433 Costa Blanca",
-                "price": "305 000 \u20ac",
-                "desc": "\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0439 \u043f\u0435\u043d\u0442\u0445\u0430\u0443\u0441 \u0441 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u043c \u0441\u043e\u043b\u044f\u0440\u0438\u0435\u043c: \u043c\u043d\u043e\u0433\u043e \u0441\u0432\u0435\u0442\u0430, \u043f\u0440\u043e\u0441\u0442\u043e\u0440\u043d\u0430\u044f \u0442\u0435\u0440\u0440\u0430\u0441\u0430 \u0438 \u043b\u043e\u043a\u0430\u0446\u0438\u044f \u0440\u044f\u0434\u043e\u043c \u0441 \u043f\u043b\u044f\u0436\u0435\u043c \u0438 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u043e\u0439.",
-                "chip": "\u041f\u0435\u043d\u0442\u0445\u0430\u0443\u0441 \u00b7 \u0421\u043e\u043b\u044f\u0440\u0438\u0439",
-                "alt": "\u041f\u0435\u043d\u0442\u0445\u0430\u0443\u0441 \u0432 \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0435 \u0441 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u043c \u0441\u043e\u043b\u044f\u0440\u0438\u0435\u043c"
-            }
-        }
-    },
-    {
-        "slug": "maranon",
-        "sortOrder": 3,
-        "title": "Mara\u00f1\u00f3n",
-        "image": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
-        "images": [
-            "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/maranon/2.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/maranon/3.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/maranon/4.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=maranon",
-        "price": "133 000 \u20ac \u2013 310 000 \u20ac",
-        "priceValue": 133000,
-        "currency": "EUR",
-        "filterLocation": "torrevieja",
-        "meta": "Torrevieja \u00b7 ok. 180 m do morza",
-        "desc": "Nowoczesna inwestycja bardzo blisko morza \u2014 dobry wyb\u00f3r pod wakacje, wynajem i zakup z niskim progiem wej\u015bcia.",
-        "chip": "180 m do morza",
-        "seoTitle": "Mara\u00f1\u00f3n Torrevieja | Apartamenty blisko morza na Costa Blanca",
-        "seoDescription": "Mara\u00f1\u00f3n w Torrevieja: nowe apartamenty oko\u0142o 180 m od morza, atrakcyjna cena wej\u015bcia i potencja\u0142 wynajmu wakacyjnego.",
-        "keywords": [
-            "Mara\u00f1\u00f3n",
-            "Torrevieja",
-            "apartamenty blisko morza",
-            "Costa Blanca",
-            "nowe apartamenty"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Mara\u00f1\u00f3n",
-                "meta": "Torrevieja \u00b7 ok. 180 m do morza",
-                "price": "133 000 \u20ac \u2013 310 000 \u20ac",
-                "desc": "Nowoczesna inwestycja bardzo blisko morza \u2014 dobry wyb\u00f3r pod wakacje, wynajem i zakup z niskim progiem wej\u015bcia.",
-                "chip": "180 m do morza",
-                "alt": "Mara\u00f1\u00f3n Torrevieja \u2014 apartamenty blisko morza"
-            },
-            "es": {
-                "title": "Mara\u00f1\u00f3n",
-                "meta": "Torrevieja \u00b7 aprox. 180 m del mar",
-                "price": "133 000 \u20ac \u2013 310 000 \u20ac",
-                "desc": "Promoci\u00f3n moderna muy cerca del mar: buena opci\u00f3n para vacaciones, alquiler y compra con entrada accesible.",
-                "chip": "180 m del mar",
-                "alt": "Mara\u00f1\u00f3n Torrevieja \u2014 apartamentos cerca del mar"
-            },
-            "en": {
-                "title": "Mara\u00f1\u00f3n",
-                "meta": "Torrevieja \u00b7 approx. 180 m to the sea",
-                "price": "\u20ac133,000 \u2013 \u20ac310,000",
-                "desc": "Modern development very close to the sea: a strong option for holidays, rental income and an accessible entry price.",
-                "chip": "180 m to sea",
-                "alt": "Mara\u00f1\u00f3n Torrevieja \u2014 apartments close to the sea"
-            },
-            "ru": {
-                "title": "Mara\u00f1\u00f3n",
-                "meta": "\u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u00b7 \u043e\u043a\u043e\u043b\u043e 180 \u043c \u0434\u043e \u043c\u043e\u0440\u044f",
-                "price": "133 000 \u20ac \u2013 310 000 \u20ac",
-                "desc": "\u0421\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0441\u043e\u0432\u0441\u0435\u043c \u0440\u044f\u0434\u043e\u043c \u0441 \u043c\u043e\u0440\u0435\u043c: \u0445\u043e\u0440\u043e\u0448\u0438\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442 \u0434\u043b\u044f \u043e\u0442\u0434\u044b\u0445\u0430, \u0430\u0440\u0435\u043d\u0434\u044b \u0438 \u043f\u043e\u043a\u0443\u043f\u043a\u0438 \u0441 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u043c \u0432\u0445\u043e\u0434\u043e\u043c.",
-                "chip": "180 \u043c \u0434\u043e \u043c\u043e\u0440\u044f",
-                "alt": "Mara\u00f1\u00f3n \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u2014 \u0430\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u0440\u044f\u0434\u043e\u043c \u0441 \u043c\u043e\u0440\u0435\u043c"
-            }
-        }
-    },
-    {
-        "slug": "monteagudo",
-        "sortOrder": 4,
-        "title": "Monteagudo",
-        "image": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
-        "images": [
-            "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/monteagudo/2.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/monteagudo/3.jpg",
-            "https://costa-blanca-invest.com/pl/new-developments/monteagudo/4.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=monteagudo",
-        "price": "od 104 000 \u20ac",
-        "priceValue": 104000,
-        "currency": "EUR",
-        "filterLocation": "torrevieja",
-        "meta": "Torrevieja \u00b7 Costa Blanca South",
-        "desc": "Kompaktowa inwestycja z atrakcyjn\u0105 cen\u0105 wej\u015bcia i elastycznym planem p\u0142atno\u015bci \u2014 praktyczny wyb\u00f3r pod wynajem i wakacje.",
-        "chip": "Plan ratalny",
-        "seoTitle": "Monteagudo Torrevieja | Nowa inwestycja od 104 000 \u20ac",
-        "seoDescription": "Monteagudo w Torrevieja: nowe apartamenty z atrakcyjn\u0105 cen\u0105 wej\u015bcia, elastyczn\u0105 p\u0142atno\u015bci\u0105 i potencja\u0142em wynajmu na Costa Blanca.",
-        "keywords": [
-            "Monteagudo",
-            "Torrevieja",
-            "apartament od 104000",
-            "Costa Blanca",
-            "inwestycja w Hiszpanii"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Monteagudo",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "od 104 000 \u20ac",
-                "desc": "Kompaktowa inwestycja z atrakcyjn\u0105 cen\u0105 wej\u015bcia i elastycznym planem p\u0142atno\u015bci \u2014 praktyczny wyb\u00f3r pod wynajem i wakacje.",
-                "chip": "Plan ratalny",
-                "alt": "Monteagudo Torrevieja \u2014 nowa inwestycja z planem p\u0142atno\u015bci"
-            },
-            "es": {
-                "title": "Monteagudo",
-                "meta": "Torrevieja \u00b7 Costa Blanca Sur",
-                "price": "desde 104 000 \u20ac",
-                "desc": "Promoci\u00f3n compacta con precio de entrada atractivo y plan de pago flexible: opci\u00f3n pr\u00e1ctica para alquiler y vacaciones.",
-                "chip": "Plan de pago",
-                "alt": "Monteagudo Torrevieja \u2014 obra nueva con plan de pago"
-            },
-            "en": {
-                "title": "Monteagudo",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "from \u20ac104,000",
-                "desc": "Compact development with an attractive entry price and flexible payment plan: a practical choice for rentals and holidays.",
-                "chip": "Payment plan",
-                "alt": "Monteagudo Torrevieja \u2014 new development with payment plan"
-            },
-            "ru": {
-                "title": "Monteagudo",
-                "meta": "\u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u00b7 \u044e\u0433 Costa Blanca",
-                "price": "\u043e\u0442 104 000 \u20ac",
-                "desc": "\u041a\u043e\u043c\u043f\u0430\u043a\u0442\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0441 \u043f\u0440\u0438\u0432\u043b\u0435\u043a\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0446\u0435\u043d\u043e\u0439 \u0432\u0445\u043e\u0434\u0430 \u0438 \u0433\u0438\u0431\u043a\u0438\u043c \u043f\u043b\u0430\u043d\u043e\u043c \u043e\u043f\u043b\u0430\u0442\u044b \u2014 \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u043d\u044b\u0439 \u0432\u044b\u0431\u043e\u0440 \u0434\u043b\u044f \u0430\u0440\u0435\u043d\u0434\u044b \u0438 \u043e\u0442\u0434\u044b\u0445\u0430.",
-                "chip": "\u041f\u043b\u0430\u043d \u043e\u043f\u043b\u0430\u0442\u044b",
-                "alt": "Monteagudo \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u2014 \u043d\u043e\u0432\u043e\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0441 \u043f\u043b\u0430\u043d\u043e\u043c \u043e\u043f\u043b\u0430\u0442\u044b"
-            }
-        }
-    },
-    {
-        "slug": "calpe-balcones",
-        "sortOrder": 5,
-        "title": "Balcones de Calpe",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=calpe-balcones",
-        "price": "599 106 \u20ac",
-        "priceValue": 599106,
-        "currency": "EUR",
-        "filterLocation": "calpe",
-        "meta": "Calpe \u00b7 Costa Blanca North",
-        "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze \u2014 propozycja premium dla klienta szukaj\u0105cego lokalizacji, designu i komfortu.",
-        "chip": "Sea View \u00b7 Calpe",
-        "seoTitle": "Balcones de Calpe | Apartamenty premium z widokiem na morze",
-        "seoDescription": "Balcones de Calpe: apartamenty premium na Costa Blanca North z widokiem na morze, nowoczesnym designem i \u015bwietn\u0105 lokalizacj\u0105 w Calpe.",
-        "keywords": [
-            "Balcones de Calpe",
-            "Calpe",
-            "apartamenty z widokiem na morze",
-            "Costa Blanca North",
-            "nieruchomo\u015bci premium"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Balcones de Calpe",
-                "meta": "Calpe \u00b7 Costa Blanca North",
-                "price": "599 106 \u20ac",
-                "desc": "Ekskluzywne apartamenty w Calpe z widokiem na morze \u2014 propozycja premium dla klienta szukaj\u0105cego lokalizacji, designu i komfortu.",
-                "chip": "Sea View \u00b7 Calpe",
-                "alt": "Balcones de Calpe \u2014 apartamenty premium z widokiem na morze"
-            },
-            "es": {
-                "title": "Balcones de Calpe",
-                "meta": "Calpe \u00b7 Costa Blanca Norte",
-                "price": "599 106 \u20ac",
-                "desc": "Apartamentos exclusivos en Calpe con vistas al mar: propuesta premium para quien busca ubicaci\u00f3n, dise\u00f1o y comodidad.",
-                "chip": "Vistas al mar \u00b7 Calpe",
-                "alt": "Balcones de Calpe \u2014 apartamentos premium con vistas al mar"
-            },
-            "en": {
-                "title": "Balcones de Calpe",
-                "meta": "Calpe \u00b7 Costa Blanca North",
-                "price": "\u20ac599,106",
-                "desc": "Exclusive apartments in Calpe with sea views: a premium choice for buyers seeking location, design and comfort.",
-                "chip": "Sea View \u00b7 Calpe",
-                "alt": "Balcones de Calpe \u2014 premium apartments with sea views"
-            },
-            "ru": {
-                "title": "Balcones de Calpe",
-                "meta": "\u041a\u0430\u043b\u044c\u043f\u0435 \u00b7 \u0441\u0435\u0432\u0435\u0440 Costa Blanca",
-                "price": "599 106 \u20ac",
-                "desc": "\u042d\u043a\u0441\u043a\u043b\u044e\u0437\u0438\u0432\u043d\u044b\u0435 \u0430\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u0432 \u041a\u0430\u043b\u044c\u043f\u0435 \u0441 \u0432\u0438\u0434\u043e\u043c \u043d\u0430 \u043c\u043e\u0440\u0435 \u2014 \u043f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u043e\u0435 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u0442\u0435\u0445, \u043a\u0442\u043e \u0446\u0435\u043d\u0438\u0442 \u043b\u043e\u043a\u0430\u0446\u0438\u044e, \u0434\u0438\u0437\u0430\u0439\u043d \u0438 \u043a\u043e\u043c\u0444\u043e\u0440\u0442.",
-                "chip": "\u0412\u0438\u0434 \u043d\u0430 \u043c\u043e\u0440\u0435 \u00b7 \u041a\u0430\u043b\u044c\u043f\u0435",
-                "alt": "Balcones de Calpe \u2014 \u043f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0430\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u0441 \u0432\u0438\u0434\u043e\u043c \u043d\u0430 \u043c\u043e\u0440\u0435"
-            }
-        }
-    },
-    {
-        "slug": "royal-star",
-        "sortOrder": 6,
-        "title": "Royal Star",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=royal-star",
-        "price": "299 500 \u20ac",
-        "priceValue": 299500,
-        "currency": "EUR",
-        "filterLocation": "guardamar",
-        "meta": "Guardamar del Segura \u00b7 Costa Blanca South",
-        "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i pla\u017cy \u2014 komfortowa opcja do \u017cycia, wakacji i wynajmu sezonowego.",
-        "chip": "Guardamar \u00b7 Centrum",
-        "seoTitle": "Royal Star Guardamar | Nowe apartamenty na Costa Blanca",
-        "seoDescription": "Royal Star w Guardamar del Segura: nowe apartamenty blisko centrum i pla\u017cy, dobra lokalizacja na Costa Blanca South.",
-        "keywords": [
-            "Royal Star",
-            "Guardamar",
-            "Costa Blanca South",
-            "apartamenty Guardamar",
-            "nowe inwestycje"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Royal Star",
-                "meta": "Guardamar del Segura \u00b7 Costa Blanca South",
-                "price": "299 500 \u20ac",
-                "desc": "Nowoczesna inwestycja w Guardamar blisko centrum i pla\u017cy \u2014 komfortowa opcja do \u017cycia, wakacji i wynajmu sezonowego.",
-                "chip": "Guardamar \u00b7 Centrum",
-                "alt": "Royal Star Guardamar \u2014 nowe apartamenty blisko centrum"
-            },
-            "es": {
-                "title": "Royal Star",
-                "meta": "Guardamar del Segura \u00b7 Costa Blanca Sur",
-                "price": "299 500 \u20ac",
-                "desc": "Promoci\u00f3n moderna en Guardamar cerca del centro y la playa: opci\u00f3n c\u00f3moda para vivir, vacaciones y alquiler de temporada.",
-                "chip": "Guardamar \u00b7 Centro",
-                "alt": "Royal Star Guardamar \u2014 apartamentos nuevos cerca del centro"
-            },
-            "en": {
-                "title": "Royal Star",
-                "meta": "Guardamar del Segura \u00b7 Costa Blanca South",
-                "price": "\u20ac299,500",
-                "desc": "Modern development in Guardamar near the centre and beach: a comfortable option for living, holidays and seasonal rentals.",
-                "chip": "Guardamar \u00b7 Centre",
-                "alt": "Royal Star Guardamar \u2014 new apartments close to the centre"
-            },
-            "ru": {
-                "title": "Royal Star",
-                "meta": "\u0413\u0443\u0430\u0440\u0434\u0430\u043c\u0430\u0440-\u0434\u0435\u043b\u044c-\u0421\u0435\u0433\u0443\u0440\u0430 \u00b7 \u044e\u0433 Costa Blanca",
-                "price": "299 500 \u20ac",
-                "desc": "\u0421\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0432 \u0413\u0443\u0430\u0440\u0434\u0430\u043c\u0430\u0440\u0435 \u0440\u044f\u0434\u043e\u043c \u0441 \u0446\u0435\u043d\u0442\u0440\u043e\u043c \u0438 \u043f\u043b\u044f\u0436\u0435\u043c \u2014 \u0443\u0434\u043e\u0431\u043d\u044b\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442 \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438, \u043e\u0442\u0434\u044b\u0445\u0430 \u0438 \u0441\u0435\u0437\u043e\u043d\u043d\u043e\u0439 \u0430\u0440\u0435\u043d\u0434\u044b.",
-                "chip": "\u0413\u0443\u0430\u0440\u0434\u0430\u043c\u0430\u0440 \u00b7 \u0426\u0435\u043d\u0442\u0440",
-                "alt": "Royal Star Guardamar \u2014 \u043d\u043e\u0432\u044b\u0435 \u0430\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u0440\u044f\u0434\u043e\u043c \u0441 \u0446\u0435\u043d\u0442\u0440\u043e\u043c"
-            }
-        }
-    },
-    {
-        "slug": "residencial-los-balcones-de-calpe",
-        "sortOrder": 7,
-        "title": "Residencial Los Balcones de Calpe",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-preview.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=residencial-los-balcones-de-calpe",
-        "price": "269 000 \u20ac",
-        "priceValue": 269000,
-        "currency": "EUR",
-        "filterLocation": "calpe",
-        "meta": "Calpe \u00b7 Avenida de Madrid \u00b7 Costa Blanca North",
-        "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencja\u0142u wzrostu warto\u015bci \u2014 blisko us\u0142ug i \u015br\u00f3dziemnomorskiego stylu \u017cycia.",
-        "chip": "Calpe \u00b7 Investment",
-        "seoTitle": "Residencial Los Balcones de Calpe | Nowa inwestycja od 269 000 \u20ac",
-        "seoDescription": "Residencial Los Balcones de Calpe: nowa inwestycja w Calpe od 269 000 \u20ac, dobra lokalizacja i potencja\u0142 inwestycyjny na Costa Blanca North.",
-        "keywords": [
-            "Residencial Los Balcones de Calpe",
-            "Calpe",
-            "apartamenty Calpe",
-            "Costa Blanca North",
-            "inwestycja w Hiszpanii"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Residencial Los Balcones de Calpe",
-                "meta": "Calpe \u00b7 Avenida de Madrid \u00b7 Costa Blanca North",
-                "price": "269 000 \u20ac",
-                "desc": "Nowa inwestycja w Calpe z dobrym balansem ceny, lokalizacji i potencja\u0142u wzrostu warto\u015bci \u2014 blisko us\u0142ug i \u015br\u00f3dziemnomorskiego stylu \u017cycia.",
-                "chip": "Calpe \u00b7 Inwestycja",
-                "alt": "Residencial Los Balcones de Calpe \u2014 nowa inwestycja w Calpe"
-            },
-            "es": {
-                "title": "Residencial Los Balcones de Calpe",
-                "meta": "Calpe \u00b7 Avenida de Madrid \u00b7 Costa Blanca Norte",
-                "price": "269 000 \u20ac",
-                "desc": "Promoci\u00f3n nueva en Calpe con buen equilibrio entre precio, ubicaci\u00f3n y potencial de revalorizaci\u00f3n, cerca de servicios y del estilo de vida mediterr\u00e1neo.",
-                "chip": "Calpe \u00b7 Inversi\u00f3n",
-                "alt": "Residencial Los Balcones de Calpe \u2014 obra nueva en Calpe"
-            },
-            "en": {
-                "title": "Residencial Los Balcones de Calpe",
-                "meta": "Calpe \u00b7 Avenida de Madrid \u00b7 Costa Blanca North",
-                "price": "\u20ac269,000",
-                "desc": "New development in Calpe with a strong balance of price, location and value-growth potential, close to services and Mediterranean lifestyle.",
-                "chip": "Calpe \u00b7 Investment",
-                "alt": "Residencial Los Balcones de Calpe \u2014 new development in Calpe"
-            },
-            "ru": {
-                "title": "Residencial Los Balcones de Calpe",
-                "meta": "\u041a\u0430\u043b\u044c\u043f\u0435 \u00b7 Avenida de Madrid \u00b7 \u0441\u0435\u0432\u0435\u0440 Costa Blanca",
-                "price": "269 000 \u20ac",
-                "desc": "\u041d\u043e\u0432\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0432 \u041a\u0430\u043b\u044c\u043f\u0435 \u0441 \u0445\u043e\u0440\u043e\u0448\u0438\u043c \u0431\u0430\u043b\u0430\u043d\u0441\u043e\u043c \u0446\u0435\u043d\u044b, \u043b\u043e\u043a\u0430\u0446\u0438\u0438 \u0438 \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b\u0430 \u0440\u043e\u0441\u0442\u0430 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u0438 \u2014 \u0440\u044f\u0434\u043e\u043c \u0441 \u0441\u0435\u0440\u0432\u0438\u0441\u0430\u043c\u0438 \u0438 \u0441\u0440\u0435\u0434\u0438\u0437\u0435\u043c\u043d\u043e\u043c\u043e\u0440\u0441\u043a\u0438\u043c \u0441\u0442\u0438\u043b\u0435\u043c \u0436\u0438\u0437\u043d\u0438.",
-                "chip": "\u041a\u0430\u043b\u044c\u043f\u0435 \u00b7 \u0418\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f",
-                "alt": "Residencial Los Balcones de Calpe \u2014 \u043d\u043e\u0432\u0430\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f \u0432 \u041a\u0430\u043b\u044c\u043f\u0435"
-            }
-        }
-    },
-    {
-        "slug": "16-villas-polop",
-        "sortOrder": 8,
-        "title": "16 Villas Polop",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=16-villas-polop",
-        "price": "Cena na zapytanie",
-        "priceValue": 0,
-        "currency": "EUR",
-        "priceStatus": "on_request",
-        "filterLocation": "polop",
-        "meta": "Polop \u00b7 okolice Benidorm \u00b7 Costa Blanca",
-        "desc": "Kameralny projekt 16 nowoczesnych willi w Polop \u2014 spokojna lokalizacja, widoki na g\u00f3ry i szybki dojazd do Benidorm oraz pla\u017c.",
-        "chip": "Villas \u00b7 Polop",
-        "seoTitle": "16 Villas Polop | Nowoczesne wille blisko Benidorm",
-        "seoDescription": "16 Villas Polop: kameralny projekt nowych willi w spokojnej lokalizacji blisko Benidorm, g\u00f3r i pla\u017c Costa Blanca.",
-        "keywords": [
-            "16 Villas Polop",
-            "Polop",
-            "wille Costa Blanca",
-            "Benidorm",
-            "nowe wille"
-        ],
-        "translations": {
-            "pl": {
-                "title": "16 Villas Polop",
-                "meta": "Polop \u00b7 okolice Benidorm \u00b7 Costa Blanca",
-                "price": "Cena na zapytanie",
-                "desc": "Kameralny projekt 16 nowoczesnych willi w Polop \u2014 spokojna lokalizacja, widoki na g\u00f3ry i szybki dojazd do Benidorm oraz pla\u017c.",
-                "chip": "Villas \u00b7 Polop",
-                "alt": "16 Villas Polop \u2014 nowoczesne wille blisko Benidorm"
-            },
-            "es": {
-                "title": "16 Villas Polop",
-                "meta": "Polop \u00b7 cerca de Benidorm \u00b7 Costa Blanca",
-                "price": "Precio bajo consulta",
-                "desc": "Proyecto boutique de 16 villas modernas en Polop: zona tranquila, vistas a la monta\u00f1a y acceso r\u00e1pido a Benidorm y playas.",
-                "chip": "Villas \u00b7 Polop",
-                "alt": "16 Villas Polop \u2014 villas modernas cerca de Benidorm"
-            },
-            "en": {
-                "title": "16 Villas Polop",
-                "meta": "Polop \u00b7 near Benidorm \u00b7 Costa Blanca",
-                "price": "Price on request",
-                "desc": "Boutique project of 16 modern villas in Polop: peaceful setting, mountain views and quick access to Benidorm and the beaches.",
-                "chip": "Villas \u00b7 Polop",
-                "alt": "16 Villas Polop \u2014 modern villas near Benidorm"
-            },
-            "ru": {
-                "title": "16 Villas Polop",
-                "meta": "\u041f\u043e\u043b\u043e\u043f \u00b7 \u0440\u044f\u0434\u043e\u043c \u0441 \u0411\u0435\u043d\u0438\u0434\u043e\u0440\u043c\u043e\u043c \u00b7 Costa Blanca",
-                "price": "\u0426\u0435\u043d\u0430 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443",
-                "desc": "\u041a\u0430\u043c\u0435\u0440\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0438\u0437 16 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445 \u0432\u0438\u043b\u043b \u0432 \u041f\u043e\u043b\u043e\u043f\u0435: \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u0430\u044f \u0437\u043e\u043d\u0430, \u0432\u0438\u0434\u044b \u043d\u0430 \u0433\u043e\u0440\u044b \u0438 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u0411\u0435\u043d\u0438\u0434\u043e\u0440\u043c\u0443 \u0438 \u043f\u043b\u044f\u0436\u0430\u043c.",
-                "chip": "\u0412\u0438\u043b\u043b\u044b \u00b7 \u041f\u043e\u043b\u043e\u043f",
-                "alt": "16 Villas Polop \u2014 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u0432\u0438\u043b\u043b\u044b \u0440\u044f\u0434\u043e\u043c \u0441 \u0411\u0435\u043d\u0438\u0434\u043e\u0440\u043c\u043e\u043c"
-            }
-        }
-    },
-    {
-        "slug": "nature-views",
-        "sortOrder": 9,
-        "title": "Nature Views",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299866/01KQ68AKXJ6WYZEFWNW70Z47GZ.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299866/01KQ68AKXJ6WYZEFWNW70Z47GZ.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=nature-views",
-        "price": "Cena na zapytanie",
-        "priceValue": 0,
-        "currency": "EUR",
-        "priceStatus": "on_request",
-        "filterLocation": "alicante",
-        "meta": "Alicante \u00b7 Costa Blanca",
-        "desc": "Nowoczesny projekt Nature Views dla os\u00f3b szukaj\u0105cych zielonego otoczenia, prywatno\u015bci i wygodnego dost\u0119pu do infrastruktury Costa Blanca.",
-        "chip": "Nature \u00b7 Lifestyle",
-        "seoTitle": "Nature Views | Nowa inwestycja w otoczeniu natury na Costa Blanca",
-        "seoDescription": "Nature Views: nowoczesna inwestycja na Costa Blanca dla os\u00f3b szukaj\u0105cych spokoju, zielonego otoczenia i dobrego dost\u0119pu do infrastruktury.",
-        "keywords": [
-            "Nature Views",
-            "Alicante",
-            "Costa Blanca",
-            "nowa inwestycja",
-            "nieruchomo\u015b\u0107 w Hiszpanii"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Nature Views",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Cena na zapytanie",
-                "desc": "Nowoczesny projekt Nature Views dla os\u00f3b szukaj\u0105cych zielonego otoczenia, prywatno\u015bci i wygodnego dost\u0119pu do infrastruktury Costa Blanca.",
-                "chip": "Nature \u00b7 Lifestyle",
-                "alt": "Nature Views \u2014 nowa inwestycja w otoczeniu natury"
-            },
-            "es": {
-                "title": "Nature Views",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Precio bajo consulta",
-                "desc": "Proyecto moderno para quienes buscan entorno verde, privacidad y acceso c\u00f3modo a la infraestructura de la Costa Blanca.",
-                "chip": "Naturaleza \u00b7 Lifestyle",
-                "alt": "Nature Views \u2014 obra nueva en entorno natural"
-            },
-            "en": {
-                "title": "Nature Views",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Price on request",
-                "desc": "Modern project for buyers looking for green surroundings, privacy and convenient access to Costa Blanca infrastructure.",
-                "chip": "Nature \u00b7 Lifestyle",
-                "alt": "Nature Views \u2014 new development surrounded by nature"
-            },
-            "ru": {
-                "title": "Nature Views",
-                "meta": "\u0410\u043b\u0438\u043a\u0430\u043d\u0442\u0435 \u00b7 Costa Blanca",
-                "price": "\u0426\u0435\u043d\u0430 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443",
-                "desc": "\u0421\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0434\u043b\u044f \u0442\u0435\u0445, \u043a\u0442\u043e \u0438\u0449\u0435\u0442 \u0437\u0435\u043b\u0451\u043d\u043e\u0435 \u043e\u043a\u0440\u0443\u0436\u0435\u043d\u0438\u0435, \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c \u0438 \u0443\u0434\u043e\u0431\u043d\u044b\u0439 \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0435 Costa Blanca.",
-                "chip": "\u041f\u0440\u0438\u0440\u043e\u0434\u0430 \u00b7 Lifestyle",
-                "alt": "Nature Views \u2014 \u043d\u043e\u0432\u0430\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f \u0432 \u043e\u043a\u0440\u0443\u0436\u0435\u043d\u0438\u0438 \u043f\u0440\u0438\u0440\u043e\u0434\u044b"
-            }
-        }
-    },
-    {
-        "slug": "nalia-resort",
-        "sortOrder": 10,
-        "title": "Nalia Resort",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299797/01KQ5NYV1N8T6H1V80FZSTG48F.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299797/01KQ5NYV1N8T6H1V80FZSTG48F.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=nalia-resort",
-        "price": "Cena na zapytanie",
-        "priceValue": 0,
-        "currency": "EUR",
-        "priceStatus": "on_request",
-        "filterLocation": "torrevieja",
-        "meta": "Torrevieja \u00b7 Costa Blanca South",
-        "desc": "Nalia Resort to projekt w stylu resortowym \u2014 idealny dla klient\u00f3w szukaj\u0105cych komfortu, stref wsp\u00f3lnych i potencja\u0142u wynajmu wakacyjnego.",
-        "chip": "Resort \u00b7 Torrevieja",
-        "seoTitle": "Nalia Resort Torrevieja | Resortowa inwestycja na Costa Blanca",
-        "seoDescription": "Nalia Resort w Torrevieja: nowoczesna inwestycja resortowa na Costa Blanca South, dobra pod wakacje, wynajem i second home.",
-        "keywords": [
-            "Nalia Resort",
-            "Torrevieja",
-            "resort Costa Blanca",
-            "apartamenty Torrevieja",
-            "wynajem wakacyjny"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Nalia Resort",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "Cena na zapytanie",
-                "desc": "Nalia Resort to projekt w stylu resortowym \u2014 idealny dla klient\u00f3w szukaj\u0105cych komfortu, stref wsp\u00f3lnych i potencja\u0142u wynajmu wakacyjnego.",
-                "chip": "Resort \u00b7 Torrevieja",
-                "alt": "Nalia Resort Torrevieja \u2014 inwestycja w stylu resortowym"
-            },
-            "es": {
-                "title": "Nalia Resort",
-                "meta": "Torrevieja \u00b7 Costa Blanca Sur",
-                "price": "Precio bajo consulta",
-                "desc": "Proyecto de estilo resort, ideal para clientes que buscan confort, zonas comunes y potencial de alquiler vacacional.",
-                "chip": "Resort \u00b7 Torrevieja",
-                "alt": "Nalia Resort Torrevieja \u2014 promoci\u00f3n estilo resort"
-            },
-            "en": {
-                "title": "Nalia Resort",
-                "meta": "Torrevieja \u00b7 Costa Blanca South",
-                "price": "Price on request",
-                "desc": "Resort-style project ideal for buyers seeking comfort, communal areas and holiday-rental potential.",
-                "chip": "Resort \u00b7 Torrevieja",
-                "alt": "Nalia Resort Torrevieja \u2014 resort-style development"
-            },
-            "ru": {
-                "title": "Nalia Resort",
-                "meta": "\u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u00b7 \u044e\u0433 Costa Blanca",
-                "price": "\u0426\u0435\u043d\u0430 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443",
-                "desc": "\u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043a\u0443\u0440\u043e\u0440\u0442\u043d\u043e\u043c \u0441\u0442\u0438\u043b\u0435 \u0434\u043b\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u043c \u0432\u0430\u0436\u043d\u044b \u043a\u043e\u043c\u0444\u043e\u0440\u0442, \u043e\u0431\u0449\u0438\u0435 \u0437\u043e\u043d\u044b \u0438 \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0430\u0440\u0435\u043d\u0434\u044b.",
-                "chip": "Resort \u00b7 \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430",
-                "alt": "Nalia Resort \u0422\u043e\u0440\u0440\u0435\u0432\u044c\u0435\u0445\u0430 \u2014 \u043f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043a\u0443\u0440\u043e\u0440\u0442\u043d\u043e\u043c \u0441\u0442\u0438\u043b\u0435"
-            }
-        }
-    },
-    {
-        "slug": "alonis-villas",
-        "sortOrder": 11,
-        "title": "Alonis Villas",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299616/01KQ4WE6MZX1H6F4QQB75457GG.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299616/01KQ4WE6MZX1H6F4QQB75457GG.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=alonis-villas",
-        "price": "Cena na zapytanie",
-        "priceValue": 0,
-        "currency": "EUR",
-        "priceStatus": "on_request",
-        "filterLocation": "alicante",
-        "meta": "Alicante \u00b7 Costa Blanca",
-        "desc": "Alonis Villas to propozycja dla klient\u00f3w szukaj\u0105cych nowoczesnej willi premium \u2014 prywatno\u015b\u0107, elegancka architektura i \u015br\u00f3dziemnomorski styl \u017cycia.",
-        "chip": "Premium Villas",
-        "seoTitle": "Alonis Villas | Nowoczesne wille premium na Costa Blanca",
-        "seoDescription": "Alonis Villas: nowe wille premium na Costa Blanca z naciskiem na prywatno\u015b\u0107, design i komfort \u017cycia w Hiszpanii.",
-        "keywords": [
-            "Alonis Villas",
-            "wille premium",
-            "Costa Blanca",
-            "Alicante",
-            "nowe wille w Hiszpanii"
-        ],
-        "translations": {
-            "pl": {
-                "title": "Alonis Villas",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Cena na zapytanie",
-                "desc": "Alonis Villas to propozycja dla klient\u00f3w szukaj\u0105cych nowoczesnej willi premium \u2014 prywatno\u015b\u0107, elegancka architektura i \u015br\u00f3dziemnomorski styl \u017cycia.",
-                "chip": "Premium Villas",
-                "alt": "Alonis Villas \u2014 nowoczesne wille premium na Costa Blanca"
-            },
-            "es": {
-                "title": "Alonis Villas",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Precio bajo consulta",
-                "desc": "Propuesta para clientes que buscan una villa moderna premium: privacidad, arquitectura elegante y estilo de vida mediterr\u00e1neo.",
-                "chip": "Villas Premium",
-                "alt": "Alonis Villas \u2014 villas modernas premium en Costa Blanca"
-            },
-            "en": {
-                "title": "Alonis Villas",
-                "meta": "Alicante \u00b7 Costa Blanca",
-                "price": "Price on request",
-                "desc": "A choice for buyers looking for a modern premium villa: privacy, elegant architecture and Mediterranean lifestyle.",
-                "chip": "Premium Villas",
-                "alt": "Alonis Villas \u2014 modern premium villas on the Costa Blanca"
-            },
-            "ru": {
-                "title": "Alonis Villas",
-                "meta": "\u0410\u043b\u0438\u043a\u0430\u043d\u0442\u0435 \u00b7 Costa Blanca",
-                "price": "\u0426\u0435\u043d\u0430 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443",
-                "desc": "\u041f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0438\u0449\u0443\u0442 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u0443\u044e \u0432\u0438\u043b\u043b\u0443: \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c, \u044d\u043b\u0435\u0433\u0430\u043d\u0442\u043d\u0430\u044f \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0438 \u0441\u0440\u0435\u0434\u0438\u0437\u0435\u043c\u043d\u043e\u043c\u043e\u0440\u0441\u043a\u0438\u0439 \u0441\u0442\u0438\u043b\u044c \u0436\u0438\u0437\u043d\u0438.",
-                "chip": "\u041f\u0440\u0435\u043c\u0438\u0443\u043c \u0432\u0438\u043b\u043b\u044b",
-                "alt": "Alonis Villas \u2014 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u043f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u0438\u043b\u043b\u044b \u043d\u0430 Costa Blanca"
-            }
-        }
-    },
-    {
-        "slug": "malaga",
-        "sortOrder": 12,
-        "title": "M\u00e1laga",
-        "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299611/01KQ4WC6FZS0TZQN6BK41KBNNG.jpg",
-        "images": [
-            "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4299611/01KQ4WC6FZS0TZQN6BK41KBNNG.jpg"
-        ],
-        "href": "/pl/new-developments/xml-catalog/?slug=malaga",
-        "price": "Cena na zapytanie",
-        "priceValue": 0,
-        "currency": "EUR",
-        "priceStatus": "on_request",
-        "filterLocation": "malaga",
-        "meta": "M\u00e1laga \u00b7 Costa del Sol",
-        "desc": "Projekt w Maladze dla klient\u00f3w rozwa\u017caj\u0105cych zakup poza Costa Blanca \u2014 silna lokalizacja miejska, potencja\u0142 najmu i ca\u0142oroczny popyt.",
-        "chip": "M\u00e1laga \u00b7 Costa del Sol",
-        "seoTitle": "M\u00e1laga | Nowa inwestycja w Hiszpanii na Costa del Sol",
-        "seoDescription": "Projekt w Maladze na Costa del Sol: opcja dla klient\u00f3w szukaj\u0105cych inwestycji w du\u017cym mie\u015bcie z ca\u0142orocznym popytem i potencja\u0142em najmu.",
-        "keywords": [
-            "M\u00e1laga",
-            "Costa del Sol",
-            "inwestycja w Hiszpanii",
-            "apartamenty M\u00e1laga",
-            "nieruchomo\u015bci Hiszpania"
-        ],
-        "translations": {
-            "pl": {
-                "title": "M\u00e1laga",
-                "meta": "M\u00e1laga \u00b7 Costa del Sol",
-                "price": "Cena na zapytanie",
-                "desc": "Projekt w Maladze dla klient\u00f3w rozwa\u017caj\u0105cych zakup poza Costa Blanca \u2014 silna lokalizacja miejska, potencja\u0142 najmu i ca\u0142oroczny popyt.",
-                "chip": "M\u00e1laga \u00b7 Costa del Sol",
-                "alt": "M\u00e1laga \u2014 nowa inwestycja na Costa del Sol"
-            },
-            "es": {
-                "title": "M\u00e1laga",
-                "meta": "M\u00e1laga \u00b7 Costa del Sol",
-                "price": "Precio bajo consulta",
-                "desc": "Proyecto en M\u00e1laga para clientes que valoran una compra fuera de Costa Blanca: ubicaci\u00f3n urbana fuerte, potencial de alquiler y demanda todo el a\u00f1o.",
-                "chip": "M\u00e1laga \u00b7 Costa del Sol",
-                "alt": "M\u00e1laga \u2014 obra nueva en Costa del Sol"
-            },
-            "en": {
-                "title": "M\u00e1laga",
-                "meta": "M\u00e1laga \u00b7 Costa del Sol",
-                "price": "Price on request",
-                "desc": "Project in M\u00e1laga for buyers considering a purchase beyond Costa Blanca: strong urban location, rental potential and year-round demand.",
-                "chip": "M\u00e1laga \u00b7 Costa del Sol",
-                "alt": "M\u00e1laga \u2014 new development on the Costa del Sol"
-            },
-            "ru": {
-                "title": "\u041c\u0430\u043b\u0430\u0433\u0430",
-                "meta": "\u041c\u0430\u043b\u0430\u0433\u0430 \u00b7 Costa del Sol",
-                "price": "\u0426\u0435\u043d\u0430 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443",
-                "desc": "\u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u041c\u0430\u043b\u0430\u0433\u0435 \u0434\u043b\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432, \u0440\u0430\u0441\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u044e\u0449\u0438\u0445 \u043f\u043e\u043a\u0443\u043f\u043a\u0443 \u0437\u0430 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u043c\u0438 Costa Blanca: \u0441\u0438\u043b\u044c\u043d\u0430\u044f \u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043b\u043e\u043a\u0430\u0446\u0438\u044f, \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b \u0430\u0440\u0435\u043d\u0434\u044b \u0438 \u043a\u0440\u0443\u0433\u043b\u043e\u0433\u043e\u0434\u0438\u0447\u043d\u044b\u0439 \u0441\u043f\u0440\u043e\u0441.",
-                "chip": "\u041c\u0430\u043b\u0430\u0433\u0430 \u00b7 Costa del Sol",
-                "alt": "\u041c\u0430\u043b\u0430\u0433\u0430 \u2014 \u043d\u043e\u0432\u0430\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f \u043d\u0430 Costa del Sol"
-            }
-        }
-    }
+  {
+    "slug": "bonalba-golf-hills",
+    "sortOrder": 1,
+    "title": "Bonalba Golf Hills",
+    "image": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+    "images": [
+      "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
+    ]
+  },
+  {
+    "slug": "penthouse-torrevieja",
+    "sortOrder": 2,
+    "title": "Penthouse Torrevieja",
+    "image": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+    "images": [
+      "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/2.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/3.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/4.jpg"
+    ]
+  },
+  {
+    "slug": "maranon",
+    "sortOrder": 3,
+    "title": "Marañón",
+    "image": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+    "images": [
+      "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/maranon/2.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/maranon/3.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/maranon/4.jpg"
+    ]
+  },
+  {
+    "slug": "monteagudo",
+    "sortOrder": 4,
+    "title": "Monteagudo",
+    "image": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+    "images": [
+      "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/monteagudo/2.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/monteagudo/3.jpg",
+      "https://costa-blanca-invest.com/pl/new-developments/monteagudo/4.jpg"
+    ]
+  },
+  {
+    "slug": "calpe-balcones",
+    "sortOrder": 5,
+    "title": "Balcones de Calpe",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg"
+    ]
+  },
+  {
+    "slug": "royal-star",
+    "sortOrder": 6,
+    "title": "Royal Star",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg"
+    ]
+  },
+  {
+    "slug": "residencial-los-balcones-de-calpe",
+    "sortOrder": 7,
+    "title": "Residencial Los Balcones de Calpe",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-preview.jpg"
+    ]
+  },
+  {
+    "slug": "16-villas-polop",
+    "sortOrder": 8,
+    "title": "16 Villas Polop",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg"
+    ]
+  },
+  {
+    "slug": "nature-views",
+    "sortOrder": 9,
+    "title": "Nature Views",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-preview.jpg"
+    ]
+  },
+  {
+    "slug": "nalia-resort",
+    "sortOrder": 10,
+    "title": "Nalia Resort",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266734/conversions/property-18216-5-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266741/conversions/property-18216-6-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266746/conversions/property-18216-7-preview.jpg"
+    ]
+  },
+  {
+    "slug": "alonis-villas",
+    "sortOrder": 11,
+    "title": "Alonis Villas",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-preview.jpg"
+    ]
+  }
 ]
