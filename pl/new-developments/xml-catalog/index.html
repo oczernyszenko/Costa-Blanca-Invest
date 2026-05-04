@@ -334,7 +334,8 @@
     }
 
     function getShareUrl(data, options={}){
-      return getPropertyUrl(data, options);
+      const versionPart = options.cacheBust ? `?v=${Date.now()}` : '';
+      return `${SITE_ORIGIN}/pl/new-developments/share/${encodeURIComponent(data.slug)}.html${versionPart}`;
     }
     async function copyText(value){
       try{
