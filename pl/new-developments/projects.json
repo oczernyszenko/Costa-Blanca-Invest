@@ -33,7 +33,13 @@
         "price": "280 800 € – 405 600 €",
         "desc": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
         "seoDescription": "Elegancka inwestycja premium przy polu golfowym — prywatność, natura i styl życia Costa Blanca.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Projekt został zaprojektowany dla klientów, którzy szukają połączenia prywatności, komfortu i śródziemnomorskiego stylu życia. Apartamenty oferują funkcjonalne układy, przestrzeń dzienną, tarasy i naturalne światło.",
+        "lead": [
+          "Bonalba Golf Hills to kameralna inwestycja premium w Mutxamel, położona w spokojnym otoczeniu zieleni i pola golfowego, z bardzo dobrym dojazdem do Alicante oraz plaż Costa Blanca.",
+          "Projekt został zaprojektowany dla klientów, którzy szukają połączenia prywatności, komfortu i śródziemnomorskiego stylu życia. Apartamenty oferują funkcjonalne układy, przestrzeń dzienną, tarasy i naturalne światło.",
+          "To oferta odpowiednia zarówno jako second home w Hiszpanii, jak i zakup inwestycyjny z potencjałem wynajmu oraz wzrostu wartości w jednej z najbardziej stabilnych lokalizacji regionu.",
+          "Bonalba Golf Hills wyróżnia się spokojną atmosferą, bliskością usług, terenów rekreacyjnych i infrastruktury golfowej, co zwiększa atrakcyjność projektu dla rodzin, par oraz inwestorów."
+        ]
       },
       "en": {
         "title": "Bonalba Golf Hills",
@@ -41,7 +47,13 @@
         "price": "280 800 € – 405 600 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The project is designed for buyers looking for privacy, comfort and a Mediterranean lifestyle. The apartments offer practical layouts, bright living spaces, terraces and a high-quality residential atmosphere.",
+        "lead": [
+          "Bonalba Golf Hills is a boutique premium development in Mutxamel, set in a peaceful green environment next to a golf course and within easy reach of Alicante and the beaches of the Costa Blanca.",
+          "The project is designed for buyers looking for privacy, comfort and a Mediterranean lifestyle. The apartments offer practical layouts, bright living spaces, terraces and a high-quality residential atmosphere.",
+          "This property is suitable both as a second home in Spain and as an investment purchase with rental potential and long-term value growth in a stable location.",
+          "Bonalba Golf Hills stands out for its calm setting, access to services, leisure areas and golf infrastructure, making it attractive for families, couples and investors."
+        ]
       },
       "es": {
         "title": "Bonalba Golf Hills",
@@ -49,7 +61,13 @@
         "price": "280 800 € – 405 600 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "El proyecto está pensado para compradores que buscan privacidad, confort y estilo de vida mediterráneo. Los apartamentos ofrecen distribuciones funcionales, espacios luminosos, terrazas y una atmósfera residencial de calidad.",
+        "lead": [
+          "Bonalba Golf Hills es una promoción premium en Mutxamel, situada en un entorno tranquilo y verde junto a un campo de golf, con fácil acceso a Alicante y a las playas de la Costa Blanca.",
+          "El proyecto está pensado para compradores que buscan privacidad, confort y estilo de vida mediterráneo. Los apartamentos ofrecen distribuciones funcionales, espacios luminosos, terrazas y una atmósfera residencial de calidad.",
+          "Es una opción adecuada tanto como segunda residencia en España como para inversión, con potencial de alquiler y crecimiento de valor a largo plazo.",
+          "Bonalba Golf Hills destaca por su entorno sereno, cercanía a servicios, zonas de ocio e infraestructura de golf, lo que aumenta su atractivo para familias, parejas e inversores."
+        ]
       },
       "ru": {
         "title": "Bonalba Golf Hills",
@@ -57,9 +75,51 @@
         "price": "280 800 € – 405 600 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Проект создан для покупателей, которые ищут приватность, комфорт и средиземноморский стиль жизни. Апартаменты предлагают продуманные планировки, светлые пространства, террасы и качественную жилую среду.",
+        "lead": [
+          "Bonalba Golf Hills — камерный премиальный комплекс в Мучамеле, в спокойной зелёной зоне рядом с гольф-полем и с удобным доступом к Аликанте и пляжам Costa Blanca.",
+          "Проект создан для покупателей, которые ищут приватность, комфорт и средиземноморский стиль жизни. Апартаменты предлагают продуманные планировки, светлые пространства, террасы и качественную жилую среду.",
+          "Объект подходит как для второго дома в Испании, так и для инвестиционной покупки с потенциалом аренды и роста стоимости.",
+          "Bonalba Golf Hills выделяется спокойной атмосферой, близостью сервисов, зон отдыха и гольф-инфраструктуры, что делает проект интересным для семей, пар и инвесторов."
+        ]
       }
-    }
+    },
+    "shareTitle": "Bonalba Golf Hills",
+    "sharePrice": "od 280 800 €",
+    "shareDescription": "Bonalba Golf Hills · od 280 800 €",
+    "shareImage": "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+    "seoContent": {
+      "pl": [
+        "Bonalba Golf Hills to kameralna inwestycja premium w Mutxamel, położona w spokojnym otoczeniu zieleni i pola golfowego, z bardzo dobrym dojazdem do Alicante oraz plaż Costa Blanca.",
+        "Projekt został zaprojektowany dla klientów, którzy szukają połączenia prywatności, komfortu i śródziemnomorskiego stylu życia. Apartamenty oferują funkcjonalne układy, przestrzeń dzienną, tarasy i naturalne światło.",
+        "To oferta odpowiednia zarówno jako second home w Hiszpanii, jak i zakup inwestycyjny z potencjałem wynajmu oraz wzrostu wartości w jednej z najbardziej stabilnych lokalizacji regionu.",
+        "Bonalba Golf Hills wyróżnia się spokojną atmosferą, bliskością usług, terenów rekreacyjnych i infrastruktury golfowej, co zwiększa atrakcyjność projektu dla rodzin, par oraz inwestorów."
+      ],
+      "en": [
+        "Bonalba Golf Hills is a boutique premium development in Mutxamel, set in a peaceful green environment next to a golf course and within easy reach of Alicante and the beaches of the Costa Blanca.",
+        "The project is designed for buyers looking for privacy, comfort and a Mediterranean lifestyle. The apartments offer practical layouts, bright living spaces, terraces and a high-quality residential atmosphere.",
+        "This property is suitable both as a second home in Spain and as an investment purchase with rental potential and long-term value growth in a stable location.",
+        "Bonalba Golf Hills stands out for its calm setting, access to services, leisure areas and golf infrastructure, making it attractive for families, couples and investors."
+      ],
+      "es": [
+        "Bonalba Golf Hills es una promoción premium en Mutxamel, situada en un entorno tranquilo y verde junto a un campo de golf, con fácil acceso a Alicante y a las playas de la Costa Blanca.",
+        "El proyecto está pensado para compradores que buscan privacidad, confort y estilo de vida mediterráneo. Los apartamentos ofrecen distribuciones funcionales, espacios luminosos, terrazas y una atmósfera residencial de calidad.",
+        "Es una opción adecuada tanto como segunda residencia en España como para inversión, con potencial de alquiler y crecimiento de valor a largo plazo.",
+        "Bonalba Golf Hills destaca por su entorno sereno, cercanía a servicios, zonas de ocio e infraestructura de golf, lo que aumenta su atractivo para familias, parejas e inversores."
+      ],
+      "ru": [
+        "Bonalba Golf Hills — камерный премиальный комплекс в Мучамеле, в спокойной зелёной зоне рядом с гольф-полем и с удобным доступом к Аликанте и пляжам Costa Blanca.",
+        "Проект создан для покупателей, которые ищут приватность, комфорт и средиземноморский стиль жизни. Апартаменты предлагают продуманные планировки, светлые пространства, террасы и качественную жилую среду.",
+        "Объект подходит как для второго дома в Испании, так и для инвестиционной покупки с потенциалом аренды и роста стоимости.",
+        "Bonalba Golf Hills выделяется спокойной атмосферой, близостью сервисов, зон отдыха и гольф-инфраструктуры, что делает проект интересным для семей, пар и инвесторов."
+      ]
+    },
+    "lead": [
+      "Bonalba Golf Hills to kameralna inwestycja premium w Mutxamel, położona w spokojnym otoczeniu zieleni i pola golfowego, z bardzo dobrym dojazdem do Alicante oraz plaż Costa Blanca.",
+      "Projekt został zaprojektowany dla klientów, którzy szukają połączenia prywatności, komfortu i śródziemnomorskiego stylu życia. Apartamenty oferują funkcjonalne układy, przestrzeń dzienną, tarasy i naturalne światło.",
+      "To oferta odpowiednia zarówno jako second home w Hiszpanii, jak i zakup inwestycyjny z potencjałem wynajmu oraz wzrostu wartości w jednej z najbardziej stabilnych lokalizacji regionu.",
+      "Bonalba Golf Hills wyróżnia się spokojną atmosferą, bliskością usług, terenów rekreacyjnych i infrastruktury golfowej, co zwiększa atrakcyjność projektu dla rodzin, par oraz inwestorów."
+    ]
   },
   {
     "slug": "penthouse-torrevieja",
@@ -95,7 +155,13 @@
         "price": "305 000 €",
         "desc": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
         "seoDescription": "Ostatni penthouse z prywatnym solarium — przestrzeń, światło i lokalizacja 15 min od plaży.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Największym atutem nieruchomości jest prywatne solarium, które tworzy dodatkową przestrzeń do relaksu, spotkań i korzystania ze słońca przez większą część roku.",
+        "lead": [
+          "Penthouse Torrevieja to wyjątkowa oferta w centralnej części miasta, idealna dla osób, które chcą mieć wszystko pod ręką: usługi, restauracje, sklepy i plażę w komfortowej odległości.",
+          "Największym atutem nieruchomości jest prywatne solarium, które tworzy dodatkową przestrzeń do relaksu, spotkań i korzystania ze słońca przez większą część roku.",
+          "Układ apartamentu sprawdzi się zarówno przy codziennym użytkowaniu, jak i w modelu wynajmu wakacyjnego. Lokalizacja w Torrevieja zapewnia stałe zainteresowanie najemców sezonowych i całorocznych.",
+          "To propozycja dla klientów szukających gotowego stylu życia na Costa Blanca: blisko morza, z prywatną przestrzenią zewnętrzną i potencjałem inwestycyjnym."
+        ]
       },
       "en": {
         "title": "Penthouse Torrevieja",
@@ -103,7 +169,13 @@
         "price": "305 000 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The key advantage of the property is the private solarium, creating additional outdoor space for relaxing, entertaining and enjoying the sun throughout much of the year.",
+        "lead": [
+          "Penthouse Torrevieja is a unique offer in the central part of the city, ideal for buyers who want services, restaurants, shops and the beach within comfortable reach.",
+          "The key advantage of the property is the private solarium, creating additional outdoor space for relaxing, entertaining and enjoying the sun throughout much of the year.",
+          "The apartment layout works well for everyday use and for holiday rental. The Torrevieja location supports strong demand from both seasonal and year-round tenants.",
+          "It is an attractive option for buyers looking for a ready Mediterranean lifestyle on the Costa Blanca, close to the sea and with private outdoor space."
+        ]
       },
       "es": {
         "title": "Penthouse Torrevieja",
@@ -111,7 +183,13 @@
         "price": "305 000 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "Su principal ventaja es el solárium privado, que aporta un espacio exterior adicional para descansar, recibir invitados y disfrutar del sol durante gran parte del año.",
+        "lead": [
+          "Penthouse Torrevieja es una oferta única en la zona central de la ciudad, ideal para quienes quieren tener servicios, restaurantes, tiendas y playa a poca distancia.",
+          "Su principal ventaja es el solárium privado, que aporta un espacio exterior adicional para descansar, recibir invitados y disfrutar del sol durante gran parte del año.",
+          "La distribución funciona tanto para uso propio como para alquiler vacacional. La ubicación en Torrevieja mantiene una demanda constante de inquilinos de temporada y de larga estancia.",
+          "Es una opción atractiva para compradores que buscan un estilo de vida mediterráneo en la Costa Blanca, cerca del mar y con espacio exterior privado."
+        ]
       },
       "ru": {
         "title": "Penthouse Torrevieja",
@@ -119,9 +197,51 @@
         "price": "305 000 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Главное преимущество объекта — частный солярий, который создаёт дополнительное пространство для отдыха, встреч и наслаждения солнцем большую часть года.",
+        "lead": [
+          "Penthouse Torrevieja — редкое предложение в центральной части города, идеально для тех, кто хочет иметь рядом сервисы, рестораны, магазины и пляж.",
+          "Главное преимущество объекта — частный солярий, который создаёт дополнительное пространство для отдыха, встреч и наслаждения солнцем большую часть года.",
+          "Планировка подходит как для личного проживания, так и для туристической аренды. Локация в Торревьехе обеспечивает стабильный спрос со стороны сезонных и долгосрочных арендаторов.",
+          "Это вариант для покупателей, которые ищут готовый средиземноморский образ жизни на Costa Blanca, рядом с морем и с приватной внешней зоной."
+        ]
       }
-    }
+    },
+    "shareTitle": "Penthouse Torrevieja",
+    "sharePrice": "od 305 000 €",
+    "shareDescription": "Penthouse Torrevieja · od 305 000 €",
+    "shareImage": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+    "seoContent": {
+      "pl": [
+        "Penthouse Torrevieja to wyjątkowa oferta w centralnej części miasta, idealna dla osób, które chcą mieć wszystko pod ręką: usługi, restauracje, sklepy i plażę w komfortowej odległości.",
+        "Największym atutem nieruchomości jest prywatne solarium, które tworzy dodatkową przestrzeń do relaksu, spotkań i korzystania ze słońca przez większą część roku.",
+        "Układ apartamentu sprawdzi się zarówno przy codziennym użytkowaniu, jak i w modelu wynajmu wakacyjnego. Lokalizacja w Torrevieja zapewnia stałe zainteresowanie najemców sezonowych i całorocznych.",
+        "To propozycja dla klientów szukających gotowego stylu życia na Costa Blanca: blisko morza, z prywatną przestrzenią zewnętrzną i potencjałem inwestycyjnym."
+      ],
+      "en": [
+        "Penthouse Torrevieja is a unique offer in the central part of the city, ideal for buyers who want services, restaurants, shops and the beach within comfortable reach.",
+        "The key advantage of the property is the private solarium, creating additional outdoor space for relaxing, entertaining and enjoying the sun throughout much of the year.",
+        "The apartment layout works well for everyday use and for holiday rental. The Torrevieja location supports strong demand from both seasonal and year-round tenants.",
+        "It is an attractive option for buyers looking for a ready Mediterranean lifestyle on the Costa Blanca, close to the sea and with private outdoor space."
+      ],
+      "es": [
+        "Penthouse Torrevieja es una oferta única en la zona central de la ciudad, ideal para quienes quieren tener servicios, restaurantes, tiendas y playa a poca distancia.",
+        "Su principal ventaja es el solárium privado, que aporta un espacio exterior adicional para descansar, recibir invitados y disfrutar del sol durante gran parte del año.",
+        "La distribución funciona tanto para uso propio como para alquiler vacacional. La ubicación en Torrevieja mantiene una demanda constante de inquilinos de temporada y de larga estancia.",
+        "Es una opción atractiva para compradores que buscan un estilo de vida mediterráneo en la Costa Blanca, cerca del mar y con espacio exterior privado."
+      ],
+      "ru": [
+        "Penthouse Torrevieja — редкое предложение в центральной части города, идеально для тех, кто хочет иметь рядом сервисы, рестораны, магазины и пляж.",
+        "Главное преимущество объекта — частный солярий, который создаёт дополнительное пространство для отдыха, встреч и наслаждения солнцем большую часть года.",
+        "Планировка подходит как для личного проживания, так и для туристической аренды. Локация в Торревьехе обеспечивает стабильный спрос со стороны сезонных и долгосрочных арендаторов.",
+        "Это вариант для покупателей, которые ищут готовый средиземноморский образ жизни на Costa Blanca, рядом с морем и с приватной внешней зоной."
+      ]
+    },
+    "lead": [
+      "Penthouse Torrevieja to wyjątkowa oferta w centralnej części miasta, idealna dla osób, które chcą mieć wszystko pod ręką: usługi, restauracje, sklepy i plażę w komfortowej odległości.",
+      "Największym atutem nieruchomości jest prywatne solarium, które tworzy dodatkową przestrzeń do relaksu, spotkań i korzystania ze słońca przez większą część roku.",
+      "Układ apartamentu sprawdzi się zarówno przy codziennym użytkowaniu, jak i w modelu wynajmu wakacyjnego. Lokalizacja w Torrevieja zapewnia stałe zainteresowanie najemców sezonowych i całorocznych.",
+      "To propozycja dla klientów szukających gotowego stylu życia na Costa Blanca: blisko morza, z prywatną przestrzenią zewnętrzną i potencjałem inwestycyjnym."
+    ]
   },
   {
     "slug": "maranon",
@@ -157,7 +277,13 @@
         "price": "133 000 € – 310 000 €",
         "desc": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
         "seoDescription": "Nowoczesna inwestycja blisko plaży — idealna pod wynajem, wakacje i wzrost wartości.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Projekt oferuje praktyczne układy apartamentów, które dobrze odpowiadają potrzebom rynku wakacyjnego oraz osób planujących pobyty sezonowe na Costa Blanca.",
+        "lead": [
+          "Maranon to nowoczesna inwestycja w Torrevieja, położona około 180 metrów od morza, co czyni ją szczególnie atrakcyjną dla klientów szukających nieruchomości blisko plaży.",
+          "Projekt oferuje praktyczne układy apartamentów, które dobrze odpowiadają potrzebom rynku wakacyjnego oraz osób planujących pobyty sezonowe na Costa Blanca.",
+          "Bliskość morza, infrastruktury miejskiej i usług zwiększa potencjał wynajmu oraz płynność odsprzedaży w przyszłości.",
+          "Maranon to propozycja dla inwestorów i klientów prywatnych, którzy chcą wejść w rynek nieruchomości w Hiszpanii w rozsądnym budżecie i dobrej lokalizacji."
+        ]
       },
       "en": {
         "title": "Maranon",
@@ -165,7 +291,13 @@
         "price": "133 000 € – 310 000 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The project offers practical apartment layouts that match the needs of the holiday rental market and seasonal stays on the Costa Blanca.",
+        "lead": [
+          "Maranon is a modern development in Torrevieja located around 180 meters from the sea, making it especially attractive for buyers looking for property close to the beach.",
+          "The project offers practical apartment layouts that match the needs of the holiday rental market and seasonal stays on the Costa Blanca.",
+          "Proximity to the sea, urban infrastructure and services increases rental potential and future resale liquidity.",
+          "Maranon is a strong option for investors and private buyers seeking entry into the Spanish property market with a reasonable budget and a good location."
+        ]
       },
       "es": {
         "title": "Maranon",
@@ -173,7 +305,13 @@
         "price": "133 000 € – 310 000 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "El proyecto ofrece distribuciones prácticas que encajan bien con el mercado de alquiler vacacional y las estancias de temporada en la Costa Blanca.",
+        "lead": [
+          "Maranon es una promoción moderna en Torrevieja situada a unos 180 metros del mar, una ventaja clave para compradores que buscan vivienda cerca de la playa.",
+          "El proyecto ofrece distribuciones prácticas que encajan bien con el mercado de alquiler vacacional y las estancias de temporada en la Costa Blanca.",
+          "La proximidad al mar, a la infraestructura urbana y a los servicios aumenta el potencial de alquiler y la liquidez de reventa futura.",
+          "Maranon es una opción sólida para inversores y compradores privados que buscan entrar en el mercado inmobiliario español con un presupuesto razonable y buena ubicación."
+        ]
       },
       "ru": {
         "title": "Maranon",
@@ -181,9 +319,51 @@
         "price": "133 000 € – 310 000 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Проект предлагает практичные планировки апартаментов, подходящие для туристической аренды и сезонного проживания на Costa Blanca.",
+        "lead": [
+          "Maranon — современный проект в Торревьехе примерно в 180 метрах от моря, что делает его особенно привлекательным для покупателей, ищущих недвижимость рядом с пляжем.",
+          "Проект предлагает практичные планировки апартаментов, подходящие для туристической аренды и сезонного проживания на Costa Blanca.",
+          "Близость моря, городской инфраструктуры и сервисов повышает арендный потенциал и ликвидность при будущей продаже.",
+          "Maranon подходит инвесторам и частным покупателям, которые хотят войти на рынок недвижимости Испании с разумным бюджетом и хорошей локацией."
+        ]
       }
-    }
+    },
+    "shareTitle": "Maranon",
+    "sharePrice": "od 133 000 €",
+    "shareDescription": "Maranon · od 133 000 €",
+    "shareImage": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+    "seoContent": {
+      "pl": [
+        "Maranon to nowoczesna inwestycja w Torrevieja, położona około 180 metrów od morza, co czyni ją szczególnie atrakcyjną dla klientów szukających nieruchomości blisko plaży.",
+        "Projekt oferuje praktyczne układy apartamentów, które dobrze odpowiadają potrzebom rynku wakacyjnego oraz osób planujących pobyty sezonowe na Costa Blanca.",
+        "Bliskość morza, infrastruktury miejskiej i usług zwiększa potencjał wynajmu oraz płynność odsprzedaży w przyszłości.",
+        "Maranon to propozycja dla inwestorów i klientów prywatnych, którzy chcą wejść w rynek nieruchomości w Hiszpanii w rozsądnym budżecie i dobrej lokalizacji."
+      ],
+      "en": [
+        "Maranon is a modern development in Torrevieja located around 180 meters from the sea, making it especially attractive for buyers looking for property close to the beach.",
+        "The project offers practical apartment layouts that match the needs of the holiday rental market and seasonal stays on the Costa Blanca.",
+        "Proximity to the sea, urban infrastructure and services increases rental potential and future resale liquidity.",
+        "Maranon is a strong option for investors and private buyers seeking entry into the Spanish property market with a reasonable budget and a good location."
+      ],
+      "es": [
+        "Maranon es una promoción moderna en Torrevieja situada a unos 180 metros del mar, una ventaja clave para compradores que buscan vivienda cerca de la playa.",
+        "El proyecto ofrece distribuciones prácticas que encajan bien con el mercado de alquiler vacacional y las estancias de temporada en la Costa Blanca.",
+        "La proximidad al mar, a la infraestructura urbana y a los servicios aumenta el potencial de alquiler y la liquidez de reventa futura.",
+        "Maranon es una opción sólida para inversores y compradores privados que buscan entrar en el mercado inmobiliario español con un presupuesto razonable y buena ubicación."
+      ],
+      "ru": [
+        "Maranon — современный проект в Торревьехе примерно в 180 метрах от моря, что делает его особенно привлекательным для покупателей, ищущих недвижимость рядом с пляжем.",
+        "Проект предлагает практичные планировки апартаментов, подходящие для туристической аренды и сезонного проживания на Costa Blanca.",
+        "Близость моря, городской инфраструктуры и сервисов повышает арендный потенциал и ликвидность при будущей продаже.",
+        "Maranon подходит инвесторам и частным покупателям, которые хотят войти на рынок недвижимости Испании с разумным бюджетом и хорошей локацией."
+      ]
+    },
+    "lead": [
+      "Maranon to nowoczesna inwestycja w Torrevieja, położona około 180 metrów od morza, co czyni ją szczególnie atrakcyjną dla klientów szukających nieruchomości blisko plaży.",
+      "Projekt oferuje praktyczne układy apartamentów, które dobrze odpowiadają potrzebom rynku wakacyjnego oraz osób planujących pobyty sezonowe na Costa Blanca.",
+      "Bliskość morza, infrastruktury miejskiej i usług zwiększa potencjał wynajmu oraz płynność odsprzedaży w przyszłości.",
+      "Maranon to propozycja dla inwestorów i klientów prywatnych, którzy chcą wejść w rynek nieruchomości w Hiszpanii w rozsądnym budżecie i dobrej lokalizacji."
+    ]
   },
   {
     "slug": "monteagudo",
@@ -219,7 +399,13 @@
         "price": "od 104 000 €",
         "desc": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
         "seoDescription": "Inwestycja z planem ratalnym — niski próg wejścia i pełne wykończenie w cenie.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Atutem projektu są elastyczne warunki płatności oraz możliwość zakupu nieruchomości w atrakcyjnej cenie w popularnej lokalizacji Costa Blanca.",
+        "lead": [
+          "Monteagudo to oferta dla klientów, którzy szukają wejścia na rynek nieruchomości w Hiszpanii przy relatywnie niskim budżecie początkowym.",
+          "Atutem projektu są elastyczne warunki płatności oraz możliwość zakupu nieruchomości w atrakcyjnej cenie w popularnej lokalizacji Costa Blanca.",
+          "To rozwiązanie dla inwestorów rozpoczynających budowę portfela nieruchomości, a także dla osób planujących własne miejsce do wypoczynku w Torrevieja.",
+          "Dzięki połączeniu ceny, lokalizacji i prostego produktu inwestycyjnego Monteagudo może być dobrym pierwszym krokiem w zakupie nieruchomości w Hiszpanii."
+        ]
       },
       "en": {
         "title": "Monteagudo",
@@ -227,7 +413,13 @@
         "price": "od 104 000 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The project benefits from flexible payment conditions and the opportunity to purchase property at an attractive price in a popular Costa Blanca location.",
+        "lead": [
+          "Monteagudo is an offer for buyers looking to enter the Spanish property market with a relatively low initial budget.",
+          "The project benefits from flexible payment conditions and the opportunity to purchase property at an attractive price in a popular Costa Blanca location.",
+          "It is suitable for investors starting to build a property portfolio, as well as for buyers planning their own holiday base in Torrevieja.",
+          "With its combination of price, location and straightforward investment profile, Monteagudo can be a strong first step into Spanish real estate."
+        ]
       },
       "es": {
         "title": "Monteagudo",
@@ -235,7 +427,13 @@
         "price": "od 104 000 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "El proyecto destaca por sus condiciones de pago flexibles y la posibilidad de adquirir una vivienda a precio atractivo en una zona popular de la Costa Blanca.",
+        "lead": [
+          "Monteagudo es una opción para compradores que buscan entrar en el mercado inmobiliario español con un presupuesto inicial relativamente bajo.",
+          "El proyecto destaca por sus condiciones de pago flexibles y la posibilidad de adquirir una vivienda a precio atractivo en una zona popular de la Costa Blanca.",
+          "Es adecuado para inversores que empiezan a crear una cartera inmobiliaria y para compradores que desean una base vacacional en Torrevieja.",
+          "Gracias a su combinación de precio, ubicación y producto sencillo, Monteagudo puede ser un buen primer paso en la inversión inmobiliaria en España."
+        ]
       },
       "ru": {
         "title": "Monteagudo",
@@ -243,9 +441,51 @@
         "price": "od 104 000 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Сильная сторона проекта — гибкие условия оплаты и возможность купить объект по привлекательной цене в популярной локации Costa Blanca.",
+        "lead": [
+          "Monteagudo — вариант для покупателей, которые хотят войти на рынок недвижимости Испании с относительно небольшим стартовым бюджетом.",
+          "Сильная сторона проекта — гибкие условия оплаты и возможность купить объект по привлекательной цене в популярной локации Costa Blanca.",
+          "Он подходит инвесторам, которые начинают формировать портфель недвижимости, а также покупателям, ищущим место для отдыха в Торревьехе.",
+          "Благодаря сочетанию цены, локации и понятного инвестиционного формата Monteagudo может стать хорошим первым шагом в покупке недвижимости в Испании."
+        ]
       }
-    }
+    },
+    "shareTitle": "Monteagudo",
+    "sharePrice": "od 104 000 €",
+    "shareDescription": "Monteagudo · od 104 000 €",
+    "shareImage": "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+    "seoContent": {
+      "pl": [
+        "Monteagudo to oferta dla klientów, którzy szukają wejścia na rynek nieruchomości w Hiszpanii przy relatywnie niskim budżecie początkowym.",
+        "Atutem projektu są elastyczne warunki płatności oraz możliwość zakupu nieruchomości w atrakcyjnej cenie w popularnej lokalizacji Costa Blanca.",
+        "To rozwiązanie dla inwestorów rozpoczynających budowę portfela nieruchomości, a także dla osób planujących własne miejsce do wypoczynku w Torrevieja.",
+        "Dzięki połączeniu ceny, lokalizacji i prostego produktu inwestycyjnego Monteagudo może być dobrym pierwszym krokiem w zakupie nieruchomości w Hiszpanii."
+      ],
+      "en": [
+        "Monteagudo is an offer for buyers looking to enter the Spanish property market with a relatively low initial budget.",
+        "The project benefits from flexible payment conditions and the opportunity to purchase property at an attractive price in a popular Costa Blanca location.",
+        "It is suitable for investors starting to build a property portfolio, as well as for buyers planning their own holiday base in Torrevieja.",
+        "With its combination of price, location and straightforward investment profile, Monteagudo can be a strong first step into Spanish real estate."
+      ],
+      "es": [
+        "Monteagudo es una opción para compradores que buscan entrar en el mercado inmobiliario español con un presupuesto inicial relativamente bajo.",
+        "El proyecto destaca por sus condiciones de pago flexibles y la posibilidad de adquirir una vivienda a precio atractivo en una zona popular de la Costa Blanca.",
+        "Es adecuado para inversores que empiezan a crear una cartera inmobiliaria y para compradores que desean una base vacacional en Torrevieja.",
+        "Gracias a su combinación de precio, ubicación y producto sencillo, Monteagudo puede ser un buen primer paso en la inversión inmobiliaria en España."
+      ],
+      "ru": [
+        "Monteagudo — вариант для покупателей, которые хотят войти на рынок недвижимости Испании с относительно небольшим стартовым бюджетом.",
+        "Сильная сторона проекта — гибкие условия оплаты и возможность купить объект по привлекательной цене в популярной локации Costa Blanca.",
+        "Он подходит инвесторам, которые начинают формировать портфель недвижимости, а также покупателям, ищущим место для отдыха в Торревьехе.",
+        "Благодаря сочетанию цены, локации и понятного инвестиционного формата Monteagudo может стать хорошим первым шагом в покупке недвижимости в Испании."
+      ]
+    },
+    "lead": [
+      "Monteagudo to oferta dla klientów, którzy szukają wejścia na rynek nieruchomości w Hiszpanii przy relatywnie niskim budżecie początkowym.",
+      "Atutem projektu są elastyczne warunki płatności oraz możliwość zakupu nieruchomości w atrakcyjnej cenie w popularnej lokalizacji Costa Blanca.",
+      "To rozwiązanie dla inwestorów rozpoczynających budowę portfela nieruchomości, a także dla osób planujących własne miejsce do wypoczynku w Torrevieja.",
+      "Dzięki połączeniu ceny, lokalizacji i prostego produktu inwestycyjnego Monteagudo może być dobrym pierwszym krokiem w zakupie nieruchomości w Hiszpanii."
+    ]
   },
   {
     "slug": "16-villas-polop",
@@ -289,7 +529,13 @@
         "price": "455 926 €",
         "desc": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
         "seoDescription": "Nowoczesne wille z prywatnym basenem i widokiem na naturę — cisza i przestrzeń Costa Blanca.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Każda nieruchomość oferuje komfortowy układ, prywatny basen oraz przestrzeń zewnętrzną, która pozwala korzystać ze śródziemnomorskiego klimatu przez cały rok.",
+        "lead": [
+          "16 Villas en Polop to projekt nowoczesnych willi dla klientów, którzy cenią prywatność, przestrzeń i kontakt z naturą.",
+          "Każda nieruchomość oferuje komfortowy układ, prywatny basen oraz przestrzeń zewnętrzną, która pozwala korzystać ze śródziemnomorskiego klimatu przez cały rok.",
+          "Polop to spokojna lokalizacja z pięknymi widokami, dobrym dojazdem do wybrzeża i rosnącym zainteresowaniem ze strony kupujących premium.",
+          "Projekt sprawdzi się jako dom do życia, wakacyjna rezydencja lub nieruchomość pod wynajem dla klientów szukających willi na Costa Blanca."
+        ]
       },
       "en": {
         "title": "16 Villas en Polop",
@@ -297,7 +543,13 @@
         "price": "455 926 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "Each property offers a comfortable layout, private pool and outdoor space designed for enjoying the Mediterranean climate throughout the year.",
+        "lead": [
+          "16 Villas en Polop is a project of modern villas for buyers who value privacy, space and contact with nature.",
+          "Each property offers a comfortable layout, private pool and outdoor space designed for enjoying the Mediterranean climate throughout the year.",
+          "Polop is a peaceful location with beautiful views, good access to the coast and growing interest among premium buyers.",
+          "The project is suitable as a permanent home, holiday residence or rental property for clients looking for villas on the Costa Blanca."
+        ]
       },
       "es": {
         "title": "16 Villas en Polop",
@@ -305,7 +557,13 @@
         "price": "455 926 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "Cada vivienda ofrece una distribución cómoda, piscina privada y espacio exterior pensado para disfrutar del clima mediterráneo durante todo el año.",
+        "lead": [
+          "16 Villas en Polop es un proyecto de villas modernas para compradores que valoran privacidad, espacio y contacto con la naturaleza.",
+          "Cada vivienda ofrece una distribución cómoda, piscina privada y espacio exterior pensado para disfrutar del clima mediterráneo durante todo el año.",
+          "Polop es una ubicación tranquila con bonitas vistas, buen acceso a la costa y creciente interés entre compradores premium.",
+          "El proyecto funciona como vivienda habitual, residencia vacacional o propiedad para alquiler para clientes que buscan villas en la Costa Blanca."
+        ]
       },
       "ru": {
         "title": "16 Villas en Polop",
@@ -313,9 +571,51 @@
         "price": "455 926 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Каждая вилла предлагает комфортную планировку, частный бассейн и внешнюю зону для жизни на открытом воздухе круглый год.",
+        "lead": [
+          "16 Villas en Polop — проект современных вилл для покупателей, которые ценят приватность, пространство и близость к природе.",
+          "Каждая вилла предлагает комфортную планировку, частный бассейн и внешнюю зону для жизни на открытом воздухе круглый год.",
+          "Полоп — спокойная локация с красивыми видами, удобным доступом к побережью и растущим интересом со стороны премиальных покупателей.",
+          "Проект подходит для постоянного проживания, отдыха или аренды для клиентов, ищущих виллы на Costa Blanca."
+        ]
       }
-    }
+    },
+    "shareTitle": "16 Villas en Polop",
+    "sharePrice": "od 455 926 €",
+    "shareDescription": "16 Villas en Polop · od 455 926 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983658/conversions/01KBN2DEYCS8J2KC5DP9DWEWYE-medium.jpg",
+    "seoContent": {
+      "pl": [
+        "16 Villas en Polop to projekt nowoczesnych willi dla klientów, którzy cenią prywatność, przestrzeń i kontakt z naturą.",
+        "Każda nieruchomość oferuje komfortowy układ, prywatny basen oraz przestrzeń zewnętrzną, która pozwala korzystać ze śródziemnomorskiego klimatu przez cały rok.",
+        "Polop to spokojna lokalizacja z pięknymi widokami, dobrym dojazdem do wybrzeża i rosnącym zainteresowaniem ze strony kupujących premium.",
+        "Projekt sprawdzi się jako dom do życia, wakacyjna rezydencja lub nieruchomość pod wynajem dla klientów szukających willi na Costa Blanca."
+      ],
+      "en": [
+        "16 Villas en Polop is a project of modern villas for buyers who value privacy, space and contact with nature.",
+        "Each property offers a comfortable layout, private pool and outdoor space designed for enjoying the Mediterranean climate throughout the year.",
+        "Polop is a peaceful location with beautiful views, good access to the coast and growing interest among premium buyers.",
+        "The project is suitable as a permanent home, holiday residence or rental property for clients looking for villas on the Costa Blanca."
+      ],
+      "es": [
+        "16 Villas en Polop es un proyecto de villas modernas para compradores que valoran privacidad, espacio y contacto con la naturaleza.",
+        "Cada vivienda ofrece una distribución cómoda, piscina privada y espacio exterior pensado para disfrutar del clima mediterráneo durante todo el año.",
+        "Polop es una ubicación tranquila con bonitas vistas, buen acceso a la costa y creciente interés entre compradores premium.",
+        "El proyecto funciona como vivienda habitual, residencia vacacional o propiedad para alquiler para clientes que buscan villas en la Costa Blanca."
+      ],
+      "ru": [
+        "16 Villas en Polop — проект современных вилл для покупателей, которые ценят приватность, пространство и близость к природе.",
+        "Каждая вилла предлагает комфортную планировку, частный бассейн и внешнюю зону для жизни на открытом воздухе круглый год.",
+        "Полоп — спокойная локация с красивыми видами, удобным доступом к побережью и растущим интересом со стороны премиальных покупателей.",
+        "Проект подходит для постоянного проживания, отдыха или аренды для клиентов, ищущих виллы на Costa Blanca."
+      ]
+    },
+    "lead": [
+      "16 Villas en Polop to projekt nowoczesnych willi dla klientów, którzy cenią prywatność, przestrzeń i kontakt z naturą.",
+      "Każda nieruchomość oferuje komfortowy układ, prywatny basen oraz przestrzeń zewnętrzną, która pozwala korzystać ze śródziemnomorskiego klimatu przez cały rok.",
+      "Polop to spokojna lokalizacja z pięknymi widokami, dobrym dojazdem do wybrzeża i rosnącym zainteresowaniem ze strony kupujących premium.",
+      "Projekt sprawdzi się jako dom do życia, wakacyjna rezydencja lub nieruchomość pod wynajem dla klientów szukających willi na Costa Blanca."
+    ]
   },
   {
     "slug": "calpe-balcones",
@@ -359,7 +659,13 @@
         "price": "599 106 €",
         "desc": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
         "seoDescription": "Ekskluzywne apartamenty z widokiem na morze — design, lokalizacja i premium lifestyle.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Projekt łączy widoki, komfort i bliskość infrastruktury Calpe, co czyni go atrakcyjnym zarówno dla klientów prywatnych, jak i inwestorów.",
+        "lead": [
+          "Balcones de Calpe to elegancka oferta w jednej z najbardziej rozpoznawalnych lokalizacji północnej Costa Blanca, zaledwie około 400 metrów od plaży.",
+          "Projekt łączy widoki, komfort i bliskość infrastruktury Calpe, co czyni go atrakcyjnym zarówno dla klientów prywatnych, jak i inwestorów.",
+          "Apartamenty oferują przestrzeń, światło i nowoczesny standard, a lokalizacja przyciąga osoby szukające stylu życia premium nad morzem.",
+          "Balcones de Calpe to propozycja dla klientów, którzy chcą połączyć prestiżową lokalizację, wypoczynek i potencjał wzrostu wartości nieruchomości."
+        ]
       },
       "en": {
         "title": "Balcones de Calpe",
@@ -367,7 +673,13 @@
         "price": "599 106 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The project combines views, comfort and proximity to Calpe infrastructure, making it attractive for private buyers and investors.",
+        "lead": [
+          "Balcones de Calpe is an elegant offer in one of the most recognizable locations on the northern Costa Blanca, around 400 meters from the beach.",
+          "The project combines views, comfort and proximity to Calpe infrastructure, making it attractive for private buyers and investors.",
+          "The apartments offer space, light and a modern standard, while the location appeals to buyers looking for a premium seaside lifestyle.",
+          "Balcones de Calpe is suitable for clients who want to combine a prestigious location, holiday use and long-term property value potential."
+        ]
       },
       "es": {
         "title": "Balcones de Calpe",
@@ -375,7 +687,13 @@
         "price": "599 106 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "El proyecto combina vistas, confort y proximidad a la infraestructura de Calpe, lo que lo hace atractivo para compradores privados e inversores.",
+        "lead": [
+          "Balcones de Calpe es una oferta elegante en una de las ubicaciones más reconocidas del norte de la Costa Blanca, a unos 400 metros de la playa.",
+          "El proyecto combina vistas, confort y proximidad a la infraestructura de Calpe, lo que lo hace atractivo para compradores privados e inversores.",
+          "Los apartamentos ofrecen espacio, luz y un estándar moderno, mientras que la ubicación atrae a quienes buscan un estilo de vida premium junto al mar.",
+          "Balcones de Calpe es una opción para clientes que desean unir ubicación prestigiosa, uso vacacional y potencial de revalorización."
+        ]
       },
       "ru": {
         "title": "Balcones de Calpe",
@@ -383,9 +701,51 @@
         "price": "599 106 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Проект сочетает виды, комфорт и близость инфраструктуры Кальпе, что делает его привлекательным для частных покупателей и инвесторов.",
+        "lead": [
+          "Balcones de Calpe — элегантное предложение в одной из самых узнаваемых локаций северной Costa Blanca, примерно в 400 метрах от пляжа.",
+          "Проект сочетает виды, комфорт и близость инфраструктуры Кальпе, что делает его привлекательным для частных покупателей и инвесторов.",
+          "Апартаменты предлагают пространство, свет и современный стандарт, а локация привлекает тех, кто ищет премиальный образ жизни у моря.",
+          "Balcones de Calpe подходит клиентам, которые хотят объединить престижную локацию, отдых и потенциал роста стоимости недвижимости."
+        ]
       }
-    }
+    },
+    "shareTitle": "Balcones de Calpe",
+    "sharePrice": "od 599 106 €",
+    "shareDescription": "Balcones de Calpe · od 599 106 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+    "seoContent": {
+      "pl": [
+        "Balcones de Calpe to elegancka oferta w jednej z najbardziej rozpoznawalnych lokalizacji północnej Costa Blanca, zaledwie około 400 metrów od plaży.",
+        "Projekt łączy widoki, komfort i bliskość infrastruktury Calpe, co czyni go atrakcyjnym zarówno dla klientów prywatnych, jak i inwestorów.",
+        "Apartamenty oferują przestrzeń, światło i nowoczesny standard, a lokalizacja przyciąga osoby szukające stylu życia premium nad morzem.",
+        "Balcones de Calpe to propozycja dla klientów, którzy chcą połączyć prestiżową lokalizację, wypoczynek i potencjał wzrostu wartości nieruchomości."
+      ],
+      "en": [
+        "Balcones de Calpe is an elegant offer in one of the most recognizable locations on the northern Costa Blanca, around 400 meters from the beach.",
+        "The project combines views, comfort and proximity to Calpe infrastructure, making it attractive for private buyers and investors.",
+        "The apartments offer space, light and a modern standard, while the location appeals to buyers looking for a premium seaside lifestyle.",
+        "Balcones de Calpe is suitable for clients who want to combine a prestigious location, holiday use and long-term property value potential."
+      ],
+      "es": [
+        "Balcones de Calpe es una oferta elegante en una de las ubicaciones más reconocidas del norte de la Costa Blanca, a unos 400 metros de la playa.",
+        "El proyecto combina vistas, confort y proximidad a la infraestructura de Calpe, lo que lo hace atractivo para compradores privados e inversores.",
+        "Los apartamentos ofrecen espacio, luz y un estándar moderno, mientras que la ubicación atrae a quienes buscan un estilo de vida premium junto al mar.",
+        "Balcones de Calpe es una opción para clientes que desean unir ubicación prestigiosa, uso vacacional y potencial de revalorización."
+      ],
+      "ru": [
+        "Balcones de Calpe — элегантное предложение в одной из самых узнаваемых локаций северной Costa Blanca, примерно в 400 метрах от пляжа.",
+        "Проект сочетает виды, комфорт и близость инфраструктуры Кальпе, что делает его привлекательным для частных покупателей и инвесторов.",
+        "Апартаменты предлагают пространство, свет и современный стандарт, а локация привлекает тех, кто ищет премиальный образ жизни у моря.",
+        "Balcones de Calpe подходит клиентам, которые хотят объединить престижную локацию, отдых и потенциал роста стоимости недвижимости."
+      ]
+    },
+    "lead": [
+      "Balcones de Calpe to elegancka oferta w jednej z najbardziej rozpoznawalnych lokalizacji północnej Costa Blanca, zaledwie około 400 metrów od plaży.",
+      "Projekt łączy widoki, komfort i bliskość infrastruktury Calpe, co czyni go atrakcyjnym zarówno dla klientów prywatnych, jak i inwestorów.",
+      "Apartamenty oferują przestrzeń, światło i nowoczesny standard, a lokalizacja przyciąga osoby szukające stylu życia premium nad morzem.",
+      "Balcones de Calpe to propozycja dla klientów, którzy chcą połączyć prestiżową lokalizację, wypoczynek i potencjał wzrostu wartości nieruchomości."
+    ]
   },
   {
     "slug": "royal-star",
@@ -429,7 +789,13 @@
         "price": "299 500 €",
         "desc": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
         "seoDescription": "Nowoczesne apartamenty kilka minut od plaży — idealne połączenie lokalizacji i ceny.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Projekt zapewnia wygodny dostęp do centrum, usług i wybrzeża, co zwiększa jego atrakcyjność zarówno dla użytkowania własnego, jak i wynajmu.",
+        "lead": [
+          "Royal Star to nowoczesna oferta w Guardamar del Segura, mieście znanym z szerokich plaż, naturalnych wydm i przyjaznej infrastruktury całorocznej.",
+          "Projekt zapewnia wygodny dostęp do centrum, usług i wybrzeża, co zwiększa jego atrakcyjność zarówno dla użytkowania własnego, jak i wynajmu.",
+          "Nieruchomość sprawdzi się dla klientów, którzy szukają rozsądnego budżetu, dobrej lokalizacji i możliwości korzystania z Costa Blanca przez cały rok.",
+          "Royal Star może być dobrym wyborem dla inwestora analizującego stabilny popyt w Guardamar oraz dla kupującego szukającego praktycznego apartamentu blisko morza."
+        ]
       },
       "en": {
         "title": "Royal Star",
@@ -437,7 +803,13 @@
         "price": "299 500 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The project provides convenient access to the center, services and the coast, increasing its appeal for both personal use and rental.",
+        "lead": [
+          "Royal Star is a modern offer in Guardamar del Segura, a town known for wide beaches, natural dunes and year-round infrastructure.",
+          "The project provides convenient access to the center, services and the coast, increasing its appeal for both personal use and rental.",
+          "The property is suitable for buyers looking for a reasonable budget, good location and the possibility to enjoy the Costa Blanca throughout the year.",
+          "Royal Star can be a strong choice for investors analyzing stable demand in Guardamar and for buyers seeking a practical apartment close to the sea."
+        ]
       },
       "es": {
         "title": "Royal Star",
@@ -445,7 +817,13 @@
         "price": "299 500 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "El proyecto ofrece acceso cómodo al centro, servicios y costa, aumentando su atractivo para uso propio y alquiler.",
+        "lead": [
+          "Royal Star es una oferta moderna en Guardamar del Segura, una localidad conocida por sus amplias playas, dunas naturales e infraestructura durante todo el año.",
+          "El proyecto ofrece acceso cómodo al centro, servicios y costa, aumentando su atractivo para uso propio y alquiler.",
+          "La propiedad es adecuada para compradores que buscan presupuesto razonable, buena ubicación y posibilidad de disfrutar la Costa Blanca todo el año.",
+          "Royal Star puede ser una buena opción para inversores que analizan demanda estable en Guardamar y para compradores que buscan un apartamento práctico cerca del mar."
+        ]
       },
       "ru": {
         "title": "Royal Star",
@@ -453,9 +831,51 @@
         "price": "299 500 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Проект обеспечивает удобный доступ к центру, сервисам и побережью, что повышает его привлекательность для личного использования и аренды.",
+        "lead": [
+          "Royal Star — современное предложение в Гуардамар-дель-Сегура, городе с широкими пляжами, природными дюнами и круглогодичной инфраструктурой.",
+          "Проект обеспечивает удобный доступ к центру, сервисам и побережью, что повышает его привлекательность для личного использования и аренды.",
+          "Объект подходит покупателям, которые ищут разумный бюджет, хорошую локацию и возможность пользоваться Costa Blanca круглый год.",
+          "Royal Star может быть хорошим выбором для инвестора, анализирующего стабильный спрос в Гуардамаре, и для покупателя, которому нужен практичный апартамент рядом с морем."
+        ]
       }
-    }
+    },
+    "shareTitle": "Royal Star",
+    "sharePrice": "od 299 500 €",
+    "shareDescription": "Royal Star · od 299 500 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+    "seoContent": {
+      "pl": [
+        "Royal Star to nowoczesna oferta w Guardamar del Segura, mieście znanym z szerokich plaż, naturalnych wydm i przyjaznej infrastruktury całorocznej.",
+        "Projekt zapewnia wygodny dostęp do centrum, usług i wybrzeża, co zwiększa jego atrakcyjność zarówno dla użytkowania własnego, jak i wynajmu.",
+        "Nieruchomość sprawdzi się dla klientów, którzy szukają rozsądnego budżetu, dobrej lokalizacji i możliwości korzystania z Costa Blanca przez cały rok.",
+        "Royal Star może być dobrym wyborem dla inwestora analizującego stabilny popyt w Guardamar oraz dla kupującego szukającego praktycznego apartamentu blisko morza."
+      ],
+      "en": [
+        "Royal Star is a modern offer in Guardamar del Segura, a town known for wide beaches, natural dunes and year-round infrastructure.",
+        "The project provides convenient access to the center, services and the coast, increasing its appeal for both personal use and rental.",
+        "The property is suitable for buyers looking for a reasonable budget, good location and the possibility to enjoy the Costa Blanca throughout the year.",
+        "Royal Star can be a strong choice for investors analyzing stable demand in Guardamar and for buyers seeking a practical apartment close to the sea."
+      ],
+      "es": [
+        "Royal Star es una oferta moderna en Guardamar del Segura, una localidad conocida por sus amplias playas, dunas naturales e infraestructura durante todo el año.",
+        "El proyecto ofrece acceso cómodo al centro, servicios y costa, aumentando su atractivo para uso propio y alquiler.",
+        "La propiedad es adecuada para compradores que buscan presupuesto razonable, buena ubicación y posibilidad de disfrutar la Costa Blanca todo el año.",
+        "Royal Star puede ser una buena opción para inversores que analizan demanda estable en Guardamar y para compradores que buscan un apartamento práctico cerca del mar."
+      ],
+      "ru": [
+        "Royal Star — современное предложение в Гуардамар-дель-Сегура, городе с широкими пляжами, природными дюнами и круглогодичной инфраструктурой.",
+        "Проект обеспечивает удобный доступ к центру, сервисам и побережью, что повышает его привлекательность для личного использования и аренды.",
+        "Объект подходит покупателям, которые ищут разумный бюджет, хорошую локацию и возможность пользоваться Costa Blanca круглый год.",
+        "Royal Star может быть хорошим выбором для инвестора, анализирующего стабильный спрос в Гуардамаре, и для покупателя, которому нужен практичный апартамент рядом с морем."
+      ]
+    },
+    "lead": [
+      "Royal Star to nowoczesna oferta w Guardamar del Segura, mieście znanym z szerokich plaż, naturalnych wydm i przyjaznej infrastruktury całorocznej.",
+      "Projekt zapewnia wygodny dostęp do centrum, usług i wybrzeża, co zwiększa jego atrakcyjność zarówno dla użytkowania własnego, jak i wynajmu.",
+      "Nieruchomość sprawdzi się dla klientów, którzy szukają rozsądnego budżetu, dobrej lokalizacji i możliwości korzystania z Costa Blanca przez cały rok.",
+      "Royal Star może być dobrym wyborem dla inwestora analizującego stabilny popyt w Guardamar oraz dla kupującego szukającego praktycznego apartamentu blisko morza."
+    ]
   },
   {
     "slug": "nature-views",
@@ -499,7 +919,13 @@
         "price": "315 000 €",
         "desc": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
         "seoDescription": "Stylowe bungalowy z dużymi tarasami i światłem — nowoczesna architektura i komfort.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Bungalowy wyróżniają się dużymi tarasami, funkcjonalnym układem oraz architekturą nastawioną na światło i wygodę codziennego użytkowania.",
+        "lead": [
+          "Nature Views to nowoczesny kompleks w Torrevieja, zaprojektowany dla klientów szukających komfortu, przestrzeni zewnętrznej i spokojnego otoczenia.",
+          "Bungalowy wyróżniają się dużymi tarasami, funkcjonalnym układem oraz architekturą nastawioną na światło i wygodę codziennego użytkowania.",
+          "Lokalizacja pozwala korzystać z usług Torrevieja, plaż, terenów rekreacyjnych i całorocznej infrastruktury regionu Costa Blanca.",
+          "Nature Views to propozycja dla rodzin, par i inwestorów, którzy szukają nowoczesnej nieruchomości z dobrą relacją ceny, jakości i powierzchni."
+        ]
       },
       "en": {
         "title": "Nature Views",
@@ -507,7 +933,13 @@
         "price": "315 000 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The bungalows stand out for their large terraces, functional layouts and architecture focused on light and everyday convenience.",
+        "lead": [
+          "Nature Views is a modern complex in Torrevieja designed for buyers looking for comfort, outdoor space and a calm residential environment.",
+          "The bungalows stand out for their large terraces, functional layouts and architecture focused on light and everyday convenience.",
+          "The location provides access to Torrevieja services, beaches, leisure areas and year-round Costa Blanca infrastructure.",
+          "Nature Views is suitable for families, couples and investors seeking a modern property with a strong balance of price, quality and space."
+        ]
       },
       "es": {
         "title": "Nature Views",
@@ -515,7 +947,13 @@
         "price": "315 000 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "Los bungalows destacan por sus grandes terrazas, distribuciones funcionales y arquitectura orientada a la luz y la comodidad diaria.",
+        "lead": [
+          "Nature Views es un complejo moderno en Torrevieja diseñado para compradores que buscan confort, espacio exterior y un entorno residencial tranquilo.",
+          "Los bungalows destacan por sus grandes terrazas, distribuciones funcionales y arquitectura orientada a la luz y la comodidad diaria.",
+          "La ubicación permite acceder a servicios de Torrevieja, playas, zonas de ocio e infraestructura durante todo el año.",
+          "Nature Views es adecuado para familias, parejas e inversores que buscan una propiedad moderna con buena relación entre precio, calidad y superficie."
+        ]
       },
       "ru": {
         "title": "Nature Views",
@@ -523,9 +961,51 @@
         "price": "315 000 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Бунгало выделяются большими террасами, функциональными планировками и архитектурой, ориентированной на свет и ежедневное удобство.",
+        "lead": [
+          "Nature Views — современный комплекс в Торревьехе для покупателей, которые ищут комфорт, внешнее пространство и спокойную жилую среду.",
+          "Бунгало выделяются большими террасами, функциональными планировками и архитектурой, ориентированной на свет и ежедневное удобство.",
+          "Локация обеспечивает доступ к сервисам Торревьехи, пляжам, зонам отдыха и круглогодичной инфраструктуре Costa Blanca.",
+          "Nature Views подходит семьям, парам и инвесторам, которые ищут современную недвижимость с хорошим балансом цены, качества и площади."
+        ]
       }
-    }
+    },
+    "shareTitle": "Nature Views",
+    "sharePrice": "od 315 000 €",
+    "shareDescription": "Nature Views · od 315 000 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg",
+    "seoContent": {
+      "pl": [
+        "Nature Views to nowoczesny kompleks w Torrevieja, zaprojektowany dla klientów szukających komfortu, przestrzeni zewnętrznej i spokojnego otoczenia.",
+        "Bungalowy wyróżniają się dużymi tarasami, funkcjonalnym układem oraz architekturą nastawioną na światło i wygodę codziennego użytkowania.",
+        "Lokalizacja pozwala korzystać z usług Torrevieja, plaż, terenów rekreacyjnych i całorocznej infrastruktury regionu Costa Blanca.",
+        "Nature Views to propozycja dla rodzin, par i inwestorów, którzy szukają nowoczesnej nieruchomości z dobrą relacją ceny, jakości i powierzchni."
+      ],
+      "en": [
+        "Nature Views is a modern complex in Torrevieja designed for buyers looking for comfort, outdoor space and a calm residential environment.",
+        "The bungalows stand out for their large terraces, functional layouts and architecture focused on light and everyday convenience.",
+        "The location provides access to Torrevieja services, beaches, leisure areas and year-round Costa Blanca infrastructure.",
+        "Nature Views is suitable for families, couples and investors seeking a modern property with a strong balance of price, quality and space."
+      ],
+      "es": [
+        "Nature Views es un complejo moderno en Torrevieja diseñado para compradores que buscan confort, espacio exterior y un entorno residencial tranquilo.",
+        "Los bungalows destacan por sus grandes terrazas, distribuciones funcionales y arquitectura orientada a la luz y la comodidad diaria.",
+        "La ubicación permite acceder a servicios de Torrevieja, playas, zonas de ocio e infraestructura durante todo el año.",
+        "Nature Views es adecuado para familias, parejas e inversores que buscan una propiedad moderna con buena relación entre precio, calidad y superficie."
+      ],
+      "ru": [
+        "Nature Views — современный комплекс в Торревьехе для покупателей, которые ищут комфорт, внешнее пространство и спокойную жилую среду.",
+        "Бунгало выделяются большими террасами, функциональными планировками и архитектурой, ориентированной на свет и ежедневное удобство.",
+        "Локация обеспечивает доступ к сервисам Торревьехи, пляжам, зонам отдыха и круглогодичной инфраструктуре Costa Blanca.",
+        "Nature Views подходит семьям, парам и инвесторам, которые ищут современную недвижимость с хорошим балансом цены, качества и площади."
+      ]
+    },
+    "lead": [
+      "Nature Views to nowoczesny kompleks w Torrevieja, zaprojektowany dla klientów szukających komfortu, przestrzeni zewnętrznej i spokojnego otoczenia.",
+      "Bungalowy wyróżniają się dużymi tarasami, funkcjonalnym układem oraz architekturą nastawioną na światło i wygodę codziennego użytkowania.",
+      "Lokalizacja pozwala korzystać z usług Torrevieja, plaż, terenów rekreacyjnych i całorocznej infrastruktury regionu Costa Blanca.",
+      "Nature Views to propozycja dla rodzin, par i inwestorów, którzy szukają nowoczesnej nieruchomości z dobrą relacją ceny, jakości i powierzchni."
+    ]
   },
   {
     "slug": "alonis-villas",
@@ -562,7 +1042,13 @@
         "price": "675 000 €",
         "desc": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
         "seoDescription": "Luksusowe wille nad morzem — prywatność, design i najwyższy standard życia.",
-        "seoDescription2": "Wybrana oferta Costa Blanca Invest z pełną galerią zdjęć, parametrami i szybkim kontaktem."
+        "seoDescription2": "Wille oferują przestronne układy, nowoczesną architekturę oraz atmosferę prywatnej rezydencji na Costa Blanca.",
+        "lead": [
+          "Alonis Villas to luksusowy projekt willowy w Villajoyosa, skierowany do klientów szukających prywatności, wysokiego standardu i bliskości morza.",
+          "Wille oferują przestronne układy, nowoczesną architekturę oraz atmosferę prywatnej rezydencji na Costa Blanca.",
+          "Villajoyosa łączy autentyczny śródziemnomorski charakter, kolorową starówkę, plaże i dobre połączenia z Alicante oraz Benidormem.",
+          "Alonis Villas to propozycja dla klientów premium, którzy szukają nieruchomości do życia, wypoczynku lub długoterminowej ochrony kapitału w Hiszpanii."
+        ]
       },
       "en": {
         "title": "Alonis Villas",
@@ -570,7 +1056,13 @@
         "price": "675 000 €",
         "desc": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
         "seoDescription": "Selected Costa Blanca property offer with a full photo gallery, key details and quick contact.",
-        "seoDescription2": "A premium option for living, holidays or investment on the Costa Blanca."
+        "seoDescription2": "The villas offer spacious layouts, modern architecture and the atmosphere of a private residence on the Costa Blanca.",
+        "lead": [
+          "Alonis Villas is a luxury villa project in Villajoyosa aimed at buyers seeking privacy, high standards and proximity to the sea.",
+          "The villas offer spacious layouts, modern architecture and the atmosphere of a private residence on the Costa Blanca.",
+          "Villajoyosa combines authentic Mediterranean character, a colorful old town, beaches and good connections to Alicante and Benidorm.",
+          "Alonis Villas is suitable for premium buyers looking for a property for living, holidays or long-term capital protection in Spain."
+        ]
       },
       "es": {
         "title": "Alonis Villas",
@@ -578,7 +1070,13 @@
         "price": "675 000 €",
         "desc": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
         "seoDescription": "Oferta seleccionada en la Costa Blanca con galería completa, detalles clave y contacto rápido.",
-        "seoDescription2": "Una opción premium para vivir, vacaciones o inversión en la Costa Blanca."
+        "seoDescription2": "Las villas ofrecen distribuciones amplias, arquitectura moderna y la atmósfera de una residencia privada en la Costa Blanca.",
+        "lead": [
+          "Alonis Villas es un proyecto de villas de lujo en Villajoyosa dirigido a compradores que buscan privacidad, alto estándar y cercanía al mar.",
+          "Las villas ofrecen distribuciones amplias, arquitectura moderna y la atmósfera de una residencia privada en la Costa Blanca.",
+          "Villajoyosa combina carácter mediterráneo auténtico, casco antiguo colorido, playas y buenas conexiones con Alicante y Benidorm.",
+          "Alonis Villas es una opción para compradores premium que buscan vivienda para vivir, vacaciones o protección de capital a largo plazo en España."
+        ]
       },
       "ru": {
         "title": "Alonis Villas",
@@ -586,8 +1084,50 @@
         "price": "675 000 €",
         "desc": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
         "seoDescription": "Выбранный объект на Costa Blanca с полной галереей фото, ключевыми параметрами и быстрым контактом.",
-        "seoDescription2": "Премиальный вариант для жизни, отдыха или инвестиций на Costa Blanca."
+        "seoDescription2": "Виллы предлагают просторные планировки, современную архитектуру и атмосферу частной резиденции на Costa Blanca.",
+        "lead": [
+          "Alonis Villas — роскошный проект вилл в Вильяхойосе для покупателей, которые ищут приватность, высокий стандарт и близость к морю.",
+          "Виллы предлагают просторные планировки, современную архитектуру и атмосферу частной резиденции на Costa Blanca.",
+          "Вильяхойоса сочетает аутентичный средиземноморский характер, цветной старый город, пляжи и удобное сообщение с Аликанте и Бенидормом.",
+          "Alonis Villas подходит премиальным покупателям, которые ищут недвижимость для жизни, отдыха или долгосрочной защиты капитала в Испании."
+        ]
       }
-    }
+    },
+    "shareTitle": "Alonis Villas",
+    "sharePrice": "od 675 000 €",
+    "shareDescription": "Alonis Villas · od 675 000 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg",
+    "seoContent": {
+      "pl": [
+        "Alonis Villas to luksusowy projekt willowy w Villajoyosa, skierowany do klientów szukających prywatności, wysokiego standardu i bliskości morza.",
+        "Wille oferują przestronne układy, nowoczesną architekturę oraz atmosferę prywatnej rezydencji na Costa Blanca.",
+        "Villajoyosa łączy autentyczny śródziemnomorski charakter, kolorową starówkę, plaże i dobre połączenia z Alicante oraz Benidormem.",
+        "Alonis Villas to propozycja dla klientów premium, którzy szukają nieruchomości do życia, wypoczynku lub długoterminowej ochrony kapitału w Hiszpanii."
+      ],
+      "en": [
+        "Alonis Villas is a luxury villa project in Villajoyosa aimed at buyers seeking privacy, high standards and proximity to the sea.",
+        "The villas offer spacious layouts, modern architecture and the atmosphere of a private residence on the Costa Blanca.",
+        "Villajoyosa combines authentic Mediterranean character, a colorful old town, beaches and good connections to Alicante and Benidorm.",
+        "Alonis Villas is suitable for premium buyers looking for a property for living, holidays or long-term capital protection in Spain."
+      ],
+      "es": [
+        "Alonis Villas es un proyecto de villas de lujo en Villajoyosa dirigido a compradores que buscan privacidad, alto estándar y cercanía al mar.",
+        "Las villas ofrecen distribuciones amplias, arquitectura moderna y la atmósfera de una residencia privada en la Costa Blanca.",
+        "Villajoyosa combina carácter mediterráneo auténtico, casco antiguo colorido, playas y buenas conexiones con Alicante y Benidorm.",
+        "Alonis Villas es una opción para compradores premium que buscan vivienda para vivir, vacaciones o protección de capital a largo plazo en España."
+      ],
+      "ru": [
+        "Alonis Villas — роскошный проект вилл в Вильяхойосе для покупателей, которые ищут приватность, высокий стандарт и близость к морю.",
+        "Виллы предлагают просторные планировки, современную архитектуру и атмосферу частной резиденции на Costa Blanca.",
+        "Вильяхойоса сочетает аутентичный средиземноморский характер, цветной старый город, пляжи и удобное сообщение с Аликанте и Бенидормом.",
+        "Alonis Villas подходит премиальным покупателям, которые ищут недвижимость для жизни, отдыха или долгосрочной защиты капитала в Испании."
+      ]
+    },
+    "lead": [
+      "Alonis Villas to luksusowy projekt willowy w Villajoyosa, skierowany do klientów szukających prywatności, wysokiego standardu i bliskości morza.",
+      "Wille oferują przestronne układy, nowoczesną architekturę oraz atmosferę prywatnej rezydencji na Costa Blanca.",
+      "Villajoyosa łączy autentyczny śródziemnomorski charakter, kolorową starówkę, plaże i dobre połączenia z Alicante oraz Benidormem.",
+      "Alonis Villas to propozycja dla klientów premium, którzy szukają nieruchomości do życia, wypoczynku lub długoterminowej ochrony kapitału w Hiszpanii."
+    ]
   }
 ]
