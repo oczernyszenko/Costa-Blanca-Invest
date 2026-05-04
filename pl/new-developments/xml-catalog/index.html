@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#0f6f85">
   <meta name="format-detection" content="telephone=no">
 
-  <meta property="og:type" content="product">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:site_name" content="Costa Blanca Invest">
   <meta property="og:title" content="Oferta nieruchomości | Costa Blanca Invest">
@@ -25,6 +25,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Costa Blanca Invest — oferta nieruchomości">
+  <meta property="og:image:type" content="image/jpeg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Oferta nieruchomości | Costa Blanca Invest">
@@ -544,25 +545,34 @@
     }
 
     function applyMeta(data){
-      const canonical=getShareUrl(data);
-      document.documentElement.lang=currentLang;
-      document.title=`${data.seoTitle || data.title} | Costa Blanca Invest`;
-      setAttr('meta[name="description"]','content',data.desc);
-      setAttr('#canonicalLink','href',canonical);
-      setAttr('#imageSrcLink','href',data.image);
-      setAttr('meta[property="og:locale"]','content',currentLang==='pl'?'pl_PL':currentLang==='en'?'en_GB':currentLang==='es'?'es_ES':'ru_RU');
-      setAttr('meta[property="og:title"]','content',`${data.title} · ${data.price} | Costa Blanca Invest`);
-      setAttr('meta[property="og:description"]','content',`${data.title} · ${data.price}. ${data.desc}`);
-      setAttr('meta[property="og:url"]','content',canonical);
-      setAttr('meta[property="og:image"]','content',data.image);
-      setAttr('meta[property="og:image:url"]','content',data.image);
-      setAttr('meta[property="og:image:secure_url"]','content',data.image);
-      setAttr('meta[property="og:image:alt"]','content',data.title);
-      setAttr('meta[name="twitter:title"]','content',`${data.title} · ${data.price} | Costa Blanca Invest`);
-      setAttr('meta[name="twitter:description"]','content',`${data.title} · ${data.price}. ${data.desc}`);
-      setAttr('meta[name="twitter:image"]','content',data.image);
-      setAttr('meta[name="twitter:url"]','content',canonical);
-    }
+  const canonical=getShareUrl(data);
+
+  // CLEAN SHARE (photo + title + price ONLY)
+  document.documentElement.lang=currentLang;
+  document.title=`${data.title}`;
+
+  const cleanDesc = `${data.title} · ${data.price}`;
+
+  setAttr('meta[name="description"]','content',cleanDesc);
+  setAttr('#canonicalLink','href',canonical);
+  setAttr('#imageSrcLink','href',data.image);
+
+  // OG
+  setAttr('meta[property="og:locale"]','content',currentLang==='pl'?'pl_PL':currentLang==='en'?'en_GB':currentLang==='es'?'es_ES':'ru_RU');
+  setAttr('meta[property="og:title"]','content',data.title);
+  setAttr('meta[property="og:description"]','content',cleanDesc);
+  setAttr('meta[property="og:url"]','content',canonical);
+  setAttr('meta[property="og:image"]','content',data.image);
+  setAttr('meta[property="og:image:url"]','content',data.image);
+  setAttr('meta[property="og:image:secure_url"]','content',data.image);
+  setAttr('meta[property="og:image:alt"]','content',data.title);
+
+  // Twitter
+  setAttr('meta[name="twitter:title"]','content',data.title);
+  setAttr('meta[name="twitter:description"]','content',cleanDesc);
+  setAttr('meta[name="twitter:image"]','content',data.image);
+  setAttr('meta[name="twitter:url"]','content',canonical);
+}
 
     function getParamIcon(label){
       const key = getParamKey(label);
