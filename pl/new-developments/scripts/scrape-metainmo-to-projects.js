@@ -15,29 +15,44 @@ async function scrape() {
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage'
+      '--disable-dev-shm-usage',
+      '--disable-gpu'
     ]
   });
 
   const page = await browser.newPage();
+
   await page.goto(SOURCE_URL, { waitUntil: 'networkidle2' });
 
+  console.log('⏳ Waiting for content...');
   await new Promise(resolve => setTimeout(resolve, 5000));
 
   const items = await page.evaluate(() => {
-    const cards = document.querySelectorAll('a[href*="/inmueble/"]');
-    return Array.from(cards).map(el => {
-      const title = el.querySelector('h3, h2')?.innerText || 'Property';
-      const href = el.href;
-      const img = el.querySelector('img')?.src || '';
+    const cards = document.querySelectorAll('.property-item, .item, article');
 
-      return { title, href, img };
-    });
+    return Array.from(cards).map(el => {
+      const title =
+        el.querySelector('h2, h3, .title')?.innerText?.trim() || 'Property';
+
+      const link =
+        el.querySelector('a')?.href || '';
+
+      const img =
+        el.querySelector('img')?.src || '';
+
+      return { title, href: link, img };
+    }).filter(i => i.href);
   });
+
+  console.log('📊 Found items:', items.length);
+  console.log(items.slice(0, 3));
 
   await browser.close();
 
-  console.log('Found:', items.length);
+  if (!items.length) {
+    console.log('❌ No items found → selector issue');
+    process.exit(1);
+  }
 
   let existing = [];
   if (fs.existsSync(projectsPath)) {
@@ -51,9 +66,11 @@ async function scrape() {
   for (let i = 0; i < items.length && newItems.length < LIMIT; i++) {
     const item = items[i];
 
-    const slug = item.href.split('/').pop();
+    if (!item.href) continue;
 
-    if (existingSlugs.has(slug)) continue;
+    const slug = item.href.split('/').filter(Boolean).pop();
+
+    if (!slug || existingSlugs.has(slug)) continue;
 
     const project = {
       slug,
@@ -121,7 +138,7 @@ async function scrape() {
   fs.writeFileSync(projectsPath, JSON.stringify(updated, null, 2));
 
   console.log('✅ Added:', newItems.length);
-  console.log('📦 Total:', updated.length);
+  console.log('📦 Total projects:', updated.length);
 }
 
 scrape();
