@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Oferta nieruchomości | Costa Blanca Invest</title>
+  <title id="dynamicTitle">Property</title>
   <meta name="description" content="Szczegóły oferty nieruchomości Costa Blanca Invest.">
   <link rel="canonical" id="canonicalLink" href="">
   <link rel="image_src" id="imageSrcLink" href="">
@@ -334,7 +334,6 @@
     }
 
     function getShareUrl(data, options={}){
-      // Share the real property page, not a separate static page.
       return getPropertyUrl(data, options);
     }
     async function copyText(value){
@@ -574,7 +573,7 @@
 
   // CLEAN SHARE (photo + title + price ONLY)
   document.documentElement.lang=currentLang;
-  document.title=`${data.title}`;
+  document.title = data.title;
 
   const cleanDesc = getShareLine(data);
 
@@ -729,7 +728,26 @@
 
     function renderNotFound(projects){const ui=UI[currentLang]||UI.pl;const known=projects.map(p=>p.slug).filter(Boolean).slice(0,10).join('<br>');templateApp.className='not-found';templateApp.innerHTML=`<h1>${esc(ui.not_found)}</h1><p>slug: ${esc(requestedSlug)}</p><p style="font-size:14px;line-height:1.7">${known}</p><p><a class="btn btn-main" href="/pl/new-developments/">${esc(ui.back_link)}</a></p>`;}
     async function fetchJsonFrom(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error(`${url} HTTP ${response.status}`);const data=await response.json();if(!Array.isArray(data))throw new Error(`${url} is not array`);return data;}
-    async function loadProjects(){const errors=[];for(const url of PROJECTS_URLS){try{const projects=await fetchJsonFrom(url);allProjects=projects;const item=findProject(projects,requestedSlug);if(!item){renderNotFound(projects);return;}renderProperty(item);console.info('projects.json loaded from',url);return;}catch(error){errors.push(error.message||String(error));}}console.warn('projects.json failed, using fallback',errors);allProjects=FALLBACK_PROJECTS;const fallback=findProject(FALLBACK_PROJECTS,requestedSlug)||FALLBACK_PROJECTS[0];renderProperty(fallback);}
+    async function loadProjects(){
+      const errors=[];
+      for(const url of PROJECTS_URLS){
+        try{
+          const projects=await fetchJsonFrom(url);
+          allProjects=projects;
+          const item=findProject(projects,requestedSlug);
+          if(!item){renderNotFound(projects);return;}
+          renderProperty(item);
+          console.info('projects.json loaded from',url);
+          return;
+        }catch(error){
+          errors.push(error.message||String(error));
+        }
+      }
+      console.warn('projects.json failed, using fallback',errors);
+      allProjects=FALLBACK_PROJECTS;
+      const fallback=findProject(FALLBACK_PROJECTS,requestedSlug)||FALLBACK_PROJECTS[0];
+      renderProperty(fallback);
+    }
 
     window.handleBrokenImage=function(img){if(img.dataset.fallbackApplied==='true')return;img.dataset.fallbackApplied='true';if(img.classList.contains('agent-avatar')){img.src=abs(AGENT_AVATAR);return;}img.src=abs(FALLBACK_IMAGE);};
     function openMediaLightbox(src){const box=document.getElementById('mediaLightbox');const content=document.getElementById('mediaLightboxContent');if(!box||!content||!src)return;content.innerHTML=`<img src="${esc(src)}" alt="Preview">`;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
@@ -737,7 +755,14 @@
     document.getElementById('mediaLightboxClose')?.addEventListener('click',closeMediaLightbox);
     document.getElementById('mediaLightbox')?.addEventListener('click',event=>{if(event.target===event.currentTarget)closeMediaLightbox();});
     document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMediaLightbox();});
-    document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>{currentLang=SUPPORTED_LANGS.includes(btn.dataset.lang)?btn.dataset.lang:'pl';syncLanguageUI();const url=new URL(window.location.href);if(currentLang==='pl')url.searchParams.delete('lang');else url.searchParams.set('lang',currentLang);window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`);if(currentProperty)renderProperty(currentProperty);}));
+    document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>{
+      currentLang=SUPPORTED_LANGS.includes(btn.dataset.lang)?btn.dataset.lang:'pl';
+      syncLanguageUI();
+      const url=new URL(window.location.href);
+      if(currentLang==='pl')url.searchParams.delete('lang');else url.searchParams.set('lang',currentLang);
+      window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`);
+      if(currentProperty)renderProperty(currentProperty);
+    }));
     document.getElementById('backLink')?.addEventListener('click',event=>{
       event.preventDefault();
       if(document.referrer && new URL(document.referrer).origin === window.location.origin){
