@@ -726,7 +726,8 @@
       const fillLocations = () => {
         if (!el.location) return;
         const current = state.location;
-        el.location.innerHTML = '<option value="">Wszystkie lokalizacje</option>';
+        const uiText = UI[state.lang] || UI.pl;
+        el.location.innerHTML = '<option value="">' + safe(uiText.locationAll) + '</option>';
         const map = new Map();
         projects.forEach(project => {
           const key = getLocationKey(project);
@@ -855,7 +856,14 @@
       if (el.contactForm) el.contactForm.addEventListener("submit", event => {
         event.preventDefault();
         const form = new FormData(el.contactForm);
-        const text = "Dzień dobry, interesuje mnie nowa inwestycja na Costa Blanca.%0AImię: " + encodeURIComponent(form.get("name") || "") + "%0ATelefon: " + encodeURIComponent(form.get("phone") || "") + "%0AEmail: " + encodeURIComponent(form.get("email") || "") + "%0AWiadomość: " + encodeURIComponent(form.get("message") || "");
+        const labels = {
+          pl: { hello: "Dzień dobry, interesuje mnie nowa inwestycja na Costa Blanca.", name: "Imię", phone: "Telefon", email: "Email", message: "Wiadomość" },
+          en: { hello: "Hello, I am interested in a new development on the Costa Blanca.", name: "Name", phone: "Phone", email: "Email", message: "Message" },
+          es: { hello: "Hola, me interesa una promoción de obra nueva en la Costa Blanca.", name: "Nombre", phone: "Teléfono", email: "Email", message: "Mensaje" },
+          ru: { hello: "Здравствуйте, меня интересует новостройка на Costa Blanca.", name: "Имя", phone: "Телефон", email: "Email", message: "Сообщение" }
+        };
+        const l = labels[state.lang] || labels.pl;
+        const text = encodeURIComponent(l.hello) + "%0A" + encodeURIComponent(l.name + ": ") + encodeURIComponent(form.get("name") || "") + "%0A" + encodeURIComponent(l.phone + ": ") + encodeURIComponent(form.get("phone") || "") + "%0A" + encodeURIComponent(l.email + ": ") + encodeURIComponent(form.get("email") || "") + "%0A" + encodeURIComponent(l.message + ": ") + encodeURIComponent(form.get("message") || "");
         window.open("https://wa.me/34604158859?text=" + text, "_blank", "noopener,noreferrer");
       });
 
