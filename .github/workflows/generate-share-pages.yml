@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'pl/new-developments/projects.json'
-      - 'scripts/generate-share-pages.js'
+      - 'pl/new-developments/scripts/generate-share-pages.js'
 
 jobs:
   build:
@@ -17,15 +17,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Run generator
-        run: node scripts/generate-share-pages.js
+      - name: Generate share pages
+        run: node pl/new-developments/scripts/generate-share-pages.js
 
-      - name: Commit share pages
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add pl/new-developments/share/
+          git add .
           git commit -m "Auto-generate share pages" || echo "No changes"
           git push
