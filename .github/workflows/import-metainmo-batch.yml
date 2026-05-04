@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 🔥 важно для rebase
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -35,24 +35,21 @@ jobs:
           IMPORT_LIMIT: ${{ github.event.inputs.limit }}
         run: node pl/new-developments/scripts/scrape-metainmo-to-projects.js
 
-      # 🔥 ПРОВЕРКА: файл реально создан?
       - name: Check projects.json
         run: |
           echo "==== CHECK FILE ===="
           ls -la pl/new-developments/
-          cat pl/new-developments/projects.json | head -n 20
+          echo "==== PREVIEW ===="
+          head -n 40 pl/new-developments/projects.json || echo "projects.json not found"
 
-      # 🔥 ГЛАВНЫЙ ФИКС (у тебя тут была проблема)
-      - name: Commit & Push (PRO FIX)
+      # ✅ НОВЫЙ БЛОК (безопасный)
+      - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          # подтягиваем изменения
-          git fetch origin
-
-          # пробуем аккуратно
-          git rebase origin/main || git rebase --abort
+          # подтягиваем актуальное состояние
+          git pull --rebase origin main
 
           # добавляем файл
           git add pl/new-developments/projects.json
@@ -63,5 +60,5 @@ jobs:
           # коммит
           git commit -m "Update projects.json [auto]"
 
-          # 🔥 форс пуш (иначе у тебя reject)
-          git push origin HEAD:main --force
+          # обычный push без force
+          git push origin main
