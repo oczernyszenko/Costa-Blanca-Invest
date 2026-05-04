@@ -27,6 +27,16 @@ jobs:
       - name: Install Puppeteer
         run: npm install puppeteer
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk-bridge2.0-0 \
+            libgtk-3-0 \
+            libxss1 \
+            libasound2t64
+
       - name: Run importer
         env:
           IMPORT_LIMIT: ${{ github.event.inputs.limit }}
