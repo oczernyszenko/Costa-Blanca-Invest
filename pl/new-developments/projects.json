@@ -132,7 +132,7 @@
     "imageOptimized": {
       "src": "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
       "loading": "eager",
-      "fetchPriority": "auto",
+      "fetchPriority": "high",
       "decoding": "async",
       "imageWidth": 1200,
       "imageHeight": 800,
@@ -255,7 +255,7 @@
     "imageOptimized": {
       "src": "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
       "loading": "eager",
-      "fetchPriority": "auto",
+      "fetchPriority": "high",
       "decoding": "async",
       "imageWidth": 1200,
       "imageHeight": 800,
@@ -2392,6 +2392,2666 @@
         "desc": "Nowoczesne domy w Gran Alacant z naciskiem na światło, funkcjonalność i wygodę codziennego życia blisko wybrzeża.",
         "chip": "Modern Homes",
         "alt": "Marino — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "linda-gran-alacant",
+    "sortOrder": 21,
+    "title": "Linda",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695634/conversions/01K6XNPZ2YH1YGXQ3B545XA9QE-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695637/conversions/01K6XNPZK52J81M3GNJ8RG8H60-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695636/conversions/01K6XNPZCHVH9DVXPBXXFZQJB2-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695634/conversions/01K6XNPZ2YH1YGXQ3B545XA9QE-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695637/conversions/01K6XNPZK52J81M3GNJ8RG8H60-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695636/conversions/01K6XNPZCHVH9DVXPBXXFZQJB2-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=linda-gran-alacant",
+    "price": "435 000 € – 530 000 €",
+    "priceValue": 435000,
+    "currency": "EUR",
+    "filterLocation": "gran-alacant",
+    "meta": "Gran Alacant · Costa Blanca South",
+    "desc": "Nowoczesna willa w Gran Alacant z jasnym układem, prywatną strefą wypoczynku i komfortem domu całorocznego blisko morza.",
+    "chip": "Villa · Gran Alacant",
+    "seoTitle": "Linda Gran Alacant | Nowoczesna willa blisko morza na Costa Blanca",
+    "seoDescription": "Linda w Gran Alacant: nowoczesna willa z 3 sypialniami, prywatną przestrzenią i dobrą lokalizacją na południu Costa Blanca.",
+    "keywords": [
+      "Linda",
+      "Gran Alacant",
+      "villa Costa Blanca",
+      "Santa Pola",
+      "nowa inwestycja"
+    ],
+    "badges": [
+      "Villa · Gran Alacant",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Linda",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "435 000 € – 530 000 €",
+        "desc": "Nowoczesna willa w Gran Alacant z jasnym układem, prywatną strefą wypoczynku i komfortem domu całorocznego blisko morza.",
+        "chip": "Villa · Gran Alacant",
+        "alt": "Linda — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Linda",
+        "meta": "Gran Alacant · Costa Blanca Sur",
+        "price": "435 000 € – 530 000 €",
+        "desc": "Villa moderna en Gran Alacant con distribución luminosa, zona privada de descanso y confort para vivir todo el año cerca del mar.",
+        "chip": "Villa · Gran Alacant",
+        "alt": "Linda — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Linda",
+        "meta": "Gran Alacant · Costa Blanca South",
+        "price": "435 000 € – 530 000 €",
+        "desc": "Modern villa in Gran Alacant with bright layouts, private outdoor living and year-round comfort close to the sea.",
+        "chip": "Villa · Gran Alacant",
+        "alt": "Linda — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Linda",
+        "meta": "Гран-Алакант · юг Costa Blanca",
+        "price": "435 000 € – 530 000 €",
+        "desc": "Современная вилла в Гран-Алаканте со светлой планировкой, приватной зоной отдыха и комфортом для жизни у моря круглый год.",
+        "chip": "Вилла · Гран-Алакант",
+        "alt": "Linda — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "my-white-resort-finestrat",
+    "sortOrder": 22,
+    "title": "MY WHITE RESORT",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811807/conversions/01JVC6D6FXMN68TDVS4DEH83D1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811808/conversions/01JVC6D6N1JFVFRD1RH85P2J74-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811809/conversions/01JVC6D6SDE0M35P3EWE8YMA67-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811807/conversions/01JVC6D6FXMN68TDVS4DEH83D1-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811808/conversions/01JVC6D6N1JFVFRD1RH85P2J74-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811809/conversions/01JVC6D6SDE0M35P3EWE8YMA67-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=my-white-resort-finestrat",
+    "price": "322 400 € – 362 400 €",
+    "priceValue": 322400,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · widoki na Benidorm · Costa Blanca",
+    "desc": "Apartamenty w prestiżowej części Finestrat z resortową atmosferą, widokami na Benidorm i dobrym potencjałem wynajmu.",
+    "chip": "Resort · Finestrat",
+    "seoTitle": "MY WHITE RESORT Finestrat | Apartamenty z widokiem na Benidorm",
+    "seoDescription": "MY WHITE RESORT w Finestrat: nowoczesne apartamenty z widokami, basenem i dobrym potencjałem inwestycyjnym na Costa Blanca.",
+    "keywords": [
+      "MY WHITE RESORT",
+      "Finestrat",
+      "Benidorm views",
+      "apartamenty Costa Blanca",
+      "resort"
+    ],
+    "badges": [
+      "Resort · Finestrat",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "MY WHITE RESORT",
+        "meta": "Finestrat · widoki na Benidorm · Costa Blanca",
+        "price": "322 400 € – 362 400 €",
+        "desc": "Apartamenty w prestiżowej części Finestrat z resortową atmosferą, widokami na Benidorm i dobrym potencjałem wynajmu.",
+        "chip": "Resort · Finestrat",
+        "alt": "MY WHITE RESORT — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "MY WHITE RESORT",
+        "meta": "Finestrat · vistas a Benidorm · Costa Blanca",
+        "price": "322 400 € – 362 400 €",
+        "desc": "Apartamentos en una zona prestigiosa de Finestrat con ambiente resort, vistas a Benidorm y buen potencial de alquiler.",
+        "chip": "Resort · Finestrat",
+        "alt": "MY WHITE RESORT — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "MY WHITE RESORT",
+        "meta": "Finestrat · Benidorm views · Costa Blanca",
+        "price": "322 400 € – 362 400 €",
+        "desc": "Apartments in a prime area of Finestrat with resort-style living, Benidorm views and strong rental potential.",
+        "chip": "Resort · Finestrat",
+        "alt": "MY WHITE RESORT — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "MY WHITE RESORT",
+        "meta": "Финестрат · виды на Бенидорм · Costa Blanca",
+        "price": "322 400 € – 362 400 €",
+        "desc": "Апартаменты в престижной зоне Финестрата с курортной атмосферой, видами на Бенидорм и потенциалом аренды.",
+        "chip": "Resort · Финестрат",
+        "alt": "MY WHITE RESORT — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "oasis-laguna-3-guardamar",
+    "sortOrder": 23,
+    "title": "Oasis Laguna 3",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215273/conversions/01KF0XJ7FR3BDV3V3NAJ8SZEX1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215274/conversions/01KF0XJ8VH0FQ79B3KVFC7XFDA-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215275/conversions/01KF0XJAB2P7CBGFYPDAPPMAV5-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215273/conversions/01KF0XJ7FR3BDV3V3NAJ8SZEX1-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215274/conversions/01KF0XJ8VH0FQ79B3KVFC7XFDA-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215275/conversions/01KF0XJAB2P7CBGFYPDAPPMAV5-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=oasis-laguna-3-guardamar",
+    "price": "222 000 € – 255 000 €",
+    "priceValue": 222000,
+    "currency": "EUR",
+    "filterLocation": "guardamar",
+    "meta": "Guardamar del Segura · El Raso · Costa Blanca South",
+    "desc": "Resortowy kompleks apartamentów w El Raso z terenami zielonymi, basenem i atrakcyjnym progiem wejścia inwestycyjnego.",
+    "chip": "Resort · El Raso",
+    "seoTitle": "Oasis Laguna 3 Guardamar | Apartamenty resortowe w El Raso",
+    "seoDescription": "Oasis Laguna 3 w Guardamar del Segura: apartamenty w El Raso, basen, tereny zielone i potencjał wynajmu wakacyjnego.",
+    "keywords": [
+      "Oasis Laguna 3",
+      "Guardamar",
+      "El Raso",
+      "apartamenty resortowe",
+      "Costa Blanca"
+    ],
+    "badges": [
+      "Resort · El Raso",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Oasis Laguna 3",
+        "meta": "Guardamar del Segura · El Raso · Costa Blanca South",
+        "price": "222 000 € – 255 000 €",
+        "desc": "Resortowy kompleks apartamentów w El Raso z terenami zielonymi, basenem i atrakcyjnym progiem wejścia inwestycyjnego.",
+        "chip": "Resort · El Raso",
+        "alt": "Oasis Laguna 3 — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Oasis Laguna 3",
+        "meta": "Guardamar del Segura · El Raso · Costa Blanca Sur",
+        "price": "222 000 € – 255 000 €",
+        "desc": "Complejo de apartamentos estilo resort en El Raso con zonas verdes, piscina y precio de entrada atractivo para inversión.",
+        "chip": "Resort · El Raso",
+        "alt": "Oasis Laguna 3 — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Oasis Laguna 3",
+        "meta": "Guardamar del Segura · El Raso · Costa Blanca South",
+        "price": "222 000 € – 255 000 €",
+        "desc": "Resort-style apartments in El Raso with landscaped areas, pool and an attractive investment entry point.",
+        "chip": "Resort · El Raso",
+        "alt": "Oasis Laguna 3 — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Oasis Laguna 3",
+        "meta": "Гуардамар-дель-Сегура · El Raso · юг Costa Blanca",
+        "price": "222 000 € – 255 000 €",
+        "desc": "Апартаменты в стиле resort в El Raso с зелёными зонами, бассейном и привлекательным входным бюджетом.",
+        "chip": "Resort · El Raso",
+        "alt": "Oasis Laguna 3 — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "slug": "residencial-vernissa-denia",
+    "sortOrder": 24,
+    "title": "Residencial Vernissa",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401818/conversions/property-181346-1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401819/conversions/property-181346-2-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401820/conversions/property-181346-3-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401818/conversions/property-181346-1-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401819/conversions/property-181346-2-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401820/conversions/property-181346-3-preview.jpg",
+        "loading": "lazy",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-vernissa-denia",
+    "price": "395 000 € – 475 000 €",
+    "priceValue": 395000,
+    "currency": "EUR",
+    "filterLocation": "denia",
+    "meta": "Dénia · Devesses - Monte Pego · 200 m do morza",
+    "desc": "Domy szeregowe w Dénia około 200 m od morza — prywatne osiedle, śródziemnomorski styl i świetna opcja na second home.",
+    "chip": "200 m do morza",
+    "seoTitle": "Residencial Vernissa Dénia | Domy szeregowe 200 m od morza",
+    "seoDescription": "Residencial Vernissa w Dénia: nowe domy szeregowe blisko morza, prywatne osiedle i śródziemnomorski styl życia.",
+    "keywords": [
+      "Residencial Vernissa",
+      "Dénia",
+      "domy szeregowe",
+      "200 m do morza",
+      "Costa Blanca North"
+    ],
+    "badges": [
+      "200 m do morza",
+      "Costa Blanca",
+      "Nowa inwestycja"
+    ],
+    "cta": {
+      "pl": "Poproś o szczegóły",
+      "es": "Solicitar información",
+      "en": "Request details",
+      "ru": "Запросить детали"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com",
+      "whatsapp": "+34604158859"
+    },
+    "status": "active",
+    "translations": {
+      "pl": {
+        "title": "Residencial Vernissa",
+        "meta": "Dénia · Devesses - Monte Pego · 200 m do morza",
+        "price": "395 000 € – 475 000 €",
+        "desc": "Domy szeregowe w Dénia około 200 m od morza — prywatne osiedle, śródziemnomorski styl i świetna opcja na second home.",
+        "chip": "200 m do morza",
+        "alt": "Residencial Vernissa — nowa inwestycja na Costa Blanca"
+      },
+      "es": {
+        "title": "Residencial Vernissa",
+        "meta": "Dénia · Devesses - Monte Pego · 200 m del mar",
+        "price": "395 000 € – 475 000 €",
+        "desc": "Adosados en Dénia a unos 200 m del mar: residencial privado, estilo mediterráneo y una gran opción como segunda vivienda.",
+        "chip": "200 m del mar",
+        "alt": "Residencial Vernissa — obra nueva en Costa Blanca"
+      },
+      "en": {
+        "title": "Residencial Vernissa",
+        "meta": "Dénia · Devesses - Monte Pego · 200 m to the sea",
+        "price": "395 000 € – 475 000 €",
+        "desc": "Townhouses in Dénia around 200 m from the sea: private community, Mediterranean style and a strong second-home option.",
+        "chip": "200 m to sea",
+        "alt": "Residencial Vernissa — new development on the Costa Blanca"
+      },
+      "ru": {
+        "title": "Residencial Vernissa",
+        "meta": "Дения · Devesses - Monte Pego · 200 м до моря",
+        "price": "395 000 € – 475 000 €",
+        "desc": "Таунхаусы в Дении примерно в 200 м от моря: приватный комплекс, средиземноморский стиль и отличный формат second home.",
+        "chip": "200 м до моря",
+        "alt": "Residencial Vernissa — новая инвестиция на Costa Blanca"
+      }
+    }
+  },
+  {
+    "sourceId": 481129,
+    "slug": "benidorm-hills-finestrat",
+    "sortOrder": 25,
+    "title": "Benidorm Hills",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406279/conversions/01KQHRKW99VSGKK6C56G7C74H1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406280/conversions/01KQHRKWRY4JBES0752WFPAKMT-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406281/conversions/01KQHRM0SJ30K8QQ1CME0N5F6D-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406279/conversions/01KQHRKW99VSGKK6C56G7C74H1-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406279/conversions/01KQHRKW99VSGKK6C56G7C74H1-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406279/conversions/01KQHRKW99VSGKK6C56G7C74H1-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406280/conversions/01KQHRKWRY4JBES0752WFPAKMT-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406280/conversions/01KQHRKWRY4JBES0752WFPAKMT-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406280/conversions/01KQHRKWRY4JBES0752WFPAKMT-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406281/conversions/01KQHRM0SJ30K8QQ1CME0N5F6D-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406281/conversions/01KQHRM0SJ30K8QQ1CME0N5F6D-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406281/conversions/01KQHRM0SJ30K8QQ1CME0N5F6D-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=benidorm-hills-finestrat",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/finestrat/promociones/benidorm-hills",
+    "price": "358 000 € – 604 000 €",
+    "priceValue": 358000,
+    "priceMaxValue": 604000,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · Alicante · Costa Blanca",
+    "address": "Alicante, Finestrat, Balcón de Finestrat-Terra Marina",
+    "propertyType": "apartment",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "builtArea": 78.0,
+    "distanceToSea": 2000,
+    "deliveryYear": 2029,
+    "unitCount": 6,
+    "developer": "Alibuilding",
+    "commission": "6.0",
+    "status": "W budowie",
+    "desc": "Benidorm Hills to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 2000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 6 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Benidorm Hills daje mocny punkt wejścia od 358 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Finestrat wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · Finestrat",
+    "seoTitle": "Benidorm Hills Finestrat | Nowa inwestycja na Costa Blanca od 358 000 €",
+    "seoDescription": "Benidorm Hills w Finestrat: nowe apartamenty na Costa Blanca, około 2000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Benidorm Hills",
+      "Finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Siłownia",
+      "Kort do padla",
+      "Plac zabaw",
+      "Zielone strefy",
+      "Solarium",
+      "Basen dla dzieci",
+      "Sala studiów",
+      "Basen wspólny",
+      "Widoki na morze"
+    ],
+    "rawDescription": "🏡 Mieszkania z prywatnymi tarasami i przestronnymi pomieszczeniamiOsiedle składa się ze 138 mieszkań rozmieszczonych w 9 niskich blokach, zaprojektowanych tak, aby maksymalizować naturalne światło i komfort. Obecnie sprzedawana jest Faza 1.Wszystkie mieszkania zawierają: Prywatny taras z nieza...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Benidorm Hills",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "358 000 € – 604 000 €",
+        "desc": "Benidorm Hills to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 2000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 6 dostępnych jednostek.",
+        "chip": "New Build · Finestrat",
+        "alt": "Benidorm Hills — nowa inwestycja w Finestrat na Costa Blanca"
+      },
+      "es": {
+        "title": "Benidorm Hills",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "358 000 € – 604 000 €",
+        "desc": "Promoción moderna en Finestrat, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · Finestrat",
+        "alt": "Benidorm Hills — obra nueva en Finestrat"
+      },
+      "en": {
+        "title": "Benidorm Hills",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "€358,000 – €604,000",
+        "desc": "Modern development in Finestrat, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · Finestrat",
+        "alt": "Benidorm Hills — new development in Finestrat"
+      },
+      "ru": {
+        "title": "Benidorm Hills",
+        "meta": "Finestrat · Аликанте · Costa Blanca",
+        "price": "358 000 € – 604 000 €",
+        "desc": "Современный проект в Finestrat на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · Finestrat",
+        "alt": "Benidorm Hills — новая инвестиция в Finestrat"
+      }
+    }
+  },
+  {
+    "sourceId": 453803,
+    "slug": "residencial-larrosa-43-a-fase-ii-san-fulgencio",
+    "sortOrder": 26,
+    "title": "Residencial Larrosa 43-A Fase II",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217490/conversions/property-453803-2-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217491/conversions/property-453803-3-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217492/conversions/property-453803-4-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217490/conversions/property-453803-2-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217490/conversions/property-453803-2-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217490/conversions/property-453803-2-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217491/conversions/property-453803-3-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217491/conversions/property-453803-3-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217491/conversions/property-453803-3-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217492/conversions/property-453803-4-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217492/conversions/property-453803-4-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217492/conversions/property-453803-4-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=residencial-larrosa-43-a-fase-ii-san-fulgencio",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/san-fulgencio/promociones/residencial-larrosa-43-a-fase-ii",
+    "price": "105 000 € – 185 000 €",
+    "priceValue": 105000,
+    "priceMaxValue": 185000,
+    "currency": "EUR",
+    "filterLocation": "san-fulgencio",
+    "meta": "San Fulgencio · Alicante · Costa Blanca",
+    "address": "Alicante, San Fulgencio, Calle REINA SOFÍA, 10",
+    "propertyType": "apartment",
+    "bedrooms": 1,
+    "bathrooms": null,
+    "builtArea": 52.0,
+    "distanceToSea": null,
+    "deliveryYear": 2026,
+    "unitCount": 8,
+    "developer": "Cabo Cervera",
+    "commission": "10.0",
+    "status": "Zakończona",
+    "desc": "Residencial Larrosa 43-A Fase II to nowoczesna inwestycja apartamentów w San Fulgencio. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 8 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Residencial Larrosa 43-A Fase II daje mocny punkt wejścia od 105 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji San Fulgencio wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · San Fulgencio",
+    "seoTitle": "Residencial Larrosa 43-A Fase II San Fulgencio | Nowa inwestycja na Costa Blanca od 105 000 €",
+    "seoDescription": "Residencial Larrosa 43-A Fase II w San Fulgencio: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Residencial Larrosa 43-A Fase II",
+      "San Fulgencio",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Winda",
+      "Ogród"
+    ],
+    "rawDescription": "Na sprzedaż oferowana jest ekskluzywna promocja nowych mieszkań z 1, 2 i 3 sypialniami, zaprojektowanych, aby zapewnić komfort, wydajność i jakość życia w spokojnym i dobrze skomunikowanym otoczeniu w prowincji Alicante.Mieszkania, rozmieszczone w trzypiętrowym budynku, wyróżniają się staranną konst...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Residencial Larrosa 43-A Fase II",
+        "meta": "San Fulgencio · Alicante · Costa Blanca",
+        "price": "105 000 € – 185 000 €",
+        "desc": "Residencial Larrosa 43-A Fase II to nowoczesna inwestycja apartamentów w San Fulgencio. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 8 dostępnych jednostek.",
+        "chip": "New Build · San Fulgencio",
+        "alt": "Residencial Larrosa 43-A Fase II — nowa inwestycja w San Fulgencio na Costa Blanca"
+      },
+      "es": {
+        "title": "Residencial Larrosa 43-A Fase II",
+        "meta": "San Fulgencio · Alicante · Costa Blanca",
+        "price": "105 000 € – 185 000 €",
+        "desc": "Promoción moderna en San Fulgencio, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · San Fulgencio",
+        "alt": "Residencial Larrosa 43-A Fase II — obra nueva en San Fulgencio"
+      },
+      "en": {
+        "title": "Residencial Larrosa 43-A Fase II",
+        "meta": "San Fulgencio · Alicante · Costa Blanca",
+        "price": "€105,000 – €185,000",
+        "desc": "Modern development in San Fulgencio, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · San Fulgencio",
+        "alt": "Residencial Larrosa 43-A Fase II — new development in San Fulgencio"
+      },
+      "ru": {
+        "title": "Residencial Larrosa 43-A Fase II",
+        "meta": "San Fulgencio · Аликанте · Costa Blanca",
+        "price": "105 000 € – 185 000 €",
+        "desc": "Современный проект в San Fulgencio на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · San Fulgencio",
+        "alt": "Residencial Larrosa 43-A Fase II — новая инвестиция в San Fulgencio"
+      }
+    }
+  },
+  {
+    "sourceId": 52975,
+    "slug": "nwcia-village-la-nucia",
+    "sortOrder": 27,
+    "title": "Nwcia Village",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=nwcia-village-la-nucia",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/la-nucia/promociones/nwcia-village",
+    "price": "449 000 € – 566 000 €",
+    "priceValue": 449000,
+    "priceMaxValue": 566000,
+    "currency": "EUR",
+    "filterLocation": "la-nucia",
+    "meta": "La Nucia · Alicante · Costa Blanca",
+    "address": "Alicante, La Nucia",
+    "propertyType": "villa",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "builtArea": 157.0,
+    "distanceToSea": 7000,
+    "deliveryYear": 2026,
+    "unitCount": 12,
+    "developer": "Sonera Homes",
+    "commission": "4.0",
+    "status": "W budowie",
+    "desc": "Nwcia Village to nowoczesna inwestycja willi w La Nucia, z lokalizacją około 7000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 12 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Nwcia Village daje mocny punkt wejścia od 449 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji La Nucia wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "Villas · La Nucia",
+    "seoTitle": "Nwcia Village La Nucia | Nowa inwestycja na Costa Blanca od 449 000 €",
+    "seoDescription": "Nwcia Village w La Nucia: nowe wille na Costa Blanca, około 7000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Nwcia Village",
+      "La Nucia",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "villa"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Zielone strefy",
+      "Solarium",
+      "Ogród",
+      "Basen wspólny",
+      "Widoki na morze",
+      "Jasne widoki",
+      "Szeroki parking"
+    ],
+    "rawDescription": "Nieruchomość w \\nNowa oferta nieruchomości na sprzedaż w La Nucia, Alicante. Położona w wyjątkowym miejscu z zapierającymi dech w piersiach widokami na zatoki, ta promocja to prawdziwy śródziemnomorski raj. Składa się z 28 różnorodnych willi: zarówno bliźniaków, jak i domów wolnostojących, zbudowanyc...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Nwcia Village",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Nwcia Village to nowoczesna inwestycja willi w La Nucia, z lokalizacją około 7000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 12 dostępnych jednostek.",
+        "chip": "Villas · La Nucia",
+        "alt": "Nwcia Village — nowa inwestycja w La Nucia na Costa Blanca"
+      },
+      "es": {
+        "title": "Nwcia Village",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Promoción moderna en La Nucia, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "Villas · La Nucia",
+        "alt": "Nwcia Village — obra nueva en La Nucia"
+      },
+      "en": {
+        "title": "Nwcia Village",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "€449,000 – €566,000",
+        "desc": "Modern development in La Nucia, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "Villas · La Nucia",
+        "alt": "Nwcia Village — new development in La Nucia"
+      },
+      "ru": {
+        "title": "Nwcia Village",
+        "meta": "La Nucia · Аликанте · Costa Blanca",
+        "price": "449 000 € – 566 000 €",
+        "desc": "Современный проект в La Nucia на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "Villas · La Nucia",
+        "alt": "Nwcia Village — новая инвестиция в La Nucia"
+      }
+    }
+  },
+  {
+    "sourceId": 60122,
+    "slug": "la-vista-algorfa-algorfa",
+    "sortOrder": 28,
+    "title": "La Vista Algorfa",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896804/conversions/01HYJHCQTCR0PRXMRBW8R13FBQ-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896805/conversions/01HYJHCRBSG49N5XK9K2B72HVB-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896806/conversions/01HYJHCS35P7S6DHKV4FPXT0J5-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896804/conversions/01HYJHCQTCR0PRXMRBW8R13FBQ-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896804/conversions/01HYJHCQTCR0PRXMRBW8R13FBQ-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896804/conversions/01HYJHCQTCR0PRXMRBW8R13FBQ-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896805/conversions/01HYJHCRBSG49N5XK9K2B72HVB-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896805/conversions/01HYJHCRBSG49N5XK9K2B72HVB-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896805/conversions/01HYJHCRBSG49N5XK9K2B72HVB-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896806/conversions/01HYJHCS35P7S6DHKV4FPXT0J5-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896806/conversions/01HYJHCS35P7S6DHKV4FPXT0J5-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896806/conversions/01HYJHCS35P7S6DHKV4FPXT0J5-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=la-vista-algorfa-algorfa",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/algorfa/promociones/la-vista-algorfa",
+    "price": "158 202 € – 240 814 €",
+    "priceValue": 158202,
+    "priceMaxValue": 240814,
+    "currency": "EUR",
+    "filterLocation": "algorfa",
+    "meta": "Algorfa · Alicante · Costa Blanca",
+    "address": "Alicante, Algorfa",
+    "propertyType": "apartment",
+    "bedrooms": 1,
+    "bathrooms": null,
+    "builtArea": 53.0,
+    "distanceToSea": 10000,
+    "deliveryYear": 2026,
+    "unitCount": 26,
+    "developer": "DUTCH SPAIN INVEST",
+    "commission": "5.0",
+    "status": "W budowie",
+    "desc": "La Vista Algorfa to nowoczesna inwestycja apartamentów w Algorfa. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 26 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie La Vista Algorfa daje mocny punkt wejścia od 158 202 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Algorfa wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · Algorfa",
+    "seoTitle": "La Vista Algorfa Algorfa | Nowa inwestycja na Costa Blanca od 158 202 €",
+    "seoDescription": "La Vista Algorfa w Algorfa: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "La Vista Algorfa",
+      "Algorfa",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Siłownia",
+      "Taras wspólnotowy",
+      "Salon/Sala społeczna",
+      "Basen wspólny",
+      "Kuchnia z Wyspą"
+    ],
+    "rawDescription": "Nieruchomość w \\nPołożona w malowniczej miejscowości Algorfa, ta nowa inwestycja redefiniuje nowoczesne życie dzięki stylowi i komfortowi. Planowane zakończenie budowy przewidziane jest na rok 2024. Projekt oferuje 8 unikalnych mieszkań, w tym zarówno apartamenty, jak i penthouse'y, zaprojektowane ta...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "La Vista Algorfa",
+        "meta": "Algorfa · Alicante · Costa Blanca",
+        "price": "158 202 € – 240 814 €",
+        "desc": "La Vista Algorfa to nowoczesna inwestycja apartamentów w Algorfa. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 26 dostępnych jednostek.",
+        "chip": "New Build · Algorfa",
+        "alt": "La Vista Algorfa — nowa inwestycja w Algorfa na Costa Blanca"
+      },
+      "es": {
+        "title": "La Vista Algorfa",
+        "meta": "Algorfa · Alicante · Costa Blanca",
+        "price": "158 202 € – 240 814 €",
+        "desc": "Promoción moderna en Algorfa, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · Algorfa",
+        "alt": "La Vista Algorfa — obra nueva en Algorfa"
+      },
+      "en": {
+        "title": "La Vista Algorfa",
+        "meta": "Algorfa · Alicante · Costa Blanca",
+        "price": "€158,202 – €240,814",
+        "desc": "Modern development in Algorfa, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · Algorfa",
+        "alt": "La Vista Algorfa — new development in Algorfa"
+      },
+      "ru": {
+        "title": "La Vista Algorfa",
+        "meta": "Algorfa · Аликанте · Costa Blanca",
+        "price": "158 202 € – 240 814 €",
+        "desc": "Современный проект в Algorfa на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · Algorfa",
+        "alt": "La Vista Algorfa — новая инвестиция в Algorfa"
+      }
+    }
+  },
+  {
+    "sourceId": 52935,
+    "slug": "seaview-6-finestrat",
+    "sortOrder": 29,
+    "title": "SeaView 6",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768120/conversions/01HTQCQF36K1HB0PKEF9E4JH24-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768121/conversions/01HTQCQFBZYP9NJTB4F2XV14SM-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768122/conversions/01HTQCQFM7HVABCHMVH2Q9GRBB-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768120/conversions/01HTQCQF36K1HB0PKEF9E4JH24-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768120/conversions/01HTQCQF36K1HB0PKEF9E4JH24-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768120/conversions/01HTQCQF36K1HB0PKEF9E4JH24-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768121/conversions/01HTQCQFBZYP9NJTB4F2XV14SM-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768121/conversions/01HTQCQFBZYP9NJTB4F2XV14SM-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768121/conversions/01HTQCQFBZYP9NJTB4F2XV14SM-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768122/conversions/01HTQCQFM7HVABCHMVH2Q9GRBB-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768122/conversions/01HTQCQFM7HVABCHMVH2Q9GRBB-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768122/conversions/01HTQCQFM7HVABCHMVH2Q9GRBB-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=seaview-6-finestrat",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/finestrat/promociones/sea-view-6",
+    "price": "535 000 € – 995 000 €",
+    "priceValue": 535000,
+    "priceMaxValue": 995000,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · Alicante · Costa Blanca",
+    "address": "Alicante, Finestrat",
+    "propertyType": "apartment",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "builtArea": 150.0,
+    "distanceToSea": 2500,
+    "deliveryYear": 2026,
+    "unitCount": 16,
+    "developer": "ESPHOUSES",
+    "commission": "8.0",
+    "status": "W budowie",
+    "desc": "SeaView 6 to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 2500 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 16 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie SeaView 6 daje mocny punkt wejścia od 535 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Finestrat wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · Finestrat",
+    "seoTitle": "SeaView 6 Finestrat | Nowa inwestycja na Costa Blanca od 535 000 €",
+    "seoDescription": "SeaView 6 w Finestrat: nowe apartamenty na Costa Blanca, około 2500 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "SeaView 6",
+      "Finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Taras",
+      "Basen",
+      "Plac zabaw",
+      "Zielone strefy",
+      "Solarium",
+      "Ogród",
+      "Basen wspólny",
+      "Kuchnia z Wyspą",
+      "Szeroki parking"
+    ],
+    "rawDescription": "Nieruchomość w Kompleks mieszkalny\\n\\nOferowana nieruchomość szeregowa znajduje się w nowo powstałym kompleksie, położonym w prestiżowej części Alicante, Finestrat. To miejsce wyróżnia się niezwykłym urokiem i doskonałą lokalizacją, zaledwie 5 minut od plaż i licznych atrakcji oferowanych w regionie....",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "SeaView 6",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "535 000 € – 995 000 €",
+        "desc": "SeaView 6 to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 2500 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 16 dostępnych jednostek.",
+        "chip": "New Build · Finestrat",
+        "alt": "SeaView 6 — nowa inwestycja w Finestrat na Costa Blanca"
+      },
+      "es": {
+        "title": "SeaView 6",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "535 000 € – 995 000 €",
+        "desc": "Promoción moderna en Finestrat, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · Finestrat",
+        "alt": "SeaView 6 — obra nueva en Finestrat"
+      },
+      "en": {
+        "title": "SeaView 6",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "€535,000 – €995,000",
+        "desc": "Modern development in Finestrat, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · Finestrat",
+        "alt": "SeaView 6 — new development in Finestrat"
+      },
+      "ru": {
+        "title": "SeaView 6",
+        "meta": "Finestrat · Аликанте · Costa Blanca",
+        "price": "535 000 € – 995 000 €",
+        "desc": "Современный проект в Finestrat на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · Finestrat",
+        "alt": "SeaView 6 — новая инвестиция в Finestrat"
+      }
+    }
+  },
+  {
+    "sourceId": 52940,
+    "slug": "boost-house-la-nucia",
+    "sortOrder": 30,
+    "title": "Boost House",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768043/conversions/01HTQB99T1A4YDAC08W86YMQ9Y-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768045/conversions/01HTQB9AKQ4HVBD1B09DACPFGW-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768046/conversions/01HTQB9AYFPW5K6VVY9WQ41YPJ-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768043/conversions/01HTQB99T1A4YDAC08W86YMQ9Y-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768043/conversions/01HTQB99T1A4YDAC08W86YMQ9Y-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768043/conversions/01HTQB99T1A4YDAC08W86YMQ9Y-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768045/conversions/01HTQB9AKQ4HVBD1B09DACPFGW-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768045/conversions/01HTQB9AKQ4HVBD1B09DACPFGW-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768045/conversions/01HTQB9AKQ4HVBD1B09DACPFGW-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768046/conversions/01HTQB9AYFPW5K6VVY9WQ41YPJ-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768046/conversions/01HTQB9AYFPW5K6VVY9WQ41YPJ-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768046/conversions/01HTQB9AYFPW5K6VVY9WQ41YPJ-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=boost-house-la-nucia",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/la-nucia/promociones/boost-house",
+    "price": "865 000 €",
+    "priceValue": 865000,
+    "priceMaxValue": 865000,
+    "currency": "EUR",
+    "filterLocation": "la-nucia",
+    "meta": "La Nucia · Alicante · Costa Blanca",
+    "address": "Alicante, La Nucia",
+    "propertyType": "apartment",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "builtArea": 210.0,
+    "distanceToSea": null,
+    "deliveryYear": null,
+    "unitCount": 1,
+    "developer": "EVOKE Houses",
+    "commission": "5.0",
+    "status": "Nowa inwestycja",
+    "desc": "Boost House to nowoczesna inwestycja apartamentów w La Nucia. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home..",
+    "investmentText": "Inwestycyjnie Boost House daje mocny punkt wejścia od 865 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji La Nucia wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · La Nucia",
+    "seoTitle": "Boost House La Nucia | Nowa inwestycja na Costa Blanca od 865 000 €",
+    "seoDescription": "Boost House w La Nucia: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Boost House",
+      "La Nucia",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build",
+      "Premium"
+    ],
+    "features": [
+      "Basen",
+      "Widoki na morze",
+      "Plaża"
+    ],
+    "rawDescription": "Nieruchomość w \\n\\nTen nowoczesny chalet oferuje spektakularne widoki na morze i góry, usytuowany w malowniczym Alicante, La Nucia. Dom emanuje nowoczesnym stylem z otwartym planem kuchni, wyposażonym w centralną wyspę, co tworzy idealną przestrzeń do gotowania i spędzania czasu z bliskimi. Przyciągaj...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Boost House",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "865 000 €",
+        "desc": "Boost House to nowoczesna inwestycja apartamentów w La Nucia. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home..",
+        "chip": "New Build · La Nucia",
+        "alt": "Boost House — nowa inwestycja w La Nucia na Costa Blanca"
+      },
+      "es": {
+        "title": "Boost House",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "865 000 €",
+        "desc": "Promoción moderna en La Nucia, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · La Nucia",
+        "alt": "Boost House — obra nueva en La Nucia"
+      },
+      "en": {
+        "title": "Boost House",
+        "meta": "La Nucia · Alicante · Costa Blanca",
+        "price": "€865,000",
+        "desc": "Modern development in La Nucia, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · La Nucia",
+        "alt": "Boost House — new development in La Nucia"
+      },
+      "ru": {
+        "title": "Boost House",
+        "meta": "La Nucia · Аликанте · Costa Blanca",
+        "price": "865 000 €",
+        "desc": "Современный проект в La Nucia на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · La Nucia",
+        "alt": "Boost House — новая инвестиция в La Nucia"
+      }
+    }
+  },
+  {
+    "sourceId": 53005,
+    "slug": "sungolf-villas-f2-pilar-de-la-horadada",
+    "sortOrder": 31,
+    "title": "Sungolf Villas F2",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767753/conversions/01HTPTQP2AMS9EWKJKSD6D1SE8-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767754/conversions/01HTPTQPB5WVMQM4417GMFY8ZA-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767755/conversions/01HTPTQPMEKN9MTTNMMW2DCAJY-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767753/conversions/01HTPTQP2AMS9EWKJKSD6D1SE8-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767753/conversions/01HTPTQP2AMS9EWKJKSD6D1SE8-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767753/conversions/01HTPTQP2AMS9EWKJKSD6D1SE8-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767754/conversions/01HTPTQPB5WVMQM4417GMFY8ZA-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767754/conversions/01HTPTQPB5WVMQM4417GMFY8ZA-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767754/conversions/01HTPTQPB5WVMQM4417GMFY8ZA-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767755/conversions/01HTPTQPMEKN9MTTNMMW2DCAJY-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767755/conversions/01HTPTQPMEKN9MTTNMMW2DCAJY-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767755/conversions/01HTPTQPMEKN9MTTNMMW2DCAJY-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=sungolf-villas-f2-pilar-de-la-horadada",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/pilar-de-la-horadada/promociones/sungolf-villas-f2",
+    "price": "350 000 € – 480 000 €",
+    "priceValue": 350000,
+    "priceMaxValue": 480000,
+    "currency": "EUR",
+    "filterLocation": "pilar-de-la-horadada",
+    "meta": "Pilar de la Horadada · Alicante · Costa Blanca",
+    "address": "Alicante, Pilar de la Horadada",
+    "propertyType": "villa",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "builtArea": 149.0,
+    "distanceToSea": null,
+    "deliveryYear": 2024,
+    "unitCount": 7,
+    "developer": "Mediterraneo Beach",
+    "commission": "10.0",
+    "status": "Nowa inwestycja",
+    "desc": "Sungolf Villas F2 to nowoczesna inwestycja willi w Pilar de la Horadada. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 7 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Sungolf Villas F2 daje mocny punkt wejścia od 350 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Pilar de la Horadada wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "Villas · Pilar de la Horadada",
+    "seoTitle": "Sungolf Villas F2 Pilar de la Horadada | Nowa inwestycja na Costa Blanca od 350 000 €",
+    "seoDescription": "Sungolf Villas F2 w Pilar de la Horadada: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Sungolf Villas F2",
+      "Pilar de la Horadada",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "villa"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Solarium",
+      "Ogród",
+      "Kuchnia z Wyspą",
+      "Szeroki parking"
+    ],
+    "rawDescription": "Nieruchomość w Kompleks mieszkalny\\n\\nNowoczesne dwupoziomowe domy w atrakcyjnej lokalizacji, jaką jest Pilar de la Horadada, oferują nową jakość życia. Obiekty są zbudowane na jednym poziomie i wyposażone w prywatne solarium. Znajdują się tam od dwóch do trzech sypialni oraz dwie łazienki. Salon połą...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Sungolf Villas F2",
+        "meta": "Pilar de la Horadada · Alicante · Costa Blanca",
+        "price": "350 000 € – 480 000 €",
+        "desc": "Sungolf Villas F2 to nowoczesna inwestycja willi w Pilar de la Horadada. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 7 dostępnych jednostek.",
+        "chip": "Villas · Pilar de la Horadada",
+        "alt": "Sungolf Villas F2 — nowa inwestycja w Pilar de la Horadada na Costa Blanca"
+      },
+      "es": {
+        "title": "Sungolf Villas F2",
+        "meta": "Pilar de la Horadada · Alicante · Costa Blanca",
+        "price": "350 000 € – 480 000 €",
+        "desc": "Promoción moderna en Pilar de la Horadada, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "Villas · Pilar de la Horadada",
+        "alt": "Sungolf Villas F2 — obra nueva en Pilar de la Horadada"
+      },
+      "en": {
+        "title": "Sungolf Villas F2",
+        "meta": "Pilar de la Horadada · Alicante · Costa Blanca",
+        "price": "€350,000 – €480,000",
+        "desc": "Modern development in Pilar de la Horadada, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "Villas · Pilar de la Horadada",
+        "alt": "Sungolf Villas F2 — new development in Pilar de la Horadada"
+      },
+      "ru": {
+        "title": "Sungolf Villas F2",
+        "meta": "Pilar de la Horadada · Аликанте · Costa Blanca",
+        "price": "350 000 € – 480 000 €",
+        "desc": "Современный проект в Pilar de la Horadada на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "Villas · Pilar de la Horadada",
+        "alt": "Sungolf Villas F2 — новая инвестиция в Pilar de la Horadada"
+      }
+    }
+  },
+  {
+    "sourceId": 67596,
+    "slug": "marques-golf-resort-finestrat",
+    "sortOrder": 32,
+    "title": "Marques Golf Resort",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898183/conversions/01J0DWQXHM56S5J2MZX3TFJZJN-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898184/conversions/01J0DWQY8WT9GNFYMWJGJXTH16-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254102/conversions/01KKY5NQXJ61HCD8Q93BN5DEZ5-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898183/conversions/01J0DWQXHM56S5J2MZX3TFJZJN-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898183/conversions/01J0DWQXHM56S5J2MZX3TFJZJN-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898183/conversions/01J0DWQXHM56S5J2MZX3TFJZJN-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898184/conversions/01J0DWQY8WT9GNFYMWJGJXTH16-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898184/conversions/01J0DWQY8WT9GNFYMWJGJXTH16-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898184/conversions/01J0DWQY8WT9GNFYMWJGJXTH16-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254102/conversions/01KKY5NQXJ61HCD8Q93BN5DEZ5-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254102/conversions/01KKY5NQXJ61HCD8Q93BN5DEZ5-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254102/conversions/01KKY5NQXJ61HCD8Q93BN5DEZ5-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=marques-golf-resort-finestrat",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/finestrat/promociones/proximamente-marques-golf",
+    "price": "332 400 € – 392 400 €",
+    "priceValue": 332400,
+    "priceMaxValue": 392400,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · Alicante · Costa Blanca",
+    "address": "Alicante, Finestrat",
+    "propertyType": "apartment",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "builtArea": 89.0,
+    "distanceToSea": 5000,
+    "deliveryYear": 2028,
+    "unitCount": 13,
+    "developer": "Immosol",
+    "commission": "8.0",
+    "status": "W budowie",
+    "desc": "Marques Golf Resort to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 5000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 13 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Marques Golf Resort daje mocny punkt wejścia od 332 400 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Finestrat wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · Finestrat",
+    "seoTitle": "Marques Golf Resort Finestrat | Nowa inwestycja na Costa Blanca od 332 400 €",
+    "seoDescription": "Marques Golf Resort w Finestrat: nowe apartamenty na Costa Blanca, około 5000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Marques Golf Resort",
+      "Finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen",
+      "Winda",
+      "Siłownia",
+      "Stacja ładowania elektrycznego",
+      "Kort do padla",
+      "Plac zabaw",
+      "Zielone strefy",
+      "Solarium",
+      "Ogród",
+      "Widoki na morze"
+    ],
+    "rawDescription": "Nieruchomość w Kompleks mieszkalny Wyjątkowe i ekskluzywne osiedle, położone w Finestrat blisko atrakcji nadmorskich. Oferuje mieszkania z dwoma sypialniami i dwoma łazienkami oraz przestronną strefą dzienną. W samym sercu apartamentów można podziwiać zapierające dech w piersiach widoki na okolicę o...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Marques Golf Resort",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "332 400 € – 392 400 €",
+        "desc": "Marques Golf Resort to nowoczesna inwestycja apartamentów w Finestrat, z lokalizacją około 5000 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 13 dostępnych jednostek.",
+        "chip": "New Build · Finestrat",
+        "alt": "Marques Golf Resort — nowa inwestycja w Finestrat na Costa Blanca"
+      },
+      "es": {
+        "title": "Marques Golf Resort",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "332 400 € – 392 400 €",
+        "desc": "Promoción moderna en Finestrat, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · Finestrat",
+        "alt": "Marques Golf Resort — obra nueva en Finestrat"
+      },
+      "en": {
+        "title": "Marques Golf Resort",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "€332,400 – €392,400",
+        "desc": "Modern development in Finestrat, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · Finestrat",
+        "alt": "Marques Golf Resort — new development in Finestrat"
+      },
+      "ru": {
+        "title": "Marques Golf Resort",
+        "meta": "Finestrat · Аликанте · Costa Blanca",
+        "price": "332 400 € – 392 400 €",
+        "desc": "Современный проект в Finestrat на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · Finestrat",
+        "alt": "Marques Golf Resort — новая инвестиция в Finestrat"
+      }
+    }
+  },
+  {
+    "sourceId": 67759,
+    "slug": "villa-orange-finestrat",
+    "sortOrder": 33,
+    "title": "Villa Orange",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898469/conversions/01J14TB964C35Z9D7NYJWGFTC6-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898471/conversions/01J14TB9M1W9S7EDY3W2S4R24H-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898472/conversions/01J14TB9TD3N9YY6SCCKTJR7W5-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898469/conversions/01J14TB964C35Z9D7NYJWGFTC6-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898469/conversions/01J14TB964C35Z9D7NYJWGFTC6-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898469/conversions/01J14TB964C35Z9D7NYJWGFTC6-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898471/conversions/01J14TB9M1W9S7EDY3W2S4R24H-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898471/conversions/01J14TB9M1W9S7EDY3W2S4R24H-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898471/conversions/01J14TB9M1W9S7EDY3W2S4R24H-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898472/conversions/01J14TB9TD3N9YY6SCCKTJR7W5-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898472/conversions/01J14TB9TD3N9YY6SCCKTJR7W5-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898472/conversions/01J14TB9TD3N9YY6SCCKTJR7W5-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=villa-orange-finestrat",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/finestrat/promociones/villa-orange",
+    "price": "1 350 000 €",
+    "priceValue": 1350000,
+    "priceMaxValue": 1350000,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · Alicante · Costa Blanca",
+    "address": "Alicante, Finestrat",
+    "propertyType": "villa",
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "builtArea": 390.0,
+    "distanceToSea": null,
+    "deliveryYear": 2025,
+    "unitCount": 3,
+    "developer": "Campana Garden",
+    "commission": "8.0",
+    "status": "W budowie",
+    "desc": "Villa Orange to nowoczesna inwestycja willi w Finestrat. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 3 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Villa Orange daje mocny punkt wejścia od 1 350 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Finestrat wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "Villas · Finestrat",
+    "seoTitle": "Villa Orange Finestrat | Nowa inwestycja na Costa Blanca od 1 350 000 €",
+    "seoDescription": "Villa Orange w Finestrat: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Villa Orange",
+      "Finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "villa"
+    ],
+    "badges": [
+      "Investment",
+      "New Build",
+      "Premium"
+    ],
+    "features": [
+      "Basen prywatny",
+      "Basen",
+      "Solarium",
+      "Ogród",
+      "Parking prywatny",
+      "Widoki na morze",
+      "Plaża",
+      "Kuchnia z Wyspą"
+    ],
+    "rawDescription": "Nieruchomość w Kompleks mieszkalny\\n\\nTen ekskluzywny projekt rezydencyjny obejmuje zespół 17 luksusowych willi, zaprojektowanych tak, aby zapewniać panoramiczne widoki na morze z dowolnego punktu głównej fasady. Położone w Alicante, Finestrat, te wyjątkowe nieruchomości oferują idealne połączenie now...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Villa Orange",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "1 350 000 €",
+        "desc": "Villa Orange to nowoczesna inwestycja willi w Finestrat. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 3 dostępnych jednostek.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Orange — nowa inwestycja w Finestrat na Costa Blanca"
+      },
+      "es": {
+        "title": "Villa Orange",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "1 350 000 €",
+        "desc": "Promoción moderna en Finestrat, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Orange — obra nueva en Finestrat"
+      },
+      "en": {
+        "title": "Villa Orange",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "€1,350,000",
+        "desc": "Modern development in Finestrat, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Orange — new development in Finestrat"
+      },
+      "ru": {
+        "title": "Villa Orange",
+        "meta": "Finestrat · Аликанте · Costa Blanca",
+        "price": "1 350 000 €",
+        "desc": "Современный проект в Finestrat на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Orange — новая инвестиция в Finestrat"
+      }
+    }
+  },
+  {
+    "sourceId": 67766,
+    "slug": "villa-addaia-residencial-lidiamar-finestrat",
+    "sortOrder": 34,
+    "title": "Villa Addaia RESIDENCIAL LIDIAMAR",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898527/conversions/01J14ZPYHFV1HJ74W5HPBBVVY7-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898529/conversions/01J14ZPZ0RA7W01X3C3C0TVNGE-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898530/conversions/01J14ZPZ8CWC924A2Q0YSMZKMW-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898527/conversions/01J14ZPYHFV1HJ74W5HPBBVVY7-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898527/conversions/01J14ZPYHFV1HJ74W5HPBBVVY7-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898527/conversions/01J14ZPYHFV1HJ74W5HPBBVVY7-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898529/conversions/01J14ZPZ0RA7W01X3C3C0TVNGE-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898529/conversions/01J14ZPZ0RA7W01X3C3C0TVNGE-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898529/conversions/01J14ZPZ0RA7W01X3C3C0TVNGE-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898530/conversions/01J14ZPZ8CWC924A2Q0YSMZKMW-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898530/conversions/01J14ZPZ8CWC924A2Q0YSMZKMW-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898530/conversions/01J14ZPZ8CWC924A2Q0YSMZKMW-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=villa-addaia-residencial-lidiamar-finestrat",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/finestrat/promociones/villa-addaia",
+    "price": "760 000 €",
+    "priceValue": 760000,
+    "priceMaxValue": 760000,
+    "currency": "EUR",
+    "filterLocation": "finestrat",
+    "meta": "Finestrat · Alicante · Costa Blanca",
+    "address": "Alicante, Finestrat",
+    "propertyType": "villa",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "builtArea": 158.0,
+    "distanceToSea": null,
+    "deliveryYear": 2025,
+    "unitCount": 2,
+    "developer": "Campana Garden",
+    "commission": "8.0",
+    "status": "W budowie",
+    "desc": "Villa Addaia RESIDENCIAL LIDIAMAR to nowoczesna inwestycja willi w Finestrat. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 2 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Villa Addaia RESIDENCIAL LIDIAMAR daje mocny punkt wejścia od 760 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Finestrat wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "Villas · Finestrat",
+    "seoTitle": "Villa Addaia RESIDENCIAL LIDIAMAR Finestrat | Nowa inwestycja na Costa Blanca od 760 000 €",
+    "seoDescription": "Villa Addaia RESIDENCIAL LIDIAMAR w Finestrat: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Villa Addaia RESIDENCIAL LIDIAMAR",
+      "Finestrat",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "villa"
+    ],
+    "badges": [
+      "Investment",
+      "New Build",
+      "Premium"
+    ],
+    "features": [
+      "Basen prywatny",
+      "Taras",
+      "Basen",
+      "Zielone strefy",
+      "Solarium",
+      "Ogród",
+      "Barbacoa",
+      "Parking prywatny",
+      "Kuchnia z Wyspą"
+    ],
+    "rawDescription": "Nieruchomość w \\nProjektowany jako w pełni przechodnia przestrzeń, oferuje niezależne drogi wewnętrzne i zewnętrzne umożliwiające dostęp do każdej kondygnacji. Dzięki temu można cieszyć się rozmaitymi widokami na kompleks architektoniczny oraz jego otoczenie, z malowniczymi krajobrazami morza i gór w...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Villa Addaia RESIDENCIAL LIDIAMAR",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "760 000 €",
+        "desc": "Villa Addaia RESIDENCIAL LIDIAMAR to nowoczesna inwestycja willi w Finestrat. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 2 dostępnych jednostek.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Addaia RESIDENCIAL LIDIAMAR — nowa inwestycja w Finestrat na Costa Blanca"
+      },
+      "es": {
+        "title": "Villa Addaia RESIDENCIAL LIDIAMAR",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "760 000 €",
+        "desc": "Promoción moderna en Finestrat, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Addaia RESIDENCIAL LIDIAMAR — obra nueva en Finestrat"
+      },
+      "en": {
+        "title": "Villa Addaia RESIDENCIAL LIDIAMAR",
+        "meta": "Finestrat · Alicante · Costa Blanca",
+        "price": "€760,000",
+        "desc": "Modern development in Finestrat, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Addaia RESIDENCIAL LIDIAMAR — new development in Finestrat"
+      },
+      "ru": {
+        "title": "Villa Addaia RESIDENCIAL LIDIAMAR",
+        "meta": "Finestrat · Аликанте · Costa Blanca",
+        "price": "760 000 €",
+        "desc": "Современный проект в Finestrat на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "Villas · Finestrat",
+        "alt": "Villa Addaia RESIDENCIAL LIDIAMAR — новая инвестиция в Finestrat"
+      }
+    }
+  },
+  {
+    "sourceId": 67795,
+    "slug": "sea-essence-santa-pola",
+    "sortOrder": 35,
+    "title": "Sea Essence",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=sea-essence-santa-pola",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/santa-pola/promociones/sea-essence",
+    "price": "230 000 € – 340 000 €",
+    "priceValue": 230000,
+    "priceMaxValue": 340000,
+    "currency": "EUR",
+    "filterLocation": "santa-pola",
+    "meta": "Santa Pola · Alicante · Costa Blanca",
+    "address": "Alicante, Santa Pola",
+    "propertyType": "apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "builtArea": 73.0,
+    "distanceToSea": 700,
+    "deliveryYear": 2026,
+    "unitCount": 13,
+    "developer": "Urmosa",
+    "commission": "5.0",
+    "status": "W budowie",
+    "desc": "Sea Essence to nowoczesna inwestycja apartamentów w Santa Pola, z lokalizacją około 700 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 13 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Sea Essence daje mocny punkt wejścia od 230 000 €: bliskość morza, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Santa Pola wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · Santa Pola",
+    "seoTitle": "Sea Essence Santa Pola | Nowa inwestycja na Costa Blanca od 230 000 €",
+    "seoDescription": "Sea Essence w Santa Pola: nowe apartamenty na Costa Blanca, około 700 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Sea Essence",
+      "Santa Pola",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build",
+      "Beach"
+    ],
+    "features": [
+      "Basen",
+      "Winda",
+      "Siłownia",
+      "Zielone strefy",
+      "Ogród",
+      "Basen wspólny",
+      "Szeroki parking"
+    ],
+    "rawDescription": "Nieruchomość w Kompleks mieszkalnyModerne osiedle zamknięte składa się z mieszkań z 3 sypialniami oraz 2 pełnymi łazienkami. Kompleks oferuje cztery klatki schodowe z przestronnymi strefami wspólnotowymi, w tym zadbane tereny zielone, basen, strefę relaksu oraz siłownię.\\n\\nMieszkania zaprojektowane z...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Sea Essence",
+        "meta": "Santa Pola · Alicante · Costa Blanca",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Sea Essence to nowoczesna inwestycja apartamentów w Santa Pola, z lokalizacją około 700 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 13 dostępnych jednostek.",
+        "chip": "New Build · Santa Pola",
+        "alt": "Sea Essence — nowa inwestycja w Santa Pola na Costa Blanca"
+      },
+      "es": {
+        "title": "Sea Essence",
+        "meta": "Santa Pola · Alicante · Costa Blanca",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Promoción moderna en Santa Pola, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · Santa Pola",
+        "alt": "Sea Essence — obra nueva en Santa Pola"
+      },
+      "en": {
+        "title": "Sea Essence",
+        "meta": "Santa Pola · Alicante · Costa Blanca",
+        "price": "€230,000 – €340,000",
+        "desc": "Modern development in Santa Pola, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · Santa Pola",
+        "alt": "Sea Essence — new development in Santa Pola"
+      },
+      "ru": {
+        "title": "Sea Essence",
+        "meta": "Santa Pola · Аликанте · Costa Blanca",
+        "price": "230 000 € – 340 000 €",
+        "desc": "Современный проект в Santa Pola на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · Santa Pola",
+        "alt": "Sea Essence — новая инвестиция в Santa Pola"
+      }
+    }
+  },
+  {
+    "sourceId": 430380,
+    "slug": "villas-palma-nova-daya-nueva",
+    "sortOrder": 36,
+    "title": "Villas Palma Nova",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983610/conversions/01KBMYEDR7QKQANYDBHT9CYSGQ-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983611/conversions/01KBMYEE6HYS8TPM1YWH8CRRA7-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983612/conversions/01KBMYEENADV0JEGG0PTM9T3RB-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983610/conversions/01KBMYEDR7QKQANYDBHT9CYSGQ-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983610/conversions/01KBMYEDR7QKQANYDBHT9CYSGQ-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983610/conversions/01KBMYEDR7QKQANYDBHT9CYSGQ-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983611/conversions/01KBMYEE6HYS8TPM1YWH8CRRA7-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983611/conversions/01KBMYEE6HYS8TPM1YWH8CRRA7-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983611/conversions/01KBMYEE6HYS8TPM1YWH8CRRA7-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983612/conversions/01KBMYEENADV0JEGG0PTM9T3RB-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983612/conversions/01KBMYEENADV0JEGG0PTM9T3RB-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983612/conversions/01KBMYEENADV0JEGG0PTM9T3RB-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=villas-palma-nova-daya-nueva",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/daya-nueva/promociones/villas-palma-nova",
+    "price": "399 000 € – 449 900 €",
+    "priceValue": 399000,
+    "priceMaxValue": 449900,
+    "currency": "EUR",
+    "filterLocation": "daya-nueva",
+    "meta": "Daya Nueva · Alicante · Costa Blanca",
+    "address": "Alicante, Daya Nueva",
+    "propertyType": "villa",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "builtArea": 109.0,
+    "distanceToSea": null,
+    "deliveryYear": null,
+    "unitCount": 12,
+    "developer": "Medhouses",
+    "commission": "9.0",
+    "status": "W budowie",
+    "desc": "Villas Palma Nova to nowoczesna inwestycja willi w Daya Nueva. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 12 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Villas Palma Nova daje mocny punkt wejścia od 399 000 €: stabilny popyt na Costa Blanca, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji Daya Nueva wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "Villas · Daya Nueva",
+    "seoTitle": "Villas Palma Nova Daya Nueva | Nowa inwestycja na Costa Blanca od 399 000 €",
+    "seoDescription": "Villas Palma Nova w Daya Nueva: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Villas Palma Nova",
+      "Daya Nueva",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "villa"
+    ],
+    "badges": [
+      "Investment",
+      "New Build"
+    ],
+    "features": [
+      "Basen prywatny",
+      "Zielone strefy",
+      "Energia słoneczna",
+      "Szeroki parking"
+    ],
+    "rawDescription": "Odkryj ekskluzywny zbiór dwunastu niezależnych willi zlokalizowanych w jednej z najspokojniejszych dzielnic Daya Nueva, w przyjemnej odległości spacerem od centrum miasta i wszystkich jego usług. Strategiczne położenie pozwala cieszyć się spokojem wiejskiego otoczenia bez rezygnacji z bliskości morz...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Villas Palma Nova",
+        "meta": "Daya Nueva · Alicante · Costa Blanca",
+        "price": "399 000 € – 449 900 €",
+        "desc": "Villas Palma Nova to nowoczesna inwestycja willi w Daya Nueva. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 12 dostępnych jednostek.",
+        "chip": "Villas · Daya Nueva",
+        "alt": "Villas Palma Nova — nowa inwestycja w Daya Nueva na Costa Blanca"
+      },
+      "es": {
+        "title": "Villas Palma Nova",
+        "meta": "Daya Nueva · Alicante · Costa Blanca",
+        "price": "399 000 € – 449 900 €",
+        "desc": "Promoción moderna en Daya Nueva, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "Villas · Daya Nueva",
+        "alt": "Villas Palma Nova — obra nueva en Daya Nueva"
+      },
+      "en": {
+        "title": "Villas Palma Nova",
+        "meta": "Daya Nueva · Alicante · Costa Blanca",
+        "price": "€399,000 – €449,900",
+        "desc": "Modern development in Daya Nueva, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "Villas · Daya Nueva",
+        "alt": "Villas Palma Nova — new development in Daya Nueva"
+      },
+      "ru": {
+        "title": "Villas Palma Nova",
+        "meta": "Daya Nueva · Аликанте · Costa Blanca",
+        "price": "399 000 € – 449 900 €",
+        "desc": "Современный проект в Daya Nueva на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "Villas · Daya Nueva",
+        "alt": "Villas Palma Nova — новая инвестиция в Daya Nueva"
+      }
+    }
+  },
+  {
+    "sourceId": 181374,
+    "slug": "alonis-living-playa-del-torres-la-villajoyosa-vila-joiosa",
+    "sortOrder": 37,
+    "title": "Alonis Living Playa del Torres",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+    "imageOptimized": {
+      "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+      "loading": "lazy",
+      "fetchPriority": "auto",
+      "decoding": "async",
+      "imageWidth": 1200,
+      "imageHeight": 800,
+      "srcset": {
+        "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+        "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-medium.jpg"
+      }
+    },
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402185/conversions/property-181374-2-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402186/conversions/property-181374-3-preview.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402187/conversions/property-181374-4-preview.jpg"
+    ],
+    "galleryOptimized": [
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402185/conversions/property-181374-2-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402185/conversions/property-181374-2-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402185/conversions/property-181374-2-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402186/conversions/property-181374-3-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402186/conversions/property-181374-3-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402186/conversions/property-181374-3-medium.jpg"
+        }
+      },
+      {
+        "src": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402187/conversions/property-181374-4-preview.jpg",
+        "loading": "lazy",
+        "fetchPriority": "auto",
+        "decoding": "async",
+        "imageWidth": 1200,
+        "imageHeight": 800,
+        "srcset": {
+          "preview": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402187/conversions/property-181374-4-preview.jpg",
+          "medium": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402187/conversions/property-181374-4-medium.jpg"
+        }
+      }
+    ],
+    "hasGallery": true,
+    "href": "/pl/new-developments/xml-catalog/?slug=alonis-living-playa-del-torres-la-villajoyosa-vila-joiosa",
+    "sourceLink": "https://spain.metainmo.com/pl/alicante/la-villajoyosa-vila-joiosa/promociones/alonis-living-playa-del-torres",
+    "price": "424 000 € – 650 000 €",
+    "priceValue": 424000,
+    "priceMaxValue": 650000,
+    "currency": "EUR",
+    "filterLocation": "la-villajoyosa-vila-joiosa",
+    "meta": "La Villajoyosa / Vila Joiosa · Alicante · Costa Blanca",
+    "address": "Alicante, La Villajoyosa / Vila Joiosa, Plaża de Torres, Edeta s/n",
+    "propertyType": "apartment",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "builtArea": 100.0,
+    "distanceToSea": 400,
+    "deliveryYear": 2028,
+    "unitCount": 8,
+    "developer": "Tuscany Group",
+    "commission": "7.0",
+    "status": "W budowie",
+    "desc": "Alonis Living Playa del Torres to nowoczesna inwestycja apartamentów w La Villajoyosa / Vila Joiosa, z lokalizacją około 400 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 8 dostępnych jednostek.",
+    "investmentText": "Inwestycyjnie Alonis Living Playa del Torres daje mocny punkt wejścia od 424 000 €: bliskość morza, ograniczona podaż nowych projektów oraz rozpoznawalność lokalizacji La Villajoyosa / Vila Joiosa wspierają płynność odsprzedaży i wynajem krótkoterminowy.",
+    "chip": "New Build · La Villajoyosa / Vila Joiosa",
+    "seoTitle": "Alonis Living Playa del Torres La Villajoyosa / Vila Joiosa | Nowa inwestycja na Costa Blanca od 424 000 €",
+    "seoDescription": "Alonis Living Playa del Torres w La Villajoyosa / Vila Joiosa: nowe apartamenty na Costa Blanca, około 400 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+    "keywords": [
+      "Alonis Living Playa del Torres",
+      "La Villajoyosa / Vila Joiosa",
+      "Costa Blanca",
+      "nowe inwestycje",
+      "nieruchomości Hiszpania",
+      "apartment"
+    ],
+    "badges": [
+      "Investment",
+      "New Build",
+      "Beach"
+    ],
+    "features": [
+      "Jacuzzi",
+      "Basen",
+      "Winda",
+      "Siłownia",
+      "Wideodomofon",
+      "Zielone strefy",
+      "Ogród",
+      "Basen dla dzieci",
+      "Sala gourmet",
+      "Barbacoa"
+    ],
+    "rawDescription": "Odkryj wyjątkową ofertę nieruchomości, gdzie każdy dzień rozpoczyna się od promieni słońca, morskiej bryzy i spokoju otoczenia o niepowtarzalnym uroku. Projekt ten obejmuje 164 nowoczesne apartamenty z 2 sypialniami, które zaprojektowano tak, by maksymalizować komfort oraz harmonię z naturą, oferują...",
+    "cta": {
+      "label": "Zapytaj o dostępność",
+      "whatsapp": "+34604158859",
+      "email": "olga@a1invest4u.com"
+    },
+    "contact": {
+      "name": "Olga",
+      "phone": "+34 604 158 859",
+      "email": "olga@a1invest4u.com"
+    },
+    "translations": {
+      "pl": {
+        "title": "Alonis Living Playa del Torres",
+        "meta": "La Villajoyosa / Vila Joiosa · Alicante · Costa Blanca",
+        "price": "424 000 € – 650 000 €",
+        "desc": "Alonis Living Playa del Torres to nowoczesna inwestycja apartamentów w La Villajoyosa / Vila Joiosa, z lokalizacją około 400 m od plaży. Projekt wyróżnia się dobrą relacją ceny do lokalizacji, funkcjonalnymi układami i potencjałem pod wynajem sezonowy lub zakup second home. Oferta obejmuje 8 dostępnych jednostek.",
+        "chip": "New Build · La Villajoyosa / Vila Joiosa",
+        "alt": "Alonis Living Playa del Torres — nowa inwestycja w La Villajoyosa / Vila Joiosa na Costa Blanca"
+      },
+      "es": {
+        "title": "Alonis Living Playa del Torres",
+        "meta": "La Villajoyosa / Vila Joiosa · Alicante · Costa Blanca",
+        "price": "424 000 € – 650 000 €",
+        "desc": "Promoción moderna en La Villajoyosa / Vila Joiosa, Costa Blanca, con buena ubicación, distribución funcional y potencial para vivir, vacaciones o inversión inmobiliaria.",
+        "chip": "New Build · La Villajoyosa / Vila Joiosa",
+        "alt": "Alonis Living Playa del Torres — obra nueva en La Villajoyosa / Vila Joiosa"
+      },
+      "en": {
+        "title": "Alonis Living Playa del Torres",
+        "meta": "La Villajoyosa / Vila Joiosa · Alicante · Costa Blanca",
+        "price": "€424,000 – €650,000",
+        "desc": "Modern development in La Villajoyosa / Vila Joiosa, Costa Blanca, with a practical layout, strong location and potential for living, holidays or rental investment.",
+        "chip": "New Build · La Villajoyosa / Vila Joiosa",
+        "alt": "Alonis Living Playa del Torres — new development in La Villajoyosa / Vila Joiosa"
+      },
+      "ru": {
+        "title": "Alonis Living Playa del Torres",
+        "meta": "La Villajoyosa / Vila Joiosa · Аликанте · Costa Blanca",
+        "price": "424 000 € – 650 000 €",
+        "desc": "Современный проект в La Villajoyosa / Vila Joiosa на Costa Blanca: удобная локация, функциональные планировки и потенциал для жизни, отдыха или инвестиций в аренду.",
+        "chip": "New Build · La Villajoyosa / Vila Joiosa",
+        "alt": "Alonis Living Playa del Torres — новая инвестиция в La Villajoyosa / Vila Joiosa"
       }
     }
   }
