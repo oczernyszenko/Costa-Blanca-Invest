@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <!-- FAVICON FIX -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Nowe inwestycje na Costa Blanca | Apartamenty i wille od deweloperów Alicante–Benidorm</title>
@@ -379,6 +383,131 @@
         location: "",
         price: ""
       };
+
+      const UI = {
+        pl: {
+          navHome: "Strona główna",
+          navCategories: "Kategorie",
+          navContact: "Kontakt",
+          navDevelopments: "Nowe inwestycje",
+          navPlots: "Działki",
+          navBuild: "Budowa domu",
+          breadcrumbHome: "Strona główna",
+          breadcrumbCurrent: "Nowe inwestycje",
+          eyebrow: "Nowe inwestycje · Costa Blanca",
+          h1: "Nowe inwestycje na Costa Blanca — apartamenty i wille od deweloperów",
+          subtitle: "Wybrane nowe inwestycje na Costa Blanca dla klienta prywatnego i inwestora — od Alicante po Benidorm, z naciskiem na jakość lokalizacji i potencjał wzrostu wartości.",
+          call: "📞 Zadzwoń",
+          whatsapp: "💬 WhatsApp",
+          lead: "Pomagamy wybrać nowe inwestycje z potencjałem wzrostu wartości, wynajmu i bezpiecznego zakupu w Hiszpanii — od apartamentów po wille premium.",
+          projectsTitle: "Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów",
+          projectsText: "Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.",
+          locationAll: "Wszystkie lokalizacje",
+          priceAll: "Każda cena",
+          price150: "do 150 000 €",
+          price300: "150 000–300 000 €",
+          price300plus: "od 300 000 €",
+          reset: "Wyczyść",
+          cardLink: "Zobacz inwestycję →",
+          whyTitle: "Dlaczego warto inwestować w nowe inwestycje Costa Blanca Alicante–Benidorm",
+          why1Title: "Stabilny rynek nieruchomości",
+          why1Text: "Costa Blanca to jeden z najbardziej stabilnych regionów w Hiszpanii z całorocznym popytem na zakup i wynajem nieruchomości.",
+          why2Title: "Wysoki potencjał ROI",
+          why2Text: "Nowe inwestycje Alicante i Benidorm oferują potencjał zwrotu przy dobrze dobranym projekcie.",
+          why3Title: "Bezpieczny zakup od dewelopera",
+          why3Text: "Apartamenty i wille od dewelopera w Hiszpanii to przejrzysty proces, nowoczesne standardy i gwarancje jakości.",
+          locationsTitle: "Najlepsze lokalizacje: Alicante, Benidorm, Finestrat i okolice",
+          locationsText: "Alicante, Finestrat, Benidorm, Torrevieja i Torre de la Horadada należą do najczęściej wybieranych kierunków dla klientów szukających nowej nieruchomości w Hiszpanii.",
+          contactTitle: "Zapytaj o aktualne inwestycje",
+          contactText: "Skontaktuj się, aby otrzymać aktualne oferty i wybrane inwestycje dopasowane do budżetu, celu zakupu i preferowanej lokalizacji na Costa Blanca.",
+          contactNote: "💡 Odpowiadam w 10–15 minut",
+          role: "Specjalista ds. inwestycji nieruchomości Costa Blanca · Alicante–Benidorm",
+          callNow: "📞 Zadzwoń teraz",
+          write: "💬 Napisz",
+          namePlaceholder: "Twoje imię",
+          phonePlaceholder: "Telefon / WhatsApp",
+          emailPlaceholder: "Email",
+          messagePlaceholder: "Napisz, jaka inwestycja Cię interesuje",
+          submit: "📩 Wyślij zapytanie",
+          footerText: "Costa Blanca Invest to projekt inwestycyjny na rynku nieruchomości w Hiszpanii. Strona zapewnia szybki dostęp do inwestycji, działek oraz projektów budowy domu na Costa Blanca.",
+          footerBottom: "© 2026 | Strona stworzona osobiście przez Olgę Chernyshenko.",
+          offers: "ofert",
+          noOffers: "Brak ofert",
+          tryChange: "Spróbuj zmienić filtry."
+        },
+        en: {
+          navHome: "Home", navCategories: "Categories", navContact: "Contact", navDevelopments: "New developments", navPlots: "Plots", navBuild: "Build a house",
+          breadcrumbHome: "Home", breadcrumbCurrent: "New developments", eyebrow: "New developments · Costa Blanca",
+          h1: "New developments on the Costa Blanca — apartments and villas from developers",
+          subtitle: "Selected new developments on the Costa Blanca for private buyers and investors — from Alicante to Benidorm, focused on location quality and value-growth potential.",
+          call: "📞 Call", whatsapp: "💬 WhatsApp",
+          lead: "We help you choose new developments with value-growth, rental and safe-purchase potential in Spain — from apartments to premium villas.",
+          projectsTitle: "Costa Blanca new developments — apartments and villas from developers",
+          projectsText: "Each development opens a detailed offer with description, photos, parameters and location.",
+          locationAll: "All locations", priceAll: "Any price", price150: "up to €150,000", price300: "€150,000–€300,000", price300plus: "from €300,000", reset: "Clear",
+          cardLink: "View development →",
+          whyTitle: "Why invest in Costa Blanca new developments Alicante–Benidorm",
+          why1Title: "Stable property market", why1Text: "Costa Blanca is one of Spain’s most stable regions with year-round demand for buying and renting property.",
+          why2Title: "Strong ROI potential", why2Text: "New developments in Alicante and Benidorm offer return potential when the project is selected correctly.",
+          why3Title: "Safe purchase from a developer", why3Text: "Developer apartments and villas in Spain offer a transparent process, modern standards and quality guarantees.",
+          locationsTitle: "Best locations: Alicante, Benidorm, Finestrat and nearby areas",
+          locationsText: "Alicante, Finestrat, Benidorm, Torrevieja and Torre de la Horadada are among the most popular choices for buyers looking for new property in Spain.",
+          contactTitle: "Ask about current developments",
+          contactText: "Contact me to receive current offers and selected developments matched to your budget, purchase goal and preferred Costa Blanca location.",
+          contactNote: "💡 I reply in 10–15 minutes", role: "Costa Blanca real estate investment specialist · Alicante–Benidorm",
+          callNow: "📞 Call now", write: "💬 Write", namePlaceholder: "Your name", phonePlaceholder: "Phone / WhatsApp", emailPlaceholder: "Email", messagePlaceholder: "Tell me what kind of development you are looking for", submit: "📩 Send request",
+          footerText: "Costa Blanca Invest is an investment project in the Spanish real estate market. The website provides quick access to developments, plots and house-building projects on the Costa Blanca.",
+          footerBottom: "© 2026 | Website personally created by Olga Chernyshenko.", offers: "offers", noOffers: "No offers", tryChange: "Try changing the filters."
+        },
+        es: {
+          navHome: "Inicio", navCategories: "Categorías", navContact: "Contacto", navDevelopments: "Obra nueva", navPlots: "Parcelas", navBuild: "Construir casa",
+          breadcrumbHome: "Inicio", breadcrumbCurrent: "Obra nueva", eyebrow: "Obra nueva · Costa Blanca",
+          h1: "Obra nueva en la Costa Blanca — apartamentos y villas de promotores",
+          subtitle: "Promociones seleccionadas en la Costa Blanca para comprador privado e inversor — de Alicante a Benidorm, con foco en la calidad de ubicación y potencial de revalorización.",
+          call: "📞 Llamar", whatsapp: "💬 WhatsApp",
+          lead: "Ayudamos a elegir promociones con potencial de revalorización, alquiler y compra segura en España — desde apartamentos hasta villas premium.",
+          projectsTitle: "Obra nueva Costa Blanca — apartamentos y villas de promotores",
+          projectsText: "Cada promoción abre una oferta detallada con descripción, fotos, parámetros y ubicación.",
+          locationAll: "Todas las ubicaciones", priceAll: "Cualquier precio", price150: "hasta 150 000 €", price300: "150 000–300 000 €", price300plus: "desde 300 000 €", reset: "Limpiar",
+          cardLink: "Ver promoción →",
+          whyTitle: "Por qué invertir en obra nueva Costa Blanca Alicante–Benidorm",
+          why1Title: "Mercado inmobiliario estable", why1Text: "Costa Blanca es una de las regiones más estables de España, con demanda durante todo el año para compra y alquiler.",
+          why2Title: "Alto potencial de ROI", why2Text: "Las promociones nuevas en Alicante y Benidorm ofrecen potencial de retorno cuando el proyecto está bien elegido.",
+          why3Title: "Compra segura al promotor", why3Text: "Los apartamentos y villas de promotor en España ofrecen un proceso claro, estándares modernos y garantías de calidad.",
+          locationsTitle: "Mejores ubicaciones: Alicante, Benidorm, Finestrat y alrededores",
+          locationsText: "Alicante, Finestrat, Benidorm, Torrevieja y Torre de la Horadada están entre las zonas más elegidas por quienes buscan vivienda nueva en España.",
+          contactTitle: "Pregunta por promociones actuales",
+          contactText: "Contacta para recibir ofertas actuales y promociones seleccionadas según tu presupuesto, objetivo de compra y ubicación preferida en Costa Blanca.",
+          contactNote: "💡 Respondo en 10–15 minutos", role: "Especialista en inversión inmobiliaria Costa Blanca · Alicante–Benidorm",
+          callNow: "📞 Llamar ahora", write: "💬 Escribir", namePlaceholder: "Tu nombre", phonePlaceholder: "Teléfono / WhatsApp", emailPlaceholder: "Email", messagePlaceholder: "Escribe qué tipo de promoción te interesa", submit: "📩 Enviar consulta",
+          footerText: "Costa Blanca Invest es un proyecto de inversión en el mercado inmobiliario español. La web ofrece acceso rápido a promociones, parcelas y proyectos de construcción en la Costa Blanca.",
+          footerBottom: "© 2026 | Página creada personalmente por Olga Chernyshenko.", offers: "ofertas", noOffers: "No hay ofertas", tryChange: "Prueba a cambiar los filtros."
+        },
+        ru: {
+          navHome: "Главная", navCategories: "Категории", navContact: "Контакт", navDevelopments: "Новостройки", navPlots: "Участки", navBuild: "Строительство дома",
+          breadcrumbHome: "Главная", breadcrumbCurrent: "Новостройки", eyebrow: "Новостройки · Costa Blanca",
+          h1: "Новостройки на Costa Blanca — апартаменты и виллы от застройщиков",
+          subtitle: "Подобранные новостройки на Costa Blanca для частных покупателей и инвесторов — от Аликанте до Бенидорма, с акцентом на качество локации и потенциал роста стоимости.",
+          call: "📞 Позвонить", whatsapp: "💬 WhatsApp",
+          lead: "Помогаем выбрать новостройки с потенциалом роста стоимости, аренды и безопасной покупки в Испании — от апартаментов до премиальных вилл.",
+          projectsTitle: "Новостройки Costa Blanca — апартаменты и виллы от застройщиков",
+          projectsText: "Каждый проект ведёт на подробное предложение с описанием, фото, параметрами и локацией.",
+          locationAll: "Все локации", priceAll: "Любая цена", price150: "до 150 000 €", price300: "150 000–300 000 €", price300plus: "от 300 000 €", reset: "Сбросить",
+          cardLink: "Смотреть проект →",
+          whyTitle: "Почему стоит инвестировать в новостройки Costa Blanca Alicante–Benidorm",
+          why1Title: "Стабильный рынок недвижимости", why1Text: "Costa Blanca — один из самых стабильных регионов Испании с круглогодичным спросом на покупку и аренду недвижимости.",
+          why2Title: "Высокий потенциал ROI", why2Text: "Новостройки Аликанте и Бенидорма дают потенциал доходности при правильном выборе проекта.",
+          why3Title: "Безопасная покупка от застройщика", why3Text: "Апартаменты и виллы от застройщика в Испании — это прозрачный процесс, современные стандарты и гарантии качества.",
+          locationsTitle: "Лучшие локации: Alicante, Benidorm, Finestrat и окрестности",
+          locationsText: "Alicante, Finestrat, Benidorm, Torrevieja и Torre de la Horadada входят в число самых популярных направлений для покупки новой недвижимости в Испании.",
+          contactTitle: "Запросить актуальные проекты",
+          contactText: "Свяжитесь со мной, чтобы получить актуальные предложения, подобранные под ваш бюджет, цель покупки и желаемую локацию на Costa Blanca.",
+          contactNote: "💡 Отвечаю за 10–15 минут", role: "Специалист по инвестициям в недвижимость Costa Blanca · Alicante–Benidorm",
+          callNow: "📞 Позвонить сейчас", write: "💬 Написать", namePlaceholder: "Ваше имя", phonePlaceholder: "Телефон / WhatsApp", emailPlaceholder: "Email", messagePlaceholder: "Напишите, какой проект вас интересует", submit: "📩 Отправить запрос",
+          footerText: "Costa Blanca Invest — инвестиционный проект на рынке недвижимости Испании. Сайт даёт быстрый доступ к новостройкам, участкам и проектам строительства дома на Costa Blanca.",
+          footerBottom: "© 2026 | Сайт создан лично Ольгой Чернышенко.", offers: "объектов", noOffers: "Нет объектов", tryChange: "Попробуйте изменить фильтры."
+        }
+      };
       if (!langs.includes(state.lang)) state.lang = "pl";
 
       const el = {
@@ -430,6 +559,84 @@
       };
 
       const getTranslation = project => project && project.translations ? (project.translations[state.lang] || project.translations.pl || {}) : {};
+
+      const applyUI = () => {
+        const t = UI[state.lang] || UI.pl;
+        const navLinks = d.querySelectorAll(".nav a");
+        if (navLinks[0]) navLinks[0].textContent = t.navHome;
+        if (navLinks[1]) navLinks[1].textContent = t.navCategories;
+        if (navLinks[2]) navLinks[2].textContent = t.navContact;
+        if (navLinks[3]) navLinks[3].textContent = t.navDevelopments;
+        if (navLinks[4]) navLinks[4].textContent = t.navPlots;
+        if (navLinks[5]) navLinks[5].textContent = t.navBuild;
+
+        const crumbs = d.querySelectorAll(".breadcrumbs a, .breadcrumbs span");
+        if (crumbs[0]) crumbs[0].textContent = t.breadcrumbHome;
+        if (crumbs[2]) crumbs[2].textContent = t.breadcrumbCurrent;
+
+        const setText = (selector, value) => {
+          const node = d.querySelector(selector);
+          if (node) node.textContent = value;
+        };
+        const setPlaceholder = (selector, value) => {
+          const node = d.querySelector(selector);
+          if (node) node.placeholder = value;
+        };
+
+        setText(".eyebrow", t.eyebrow);
+        setText(".hero-copy h1", t.h1);
+        setText(".hero-copy .subtitle", t.subtitle);
+        const heroButtons = d.querySelectorAll(".contact-inline-wrap .contact-inline");
+        if (heroButtons[0]) heroButtons[0].textContent = t.call;
+        if (heroButtons[1]) heroButtons[1].textContent = t.whatsapp;
+        setText(".hero-copy .lead", t.lead);
+
+        const sections = d.querySelectorAll(".section-card h2");
+        if (sections[0]) sections[0].textContent = t.projectsTitle;
+        const projectText = d.querySelector("#projects .center-text");
+        if (projectText) projectText.textContent = t.projectsText;
+
+        if (el.location && el.location.options[0]) el.location.options[0].textContent = t.locationAll;
+        if (el.price) {
+          if (el.price.options[0]) el.price.options[0].textContent = t.priceAll;
+          if (el.price.options[1]) el.price.options[1].textContent = t.price150;
+          if (el.price.options[2]) el.price.options[2].textContent = t.price300;
+          if (el.price.options[3]) el.price.options[3].textContent = t.price300plus;
+        }
+        if (el.reset) el.reset.textContent = t.reset;
+
+        if (sections[1]) sections[1].textContent = t.whyTitle;
+        const whyItems = d.querySelectorAll(".why-item");
+        if (whyItems[0]) { whyItems[0].querySelector("h3").textContent = t.why1Title; whyItems[0].querySelector("p").textContent = t.why1Text; }
+        if (whyItems[1]) { whyItems[1].querySelector("h3").textContent = t.why2Title; whyItems[1].querySelector("p").textContent = t.why2Text; }
+        if (whyItems[2]) { whyItems[2].querySelector("h3").textContent = t.why3Title; whyItems[2].querySelector("p").textContent = t.why3Text; }
+
+        const locationsTitle = d.querySelector("#locations h2");
+        const locationsText = d.querySelector("#locations .center-text");
+        if (locationsTitle) locationsTitle.textContent = t.locationsTitle;
+        if (locationsText) locationsText.textContent = t.locationsText;
+
+        setText(".contact-title", t.contactTitle);
+        const contactText = d.querySelector("#contact .center-text");
+        if (contactText) contactText.textContent = t.contactText;
+        setText(".contact-note", t.contactNote);
+        setText(".contact-avatar-role", t.role);
+        const ctaButtons = d.querySelectorAll("#contact .cta-actions .btn");
+        if (ctaButtons[0]) ctaButtons[0].textContent = t.callNow;
+        if (ctaButtons[1]) ctaButtons[1].textContent = t.write;
+        setPlaceholder('input[name="name"]', t.namePlaceholder);
+        setPlaceholder('input[name="phone"]', t.phonePlaceholder);
+        setPlaceholder('input[name="email"]', t.emailPlaceholder);
+        setPlaceholder('textarea[name="message"]', t.messagePlaceholder);
+        setText(".submit-btn", t.submit);
+        setText(".footer-copy", t.footerText);
+        setText(".footer-bottom", t.footerBottom);
+        const footerLinks = d.querySelectorAll(".footer-links a");
+        if (footerLinks[0]) footerLinks[0].textContent = t.navDevelopments;
+        if (footerLinks[1]) footerLinks[1].textContent = t.navPlots;
+        if (footerLinks[2]) footerLinks[2].textContent = t.navBuild;
+        if (footerLinks[3]) footerLinks[3].textContent = t.navContact;
+      };
       const getText = project => {
         const tr = getTranslation(project);
         const title = tr.title || project.title || project.name || project.shareTitle || project.slug || "Costa Blanca Invest";
@@ -551,9 +758,11 @@
         if (!el.grid) return;
         fillLocations();
         const visible = filteredProjects();
-        if (el.summary) el.summary.textContent = visible.length + " / " + projects.length + " ofert";
+        const uiText = UI[state.lang] || UI.pl;
+        if (el.summary) el.summary.textContent = visible.length + " / " + projects.length + " " + uiText.offers;
         if (!visible.length) {
-          el.grid.innerHTML = '<div class="empty-filter"><strong>Brak ofert</strong><br>Spróbuj zmienić filtry.</div>';
+          const uiText = UI[state.lang] || UI.pl;
+          el.grid.innerHTML = '<div class="empty-filter"><strong>' + safe(uiText.noOffers) + '</strong><br>' + safe(uiText.tryChange) + '</div>';
           return;
         }
         el.grid.innerHTML = visible.map(project => {
@@ -567,7 +776,7 @@
               '<div class="card-meta">' + safe(text.meta) + '</div>' +
               '<div class="card-price">' + safe(text.price) + '</div>' +
               '<p>' + safe(text.desc) + '</p>' +
-              '<div class="card-link">Zobacz inwestycję →</div>' +
+              '<div class="card-link">' + safe((UI[state.lang] || UI.pl).cardLink) + '</div>' +
             '</div>' +
           '</a>';
         }).join("");
@@ -587,6 +796,7 @@
         if (state.lang === "pl") url.searchParams.delete("lang");
         else url.searchParams.set("lang", state.lang);
         window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+        applyUI();
         render();
       };
 
@@ -636,7 +846,9 @@
         if (el.price) el.price.value = "";
         render();
       });
-      el.buttons.forEach(button => button.addEventListener("click", () => applyLang(button.dataset.lang)));
+      el.buttons.forEach(button => button.addEventListener("click", () => {
+        applyLang(button.dataset.lang);
+      }));
 
       if (el.contactForm) el.contactForm.addEventListener("submit", event => {
         event.preventDefault();
