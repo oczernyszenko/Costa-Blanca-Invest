@@ -250,6 +250,9 @@
       // Twitter image, schema image and the share preview. Put property/card images
       // before generic category images from projects.json.
       const rawImages = [
+        item.shareImage,
+        item.ogImage,
+        item.mainImage,
         ...galleryPatch,
         item.image,
         ...imageNumberFields,
@@ -317,11 +320,8 @@
     }
 
     function getShareUrl(data, options={}){
-      // Clean static URL for Facebook / WhatsApp previews.
-      // Create this file separately: /pl/new-developments/share/<slug>.html
-      const langPath = currentLang === 'pl' ? '/pl' : `/${currentLang}`;
-      const versionPart = options.cacheBust ? `?v=${Date.now()}` : '';
-      return `${SITE_ORIGIN}${langPath}/new-developments/share/${encodeURIComponent(data.slug)}.html${versionPart}`;
+      // Share the real property page, not a separate static page.
+      return getPropertyUrl(data, options);
     }
     async function copyText(value){
       try{
@@ -709,7 +709,7 @@
     }
 
     function renderSchema(data){
-      const schema={'@context':'https://schema.org','@graph':[{'@type':'Organization',name:'Costa Blanca Invest',url:SITE_ORIGIN,email:'olga@a1invest4u.com',telephone:'+34604158859'},{'@type':'WebPage',name:data.title,url:getPropertyUrl(data),description:data.desc,inLanguage:currentLang,primaryImageOfPage:{'@type':'ImageObject',url:data.image}},{'@type':'Product',name:data.title,description:data.desc,image:data.images,brand:{'@type':'Brand',name:'Costa Blanca Invest'},offers:{'@type':'Offer',priceCurrency:'EUR',price:moneyNumber(data.price)||undefined,availability:'https://schema.org/InStock',url:getShareUrl(data)}}]};
+      const schema={'@context':'https://schema.org','@graph':[{'@type':'Organization',name:'Costa Blanca Invest',url:SITE_ORIGIN,email:'olga@a1invest4u.com',telephone:'+34604158859'},{'@type':'WebPage',name:data.title,url:getPropertyUrl(data),description:data.desc,inLanguage:currentLang,primaryImageOfPage:{'@type':'ImageObject',url:data.image}},{'@type':'Product',name:data.title,description:data.desc,image:data.images,brand:{'@type':'Brand',name:'Costa Blanca Invest'},offers:{'@type':'Offer',priceCurrency:'EUR',price:moneyNumber(data.price)||undefined,availability:'https://schema.org/InStock',url:getPropertyUrl(data)}}]};
       document.getElementById('schemaJson').textContent=JSON.stringify(schema,null,2);
     }
 
