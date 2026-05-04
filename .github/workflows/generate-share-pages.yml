@@ -5,27 +5,31 @@ on:
     paths:
       - 'pl/new-developments/projects.json'
       - 'pl/new-developments/scripts/generate-share-pages.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Generate pages
+      - name: Generate share pages
         run: node pl/new-developments/scripts/generate-share-pages.js
 
-      - name: Commit share pages
+      - name: Commit generated share pages
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add .
-          git commit -m "Auto generate share pages" || echo "No changes"
+          git add pl/new-developments/share/
+          git commit -m "Auto-generate share pages" || echo "No changes"
           git push
