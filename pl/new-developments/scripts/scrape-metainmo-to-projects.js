@@ -297,7 +297,7 @@ function collectProjectLinks(html = "") {
     const tag = m[0] || "";
 
     if (!href.includes("metainmo.com")) continue;
-    if (/xxxxxxxx/i.test(text)) continue;
+    const isLockedProject = /subskrypcj/i.test(text) || /zobaczyć tę nieruchomość/i.test(text) || /zobaczyc te nieruchomosc/i.test(text);
 
     const looksLikeProject =
       /nowa inwestycja/i.test(text) ||
@@ -307,16 +307,54 @@ function collectProjectLinks(html = "") {
       /\/new-development\//i.test(href) ||
       /card|property|promotion|promocion|inmueble/i.test(tag);
 
-    if (!looksLikeProject) continue;
+    if (!looksLikeProject && !isLockedProject) continue;
 
     anchors.push({ href, inner, text, index: m.index });
   }
 
-  const map = new Map();
-  for (const anchor of anchors) {
-    if (!map.has(anchor.href)) map.set(anchor.href, anchor);
+  // Do not dedupe by href: locked Metainmo cards often share the same subscription URL.
+  return anchors;
+}
+
+function hashCode(value = "") {
+  let hash = 0;
+  const text = String(value || "");
+  for (let i = 0; i < text.length; i++) {
+    hash = ((hash << 5) - hash) + text.charCodeAt(i);
+    hash |= 0;
   }
-  return [...map.values()];
+  return hash;
+}
+
+function titleFromLockedBlock(blockText = "", fallback = "") {
+  const text = clean(blockText);
+  const markers = ["Nieruchomości w ", "Nieruchomość w "];
+  let title = "";
+
+  for (const marker of markers) {
+    const start = text.indexOf(marker);
+    if (start < 0) continue;
+    let rest = text.slice(start + marker.length).trim();
+    const stops = [" Wille", " Apartamenty", " Mieszkania", " Nowy", " Nowe", " Odkryj", " Poznaj", " Zlokalizowana", " Zlokalizowany", " W samym", " Na sprzedaż", " Te ", " Ten ", " Cały ", "."];
+    let end = rest.length;
+    for (const stop of stops) {
+      const pos = rest.indexOf(stop);
+      if (pos > 2 && pos < end) end = pos;
+    }
+    title = clean(rest.slice(0, end));
+    break;
+  }
+
+  if (!title || title.length < 3 || title.toLowerCase().includes("xxxxxxxx")) {
+    const parts = text.split("Alicante,");
+    const city = parts[1] ? clean(parts[1].split(",")[0].split("Rok oddania")[0].split("Stan")[0]) : "Costa Blanca";
+    const area = extractAreaFromText(text);
+    const price = extractPriceFromText(text);
+    const num = String(Math.abs(hashCode(`${city}|${area}|${price}|${fallback}`))).slice(0, 5);
+    title = `Nowa inwestycja ${city} ${num}`;
+  }
+
+  return title;
 }
 
 async function fetchHtml(url, retries = 2) {
@@ -387,18 +425,24 @@ async function extractProjectsFromList(html) {
       current.text.replace(/^Nowa inwestycja\s+/i, "").replace(/\s+promocja\s+w.*$/i, "");
 
     let title = clean(rawTitle);
+    if (current.locked || /xxxxxxxx/i.test(title) || /subskrypcj/i.test(title)) {
+      title = titleFromLockedBlock(blockText, String(i));
+    }
     let price = extractPriceFromText(blockText);
     let area = extractAreaFromText(blockText);
     let rooms = extractRoomsFromText(blockText);
     let images = extractImages(block);
 
-    // PRO: always open the detail page to collect the maximum gallery, not only the first card image.
-    let detail = await fetchDetailData(current.href);
-    if (!title && detail.title) title = detail.title;
-    if (detail.price !== "Cena na zapytanie") price = detail.price;
-    if (detail.area !== "na zapytanie") area = detail.area;
-    if (detail.rooms !== "różne układy") rooms = detail.rooms;
-    images = [...new Set([...images, ...detail.images])].slice(0, MAX_IMAGES);
+    // PRO: open detail page only for public cards. Locked cards have a subscription URL and all useful public data is already in the list block.
+    let detail = null;
+    if (!current.locked) {
+      detail = await fetchDetailData(current.href);
+      if (!title && detail.title) title = detail.title;
+      if (detail.price !== "Cena na zapytanie") price = detail.price;
+      if (detail.area !== "na zapytanie") area = detail.area;
+      if (detail.rooms !== "różne układy") rooms = detail.rooms;
+      images = [...new Set([...images, ...detail.images])].slice(0, MAX_IMAGES);
+    }
 
     if (!title || title.length < 3) {
       title = slugify(current.href.split("/").filter(Boolean).pop() || "metainmo");
