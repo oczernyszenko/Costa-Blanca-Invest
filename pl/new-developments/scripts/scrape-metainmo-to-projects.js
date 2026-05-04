@@ -1,34 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 
-/*
-  PRO importer for Costa Blanca Invest
-  Save as:
-  pl/new-developments/scripts/scrape-metainmo-to-projects.js
-
-  Output:
-  pl/new-developments/projects.json
-
-  Recommended GitHub Action env:
-  MAX_PAGES=80
-  MAX_IMAGES=60
-  UPDATE_EXISTING=1
-  BACKUP=0
-*/
-
 const BASE_URL = process.env.BASE_URL || "https://spain.metainmo.com/pl/alicante/promociones";
 const REPO_ROOT = process.cwd();
 const projectsPath = path.join(REPO_ROOT, "pl", "new-developments", "projects.json");
 
+const IMPORT_LIMIT = Number(process.env.IMPORT_LIMIT || process.env.limit || 50);
 const MAX_PAGES = Number(process.env.MAX_PAGES || 80);
-const MAX_IMAGES = Number(process.env.MAX_IMAGES || 60);
+const MAX_IMAGES = Number(process.env.MAX_IMAGES || 12);
 const DELAY_MS = Number(process.env.DELAY_MS || 450);
 const DETAIL_DELAY_MS = Number(process.env.DETAIL_DELAY_MS || 220);
-const UPDATE_EXISTING = process.env.UPDATE_EXISTING === "1";
-const BACKUP = process.env.BACKUP !== "0";
-const SITE_ORIGIN = "https://spain.metainmo.com";
+const UPDATE_EXISTING = process.env.UPDATE_EXISTING !== "0";
+const SITE_URL = "https://costa-blanca-invest.com";
+const META_URL = "https://spain.metainmo.com";
 
-const FALLBACK_IMAGE = "/pl/new-developments/images/new-developments-costa-blanca.jpg";
+const FALLBACK_IMAGE = `${SITE_URL}/pl/new-developments/images/new-developments-costa-blanca.jpg`;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -41,9 +27,6 @@ function clean(value = "") {
     .replace(/&quot;/gi, '"')
     .replace(/&#039;/gi, "'")
     .replace(/&#39;/gi, "'")
-    .replace(/&rsquo;/gi, "’")
-    .replace(/&ldquo;/gi, "“")
-    .replace(/&rdquo;/gi, "”")
     .replace(/&euro;/gi, "€")
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -63,7 +46,7 @@ function slugify(value = "") {
     .slice(0, 90);
 }
 
-function absoluteUrl(url = "", base = SITE_ORIGIN) {
+function absoluteUrl(url = "", base = META_URL) {
   const raw = String(url || "").trim();
   if (!raw || raw.startsWith("data:")) return "";
   try {
@@ -90,18 +73,16 @@ function priceValue(price = "") {
 
 function extractPriceFromText(text = "") {
   const t = clean(text);
-  const patterns = [
-    /(?:od\s*)?[\d\s]{3,}\s*€/i,
-    /[\d\s]{3,}\s*EUR/i,
-    /€\s*[\d\s]{3,}/i
-  ];
+  const match =
+    t.match(/(?:od\s*)?[\d\s]{3,}\s*€/i) ||
+    t.match(/€\s*[\d\s]{3,}/i) ||
+    t.match(/[\d\s]{3,}\s*EUR/i);
 
-  for (const pattern of patterns) {
-    const match = t.match(pattern);
-    if (match) return clean(match[0]).replace(/\s+€/g, " €").replace(/EUR/i, "€");
-  }
+  if (!match) return "Cena na zapytanie";
 
-  return "Cena na zapytanie";
+  return clean(match[0])
+    .replace(/EUR/i, "€")
+    .replace(/\s+€/g, " €");
 }
 
 function extractAreaFromText(text = "") {
@@ -126,6 +107,7 @@ function extractRoomsFromText(text = "") {
 
 function detectCity(text = "") {
   const t = clean(text).toLowerCase();
+
   const map = [
     ["torrevieja", "torrevieja"],
     ["calpe", "calpe"],
@@ -143,22 +125,22 @@ function detectCity(text = "") {
     ["pilar de la horadada", "pilar-de-la-horadada"],
     ["torre de la horadada", "pilar-de-la-horadada"],
     ["orihuela", "orihuela"],
-    ["ciudad quesada", "rojales"],
-    ["rojales", "rojales"],
-    ["denia", "denia"],
-    ["dénia", "denia"],
-    ["jávea", "javea"],
-    ["javea", "javea"],
-    ["xàbia", "javea"],
-    ["altea", "altea"],
-    ["moraira", "moraira"],
-    ["benissa", "benissa"],
-    ["benitachell", "benitachell"],
     ["punta prima", "orihuela"],
     ["playa flamenca", "orihuela"],
     ["la zenia", "orihuela"],
     ["campoamor", "orihuela"],
-    ["mil palmeras", "pilar-de-la-horadada"]
+    ["mil palmeras", "pilar-de-la-horadada"],
+    ["ciudad quesada", "rojales"],
+    ["rojales", "rojales"],
+    ["denia", "denia"],
+    ["dénia", "denia"],
+    ["javea", "javea"],
+    ["jávea", "javea"],
+    ["xàbia", "javea"],
+    ["altea", "altea"],
+    ["moraira", "moraira"],
+    ["benissa", "benissa"],
+    ["benitachell", "benitachell"]
   ];
 
   for (const [needle, key] of map) {
@@ -188,27 +170,21 @@ function prettyLocation(key = "") {
     benissa: "Benissa",
     benitachell: "Benitachell"
   };
+
   return map[key] || "Costa Blanca";
 }
 
 function isGoodImage(url = "") {
-  const cleanUrl = String(url || "").trim();
-  if (!cleanUrl) return false;
-  if (/logo|avatar|placeholder|favicon|sprite|icon|svg|base64|blank|loading/i.test(cleanUrl)) return false;
-  return /\.(jpg|jpeg|png|webp)(\?|#|$)/i.test(cleanUrl);
+  const u = String(url || "").trim();
+  if (!u) return false;
+  if (/logo|avatar|placeholder|favicon|sprite|icon|svg|base64|blank|loading/i.test(u)) return false;
+  return /\.(jpg|jpeg|png|webp)(\?|#|$)/i.test(u);
 }
 
 function addImage(images, url) {
   const normalized = absoluteUrl(url);
   if (!isGoodImage(normalized)) return;
-
-  const noSizeDuplicate = normalized.replace(/[-_](\d{2,5})x(\d{2,5})(?=\.(jpg|jpeg|png|webp))/i, "");
-  const exists = images.some(item => {
-    const comparable = item.replace(/[-_](\d{2,5})x(\d{2,5})(?=\.(jpg|jpeg|png|webp))/i, "");
-    return item === normalized || comparable === noSizeDuplicate;
-  });
-
-  if (!exists) images.push(normalized);
+  if (!images.includes(normalized)) images.push(normalized);
 }
 
 function extractSrcset(srcset = "") {
@@ -244,7 +220,10 @@ function extractTitleFromDetail(html = "") {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
   const ogTitle = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i)?.[1];
   const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-  return clean(h1 || ogTitle || title || "").replace(/\s*\|\s*.*$/g, "");
+
+  return clean(h1 || ogTitle || title || "")
+    .replace(/\s*\|\s*.*$/g, "")
+    .replace(/\s*-\s*MetaInmo.*$/i, "");
 }
 
 function getNextPageUrl(html = "", currentUrl = BASE_URL) {
@@ -258,13 +237,11 @@ function getNextPageUrl(html = "", currentUrl = BASE_URL) {
 
   const anchorRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   let m;
-  const candidates = [];
 
   while ((m = anchorRegex.exec(source))) {
     const href = absoluteUrl(m[1], currentUrl);
     const text = clean(m[2]).toLowerCase();
     const tag = m[0].toLowerCase();
-    if (!href) continue;
 
     if (
       text === "next" ||
@@ -276,11 +253,11 @@ function getNextPageUrl(html = "", currentUrl = BASE_URL) {
       tag.includes("next") ||
       tag.includes("pagination-next")
     ) {
-      candidates.push(href);
+      return href;
     }
   }
 
-  return candidates.find(next => next !== currentUrl) || null;
+  return null;
 }
 
 function getFallbackPageUrl(page) {
@@ -302,7 +279,12 @@ function collectProjectLinks(html = "") {
 
     if (!href.includes("metainmo.com")) continue;
 
-    const isLockedProject = /subskrypcj/i.test(text) || /zobaczyć tę nieruchomość/i.test(text) || /zobaczyc te nieruchomosc/i.test(text) || /xxxxxxxx/i.test(text);
+    const locked =
+      /subskrypcj/i.test(text) ||
+      /zobaczyć tę nieruchomość/i.test(text) ||
+      /zobaczyc te nieruchomosc/i.test(text) ||
+      /xxxxxxxx/i.test(text);
+
     const looksLikeProject =
       /nowa inwestycja/i.test(text) ||
       /promocja\s+w/i.test(text) ||
@@ -311,49 +293,24 @@ function collectProjectLinks(html = "") {
       /\/new-development\//i.test(href) ||
       /card|property|promotion|promocion|inmueble/i.test(tag);
 
-    if (!looksLikeProject && !isLockedProject) continue;
+    if (!looksLikeProject && !locked) continue;
 
-    anchors.push({ href, inner, text, index: m.index, locked: isLockedProject });
+    anchors.push({ href, inner, text, index: m.index, locked });
   }
 
-  // Important: no dedupe here. Locked cards can share the same subscription URL.
   return anchors;
 }
 
 function titleFromLockedBlock(blockText = "", fallback = "") {
   const text = clean(blockText);
-  const markers = ["Nieruchomości w ", "Nieruchomość w ", "Nowa inwestycja "];
-  let title = "";
+  const city = clean(
+    text.split("Alicante,")[1]?.split(",")[0]?.split("Rok oddania")[0]?.split("Stan")[0] ||
+    text.match(/promocja\s+w\s+(.+?)(?:\s|$)/i)?.[1] ||
+    "Costa Blanca"
+  );
 
-  for (const marker of markers) {
-    const start = text.indexOf(marker);
-    if (start < 0) continue;
-
-    let rest = text.slice(start + marker.length).trim();
-    const stops = [
-      " Wille", " Apartamenty", " Mieszkania", " Nowy", " Nowe", " Odkryj", " Poznaj", " Zlokalizowana",
-      " Zlokalizowany", " W samym", " Na sprzedaż", " Te ", " Ten ", " Cały ", " Rok oddania", " Stan", "."
-    ];
-
-    let end = rest.length;
-    for (const stop of stops) {
-      const pos = rest.indexOf(stop);
-      if (pos > 2 && pos < end) end = pos;
-    }
-
-    title = clean(rest.slice(0, end));
-    break;
-  }
-
-  if (!title || title.length < 3 || title.toLowerCase().includes("xxxxxxxx")) {
-    const city = clean(text.split("Alicante,")[1]?.split(",")[0]?.split("Rok oddania")[0]?.split("Stan")[0] || "Costa Blanca");
-    const area = extractAreaFromText(text);
-    const price = extractPriceFromText(text);
-    const num = String(hashCode(`${city}|${area}|${price}|${fallback}`)).slice(0, 5);
-    title = `Nowa inwestycja ${city} ${num}`;
-  }
-
-  return title;
+  const num = String(hashCode(`${city}|${fallback}|${text}`)).slice(0, 5);
+  return `Nowa inwestycja ${city} ${num}`;
 }
 
 async function fetchHtml(url, retries = 2) {
@@ -363,8 +320,8 @@ async function fetchHtml(url, retries = 2) {
     try {
       const response = await fetch(url, {
         headers: {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36 Costa-Blanca-Invest-Importer",
-          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+          "user-agent": "Mozilla/5.0 Costa-Blanca-Invest-Importer",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
           "accept-language": "pl-PL,pl;q=0.9,es;q=0.8,en;q=0.7,ru;q=0.6"
         }
       });
@@ -397,6 +354,7 @@ async function fetchDetailData(url) {
     };
   } catch (error) {
     console.warn(`Detail failed: ${url} — ${error.message}`);
+
     return {
       html: "",
       text: "",
@@ -414,6 +372,8 @@ async function extractProjectsFromList(html) {
   const projects = [];
 
   for (let i = 0; i < anchors.length; i++) {
+    if (projects.length >= IMPORT_LIMIT) break;
+
     const current = anchors[i];
     const next = anchors[i + 1];
     const block = html.slice(current.index, next ? next.index : Math.min(html.length, current.index + 9000));
@@ -435,24 +395,26 @@ async function extractProjectsFromList(html) {
       title = titleFromLockedBlock(blockText, String(i));
     } else {
       detail = await fetchDetailData(current.href);
+
       if (detail.title) title = detail.title;
       if (detail.price !== "Cena na zapytanie") price = detail.price;
       if (detail.area !== "na zapytanie") area = detail.area;
       if (detail.rooms !== "różne układy") rooms = detail.rooms;
+
       images = [...new Set([...images, ...detail.images])].slice(0, MAX_IMAGES);
     }
 
-    if (!title || title.length < 3) {
+    if (!title || title.length < 3 || title.toLowerCase().includes("xxxxxxxx")) {
       title = `Nowa inwestycja Costa Blanca ${String(hashCode(blockText + i)).slice(0, 5)}`;
     }
 
     const locationText =
       current.text.match(/promocja\s+w\s+(.+)$/i)?.[1] ||
       blockText.match(/Alicante,\s*([^*]+?)(?:Rok oddania|Stan|Pozwolenie|m2|Nieruchomość|$)/i)?.[1] ||
-      (detail ? detail.text : "") ||
+      detail?.text ||
       blockText;
 
-    const cityKey = detectCity(`${title} ${locationText} ${blockText} ${detail ? detail.text : ""}`);
+    const cityKey = detectCity(`${title} ${locationText} ${blockText} ${detail?.text || ""}`);
     const locationLabel = prettyLocation(cityKey);
     const projectSlug = slugify(title) || `project-${String(hashCode(blockText + i)).slice(0, 8)}`;
 
@@ -479,32 +441,59 @@ function makeLead(title, meta, price) {
     pl: [
       `${title} to wybrana nowa inwestycja w lokalizacji ${meta}, przygotowana dla klientów szukających jakości, komfortu i potencjału wartości na Costa Blanca.`,
       `Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena ${price} sprawia, że oferta może być interesująca dla klienta prywatnego i inwestora.`,
-      `W tej lokalizacji liczy się dostęp do usług, plaż, infrastruktury oraz przyszła płynność odsprzedaży.`,
+      `Lokalizacja zapewnia dostęp do usług, plaż, infrastruktury oraz potencjalną płynność przy przyszłej odsprzedaży.`,
       `${title} może sprawdzić się jako second home w Hiszpanii, baza wakacyjna lub zakup inwestycyjny.`
-    ],
-    en: [
-      `${title} is a selected new development in ${meta}, designed for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.`,
-      `The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With a price of ${price}, it may be attractive for private buyers and investors.`,
-      `In this location, access to services, beaches, infrastructure and future resale liquidity are key factors.`,
-      `${title} can work well as a second home in Spain, a holiday base or an investment purchase.`
     ],
     es: [
       `${title} es una promoción seleccionada en ${meta}, pensada para compradores que buscan calidad, comodidad y potencial de valor en la Costa Blanca.`,
       `El proyecto combina arquitectura moderna, distribuciones prácticas y estilo de vida mediterráneo. Con precio ${price}, puede ser interesante para uso privado e inversión.`,
-      `En esta ubicación importan el acceso a servicios, playas, infraestructura y liquidez futura.`,
+      `La ubicación ofrece acceso a servicios, playas, infraestructura y potencial liquidez en una futura reventa.`,
       `${title} puede funcionar como segunda residencia, base vacacional o compra de inversión.`
+    ],
+    en: [
+      `${title} is a selected new development in ${meta}, designed for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.`,
+      `The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With a price of ${price}, it may be attractive for private buyers and investors.`,
+      `The location offers access to services, beaches, infrastructure and potential future resale liquidity.`,
+      `${title} can work well as a second home in Spain, a holiday base or an investment purchase.`
     ],
     ru: [
       `${title} — выбранный новый проект в локации ${meta}, подходящий покупателям, которые ищут качество, комфорт и потенциал роста стоимости на Costa Blanca.`,
       `Проект сочетает современную архитектуру, практичные планировки и средиземноморский стиль жизни. Цена ${price} делает предложение интересным для личного использования и инвестиций.`,
-      `В этой локации важны доступ к сервисам, пляжам, инфраструктуре и ликвидность при будущей продаже.`,
+      `Локация даёт доступ к сервисам, пляжам, инфраструктуре и потенциальной ликвидности при будущей продаже.`,
       `${title} может подойти как второй дом в Испании, база для отдыха или инвестиционная покупка.`
     ]
   };
 }
 
+function chipByProject(raw) {
+  const text = `${raw.title} ${raw.meta}`.toLowerCase();
+
+  if (text.includes("villa") || text.includes("villas") || text.includes("wille")) return "Villas · Costa Blanca";
+  if (text.includes("calpe")) return "Calpe · Sea View";
+  if (text.includes("torrevieja")) return "Torrevieja · Investment";
+  if (text.includes("benidorm") || text.includes("finestrat")) return "Premium · Alicante";
+  if (text.includes("polop")) return "Villas · Polop";
+
+  return "Nowa inwestycja · Costa Blanca";
+}
+
+function seoKeywords(raw) {
+  const city = prettyLocation(raw.filterLocation);
+
+  return [
+    "nowe inwestycje Costa Blanca",
+    `nieruchomości ${city}`,
+    `apartamenty ${city}`,
+    `wille ${city}`,
+    "Costa Blanca Invest",
+    "nieruchomości Hiszpania",
+    "inwestycje Alicante"
+  ];
+}
+
 function toProject(raw) {
   const lead = makeLead(raw.title, raw.meta, raw.price);
+  const city = prettyLocation(raw.filterLocation);
   const sharePrice = raw.price === "Cena na zapytanie"
     ? raw.price
     : `od ${raw.price.replace(/^od\s+/i, "")}`;
@@ -516,32 +505,87 @@ function toProject(raw) {
     images: raw.images || [raw.image],
     href: `/pl/new-developments/xml-catalog/?slug=${raw.slug}`,
     sourceUrl: raw.sourceUrl,
+
     price: raw.price,
     priceValue: raw.priceValue,
     filterLocation: raw.filterLocation,
     meta: raw.meta,
-    desc: `${raw.title} — nowa inwestycja na Costa Blanca z potencjałem do życia, wypoczynku i inwestycji.`,
-    chip: "Nowa inwestycja · Costa Blanca",
+
+    desc: `${raw.title} — nowa inwestycja w lokalizacji ${raw.meta}. Projekt z potencjałem do życia, wypoczynku i inwestycji.`,
+    chip: chipByProject(raw),
+
     params: {
-      Lokalizacja: prettyLocation(raw.filterLocation),
+      Lokalizacja: city,
       Typ: "Apartamenty / Wille",
       Powierzchnia: raw.area,
       Pokoje: raw.rooms,
       Cena: raw.price
     },
+
+    seo: {
+      title: `${raw.title} | Nowa inwestycja ${city} | Costa Blanca Invest`,
+      description: `${raw.title} · ${raw.meta} · ${raw.price}. Nowa inwestycja na Costa Blanca z galerią, parametrami i szybkim kontaktem.`,
+      keywords: seoKeywords(raw),
+      canonical: `${SITE_URL}/pl/new-developments/xml-catalog/?slug=${raw.slug}`,
+      image: raw.image
+    },
+
     seoTitle: `${raw.title} | Costa Blanca Invest`,
     seoDescription: `${raw.title} · ${raw.meta} · ${raw.price}. Nowa inwestycja Costa Blanca Invest z galerią, parametrami i szybkim kontaktem.`,
     seoDescription2: lead.pl[1],
+
     translations: {
-      pl: { title: raw.title, meta: raw.meta, price: raw.price, desc: `${raw.title} — nowa inwestycja na Costa Blanca.`, seoDescription2: lead.pl[1], lead: lead.pl },
-      en: { title: raw.title, meta: raw.meta, price: raw.price, desc: `${raw.title} — selected new development on the Costa Blanca.`, seoDescription2: lead.en[1], lead: lead.en },
-      es: { title: raw.title, meta: raw.meta, price: raw.price, desc: `${raw.title} — promoción seleccionada en la Costa Blanca.`, seoDescription2: lead.es[1], lead: lead.es },
-      ru: { title: raw.title, meta: raw.meta, price: raw.price, desc: `${raw.title} — выбранный новый проект на Costa Blanca.`, seoDescription2: lead.ru[1], lead: lead.ru }
+      pl: {
+        title: raw.title,
+        meta: raw.meta,
+        price: raw.price,
+        desc: `${raw.title} — nowa inwestycja w lokalizacji ${raw.meta}.`,
+        chip: chipByProject(raw),
+        seoTitle: `${raw.title} | Nowa inwestycja ${city}`,
+        seoDescription: `${raw.title} · ${raw.meta} · ${raw.price}. Nowa inwestycja na Costa Blanca.`,
+        seoDescription2: lead.pl[1],
+        lead: lead.pl
+      },
+      es: {
+        title: raw.title,
+        meta: raw.meta,
+        price: raw.price,
+        desc: `${raw.title} — promoción seleccionada en ${raw.meta}.`,
+        chip: "Obra nueva · Costa Blanca",
+        seoTitle: `${raw.title} | Obra nueva ${city}`,
+        seoDescription: `${raw.title} · ${raw.meta} · ${raw.price}. Promoción de obra nueva en la Costa Blanca.`,
+        seoDescription2: lead.es[1],
+        lead: lead.es
+      },
+      en: {
+        title: raw.title,
+        meta: raw.meta,
+        price: raw.price,
+        desc: `${raw.title} — selected new development in ${raw.meta}.`,
+        chip: "New development · Costa Blanca",
+        seoTitle: `${raw.title} | New development ${city}`,
+        seoDescription: `${raw.title} · ${raw.meta} · ${raw.price}. New development on the Costa Blanca.`,
+        seoDescription2: lead.en[1],
+        lead: lead.en
+      },
+      ru: {
+        title: raw.title,
+        meta: raw.meta,
+        price: raw.price,
+        desc: `${raw.title} — новый проект в локации ${raw.meta}.`,
+        chip: "Новостройка · Costa Blanca",
+        seoTitle: `${raw.title} | Новостройка ${city}`,
+        seoDescription: `${raw.title} · ${raw.meta} · ${raw.price}. Новый проект на Costa Blanca.`,
+        seoDescription2: lead.ru[1],
+        lead: lead.ru
+      }
     },
+
     shareTitle: raw.title,
     sharePrice,
-    shareDescription: `${raw.title} · ${sharePrice}`,
+    shareDescription: `${raw.title} · ${sharePrice} · ${raw.meta}`,
     shareImage: raw.image,
+
     seoContent: lead,
     lead: lead.pl
   };
@@ -552,14 +596,9 @@ function dedupeRawProjects(rawProjects) {
 
   for (const raw of rawProjects) {
     if (!raw.slug) continue;
+
     const existing = bySlug.get(raw.slug);
-
-    if (!existing) {
-      bySlug.set(raw.slug, raw);
-      continue;
-    }
-
-    if ((raw.images || []).length > (existing.images || []).length) {
+    if (!existing || (raw.images || []).length > (existing.images || []).length) {
       bySlug.set(raw.slug, raw);
     }
   }
@@ -567,12 +606,34 @@ function dedupeRawProjects(rawProjects) {
   return [...bySlug.values()];
 }
 
+function normalizeExisting(project) {
+  if (!project || !project.slug) return project;
+
+  const img = project.image || project.shareImage || FALLBACK_IMAGE;
+
+  return {
+    ...project,
+    image: img.startsWith("/") ? `${SITE_URL}${img}` : img,
+    images: Array.isArray(project.images)
+      ? project.images.map(item => item.startsWith("/") ? `${SITE_URL}${item}` : item)
+      : [img],
+    seo: project.seo || {
+      title: project.seoTitle || `${project.title} | Costa Blanca Invest`,
+      description: project.seoDescription || `${project.title} · ${project.meta || "Costa Blanca"}`,
+      keywords: ["nowe inwestycje Costa Blanca", "Costa Blanca Invest"],
+      canonical: `${SITE_URL}/pl/new-developments/xml-catalog/?slug=${project.slug}`,
+      image: img.startsWith("/") ? `${SITE_URL}${img}` : img
+    }
+  };
+}
+
 function mergeProjects(current, imported) {
   const bySlug = new Map();
   const bySource = new Map();
 
-  current.forEach(project => {
-    if (project.slug) bySlug.set(project.slug, project);
+  current.map(normalizeExisting).forEach(project => {
+    if (!project || !project.slug) return;
+    bySlug.set(project.slug, project);
     if (project.sourceUrl) bySource.set(project.sourceUrl, project.slug);
   });
 
@@ -593,21 +654,21 @@ function mergeProjects(current, imported) {
         ...project,
         slug: oldProject.slug || project.slug,
         href: oldProject.href || project.href,
-        images: project.images && project.images.length ? project.images : oldProject.images,
+        images: project.images?.length ? project.images : oldProject.images,
         image: project.image || oldProject.image,
         sourceUrl: oldProject.sourceUrl || project.sourceUrl
       });
-      updated++;
-      continue;
-    }
 
-    bySlug.set(project.slug, project);
-    if (project.sourceUrl) bySource.set(project.sourceUrl, project.slug);
-    added++;
+      updated++;
+    } else {
+      bySlug.set(project.slug, project);
+      if (project.sourceUrl) bySource.set(project.sourceUrl, project.slug);
+      added++;
+    }
   }
 
   return {
-    projects: [...bySlug.values()],
+    projects: [...bySlug.values()].slice(0, IMPORT_LIMIT),
     added,
     updated
   };
@@ -616,6 +677,7 @@ function mergeProjects(current, imported) {
 async function main() {
   console.log("Repo root:", REPO_ROOT);
   console.log("Saving to:", projectsPath);
+  console.log("Import limit:", IMPORT_LIMIT);
 
   fs.mkdirSync(path.dirname(projectsPath), { recursive: true });
 
@@ -623,19 +685,15 @@ async function main() {
     ? JSON.parse(fs.readFileSync(projectsPath, "utf8"))
     : [];
 
-  if (BACKUP && fs.existsSync(projectsPath)) {
-    const stamp = new Date().toISOString().replace(/[:.]/g, "-");
-    const backupPath = projectsPath.replace(/\.json$/i, `.backup-${stamp}.json`);
-    fs.copyFileSync(projectsPath, backupPath);
-    console.log("Backup:", backupPath);
-  }
-
   const allRaw = [];
   const seenUrls = new Set();
   const seenSignatures = new Set();
+
   let url = BASE_URL;
 
   for (let page = 1; page <= MAX_PAGES; page++) {
+    if (allRaw.length >= IMPORT_LIMIT) break;
+
     if (!url || seenUrls.has(url)) {
       console.log("Repeated or empty page URL. Stop.");
       break;
@@ -646,6 +704,7 @@ async function main() {
 
     const html = await fetchHtml(url);
     const pageRaw = dedupeRawProjects(await extractProjectsFromList(html));
+
     console.log(`Page ${page}: ${pageRaw.length} projects`);
 
     if (!pageRaw.length) break;
@@ -660,13 +719,12 @@ async function main() {
     allRaw.push(...pageRaw);
 
     const nextUrl = getNextPageUrl(html, url);
-    if (nextUrl && !seenUrls.has(nextUrl)) url = nextUrl;
-    else url = getFallbackPageUrl(page + 1);
+    url = nextUrl && !seenUrls.has(nextUrl) ? nextUrl : getFallbackPageUrl(page + 1);
 
     await sleep(DELAY_MS);
   }
 
-  const uniqueRaw = dedupeRawProjects(allRaw);
+  const uniqueRaw = dedupeRawProjects(allRaw).slice(0, IMPORT_LIMIT);
   const imported = uniqueRaw.map(toProject).filter(project => project.slug && project.title);
   const result = mergeProjects(current, imported);
 
