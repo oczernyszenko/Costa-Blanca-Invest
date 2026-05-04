@@ -1483,5 +1483,125 @@
       "Villajoyosa łączy autentyczny śródziemnomorski charakter, kolorową starówkę, plaże i dobre połączenia z Alicante oraz Benidormem.",
       "Alonis Villas to propozycja dla klientów premium, którzy szukają nieruchomości do życia, wypoczynku lub długoterminowej ochrony kapitału w Hiszpanii."
     ]
+  },
+  {
+    "slug": "malaga",
+    "title": "Málaga",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4302626/01KQCCFPKCDT0K9WN76FCXS1MP.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4302626/01KQCCFPKCDT0K9WN76FCXS1MP.jpg"
+    ],
+    "href": "/pl/new-developments/xml-catalog/?slug=malaga",
+    "sourceUrl": "https://spain.metainmo.com/pl/malaga/promociones",
+    "price": "od 102 816 €",
+    "priceValue": 102816,
+    "filterLocation": "torrevieja",
+    "meta": "Torrevieja · Costa Blanca",
+    "desc": "Málaga — nowa inwestycja na Costa Blanca z potencjałem do życia, wypoczynku i inwestycji.",
+    "chip": "Nowa inwestycja · Costa Blanca",
+    "params": {
+      "Lokalizacja": "Torrevieja",
+      "Typ": "Apartamenty / Wille",
+      "Powierzchnia": "81",
+      "Pokoje": "1 pokoje",
+      "Cena": "od 102 816 €"
+    },
+    "seoTitle": "Málaga | Costa Blanca Invest",
+    "seoDescription": "Málaga · Torrevieja · Costa Blanca · od 102 816 €. Nowa inwestycja Costa Blanca Invest z galerią, parametrami i szybkim kontaktem.",
+    "seoDescription2": "Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena od 102 816 € sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.",
+    "translations": {
+      "pl": {
+        "title": "Málaga",
+        "meta": "Torrevieja · Costa Blanca",
+        "price": "od 102 816 €",
+        "desc": "Málaga — nowa inwestycja na Costa Blanca z potencjałem do życia, wypoczynku i inwestycji.",
+        "seoDescription": "Málaga · Torrevieja · Costa Blanca · od 102 816 €.",
+        "seoDescription2": "Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena od 102 816 € sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.",
+        "lead": [
+          "Málaga to starannie wybrana nowa inwestycja w lokalizacji Torrevieja · Costa Blanca, przygotowana dla klientów szukających jakości, komfortu i dobrego potencjału wartości na Costa Blanca.",
+          "Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena od 102 816 € sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.",
+          "W tej lokalizacji liczą się nie tylko parametry nieruchomości, ale także dostęp do usług, plaż, infrastruktury oraz przyszła płynność odsprzedaży.",
+          "Málaga może sprawdzić się jako second home w Hiszpanii, baza wakacyjna lub zakup inwestycyjny z potencjałem wynajmu i wzrostu wartości."
+        ]
+      },
+      "en": {
+        "title": "Málaga",
+        "meta": "Torrevieja · Costa Blanca",
+        "price": "od 102 816 €",
+        "desc": "Málaga — selected new development on the Costa Blanca.",
+        "seoDescription": "Málaga · Torrevieja · Costa Blanca · od 102 816 €.",
+        "seoDescription2": "The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With a price of od 102 816 €, it may be attractive both for private buyers and investors.",
+        "lead": [
+          "Málaga is a carefully selected new development in Torrevieja · Costa Blanca, designed for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.",
+          "The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With a price of od 102 816 €, it may be attractive both for private buyers and investors.",
+          "In this location, the key factors are not only the property specifications, but also access to services, beaches, infrastructure and future resale liquidity.",
+          "Málaga can work well as a second home in Spain, a holiday base or an investment purchase with rental and value-growth potential."
+        ]
+      },
+      "es": {
+        "title": "Málaga",
+        "meta": "Torrevieja · Costa Blanca",
+        "price": "od 102 816 €",
+        "desc": "Málaga — promoción seleccionada en la Costa Blanca.",
+        "seoDescription": "Málaga · Torrevieja · Costa Blanca · od 102 816 €.",
+        "seoDescription2": "El proyecto combina arquitectura moderna, distribuciones prácticas y estilo de vida mediterráneo. Con precio od 102 816 €, puede ser interesante tanto para uso privado como para inversión.",
+        "lead": [
+          "Málaga es una promoción seleccionada en Torrevieja · Costa Blanca, pensada para compradores que buscan calidad, comodidad y potencial de valor en la Costa Blanca.",
+          "El proyecto combina arquitectura moderna, distribuciones prácticas y estilo de vida mediterráneo. Con precio od 102 816 €, puede ser interesante tanto para uso privado como para inversión.",
+          "En esta ubicación importan no solo los parámetros de la vivienda, sino también el acceso a servicios, playas, infraestructura y liquidez futura.",
+          "Málaga puede funcionar como segunda residencia en España, base vacacional o compra de inversión con potencial de alquiler y revalorización."
+        ]
+      },
+      "ru": {
+        "title": "Málaga",
+        "meta": "Torrevieja · Costa Blanca",
+        "price": "od 102 816 €",
+        "desc": "Málaga — выбранный новый проект на Costa Blanca.",
+        "seoDescription": "Málaga · Torrevieja · Costa Blanca · od 102 816 €.",
+        "seoDescription2": "Проект сочетает современную архитектуру, практичные планировки и средиземноморский стиль жизни. Цена od 102 816 € делает предложение интересным как для личного использования, так и для инвестиций.",
+        "lead": [
+          "Málaga — тщательно выбранный новый проект в локации Torrevieja · Costa Blanca, подходящий покупателям, которые ищут качество, комфорт и потенциал роста стоимости на Costa Blanca.",
+          "Проект сочетает современную архитектуру, практичные планировки и средиземноморский стиль жизни. Цена od 102 816 € делает предложение интересным как для личного использования, так и для инвестиций.",
+          "В этой локации важны не только параметры объекта, но и доступ к сервисам, пляжам, инфраструктуре и ликвидность при будущей продаже.",
+          "Málaga может подойти как второй дом в Испании, база для отдыха или инвестиционная покупка под аренду и рост стоимости."
+        ]
+      }
+    },
+    "shareTitle": "Málaga",
+    "sharePrice": "od 102 816 €",
+    "shareDescription": "Málaga · od 102 816 €",
+    "shareImage": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4302626/01KQCCFPKCDT0K9WN76FCXS1MP.jpg",
+    "seoContent": {
+      "pl": [
+        "Málaga to starannie wybrana nowa inwestycja w lokalizacji Torrevieja · Costa Blanca, przygotowana dla klientów szukających jakości, komfortu i dobrego potencjału wartości na Costa Blanca.",
+        "Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena od 102 816 € sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.",
+        "W tej lokalizacji liczą się nie tylko parametry nieruchomości, ale także dostęp do usług, plaż, infrastruktury oraz przyszła płynność odsprzedaży.",
+        "Málaga może sprawdzić się jako second home w Hiszpanii, baza wakacyjna lub zakup inwestycyjny z potencjałem wynajmu i wzrostu wartości."
+      ],
+      "en": [
+        "Málaga is a carefully selected new development in Torrevieja · Costa Blanca, designed for buyers looking for quality, comfort and long-term value potential on the Costa Blanca.",
+        "The project combines modern architecture, practical layouts and a Mediterranean lifestyle. With a price of od 102 816 €, it may be attractive both for private buyers and investors.",
+        "In this location, the key factors are not only the property specifications, but also access to services, beaches, infrastructure and future resale liquidity.",
+        "Málaga can work well as a second home in Spain, a holiday base or an investment purchase with rental and value-growth potential."
+      ],
+      "es": [
+        "Málaga es una promoción seleccionada en Torrevieja · Costa Blanca, pensada para compradores que buscan calidad, comodidad y potencial de valor en la Costa Blanca.",
+        "El proyecto combina arquitectura moderna, distribuciones prácticas y estilo de vida mediterráneo. Con precio od 102 816 €, puede ser interesante tanto para uso privado como para inversión.",
+        "En esta ubicación importan no solo los parámetros de la vivienda, sino también el acceso a servicios, playas, infraestructura y liquidez futura.",
+        "Málaga puede funcionar como segunda residencia en España, base vacacional o compra de inversión con potencial de alquiler y revalorización."
+      ],
+      "ru": [
+        "Málaga — тщательно выбранный новый проект в локации Torrevieja · Costa Blanca, подходящий покупателям, которые ищут качество, комфорт и потенциал роста стоимости на Costa Blanca.",
+        "Проект сочетает современную архитектуру, практичные планировки и средиземноморский стиль жизни. Цена od 102 816 € делает предложение интересным как для личного использования, так и для инвестиций.",
+        "В этой локации важны не только параметры объекта, но и доступ к сервисам, пляжам, инфраструктуре и ликвидность при будущей продаже.",
+        "Málaga может подойти как второй дом в Испании, база для отдыха или инвестиционная покупка под аренду и рост стоимости."
+      ]
+    },
+    "lead": [
+      "Málaga to starannie wybrana nowa inwestycja w lokalizacji Torrevieja · Costa Blanca, przygotowana dla klientów szukających jakości, komfortu i dobrego potencjału wartości na Costa Blanca.",
+      "Projekt łączy nowoczesną architekturę, praktyczne układy i śródziemnomorski styl życia. Cena od 102 816 € sprawia, że oferta może być interesująca zarówno dla klienta prywatnego, jak i inwestora.",
+      "W tej lokalizacji liczą się nie tylko parametry nieruchomości, ale także dostęp do usług, plaż, infrastruktury oraz przyszła płynność odsprzedaży.",
+      "Málaga może sprawdzić się jako second home w Hiszpanii, baza wakacyjna lub zakup inwestycyjny z potencjałem wynajmu i wzrostu wartości."
+    ]
   }
 ]
