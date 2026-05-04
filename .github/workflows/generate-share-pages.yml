@@ -23,13 +23,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate share pages
+      - name: Install dependencies
+        run: npm install sharp node-fetch
+
+      - name: Generate share pages + images
         run: node pl/new-developments/scripts/generate-share-pages.js
 
-      - name: Commit generated share pages
+      - name: Commit generated files
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add pl/new-developments/share/
-          git commit -m "Auto-generate share pages" || echo "No changes"
+          git add pl/new-developments/share-images/
+          git commit -m "Auto-generate share pages and OG images" || echo "No changes"
           git push
