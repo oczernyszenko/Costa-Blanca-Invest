@@ -2,11 +2,6 @@ name: Import Metainmo Batch PRO
 
 on:
   workflow_dispatch:
-    inputs:
-      limit:
-        description: "How many projects to import"
-        required: true
-        default: "50"
 
 permissions:
   contents: write
@@ -26,39 +21,36 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install deps (if needed)
+      - name: Install deps
         run: |
           if [ -f package.json ]; then npm install; fi
 
       - name: Run importer
         env:
-          IMPORT_LIMIT: ${{ github.event.inputs.limit }}
+          MAX_PAGES: 999
+          UPDATE_EXISTING: 1
+          BACKUP: 0
         run: node pl/new-developments/scripts/scrape-metainmo-to-projects.js
 
       - name: Check projects.json
         run: |
           echo "==== CHECK FILE ===="
           ls -la pl/new-developments/
+          echo "==== COUNT ===="
+          node -e "const p=require('./pl/new-developments/projects.json'); console.log(p.length)"
           echo "==== PREVIEW ===="
-          head -n 40 pl/new-developments/projects.json || echo "projects.json not found"
+          head -n 40 pl/new-developments/projects.json
 
-      # ✅ НОВЫЙ БЛОК (безопасный)
       - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          # подтягиваем актуальное состояние
           git pull --rebase origin main
 
-          # добавляем файл
           git add pl/new-developments/projects.json
 
-          # если нет изменений — выходим
           git diff --cached --quiet && echo "No changes" && exit 0
 
-          # коммит
           git commit -m "Update projects.json [auto]"
-
-          # обычный push без force
           git push origin main
