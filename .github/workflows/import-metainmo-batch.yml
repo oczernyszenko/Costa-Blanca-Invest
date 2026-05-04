@@ -1,13 +1,64 @@
-- name: Commit changes
-  run: |
-    git config user.name "github-actions"
-    git config user.email "actions@github.com"
+name: Import Metainmo Batch
 
-    git add pl/new-developments/projects.json
+on:
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: "How many pages to scan"
+        required: true
+        default: "80"
 
-    git diff --cached --quiet && echo "No changes to commit" && exit 0
+permissions:
+  contents: write
 
-    git commit -m "Import projects batch"
+jobs:
+  import:
+    runs-on: ubuntu-latest
 
-    git pull --rebase origin main
-    git push origin main
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run importer
+        env:
+          MAX_PAGES: ${{ github.event.inputs.max_pages }}
+          UPDATE_EXISTING: "1"
+          MAX_IMAGES: "60"
+          BACKUP: "0"
+        run: |
+          echo "START IMPORT"
+          node pl/new-developments/scripts/scrape-metainmo-to-projects.js
+          echo "IMPORT DONE"
+
+      - name: Debug generated file
+        run: |
+          echo "PWD:"
+          pwd
+          echo "Files:"
+          ls -la pl/new-developments
+          echo "Git status:"
+          git status --short
+          echo "JSON preview:"
+          test -f pl/new-developments/projects.json && head -c 1000 pl/new-developments/projects.json || echo "NO projects.json"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git pull --rebase origin main
+
+          git add pl/new-developments/projects.json
+
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+
+          git commit -m "Import projects batch"
+          git push origin main
