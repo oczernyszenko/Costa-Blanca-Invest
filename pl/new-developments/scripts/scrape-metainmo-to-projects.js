@@ -5,8 +5,7 @@ const SOURCE_URL = 'https://spain.metainmo.com/pl/alicante/promociones';
 const SITE = 'https://costa-blanca-invest.com';
 
 const projectsPath = path.join(__dirname, '..', 'projects.json');
-const outputPath = path.join(__dirname, '..', 'projects.imported.json');
-
+const outputPath = projectsPath;
 const LIMIT = 50;
 
 function slugify(value = '') {
