@@ -313,6 +313,20 @@
     function splitPrice(price){const text=String(price||'');const parts=text.split(/[–—-]/).map(s=>s.trim()).filter(Boolean);if(parts.length>=2)return [parts[0],parts.slice(1).join(' – ')];if(text.includes('·'))return [text.split('·')[0].trim(),text.split('·').slice(1).join(' · ').trim()];return [text,''];}
     function moneyNumber(price){const found=String(price||'').replace(/\s/g,'').match(/\d+/g);return found?found[0]:'';}
     function setAttr(selector,attr,value){const node=document.querySelector(selector);if(node && value)node.setAttribute(attr,value);}
+    function getMinPrice(price){
+      return String(price || '')
+        .split('·')[0]
+        .split('–')[0]
+        .split('-')[0]
+        .trim();
+    }
+    function getFromLabel(){
+      return currentLang === 'es' ? 'desde' : currentLang === 'ru' ? 'от' : currentLang === 'pl' ? 'od' : 'from';
+    }
+    function getShareLine(data){
+      const minPrice = getMinPrice(data.price);
+      return `${data.title} · ${getFromLabel()} ${minPrice}`.trim();
+    }
     function getPropertyUrl(data, options={}){
       const langPart = currentLang === 'pl' ? '' : `&lang=${encodeURIComponent(currentLang)}`;
       const versionPart = options.cacheBust ? `&v=${Date.now()}` : '';
@@ -348,7 +362,7 @@
     async function shareProperty(data){
       const shareUrl=getShareUrl(data,{cacheBust:true});
       const shareTitle=data.title || 'Costa Blanca Invest';
-      const shareText=[data.title,data.price,shareUrl].filter(Boolean).join(String.fromCharCode(10));
+      const shareText=[getShareLine(data),shareUrl].filter(Boolean).join(String.fromCharCode(10));
 
       try{
         if(navigator.share){
@@ -562,7 +576,7 @@
   document.documentElement.lang=currentLang;
   document.title=`${data.title}`;
 
-  const cleanDesc = `${data.title} · ${data.price}`;
+  const cleanDesc = getShareLine(data);
 
   setAttr('meta[name="description"]','content',cleanDesc);
   setAttr('#canonicalLink','href',canonical);
@@ -666,7 +680,7 @@
             <img src="${esc(data.image)}" alt="${esc(data.title)}" loading="lazy" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)">
             <div>
               <div class="share-preview-title">${esc(data.title)}</div>
-              <div class="share-preview-price">${esc(data.price)}</div>
+              <div class="share-preview-price">${esc(getShareLine(data))}</div>
               
               <div class="share-preview-actions">
                 <button class="share-mini-btn" type="button" id="copyPreviewLink">${esc(data.ui.copy_plain)}</button>
