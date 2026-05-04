@@ -4,8 +4,18 @@ const path = require("path");
 const BASE_URL = "https://spain.metainmo.com/pl/alicante/promociones";
 const projectsPath = path.join(__dirname, "..", "projects.json");
 
-const MAX_PAGES = 80;
-const DELAY_MS = 350;
+const MAX_PAGES = Number(process.env.MAX_PAGES || 80);
+const DELAY_MS = Number(process.env.DELAY_MS || 450);
+const DETAIL_DELAY_MS = Number(process.env.DETAIL_DELAY_MS || 180);
+const MAX_IMAGES = Number(process.env.MAX_IMAGES || 60);
+const UPDATE_EXISTING = process.env.UPDATE_EXISTING === "1";
+const BACKUP = process.env.BACKUP !== "0";
+
+const SITE_ORIGIN = "https://spain.metainmo.com";
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function clean(value = "") {
   return String(value)
@@ -13,9 +23,20 @@ function clean(value = "") {
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
     .replace(/&#039;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&rsquo;/g, "’")
+    .replace(/&ldquo;/g, "“")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&euro;/g, "€")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function stripTags(value = "") {
+  return clean(value);
 }
 
 function slugify(value = "") {
@@ -29,11 +50,15 @@ function slugify(value = "") {
     .slice(0, 90);
 }
 
-function absoluteUrl(url = "") {
-  if (!url) return "";
-  if (url.startsWith("http")) return url;
-  if (url.startsWith("/")) return `https://spain.metainmo.com${url}`;
-  return `https://spain.metainmo.com/${url}`;
+function absoluteUrl(url = "", base = SITE_ORIGIN) {
+  const raw = String(url || "").trim();
+  if (!raw) return "";
+  if (raw.startsWith("data:")) return "";
+  try {
+    return new URL(raw, base).href;
+  } catch {
+    return "";
+  }
 }
 
 function priceValue(price = "") {
@@ -54,9 +79,27 @@ function detectCity(text = "") {
     ["villajoyosa", "villajoyosa"],
     ["vila joiosa", "villajoyosa"],
     ["mutxamel", "alicante"],
+    ["san juan", "alicante"],
+    ["el campello", "alicante"],
     ["alicante", "alicante"],
     ["pilar de la horadada", "pilar-de-la-horadada"],
-    ["orihuela", "orihuela"]
+    ["torre de la horadada", "pilar-de-la-horadada"],
+    ["orihuela", "orihuela"],
+    ["ciudad quesada", "rojales"],
+    ["rojales", "rojales"],
+    ["denia", "denia"],
+    ["jávea", "javea"],
+    ["javea", "javea"],
+    ["xàbia", "javea"],
+    ["altea", "altea"],
+    ["moraira", "moraira"],
+    ["benissa", "benissa"],
+    ["benitachell", "benitachell"],
+    ["punta prima", "orihuela"],
+    ["playa flamenca", "orihuela"],
+    ["la zenia", "orihuela"],
+    ["campoamor", "orihuela"],
+    ["mil palmeras", "pilar-de-la-horadada"]
   ];
 
   for (const [needle, key] of map) {
@@ -77,7 +120,14 @@ function prettyLocation(key = "") {
     guardamar: "Guardamar",
     villajoyosa: "Villajoyosa",
     "pilar-de-la-horadada": "Pilar de la Horadada",
-    orihuela: "Orihuela"
+    orihuela: "Orihuela Costa",
+    rojales: "Rojales",
+    denia: "Dénia",
+    javea: "Jávea / Xàbia",
+    altea: "Altea",
+    moraira: "Moraira",
+    benissa: "Benissa",
+    benitachell: "Benitachell"
   };
 
   return map[key] || "Costa Blanca";
@@ -112,95 +162,269 @@ function makeLead(title, meta, price) {
   };
 }
 
-function extractImages(block) {
-  const images = [];
-  const regexes = [
-    /<img[^>]+src=["']([^"']+)["']/gi,
-    /<img[^>]+data-src=["']([^"']+)["']/gi,
-    /<source[^>]+srcset=["']([^"']+)["']/gi
-  ];
+function isGoodImage(url = "") {
+  const cleanUrl = String(url || "").trim();
+  if (!cleanUrl) return false;
+  if (/logo|avatar|placeholder|favicon|sprite|icon|svg|base64|blank|loading/i.test(cleanUrl)) return false;
+  if (!/\.(jpg|jpeg|png|webp)(\?|#|$)/i.test(cleanUrl)) return false;
+  return true;
+}
 
-  for (const re of regexes) {
-    let m;
-    while ((m = re.exec(block))) {
-      const url = absoluteUrl(m[1].split(",")[0].trim().split(" ")[0]);
-      if (!url) continue;
-      if (/logo|avatar|placeholder|favicon|svg|base64/i.test(url)) continue;
-      if (!/\.(jpg|jpeg|png|webp)(\?|$)/i.test(url)) continue;
-      images.push(url);
+function addImage(images, url) {
+  const normalized = absoluteUrl(url);
+  if (!isGoodImage(normalized)) return;
+  const noSizeDuplicate = normalized.replace(/[-_](\d{2,5})x(\d{2,5})(?=\.(jpg|jpeg|png|webp))/i, "");
+  if (images.some(item => item === normalized || item.replace(/[-_](\d{2,5})x(\d{2,5})(?=\.(jpg|jpeg|png|webp))/i, "") === noSizeDuplicate)) return;
+  images.push(normalized);
+}
+
+function extractSrcset(srcset = "") {
+  return String(srcset || "")
+    .split(",")
+    .map(item => item.trim().split(/\s+/)[0])
+    .filter(Boolean);
+}
+
+function extractImages(html = "") {
+  const images = [];
+  const source = String(html || "");
+
+  const attrRegex = /(?:src|data-src|data-lazy-src|data-original|data-full|data-image|href)=["']([^"']+)["']/gi;
+  let m;
+  while ((m = attrRegex.exec(source))) addImage(images, m[1]);
+
+  const srcsetRegex = /(?:srcset|data-srcset)=["']([^"']+)["']/gi;
+  while ((m = srcsetRegex.exec(source))) {
+    extractSrcset(m[1]).forEach(url => addImage(images, url));
+  }
+
+  const jsonImageRegex = /["'](?:image|url|src|large|original|full)["']\s*:\s*["']([^"']+)["']/gi;
+  while ((m = jsonImageRegex.exec(source))) addImage(images, m[1].replace(/\\\//g, "/"));
+
+  const directImageRegex = /https?:\\?\/\\?\/[^"'\s<>]+?\.(?:jpg|jpeg|png|webp)(?:\?[^"'\s<>]*)?/gi;
+  while ((m = directImageRegex.exec(source))) addImage(images, m[0].replace(/\\\//g, "/"));
+
+  return images.slice(0, MAX_IMAGES);
+}
+
+function extractTitleFromDetail(html = "") {
+  const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+  const ogTitle = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i)?.[1];
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+  return clean(h1 || ogTitle || title || "").replace(/\s*\|\s*.*$/g, "");
+}
+
+function extractPriceFromText(text = "") {
+  const t = clean(text);
+  const matches = [
+    t.match(/(?:od\s*)?[\d\s]{3,}\s*€/i),
+    t.match(/[\d\s]{3,}\s*EUR/i),
+    t.match(/€\s*[\d\s]{3,}/i)
+  ];
+  const found = matches.find(Boolean);
+  return found ? clean(found[0]).replace(/\s+€/g, " €").replace(/EUR/i, "€") : "Cena na zapytanie";
+}
+
+function extractAreaFromText(text = "") {
+  const t = clean(text);
+  const match =
+    t.match(/m2 zabudowane:\s*([\d.,]+\s*m²)/i) ||
+    t.match(/powierzchnia:\s*([\d.,]+\s*m²)/i) ||
+    t.match(/(\d+[.,]?\d*)\s*m²/i) ||
+    t.match(/(\d+[.,]?\d*)\s*m2/i);
+  return match ? clean(match[1] || match[0]).replace(/m2/i, "m²") : "na zapytanie";
+}
+
+function extractRoomsFromText(text = "") {
+  const t = clean(text);
+  const match =
+    t.match(/(\d+)\s*-\s*pokojowe/i) ||
+    t.match(/(\d+)\s*(?:sypialni|sypialnie|pokoj|pokoje|bedroom|bedrooms|habitaciones|dormitorios)/i);
+  return match ? `${match[1]} pokoje` : "różne układy";
+}
+
+function getNextPageUrl(html = "", currentUrl = BASE_URL) {
+  const source = String(html || "");
+
+  const relNext = source.match(/<a[^>]+rel=["'][^"']*next[^"']*["'][^>]+href=["']([^"']+)["']/i);
+  if (relNext) return absoluteUrl(relNext[1], currentUrl);
+
+  const reverseRelNext = source.match(/<a[^>]+href=["']([^"']+)["'][^>]+rel=["'][^"']*next[^"']*["']/i);
+  if (reverseRelNext) return absoluteUrl(reverseRelNext[1], currentUrl);
+
+  const anchorRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  const candidates = [];
+
+  while ((m = anchorRegex.exec(source))) {
+    const href = absoluteUrl(m[1], currentUrl);
+    const text = clean(m[2]).toLowerCase();
+    const tag = m[0].toLowerCase();
+    if (!href) continue;
+
+    if (
+      text === "next" ||
+      text === "następna" ||
+      text === "nastepna" ||
+      text === "siguiente" ||
+      text === ">" ||
+      text === "›" ||
+      tag.includes("next") ||
+      tag.includes("pagination-next")
+    ) {
+      candidates.push(href);
     }
   }
 
-  return [...new Set(images)].slice(0, 12);
+  return candidates.find(url => url !== currentUrl) || null;
 }
 
-function extractProjectsFromList(html) {
-  const anchorRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+function getFallbackPageUrl(currentUrl = BASE_URL, page) {
+  const url = new URL(currentUrl || BASE_URL);
+  url.searchParams.set("page", String(page));
+  return url.href;
+}
+
+function collectProjectLinks(html = "") {
+  const anchorRegex = /<a[^>]+href=["']([^"']+)['"][^>]*>([\s\S]*?)<\/a>/gi;
   const anchors = [];
   let m;
 
   while ((m = anchorRegex.exec(html))) {
     const href = absoluteUrl(m[1]);
-    const text = clean(m[2]);
+    const inner = m[2] || "";
+    const text = clean(inner);
+    const tag = m[0] || "";
 
-    if (!/nowa inwestycja/i.test(text)) continue;
-    if (/xxxxxxxx/i.test(text)) continue;
     if (!href.includes("metainmo.com")) continue;
+    if (/xxxxxxxx/i.test(text)) continue;
 
-    anchors.push({ href, text, index: m.index });
+    const looksLikeProject =
+      /nowa inwestycja/i.test(text) ||
+      /promocja\s+w/i.test(text) ||
+      /\/promocion\//i.test(href) ||
+      /\/obra-nueva\//i.test(href) ||
+      /\/new-development\//i.test(href) ||
+      /card|property|promotion|promocion|inmueble/i.test(tag);
+
+    if (!looksLikeProject) continue;
+
+    anchors.push({ href, inner, text, index: m.index });
   }
 
+  const map = new Map();
+  for (const anchor of anchors) {
+    if (!map.has(anchor.href)) map.set(anchor.href, anchor);
+  }
+  return [...map.values()];
+}
+
+async function fetchHtml(url, retries = 2) {
+  let lastError;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, {
+        headers: {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36 Costa-Blanca-Invest-Importer",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+          "accept-language": "pl-PL,pl;q=0.9,es;q=0.8,en;q=0.7,ru;q=0.6"
+        }
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
+      return await res.text();
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) await sleep(700 * (attempt + 1));
+    }
+  }
+
+  throw lastError;
+}
+
+async function fetchDetailData(url) {
+  try {
+    await sleep(DETAIL_DELAY_MS);
+    const html = await fetchHtml(url, 1);
+    const text = clean(html);
+    return {
+      html,
+      text,
+      title: extractTitleFromDetail(html),
+      images: extractImages(html),
+      price: extractPriceFromText(text),
+      area: extractAreaFromText(text),
+      rooms: extractRoomsFromText(text)
+    };
+  } catch (error) {
+    console.warn(`Detail failed: ${url} — ${error.message}`);
+    return {
+      html: "",
+      text: "",
+      title: "",
+      images: [],
+      price: "Cena na zapytanie",
+      area: "na zapytanie",
+      rooms: "różne układy"
+    };
+  }
+}
+
+async function extractProjectsFromList(html) {
+  const anchors = collectProjectLinks(html);
   const projects = [];
 
   for (let i = 0; i < anchors.length; i++) {
     const current = anchors[i];
     const next = anchors[i + 1];
-    const block = html.slice(current.index, next ? next.index : html.length);
+    const block = html.slice(current.index, next ? next.index : Math.min(html.length, current.index + 9000));
+    const blockText = clean(block);
 
-    const rawTitle =
+    let rawTitle =
       current.text.match(/Nowa inwestycja\s+(.+?)\s+promocja\s+w/i)?.[1] ||
+      current.text.match(/^(.+?)\s+promocja\s+w/i)?.[1] ||
       current.text.replace(/^Nowa inwestycja\s+/i, "").replace(/\s+promocja\s+w.*$/i, "");
 
-    const title = clean(rawTitle);
-    if (!title || title.length < 3) continue;
+    let title = clean(rawTitle);
+    let price = extractPriceFromText(blockText);
+    let area = extractAreaFromText(blockText);
+    let rooms = extractRoomsFromText(blockText);
+    let images = extractImages(block);
+
+    // PRO: always open the detail page to collect the maximum gallery, not only the first card image.
+    let detail = await fetchDetailData(current.href);
+    if (!title && detail.title) title = detail.title;
+    if (detail.price !== "Cena na zapytanie") price = detail.price;
+    if (detail.area !== "na zapytanie") area = detail.area;
+    if (detail.rooms !== "różne układy") rooms = detail.rooms;
+    images = [...new Set([...images, ...detail.images])].slice(0, MAX_IMAGES);
+
+    if (!title || title.length < 3) {
+      title = slugify(current.href.split("/").filter(Boolean).pop() || "metainmo");
+    }
 
     const locationText =
       current.text.match(/promocja\s+w\s+(.+)$/i)?.[1] ||
-      clean(block).match(/Alicante,\s*([^*]+?)(?:Rok oddania|Stan|Pozwolenie|m2|Nieruchomość|$)/i)?.[1] ||
+      blockText.match(/Alicante,\s*([^*]+?)(?:Rok oddania|Stan|Pozwolenie|m2|Nieruchomość|$)/i)?.[1] ||
+      (detail ? detail.text : "") ||
       "";
 
-    const cityKey = detectCity(`${title} ${locationText} ${block}`);
+    const cityKey = detectCity(`${title} ${locationText} ${blockText} ${detail ? detail.text : ""}`);
     const locationLabel = prettyLocation(cityKey);
-    const text = clean(block);
+    const slug = slugify(title) || slugify(current.href.split("/").filter(Boolean).pop() || "");
 
-    const priceMatch =
-      text.match(/(?:od\s*)?[\d\s]{3,}\s*€/i) ||
-      text.match(/[\d\s]{3,}\s*EUR/i);
+    if (!slug) continue;
 
-    const price = priceMatch
-      ? clean(priceMatch[0]).replace(/\s+€/g, " €")
-      : "Cena na zapytanie";
-
-    const areaMatch =
-      text.match(/m2 zabudowane:\s*([\d.,]+\s*m²)/i) ||
-      text.match(/(\d+[.,]?\d*)\s*m²/i);
-
-    const roomsMatch =
-      text.match(/(\d+)-pokojowe/i) ||
-      text.match(/(\d+)\s*(?:sypialni|sypialnie|pokoj|pokoje|bedroom|habitaciones)/i);
-
-    const area = areaMatch ? clean(areaMatch[1] || `${areaMatch[0]}`) : "na zapytanie";
-    const rooms = roomsMatch ? `${roomsMatch[1]} pokoje` : "różne układy";
-    const images = extractImages(block);
-    const slug = slugify(title);
-
-    if (!slug || !images.length) continue;
+    if (!images.length) {
+      console.warn(`No images for: ${title}`);
+    }
 
     projects.push({
       slug,
       title,
       sourceUrl: current.href,
-      image: images[0],
+      image: images[0] || "",
       images,
       price,
       priceValue: priceValue(price),
@@ -223,8 +447,8 @@ function toProject(raw) {
   return {
     slug: raw.slug,
     title: raw.title,
-    image: raw.image,
-    images: raw.images,
+    image: raw.image || (raw.images && raw.images[0]) || "",
+    images: raw.images || [],
     href: `/pl/new-developments/xml-catalog/?slug=${raw.slug}`,
     sourceUrl: raw.sourceUrl,
     price: raw.price,
@@ -284,37 +508,90 @@ function toProject(raw) {
     shareTitle: raw.title,
     sharePrice,
     shareDescription: `${raw.title} · ${sharePrice}`,
-    shareImage: raw.image,
+    shareImage: raw.image || (raw.images && raw.images[0]) || "",
     seoContent: lead,
     lead: lead.pl
   };
-}
-
-async function fetchHtml(url) {
-  const res = await fetch(url, {
-    headers: {
-      "user-agent": "Mozilla/5.0 Costa Blanca Invest Importer"
-    }
-  });
-
-  if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
-  return await res.text();
-}
-
-function getPageUrl(page) {
-  if (page === 1) return BASE_URL;
-  return `${BASE_URL}?page=${page}`;
 }
 
 function dedupeRawProjects(rawProjects) {
   const map = new Map();
 
   for (const raw of rawProjects) {
-    if (!raw.slug) continue;
-    if (!map.has(raw.slug)) map.set(raw.slug, raw);
+    const key = raw.sourceUrl || raw.slug;
+    if (!key) continue;
+
+    if (!map.has(key)) {
+      map.set(key, raw);
+      continue;
+    }
+
+    const existing = map.get(key);
+    const currentImages = raw.images || [];
+    const existingImages = existing.images || [];
+
+    if (currentImages.length > existingImages.length) {
+      map.set(key, raw);
+    }
   }
 
-  return [...map.values()];
+  const bySlug = new Map();
+  for (const raw of map.values()) {
+    if (!raw.slug) continue;
+    if (!bySlug.has(raw.slug)) bySlug.set(raw.slug, raw);
+    else {
+      const existing = bySlug.get(raw.slug);
+      if ((raw.images || []).length > (existing.images || []).length) bySlug.set(raw.slug, raw);
+    }
+  }
+
+  return [...bySlug.values()];
+}
+
+function mergeProjects(current, imported) {
+  const bySlug = new Map();
+  const bySource = new Map();
+
+  current.forEach(project => {
+    if (project.slug) bySlug.set(project.slug, project);
+    if (project.sourceUrl) bySource.set(project.sourceUrl, project.slug);
+  });
+
+  let added = 0;
+  let updated = 0;
+
+  for (const project of imported) {
+    const existingSlug = project.sourceUrl && bySource.has(project.sourceUrl)
+      ? bySource.get(project.sourceUrl)
+      : project.slug;
+
+    if (existingSlug && bySlug.has(existingSlug)) {
+      if (!UPDATE_EXISTING) continue;
+
+      const oldProject = bySlug.get(existingSlug);
+      bySlug.set(existingSlug, {
+        ...oldProject,
+        ...project,
+        slug: oldProject.slug || project.slug,
+        href: oldProject.href || project.href,
+        images: project.images && project.images.length ? project.images : oldProject.images,
+        image: project.image || oldProject.image,
+        sourceUrl: oldProject.sourceUrl || project.sourceUrl
+      });
+      updated++;
+      continue;
+    }
+
+    bySlug.set(project.slug, project);
+    if (project.sourceUrl) bySource.set(project.sourceUrl, project.slug);
+    added++;
+  }
+
+  return {
+    projects: [...bySlug.values()],
+    added,
+    updated
+  };
 }
 
 async function main() {
@@ -322,56 +599,74 @@ async function main() {
     ? JSON.parse(fs.readFileSync(projectsPath, "utf8"))
     : [];
 
-  const existingSlugs = new Set(current.map(p => p.slug));
+  if (BACKUP && fs.existsSync(projectsPath)) {
+    const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const backupPath = projectsPath.replace(/\.json$/i, `.backup-${stamp}.json`);
+    fs.copyFileSync(projectsPath, backupPath);
+    console.log("Backup:", backupPath);
+  }
+
   const allRaw = [];
   const seenPageSignatures = new Set();
+  const seenUrls = new Set();
+  let url = BASE_URL;
 
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = getPageUrl(page);
+    if (!url || seenUrls.has(url)) {
+      console.log("Repeated or empty page URL. Stop.");
+      break;
+    }
+
+    seenUrls.add(url);
     console.log(`Fetching Metainmo page ${page}: ${url}`);
 
     const html = await fetchHtml(url);
-    const rawPageProjects = extractProjectsFromList(html);
+    const rawPageProjects = await extractProjectsFromList(html);
     const pageProjects = dedupeRawProjects(rawPageProjects);
 
-    console.log(`Page ${page} projects found:`, pageProjects.length);
+    console.log(`Page ${page} projects found: ${pageProjects.length}`);
 
     if (!pageProjects.length) {
       console.log("No projects on this page. Stop.");
       break;
     }
 
-    const signature = pageProjects.map(p => p.slug).join("|");
+    const signature = pageProjects.map(p => `${p.slug}:${p.sourceUrl}`).join("|");
     if (seenPageSignatures.has(signature)) {
-      console.log("Repeated page detected. Stop.");
+      console.log("Repeated page content detected. Stop.");
       break;
     }
 
     seenPageSignatures.add(signature);
     allRaw.push(...pageProjects);
 
-    await new Promise(resolve => setTimeout(resolve, DELAY_MS));
+    const nextUrl = getNextPageUrl(html, url);
+    if (nextUrl && !seenUrls.has(nextUrl)) {
+      url = nextUrl;
+    } else {
+      const fallback = getFallbackPageUrl(BASE_URL, page + 1);
+      if (fallback && !seenUrls.has(fallback)) url = fallback;
+      else {
+        console.log("No next page. Stop.");
+        break;
+      }
+    }
+
+    await sleep(DELAY_MS);
   }
 
   const uniqueRaw = dedupeRawProjects(allRaw);
   console.log("Found public projects total:", uniqueRaw.length);
 
-  const imported = [];
+  const imported = uniqueRaw.map(toProject).filter(project => project.slug && project.title);
+  const result = mergeProjects(current, imported);
 
-  for (const raw of uniqueRaw) {
-    if (existingSlugs.has(raw.slug)) continue;
+  fs.writeFileSync(projectsPath, JSON.stringify(result.projects, null, 2), "utf8");
 
-    const project = toProject(raw);
-    imported.push(project);
-    existingSlugs.add(project.slug);
-  }
-
-  const updated = [...current, ...imported];
-
-  fs.writeFileSync(projectsPath, JSON.stringify(updated, null, 2), "utf8");
-
-  console.log("Added:", imported.length);
-  console.log("Total:", updated.length);
+  console.log("Added:", result.added);
+  console.log("Updated:", result.updated);
+  console.log("Total:", result.projects.length);
+  console.log("Done:", projectsPath);
 }
 
 main().catch(error => {
