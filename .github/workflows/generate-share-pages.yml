@@ -1,39 +1,166 @@
-name: Generate Share Pages
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
-on:
-  push:
-    paths:
-      - 'pl/new-developments/projects.json'
-      - 'pl/new-developments/scripts/generate-share-pages.js'
-  workflow_dispatch:
+const SITE = 'https://costa-blanca-invest.com';
 
-permissions:
-  contents: write
+const projectsPath = path.join(__dirname, '..', 'projects.json');
+const shareDir = path.join(__dirname, '..', 'share');
+const imagesDir = path.join(__dirname, '..', 'share-images');
 
-jobs:
-  generate:
-    runs-on: ubuntu-latest
+const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf8'));
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+fs.mkdirSync(shareDir, { recursive: true });
+fs.mkdirSync(imagesDir, { recursive: true });
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+function esc(s = '') {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
 
-      - name: Install dependencies
-        run: npm install sharp node-fetch
+function abs(url) {
+  if (!url) return '';
+  if (url.startsWith('http')) return url;
+  if (url.startsWith('/')) return SITE + url;
+  return SITE + '/' + url;
+}
 
-      - name: Generate share pages + images
-        run: node pl/new-developments/scripts/generate-share-pages.js
+async function downloadImage(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Image download failed: ${url}`);
+  return Buffer.from(await res.arrayBuffer());
+}
 
-      - name: Commit generated files
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add pl/new-developments/share/
-          git add pl/new-developments/share-images/
-          git commit -m "Auto-generate share pages and OG images" || echo "No changes"
-          git push
+function getTargetUrl(project) {
+  return `${SITE}/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(project.slug)}`;
+}
+
+async function createOgImage(project) {
+  const imageUrl = abs(project.image || project.images?.[0]);
+  const buffer = await downloadImage(imageUrl);
+
+  const width = 1200;
+  const height = 630;
+
+  const title = project.title || '';
+  const price = project.price || '';
+
+  const svg = `
+  <svg width="${width}" height="${height}">
+    <defs>
+      <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(0,0,0,0.0)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.35)"/>
+      </linearGradient>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#grad)"/>
+
+    <text x="60" y="440" font-size="56" fill="white" font-weight="700">
+      ${esc(title)}
+    </text>
+
+    <text x="60" y="520" font-size="48" fill="#D9B56D" font-weight="700">
+      ${esc(price)}
+    </text>
+
+    <text x="60" y="80" font-size="26" fill="#ffffff" opacity="0.9">
+      Costa Blanca Invest
+    </text>
+  </svg>
+  `;
+
+  const outputPath = path.join(imagesDir, `${project.slug}.jpg`);
+
+  await sharp(buffer)
+    .resize(width, height)
+    .composite([{ input: Buffer.from(svg), top: 0, left: 0 }])
+    .jpeg({ quality: 92 })
+    .toFile(outputPath);
+
+  return `${SITE}/pl/new-developments/share-images/${project.slug}.jpg`;
+}
+
+async function generate() {
+  for (const project of projects) {
+    const slug = project.slug;
+
+    const ogImage = await createOgImage(project);
+
+    const shareUrl = `${SITE}/pl/new-developments/share/${slug}.html`;
+    const targetUrl = getTargetUrl(project);
+
+    const title = project.title || 'Costa Blanca Invest';
+    const description = project.seoDescription || project.desc || project.price || '';
+
+    const html = `
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="${shareUrl}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:image" content="${ogImage}">
+<meta property="og:image:secure_url" content="${ogImage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${ogImage}">
+
+<link rel="canonical" href="${shareUrl}">
+</head>
+
+<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;background:#f6f3ee;">
+
+<a href="${targetUrl}" style="
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 26px;
+  border-radius:999px;
+  background:#183746;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+">
+Otwórz ofertę
+</a>
+
+<script>
+(function(){
+  const ua = navigator.userAgent || '';
+  const isBot = /facebookexternalhit|Facebot|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Slackbot|Discordbot/i.test(ua);
+
+  if (!isBot) {
+    setTimeout(() => {
+      window.location.href = "${targetUrl}";
+    }, 800);
+  }
+})();
+</script>
+
+</body>
+</html>
+`;
+
+    fs.writeFileSync(path.join(shareDir, `${slug}.html`), html);
+    console.log(`✅ ${slug}`);
+  }
+}
+
+generate();
