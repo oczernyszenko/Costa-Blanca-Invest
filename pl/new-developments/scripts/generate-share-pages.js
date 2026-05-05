@@ -53,29 +53,15 @@ async function createOgImage(project) {
 
     <rect width="100%" height="100%" fill="url(#grad)"/>
 
-    <!-- Title -->
-    <text x="60" y="440"
-      font-size="56"
-      fill="white"
-      font-weight="700"
-      style="text-shadow: 0 6px 20px rgba(0,0,0,0.6)">
+    <text x="60" y="440" font-size="56" fill="white" font-weight="700">
       ${esc(title)}
     </text>
 
-    <!-- Price -->
-    <text x="60" y="520"
-      font-size="48"
-      fill="#D9B56D"
-      font-weight="700"
-      style="text-shadow: 0 4px 12px rgba(0,0,0,0.5)">
+    <text x="60" y="520" font-size="48" fill="#D9B56D" font-weight="700">
       ${esc(price)}
     </text>
 
-    <!-- Brand -->
-    <text x="60" y="80"
-      font-size="26"
-      fill="#ffffff"
-      opacity="0.9">
+    <text x="60" y="80" font-size="26" fill="#ffffff" opacity="0.9">
       Costa Blanca Invest
     </text>
   </svg>
@@ -128,12 +114,33 @@ async function generate() {
 <link rel="canonical" href="${shareUrl}">
 </head>
 
-<body>
+<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;background:#f6f3ee;">
+
+<a href="${targetUrl}" style="
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 26px;
+  border-radius:999px;
+  background:#183746;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+">
+Otwórz ofertę
+</a>
 
 <script>
-setTimeout(() => {
-  window.location.href = "${targetUrl}";
-}, 400);
+(function(){
+  const ua = navigator.userAgent || '';
+  const isBot = /facebookexternalhit|Facebot|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Slackbot|Discordbot/i.test(ua);
+
+  if (!isBot) {
+    setTimeout(() => {
+      window.location.href = "${targetUrl}";
+    }, 800);
+  }
+})();
 </script>
 
 </body>
