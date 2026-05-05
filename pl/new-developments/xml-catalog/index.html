@@ -1051,15 +1051,26 @@
         renderProperty(currentProperty);
       }
     }));
-    document.getElementById('backLink')?.addEventListener('click',event=>{
-      event.preventDefault();
-      if(document.referrer && new URL(document.referrer).origin === window.location.origin){
-        history.back();
-      }else{
-        window.location.href=LIVE_CATEGORY_PATH;
-      }
-    });
+   document.getElementById('backLink')?.addEventListener('click', (event) => {
+  event.preventDefault();
 
+  try {
+    const ref = document.referrer;
+
+    // если пришли с сайта и НЕ со share страницы
+    if (
+      ref &&
+      ref.includes(window.location.origin) &&
+      !ref.includes('/share/')
+    ) {
+      history.back();
+      return;
+    }
+  } catch (e) {}
+
+  // fallback — всегда в каталог
+  window.location.href = '/pl/new-developments/';
+});
     function runSelfTests(){const tests=[['short slug matches long slug',()=>findProject(FALLBACK_PROJECTS,'alonis-villas-la-villajoyosa-vila-joiosa')?.slug==='alonis-villas-la-villajoyosa-vila-joiosa-230606'],['absolute CDN stays CDN',()=>abs('https://example.com/a.jpg')==='https://example.com/a.jpg'],['relative local becomes absolute',()=>abs('/pl/a.jpg')==='https://costa-blanca-invest.com/pl/a.jpg'],['image array creates absolute images',()=>getImages(FALLBACK_PROJECTS[0]).map(abs).every(src=>src.startsWith('https://'))],['param label translates EN',()=>{const old=currentLang;currentLang='en';const ok=translateParamLabel('Lokalizacja')==='Location';currentLang=old;return ok;}],['param icon works after translation',()=>getParamIcon('Location')==='📍'],['buildData has params',()=>buildData(FALLBACK_PROJECTS[0]).paramEntries.length>0],['long slug resolves to short share slug',()=>resolveShareSlug({slug:'residencial-los-balcones-de-calpe-calpe-395273'})==='calpe-balcones'],['share URL points to static share page',()=>getShareUrl({slug:'residencial-los-balcones-de-calpe-calpe-395273'}).includes('/pl/new-developments/share/calpe-balcones.html')],['render template does not contain removed KPI join bug',()=>!String(renderProperty).includes("join('')}</div>")]];const failed=tests.filter(([,fn])=>{try{return !fn();}catch{return true;}});if(failed.length)console.warn('Template tests failed:',failed.map(([name])=>name));else console.info('Template tests passed:',tests.length);}
     syncLanguageUI();
     runSelfTests();
