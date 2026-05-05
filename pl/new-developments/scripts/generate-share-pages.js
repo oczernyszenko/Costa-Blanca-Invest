@@ -15,7 +15,10 @@ fs.mkdirSync(shareDir, { recursive: true });
 fs.mkdirSync(imagesDir, { recursive: true });
 
 function esc(s = '') {
-  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;');
 }
 
 function abs(url) {
@@ -43,22 +46,36 @@ async function createOgImage(project) {
   <svg width="${width}" height="${height}">
     <defs>
       <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="rgba(0,0,0,0.2)"/>
-        <stop offset="100%" stop-color="rgba(0,0,0,0.8)"/>
+        <stop offset="0%" stop-color="rgba(0,0,0,0.0)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.35)"/>
       </linearGradient>
     </defs>
 
     <rect width="100%" height="100%" fill="url(#grad)"/>
 
-    <text x="60" y="460" font-size="48" fill="white" font-weight="bold">
+    <!-- Title -->
+    <text x="60" y="440"
+      font-size="56"
+      fill="white"
+      font-weight="700"
+      style="text-shadow: 0 6px 20px rgba(0,0,0,0.6)">
       ${esc(title)}
     </text>
 
-    <text x="60" y="540" font-size="44" fill="#D9B56D" font-weight="bold">
+    <!-- Price -->
+    <text x="60" y="520"
+      font-size="48"
+      fill="#D9B56D"
+      font-weight="700"
+      style="text-shadow: 0 4px 12px rgba(0,0,0,0.5)">
       ${esc(price)}
     </text>
 
-    <text x="60" y="80" font-size="28" fill="#ffffff" opacity="0.8">
+    <!-- Brand -->
+    <text x="60" y="80"
+      font-size="26"
+      fill="#ffffff"
+      opacity="0.9">
       Costa Blanca Invest
     </text>
   </svg>
@@ -69,7 +86,7 @@ async function createOgImage(project) {
   await sharp(buffer)
     .resize(width, height)
     .composite([{ input: Buffer.from(svg), top: 0, left: 0 }])
-    .jpeg({ quality: 90 })
+    .jpeg({ quality: 92 })
     .toFile(outputPath);
 
   return `${SITE}/pl/new-developments/share-images/${project.slug}.jpg`;
@@ -116,7 +133,7 @@ async function generate() {
 <script>
 setTimeout(() => {
   window.location.href = "${targetUrl}";
-}, 500);
+}, 400);
 </script>
 
 </body>
