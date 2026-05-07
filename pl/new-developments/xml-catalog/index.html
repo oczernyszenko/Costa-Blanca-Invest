@@ -563,27 +563,21 @@ h1 {
 @media(max-width:560px){.gallery-grid{grid-template-columns:1fr!important}.curated-spec-list li{grid-template-columns:1fr;gap:4px}.curated-luxury-card{padding:18px}.hero-media,.hero-media img{min-height:300px!important}}
 
 
-/* INTERNAL CODE — subtle, visible for owner/developer search, not part of H1 */
-.internal-property-code{
-  margin: 4px auto 14px;
-  text-align:center;
-  color: rgba(23,37,50,.34);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  user-select: text;
-}
-
-/* Share logic uses existing static /share/slug.html pages */
-
-
 /* =========================================================
-   COSTA BLANCA INVEST — FINAL LUXURY HERO CLEAN VERSION
-   Preserves original contact form, WhatsApp and share flow.
+   CINEMATIC LUXURY HERO FINAL
+   - Share/form/WhatsApp JS untouched
+   - Static share pages: /pl/new-developments/share/slug.html
    ========================================================= */
 
-/* remove only the floating brand pill */
+:root{
+  --hero-dark:#07131d;
+  --hero-gold:#d9b56d;
+  --hero-gold-2:#cfa75a;
+  --hero-glass:rgba(255,255,255,.18);
+  --hero-glass-light:rgba(255,255,255,.72);
+}
+
+/* remove only floating brand pill */
 .hero-badge,
 .brand-pill,
 .hero-brand,
@@ -593,20 +587,31 @@ h1 {
   display:none!important;
 }
 
-/* premium hero */
-.hero-card{
-  padding:16px!important;
-  border-radius:34px!important;
-  background:rgba(255,255,255,.74)!important;
+/* page atmosphere */
+body{
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
+/* HERO container */
+.hero-card{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:0!important;
+  border-radius:34px!important;
+  background:#07131d!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 30px 90px rgba(7,19,29,.18)!important;
+}
+
+/* main photo */
 .hero-media{
   position:relative!important;
-  min-height:760px!important;
-  border-radius:34px!important;
   overflow:hidden!important;
-  background:#0f1720!important;
-  box-shadow:0 30px 90px rgba(15,23,42,.22)!important;
+  min-height:760px!important;
+  border-radius:34px 34px 0 0!important;
+  background:#07131d!important;
+  box-shadow:none!important;
 }
 
 .hero-media::before{
@@ -616,7 +621,8 @@ h1 {
   z-index:1!important;
   pointer-events:none!important;
   background:
-    linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.25) 48%,rgba(0,0,0,.70) 100%)!important;
+    linear-gradient(90deg,rgba(4,12,20,.58) 0%,rgba(4,12,20,.25) 42%,rgba(4,12,20,.10) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(4,12,20,.12) 55%,rgba(4,12,20,.62) 100%)!important;
 }
 
 .hero-media img{
@@ -630,26 +636,31 @@ h1 {
 }
 
 .hero-media:hover img{
-  transform:scale(1.018)!important;
+  transform:scale(1.012)!important;
 }
 
+/* overlay */
 .hero-overlay{
   position:absolute!important;
   inset:0!important;
   z-index:3!important;
   display:flex!important;
-  align-items:flex-end!important;
+  align-items:center!important;
   justify-content:space-between!important;
-  gap:42px!important;
-  padding:56px!important;
+  gap:48px!important;
+  padding:72px 76px 110px!important;
   left:0!important;
   right:0!important;
   bottom:0!important;
 }
 
+/* left content */
 .hero-copy{
-  flex:1 1 auto!important;
-  max-width:820px!important;
+  flex:1 1 640px!important;
+  max-width:720px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
 }
 
 .hero-kicker{
@@ -658,51 +669,90 @@ h1 {
 
 .hero-display{
   margin:0 0 22px!important;
-  max-width:820px!important;
+  max-width:720px!important;
   color:#fff!important;
-  font-size:clamp(54px,7vw,108px)!important;
+  font-size:clamp(54px,6.5vw,98px)!important;
   font-weight:900!important;
-  line-height:.92!important;
-  letter-spacing:-.065em!important;
-  text-shadow:0 18px 42px rgba(0,0,0,.32)!important;
+  line-height:.94!important;
+  letter-spacing:-.06em!important;
+  text-shadow:0 18px 42px rgba(0,0,0,.36)!important;
 }
 
+/* subtitle fill only by text width */
 .hero-sub{
-  max-width:760px!important;
-  color:rgba(255,255,255,.88)!important;
-  font-size:clamp(17px,1.8vw,24px)!important;
-  line-height:1.6!important;
-  text-shadow:0 10px 22px rgba(0,0,0,.25)!important;
+  display:inline-block!important;
+  width:fit-content!important;
+  max-width:620px!important;
+  margin:0 0 22px!important;
+  padding:18px 24px!important;
+  border-radius:18px!important;
+  background:rgba(7,19,29,.46)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  color:rgba(255,255,255,.92)!important;
+  font-size:clamp(16px,1.35vw,21px)!important;
+  line-height:1.55!important;
+  text-shadow:0 8px 18px rgba(0,0,0,.24)!important;
+  overflow:hidden!important;
+  display:-webkit-box!important;
+  -webkit-line-clamp:2!important;
+  -webkit-box-orient:vertical!important;
 }
 
+/* subtle internal code */
+.internal-property-code{
+  order:3!important;
+  margin:0 0 18px!important;
+  color:rgba(255,255,255,.34)!important;
+  font-size:10px!important;
+  font-weight:400!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+  user-select:text!important;
+}
+
+/* location/type pills if present */
+.luxury-param-line{
+  display:none!important;
+}
+
+/* PRICE CARD — glass, not black */
 .hero-price-box{
-  flex:0 0 430px!important;
+  flex:0 0 390px!important;
+  width:390px!important;
+  max-width:390px!important;
   min-width:0!important;
-  max-width:430px!important;
   margin:0!important;
-  padding:34px!important;
-  border-radius:34px!important;
-  background:rgba(7,15,26,.72)!important;
-  border:1px solid rgba(255,255,255,.10)!important;
-  box-shadow:0 26px 80px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08)!important;
-  backdrop-filter:blur(22px)!important;
-  -webkit-backdrop-filter:blur(22px)!important;
-  color:#fff!important;
+  padding:30px!important;
+  border-radius:32px!important;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.38))!important;
+  border:1px solid rgba(255,255,255,.48)!important;
+  backdrop-filter:blur(26px)!important;
+  -webkit-backdrop-filter:blur(26px)!important;
+  box-shadow:
+    0 24px 70px rgba(7,19,29,.20),
+    inset 0 1px 0 rgba(255,255,255,.58)!important;
+  color:#183746!important;
 }
 
 .hero-price-box small{
-  margin-bottom:22px!important;
-  color:rgba(255,255,255,.66)!important;
+  display:block!important;
+  margin:0 0 22px!important;
+  color:rgba(24,55,70,.54)!important;
   font-size:12px!important;
   font-weight:900!important;
   letter-spacing:.24em!important;
+  text-transform:uppercase!important;
 }
 
+/* price pills */
 .hero-price-range,
 .luxury-price-range{
-  display:grid!important;
-  grid-template-columns:1fr!important;
-  gap:16px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:14px!important;
   margin:0!important;
 }
 
@@ -710,31 +760,40 @@ h1 {
 .hero-price-to,
 .luxury-price-pill{
   width:100%!important;
-  min-height:120px!important;
-  padding:26px 28px!important;
-  border-radius:28px!important;
-  background:rgba(255,255,255,.055)!important;
-  border:1px solid rgba(255,255,255,.09)!important;
-  box-shadow:none!important;
+  min-width:0!important;
+  min-height:92px!important;
+  padding:18px 24px!important;
+  border-radius:26px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.58),rgba(255,255,255,.24))!important;
+  border:1px solid rgba(255,255,255,.36)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.38),
+    0 10px 26px rgba(15,23,42,.06)!important;
+  color:#d4aa57!important;
+  white-space:nowrap!important;
 }
 
 .hero-price-from,
 .hero-price-to{
-  color:#d9b56d!important;
-  font-size:clamp(38px,4vw,56px)!important;
+  font-size:clamp(32px,3.1vw,46px)!important;
   font-weight:900!important;
   line-height:1!important;
   letter-spacing:-.055em!important;
-  justify-content:flex-start!important;
+  text-shadow:none!important;
 }
 
 .luxury-price-value{
-  color:#d9b56d!important;
-  font-size:clamp(38px,4vw,56px)!important;
+  color:#d4aa57!important;
+  font-size:clamp(32px,3.1vw,46px)!important;
+  text-shadow:none!important;
 }
 
 .luxury-price-label{
-  color:rgba(255,255,255,.48)!important;
+  color:rgba(24,55,70,.44)!important;
 }
 
 .hero-price-sep,
@@ -743,31 +802,36 @@ h1 {
 }
 
 .hero-price-note{
-  margin-top:24px!important;
-  padding-top:18px!important;
-  border-top:1px solid rgba(255,255,255,.12)!important;
-  color:rgba(255,255,255,.82)!important;
-  font-size:15px!important;
-  line-height:1.65!important;
+  margin:22px 0 0!important;
+  padding-top:16px!important;
+  border-top:1px solid rgba(24,55,70,.12)!important;
+  color:rgba(24,55,70,.78)!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  line-height:1.55!important;
 }
 
 .hero-price-meta{
-  color:rgba(255,255,255,.72)!important;
-  font-size:14px!important;
-  line-height:1.7!important;
+  margin-top:10px!important;
+  color:rgba(24,55,70,.64)!important;
+  font-size:13px!important;
+  line-height:1.65!important;
 }
 
-.internal-property-code{
-  margin:4px auto 12px!important;
-  text-align:center!important;
-  color:rgba(23,37,50,.24)!important;
-  font-size:10px!important;
-  font-weight:400!important;
-  letter-spacing:.13em!important;
-  text-transform:uppercase!important;
+/* dark luxury bottom bar illusion without changing share/contact */
+.hero-card::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:90px!important;
+  z-index:2!important;
+  background:linear-gradient(180deg,rgba(7,19,29,0),rgba(7,19,29,.84))!important;
+  pointer-events:none!important;
 }
 
-/* gallery clean */
+/* gallery */
 .gallery-count,
 .photo-count,
 .photos-count,
@@ -804,7 +868,7 @@ h1 {
   display:none!important;
 }
 
-/* curated blocks */
+/* curated clean sections */
 .curated-luxury-section{margin-top:32px}
 .curated-luxury-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
 .curated-luxury-card{
@@ -876,54 +940,69 @@ h1 {
 
 /* responsive */
 @media(max-width:1180px){
-  .hero-media{min-height:840px!important}
+  .hero-media{
+    min-height:840px!important;
+  }
   .hero-overlay{
     flex-direction:column!important;
     align-items:flex-start!important;
     justify-content:flex-end!important;
+    padding:42px!important;
     gap:24px!important;
   }
-  .hero-copy,
+  .hero-copy{
+    max-width:760px!important;
+    flex:0 1 auto!important;
+  }
   .hero-price-box{
     width:100%!important;
-    max-width:640px!important;
+    max-width:520px!important;
     flex:0 1 auto!important;
   }
   .curated-luxury-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:768px){
-  .hero-card{padding:10px!important;border-radius:24px!important}
+  .hero-card{
+    border-radius:24px!important;
+  }
   .hero-media{
     min-height:720px!important;
-    border-radius:24px!important;
+    border-radius:24px 24px 0 0!important;
   }
   .hero-overlay{
     padding:24px!important;
     gap:18px!important;
   }
   .hero-display{
-    font-size:clamp(38px,10vw,64px)!important;
-    margin-bottom:14px!important;
+    font-size:clamp(36px,10vw,56px)!important;
+    margin-bottom:12px!important;
   }
   .hero-sub{
-    font-size:16px!important;
-    line-height:1.55!important;
+    max-width:100%!important;
+    padding:14px 16px!important;
+    font-size:15px!important;
+    line-height:1.48!important;
+    -webkit-line-clamp:2!important;
   }
   .hero-price-box{
-    padding:22px!important;
+    padding:20px!important;
     border-radius:26px!important;
   }
   .hero-price-from,
   .hero-price-to,
   .luxury-price-pill{
-    min-height:86px!important;
-    padding:20px!important;
+    min-height:76px!important;
+    padding:16px 18px!important;
   }
   .hero-price-from,
   .hero-price-to,
   .luxury-price-value{
-    font-size:38px!important;
+    font-size:30px!important;
+  }
+  .hero-price-note,
+  .hero-price-meta{
+    font-size:12px!important;
   }
   .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
   .curated-luxury-card{padding:22px}
@@ -931,184 +1010,30 @@ h1 {
 
 @media(max-width:560px){
   .container{padding:0 10px!important}
-  .hero-media{min-height:660px!important}
-  .hero-overlay{padding:18px!important}
-  .hero-display{font-size:clamp(34px,11vw,52px)!important}
-  .hero-price-box{padding:18px!important}
+  .hero-media{
+    min-height:660px!important;
+  }
+  .hero-overlay{
+    padding:16px!important;
+  }
+  .hero-display{
+    font-size:clamp(32px,11vw,46px)!important;
+  }
+  .hero-sub{
+    font-size:14px!important;
+  }
+  .hero-price-box{
+    padding:16px!important;
+  }
   .hero-price-from,
   .hero-price-to,
-  .luxury-price-value{font-size:34px!important}
+  .luxury-price-value{
+    font-size:28px!important;
+  }
   .gallery-grid{grid-template-columns:1fr!important}
   .gallery-item{aspect-ratio:1.1/1!important}
   .curated-spec-list li{grid-template-columns:1fr;gap:4px}
   .curated-luxury-card{padding:18px}
-}
-
-
-/* =========================================================
-   LIGHT LUXURY HERO PRICE CARD — FINAL POLISH
-   ========================================================= */
-
-/* softer hero overlay, not black */
-.hero-media::before{
-  content:""!important;
-  position:absolute!important;
-  inset:0!important;
-  z-index:1!important;
-  pointer-events:none!important;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15,23,42,.06) 0%,
-      rgba(15,23,42,.18) 48%,
-      rgba(15,23,42,.38) 100%
-    )!important;
-}
-
-/* champagne glass price card */
-.hero-price-box{
-  flex:0 0 430px!important;
-  max-width:430px!important;
-  min-width:0!important;
-
-  padding:30px!important;
-  border-radius:34px!important;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.78),
-      rgba(255,255,255,.42)
-    )!important;
-
-  border:1px solid rgba(255,255,255,.48)!important;
-
-  backdrop-filter:blur(26px)!important;
-  -webkit-backdrop-filter:blur(26px)!important;
-
-  box-shadow:
-    0 22px 64px rgba(15,23,42,.13),
-    inset 0 1px 0 rgba(255,255,255,.56)!important;
-
-  color:#183746!important;
-}
-
-/* heading in card */
-.hero-price-box small{
-  color:rgba(24,55,70,.58)!important;
-  font-size:12px!important;
-  font-weight:900!important;
-  letter-spacing:.24em!important;
-  text-transform:uppercase!important;
-}
-
-/* price pills */
-.hero-price-from,
-.hero-price-to,
-.luxury-price-pill{
-  width:100%!important;
-  min-height:108px!important;
-  padding:24px 26px!important;
-  border-radius:28px!important;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.56),
-      rgba(255,255,255,.24)
-    )!important;
-
-  border:1px solid rgba(255,255,255,.36)!important;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.38),
-    0 12px 30px rgba(15,23,42,.07)!important;
-
-  color:#d4aa57!important;
-}
-
-.hero-price-from,
-.hero-price-to{
-  font-size:clamp(36px,3.8vw,52px)!important;
-  font-weight:900!important;
-  line-height:1!important;
-  letter-spacing:-.055em!important;
-  justify-content:flex-start!important;
-  text-shadow:none!important;
-}
-
-.luxury-price-value{
-  color:#d4aa57!important;
-  font-size:clamp(36px,3.8vw,52px)!important;
-  text-shadow:none!important;
-}
-
-.luxury-price-label{
-  color:rgba(24,55,70,.46)!important;
-}
-
-/* divider and meta */
-.hero-price-note{
-  margin-top:22px!important;
-  padding-top:16px!important;
-  border-top:1px solid rgba(24,55,70,.12)!important;
-  color:rgba(24,55,70,.84)!important;
-  font-size:15px!important;
-  line-height:1.65!important;
-  font-weight:800!important;
-}
-
-.hero-price-meta{
-  color:rgba(24,55,70,.66)!important;
-  font-size:14px!important;
-  line-height:1.7!important;
-}
-
-/* title readability remains premium */
-.hero-display{
-  color:#fff!important;
-  text-shadow:
-    0 18px 42px rgba(0,0,0,.32),
-    0 2px 10px rgba(0,0,0,.18)!important;
-}
-
-.hero-sub{
-  color:rgba(255,255,255,.92)!important;
-  text-shadow:0 10px 22px rgba(0,0,0,.24)!important;
-}
-
-/* mobile card: still light and readable */
-@media(max-width:768px){
-  .hero-price-box{
-    max-width:100%!important;
-    padding:22px!important;
-    border-radius:26px!important;
-    background:
-      linear-gradient(
-        135deg,
-        rgba(255,255,255,.82),
-        rgba(255,255,255,.50)
-      )!important;
-  }
-
-  .hero-price-from,
-  .hero-price-to,
-  .luxury-price-pill{
-    min-height:84px!important;
-    padding:18px 20px!important;
-  }
-}
-
-@media(max-width:560px){
-  .hero-price-box{
-    padding:18px!important;
-  }
-
-  .hero-price-from,
-  .hero-price-to,
-  .luxury-price-value{
-    font-size:32px!important;
-  }
 }
 
 </style>
@@ -2407,45 +2332,38 @@ function sectionTitle(key){
 
 
     function cleanPropertyTitle(value){
-      let title = String(value || '').trim();
-
-      // Remove trailing CRM/card/reference codes from visible H1/title:
-      // "Project Name 450411", "Project Name - 450411", "Project Name #450411",
-      // "Project Name CBI-777", "Project Name REF 777".
-      title = title
+      return String(value || '')
         .replace(/\s*(?:#|ref\.?|reference|код|cbi)[\s:-]*\d{2,8}\s*$/i, '')
         .replace(/\s*[-–—]\s*\d{3,8}\s*$/i, '')
         .replace(/\s+\d{4,8}\s*$/i, '')
         .replace(/\s+/g, ' ')
         .trim();
-
-      return title;
     }
 
     function getInternalPropertyCode(item){
-      return (
-        item.publicCode ||
-        item.objectCode ||
-        item.id ||
-        item.source_id ||
-        item.metainmoVerified?.ref ||
-        item.ref ||
-        ''
-      );
+      return item?.publicCode || item?.objectCode || item?.id || item?.source_id || item?.metainmoVerified?.ref || item?.ref || '';
     }
 
     function renderInternalCode(item){
       const code = getInternalPropertyCode(item);
       if(!code) return '';
-      const label = currentLang === 'ru'
-        ? 'Внутренний код'
-        : currentLang === 'en'
-          ? 'Internal code'
-          : currentLang === 'es'
-            ? 'Código interno'
-            : 'Kod wewnętrzny';
+      const label = currentLang === 'ru' ? 'Внутренний код' : currentLang === 'en' ? 'Internal code' : currentLang === 'es' ? 'Código interno' : 'Kod wewnętrzny';
+      return `<div class="internal-property-code">${esc(label)}: ${esc(code)}</div>`;
+    }
 
-      return `<div class="internal-property-code" aria-label="${esc(label)}">${esc(label)}: ${esc(code)}</div>`;
+    function makeHeroSubtitle(item, data){
+      const loc = item?.meta || item?.city || (typeof item?.location === 'string' ? item.location : item?.location?.address) || data?.meta || '';
+      const area = item?.propertyAreaRange || item?.builtAreaText || item?.area || item?.metainmoVerified?.propertyAreaRange || '';
+      const beds = item?.bedroomsRange || item?.bedrooms || item?.metainmoVerified?.bedroomsRange || '';
+      const type = item?.type || item?.chip || '';
+      const bedLabel = currentLang === 'ru' ? 'спальни' : currentLang === 'en' ? 'bedrooms' : currentLang === 'es' ? 'dormitorios' : 'sypialnie';
+      const parts = [loc, area, beds ? `${beds} ${bedLabel}` : '', type]
+        .filter(Boolean)
+        .map(v => String(v).trim())
+        .filter(Boolean);
+      if(parts.length) return parts.slice(0,3).join(' · ');
+      const raw = data?.desc || '';
+      return String(raw).split('.').slice(0,1).join('.').slice(0,150);
     }
 
     function buildData(item){
@@ -2518,7 +2436,7 @@ function sectionTitle(key){
         'Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja.'
       );
 
-      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,features:buildFeatureBadges(item),fullSections:buildFullSections(item),sourceLinks:buildSourceLinks(item),shareImage:getShareImageUrl(item),image:getImage(item,0),images:getImages(item),floorPlans:getFloorPlans(item).filter(p=>p && !(typeof p==='object' && p.type==='metainmo_plan_placeholder') && !JSON.stringify(p).toLowerCase().includes('direct image url was not exposed') && !JSON.stringify(p).toLowerCase().includes('plan exists on metainmo page')),documents:getDocuments(item),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,shareSlug:resolveShareSlug(item),href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
+      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,features:buildFeatureBadges(item),fullSections:buildFullSections(item),sourceLinks:buildSourceLinks(item),shareImage:getShareImageUrl(item),image:getImage(item,0),images:getImages(item),floorPlans:getFloorPlans(item).filter(p=>p && !(typeof p==='object' && p.type==='metainmo_plan_placeholder') && !JSON.stringify(p).toLowerCase().includes('direct image url was not exposed') && !JSON.stringify(p).toLowerCase().includes('plan exists on metainmo page')).filter(p=>p && !(typeof p==='object' && p.type==='metainmo_plan_placeholder') && !JSON.stringify(p).toLowerCase().includes('direct image url was not exposed') && !JSON.stringify(p).toLowerCase().includes('plan exists on metainmo page')),documents:getDocuments(item),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,shareSlug:resolveShareSlug(item),href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
     }
 
     function applyMeta(data){
@@ -2569,6 +2487,7 @@ function sectionTitle(key){
     function renderProperty(item){
       currentProperty=item;
       const data=buildData(item);
+      data.heroSubShort=makeHeroSubtitle(item,data);
       applyMeta(data);
       // No limits: render every unique photo and every plan from galleryOrdered/images/floorPlans.
       const gallery=data.images.map((src,index)=>`<div class="gallery-item" data-media-src="${esc(src)}"><img src="${esc(src)}" alt="${esc(data.title)} ${index+1}" loading="lazy" decoding="async" fetchpriority="low" decoding="async" sizes="(max-width:480px) 100vw, (max-width:768px) 50vw, (max-width:1100px) 33vw, 25vw" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`).join('');
@@ -2606,7 +2525,7 @@ function sectionTitle(key){
               <div class="hero-copy">
                 <div class="hero-kicker">Costa Blanca Invest</div>
                 <div class="hero-display">${esc(data.title)}</div>
-                <p class="hero-sub">${esc(data.desc)}</p>
+                <p class="hero-sub">${esc(data.heroSubShort || data.desc)}</p>
                 
               </div>
               <div class="hero-price-box luxury-price-card">
