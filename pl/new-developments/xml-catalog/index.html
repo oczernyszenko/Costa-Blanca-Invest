@@ -2143,6 +2143,43 @@ function sectionTitle(key){
       return '•';
     }
 
+
+    function getActiveShareUrl(options={}){
+      const item = currentProperty || findProject(projects, requestedSlug) || {};
+      const data = item && Object.keys(item).length ? buildData(item) : {slug: requestedSlug};
+      return getShareUrl(data, options);
+    }
+
+    async function copyShareLink(){
+      const url = getActiveShareUrl();
+      try{
+        await navigator.clipboard.writeText(url);
+        toast(currentLang === 'ru' ? 'Ссылка скопирована' : currentLang === 'en' ? 'Link copied' : currentLang === 'es' ? 'Enlace copiado' : 'Link skopiowany');
+      }catch(e){
+        window.prompt('Copy link:', url);
+      }
+    }
+
+    function openFacebookShareFixed(){
+      const url = getActiveShareUrl({cacheBust:true});
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer,width=720,height=640');
+    }
+
+    function nativeShareFixed(){
+      const url = getActiveShareUrl();
+      const item = currentProperty || {};
+      const data = item && Object.keys(item).length ? buildData(item) : {title: document.title};
+      if(navigator.share){
+        navigator.share({
+          title: data.title || document.title,
+          text: data.seoDescription || data.desc || '',
+          url
+        }).catch(()=>{});
+      }else{
+        copyShareLink();
+      }
+    }
+
     function renderProperty(item){
       currentProperty=item;
       const data=buildData(item);
@@ -2341,7 +2378,13 @@ function sectionTitle(key){
     document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMediaLightbox();});
     document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',async()=>{
       currentLang=SUPPORTED_LANGS.includes(btn.dataset.lang)?btn.dataset.lang:'pl';
-      syncLanguageUI();
+  
+    // FINAL SHARE OVERRIDE: all share controls use static OG page.
+    window.copyShareLink = copyShareLink;
+    window.openFacebookShareFixed = openFacebookShareFixed;
+    window.nativeShareFixed = nativeShareFixed;
+
+    syncLanguageUI();
       const url=new URL(window.location.href);
       if(currentLang==='pl')url.searchParams.delete('lang');else url.searchParams.set('lang',currentLang);
       window.history.replaceState({},'',`${url.pathname}${url.search}${url.hash}`);
