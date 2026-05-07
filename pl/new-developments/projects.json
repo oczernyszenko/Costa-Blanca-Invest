@@ -292,7 +292,29 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "777",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-main.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-exterior-1.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-interior-1.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/bonalba-golf-hills/images/bonalba-golf-hills-lifestyle-1.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Bonalba Golf Hills — carefully selected real estate on Costa Blanca. Location: Mutxamel · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 280 800 € – 405 600 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Bonalba Golf Hills | Nowa inwestycja przy golfie w Mutxamel, Alicante",
+      "seoDescription": "Bonalba Golf Hills w Mutxamel koło Alicante: nowoczesne nieruchomości przy polu golfowym, idealne do życia, wakacji i inwestycji na Costa Blanca.",
+      "focusKeyword": "Bonalba Golf Hills недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 4,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Bonalba Golf Hills — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Alicante', 'area': 'Costa Blanca', 'address': 'Mutxamel · Alicante · Costa Blanca', 'filterLocation': 'alicante', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 280 800 € – 405 600 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "penthouse-torrevieja",
@@ -585,7 +607,29 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "778",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/1.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/2.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/3.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/penthouse-torrevieja/4.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Penthouse Torrevieja — carefully selected real estate on Costa Blanca. Location: Torrevieja · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 305 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Penthouse Torrevieja | Nowy apartament z solarium na Costa Blanca",
+      "seoDescription": "Penthouse w Torrevieja z prywatnym solarium: nowoczesny apartament blisko plaży, idealny do życia, wakacji i wynajmu w Hiszpanii.",
+      "focusKeyword": "Penthouse Torrevieja недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 4,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Penthouse Torrevieja — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Torrevieja', 'area': 'Costa Blanca', 'address': 'Torrevieja · Costa Blanca South', 'filterLocation': 'torrevieja', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 305 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "maranon",
@@ -875,7 +919,29 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "779",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://costa-blanca-invest.com/pl/new-developments/maranon/1.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/maranon/2.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/maranon/3.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/maranon/4.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Marañón — carefully selected real estate on Costa Blanca. Location: Torrevieja · ok. 180 m do morza. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 133 000 € – 310 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Marañón Torrevieja | Apartamenty blisko morza na Costa Blanca",
+      "seoDescription": "Marañón w Torrevieja: nowe apartamenty około 180 m od morza, atrakcyjna cena wejścia i potencjał wynajmu wakacyjnego.",
+      "focusKeyword": "Marañón недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 4,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Marañón — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Torrevieja', 'area': 'Costa Blanca', 'address': 'Torrevieja · ok. 180 m do morza', 'filterLocation': 'torrevieja', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 133 000 € – 310 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "monteagudo",
@@ -1167,7 +1233,29 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "780",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://costa-blanca-invest.com/pl/new-developments/monteagudo/1.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/monteagudo/2.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/monteagudo/3.jpg",
+        "https://costa-blanca-invest.com/pl/new-developments/monteagudo/4.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Monteagudo — carefully selected real estate on Costa Blanca. Location: Torrevieja · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: od 104 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Monteagudo | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Monteagudo: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+      "focusKeyword": "Monteagudo недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 4,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Monteagudo — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Torrevieja', 'area': 'Costa Blanca', 'address': 'Torrevieja · Costa Blanca South', 'filterLocation': 'torrevieja', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена od 104 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "calpe-balcones",
@@ -1459,7 +1547,143 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "781",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg"
+      ],
+      "floorPlans": [
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 1,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 2,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 3,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 4,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 5,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 6,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 7,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 8,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 9,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        }
+      ],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Balcones de Calpe — carefully selected real estate on Costa Blanca. Location: Calpe · Costa Blanca North. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 599 106 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Balcones de Calpe | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Balcones de Calpe: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+      "focusKeyword": "Balcones de Calpe недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 9,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Balcones de Calpe — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Calpe', 'area': 'Costa Blanca', 'address': 'Calpe · Costa Blanca North', 'filterLocation': 'calpe', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 599 106 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "metainmoVerified": {
+      "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+      "source": "metainmo_verified_page",
+      "ref": "209643",
+      "photosDeclaredCount": 17,
+      "priceFrom": 269000,
+      "priceTo": 938121,
+      "pricePerM2FromText": "od 4 339 € / m²",
+      "builtAreaText": "62 m²",
+      "propertyAreaRange": "62 m² - 237 m²",
+      "bedroomsRange": "1 - 3",
+      "unitCount": 26,
+      "totalProperties": 52,
+      "floors": 7,
+      "propertyTypes": [
+        "Parter",
+        "Mieszkania",
+        "Penthouse"
+      ],
+      "deliveryYear": 2028,
+      "completionPeriod": "IV Kwartał",
+      "constructionStatus": "W budowie",
+      "buildingPermit": "W trakcie załatwiania",
+      "kitchenEquipment": "Wyposażona",
+      "distanceToBeach": "400 m",
+      "distanceToAirport": "77.10 km",
+      "energyCertificate": "A",
+      "amenities": [
+        "Klimatyzacja",
+        "Magazyn",
+        "Taras",
+        "Balkon",
+        "Basen",
+        "Winda",
+        "Bezpieczeństwo",
+        "Solarium",
+        "Basen kryty",
+        "Sala studiów",
+        "Basen wspólny",
+        "Widoki na morze",
+        "Widok na ulicę"
+      ],
+      "documentsSummary": {
+        "technicalSpecifications": 2,
+        "plans": 1
+      },
+      "floorPlansDeclaredCount": 9,
+      "verifiedDescriptionPl": "Nowoczesna inwestycja w Calpe kilka metrów od plaży, z apartamentami od 1 do 3 sypialni, powierzchniami od 62 m² do 237 m², strefami wspólnymi, basenem, spa, siłownią, coworkingiem i widokami na morze."
+    },
+    "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+    "builtAreaText": "62 m²",
+    "area": "62 m²",
+    "propertyAreaRange": "62 m² - 237 m²",
+    "pricePerM2FromText": "od 4 339 € / m²",
+    "deliveryYear": 2028,
+    "constructionStatus": "W budowie",
+    "energyCertificate": "A",
+    "verifiedDescriptionPl": "Nowoczesna inwestycja w Calpe kilka metrów od plaży, z apartamentami od 1 do 3 sypialni, powierzchniami od 62 m² do 237 m², strefami wspólnymi, basenem, spa, siłownią, coworkingiem i widokami na morze.",
+    "documentsCount": 0
   },
   {
     "slug": "royal-star",
@@ -1735,7 +1959,29 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "782",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899789/conversions/01J4VVEFKR9SDK02BB3JE5472W-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899790/conversions/01J4VVEFRZJFX1KTQDGPK5B0CN-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/08/899794/conversions/01J4VVEGD9YYW78CY3XBWXKB02-preview.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Royal Star — carefully selected real estate on Costa Blanca. Location: Guardamar del Segura · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 299 500 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Royal Star | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Royal Star: starannie wybrana nowa inwestycja w Hiszpanii z potencjałem do życia, wakacji i wynajmu.",
+      "focusKeyword": "Royal Star недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 4,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Royal Star — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Guardamar', 'area': 'Costa Blanca', 'address': 'Guardamar del Segura · Costa Blanca South', 'filterLocation': 'guardamar', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 299 500 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "residencial-los-balcones-de-calpe",
@@ -2028,7 +2274,143 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "783",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692622/conversions/01JRNKQ4037MD6VE92SJ4A7R7R-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692623/conversions/01JRNKQ4P7PRGWE407Q35D6R8H-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692625/conversions/01JRNKQ5F4XMSD0YV6YY9V3Y78-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/04/2692621/conversions/01JRNKQ3C1K1N7EZYKGAZ55QNQ-medium.jpg"
+      ],
+      "floorPlans": [
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 1,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 2,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 3,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 4,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 5,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 6,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 7,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 8,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 9,
+          "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        }
+      ],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Residencial Los Balcones de Calpe — carefully selected real estate on Costa Blanca. Location: Calpe · Avenida de Madrid · Costa Blanca North. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 269 000 € – 922 125 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Residencial Los Balcones de Calpe | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Residencial Los Balcones de Calpe: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Residencial Los Balcones de Calpe недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 9,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Residencial Los Balcones de Calpe — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Calpe', 'area': 'Costa Blanca', 'address': 'Calpe · Avenida de Madrid · Costa Blanca North', 'filterLocation': 'calpe', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 269 000 € – 922 125 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "metainmoVerified": {
+      "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+      "source": "metainmo_verified_page",
+      "ref": "209643",
+      "photosDeclaredCount": 17,
+      "priceFrom": 269000,
+      "priceTo": 938121,
+      "pricePerM2FromText": "od 4 339 € / m²",
+      "builtAreaText": "62 m²",
+      "propertyAreaRange": "62 m² - 237 m²",
+      "bedroomsRange": "1 - 3",
+      "unitCount": 26,
+      "totalProperties": 52,
+      "floors": 7,
+      "propertyTypes": [
+        "Parter",
+        "Mieszkania",
+        "Penthouse"
+      ],
+      "deliveryYear": 2028,
+      "completionPeriod": "IV Kwartał",
+      "constructionStatus": "W budowie",
+      "buildingPermit": "W trakcie załatwiania",
+      "kitchenEquipment": "Wyposażona",
+      "distanceToBeach": "400 m",
+      "distanceToAirport": "77.10 km",
+      "energyCertificate": "A",
+      "amenities": [
+        "Klimatyzacja",
+        "Magazyn",
+        "Taras",
+        "Balkon",
+        "Basen",
+        "Winda",
+        "Bezpieczeństwo",
+        "Solarium",
+        "Basen kryty",
+        "Sala studiów",
+        "Basen wspólny",
+        "Widoki na morze",
+        "Widok na ulicę"
+      ],
+      "documentsSummary": {
+        "technicalSpecifications": 2,
+        "plans": 1
+      },
+      "floorPlansDeclaredCount": 9,
+      "verifiedDescriptionPl": "Nowoczesna inwestycja w Calpe kilka metrów od plaży, z apartamentami od 1 do 3 sypialni, powierzchniami od 62 m² do 237 m², strefami wspólnymi, basenem, spa, siłownią, coworkingiem i widokami na morze."
+    },
+    "source_url": "https://spain.metainmo.com/pl/alicante/calpe/promociones/residencial-los-balcones-de-calpe",
+    "builtAreaText": "62 m²",
+    "area": "62 m²",
+    "propertyAreaRange": "62 m² - 237 m²",
+    "pricePerM2FromText": "od 4 339 € / m²",
+    "deliveryYear": 2028,
+    "constructionStatus": "W budowie",
+    "energyCertificate": "A",
+    "verifiedDescriptionPl": "Nowoczesna inwestycja w Calpe kilka metrów od plaży, z apartamentami od 1 do 3 sypialni, powierzchniami od 62 m² do 237 m², strefami wspólnymi, basenem, spa, siłownią, coworkingiem i widokami na morze.",
+    "documentsCount": 0
   },
   {
     "slug": "16-villas-polop",
@@ -2274,7 +2656,26 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "784",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/04/4297897/01KQ0CZFGF5SR87X7C60HT5P44.jpeg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "16 Villas Polop — carefully selected real estate on Costa Blanca. Location: Polop · okolice Benidorm · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: Cena na zapytanie. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "16 Villas Polop | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "16 Villas Polop: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "16 Villas Polop недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 1,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "16 Villas Polop — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Polop', 'area': 'Costa Blanca', 'address': 'Polop · okolice Benidorm · Costa Blanca', 'filterLocation': 'polop', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена Cena na zapytanie. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "nature-views",
@@ -2567,7 +2968,98 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "785",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315857/conversions/property-21564-5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315862/conversions/property-21564-6-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315867/conversions/property-21564-7-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/315884/conversions/property-21564-11-medium.jpg"
+      ],
+      "floorPlans": [
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 1,
+          "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nature-views-mpc-builders-and-real-estate",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        },
+        {
+          "type": "metainmo_plan_placeholder",
+          "index": 2,
+          "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nature-views-mpc-builders-and-real-estate",
+          "note": "Plan exists on Metainmo page; direct image URL was not exposed in parsed text."
+        }
+      ],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Nature Views — carefully selected real estate on Costa Blanca. Location: Torrevieja · Lago Jardín II · 4 km do plaży. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 330 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Nature Views | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Nature Views: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Nature Views недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 2,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Nature Views — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Torrevieja', 'area': 'Costa Blanca', 'address': 'Torrevieja · Lago Jardín II · 4 km do plaży', 'filterLocation': 'torrevieja', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 330 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "metainmoVerified": {
+      "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nature-views-mpc-builders-and-real-estate",
+      "source": "metainmo_verified_page",
+      "ref": "21564",
+      "photosDeclaredCount": 14,
+      "priceFrom": 330000,
+      "priceTo": 330000,
+      "pricePerM2FromText": "od 1 719 € / m²",
+      "builtAreaText": "192 m²",
+      "propertyAreaRange": "192 m² - 192 m²",
+      "bedroomsRange": "2",
+      "unitCount": 1,
+      "totalProperties": 84,
+      "floors": 3,
+      "propertyTypes": [
+        "Bungalowy"
+      ],
+      "deliveryYear": 2025,
+      "completionPeriod": "IV Kwartał",
+      "constructionStatus": "Zakończona",
+      "buildingPermit": "Przyznana",
+      "kitchenEquipment": "Wyposażona",
+      "distanceToBeach": "4000.00 m",
+      "distanceToAirport": "21.61 km",
+      "energyCertificate": "B",
+      "amenities": [
+        "Magazyn",
+        "Okna wewnętrzne",
+        "Taras",
+        "Basen",
+        "Plac zabaw",
+        "Zielone strefy",
+        "Ogród",
+        "Piwnica",
+        "Basen wspólny",
+        "Parking podziemny"
+      ],
+      "documentsSummary": {
+        "brochure": 1,
+        "buildingPermit": 1,
+        "legalDocuments": 1,
+        "technicalSpecifications": 2
+      },
+      "floorPlansDeclaredCount": 2,
+      "verifiedDescriptionPl": "Gotowa inwestycja w Torrevieja z minimalistyczną architekturą, 192 m² powierzchni, parkingiem podziemnym, piwnicą, tarasem, wspólnym basenem, ogrodem i strefami rekreacji."
+    },
+    "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nature-views-mpc-builders-and-real-estate",
+    "builtAreaText": "192 m²",
+    "area": "192 m²",
+    "propertyAreaRange": "192 m² - 192 m²",
+    "pricePerM2FromText": "od 1 719 € / m²",
+    "deliveryYear": 2025,
+    "constructionStatus": "Zakończona",
+    "energyCertificate": "B",
+    "verifiedDescriptionPl": "Gotowa inwestycja w Torrevieja z minimalistyczną architekturą, 192 m² powierzchni, parkingiem podziemnym, piwnicą, tarasem, wspólnym basenem, ogrodem i strefami rekreacji.",
+    "documentsCount": 0
   },
   {
     "slug": "nalia-resort",
@@ -2860,7 +3352,68 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "786",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266734/conversions/property-18216-5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266741/conversions/property-18216-6-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266746/conversions/property-18216-7-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2023/11/266728/conversions/property-18216-4-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Nalia Resort — carefully selected real estate on Costa Blanca. Location: Torrevieja · Los Balcones · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 309 900 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Nalia Resort | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Nalia Resort: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Nalia Resort недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Nalia Resort — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Torrevieja', 'area': 'Costa Blanca', 'address': 'Torrevieja · Los Balcones · Costa Blanca South', 'filterLocation': 'torrevieja', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 309 900 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "metainmoVerified": {
+      "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nalia-resort-grupo-immosol",
+      "source": "metainmo_verified_page",
+      "ref": "18216",
+      "photosDeclaredCount": 13,
+      "priceFrom": 319900,
+      "pricePerM2FromText": "od 2 442 € / m²",
+      "builtAreaText": "131 m²",
+      "propertyAreaFrom": "131 m²",
+      "bedroomsRange": "2 - 3",
+      "bathrooms": 2,
+      "deliveryYear": 2026,
+      "buildingPermit": "Przyznana",
+      "kitchenEquipment": "Wyposażona",
+      "distanceToBeach": "4000.00 m",
+      "propertyTypes": [
+        "Bungalow ground floor",
+        "Bungalow top floor"
+      ],
+      "amenities": [
+        "3 baseny",
+        "ogrody",
+        "jacuzzi",
+        "kort padel",
+        "mini golf",
+        "fitness",
+        "plac zabaw",
+        "ładowanie EV",
+        "parking podziemny"
+      ],
+      "verifiedDescriptionPl": "Resortowy kompleks 136 luksusowych nieruchomości w Torrevieja, z mieszkaniami od 131 m², 2–3 sypialniami, 2 łazienkami, tarasami lub solarium oraz rozbudowanymi strefami wspólnymi."
+    },
+    "source_url": "https://spain.metainmo.com/pl/alicante/torrevieja/promociones/obra-nueva-nalia-resort-grupo-immosol",
+    "builtAreaText": "131 m²",
+    "area": "131 m²",
+    "pricePerM2FromText": "od 2 442 € / m²",
+    "deliveryYear": 2026,
+    "verifiedDescriptionPl": "Resortowy kompleks 136 luksusowych nieruchomości w Torrevieja, z mieszkaniami od 131 m², 2–3 sypialniami, 2 łazienkami, tarasami lub solarium oraz rozbudowanymi strefami wspólnymi.",
+    "documentsCount": 0
   },
   {
     "slug": "alonis-villas",
@@ -3153,7 +3706,56 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "787",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201670/conversions/01JZT5WFRG1YRESJZ9TFFYZYWZ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201667/conversions/01JZT5WEZYX8R9BHRA0XRMDP24-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201668/conversions/01JZT5WF8N054YSJ9209EB9SPX-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/07/3201671/conversions/01JZT5WG23KZ8JA279R6BD8V7H-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Alonis Villas — carefully selected real estate on Costa Blanca. Location: La Villajoyosa · Playa de Torres · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 675 000 € – 775 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Alonis Villas | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Alonis Villas: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Alonis Villas недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Alonis Villas — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Villajoyosa', 'area': 'Costa Blanca', 'address': 'La Villajoyosa · Playa de Torres · Costa Blanca', 'filterLocation': 'villajoyosa', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 675 000 € – 775 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "metainmoVerified": {
+      "source_url": "https://spain.metainmo.com/pl/alicante/la-villajoyosa-vila-joiosa/promociones/alonis-villas",
+      "source": "metainmo_verified_page",
+      "ref": "216486",
+      "photosDeclaredCount": 5,
+      "priceFrom": 675000,
+      "pricePerM2FromText": "od 3 277 € / m²",
+      "builtAreaText": "206 m²",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "deliveryYear": 2027,
+      "constructionStatus": "W budowie",
+      "buildingPermit": "Przyznana",
+      "kitchenEquipment": "Wyposażona",
+      "propertyTypes": [
+        "Villas"
+      ],
+      "verifiedDescriptionPl": "Pięć luksusowych willi przy morzu między Villajoyosa i Benidormem. Każda willa ma 4 sypialnie, 3 łazienki, salon z kuchnią, pomieszczenie gospodarcze, tarasy, basen, parking i solarium."
+    },
+    "source_url": "https://spain.metainmo.com/pl/alicante/la-villajoyosa-vila-joiosa/promociones/alonis-villas",
+    "builtAreaText": "206 m²",
+    "area": "206 m²",
+    "pricePerM2FromText": "od 3 277 € / m²",
+    "deliveryYear": 2027,
+    "constructionStatus": "W budowie",
+    "verifiedDescriptionPl": "Pięć luksusowych willi przy morzu między Villajoyosa i Benidormem. Każda willa ma 4 sypialnie, 3 łazienki, salon z kuchnią, pomieszczenie gospodarcze, tarasy, basen, parking i solarium.",
+    "documentsCount": 0
   },
   {
     "slug": "salinas-towers-calpe",
@@ -3446,7 +4048,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "788",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220683/conversions/property-454020-1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220685/conversions/property-454020-3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220686/conversions/property-454020-4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4220684/conversions/property-454020-2-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Salinas Towers - Calpe — carefully selected real estate on Costa Blanca. Location: Calpe · Playa Arenal-Bol · Costa Blanca North. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 375 000 € – 624 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Salinas Towers - Calpe | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Salinas Towers - Calpe: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Salinas Towers - Calpe недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Salinas Towers - Calpe — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Calpe', 'area': 'Costa Blanca', 'address': 'Calpe · Playa Arenal-Bol · Costa Blanca North', 'filterLocation': 'calpe', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 375 000 € – 624 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "alma-bungalow-4",
@@ -3739,7 +4364,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "789",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254058/conversions/01KKXQDZGH72WD8VKCAVRJ1Y3X-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254059/conversions/01KKXQDZVTYCC86T33B11QJJYY-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254060/conversions/01KKXQE094SSVKJ3CRVB8ZA236-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254057/conversions/01KKXQDZ4P3FWXYQZFK03BWZYW-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Alma Bungalow 4 — carefully selected real estate on Costa Blanca. Location: Pilar de la Horadada · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 369 900 € – 425 900 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Alma Bungalow 4 | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Alma Bungalow 4: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Alma Bungalow 4 недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Alma Bungalow 4 — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Pilar De La Horadada', 'area': 'Costa Blanca', 'address': 'Pilar de la Horadada · Costa Blanca South', 'filterLocation': 'pilar-de-la-horadada', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 369 900 € – 425 900 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "mirador-de-relleu",
@@ -4032,7 +4680,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "790",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937340/conversions/01J94QT3XMYPG44J0WMW4BG02V-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937341/conversions/01J94QT43QJTE4KMJSYY5362XH-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937342/conversions/01J94QT5MMWCAJJG86B6Q1PBZE-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/10/937339/conversions/01J94QT39BQV69SCKYE19ZFHYY-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Mirador de Relleu — carefully selected real estate on Costa Blanca. Location: Relleu · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 165 000 € – 279 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Mirador de Relleu | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Mirador de Relleu: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Mirador de Relleu недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Mirador de Relleu — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Relleu', 'area': 'Costa Blanca', 'address': 'Relleu · Alicante · Costa Blanca', 'filterLocation': 'relleu', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 165 000 € – 279 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "la-nucia-villas",
@@ -4325,7 +4996,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "791",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "La Nucia Villas — carefully selected real estate on Costa Blanca. Location: La Nucia · okolice Benidorm · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 449 000 € – 566 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "La Nucia Villas | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "La Nucia Villas: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "La Nucia Villas недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "La Nucia Villas — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'La Nucia', 'area': 'Costa Blanca', 'address': 'La Nucia · okolice Benidorm · Costa Blanca', 'filterLocation': 'la-nucia', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 449 000 € – 566 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "rambla-beach-iii",
@@ -4618,7 +5312,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "792",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767763/conversions/01HTPWQQM28MV4A9SKWSNK345W-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767765/conversions/01HTPWQV4VA6GEK6XB95EMP837-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767766/conversions/01HTPWQX21WTTRR2VE78XVY5W5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767764/conversions/01HTPWQSKMV4WA8543S5EA0Q2E-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Rambla Beach III — carefully selected real estate on Costa Blanca. Location: Pilar de la Horadada · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 370 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Rambla Beach III | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Rambla Beach III: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Rambla Beach III недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Rambla Beach III — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Pilar De La Horadada', 'area': 'Costa Blanca', 'address': 'Pilar de la Horadada · Costa Blanca South', 'filterLocation': 'pilar-de-la-horadada', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 370 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "new-green-finestrat",
@@ -4911,7 +5628,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "793",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768150/conversions/01HTQEWHVG15XWWMYGFDC4BRJX-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768151/conversions/01HTQEWJ5QXZ9115416ZT6V1H6-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768152/conversions/01HTQEWJFWAMC2TKKDPWY1JD1V-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768165/conversions/01HTQEWPKGEH3DN5JGAEM1ZEN0-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "New Green — carefully selected real estate on Costa Blanca. Location: Finestrat · okolice Benidorm · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 875 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "New Green | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "New Green: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "New Green недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "New Green — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Finestrat · okolice Benidorm · Costa Blanca', 'filterLocation': 'finestrat', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 875 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "santa-pola-elegance",
@@ -5204,7 +5944,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "794",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Santa Pola Elegance — carefully selected real estate on Costa Blanca. Location: Santa Pola · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 230 000 € – 340 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Santa Pola Elegance | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Santa Pola Elegance: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Santa Pola Elegance недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Santa Pola Elegance — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Santa Pola', 'area': 'Costa Blanca', 'address': 'Santa Pola · Costa Blanca South', 'filterLocation': 'santa-pola', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 230 000 € – 340 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "miro-gran-alacant",
@@ -5449,7 +6212,27 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "795",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Miró — carefully selected real estate on Costa Blanca. Location: Gran Alacant · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 805 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Miró | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Miró: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Miró недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 2,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Miró — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Gran Alacant', 'area': 'Costa Blanca', 'address': 'Gran Alacant · Costa Blanca South', 'filterLocation': 'gran-alacant', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 805 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "marino-gran-alacant",
@@ -5694,7 +6477,27 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "796",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695644/conversions/01K6XQ96NZ42910CPTCR40VY8P-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Marino — carefully selected real estate on Costa Blanca. Location: Gran Alacant · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 306 000 € – 341 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Marino | Nowa inwestycja na Costa Blanca",
+      "seoDescription": "Marino: nowa inwestycja w Hiszpanii z dopracowaną lokalizacją, zdjęciami, opisem i potencjałem dla klienta kupującego na Costa Blanca.",
+      "focusKeyword": "Marino недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 2,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Marino — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Gran Alacant', 'area': 'Costa Blanca', 'address': 'Gran Alacant · Costa Blanca South', 'filterLocation': 'gran-alacant', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 306 000 € – 341 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "linda-gran-alacant",
@@ -5988,7 +6791,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "797",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695634/conversions/01K6XNPZ2YH1YGXQ3B545XA9QE-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695637/conversions/01K6XNPZK52J81M3GNJ8RG8H60-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695636/conversions/01K6XNPZCHVH9DVXPBXXFZQJB2-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/10/3695641/conversions/01K6XPG3KC2DYP3NET9MN2YE8G-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Linda — carefully selected real estate on Costa Blanca. Location: Gran Alacant · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 435 000 € – 530 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Linda Gran Alacant | Nowoczesna willa blisko morza na Costa Blanca",
+      "seoDescription": "Linda w Gran Alacant: nowoczesna willa z 3 sypialniami, prywatną przestrzenią i dobrą lokalizacją na południu Costa Blanca.",
+      "focusKeyword": "Linda недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Linda — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Gran Alacant', 'area': 'Costa Blanca', 'address': 'Gran Alacant · Costa Blanca South', 'filterLocation': 'gran-alacant', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 435 000 € – 530 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "my-white-resort-finestrat",
@@ -6282,7 +7108,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "798",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811807/conversions/01JVC6D6FXMN68TDVS4DEH83D1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811808/conversions/01JVC6D6N1JFVFRD1RH85P2J74-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811809/conversions/01JVC6D6SDE0M35P3EWE8YMA67-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/05/2811806/conversions/01JVC6D6AT8X80CJ59MRW1GRFP-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "MY WHITE RESORT — carefully selected real estate on Costa Blanca. Location: Finestrat · widoki na Benidorm · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 322 400 € – 362 400 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "MY WHITE RESORT Finestrat | Apartamenty z widokiem na Benidorm",
+      "seoDescription": "MY WHITE RESORT w Finestrat: nowoczesne apartamenty z widokami, basenem i dobrym potencjałem inwestycyjnym na Costa Blanca.",
+      "focusKeyword": "MY WHITE RESORT недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "MY WHITE RESORT — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Finestrat · widoki na Benidorm · Costa Blanca', 'filterLocation': 'finestrat', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 322 400 € – 362 400 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "oasis-laguna-3-guardamar",
@@ -6575,7 +7424,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "799",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215273/conversions/01KF0XJ7FR3BDV3V3NAJ8SZEX1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215274/conversions/01KF0XJ8VH0FQ79B3KVFC7XFDA-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215275/conversions/01KF0XJAB2P7CBGFYPDAPPMAV5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4215277/conversions/01KF0XJCGK2FBPH606GV5G95WT-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Oasis Laguna 3 — carefully selected real estate on Costa Blanca. Location: Guardamar del Segura · El Raso · Costa Blanca South. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 222 000 € – 255 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Oasis Laguna 3 Guardamar | Apartamenty resortowe w El Raso",
+      "seoDescription": "Oasis Laguna 3 w Guardamar del Segura: apartamenty w El Raso, basen, tereny zielone i potencjał wynajmu wakacyjnego.",
+      "focusKeyword": "Oasis Laguna 3 недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Oasis Laguna 3 — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Guardamar', 'area': 'Costa Blanca', 'address': 'Guardamar del Segura · El Raso · Costa Blanca South', 'filterLocation': 'guardamar', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 222 000 € – 255 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "slug": "residencial-vernissa-denia",
@@ -6870,7 +7742,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "800",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401818/conversions/property-181346-1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401819/conversions/property-181346-2-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401820/conversions/property-181346-3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2401821/conversions/property-181346-4-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Residencial Vernissa — carefully selected real estate on Costa Blanca. Location: Dénia · Devesses - Monte Pego · 200 m do morza. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 395 000 € – 475 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Residencial Vernissa Dénia | Domy szeregowe 200 m od morza",
+      "seoDescription": "Residencial Vernissa w Dénia: nowe domy szeregowe blisko morza, prywatne osiedle i śródziemnomorski styl życia.",
+      "focusKeyword": "Residencial Vernissa недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Residencial Vernissa — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Denia', 'area': 'Costa Blanca', 'address': 'Dénia · Devesses - Monte Pego · 200 m do morza', 'filterLocation': 'denia', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, цена 395 000 € – 475 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 481129,
@@ -7228,7 +8123,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "801",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406279/conversions/01KQHRKW99VSGKK6C56G7C74H1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406280/conversions/01KQHRKWRY4JBES0752WFPAKMT-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406281/conversions/01KQHRM0SJ30K8QQ1CME0N5F6D-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/05/4406278/conversions/01KQHRM4MSDFVCPJGDSKQJS8QA-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Benidorm Hills — carefully selected real estate on Costa Blanca. Location: Finestrat · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 358 000 € – 604 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Benidorm Hills Finestrat | Nowa inwestycja na Costa Blanca od 358 000 €",
+      "seoDescription": "Benidorm Hills w Finestrat: nowe apartamenty na Costa Blanca, około 2000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Benidorm Hills недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Benidorm Hills — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Alicante, Finestrat, Balcón de Finestrat-Terra Marina', 'filterLocation': 'finestrat', 'distanceToSea': 2000, 'distanceToBeach': 2000, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 2 спальни, площадь 78.0, цена 358 000 € – 604 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 453803,
@@ -7579,7 +8497,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "802",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217490/conversions/property-453803-2-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217491/conversions/property-453803-3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217492/conversions/property-453803-4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/01/4217489/conversions/property-453803-1-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Residencial Larrosa 43-A Fase II — carefully selected real estate on Costa Blanca. Location: San Fulgencio · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 105 000 € – 185 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Residencial Larrosa 43-A Fase II San Fulgencio | Nowa inwestycja na Costa Blanca od 105 000 €",
+      "seoDescription": "Residencial Larrosa 43-A Fase II w San Fulgencio: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Residencial Larrosa 43-A Fase II недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Residencial Larrosa 43-A Fase II — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'San Fulgencio', 'area': 'Costa Blanca', 'address': 'Alicante, San Fulgencio, Calle REINA SOFÍA, 10', 'filterLocation': 'san-fulgencio', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 1 спальни, площадь 52.0, цена 105 000 € – 185 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 52975,
@@ -7935,7 +8876,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "803",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767921/conversions/01HTQ0TVDAPHTX4CTH1Z8NZNCX-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767922/conversions/01HTQ0TW8HW35MK6MM6GSJEEX3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767924/conversions/01HTQ0TZZW6XJBXYPZN7Q7C3VF-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767923/conversions/01HTQ0TY0XCPCPJYMNPJEMEM6Z-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Nwcia Village — carefully selected real estate on Costa Blanca. Location: La Nucia · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 449 000 € – 566 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Nwcia Village La Nucia | Nowa inwestycja na Costa Blanca od 449 000 €",
+      "seoDescription": "Nwcia Village w La Nucia: nowe wille na Costa Blanca, około 7000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Nwcia Village недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Nwcia Village — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'La Nucia', 'area': 'Costa Blanca', 'address': 'Alicante, La Nucia', 'filterLocation': 'la-nucia', 'distanceToSea': 7000, 'distanceToBeach': 7000, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 4 спальни, площадь 157.0, цена 449 000 € – 566 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 60122,
@@ -8289,7 +9253,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "804",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896804/conversions/01HYJHCQTCR0PRXMRBW8R13FBQ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896805/conversions/01HYJHCRBSG49N5XK9K2B72HVB-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896806/conversions/01HYJHCS35P7S6DHKV4FPXT0J5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/05/896807/conversions/01HYJHCSQYQ7DBRM5T9C129YV4-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "La Vista Algorfa — carefully selected real estate on Costa Blanca. Location: Algorfa · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 158 202 € – 240 814 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "La Vista Algorfa Algorfa | Nowa inwestycja na Costa Blanca od 158 202 €",
+      "seoDescription": "La Vista Algorfa w Algorfa: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "La Vista Algorfa недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "La Vista Algorfa — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Algorfa', 'area': 'Costa Blanca', 'address': 'Alicante, Algorfa', 'filterLocation': 'algorfa', 'distanceToSea': 10000, 'distanceToBeach': 10000, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 1 спальни, площадь 53.0, цена 158 202 € – 240 814 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 52935,
@@ -8646,7 +9633,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "805",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768120/conversions/01HTQCQF36K1HB0PKEF9E4JH24-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768121/conversions/01HTQCQFBZYP9NJTB4F2XV14SM-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768122/conversions/01HTQCQFM7HVABCHMVH2Q9GRBB-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768123/conversions/01HTQCQFWH2Y2VX5N5Q1XSW6FP-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "SeaView 6 — carefully selected real estate on Costa Blanca. Location: Finestrat · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 535 000 € – 995 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "SeaView 6 Finestrat | Nowa inwestycja na Costa Blanca od 535 000 €",
+      "seoDescription": "SeaView 6 w Finestrat: nowe apartamenty na Costa Blanca, około 2500 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "SeaView 6 недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "SeaView 6 — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Alicante, Finestrat', 'filterLocation': 'finestrat', 'distanceToSea': 2500, 'distanceToBeach': 2500, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 3 спальни, площадь 150.0, цена 535 000 € – 995 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 52940,
@@ -8998,7 +10008,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "806",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768043/conversions/01HTQB99T1A4YDAC08W86YMQ9Y-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768045/conversions/01HTQB9AKQ4HVBD1B09DACPFGW-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768046/conversions/01HTQB9AYFPW5K6VVY9WQ41YPJ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/768044/conversions/01HTQB9A5X6Q9342N6R0KDYH7P-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Boost House — carefully selected real estate on Costa Blanca. Location: La Nucia · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 865 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Boost House La Nucia | Nowa inwestycja na Costa Blanca od 865 000 €",
+      "seoDescription": "Boost House w La Nucia: nowe apartamenty na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Boost House недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Boost House — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'La Nucia', 'area': 'Costa Blanca', 'address': 'Alicante, La Nucia', 'filterLocation': 'la-nucia', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 3 спальни, площадь 210.0, цена 865 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 53005,
@@ -9352,7 +10385,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "807",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767753/conversions/01HTPTQP2AMS9EWKJKSD6D1SE8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767754/conversions/01HTPTQPB5WVMQM4417GMFY8ZA-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767755/conversions/01HTPTQPMEKN9MTTNMMW2DCAJY-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/04/767752/conversions/01HTPTQNSYX5C5ZZESZ405NCYZ-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Sungolf Villas F2 — carefully selected real estate on Costa Blanca. Location: Pilar de la Horadada · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 350 000 € – 480 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Sungolf Villas F2 Pilar de la Horadada | Nowa inwestycja na Costa Blanca od 350 000 €",
+      "seoDescription": "Sungolf Villas F2 w Pilar de la Horadada: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Sungolf Villas F2 недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Sungolf Villas F2 — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Pilar De La Horadada', 'area': 'Costa Blanca', 'address': 'Alicante, Pilar de la Horadada', 'filterLocation': 'pilar-de-la-horadada', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 2 спальни, площадь 149.0, цена 350 000 € – 480 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 67596,
@@ -9710,7 +10766,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "808",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898183/conversions/01J0DWQXHM56S5J2MZX3TFJZJN-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898184/conversions/01J0DWQY8WT9GNFYMWJGJXTH16-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2026/03/4254102/conversions/01KKY5NQXJ61HCD8Q93BN5DEZ5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898194/conversions/01J0DX4CAHHCK71HC67TTQ6P24-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Marques Golf Resort — carefully selected real estate on Costa Blanca. Location: Finestrat · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 332 400 € – 392 400 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Marques Golf Resort Finestrat | Nowa inwestycja na Costa Blanca od 332 400 €",
+      "seoDescription": "Marques Golf Resort w Finestrat: nowe apartamenty na Costa Blanca, około 5000 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Marques Golf Resort недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Marques Golf Resort — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Alicante, Finestrat', 'filterLocation': 'finestrat', 'distanceToSea': 5000, 'distanceToBeach': 5000, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 2 спальни, площадь 89.0, цена 332 400 € – 392 400 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 67759,
@@ -10067,7 +11146,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "809",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898469/conversions/01J14TB964C35Z9D7NYJWGFTC6-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898471/conversions/01J14TB9M1W9S7EDY3W2S4R24H-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898472/conversions/01J14TB9TD3N9YY6SCCKTJR7W5-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898470/conversions/01J14TB9D0CE755H1YR4CWF6H5-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Villa Orange — carefully selected real estate on Costa Blanca. Location: Finestrat · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 1 350 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Villa Orange Finestrat | Nowa inwestycja na Costa Blanca od 1 350 000 €",
+      "seoDescription": "Villa Orange w Finestrat: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Villa Orange недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Villa Orange — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Alicante, Finestrat', 'filterLocation': 'finestrat', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 4 спальни, 5 ванные, площадь 390.0, цена 1 350 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 67766,
@@ -10425,7 +11527,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "810",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898527/conversions/01J14ZPYHFV1HJ74W5HPBBVVY7-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898529/conversions/01J14ZPZ0RA7W01X3C3C0TVNGE-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898530/conversions/01J14ZPZ8CWC924A2Q0YSMZKMW-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898528/conversions/01J14ZPYS8KXVZZ06YJ74K1SHN-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Villa Addaia RESIDENCIAL LIDIAMAR — carefully selected real estate on Costa Blanca. Location: Finestrat · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 760 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Villa Addaia RESIDENCIAL LIDIAMAR Finestrat | Nowa inwestycja na Costa Blanca od 760 000 €",
+      "seoDescription": "Villa Addaia RESIDENCIAL LIDIAMAR w Finestrat: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Villa Addaia RESIDENCIAL LIDIAMAR недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Villa Addaia RESIDENCIAL LIDIAMAR — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Finestrat', 'area': 'Costa Blanca', 'address': 'Alicante, Finestrat', 'filterLocation': 'finestrat', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 3 спальни, 3 ванные, площадь 158.0, цена 760 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 67795,
@@ -10781,7 +11906,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "811",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898745/conversions/01J1D96H4CAYKS71D3KS0V4HAG-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898747/conversions/01J1D96HJ15K81XQV5BC74RCK8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898748/conversions/01J1D96HWMN8XD0HC5ZB1VKRC8-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2024/06/898746/conversions/01J1D96H9K7GQYP3SPN1A1PTQ8-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Sea Essence — carefully selected real estate on Costa Blanca. Location: Santa Pola · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 230 000 € – 340 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Sea Essence Santa Pola | Nowa inwestycja na Costa Blanca od 230 000 €",
+      "seoDescription": "Sea Essence w Santa Pola: nowe apartamenty na Costa Blanca, około 700 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Sea Essence недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Sea Essence — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Santa Pola', 'area': 'Costa Blanca', 'address': 'Alicante, Santa Pola', 'filterLocation': 'santa-pola', 'distanceToSea': 700, 'distanceToBeach': 700, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 3 спальни, 2 ванные, площадь 73.0, цена 230 000 € – 340 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 430380,
@@ -11133,7 +12281,30 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "812",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983610/conversions/01KBMYEDR7QKQANYDBHT9CYSGQ-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983611/conversions/01KBMYEE6HYS8TPM1YWH8CRRA7-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983612/conversions/01KBMYEENADV0JEGG0PTM9T3RB-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/3983609/conversions/01KBMYED7140073T38DZSS2E72-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Villas Palma Nova — carefully selected real estate on Costa Blanca. Location: Daya Nueva · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 399 000 € – 449 900 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Villas Palma Nova Daya Nueva | Nowa inwestycja na Costa Blanca od 399 000 €",
+      "seoDescription": "Villas Palma Nova w Daya Nueva: nowe wille na Costa Blanca. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Villas Palma Nova недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Villas Palma Nova — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'Daya Nueva', 'area': 'Costa Blanca', 'address': 'Alicante, Daya Nueva', 'filterLocation': 'daya-nueva', 'distanceToSea': None, 'distanceToBeach': None, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 3 спальни, площадь 109.0, цена 399 000 € – 449 900 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
   },
   {
     "sourceId": 181374,
@@ -11493,6 +12664,563 @@
       "hasPrivateCRM": true,
       "privateCRMCode": "813",
       "note": "Private contacts are stored separately and are not published on the website."
-    }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402185/conversions/property-181374-2-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402186/conversions/property-181374-3-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402187/conversions/property-181374-4-preview.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/02/2402184/conversions/property-181374-1-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "premiumUniqueDescription": "Alonis Living Playa del Torres — carefully selected real estate on Costa Blanca. Location: La Villajoyosa / Vila Joiosa · Alicante · Costa Blanca. This project combines Mediterranean lifestyle, investment potential, modern architecture and strong rental appeal. Price range: 424 000 € – 650 000 €. Ideal for second home, relocation, holiday rentals and long-term capital preservation in Spain.",
+    "seoFinal": {
+      "seoTitle": "Alonis Living Playa del Torres La Villajoyosa / Vila Joiosa | Nowa inwestycja na Costa Blanca od 424 000 €",
+      "seoDescription": "Alonis Living Playa del Torres w La Villajoyosa / Vila Joiosa: nowe apartamenty na Costa Blanca, około 400 m od morza. Sprawdź ceny, zdjęcia i potencjał inwestycyjny zakupu w Hiszpanii.",
+      "focusKeyword": "Alonis Living Playa del Torres недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "photosCount": 5,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescriptionRu": "Alonis Living Playa del Torres — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации {'country': 'Spain', 'province': 'Alicante', 'city': 'La Villajoyosa Vila Joiosa', 'area': 'Costa Blanca', 'address': 'Alicante, La Villajoyosa / Vila Joiosa, Plaża de Torres, Edeta s/n', 'filterLocation': 'la-villajoyosa-vila-joiosa', 'distanceToSea': 400, 'distanceToBeach': 400, 'latitude': None, 'longitude': None, 'mapUrl': ''}, 2 спальни, площадь 100.0, цена 424 000 € – 650 000 €. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "documentsCount": 0
+  },
+  {
+    "id": "450411",
+    "complex_id": "449334",
+    "slug": "iconic-tenerife-phase-2-3-450411",
+    "category": "new-developments",
+    "source": "metainmo_kyero_xml",
+    "source_url": "https://spain.metainmo.com/pl/santa-cruz-de-tenerife/santa-cruz-de-tenerife/comprar-pisos/450411-iconic-tenerife-phase-3-13-1-1",
+    "href": "/pl/new-developments/xml-catalog/?slug=iconic-tenerife-phase-2-3-450411",
+    "image": "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+    "images": [
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207713/conversions/01KCRY5Y3Q44TZ9N8C0M3PNF3H-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207714/conversions/01KCRY5Y9BFMX6SPF672WXY9V5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207715/conversions/01KCRY5YFFCM1XGEFTE3STM3QX-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207716/conversions/01KCRY5YN92BBG5Y2BR4MW88CJ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207717/conversions/01KCRY5YSZT78A5J90ZHJPYJ44-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207718/conversions/01KCRY5YZ2YT0TS56PH5JPSBPF-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207719/conversions/01KCRY5Z4NV428MZWN8Z6X8DYW-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207720/conversions/01KCRY5Z9253CY6HTBPYTH5MQ7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207721/conversions/01KCRY5ZCVNGZSSCWDZZBZHYZA-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207722/conversions/01KCRY5ZHXEY126AYD0A2ZGSBX-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207723/conversions/01KCRY5ZNVQWP2S0B7EP9PN22F-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207724/conversions/01KCRY5ZT67YCSWEVX2N016CD0-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207725/conversions/01KCRY5ZZV9N2BYRZ262SM3P34-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207726/conversions/01KCRY60553Q9744D4M927FVXH-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207727/conversions/01KCRY60AHQN02VK4YSDC8CM11-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207728/conversions/01KCRY60EG1AAT41GCV1V1HRP7-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207729/conversions/01KCRY60J925RV0D4PE68RZXBR-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207730/conversions/01KCRY60P95ASNZCZCXCQD5QN5-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207731/conversions/01KCRY60VDKWDY1AK57H8C5D49-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207732/conversions/01KCRY60ZREJNFD4DRTRXBW54S-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207733/conversions/01KCRY614S82QH1DYV51RNKDN8-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207734/conversions/01KCRY61967DA7SY240D84YTHE-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207735/conversions/01KCRY61E9BW1VNV8EP0ET73F6-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207736/conversions/01KCRY61J5KK9Y18M5F88X12GQ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207737/conversions/01KCRY61P4Q6B7GS61ZNWSHB2J-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207738/conversions/01KCRY61V4GS77RBYRSY962692-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207739/conversions/01KCRY620JF0MBAP0NQAVXPGNH-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207740/conversions/01KCRY624ZR0RR83JB75F6MTMZ-medium.jpg",
+      "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207741/conversions/01KCRY6297K0KRWKS748VY62QC-medium.jpg"
+    ],
+    "video_url": "https://youtu.be/hLytydQLXpk",
+    "price_value": 992500,
+    "price": "€ 992 500",
+    "currency": "EUR",
+    "type": "Ground floors",
+    "location": "Santa Cruz de Tenerife",
+    "city": "Santa Cruz de Tenerife",
+    "province": "Santa Cruz de Tenerife",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "188 m²",
+    "terrace": "58 m²",
+    "usable_living_area": "107 m²",
+    "year_build": "2026",
+    "completion_date": "March 2026",
+    "building_status": "Under construction",
+    "orientation": "South",
+    "floors": 2,
+    "parking": "1",
+    "storage_room": "1",
+    "garage_included": "Included in the price",
+    "energy_certificate": "A",
+    "kitchen_type": "Open kitchen",
+    "kitchen_furniture": "Equipped",
+    "heating_type": "Heat pump",
+    "distance_beach": "50 m",
+    "distance_airport": "15 km",
+    "distance_golf": "5 km",
+    "features": [
+      "private-pool",
+      "terrace",
+      "swimming-pool",
+      "sea-view",
+      "clear-views"
+    ],
+    "contact_phone": "+34604158859",
+    "contact_email": "olga@a1invest4u.com",
+    "agent_name": "Olga Chernyshenko",
+    "translations": {
+      "pl": {
+        "lang": "pl",
+        "locale": "pl_PL",
+        "path": "/pl/new-developments/iconic-tenerife-phase-2-3-450411/",
+        "page_title": "ICONIC Tenerife phase 2-3 — luksusowy apartament z widokiem na ocean",
+        "meta_description": "ICONIC Tenerife phase 2-3: luksusowy apartament 2 sypialnie, 2 łazienki, 188 m², taras 58 m², prywatny basen, widok na ocean. Cena 992 500 €.",
+        "og_title": "ICONIC Tenerife phase 2-3 — apartament z prywatnym basenem",
+        "og_description": "Nowa inwestycja na Teneryfie: 2 sypialnie, 2 łazienki, 188 m², taras 58 m², widok na ocean i prywatny basen.",
+        "og_image_alt": "ICONIC Tenerife phase 2-3 luksusowy apartament z widokiem na ocean",
+        "back_link": "← Wróć do nowości",
+        "badge_text": "Nowa inwestycja",
+        "kicker": "Teneryfa · widok na ocean",
+        "hero_title": "ICONIC Tenerife",
+        "hero_subtext": "Ekskluzyjna inwestycja mieszkaniowa na południu Teneryfy z panoramicznym widokiem na ocean, prywatnym basenem i dużym tarasem.",
+        "hero_price_box_title": "Cena",
+        "hero_price_value_1": "€992K",
+        "hero_price_sep": "→",
+        "hero_price_value_2": "188 m²",
+        "hero_price_note": "Cena: € 992 500 · garaż w cenie",
+        "hero_price_meta": "2 sypialnie · 2 łazienki · taras 58 m² · prywatny basen",
+        "page_h1": "ICONIC Tenerife phase 2-3 — luksusowy apartament z widokiem na ocean",
+        "subtitle": "Santa Cruz de Tenerife · ground floor · nowa inwestycja",
+        "price_range": "€ 992 500",
+        "price_soft": "Apartament 188 m² · taras 58 m² · prywatny basen",
+        "kpi_1": "€ 992 500",
+        "kpi_icon_2": "🛏",
+        "kpi_2": "2 sypialnie",
+        "kpi_icon_3": "🌊",
+        "kpi_3": "Widok na ocean",
+        "lead_1": "ICONIC Tenerife phase 2-3 to ekskluzyjna inwestycja mieszkaniowa położona w jednej z najbardziej pożądanych części południowej Teneryfy.",
+        "lead_2": "Apartament oferuje 2 sypialnie, 2 łazienki, 188 m² powierzchni, taras 58 m² oraz prywatny basen — idealne połączenie komfortu, widoku i stylu życia premium.",
+        "lead_3": "Projekt wyróżnia się nowoczesną architekturą, wysoką efektywnością energetyczną, wyposażoną kuchnią, pompą ciepła oraz bliskością plaży, lotniska i pola golfowego.",
+        "params_title": "Parametry nieruchomości",
+        "param_label_1": "Typ:",
+        "param_value_1": "Ground floor",
+        "param_label_2": "Status:",
+        "param_value_2": "W budowie",
+        "param_label_3": "Sypialnie:",
+        "param_value_3": "2",
+        "param_label_4": "Łazienki:",
+        "param_value_4": "2",
+        "param_label_5": "Powierzchnia:",
+        "param_value_5": "188 m²",
+        "param_label_6": "Taras:",
+        "param_value_6": "58 m²",
+        "why_section_title": "Dlaczego warto",
+        "why_title_1": "Widok na ocean",
+        "why_text_1": "Panoramiczne widoki na Atlantyk i otwarte przestrzenie tworzą silny efekt premium.",
+        "why_title_2": "Prywatny basen i taras",
+        "why_text_2": "Duża przestrzeń zewnętrzna podnosi komfort życia i atrakcyjność wynajmu.",
+        "why_title_3": "Nowoczesna efektywność",
+        "why_text_3": "Pompa ciepła, klasa energetyczna A i ładowanie aut elektrycznych zwiększają wartość użytkową.",
+        "spec_title": "Co obejmuje oferta",
+        "spec_1": "Apartament typu ground floor w inwestycji ICONIC Tenerife phase 2-3",
+        "spec_2": "2 sypialnie i 2 łazienki",
+        "spec_3": "188 m² powierzchni oraz 58 m² tarasu",
+        "spec_4": "Prywatny basen, widok na morze i otwarte widoki",
+        "spec_5": "Garaż i komórka lokatorska w cenie",
+        "spec_6": "Plaża 50 m · lotnisko 15 km · golf 5 km",
+        "spec_paragraph": "Inwestycja łączy luksusowy standard, świetną lokalizację i mocne argumenty dla kupujących premium.",
+        "roi_title": "Potencjał inwestycyjny",
+        "roi_paragraph_1": "Projekt znajduje się w segmencie premium, gdzie duże tarasy, prywatne baseny i widok na ocean budują wysoką atrakcyjność najmu oraz odsprzedaży.",
+        "roi_label_1": "Cena:",
+        "roi_value_1": "€ 992 500",
+        "roi_label_2": "Status:",
+        "roi_value_2": "w budowie · planowany 2026",
+        "roi_label_3": "Atuty:",
+        "roi_value_3": "widok na morze, prywatny basen, taras",
+        "roi_label_4": "Lokalizacja:",
+        "roi_value_4": "plaża 50 m, lotnisko 15 km, golf 5 km",
+        "roi_paragraph_2": "To oferta dla klientów szukających prestiżowej nieruchomości wakacyjnej lub inwestycyjnej w Hiszpanii.",
+        "audience_title": "Dla kogo jest ta nieruchomość",
+        "audience_card_1_title": "Klienci premium",
+        "audience_card_1_text": "Dla osób szukających luksusowego apartamentu z widokiem na ocean.",
+        "audience_card_2_title": "Inwestorzy",
+        "audience_card_2_text": "Dla kupujących planujących wynajem w segmencie premium.",
+        "audience_card_3_title": "Second home",
+        "audience_card_3_text": "Dla osób, które chcą mieć komfortowy dom wakacyjny w Hiszpanii.",
+        "urgency_note": "85% inwestycji sprzedane",
+        "contact_title": "Chcesz otrzymać pełne szczegóły tej oferty?",
+        "contact_intro": "Napisz lub zadzwoń — przygotuję informacje, dostępność, plan i kolejne kroki zakupu.",
+        "agent_role": "Costa Blanca Invest · nieruchomości w Hiszpanii",
+        "agent_meta": "Pomagam klientom z Polski bezpiecznie kupować nieruchomości w Hiszpanii.",
+        "call_btn": "Zadzwoń",
+        "wa_btn": "Napisz na WhatsApp",
+        "form_name": "Imię",
+        "form_phone": "Telefon",
+        "form_email": "E-mail",
+        "form_message": "Wiadomość",
+        "form_submit": "Wyślij zapytanie",
+        "copy_link": "Skopiuj ofertę",
+        "share_note_title": "Udostępnij ofertę",
+        "share_note_strong": "ICONIC Tenerife phase 2-3",
+        "share_note_text": "Skopiuj link i wyślij klientowi.",
+        "share_params": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki · 188 m²",
+        "share_description": "Luksusowy apartament z tarasem, prywatnym basenem i widokiem na ocean.",
+        "wa_interest_text": "Dzień dobry, interesuje mnie oferta ICONIC Tenerife phase 2-3 za € 992 500. Proszę o szczegóły.",
+        "wa_form_prefix": "Zapytanie o ICONIC Tenerife phase 2-3",
+        "schema_product_description": "Luksusowy apartament w nowej inwestycji ICONIC Tenerife phase 2-3: 2 sypialnie, 2 łazienki, 188 m², taras, prywatny basen i widok na ocean.",
+        "schema_price_from": "992500"
+      },
+      "en": {
+        "lang": "en",
+        "locale": "en_GB",
+        "path": "/en/new-developments/iconic-tenerife-phase-2-3-450411/",
+        "page_title": "ICONIC Tenerife phase 2-3 — luxury apartment with ocean views",
+        "meta_description": "Luxury new development in Tenerife: 2 bedrooms, 2 bathrooms, 188 m², 58 m² terrace, private pool and ocean views. Price €992,500.",
+        "og_title": "ICONIC Tenerife phase 2-3 — luxury apartment with ocean views",
+        "og_description": "Luxury new development in Tenerife: 2 bedrooms, 2 bathrooms, 188 m², 58 m² terrace, private pool and ocean views. Price €992,500.",
+        "og_image_alt": "ICONIC Tenerife phase 2-3 — luxury apartment with ocean views",
+        "back_link": "← Back",
+        "badge_text": "New development",
+        "kicker": "Tenerife · ocean view",
+        "hero_title": "ICONIC Tenerife",
+        "hero_subtext": "Luxury new development in Tenerife: 2 bedrooms, 2 bathrooms, 188 m², 58 m² terrace, private pool and ocean views. Price €992,500.",
+        "hero_price_box_title": "Cena",
+        "hero_price_value_1": "€992K",
+        "hero_price_sep": "→",
+        "hero_price_value_2": "188 m²",
+        "hero_price_note": "Cena: € 992 500 · garaż w cenie",
+        "hero_price_meta": "2 sypialnie · 2 łazienki · taras 58 m² · prywatny basen",
+        "page_h1": "ICONIC Tenerife phase 2-3 — luxury apartment with ocean views",
+        "subtitle": "Santa Cruz de Tenerife · ground floor · new development",
+        "price_range": "€ 992 500",
+        "price_soft": "188 m² apartment · 58 m² terrace · private pool",
+        "kpi_1": "€ 992 500",
+        "kpi_icon_2": "🛏",
+        "kpi_2": "2 bedrooms",
+        "kpi_icon_3": "🌊",
+        "kpi_3": "Ocean view",
+        "lead_1": "ICONIC Tenerife phase 2-3 is an exclusive residential project in one of the most sought-after areas of southern Tenerife.",
+        "lead_2": "The property offers 2 bedrooms, 2 bathrooms, 188 m², a 58 m² terrace and a private pool.",
+        "lead_3": "A premium project with energy efficiency, equipped kitchen, heat pump and excellent access to beach, airport and golf.",
+        "params_title": "Parametry nieruchomości",
+        "param_label_1": "Typ:",
+        "param_value_1": "Ground floor",
+        "param_label_2": "Status:",
+        "param_value_2": "W budowie",
+        "param_label_3": "Sypialnie:",
+        "param_value_3": "2",
+        "param_label_4": "Łazienki:",
+        "param_value_4": "2",
+        "param_label_5": "Powierzchnia:",
+        "param_value_5": "188 m²",
+        "param_label_6": "Taras:",
+        "param_value_6": "58 m²",
+        "why_section_title": "Dlaczego warto",
+        "why_title_1": "Widok na ocean",
+        "why_text_1": "Panoramiczne widoki na Atlantyk i otwarte przestrzenie tworzą silny efekt premium.",
+        "why_title_2": "Prywatny basen i taras",
+        "why_text_2": "Duża przestrzeń zewnętrzna podnosi komfort życia i atrakcyjność wynajmu.",
+        "why_title_3": "Nowoczesna efektywność",
+        "why_text_3": "Pompa ciepła, klasa energetyczna A i ładowanie aut elektrycznych zwiększają wartość użytkową.",
+        "spec_title": "Co obejmuje oferta",
+        "spec_1": "Apartament typu ground floor w inwestycji ICONIC Tenerife phase 2-3",
+        "spec_2": "2 sypialnie i 2 łazienki",
+        "spec_3": "188 m² powierzchni oraz 58 m² tarasu",
+        "spec_4": "Prywatny basen, widok na morze i otwarte widoki",
+        "spec_5": "Garaż i komórka lokatorska w cenie",
+        "spec_6": "Plaża 50 m · lotnisko 15 km · golf 5 km",
+        "spec_paragraph": "Inwestycja łączy luksusowy standard, świetną lokalizację i mocne argumenty dla kupujących premium.",
+        "roi_title": "Potencjał inwestycyjny",
+        "roi_paragraph_1": "Projekt znajduje się w segmencie premium, gdzie duże tarasy, prywatne baseny i widok na ocean budują wysoką atrakcyjność najmu oraz odsprzedaży.",
+        "roi_label_1": "Cena:",
+        "roi_value_1": "€ 992 500",
+        "roi_label_2": "Status:",
+        "roi_value_2": "w budowie · planowany 2026",
+        "roi_label_3": "Atuty:",
+        "roi_value_3": "widok na morze, prywatny basen, taras",
+        "roi_label_4": "Lokalizacja:",
+        "roi_value_4": "plaża 50 m, lotnisko 15 km, golf 5 km",
+        "roi_paragraph_2": "To oferta dla klientów szukających prestiżowej nieruchomości wakacyjnej lub inwestycyjnej w Hiszpanii.",
+        "audience_title": "Dla kogo jest ta nieruchomość",
+        "audience_card_1_title": "Klienci premium",
+        "audience_card_1_text": "Dla osób szukających luksusowego apartamentu z widokiem na ocean.",
+        "audience_card_2_title": "Inwestorzy",
+        "audience_card_2_text": "Dla kupujących planujących wynajem w segmencie premium.",
+        "audience_card_3_title": "Second home",
+        "audience_card_3_text": "Dla osób, które chcą mieć komfortowy dom wakacyjny w Hiszpanii.",
+        "urgency_note": "85% inwestycji sprzedane",
+        "contact_title": "Would you like full details of this offer?",
+        "contact_intro": "Write or call me — I will send availability, plans and purchase steps.",
+        "agent_role": "Costa Blanca Invest · nieruchomości w Hiszpanii",
+        "agent_meta": "Pomagam klientom z Polski bezpiecznie kupować nieruchomości w Hiszpanii.",
+        "call_btn": "Call",
+        "wa_btn": "WhatsApp",
+        "form_name": "Name",
+        "form_phone": "Phone",
+        "form_email": "Email",
+        "form_message": "Message",
+        "form_submit": "Send request",
+        "copy_link": "Skopiuj ofertę",
+        "share_note_title": "Udostępnij ofertę",
+        "share_note_strong": "ICONIC Tenerife phase 2-3",
+        "share_note_text": "Skopiuj link i wyślij klientowi.",
+        "share_params": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki · 188 m²",
+        "share_description": "Luksusowy apartament z tarasem, prywatnym basenem i widokiem na ocean.",
+        "wa_interest_text": "Hello, I am interested in ICONIC Tenerife phase 2-3 for €992,500. Please send me more details.",
+        "wa_form_prefix": "Request for ICONIC Tenerife phase 2-3",
+        "schema_product_description": "Luksusowy apartament w nowej inwestycji ICONIC Tenerife phase 2-3: 2 sypialnie, 2 łazienki, 188 m², taras, prywatny basen i widok na ocean.",
+        "schema_price_from": "992500"
+      },
+      "es": {
+        "lang": "es",
+        "locale": "es_ES",
+        "path": "/es/new-developments/iconic-tenerife-phase-2-3-450411/",
+        "page_title": "ICONIC Tenerife phase 2-3 — apartamento de lujo con vistas al océano",
+        "meta_description": "Obra nueva de lujo en Tenerife: 2 dormitorios, 2 baños, 188 m², terraza de 58 m², piscina privada y vistas al océano. Precio 992.500 €.",
+        "og_title": "ICONIC Tenerife phase 2-3 — apartamento de lujo con vistas al océano",
+        "og_description": "Obra nueva de lujo en Tenerife: 2 dormitorios, 2 baños, 188 m², terraza de 58 m², piscina privada y vistas al océano. Precio 992.500 €.",
+        "og_image_alt": "ICONIC Tenerife phase 2-3 — apartamento de lujo con vistas al océano",
+        "back_link": "← Volver",
+        "badge_text": "Obra nueva",
+        "kicker": "Tenerife · vistas al océano",
+        "hero_title": "ICONIC Tenerife",
+        "hero_subtext": "Obra nueva de lujo en Tenerife: 2 dormitorios, 2 baños, 188 m², terraza de 58 m², piscina privada y vistas al océano. Precio 992.500 €.",
+        "hero_price_box_title": "Cena",
+        "hero_price_value_1": "€992K",
+        "hero_price_sep": "→",
+        "hero_price_value_2": "188 m²",
+        "hero_price_note": "Cena: € 992 500 · garaż w cenie",
+        "hero_price_meta": "2 sypialnie · 2 łazienki · taras 58 m² · prywatny basen",
+        "page_h1": "ICONIC Tenerife phase 2-3 — apartamento de lujo con vistas al océano",
+        "subtitle": "Santa Cruz de Tenerife · planta baja · obra nueva",
+        "price_range": "€ 992 500",
+        "price_soft": "Apartamento 188 m² · terraza 58 m² · piscina privada",
+        "kpi_1": "€ 992 500",
+        "kpi_icon_2": "🛏",
+        "kpi_2": "2 dormitorios",
+        "kpi_icon_3": "🌊",
+        "kpi_3": "Vista al océano",
+        "lead_1": "ICONIC Tenerife phase 2-3 es una exclusiva promoción residencial en una de las zonas más codiciadas del sur de Tenerife.",
+        "lead_2": "La vivienda ofrece 2 dormitorios, 2 baños, 188 m², terraza de 58 m² y piscina privada.",
+        "lead_3": "Proyecto premium con eficiencia energética, cocina equipada, bomba de calor y excelente acceso a playa, aeropuerto y golf.",
+        "params_title": "Parametry nieruchomości",
+        "param_label_1": "Typ:",
+        "param_value_1": "Ground floor",
+        "param_label_2": "Status:",
+        "param_value_2": "W budowie",
+        "param_label_3": "Sypialnie:",
+        "param_value_3": "2",
+        "param_label_4": "Łazienki:",
+        "param_value_4": "2",
+        "param_label_5": "Powierzchnia:",
+        "param_value_5": "188 m²",
+        "param_label_6": "Taras:",
+        "param_value_6": "58 m²",
+        "why_section_title": "Dlaczego warto",
+        "why_title_1": "Widok na ocean",
+        "why_text_1": "Panoramiczne widoki na Atlantyk i otwarte przestrzenie tworzą silny efekt premium.",
+        "why_title_2": "Prywatny basen i taras",
+        "why_text_2": "Duża przestrzeń zewnętrzna podnosi komfort życia i atrakcyjność wynajmu.",
+        "why_title_3": "Nowoczesna efektywność",
+        "why_text_3": "Pompa ciepła, klasa energetyczna A i ładowanie aut elektrycznych zwiększają wartość użytkową.",
+        "spec_title": "Co obejmuje oferta",
+        "spec_1": "Apartament typu ground floor w inwestycji ICONIC Tenerife phase 2-3",
+        "spec_2": "2 sypialnie i 2 łazienki",
+        "spec_3": "188 m² powierzchni oraz 58 m² tarasu",
+        "spec_4": "Prywatny basen, widok na morze i otwarte widoki",
+        "spec_5": "Garaż i komórka lokatorska w cenie",
+        "spec_6": "Plaża 50 m · lotnisko 15 km · golf 5 km",
+        "spec_paragraph": "Inwestycja łączy luksusowy standard, świetną lokalizację i mocne argumenty dla kupujących premium.",
+        "roi_title": "Potencjał inwestycyjny",
+        "roi_paragraph_1": "Projekt znajduje się w segmencie premium, gdzie duże tarasy, prywatne baseny i widok na ocean budują wysoką atrakcyjność najmu oraz odsprzedaży.",
+        "roi_label_1": "Cena:",
+        "roi_value_1": "€ 992 500",
+        "roi_label_2": "Status:",
+        "roi_value_2": "w budowie · planowany 2026",
+        "roi_label_3": "Atuty:",
+        "roi_value_3": "widok na morze, prywatny basen, taras",
+        "roi_label_4": "Lokalizacja:",
+        "roi_value_4": "plaża 50 m, lotnisko 15 km, golf 5 km",
+        "roi_paragraph_2": "To oferta dla klientów szukających prestiżowej nieruchomości wakacyjnej lub inwestycyjnej w Hiszpanii.",
+        "audience_title": "Dla kogo jest ta nieruchomość",
+        "audience_card_1_title": "Klienci premium",
+        "audience_card_1_text": "Dla osób szukających luksusowego apartamentu z widokiem na ocean.",
+        "audience_card_2_title": "Inwestorzy",
+        "audience_card_2_text": "Dla kupujących planujących wynajem w segmencie premium.",
+        "audience_card_3_title": "Second home",
+        "audience_card_3_text": "Dla osób, które chcą mieć komfortowy dom wakacyjny w Hiszpanii.",
+        "urgency_note": "85% inwestycji sprzedane",
+        "contact_title": "¿Quieres recibir todos los detalles de esta oferta?",
+        "contact_intro": "Escríbeme o llámame — prepararé disponibilidad, planos y pasos de compra.",
+        "agent_role": "Costa Blanca Invest · nieruchomości w Hiszpanii",
+        "agent_meta": "Pomagam klientom z Polski bezpiecznie kupować nieruchomości w Hiszpanii.",
+        "call_btn": "Llamar",
+        "wa_btn": "WhatsApp",
+        "form_name": "Nombre",
+        "form_phone": "Teléfono",
+        "form_email": "Email",
+        "form_message": "Mensaje",
+        "form_submit": "Enviar solicitud",
+        "copy_link": "Skopiuj ofertę",
+        "share_note_title": "Udostępnij ofertę",
+        "share_note_strong": "ICONIC Tenerife phase 2-3",
+        "share_note_text": "Skopiuj link i wyślij klientowi.",
+        "share_params": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki · 188 m²",
+        "share_description": "Luksusowy apartament z tarasem, prywatnym basenem i widokiem na ocean.",
+        "wa_interest_text": "Hola, me interesa ICONIC Tenerife phase 2-3 por 992.500 €. Por favor, envíeme más información.",
+        "wa_form_prefix": "Consulta sobre ICONIC Tenerife phase 2-3",
+        "schema_product_description": "Luksusowy apartament w nowej inwestycji ICONIC Tenerife phase 2-3: 2 sypialnie, 2 łazienki, 188 m², taras, prywatny basen i widok na ocean.",
+        "schema_price_from": "992500"
+      },
+      "ru": {
+        "lang": "ru",
+        "locale": "ru_RU",
+        "path": "/ru/new-developments/iconic-tenerife-phase-2-3-450411/",
+        "page_title": "ICONIC Tenerife phase 2-3 — апартамент люкс с видом на океан",
+        "meta_description": "Новая премиальная резиденция на Тенерифе: 2 спальни, 2 ванные, 188 м², терраса 58 м², приватный бассейн и вид на океан. Цена €992 500.",
+        "og_title": "ICONIC Tenerife phase 2-3 — апартамент люкс с видом на океан",
+        "og_description": "Новая премиальная резиденция на Тенерифе: 2 спальни, 2 ванные, 188 м², терраса 58 м², приватный бассейн и вид на океан. Цена €992 500.",
+        "og_image_alt": "ICONIC Tenerife phase 2-3 — апартамент люкс с видом на океан",
+        "back_link": "← Назад",
+        "badge_text": "Новостройка",
+        "kicker": "Тенерифе · вид на океан",
+        "hero_title": "ICONIC Tenerife",
+        "hero_subtext": "Новая премиальная резиденция на Тенерифе: 2 спальни, 2 ванные, 188 м², терраса 58 м², приватный бассейн и вид на океан. Цена €992 500.",
+        "hero_price_box_title": "Cena",
+        "hero_price_value_1": "€992K",
+        "hero_price_sep": "→",
+        "hero_price_value_2": "188 m²",
+        "hero_price_note": "Cena: € 992 500 · garaż w cenie",
+        "hero_price_meta": "2 sypialnie · 2 łazienki · taras 58 m² · prywatny basen",
+        "page_h1": "ICONIC Tenerife phase 2-3 — апартамент люкс с видом на океан",
+        "subtitle": "Санта-Крус-де-Тенерифе · первый этаж · новостройка",
+        "price_range": "€ 992 500",
+        "price_soft": "Апартамент 188 м² · терраса 58 м² · приватный бассейн",
+        "kpi_1": "€ 992 500",
+        "kpi_icon_2": "🛏",
+        "kpi_2": "2 спальни",
+        "kpi_icon_3": "🌊",
+        "kpi_3": "Вид на океан",
+        "lead_1": "ICONIC Tenerife phase 2-3 — эксклюзивный жилой проект в одной из самых востребованных зон южного Тенерифе.",
+        "lead_2": "Объект предлагает 2 спальни, 2 ванные, 188 м², террасу 58 м² и приватный бассейн.",
+        "lead_3": "Премиальный проект с энергоэффективностью, оборудованной кухней, тепловым насосом и удобным доступом к пляжу, аэропорту и гольфу.",
+        "params_title": "Parametry nieruchomości",
+        "param_label_1": "Typ:",
+        "param_value_1": "Ground floor",
+        "param_label_2": "Status:",
+        "param_value_2": "W budowie",
+        "param_label_3": "Sypialnie:",
+        "param_value_3": "2",
+        "param_label_4": "Łazienki:",
+        "param_value_4": "2",
+        "param_label_5": "Powierzchnia:",
+        "param_value_5": "188 m²",
+        "param_label_6": "Taras:",
+        "param_value_6": "58 m²",
+        "why_section_title": "Dlaczego warto",
+        "why_title_1": "Widok na ocean",
+        "why_text_1": "Panoramiczne widoki na Atlantyk i otwarte przestrzenie tworzą silny efekt premium.",
+        "why_title_2": "Prywatny basen i taras",
+        "why_text_2": "Duża przestrzeń zewnętrzna podnosi komfort życia i atrakcyjność wynajmu.",
+        "why_title_3": "Nowoczesna efektywność",
+        "why_text_3": "Pompa ciepła, klasa energetyczna A i ładowanie aut elektrycznych zwiększają wartość użytkową.",
+        "spec_title": "Co obejmuje oferta",
+        "spec_1": "Apartament typu ground floor w inwestycji ICONIC Tenerife phase 2-3",
+        "spec_2": "2 sypialnie i 2 łazienki",
+        "spec_3": "188 m² powierzchni oraz 58 m² tarasu",
+        "spec_4": "Prywatny basen, widok na morze i otwarte widoki",
+        "spec_5": "Garaż i komórka lokatorska w cenie",
+        "spec_6": "Plaża 50 m · lotnisko 15 km · golf 5 km",
+        "spec_paragraph": "Inwestycja łączy luksusowy standard, świetną lokalizację i mocne argumenty dla kupujących premium.",
+        "roi_title": "Potencjał inwestycyjny",
+        "roi_paragraph_1": "Projekt znajduje się w segmencie premium, gdzie duże tarasy, prywatne baseny i widok na ocean budują wysoką atrakcyjność najmu oraz odsprzedaży.",
+        "roi_label_1": "Cena:",
+        "roi_value_1": "€ 992 500",
+        "roi_label_2": "Status:",
+        "roi_value_2": "w budowie · planowany 2026",
+        "roi_label_3": "Atuty:",
+        "roi_value_3": "widok na morze, prywatny basen, taras",
+        "roi_label_4": "Lokalizacja:",
+        "roi_value_4": "plaża 50 m, lotnisko 15 km, golf 5 km",
+        "roi_paragraph_2": "To oferta dla klientów szukających prestiżowej nieruchomości wakacyjnej lub inwestycyjnej w Hiszpanii.",
+        "audience_title": "Dla kogo jest ta nieruchomość",
+        "audience_card_1_title": "Klienci premium",
+        "audience_card_1_text": "Dla osób szukających luksusowego apartamentu z widokiem na ocean.",
+        "audience_card_2_title": "Inwestorzy",
+        "audience_card_2_text": "Dla kupujących planujących wynajem w segmencie premium.",
+        "audience_card_3_title": "Second home",
+        "audience_card_3_text": "Dla osób, które chcą mieć komfortowy dom wakacyjny w Hiszpanii.",
+        "urgency_note": "85% inwestycji sprzedane",
+        "contact_title": "Хотите получить полную информацию по этому объекту?",
+        "contact_intro": "Напишите или позвоните — подготовлю наличие, планы и шаги покупки.",
+        "agent_role": "Costa Blanca Invest · nieruchomości w Hiszpanii",
+        "agent_meta": "Pomagam klientom z Polski bezpiecznie kupować nieruchomości w Hiszpanii.",
+        "call_btn": "Позвонить",
+        "wa_btn": "WhatsApp",
+        "form_name": "Имя",
+        "form_phone": "Телефон",
+        "form_email": "E-mail",
+        "form_message": "Сообщение",
+        "form_submit": "Отправить запрос",
+        "copy_link": "Skopiuj ofertę",
+        "share_note_title": "Udostępnij ofertę",
+        "share_note_strong": "ICONIC Tenerife phase 2-3",
+        "share_note_text": "Skopiuj link i wyślij klientowi.",
+        "share_params": "Santa Cruz de Tenerife · 2 sypialnie · 2 łazienki · 188 m²",
+        "share_description": "Luksusowy apartament z tarasem, prywatnym basenem i widokiem na ocean.",
+        "wa_interest_text": "Здравствуйте, меня интересует ICONIC Tenerife phase 2-3 за € 992 500. Пришлите, пожалуйста, подробности.",
+        "wa_form_prefix": "Запрос по ICONIC Tenerife phase 2-3",
+        "schema_product_description": "Luksusowy apartament w nowej inwestycji ICONIC Tenerife phase 2-3: 2 sypialnie, 2 łazienki, 188 m², taras, prywatny basen i widok na ocean.",
+        "schema_price_from": "992500"
+      }
+    },
+    "galleryOrdered": {
+      "photos": [
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207712/conversions/01KCRY5XY3HHFEXY45TGBMRBG6-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207713/conversions/01KCRY5Y3Q44TZ9N8C0M3PNF3H-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207714/conversions/01KCRY5Y9BFMX6SPF672WXY9V5-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207715/conversions/01KCRY5YFFCM1XGEFTE3STM3QX-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207716/conversions/01KCRY5YN92BBG5Y2BR4MW88CJ-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207717/conversions/01KCRY5YSZT78A5J90ZHJPYJ44-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207718/conversions/01KCRY5YZ2YT0TS56PH5JPSBPF-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207719/conversions/01KCRY5Z4NV428MZWN8Z6X8DYW-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207720/conversions/01KCRY5Z9253CY6HTBPYTH5MQ7-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207721/conversions/01KCRY5ZCVNGZSSCWDZZBZHYZA-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207722/conversions/01KCRY5ZHXEY126AYD0A2ZGSBX-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207723/conversions/01KCRY5ZNVQWP2S0B7EP9PN22F-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207724/conversions/01KCRY5ZT67YCSWEVX2N016CD0-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207725/conversions/01KCRY5ZZV9N2BYRZ262SM3P34-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207726/conversions/01KCRY60553Q9744D4M927FVXH-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207727/conversions/01KCRY60AHQN02VK4YSDC8CM11-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207728/conversions/01KCRY60EG1AAT41GCV1V1HRP7-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207729/conversions/01KCRY60J925RV0D4PE68RZXBR-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207730/conversions/01KCRY60P95ASNZCZCXCQD5QN5-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207731/conversions/01KCRY60VDKWDY1AK57H8C5D49-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207732/conversions/01KCRY60ZREJNFD4DRTRXBW54S-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207733/conversions/01KCRY614S82QH1DYV51RNKDN8-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207734/conversions/01KCRY61967DA7SY240D84YTHE-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207735/conversions/01KCRY61E9BW1VNV8EP0ET73F6-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207736/conversions/01KCRY61J5KK9Y18M5F88X12GQ-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207737/conversions/01KCRY61P4Q6B7GS61ZNWSHB2J-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207738/conversions/01KCRY61V4GS77RBYRSY962692-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207739/conversions/01KCRY620JF0MBAP0NQAVXPGNH-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207740/conversions/01KCRY624ZR0RR83JB75F6MTMZ-medium.jpg",
+        "https://es-metainmo.ams3.cdn.digitaloceanspaces.com/uploads/2025/12/4207741/conversions/01KCRY6297K0KRWKS748VY62QC-medium.jpg"
+      ],
+      "floorPlans": [],
+      "documents": []
+    },
+    "photosCount": 30,
+    "floorPlansCount": 0,
+    "sourceMerged": true,
+    "premiumUniqueDescription": "ICONIC Tenerife is a carefully selected property in Spain with strong lifestyle appeal, clear investment positioning and a presentation-ready structure. в локации Santa Cruz de Tenerife, 2 спальни, 2 ванные, площадь 188 m², цена € 992 500. Suitable for second home buyers, relocation, holiday use and rental strategy.",
+    "premiumUniqueDescriptionRu": "ICONIC Tenerife — тщательно отобранная недвижимость в Испании с сильной визуальной подачей, продуманной структурой для каталога и высоким потенциалом для презентации клиенту. в локации Santa Cruz de Tenerife, 2 спальни, 2 ванные, площадь 188 m², цена € 992 500. Объект подходит для покупки под личное проживание, отдыха, инвестиций и аренды.",
+    "seoFinal": {
+      "seoTitle": "iconic-tenerife-phase-2-3-450411 | Недвижимость в Испании",
+      "seoDescription": "iconic-tenerife-phase-2-3-450411 — тщательно отобранный объект недвижимости в Испании, Santa Cruz de Tenerife. Формат подходит для красивой презентации на сайте, SEO-каталога, подбора клиенту и инвестиционного анализа. Площадь: 188 m². Цена: € 992 500. В карточке сохранены фото без дублей, планировки после фото, докуме",
+      "focusKeyword": "iconic-tenerife-phase-2-3-450411 недвижимость Испания",
+      "robots": "index,follow,max-image-preview:large"
+    },
+    "documentsCount": 0
   }
 ]
