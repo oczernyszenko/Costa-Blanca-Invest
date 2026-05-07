@@ -506,7 +506,63 @@ h1 {
   }
 }
 
-  </style>
+  
+/* SAFE FINAL LUXURY PATCH */
+.full-data-grid,
+.raw-json-details,
+.data-card,
+.source-links,
+.source-link {
+  display:none!important;
+}
+
+.gallery-count,
+.photo-count,
+.photos-count,
+.gallery-title-count {
+  display:none!important;
+}
+
+.gallery-grid{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr))!important;
+  gap:18px!important;
+  align-items:stretch!important;
+}
+
+.gallery-item{
+  height:auto!important;
+  aspect-ratio:1/1!important;
+  border-radius:26px!important;
+  overflow:hidden!important;
+}
+
+.gallery-item img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+
+.curated-luxury-section{margin-top:32px}
+.curated-luxury-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+.curated-luxury-card{padding:30px;border-radius:28px;background:rgba(255,255,255,.92);border:1px solid rgba(217,181,109,.18);box-shadow:0 18px 42px rgba(15,23,42,.06)}
+.curated-luxury-card h2,.curated-luxury-card h3{margin:0 0 16px;color:var(--primary);letter-spacing:-.03em}
+.curated-description{font-size:16px;line-height:1.85;color:var(--text-soft)}
+.curated-spec-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.curated-spec-list li{display:grid;grid-template-columns:minmax(112px,.8fr) minmax(0,1.2fr);gap:12px;margin:0;padding:0 0 10px;border-bottom:1px solid rgba(15,23,42,.06)}
+.curated-spec-list li::before{display:none}
+.curated-label{font-size:13px;font-weight:900;color:var(--muted)}
+.curated-value{font-size:15px;font-weight:900;color:var(--primary);overflow-wrap:anywhere}
+.curated-amenities{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.curated-amenity{padding:9px 13px;border-radius:999px;background:rgba(217,181,109,.11);border:1px solid rgba(217,181,109,.22);color:var(--gold-dark);font-size:12px;font-weight:900}
+.floorplans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+.floorplan-item{overflow:hidden;border-radius:24px;background:#fff;border:1px solid rgba(15,23,42,.08);box-shadow:0 14px 30px rgba(15,23,42,.06)}
+.floorplan-item img{width:100%;height:280px;object-fit:contain;background:#f8f6f1}
+@media(max-width:1180px){.curated-luxury-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.curated-luxury-card{padding:22px}}
+@media(max-width:560px){.gallery-grid{grid-template-columns:1fr!important}.curated-spec-list li{grid-template-columns:1fr;gap:4px}.curated-luxury-card{padding:18px}.hero-media,.hero-media img{min-height:300px!important}}
+
+</style>
 </head>
 <body>
 
@@ -540,7 +596,7 @@ Only one primary H1 + one main metadata line kept to avoid duplicate semantic bl
 
   <script>
     // First source is the new full multilingual JSON. Old projects.json remains as fallback.
-    const PROJECTS_URLS = ['/pl/new-developments/ultimate_properties_master_beautiful_multilang.json','/pl/new-developments/projects.json','./ultimate_properties_master_beautiful_multilang.json','ultimate_properties_master_beautiful_multilang.json','./projects.json','projects.json'];
+    const PROJECTS_URLS = ['/pl/new-developments/ultimate_properties_master_beautiful_multilang.json','./ultimate_properties_master_beautiful_multilang.json','ultimate_properties_master_beautiful_multilang.json','/pl/new-developments/projects.json','./projects.json','projects.json'];
     const LIVE_CATEGORY_PATH = '/pl/new-developments/';
     const SHARE_BASE_PATH = '/pl/new-developments/share/';
     const SITE_ORIGIN = 'https://costa-blanca-invest.com';
@@ -1870,7 +1926,7 @@ function sectionTitle(key){
         'Oferta może być analizowana jako second home, zakup wakacyjny lub inwestycja.'
       );
 
-      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,features:buildFeatureBadges(item),fullSections:buildFullSections(item),sourceLinks:buildSourceLinks(item),shareImage:getShareImageUrl(item),image:getImage(item,0),images:getImages(item),floorPlans:getFloorPlans(item),documents:getDocuments(item),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,shareSlug:resolveShareSlug(item),href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
+      return {ui,title,seoTitle,meta,price,desc,seoDescription,seoDescription2,p1,p2,paramEntries,leads,why,specs,audience,roiText,features:buildFeatureBadges(item),fullSections:buildFullSections(item),sourceLinks:buildSourceLinks(item),shareImage:getShareImageUrl(item),image:getImage(item,0),images:getImages(item),floorPlans:getFloorPlans(item).filter(p=>p && !(typeof p==='object' && p.type==='metainmo_plan_placeholder') && !JSON.stringify(p).toLowerCase().includes('direct image url was not exposed') && !JSON.stringify(p).toLowerCase().includes('plan exists on metainmo page')),documents:getDocuments(item),chip:x.chip||item.chip||'Costa Blanca',slug:item.slug||requestedSlug,shareSlug:resolveShareSlug(item),href:item.href||`/pl/new-developments/xml-catalog/?slug=${encodeURIComponent(item.slug||requestedSlug)}`};
     }
 
     function applyMeta(data){
