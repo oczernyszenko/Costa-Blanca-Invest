@@ -2293,13 +2293,8 @@ function sectionTitle(key){
         btn.textContent=data.ui.copied;
         setTimeout(()=>{btn.textContent=original;},1400);
       });
-      document.getElementById('nativeSharePreview')?.addEventListener('click',async()=>{
-        // Smart share:
-        // mobile: native system share first; desktop/Facebook browser: Facebook popup fallback.
-        if(shouldUseNativeShareFirst()){
-          const shared = await shareProperty(data);
-          if(shared) return;
-        }
+      document.getElementById('nativeSharePreview')?.addEventListener('click',()=>{
+        // Facebook sharing only: use static OG page, never native/WhatsApp share sheet.
         openFacebookShare(shareUrl);
       });
       document.getElementById('facebookSharePreview')?.addEventListener('click',()=>{
