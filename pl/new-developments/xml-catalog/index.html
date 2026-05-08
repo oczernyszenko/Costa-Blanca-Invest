@@ -97,15 +97,17 @@ ul{margin:0;padding:0;list-style:none}
 .hero-title{max-width:980px;margin:0 auto 12px;color:var(--primary);font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.04em;overflow-wrap:anywhere}
 .subtitle{margin-bottom:10px;color:var(--text-soft);font-size:18px}
 .price{margin-bottom:10px;color:var(--gold-dark);font-size:clamp(26px,3.6vw,36px);font-weight:900;letter-spacing:-.03em}
-.price-soft{color:var(--text-soft);font-size:15px;font-weight:800}
 .luxury-param-line{display:none!important}
 .section-card h2,.cta-box h2{position:relative;margin-bottom:22px;padding-bottom:12px;color:var(--primary);font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.03em}
 .section-card h2::after,.cta-box h2::after{content:"";position:absolute;left:0;bottom:0;width:70px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--gold),transparent)}
 .lead{color:var(--text-soft);font-size:16px;line-height:1.72;text-align:left;white-space:pre-line}
+.seo-article{max-width:980px;margin:34px auto 0;text-align:center}
+.seo-article h2{margin-bottom:18px;color:var(--primary);font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.03em;text-align:center}
+.seo-article .lead{text-align:left}
 .section-card ul{display:grid;gap:10px;color:var(--text-soft)}
 .info-row .section-card ul{grid-template-columns:1fr}
-.section-card li{position:relative;padding-left:28px;color:var(--text-soft);font-size:15px;line-height:1.6}
-.section-card li::before{content:"✦";position:absolute;left:0;top:0;color:var(--gold-dark);font-weight:900;font-size:14px}
+.section-card li{position:relative;padding-left:0;color:var(--text-soft);font-size:15px;line-height:1.6}
+.section-card li::before{display:none}
 .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:8px}
 .related-card{overflow:hidden;border-radius:22px;background:#fff;border:1px solid rgba(217,181,109,.16);box-shadow:0 8px 22px rgba(15,23,42,.05)}
 .related-card img{width:100%;height:170px;object-fit:cover;background:#edf1f4}
@@ -123,7 +125,6 @@ ul{margin:0;padding:0;list-style:none}
 .representative-card{display:grid;grid-template-columns:1fr 120px;gap:24px;align-items:center;max-width:980px;margin:0 auto 24px;padding:22px;border-radius:24px;background:rgba(255,255,255,.38);border:1px solid rgba(217,181,109,.14);text-align:left}
 .representative-avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;justify-self:end;border:3px solid rgba(243,199,123,.26)}
 .representative-name{margin:0 0 4px;color:var(--primary);font-size:24px;font-weight:900;line-height:1.08}
-.representative-role{margin-bottom:6px;color:var(--gold-dark);font-size:15px;font-weight:800}
 .representative-meta{color:var(--text-soft);font-size:14px;line-height:1.6}
 .cta-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:18px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff;background:linear-gradient(135deg,#183746,#234e63);font-size:15px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(15,23,42,.08);transition:background .22s ease,box-shadow .22s ease,transform .22s ease,border-color .22s ease,color .22s ease}
@@ -228,7 +229,6 @@ ul{margin:0;padding:0;list-style:none}
   .hero-title{font-size:clamp(31px,9vw,42px);line-height:1.04;margin-bottom:10px}
   .subtitle{font-size:15px;line-height:1.45;margin-bottom:8px}
   .price{font-size:clamp(24px,7vw,30px);line-height:1.1;margin-bottom:8px}
-  .price-soft{font-size:13px}
 
   .section-card,.cta-box{margin-top:20px;padding:22px;border-radius:22px}
   .section-card h2,.cta-box h2{font-size:clamp(25px,7vw,32px);line-height:1.12;margin-bottom:18px;padding-bottom:10px}
@@ -640,17 +640,6 @@ function smartBlocks(item){
     item.lastUnits
   ]);
 
-  add('Status i deweloper', [
-    item.developer ? 'Developer: ' + item.developer : '',
-    item.completionStatus || item.constructionStatus || item.status ? 'Status: ' + (item.completionStatus || item.constructionStatus || item.status) : '',
-    item.constructionProgress ? 'Construction progress: ' + item.constructionProgress : '',
-    item.energyCertificate ? 'Energy certificate: ' + item.energyCertificate : '',
-    item.parking ? t('type') + ' parking: ' + item.parking : '',
-    item.storage ? 'Storage: ' + item.storage : '',
-    item.orientation ? 'Orientation: ' + item.orientation : '',
-    item.views ? 'Views: ' + item.views : ''
-  ]);
-
   return blocks;
 }
 
@@ -821,7 +810,7 @@ function renderProperty(item){
       + (data.p2 ? '<span class="luxury-price-arrow">→</span><span class="luxury-price-pill"><span class="luxury-price-label">' + (currentLang === 'ru' ? 'до' : currentLang === 'en' ? 'to' : currentLang === 'es' ? 'hasta' : 'do') + '</span><span class="luxury-price-value">' + esc(data.p2) + '</span></span>' : '')
       + '</div><span class="hero-price-note luxury-price-note" style="margin-top:-2px;display:block;">' + esc(translatePriceLine(data.price)) + '</span><span class="hero-price-meta">' + esc(data.meta) + '</span></div>'
       + '</div></div><div class="gallery-grid">' + gallery + '</div></section>'
-      + '<div class="content"><h1 class="hero-title">' + esc(data.title) + '</h1><div class="subtitle">' + esc(data.meta) + '</div><div class="price">' + esc(priceMain) + '</div><div class="price-soft">Costa Blanca Invest</div><div class="luxury-param-line">' + paramsHtml + '</div></div>'
+      + '<div class="content"><h1 class="hero-title">' + esc(data.title) + '</h1><div class="subtitle">' + esc(data.meta) + '</div><div class="price">' + esc(priceMain) + '</div><div class="luxury-param-line">' + paramsHtml + '</div></div>'
       + ((technicalHtml || specHtml) ? '<div class="info-row">' : '')
       + (technicalHtml ? '<section class="section-card"><h2>' + esc(t('keyInfo')) + '</h2><ul>' + technicalHtml + '</ul></section>' : '')
       + (specHtml ? '<section class="section-card"><h2>' + esc(data.ui.spec_title) + '</h2><ul>' + specHtml + '</ul></section>' : '')
@@ -830,8 +819,8 @@ function renderProperty(item){
       + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div></section>' : '')
       + (documentsHtml ? '<section class="section-card"><h2>' + esc(t('documents')) + '</h2><div class="documents-list">' + documentsHtml + '</div></section>' : '')
       + '<section class="section-card"><h2>' + esc(t('related')) + '</h2><div class="related-grid">' + relatedHtml + '</div></section>'
-      + '<section class="seo-article" style="margin-top:34px"><h2 style="margin-bottom:18px;color:var(--primary);font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.03em">' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
-      + '<section class="cta-box contact-box" id="contact"><h2>' + esc(data.ui.contact_title) + '</h2><p>' + esc(data.ui.contact_intro) + '</p><div class="representative-card"><div><h3 class="representative-name">Olga Chernyshenko</h3><div class="representative-role">Costa Blanca Invest</div><p class="representative-meta">' + esc(t('representativeMeta')) + '</p></div><img class="representative-avatar" src="' + abs(AGENT_AVATAR) + '" alt="Olga Chernyshenko" loading="lazy" decoding="async"></div><div class="cta-actions"><a class="btn btn-main" href="tel:' + CONTACT.phone + '">' + esc(data.ui.call_btn) + '</a><a class="btn btn-light" href="https://wa.me/' + CONTACT.whatsapp + '?text=' + waText + '" target="_blank" rel="noopener noreferrer">' + esc(data.ui.wa_btn) + '</a></div><form class="contact-form"><div class="contact-form-grid"><input name="name" placeholder="' + esc(data.ui.form_name) + '"><input name="phone" placeholder="' + esc(data.ui.form_phone) + '"></div><input name="email" placeholder="' + esc(data.ui.form_email) + '"><textarea name="message" placeholder="' + esc(data.ui.form_message) + '">' + esc(data.title) + '</textarea><button class="btn btn-main" type="submit">' + esc(data.ui.form_submit) + '</button></form></section>'
+      + '<section class="seo-article"><h2>' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
+      + '<section class="cta-box contact-box" id="contact"><h2>' + esc(data.ui.contact_title) + '</h2><p>' + esc(data.ui.contact_intro) + '</p><div class="representative-card"><div><h3 class="representative-name">Olga Chernyshenko</h3><p class="representative-meta">' + esc(t('representativeMeta')) + '</p></div><img class="representative-avatar" src="' + abs(AGENT_AVATAR) + '" alt="Olga Chernyshenko" loading="lazy" decoding="async"></div><div class="cta-actions"><a class="btn btn-main" href="tel:' + CONTACT.phone + '">' + esc(data.ui.call_btn) + '</a><a class="btn btn-light" href="https://wa.me/' + CONTACT.whatsapp + '?text=' + waText + '" target="_blank" rel="noopener noreferrer">' + esc(data.ui.wa_btn) + '</a></div><form class="contact-form"><div class="contact-form-grid"><input name="name" placeholder="' + esc(data.ui.form_name) + '"><input name="phone" placeholder="' + esc(data.ui.form_phone) + '"></div><input name="email" placeholder="' + esc(data.ui.form_email) + '"><textarea name="message" placeholder="' + esc(data.ui.form_message) + '">' + esc(data.title) + '</textarea><button class="btn btn-main" type="submit">' + esc(data.ui.form_submit) + '</button></form></section>'
       + '<div class="share-block" data-share-url="' + esc(data.shareUrl) + '"><button class="share-icon-btn" type="button" id="sharePropertyBtn" aria-label="' + esc(data.ui.copy_plain) + '" title="' + esc(data.ui.copy_plain) + '">🔗</button><div class="share-preview" id="sharePreviewBox" aria-hidden="true"><img src="' + esc(data.shareImage) + '" alt="' + esc(data.title) + '" loading="lazy" decoding="async" onerror="this.src=\'' + esc(data.image) + '\'"><div><div class="share-preview-title">' + esc(data.title) + '</div><div class="share-preview-price">' + esc(data.title) + ' · ' + esc(translatePriceLine(String(data.price).split('·')[0].trim())) + '</div><div class="share-preview-actions"><button class="share-mini-btn" type="button" id="copyPreviewLink" data-copy-url="' + esc(data.shareUrl) + '">' + esc(data.ui.copy_plain) + '</button></div></div></div></div>';
 
     function copyShareUrl(url, btn){
@@ -928,7 +917,6 @@ function renderSchema(data){
         description:cleanMetaText(data.seoDescription || data.desc, 300),
         image:data.images,
         url:getPageUrl(data),
-        brand:{'@type':'Brand',name:'Costa Blanca Invest'},
         offers:{'@type':'Offer',priceCurrency:'EUR',availability:'https://schema.org/InStock',url:getPageUrl(data)}
       }
     ]
