@@ -8,6 +8,7 @@
   <meta name="description" content="Szczegóły oferty nieruchomości Costa Blanca Invest.">
   <link rel="canonical" id="canonicalLink" href="">
   <link rel="image_src" id="imageSrcLink" href="">
+  <link rel="preload" id="heroPreload" as="image" href="">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#0f6f85">
@@ -66,17 +67,16 @@ ul{margin:0;padding:0;list-style:none}
 .lang-switcher{display:flex;gap:8px;align-items:center}
 .lang-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(217,181,109,.28);background:#fff;color:var(--gold-dark);font-size:11px;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.04);transition:background .22s ease,box-shadow .22s ease,transform .22s ease,border-color .22s ease,color .22s ease}
 .lang-btn.active{background:var(--gold);color:#fff}
-.hero-card,.section-card,.cta-box{border-radius:var(--radius);background:var(--surface);border:1px solid rgba(217,181,109,.14);box-shadow:0 8px 22px rgba(15,23,42,.05);overflow:hidden}
-.hero-card{padding:16px}
-.section-card,.cta-box{margin-top:28px;padding:34px}
+.hero-card,.section-card,.cta-box{border-radius:var(--radius);background:transparent!important;border:none!important;box-shadow:none!important;overflow:hidden}
+.hero-card{padding:0;background:transparent!important;border:none!important;box-shadow:none!important}
+.section-card,.cta-box{margin-top:28px;padding:34px;background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:none!important;box-shadow:none!important}
 .info-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:28px}
 .info-row .section-card{margin-top:0;height:100%}
-.hero-media{position:relative;min-height:640px;border-radius:24px;overflow:hidden;background:#e7edf1;cursor:zoom-in}
+.hero-media{position:relative;min-height:640px;border-radius:24px;overflow:hidden;background:transparent;cursor:zoom-in}
 .hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,14,20,.05),rgba(8,14,20,.52));pointer-events:none}
 .hero-media img{width:100%;height:100%;min-height:640px;object-fit:cover}
 .hero-overlay{position:absolute;z-index:2;left:24px;right:24px;bottom:42px;display:flex;justify-content:space-between;align-items:flex-end;gap:22px;flex-wrap:wrap}
 .hero-copy{max-width:760px;color:#fff;padding-bottom:18px}
-.hero-kicker{display:inline-flex;margin-bottom:10px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.86);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
 .hero-display{max-width:12ch;margin-bottom:12px;color:#fff;font-size:clamp(38px,5.4vw,76px);font-weight:900;line-height:.95;letter-spacing:-.05em;text-shadow:0 16px 34px rgba(0,0,0,.25)}
 .hero-sub{max-width:620px;color:rgba(255,255,255,.92);font-size:15px;text-shadow:0 8px 20px rgba(0,0,0,.28)}
 .hero-price-box{width:max-content;max-width:100%;color:#fff;text-align:left;padding-bottom:14px}
@@ -89,9 +89,9 @@ ul{margin:0;padding:0;list-style:none}
 .hero-price-note,.hero-price-meta{display:block;color:rgba(255,255,255,.94);font-size:13px;line-height:1.25;text-shadow:0 8px 20px rgba(0,0,0,.28);position:relative;z-index:3}
 .hero-price-meta{margin-top:10px;font-size:12px;padding-bottom:8px}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
-.gallery-item{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:24px;background:#edf1f4;cursor:zoom-in}
+.gallery-item{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:24px;background:transparent;cursor:zoom-in}
 .gallery-item img{width:100%;height:100%;object-fit:cover}
-.content{margin-top:34px;text-align:center}
+.content{margin-top:34px;text-align:center;background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important}
 .hero-title{max-width:980px;margin:0 auto 12px;color:var(--primary);font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.04em;overflow-wrap:anywhere}
 .subtitle{margin-bottom:10px;color:var(--text-soft);font-size:18px}
 .price{margin-bottom:10px;color:var(--gold-dark);font-size:clamp(26px,3.6vw,36px);font-weight:900;letter-spacing:-.03em}
@@ -116,9 +116,9 @@ ul{margin:0;padding:0;list-style:none}
 .floorplan-item img{width:100%;height:280px;object-fit:contain;background:#f8f6f1}
 .documents-list{display:grid;gap:10px}
 .document-link{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;padding:0 14px;border-radius:16px;border:1px solid rgba(31,111,133,.10);background:#fff;color:var(--primary);font-size:13px;font-weight:900}
-.contact-box{text-align:center;background:#fff}
+.contact-box{text-align:center;background:transparent!important}
 .contact-box p{color:var(--text-soft);margin-bottom:20px}
-.representative-card{display:grid;grid-template-columns:1fr 120px;gap:24px;align-items:center;max-width:980px;margin:0 auto 24px;padding:22px;border-radius:24px;background:#fff;border:1px solid rgba(217,181,109,.14);text-align:left}
+.representative-card{display:grid;grid-template-columns:1fr 120px;gap:24px;align-items:center;max-width:980px;margin:0 auto 24px;padding:22px;border-radius:24px;background:rgba(255,255,255,.38);border:1px solid rgba(217,181,109,.14);text-align:left}
 .representative-avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;justify-self:end;border:3px solid rgba(243,199,123,.26)}
 .representative-name{margin:0 0 4px;color:var(--primary);font-size:24px;font-weight:900;line-height:1.08}
 .representative-role{margin-bottom:6px;color:var(--gold-dark);font-size:15px;font-weight:800}
@@ -203,18 +203,18 @@ ul{margin:0;padding:0;list-style:none}
   .lang-btn{width:32px;height:32px;font-size:10px}
 
   .hero-card{padding:10px;border-radius:22px}
-  .hero-media{min-height:0;height:auto;border-radius:20px;display:flex;flex-direction:column;background:#fff;cursor:default}
+  .hero-media{min-height:0;height:auto;border-radius:20px;display:flex;flex-direction:column;background:transparent!important;cursor:default}
   .hero-media::before{display:none}
   .hero-media img{width:100%;height:auto;min-height:0;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
   .hero-overlay{position:static;display:grid;grid-template-columns:1fr;gap:16px;padding:18px 4px 2px;color:var(--text)}
   .hero-copy{max-width:none;color:var(--text);text-align:left}
-  .hero-kicker{margin-bottom:8px;background:rgba(217,181,109,.12);border:1px solid rgba(217,181,109,.20);color:var(--gold-dark);font-size:10px;text-shadow:none}
+  
   .hero-display{max-width:none;margin-bottom:10px;color:var(--primary);font-size:clamp(32px,9vw,46px);line-height:1.02;text-shadow:none;letter-spacing:-.045em}
   .hero-sub{max-width:none;color:var(--text-soft);font-size:14px;line-height:1.55;text-shadow:none}
   .hero-price-box{width:100%;color:var(--primary);padding:0;text-align:left}
   .hero-price-box small{color:var(--muted);text-shadow:none;margin-bottom:8px}
   .hero-price-range{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:8px}
-  .luxury-price-pill{width:100%;background:#fff;border:1px solid rgba(217,181,109,.22);color:var(--gold-dark);padding:12px 14px;border-radius:18px}
+  .luxury-price-pill{width:100%;background:transparent!important;border:1px solid rgba(217,181,109,.22);color:var(--gold-dark);padding:12px 14px;border-radius:18px}
   .luxury-price-label{color:var(--muted);font-size:9px}
   .luxury-price-value{font-size:clamp(28px,9vw,38px);line-height:1;color:var(--gold-dark);text-shadow:none;white-space:normal;overflow-wrap:anywhere}
   .luxury-price-arrow{display:none}
@@ -253,12 +253,6 @@ ul{margin:0;padding:0;list-style:none}
   .share-block{margin-top:16px}
   .share-preview.open{grid-template-columns:96px 1fr;gap:12px}
   .share-preview img{width:96px;height:82px}
-}
-
-@media(max-width:640px){
-  .hero-overlay{bottom:74px!important}
-  .hero-price-meta{font-size:11px;line-height:1.45;max-width:92%;word-break:break-word}
-  .hero-price-note{margin-top:6px!important}
 }
 
 @media(max-width:520px){
@@ -433,8 +427,21 @@ function getImages(item){
 function getImage(item){ return getImages(item)[0]; }
 function getShareSlug(item){ return String(item.shareSlug || item.slug || requestedSlug).toLowerCase().replaceAll(' ','-'); }
 function getShareUrl(item){ return SITE_ORIGIN + '/pl/new-developments/share/' + getShareSlug(item) + '.html'; }
-function getShareImageUrl(item){ return getImage(item); }
+function getShareImageUrl(item){ return SITE_ORIGIN + '/pl/new-developments/share-images/' + getShareSlug(item) + '.jpg'; }
 function getFromLabel(){ return currentLang === 'ru' ? 'от' : currentLang === 'en' ? 'from' : currentLang === 'es' ? 'desde' : 'od'; }
+function getPageUrl(data){
+  return SITE_ORIGIN + '/pl/new-developments/xml-catalog/?slug=' + encodeURIComponent(data.slug) + (currentLang === 'pl' ? '' : '&lang=' + encodeURIComponent(currentLang));
+}
+function cleanMetaText(text, max){
+  const limit = max || 160;
+  let clean = String(text || '').trim();
+  while(clean.indexOf('  ') !== -1){ clean = clean.replaceAll('  ',' '); }
+  if(clean.length <= limit) return clean;
+  return clean.slice(0, limit - 1).trim() + '…';
+}
+function imageAltText(title, index){
+  return index === 0 ? title + ' — Costa Blanca property' : title + ' — property photo ' + (index + 1);
+}
 function splitPrice(price){
   const clean = String(price || '').split('·')[0].trim();
   const parts = clean.split('–').map(x => x.trim()).filter(Boolean);
@@ -481,8 +488,19 @@ function uniqueClean(list){
     });
 }
 
+function translateAmenity(value){
+  let text=String(value||'').trim();
+  const dict={
+    ru:{'New Build':'Новостройка','Investment':'Инвестиция','Beach':'Пляж','Pool':'Бассейн','Basen':'Бассейн','Winda':'Лифт','Gym':'Тренажёрный зал','Siłownia':'Тренажёрный зал','Garden':'Сад','Ogród':'Сад','Green areas':'Зелёные зоны','Zielone strefy':'Зелёные зоны','Parking':'Паркинг','Szeroki parking':'Просторный паркинг'},
+    en:{'Basen':'Pool','Winda':'Lift','Siłownia':'Gym','Zielone strefy':'Green areas','Ogród':'Garden','Basen wspólny':'Communal pool','Szeroki parking':'Spacious parking'},
+    es:{'New Build':'Obra nueva','Investment':'Inversión','Beach':'Playa','Pool':'Piscina','Basen':'Piscina','Winda':'Ascensor','Gym':'Gimnasio','Siłownia':'Gimnasio','Garden':'Jardín','Ogród':'Jardín','Green areas':'Zonas verdes','Zielone strefy':'Zonas verdes','Basen wspólny':'Piscina comunitaria','Szeroki parking':'Parking amplio'}
+  };
+  const map=dict[currentLang]||{};
+  return map[text] || text;
+}
+
 function getFeatureItems(item){
-  return uniqueClean([...(item.amenities || []), ...(item.features || []), ...(item.badges || []), ...(item.metainmoVerified?.amenities || [])]);
+  return uniqueClean([...(item.amenities || []), ...(item.features || []), ...(item.badges || []), ...(item.metainmoVerified?.amenities || [])]).map(translateAmenity);
 }
 
 function translateParamLabel(label){
@@ -609,7 +627,7 @@ function buildData(item){
   if(currentLang === 'es'){
     translatedMeta = translatedMeta
       .replace(/koło/gi,'cerca de');
-  };
+  }
   const price = x.price_range || x.price || item.price || item.pricing?.priceText || '';
   const desc = translateHeroDescription(x.hero_subtext || x.desc || item.desc || item.seoDescription || '', title, translatedMeta);
   const images = getImages(item);
@@ -649,11 +667,12 @@ function applyMeta(data){
   document.documentElement.lang = currentLang;
   const og = document.querySelector('meta[property="og:locale"]');
   if(og) og.setAttribute('content', ogLocale());
-  const desc = data.seoDescription || data.desc || data.price || data.meta || 'Costa Blanca Invest';
+  const desc = cleanMetaText(data.seoDescription || data.desc || data.price || data.meta || 'Costa Blanca Invest', 160);
   const image = data.shareImage || data.image;
   const url = data.shareUrl;
   const set = (selector,value) => { const el = document.querySelector(selector); if(el) el.setAttribute('content',value); };
-  const link = document.getElementById('canonicalLink'); if(link) link.href = url;
+  const link = document.getElementById('canonicalLink'); if(link) link.href = getPageUrl(data);
+  const preload = document.getElementById('heroPreload'); if(preload) preload.href = data.image;
   const imageLink = document.getElementById('imageSrcLink'); if(imageLink) imageLink.href = image;
   set('meta[name="description"]',desc);
   set('meta[property="og:title"]',data.title);
@@ -672,9 +691,10 @@ function renderProperty(item){
   try{
     const data = buildData(item);
     applyMeta(data);
+    renderSchema(data);
 
     const gallery = data.images.map(function(src,index){
-      return '<div class="gallery-item" data-media-src="' + esc(src) + '"><img src="' + esc(src) + '" alt="' + esc(data.title) + ' ' + (index + 1) + '" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>';
+      return '<div class="gallery-item" data-media-src="' + esc(src) + '"><img src="' + esc(src) + '" alt="' + esc(imageAltText(data.title,index)) + '" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>';
     }).join('');
 
     const paramsHtml = data.paramEntries.map(function(pair,index){
@@ -712,14 +732,14 @@ function renderProperty(item){
       return '<a class="related-card" href="/pl/new-developments/xml-catalog/?slug=' + esc(rel.slug) + (currentLang === 'pl' ? '' : '&lang=' + esc(currentLang)) + '"><img src="' + esc(relData.image) + '" alt="' + esc(relData.title) + '" loading="lazy"><div class="related-body"><div class="related-chip">Costa Blanca</div><h3 class="related-title">' + esc(relData.title) + '</h3><p class="related-meta">' + esc(relData.meta) + '</p></div></a>';
     }).join('');
 
-    const waText = encodeURIComponent(['🏡 ' + data.title,'💰 ' + data.price,'🔗 ' + data.shareUrl].join(String.fromCharCode(10)));
+    const waText = encodeURIComponent(['🏡 ' + data.title,'💰 ' + translatePriceLine(data.price),'🔗 ' + data.shareUrl].join(String.fromCharCode(10)));
     const priceMain = translatePriceLine(String(data.price || '').split('·')[0].trim());
 
     templateApp.className = '';
     templateApp.innerHTML = ''
       + '<section class="hero-card">'
       + '<div class="hero-media" data-media-src="' + esc(data.image) + '">'
-      + '<img id="heroImage" src="' + esc(data.image) + '" alt="' + esc(data.title) + '" fetchpriority="high" loading="eager" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)">'
+      + '<img id="heroImage" src="' + esc(data.image) + '" alt="' + esc(imageAltText(data.title,0)) + '" fetchpriority="high" loading="eager" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)">'
       + '<div class="hero-overlay">'
       + '<div class="hero-copy"><div class="hero-display">' + esc(data.title) + '</div><p class="hero-sub">' + esc(data.desc) + '</p></div>'
       + '<div class="hero-price-box luxury-price-card"><small>' + esc(data.ui.price_box_title) + '</small><div class="hero-price-range luxury-price-range"><span class="luxury-price-pill"><span class="luxury-price-label">' + getFromLabel() + '</span><span class="luxury-price-value">' + esc(data.p1 || data.price) + '</span></span>'
@@ -727,7 +747,6 @@ function renderProperty(item){
       + '</div><span class="hero-price-note luxury-price-note" style="margin-top:-2px;display:block;">' + esc(translatePriceLine(data.price)) + '</span><span class="hero-price-meta">' + esc(data.meta) + '</span></div>'
       + '</div></div><div class="gallery-grid">' + gallery + '</div></section>'
       + '<div class="content"><h1 class="hero-title">' + esc(data.title) + '</h1><div class="subtitle">' + esc(data.meta) + '</div><div class="price">' + esc(priceMain) + '</div><div class="price-soft">Costa Blanca Invest</div><div class="luxury-param-line">' + paramsHtml + '</div></div>'
-      + '<section class="section-card seo-article"><h2>' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
       + ((technicalHtml || specHtml) ? '<div class="info-row">' : '')
       + (technicalHtml ? '<section class="section-card"><h2>' + esc(t('keyInfo')) + '</h2><ul>' + technicalHtml + '</ul></section>' : '')
       + (specHtml ? '<section class="section-card"><h2>' + esc(data.ui.spec_title) + '</h2><ul>' + specHtml + '</ul></section>' : '')
@@ -735,8 +754,9 @@ function renderProperty(item){
       + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div></section>' : '')
       + (documentsHtml ? '<section class="section-card"><h2>' + esc(t('documents')) + '</h2><div class="documents-list">' + documentsHtml + '</div></section>' : '')
       + '<section class="section-card"><h2>' + esc(t('related')) + '</h2><div class="related-grid">' + relatedHtml + '</div></section>'
+      + '<section class="seo-article" style="margin-top:34px"><h2 style="margin-bottom:18px;color:var(--primary);font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.03em">' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
       + '<section class="cta-box contact-box" id="contact"><h2>' + esc(data.ui.contact_title) + '</h2><p>' + esc(data.ui.contact_intro) + '</p><div class="representative-card"><div><h3 class="representative-name">Olga Chernyshenko</h3><div class="representative-role">Costa Blanca Invest</div><p class="representative-meta">' + esc(t('representativeMeta')) + '</p></div><img class="representative-avatar" src="' + abs(AGENT_AVATAR) + '" alt="Olga Chernyshenko" loading="lazy" decoding="async"></div><div class="cta-actions"><a class="btn btn-main" href="tel:' + CONTACT.phone + '">' + esc(data.ui.call_btn) + '</a><a class="btn btn-light" href="https://wa.me/' + CONTACT.whatsapp + '?text=' + waText + '" target="_blank" rel="noopener noreferrer">' + esc(data.ui.wa_btn) + '</a></div><form class="contact-form"><div class="contact-form-grid"><input name="name" placeholder="' + esc(data.ui.form_name) + '"><input name="phone" placeholder="' + esc(data.ui.form_phone) + '"></div><input name="email" placeholder="' + esc(data.ui.form_email) + '"><textarea name="message" placeholder="' + esc(data.ui.form_message) + '">' + esc(data.title) + '</textarea><button class="btn btn-main" type="submit">' + esc(data.ui.form_submit) + '</button></form></section>'
-      + '<div class="share-block" data-share-url="' + esc(data.shareUrl) + '"><button class="share-icon-btn" type="button" id="sharePropertyBtn" aria-label="' + esc(data.ui.copy_plain) + '" title="' + esc(data.ui.copy_plain) + '">🔗</button><div class="share-preview" id="sharePreviewBox" aria-hidden="true"><img src="' + esc(data.shareImage || data.image) + '" alt="' + esc(data.title) + '" loading="lazy" decoding="async" onerror="this.src=\'' + esc(data.image) + '\'"><div><div class="share-preview-title">' + esc(data.title) + '</div><div class="share-preview-price">' + esc(data.title) + ' · ' + esc(translatePriceLine(String(data.price).split('·')[0].trim())) + '</div><div class="share-preview-actions"><button class="share-mini-btn" type="button" id="copyPreviewLink" data-copy-url="' + esc(data.shareUrl) + '">' + esc(data.ui.copy_plain) + '</button></div></div></div></div>';
+      + '<div class="share-block" data-share-url="' + esc(data.shareUrl) + '"><button class="share-icon-btn" type="button" id="sharePropertyBtn" aria-label="' + esc(data.ui.copy_plain) + '" title="' + esc(data.ui.copy_plain) + '">🔗</button><div class="share-preview" id="sharePreviewBox" aria-hidden="true"><img src="' + esc(data.shareImage) + '" alt="' + esc(data.title) + '" loading="lazy" decoding="async" onerror="this.src=\'' + esc(data.image) + '\'"><div><div class="share-preview-title">' + esc(data.title) + '</div><div class="share-preview-price">' + esc(data.title) + ' · ' + esc(translatePriceLine(String(data.price).split('·')[0].trim())) + '</div><div class="share-preview-actions"><button class="share-mini-btn" type="button" id="copyPreviewLink" data-copy-url="' + esc(data.shareUrl) + '">' + esc(data.ui.copy_plain) + '</button></div></div></div></div>';
 
     function copyShareUrl(url, btn){
   const original = btn ? (btn.dataset.originalText || btn.textContent || data.ui.copy_plain) : data.ui.copy_plain;
@@ -779,6 +799,10 @@ function fallbackCopy(url, done){
   document.body.removeChild(input);
 }
 
+document.querySelectorAll('[data-media-src]').forEach(function(el){
+  el.addEventListener('click',function(){ openMediaLightbox(el.dataset.mediaSrc); });
+});
+
 const shareIcon = document.getElementById('sharePropertyBtn');
 const shareBox = document.getElementById('sharePreviewBox');
 const copyBtn = document.getElementById('copyPreviewLink');
@@ -802,6 +826,41 @@ copyBtn?.addEventListener('click', function(event){
     templateApp.innerHTML = '<h1>Błąd ładowania oferty</h1><p>' + esc(error.message || error) + '</p>';
   }
 }
+function renderSchema(data){
+  const schema = {
+    '@context':'https://schema.org',
+    '@graph':[
+      {
+        '@type':'Organization',
+        '@id':SITE_ORIGIN + '/#organization',
+        name:'Costa Blanca Invest',
+        url:SITE_ORIGIN,
+        email:CONTACT.email,
+        telephone:CONTACT.phone
+      },
+      {
+        '@type':'BreadcrumbList',
+        itemListElement:[
+          {'@type':'ListItem',position:1,name:'Costa Blanca Invest',item:SITE_ORIGIN + '/'},
+          {'@type':'ListItem',position:2,name:'New developments',item:SITE_ORIGIN + '/pl/new-developments/'},
+          {'@type':'ListItem',position:3,name:data.title,item:getPageUrl(data)}
+        ]
+      },
+      {
+        '@type':'Product',
+        name:data.title,
+        description:cleanMetaText(data.seoDescription || data.desc, 300),
+        image:data.images,
+        url:getPageUrl(data),
+        brand:{'@type':'Brand',name:'Costa Blanca Invest'},
+        offers:{'@type':'Offer',priceCurrency:'EUR',availability:'https://schema.org/InStock',url:getPageUrl(data)}
+      }
+    ]
+  };
+  const node=document.getElementById('schemaJson');
+  if(node) node.textContent=JSON.stringify(schema);
+}
+
 function renderNotFound(){ templateApp.className = 'not-found'; templateApp.innerHTML = '<h1>Nie znaleziono oferty</h1><p>slug: ' + esc(requestedSlug) + '</p>'; }
 async function fetchJsonFrom(url){ const response = await fetch(url,{cache:'no-store'}); if(!response.ok) throw new Error(url); const data = await response.json(); if(!Array.isArray(data)) throw new Error(url); return data; }
 async function loadProjects(){
@@ -818,6 +877,28 @@ async function loadProjects(){
   if(fallback) renderProperty(fallback); else renderNotFound();
 }
 window.handleBrokenImage = function(img){ if(img.dataset.fallbackApplied === 'true') return; img.dataset.fallbackApplied = 'true'; img.src = abs(FALLBACK_IMAGE); };
+
+function openMediaLightbox(src){
+  const box=document.getElementById('mediaLightbox');
+  const content=document.getElementById('mediaLightboxContent');
+  if(!box || !content || !src) return;
+  content.innerHTML='<img src="' + esc(src) + '" alt="Preview">';
+  box.classList.add('open');
+  box.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeMediaLightbox(){
+  const box=document.getElementById('mediaLightbox');
+  const content=document.getElementById('mediaLightboxContent');
+  if(!box || !content) return;
+  box.classList.remove('open');
+  box.setAttribute('aria-hidden','true');
+  content.innerHTML='';
+  document.body.style.overflow='';
+}
+document.getElementById('mediaLightboxClose')?.addEventListener('click',closeMediaLightbox);
+document.getElementById('mediaLightbox')?.addEventListener('click',function(event){ if(event.target===event.currentTarget) closeMediaLightbox(); });
+document.addEventListener('keydown',function(event){ if(event.key==='Escape') closeMediaLightbox(); });
 document.getElementById('backLink')?.addEventListener('click', event => { event.preventDefault(); window.location.href = '/pl/new-developments/'; });
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
