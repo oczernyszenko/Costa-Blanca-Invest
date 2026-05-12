@@ -92,6 +92,10 @@ ul{margin:0;padding:0;list-style:none}
 .hero-price-meta{margin-top:10px;font-size:12px;padding-bottom:8px}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
 .gallery-item{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:24px;background:transparent;cursor:zoom-in;border:none!important;box-shadow:none!important}
+.gallery-item.is-hidden{display:none}
+.gallery-more,.plans-more{display:flex;justify-content:center;margin-top:18px}
+.gallery-more-btn,.plans-more-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(217,181,109,.20);background:rgba(255,255,255,.86);color:var(--gold-dark);font-size:13px;font-weight:900;cursor:pointer;box-shadow:0 4px 14px rgba(15,23,42,.03);transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.gallery-more-btn:hover,.plans-more-btn:hover{transform:translateY(-1px);background:#fff;box-shadow:0 8px 20px rgba(15,23,42,.06)}
 .gallery-item img{width:100%;height:100%;object-fit:cover}
 .content{margin-top:34px;text-align:center;background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important}
 .hero-title{max-width:980px;margin:0 auto 12px;color:var(--primary);font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.04em;overflow-wrap:anywhere}
@@ -117,6 +121,10 @@ ul{margin:0;padding:0;list-style:none}
 .related-meta{color:var(--text-soft);font-size:13px;font-weight:600;line-height:1.55}
 .floorplans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .floorplan-item{overflow:hidden;border-radius:22px;background:#fff;border:1px solid rgba(15,23,42,.08)}
+.floorplan-item.is-hidden{display:none}
+.floorplan-link-card{display:flex;align-items:center;justify-content:center;min-height:180px;padding:22px;text-align:center;color:var(--primary);background:rgba(255,255,255,.92)}
+.floorplan-link-card strong{display:block;margin-bottom:8px;font-size:16px;font-weight:900}
+.floorplan-link-card p{color:var(--text-soft);font-size:13px;line-height:1.55}
 .floorplan-item img{width:100%;height:280px;object-fit:contain;background:#f8f6f1}
 .documents-list{display:grid;gap:10px}
 .document-link{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;padding:0 14px;border-radius:16px;border:1px solid rgba(31,111,133,.10);background:#fff;color:var(--primary);font-size:13px;font-weight:900}
@@ -408,7 +416,6 @@ function findProject(projects,slug){
 }
 function getImages(item){
   const raw = [
-    item.shareImage,
     item.ogImage,
     item.mainImage,
     item.image,
@@ -581,13 +588,39 @@ function getTechnicalItems(item, paramsObj, price, meta, delivery){
 }
 
 function getFloorPlans(item){
-  return [
+  const raw = [
     ...(item.galleryOrdered?.floorPlans || []),
+    ...(item.media?.floorPlans || []),
+    ...(item.floorPlansImages || []),
+    ...(item.floorplans || []),
     ...(item.floorPlans || []),
     ...(item.floor_plans || []),
     ...(item.plans || []),
     ...(item.layouts || [])
-  ].filter(Boolean);
+  ];
+
+  const seen = new Set();
+  return raw.map(function(plan,index){
+    if(!plan) return null;
+    if(typeof plan === 'string'){
+      return {title:t('plan') + ' ' + (index + 1), src:plan};
+    }
+    if(typeof plan === 'object'){
+      const src = plan.src || plan.url || plan.href || plan.image || plan.file || plan.path || '';
+      if(!src) return null;
+      return {
+        title:plan.title || plan.name || plan.label || t('plan') + ' ' + (index + 1),
+        src:src,
+        type:plan.type || ''
+      };
+    }
+    return null;
+  }).filter(Boolean).filter(function(plan){
+    const key = normalize(plan.src);
+    if(seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function getDocuments(item){
@@ -662,9 +695,9 @@ Desde el punto de vista de inversión, ${title} se puede analizar por su ubicaci
   if(currentLang === 'ru') return `${title} — тщательно подобранная недвижимость в Испании для тех, кто ищет сочетание стиля жизни, комфорта и разумного инвестиционного потенциала. ${meta ? 'Локация: ' + meta + '.' : ''} ${basePrice ? 'Цена: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Спальни: ' + paramsObj.Sypialnie + '.' : ''} ${paramsObj['Łazienki'] ? 'Ванные: ' + paramsObj['Łazienki'] + '.' : ''} ${delivery ? 'Сдача: ' + delivery + '.' : ''} ${amenities ? 'Преимущества проекта: ' + amenities + '.' : ''}
 
 С инвестиционной точки зрения ${title} стоит анализировать через локацию ${meta || ''}, бюджет ${basePrice || ''}, визуальную привлекательность и возможность использования как second home, аренду для отдыха или долгосрочное сохранение стоимости.`;
-  return `${title} to starannie wybrana nieruchomość w Hiszpanii dla osób, które szukają połączenia stylu życia, komfortu i rozsądnego potencjału inwestycyjnego. ${meta ? 'Lokalizacja: ' + meta + '.' : ''} ${basePrice ? 'Cena: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Sypialnie: ' + paramsObj.Sypialnie + '.' : ''} ${paramsObj['Łazienki'] ? 'Łazienki: ' + paramsObj['Łazienki'] + '.' : ''} ${delivery ? 'Termin/rok: ' + delivery + '.' : ''} ${amenities ? 'Atuty projektu: ' + amenities + '.' : ''}
+  return `${title} znajduje się w lokalizacji ${meta || 'Costa Blanca'} i reprezentuje nowoczesny styl nieruchomości premium w Hiszpanii. ${basePrice ? 'Zakres cenowy: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Układy: ' + paramsObj.Sypialnie + ' sypialnie.' : ''} ${delivery ? 'Planowany termin oddania: ' + delivery + '.' : ''} ${amenities ? 'Projekt oferuje: ' + amenities + '.' : ''}
 
-Inwestycyjnie ${title} warto analizować przez pryzmat lokalizacji ${meta || ''}, budżetu ${basePrice || ''}, atrakcyjności wizualnej oraz możliwości wykorzystania jako second home, wynajem wakacyjny lub długoterminowe utrzymanie wartości.`;
+Inwestycja sprawdzi się zarówno jako second home na Costa Blanca, jak i nieruchomość pod wynajem wakacyjny lub długoterminowe utrzymanie wartości.`;
 }
 
 function buildData(item){
@@ -707,7 +740,26 @@ function buildData(item){
   const [p1,p2] = splitPrice(price);
   const seoArticle = buildSeoArticle(title, translatedMeta, price, paramsObj, delivery, item).trim();
 
-const leads = [seoArticle].filter(Boolean);
+const leadPool = [
+    desc,
+    x.premiumDescription,
+    item.premiumUniqueDescriptionPl,
+    item.premiumUniqueDescription,
+    item.contentEnhanced?.premiumDescription,
+    seoArticle
+  ].filter(Boolean);
+
+  const leads = [];
+  leadPool.forEach(function(text){
+    const clean = String(text || '').trim();
+    if(!clean) return;
+    const cleanKey = normalize(clean).slice(0,120);
+    const isDuplicate = leads.some(function(existing){
+      const existingKey = normalize(existing).slice(0,120);
+      return existingKey.includes(cleanKey) || cleanKey.includes(existingKey);
+    });
+    if(!isDuplicate) leads.push(clean);
+  });
   const specs = getFeatureItems(item);
   const technicalItems = getTechnicalItems(item, paramsObj, price, translatedMeta, delivery);
   const floorPlans = getFloorPlans(item);
@@ -756,8 +808,10 @@ function renderProperty(item){
     applyMeta(data);
     renderSchema(data);
 
+    const galleryLimit = 4;
+    const galleryHiddenCount = Math.max(0, data.images.length - galleryLimit);
     const gallery = data.images.map(function(src,index){
-      return '<div class="gallery-item" data-media-src="' + esc(src) + '"><img src="' + esc(src) + '" alt="' + esc(imageAltText(data.title,index)) + '" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>';
+      return '<div class="gallery-item' + (index >= galleryLimit ? ' is-hidden' : '') + '" data-gallery-extra="' + (index >= galleryLimit ? '1' : '0') + '" data-media-src="' + esc(src) + '"><img src="' + esc(src) + '" alt="' + esc(imageAltText(data.title,index)) + '" loading="lazy" decoding="async" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>';
     }).join('');
 
     const paramsHtml = data.paramEntries.map(function(pair,index){
@@ -772,11 +826,17 @@ function renderProperty(item){
       return '<li>' + esc(x) + '</li>';
     }).join('');
 
-    const floorPlansHtml = data.floorPlans.map(function(plan,index){
-      const src = typeof plan === 'string' ? plan : (plan.src || plan.url || plan.href || plan.image || plan.file || '');
-      const title = typeof plan === 'string' ? t('plan') + ' ' + (index + 1) : (plan.title || plan.name || plan.label || t('plan') + ' ' + (index + 1));
-      if(!src) return '';
-      return '<a class="floorplan-item" href="' + esc(abs(src)) + '" target="_blank" rel="noopener noreferrer"><img src="' + esc(abs(src)) + '" alt="' + esc(title) + '" loading="lazy" decoding="async"></a>';
+    const plansLimit = 4;
+    const floorPlansVisible = data.floorPlans.filter(function(plan){ return plan && plan.src; });
+    const plansHiddenCount = Math.max(0, floorPlansVisible.length - plansLimit);
+    const floorPlansHtml = floorPlansVisible.map(function(plan,index){
+      const src = plan.src;
+      const title = plan.title || t('plan') + ' ' + (index + 1);
+      const isPdf = String(src).toLowerCase().split('?')[0].endsWith('.pdf');
+      if(isPdf){
+        return '<a class="document-link' + (index >= plansLimit ? ' is-hidden' : '') + '" data-plans-extra="' + (index >= plansLimit ? '1' : '0') + '" href="' + esc(abs(src)) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(title) + '</span><span>PDF</span></a>';
+      }
+      return '<a class="floorplan-item' + (index >= plansLimit ? ' is-hidden' : '') + '" data-plans-extra="' + (index >= plansLimit ? '1' : '0') + '" href="' + esc(abs(src)) + '" target="_blank" rel="noopener noreferrer"><img src="' + esc(abs(src)) + '" alt="' + esc(title) + '" loading="lazy" decoding="async"></a>';
     }).join('');
 
     const documentsHtml = data.documents.map(function(doc,index){
@@ -810,14 +870,14 @@ function renderProperty(item){
       + '<div class="hero-price-box luxury-price-card"><small>' + esc(data.ui.price_box_title) + '</small><div class="hero-price-range luxury-price-range"><span class="luxury-price-pill"><span class="luxury-price-label">' + getFromLabel() + '</span><span class="luxury-price-value">' + esc(data.p1 || data.price) + '</span></span>'
       + (data.p2 ? '<span class="luxury-price-arrow">→</span><span class="luxury-price-pill"><span class="luxury-price-label">' + (currentLang === 'ru' ? 'до' : currentLang === 'en' ? 'to' : currentLang === 'es' ? 'hasta' : 'do') + '</span><span class="luxury-price-value">' + esc(data.p2) + '</span></span>' : '')
       + '</div><span class="hero-price-note luxury-price-note" style="margin-top:-2px;display:block;">' + esc(translatePriceLine(data.price)) + '</span><span class="hero-price-meta">' + esc(data.meta) + '</span></div>'
-      + '</div></div><div class="gallery-grid">' + gallery + '</div></section>'
+      + '</div></div><div class="gallery-grid">' + gallery + '</div>' + (galleryHiddenCount ? '<div class="gallery-more"><button class="gallery-more-btn" type="button" id="showMoreGallery">+ ' + galleryHiddenCount + ' więcej zdjęć</button></div>' : '') + '</section>'
       + '<div class="content"><h1 class="hero-title">' + esc(data.title) + '</h1><div class="subtitle">' + esc(data.meta) + '</div><div class="price">' + esc(priceMain) + '</div><div class="luxury-param-line">' + paramsHtml + '</div></div>'
       + ((technicalHtml || specHtml) ? '<div class="info-row">' : '')
       + (technicalHtml ? '<section class="section-card"><h2>' + esc(t('keyInfo')) + '</h2><ul>' + technicalHtml + '</ul></section>' : '')
       + (specHtml ? '<section class="section-card"><h2>' + esc(data.ui.spec_title) + '</h2><ul>' + specHtml + '</ul></section>' : '')
       + ((technicalHtml || specHtml) ? '</div>' : '')
       + smartBlocksHtml
-      + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div></section>' : '')
+      + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div>' + (plansHiddenCount ? '<div class="plans-more"><button class="plans-more-btn" type="button" id="showMorePlans">+ ' + plansHiddenCount + ' więcej planów</button></div>' : '') + '</section>' : '')
       + (documentsHtml ? '<section class="section-card"><h2>' + esc(t('documents')) + '</h2><div class="documents-list">' + documentsHtml + '</div></section>' : '')
       + '<section class="section-card"><h2>' + esc(t('related')) + '</h2><div class="related-grid">' + relatedHtml + '</div></section>'
       + '<section class="seo-article"><h2>' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
@@ -868,6 +928,22 @@ function fallbackCopy(url, done){
 document.querySelectorAll('[data-media-src]').forEach(function(el){
   el.addEventListener('click',function(){ openMediaLightbox(el.dataset.mediaSrc); });
 });
+
+const showMoreGallery = document.getElementById('showMoreGallery');
+if(showMoreGallery){
+  showMoreGallery.addEventListener('click',function(){
+    document.querySelectorAll('[data-gallery-extra="1"]').forEach(function(el){ el.classList.remove('is-hidden'); });
+    showMoreGallery.closest('.gallery-more')?.remove();
+  });
+}
+
+const showMorePlans = document.getElementById('showMorePlans');
+if(showMorePlans){
+  showMorePlans.addEventListener('click',function(){
+    document.querySelectorAll('[data-plans-extra="1"]').forEach(function(el){ el.classList.remove('is-hidden'); });
+    showMorePlans.closest('.plans-more')?.remove();
+  });
+}
 
 const shareIcon = document.getElementById('sharePropertyBtn');
 const shareBox = document.getElementById('sharePreviewBox');
