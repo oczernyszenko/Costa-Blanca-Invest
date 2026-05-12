@@ -327,7 +327,7 @@ Only one primary H1 + one main metadata line kept to avoid duplicate semantic bl
           <button class="lang-btn" type="button" data-lang="ru">RU</button>
         </div>
       </div>
-      <div id="templateApp" class="loading">Ładowanie oferty...</div>
+      <div id="templateApp" class="loading" style="opacity:.65">Costa Blanca Invest</div>
     </div>
   </main>
 
@@ -342,15 +342,7 @@ Only one primary H1 + one main metadata line kept to avoid duplicate semantic bl
 
   <script>
 const PROJECTS_URLS = [
-  '/pl/new-developments/ultimate_properties_master_ultimate_translated_2026-05-12.json',
-  './ultimate_properties_master_ultimate_translated_2026-05-12.json',
-  'ultimate_properties_master_ultimate_translated_2026-05-12.json',
-  '/pl/new-developments/ultimate_properties_master_beautiful_multilang.json',
-  './ultimate_properties_master_beautiful_multilang.json',
-  'ultimate_properties_master_beautiful_multilang.json',
-  '/pl/new-developments/projects.json',
-  './projects.json',
-  'projects.json'
+  '/pl/new-developments/ultimate_properties_master_ultimate_translated_2026-05-12.json'
 ];
 const SITE_ORIGIN = 'https://costa-blanca-invest.com';
 const FALLBACK_IMAGE = '/pl/new-developments/images/new-developments-costa-blanca.jpg';
@@ -429,8 +421,6 @@ function normalizeImageKey(src){
     .trim()
     .split('?')[0]
     .replace(/^https?:\/\//i,'')
-    .replace(/\/conversions\//i,'/')
-    .replace(/-(preview|medium|large|small)(?=\.(jpg|jpeg|png|webp)$)/i,'')
     .toLowerCase();
 }
 
@@ -791,13 +781,8 @@ function buildData(item){
   const seoArticle = buildSeoArticle(title, translatedMeta, price, paramsObj, delivery, item).trim();
 
 const leadPool = [
-    desc,
-    x.premiumDescription,
-    item.premiumUniqueDescriptionPl,
-    item.premiumUniqueDescription,
-    item.contentEnhanced?.premiumDescription,
-    seoArticle
-  ].filter(Boolean);
+  seoArticle || desc || x.premiumDescription || item.premiumUniqueDescription
+].filter(Boolean);
 
   const leads = [];
   leadPool.forEach(function(text){
@@ -1053,7 +1038,13 @@ function renderSchema(data){
 }
 
 function renderNotFound(){ templateApp.className = 'not-found'; templateApp.innerHTML = '<h1>Nie znaleziono oferty</h1><p>slug: ' + esc(requestedSlug) + '</p>'; }
-async function fetchJsonFrom(url){ const response = await fetch(url,{cache:'no-store'}); if(!response.ok) throw new Error(url); const data = await response.json(); if(!Array.isArray(data)) throw new Error(url); return data; }
+async function fetchJsonFrom(url){
+  const response = await fetch(url,{cache:'force-cache'});
+  if(!response.ok) throw new Error(url);
+  const data = await response.json();
+  if(!Array.isArray(data)) throw new Error(url);
+  return data;
+}
 async function loadProjects(){
   for(const url of PROJECTS_URLS){
     try{
