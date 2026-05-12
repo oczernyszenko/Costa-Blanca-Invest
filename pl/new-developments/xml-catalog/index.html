@@ -342,7 +342,18 @@ Only one primary H1 + one main metadata line kept to avoid duplicate semantic bl
 
   <script>
 const PROJECTS_URLS = [
-  '/pl/new-developments/ultimate_properties_master_ultimate_translated_2026-05-12.json'
+  '/pl/new-developments/ultimate_properties_master_ultimate_clean_2026-05-12.json',
+  './ultimate_properties_master_ultimate_clean_2026-05-12.json',
+  'ultimate_properties_master_ultimate_clean_2026-05-12.json',
+  '/pl/new-developments/ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  './ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  'ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  '/pl/new-developments/ultimate_properties_master_beautiful_multilang.json',
+  './ultimate_properties_master_beautiful_multilang.json',
+  'ultimate_properties_master_beautiful_multilang.json',
+  '/pl/new-developments/projects.json',
+  './projects.json',
+  'projects.json'
 ];
 const SITE_ORIGIN = 'https://costa-blanca-invest.com';
 const FALLBACK_IMAGE = '/pl/new-developments/images/new-developments-costa-blanca.jpg';
@@ -411,7 +422,41 @@ function abs(path){
 }
 function getTranslation(item){ return item.translations && (item.translations[currentLang] || item.translations.pl) || item; }
 function normalize(value){ return String(value || '').toLowerCase().trim(); }
-function slugCandidates(project){ return [project.slug, project.href, project.title, project.id, project.source_id].filter(Boolean).map(normalize); }
+function slugCandidates(project){
+  const values = [
+    project.slug,
+    project.canonicalSlug,
+    project.shareSlug,
+    project.websiteSlug,
+    project.urlSlug,
+    project.href,
+    project.url,
+    project.link,
+    project.title,
+    project.id,
+    project.source_id
+  ].filter(Boolean);
+
+  const out = [];
+  values.forEach(function(value){
+    const raw = String(value || '').trim();
+    const clean = normalize(raw);
+    if(clean) out.push(clean);
+
+    try{
+      const u = raw.startsWith('http') ? new URL(raw) : new URL(raw, SITE_ORIGIN);
+      const slugParam = u.searchParams.get('slug');
+      if(slugParam) out.push(normalize(decodeURIComponent(slugParam)));
+      const last = u.pathname.split('/').filter(Boolean).pop();
+      if(last) out.push(normalize(last.replace(/\.html$/i,'')));
+    }catch(e){
+      if(clean.includes('slug=')) out.push(normalize(clean.split('slug=').pop().split('&')[0]));
+      if(clean.includes('/')) out.push(normalize(clean.split('/').filter(Boolean).pop().replace(/\.html$/i,'')));
+    }
+  });
+
+  return Array.from(new Set(out));
+}
 function findProject(projects,slug){
   const req = normalize(slug);
   if(!req) return null;
