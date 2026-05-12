@@ -349,7 +349,7 @@ const FALLBACK_IMAGE = '/pl/new-developments/images/new-developments-costa-blanc
 const AGENT_AVATAR = '/avatar.png';
 const CONTACT = { phone:'+34604158859', whatsapp:'34604158859', email:'olga@a1invest4u.com' };
 const params = new URLSearchParams(window.location.search);
-const requestedSlug = params.get('slug') || 'bonalba-golf-hills';
+const requestedSlug = decodeURIComponent(params.get('slug') || '').trim();
 let currentLang = ['pl','es','en','ru'].includes(params.get('lang')) ? params.get('lang') : 'pl';
 const templateApp = document.getElementById('templateApp');
 
@@ -1054,9 +1054,14 @@ async function loadProjects(){
       if(item){ renderProperty(item); return; }
     }catch(error){ console.warn('JSON failed',url,error); }
   }
-  window.loadedProjects = FALLBACK_PROJECTS;
-  const fallback = findProject(FALLBACK_PROJECTS,requestedSlug) || FALLBACK_PROJECTS[0];
-  if(fallback) renderProperty(fallback); else renderNotFound();
+  if(requestedSlug){
+  renderNotFound();
+  return;
+}
+
+window.loadedProjects = FALLBACK_PROJECTS;
+const fallback = FALLBACK_PROJECTS[0];
+if(fallback) renderProperty(fallback); else renderNotFound();
 }
 window.handleBrokenImage = function(img){ if(img.dataset.fallbackApplied === 'true') return; img.dataset.fallbackApplied = 'true'; img.src = abs(FALLBACK_IMAGE); };
 
