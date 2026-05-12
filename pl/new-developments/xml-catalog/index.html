@@ -414,7 +414,21 @@ function normalize(value){ return String(value || '').toLowerCase().trim(); }
 function slugCandidates(project){ return [project.slug, project.href, project.title, project.id, project.source_id].filter(Boolean).map(normalize); }
 function findProject(projects,slug){
   const req = normalize(slug);
-  return projects.find(project => slugCandidates(project).some(candidate => candidate === req || candidate.includes(req) || req.includes(candidate)));
+  if(!req) return null;
+
+  // 1. exact slug match first
+  let exact = projects.find(project => {
+    const candidates = slugCandidates(project);
+    return candidates.some(candidate => candidate === req);
+  });
+
+  if(exact) return exact;
+
+  // 2. fallback relaxed match
+  return projects.find(project => {
+    const candidates = slugCandidates(project);
+    return candidates.some(candidate => candidate.includes(req) || req.includes(candidate));
+  }) || null;
 }
 function normalizeImageKey(src){
   return String(src || '')
