@@ -443,6 +443,8 @@ function getImages(item){
     item.media && item.media.mainImage,
     ...(item.galleryOrdered && Array.isArray(item.galleryOrdered.photos) ? item.galleryOrdered.photos : []),
     ...(item.media && Array.isArray(item.media.gallery) ? item.media.gallery : []),
+    ...(item.galleryOptimized && Array.isArray(item.galleryOptimized) ? item.galleryOptimized.map(function(x){ return typeof x === 'string' ? x : (x.src || x.url || x.href || x.image || ''); }) : []),
+    ...(item.media && Array.isArray(item.media.galleryOptimized) ? item.media.galleryOptimized.map(function(x){ return typeof x === 'string' ? x : (x.src || x.url || x.href || x.image || ''); }) : []),
     ...(Array.isArray(item.images) ? item.images : []),
     ...(Array.isArray(item.gallery) ? item.gallery : []),
     ...(Array.isArray(item.photos) ? item.photos : [])
@@ -715,20 +717,37 @@ function renderSmartBlocks(blocks){
   }).join('') + '</div>';
 }
 function buildSeoArticle(title, meta, price, paramsObj, delivery, item){
-  const basePrice = String(price || '').split('·')[0].trim();
-  const amenities = item.amenities && item.amenities.length ? item.amenities.join(', ') : '';
-  if(currentLang === 'en') return `${title} is a carefully selected property in Spain for buyers looking for lifestyle, comfort and solid investment potential. ${meta ? 'Location: ' + meta + '.' : ''} ${basePrice ? 'Price: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Bedrooms: ' + paramsObj.Sypialnie + '.' : ''} ${paramsObj['Łazienki'] ? 'Bathrooms: ' + paramsObj['Łazienki'] + '.' : ''} ${delivery ? 'Delivery: ' + delivery + '.' : ''} ${amenities ? 'Project features: ' + amenities + '.' : ''}
+  const amenities = uniqueClean(item.amenities || []).slice(0,4).join(', ');
 
-From an investment perspective, ${title} can be analysed through its location ${meta || ''}, budget ${basePrice || ''}, visual appeal and potential use as a second home, holiday rental or long-term value holding.`;
-  if(currentLang === 'es') return `${title} es una propiedad cuidadosamente seleccionada en España para quienes buscan estilo de vida, comodidad y potencial de inversión razonable. ${meta ? 'Ubicación: ' + meta + '.' : ''} ${basePrice ? 'Precio: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Dormitorios: ' + paramsObj.Sypialnie + '.' : ''} ${paramsObj['Łazienki'] ? 'Baños: ' + paramsObj['Łazienki'] + '.' : ''} ${delivery ? 'Entrega: ' + delivery + '.' : ''} ${amenities ? 'Características del proyecto: ' + amenities + '.' : ''}
+  if(currentLang === 'pl'){
+    return `${title} to nowoczesna inwestycja premium położona w rejonie ${meta || 'Costa Blanca'}. Projekt został przygotowany dla klientów, którzy szukają połączenia śródziemnomorskiego stylu życia, nowoczesnej architektury i komfortowej lokalizacji w Hiszpanii.
 
-Desde el punto de vista de inversión, ${title} se puede analizar por su ubicación ${meta || ''}, presupuesto ${basePrice || ''}, atractivo visual y posible uso como segunda residencia, alquiler vacacional o conservación de valor a largo plazo.`;
-  if(currentLang === 'ru') return `${title} — тщательно подобранная недвижимость в Испании для тех, кто ищет сочетание стиля жизни, комфорта и разумного инвестиционного потенциала. ${meta ? 'Локация: ' + meta + '.' : ''} ${basePrice ? 'Цена: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Спальни: ' + paramsObj.Sypialnie + '.' : ''} ${paramsObj['Łazienki'] ? 'Ванные: ' + paramsObj['Łazienki'] + '.' : ''} ${delivery ? 'Сдача: ' + delivery + '.' : ''} ${amenities ? 'Преимущества проекта: ' + amenities + '.' : ''}
+${amenities ? 'W projekcie dostępne są m.in.: ' + amenities + '.' : ''} ${delivery ? 'Planowane oddanie inwestycji: ' + delivery + '.' : ''}
 
-С инвестиционной точки зрения ${title} стоит анализировать через локацию ${meta || ''}, бюджет ${basePrice || ''}, визуальную привлекательность и возможность использования как second home, аренду для отдыха или долгосрочное сохранение стоимости.`;
-  return `${title} znajduje się w lokalizacji ${meta || 'Costa Blanca'} i reprezentuje nowoczesny styl nieruchomości premium w Hiszpanii. ${basePrice ? 'Zakres cenowy: ' + basePrice + '.' : ''} ${paramsObj.Sypialnie ? 'Układy: ' + paramsObj.Sypialnie + ' sypialnie.' : ''} ${delivery ? 'Planowany termin oddania: ' + delivery + '.' : ''} ${amenities ? 'Projekt oferuje: ' + amenities + '.' : ''}
+Nieruchomość może sprawdzić się zarówno jako second home, apartament wakacyjny, jak i długoterminowa inwestycja z potencjałem wynajmu sezonowego.`.trim();
+  }
 
-Inwestycja sprawdzi się zarówno jako second home na Costa Blanca, jak i nieruchomość pod wynajem wakacyjny lub długoterminowe utrzymanie wartości.`;
+  if(currentLang === 'en'){
+    return `${title} is a modern premium development located in ${meta || 'Costa Blanca'}. The project combines Mediterranean lifestyle, contemporary architecture and long-term appeal for international buyers looking for property in Spain.
+
+${amenities ? 'Project features include: ' + amenities + '.' : ''} ${delivery ? 'Estimated delivery: ' + delivery + '.' : ''}
+
+The property works well both as a second home and as a long-term lifestyle investment with holiday rental potential.`.trim();
+  }
+
+  if(currentLang === 'es'){
+    return `${title} es una promoción premium moderna ubicada en ${meta || 'Costa Blanca'}. El proyecto combina estilo de vida mediterráneo, arquitectura contemporánea y una ubicación atractiva en España.
+
+${amenities ? 'El proyecto incluye: ' + amenities + '.' : ''} ${delivery ? 'Entrega prevista: ' + delivery + '.' : ''}
+
+La propiedad puede funcionar tanto como segunda residencia como inversión a largo plazo con potencial de alquiler vacacional.`.trim();
+  }
+
+  return `${title} — современный премиальный проект в локации ${meta || 'Costa Blanca'}. Проект сочетает средиземноморский стиль жизни, современную архитектуру и комфортную инфраструктуру в Испании.
+
+${amenities ? 'В проекте предусмотрены: ' + amenities + '.' : ''} ${delivery ? 'Срок сдачи: ' + delivery + '.' : ''}
+
+Недвижимость подойдет как для собственного проживания, так и для долгосрочного владения или сезонной аренды.`.trim();
 }
 
 function buildData(item){
@@ -901,14 +920,14 @@ function renderProperty(item){
       + '<div class="hero-price-box luxury-price-card"><small>' + esc(data.ui.price_box_title) + '</small><div class="hero-price-range luxury-price-range"><span class="luxury-price-pill"><span class="luxury-price-label">' + getFromLabel() + '</span><span class="luxury-price-value">' + esc(data.p1 || data.price) + '</span></span>'
       + (data.p2 ? '<span class="luxury-price-arrow">→</span><span class="luxury-price-pill"><span class="luxury-price-label">' + (currentLang === 'ru' ? 'до' : currentLang === 'en' ? 'to' : currentLang === 'es' ? 'hasta' : 'do') + '</span><span class="luxury-price-value">' + esc(data.p2) + '</span></span>' : '')
       + '</div><span class="hero-price-note luxury-price-note" style="margin-top:-2px;display:block;">' + esc(translatePriceLine(data.price)) + '</span><span class="hero-price-meta">' + esc(data.meta) + '</span></div>'
-      + '</div></div><div class="gallery-grid">' + gallery + '</div>' + (galleryHiddenCount ? '<div class="gallery-more"><button class="gallery-more-btn" type="button" id="showMoreGallery">+ ' + galleryHiddenCount + ' więcej zdjęć</button></div>' : '') + '</section>'
+      + '</div></div><div class="gallery-grid">' + gallery + '</div>' + (galleryHiddenCount ? '<div class="gallery-more"><button class="gallery-more-btn" type="button" id="showMoreGallery">+ ' + galleryHiddenCount + ' ' + (currentLang === 'ru' ? 'открыть фото' : currentLang === 'en' ? 'more photos' : currentLang === 'es' ? 'más fotos' : 'więcej zdjęć') + '</button></div>' : '') + '</section>'
       + '<div class="content"><h1 class="hero-title">' + esc(data.title) + '</h1><div class="subtitle">' + esc(data.meta) + '</div><div class="price">' + esc(priceMain) + '</div><div class="luxury-param-line">' + paramsHtml + '</div></div>'
       + ((technicalHtml || specHtml) ? '<div class="info-row">' : '')
       + (technicalHtml ? '<section class="section-card"><h2>' + esc(t('keyInfo')) + '</h2><ul>' + technicalHtml + '</ul></section>' : '')
       + (specHtml ? '<section class="section-card"><h2>' + esc(data.ui.spec_title) + '</h2><ul>' + specHtml + '</ul></section>' : '')
       + ((technicalHtml || specHtml) ? '</div>' : '')
       + smartBlocksHtml
-      + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div>' + (plansHiddenCount ? '<div class="plans-more"><button class="plans-more-btn" type="button" id="showMorePlans">+ ' + plansHiddenCount + ' więcej planów</button></div>' : '') + '</section>' : '')
+      + (floorPlansHtml ? '<section class="section-card"><h2>' + esc(t('floorPlans')) + '</h2><div class="floorplans-grid">' + floorPlansHtml + '</div>' + (plansHiddenCount ? '<div class="plans-more"><button class="plans-more-btn" type="button" id="showMorePlans">+ ' + plansHiddenCount + ' ' + (currentLang === 'ru' ? 'открыть планы' : currentLang === 'en' ? 'more plans' : currentLang === 'es' ? 'más planos' : 'więcej planów') + '</button></div>' : '') + '</section>' : '')
       + (documentsHtml ? '<section class="section-card"><h2>' + esc(t('documents')) + '</h2><div class="documents-list">' + documentsHtml + '</div></section>' : '')
       + '<section class="section-card"><h2>' + esc(t('related')) + '</h2><div class="related-grid">' + relatedHtml + '</div></section>'
       + '<section class="seo-article"><h2>' + esc(t('seoTitle')) + '</h2>' + data.leads.map(function(text){return '<p class="lead">' + esc(text) + '</p>';}).join('') + '</section>'
