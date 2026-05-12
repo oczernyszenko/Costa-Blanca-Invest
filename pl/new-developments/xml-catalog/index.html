@@ -220,7 +220,7 @@ ul{margin:0;padding:0;list-style:none}
   .hero-media img{width:100%;height:auto;min-height:0;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
   .hero-overlay{position:static;display:grid;grid-template-columns:1fr;gap:16px;padding:18px 4px 2px;color:var(--text)}
   .hero-copy{max-width:none;color:var(--text);text-align:left}
-
+  
   .hero-display{max-width:none;margin-bottom:10px;color:var(--primary);font-size:clamp(32px,9vw,46px);line-height:1.02;text-shadow:none;letter-spacing:-.045em}
   .hero-sub{max-width:none;color:var(--text-soft);font-size:14px;line-height:1.55;text-shadow:none}
   .hero-price-box{width:100%;color:var(--primary);padding:0;text-align:left}
@@ -341,7 +341,17 @@ Only one primary H1 + one main metadata line kept to avoid duplicate semantic bl
   <script type="application/ld+json" id="schemaJson"></script>
 
   <script>
-const PROJECTS_URLS = ['/pl/new-developments/ultimate_properties_master_beautiful_multilang.json','./ultimate_properties_master_beautiful_multilang.json','ultimate_properties_master_beautiful_multilang.json','/pl/new-developments/projects.json','./projects.json','projects.json'];
+const PROJECTS_URLS = [
+  '/pl/new-developments/ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  './ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  'ultimate_properties_master_ultimate_translated_2026-05-12.json',
+  '/pl/new-developments/ultimate_properties_master_beautiful_multilang.json',
+  './ultimate_properties_master_beautiful_multilang.json',
+  'ultimate_properties_master_beautiful_multilang.json',
+  '/pl/new-developments/projects.json',
+  './projects.json',
+  'projects.json'
+];
 const SITE_ORIGIN = 'https://costa-blanca-invest.com';
 const FALLBACK_IMAGE = '/pl/new-developments/images/new-developments-costa-blanca.jpg';
 const AGENT_AVATAR = '/avatar.png';
@@ -414,9 +424,20 @@ function findProject(projects,slug){
   const req = normalize(slug);
   return projects.find(project => slugCandidates(project).some(candidate => candidate === req || candidate.includes(req) || req.includes(candidate)));
 }
+function normalizeImageKey(src){
+  return String(src || '')
+    .trim()
+    .split('?')[0]
+    .replace(/^https?:\/\//i,'')
+    .replace(/\/conversions\//i,'/')
+    .replace(/-(preview|medium|large|small)(?=\.(jpg|jpeg|png|webp)$)/i,'')
+    .toLowerCase();
+}
+
 function getImages(item){
   const raw = [
-    item.ogImage,
+    // IMPORTANT: do not use og/share images in the visible gallery.
+    // They are for Facebook/WhatsApp preview only and can duplicate the first photo visually.
     item.mainImage,
     item.image,
     item.media && item.media.mainImage,
@@ -426,11 +447,16 @@ function getImages(item){
     ...(Array.isArray(item.gallery) ? item.gallery : []),
     ...(Array.isArray(item.photos) ? item.photos : [])
   ];
+
   const seen = new Set();
   const out = [];
   raw.filter(Boolean).forEach(src => {
     const finalUrl = abs(src);
-    if(!seen.has(finalUrl)){ seen.add(finalUrl); out.push(finalUrl); }
+    const key = normalizeImageKey(finalUrl);
+    if(!seen.has(key)){
+      seen.add(key);
+      out.push(finalUrl);
+    }
   });
   return out.length ? out : [abs(FALLBACK_IMAGE)];
 }
@@ -590,31 +616,36 @@ function getTechnicalItems(item, paramsObj, price, meta, delivery){
 function getFloorPlans(item){
   const raw = [
     ...(item.galleryOrdered?.floorPlans || []),
+    ...(item.galleryOrdered?.plans || []),
     ...(item.media?.floorPlans || []),
+    ...(item.media?.plans || []),
     ...(item.floorPlansImages || []),
+    ...(item.floorPlanImages || []),
+    ...(item.floor_plan_images || []),
     ...(item.floorplans || []),
     ...(item.floorPlans || []),
     ...(item.floor_plans || []),
     ...(item.plans || []),
-    ...(item.layouts || [])
+    ...(item.layouts || []),
+    ...(item.unitPlans || []),
+    ...(item.projectPlans || [])
   ];
+
+  function extractSrc(plan){
+    if(!plan) return '';
+    if(typeof plan === 'string') return plan;
+    if(typeof plan !== 'object') return '';
+    return plan.src || plan.url || plan.href || plan.image || plan.file || plan.path || plan.link || plan.downloadUrl || plan.download_url || plan.fullUrl || plan.full_url || plan.original || plan.originalUrl || plan.original_url || plan.file?.url || plan.file?.src || plan.image?.url || plan.image?.src || '';
+  }
 
   const seen = new Set();
   return raw.map(function(plan,index){
-    if(!plan) return null;
-    if(typeof plan === 'string'){
-      return {title:t('plan') + ' ' + (index + 1), src:plan};
-    }
-    if(typeof plan === 'object'){
-      const src = plan.src || plan.url || plan.href || plan.image || plan.file || plan.path || '';
-      if(!src) return null;
-      return {
-        title:plan.title || plan.name || plan.label || t('plan') + ' ' + (index + 1),
-        src:src,
-        type:plan.type || ''
-      };
-    }
-    return null;
+    const src = extractSrc(plan);
+    if(!src) return null;
+    const title = typeof plan === 'object'
+      ? (plan.title || plan.name || plan.label || plan.alt || t('plan') + ' ' + (index + 1))
+      : t('plan') + ' ' + (index + 1);
+    return {title:title, src:src, type:typeof plan === 'object' ? (plan.type || '') : ''};
   }).filter(Boolean).filter(function(plan){
     const key = normalize(plan.src);
     if(seen.has(key)) return false;
