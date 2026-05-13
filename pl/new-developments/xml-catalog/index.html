@@ -698,21 +698,77 @@ h1 {
 }
 
 
-/* FINAL SEO DESCRIPTION — no card, no title */
-.curated-seo-description{
-  display:block;
-  max-width:980px;
-  margin:34px auto 0;
-  padding:0;
+
+/* PRODUCTION CLEAN PATCH 2026-05-13: remove old blocks, lighter background, faster render */
+body{
+  background:#f7f3ee!important;
+}
+body::before,
+body::after,
+.page::before,
+.page::after{
+  display:none!important;
+  content:none!important;
+}
+.seo-description{
+  max-width:1080px;
+  margin:34px auto 0!important;
+  padding:0!important;
   background:transparent!important;
   border:0!important;
   box-shadow:none!important;
-  color:var(--text-soft);
-  font-size:18px;
-  line-height:1.9;
-  text-align:left;
+  border-radius:0!important;
+  color:var(--text-soft)!important;
+  font-size:clamp(17px,1.6vw,22px)!important;
+  line-height:1.9!important;
+  text-align:left!important;
 }
-@media(max-width:768px){.curated-seo-description{margin-top:24px;font-size:15px;line-height:1.78}}
+.luxury-clean-section .curated-spec-list{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:14px!important;
+  margin:0!important;
+  padding:0!important;
+}
+.curated-spec-row{
+  padding:20px!important;
+  border-radius:20px!important;
+  background:rgba(255,255,255,.74)!important;
+  border:1px solid rgba(217,181,109,.16)!important;
+  box-shadow:0 10px 24px rgba(15,23,42,.045)!important;
+}
+.curated-spec-row .curated-label,
+.curated-spec-row .curated-value{
+  display:block!important;
+}
+.curated-spec-row .curated-label{
+  margin-bottom:8px;
+  color:var(--muted)!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.curated-spec-row .curated-value{
+  color:var(--primary)!important;
+  font-size:15px!important;
+  font-weight:800!important;
+  line-height:1.45!important;
+}
+.luxury-price-card::after,
+.luxury-price-pill,
+.luxury-price-arrow{
+  animation:none!important;
+}
+.hero-media img,
+.gallery-item img{
+  transition:transform .35s ease!important;
+}
+@media(max-width:768px){
+  .seo-description{font-size:16px!important;line-height:1.75!important;margin-top:26px!important;}
+  .luxury-clean-section .curated-spec-list{grid-template-columns:1fr!important;gap:10px!important;}
+  .curated-spec-row{padding:16px!important;border-radius:18px!important;}
+}
 
 </style>
 </head>
@@ -1901,15 +1957,17 @@ function sectionTitle(key){
     }
 
     function finalDescription(item, data){
-      return (
-        item.beautifulMultilang?.[currentLang]?.premiumDescription ||
-        item.translations?.[currentLang]?.premiumDescription ||
-        item[`premiumUniqueDescription${currentLang.toUpperCase()}`] ||
-        item.premiumUniqueDescriptionRu ||
-        item.premiumUniqueDescription ||
-        data.desc ||
+      const value = (
+        item.editorialSeoDescription?.[currentLang] ||
+        item.seoDescriptionMultilang?.[currentLang] ||
+        item.translations?.[currentLang]?.pageDescription ||
+        item.seoFinalMultilang?.[currentLang]?.description ||
+        item.seoFinal?.seoDescription ||
+        item.seoDescription ||
         ''
       );
+      if(/starannie wybrana|warto analizować|selected Spanish property|from an investment perspective|desde el punto de vista|стоит рассматривать как объект|выразительный объект недвижимости/i.test(String(value || ''))) return '';
+      return value;
     }
 
     function finalAmenities(item){
@@ -1974,30 +2032,97 @@ function sectionTitle(key){
       </section>`;
     }
 
+    function finalSpecData(item){
+      const byLang = item?.specificationMultilang?.[currentLang] || item?.specificationMultilang?.pl || [];
+      if(Array.isArray(byLang) && byLang.length){
+        return byLang.map(x => ({label: x.label || x.key || '', value: x.value || ''})).filter(x => x.label || x.value).slice(0, 10);
+      }
+      const fallback = [];
+      const add = (label, value) => { if(value) fallback.push({label, value}); };
+      if(currentLang === 'ru'){
+        add('Отделка', 'чистовая отделка согласно спецификации застройщика');
+        add('Кухня', 'встроенная кухня или подготовка под кухню в зависимости от объекта');
+        add('Санузел', 'оборудованный санузел согласно стандарту проекта');
+        add('Комфорт', 'кондиционирование или предустановка согласно документации');
+        add('Инженерия', 'подключение к инженерным сетям здания');
+      } else if(currentLang === 'es'){
+        add('Acabados', 'acabados según la memoria de calidades del promotor');
+        add('Cocina', 'cocina preparada o equipada según la unidad');
+        add('Baño', 'baño equipado según el estándar del proyecto');
+        add('Confort', 'climatización o preinstalación según documentación');
+        add('Infraestructura', 'conexión a suministros y zonas comunes del edificio');
+      } else if(currentLang === 'en'){
+        add('Finishes', 'finishes according to the developer specification');
+        add('Kitchen', 'kitchen prepared or equipped depending on the unit');
+        add('Bathroom', 'bathroom fitted according to the project standard');
+        add('Comfort', 'air conditioning or pre-installation according to documentation');
+        add('Infrastructure', 'connection to utilities and building common areas');
+      } else {
+        add('Wykończenie', 'wykończenie zgodnie ze specyfikacją dewelopera');
+        add('Kuchnia', 'kuchnia przygotowana lub wyposażona zgodnie z ofertą jednostki');
+        add('Łazienka', 'łazienka z wyposażeniem według standardu projektu');
+        add('Komfort', 'klimatyzacja lub przygotowanie instalacji zgodnie z dokumentacją');
+        add('Infrastruktura', 'dostęp do mediów i części wspólnych budynku');
+      }
+      return fallback;
+    }
+
+    function finalKeyFactsData(item, data){
+      const fromJson = item?.keyFactsMultilang?.[currentLang] || item?.keyFactsMultilang?.pl || [];
+      if(Array.isArray(fromJson) && fromJson.length){
+        return fromJson.map(x => ({label: x.label || x.key || '', value: x.value || ''})).filter(x => x.label || x.value).slice(0, 8);
+      }
+      const specs = finalSpecs(item);
+      if(specs.length) return specs.slice(0, 8);
+      const fallback = [];
+      const add = (label, value) => { if(value) fallback.push({label, value}); };
+      add(currentLang === 'ru' ? 'Локация' : currentLang === 'es' ? 'Ubicación' : currentLang === 'en' ? 'Location' : 'Lokalizacja', data.meta);
+      add(currentLang === 'ru' ? 'Цена' : currentLang === 'es' ? 'Precio' : currentLang === 'en' ? 'Price' : 'Cena', data.price);
+      add(currentLang === 'ru' ? 'Тип' : currentLang === 'es' ? 'Tipo' : currentLang === 'en' ? 'Type' : 'Typ', data.chip);
+      return fallback;
+    }
+
+    function finalCleanSeoDescription(item, data){
+      return (
+        item?.seoDescriptionMultilang?.[currentLang] ||
+        item?.editorialSeoDescription?.[currentLang] ||
+        item?.translations?.[currentLang]?.pageDescription ||
+        item?.translations?.[currentLang]?.premiumDescription ||
+        item?.beautifulMultilang?.[currentLang]?.premiumDescription ||
+        item?.seoFinalMultilang?.[currentLang]?.description ||
+        item?.seoFinal?.seoDescription ||
+        data?.seoDescription ||
+        data?.desc ||
+        ''
+      );
+    }
+
+    function finalCardsGrid(items){
+      if(!items || !items.length) return '';
+      return `<div class="curated-spec-list">${items.map(item => `
+        <div class="curated-spec-row">
+          <span class="curated-label">${esc(item.label)}</span>
+          <span class="curated-value">${esc(item.value)}</span>
+        </div>`).join('')}</div>`;
+    }
+
     function finalCuratedRender(item, data){
       item = item || {};
       data = data || {};
-      const desc = finalDescription(item, data);
-      const specs = finalSpecs(item);
-      const specsTitle = currentLang === 'ru' ? 'Ключевые параметры' : currentLang === 'en' ? 'Key details' : currentLang === 'es' ? 'Datos principales' : 'Kluczowe parametry';
+      const desc = finalCleanSeoDescription(item, data);
+      const keyFacts = finalKeyFactsData(item, data);
+      const spec = finalSpecData(item);
+      const keyFactsTitle = currentLang === 'ru' ? 'Ключевые параметры' : currentLang === 'en' ? 'Key facts' : currentLang === 'es' ? 'Datos principales' : 'Kluczowe parametry';
+      const specTitle = currentLang === 'ru' ? 'Что включено' : currentLang === 'en' ? 'What is included' : currentLang === 'es' ? 'Qué incluye' : 'Co jest w cenie';
 
       return `
-        ${desc ? `<p class="seo-description curated-seo-description">${esc(desc)}</p>` : ''}
-
-        ${specs.length ? `<section class="curated-luxury-section">
-          <div class="curated-luxury-grid">
-            <div class="curated-luxury-card">
-              <h3>${esc(specsTitle)}</h3>
-              ${finalList(specs)}
-            </div>
-          </div>
-        </section>` : ''}
-
+        ${desc ? `<p class="seo-description">${esc(desc)}</p>` : ''}
+        ${keyFacts.length ? `<section class="section-card luxury-clean-section"><h2>${esc(keyFactsTitle)}</h2>${finalCardsGrid(keyFacts)}</section>` : ''}
+        ${spec.length ? `<section class="section-card luxury-clean-section"><h2>${esc(specTitle)}</h2>${finalCardsGrid(spec)}</section>` : ''}
         ${finalFloorPlans(data.floorPlans)}
         ${finalDocuments(data.documents)}
       `;
     }
-
 
     function cleanPropertyTitle(value){
       return String(value || '')
@@ -2045,7 +2170,7 @@ function sectionTitle(key){
       const title=x.page_h1 || x.hero_title || x.title || item.h1 || item.title || item.slug || '';
       const meta=localizeValue(x.subtitle || x.meta || item.meta || safeLocation(item.location) || item.city || item?.location?.address || item?.params?.Lokalizacja || '', 'Lokalizacja');
       const price=localizeValue(x.price_range || x.price || item.price || item?.pricing?.priceText || '', 'Cena');
-      const rawDesc=beautiful.premiumDescription || seoDescription || x.hero_subtext || x.desc || x.meta_description || item.premiumUniqueDescription || item.premiumUniqueDescriptionRu || '';
+      const rawDesc=x.hero_subtext || x.desc || item.desc || x.meta_description || seoDescription || '';
       const desc=rawDesc || fallbackDesc(item,title,meta,price);
       const [p1,p2]=splitPrice(price);
       const paramsObj=getUnifiedParams(item, meta, price);
@@ -2064,9 +2189,21 @@ function sectionTitle(key){
       const translatedLeads = arr(x.lead,[]).filter(Boolean);
       const fallbackLeads = arr(item.lead,[]).filter(Boolean);
       const baseLeads = translatedLeads.length ? translatedLeads : fallbackLeads;
+      const isAutoAiText = (value) => /starannie wybrana|warto analizować|selected Spanish property|from an investment perspective|desde el punto de vista|стоит рассматривать как объект|выразительный объект недвижимости/i.test(String(value || ''));
+      const leadKey = (value) => normalize(String(value || '').replace(/\s+/g,' '));
       const leads = [];
-      [beautiful.premiumDescription, ...baseLeads, seoDescription2, desc].filter(Boolean).forEach(text => {
-        if (!leads.includes(text) && leads.length < 3) leads.push(text);
+      const seenLeads = new Set();
+      [
+        ...baseLeads,
+        x.pageDescription,
+        item.editorialSeoDescription?.[currentLang],
+        item.seoDescriptionMultilang?.[currentLang],
+        desc
+      ].filter(Boolean).forEach(value => {
+        const key = leadKey(value);
+        if(!key || seenLeads.has(key) || isAutoAiText(value)) return;
+        seenLeads.add(key);
+        if(leads.length < 2) leads.push(value);
       });
 
       const defaultWhy = [
@@ -2158,7 +2295,7 @@ function sectionTitle(key){
       const gallery=data.images.map((src,index)=>`<div class="gallery-item" data-media-src="${esc(src)}"><img src="${esc(src)}" alt="${esc(data.title)} ${index+1}" loading="lazy" decoding="async" fetchpriority="low" decoding="async" sizes="(max-width:480px) 100vw, (max-width:768px) 50vw, (max-width:1100px) 33vw, 25vw" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`).join('');
       const floorPlansHtml=data.floorPlans.map((plan,index)=>plan.src?`<div class="gallery-item" data-media-src="${esc(plan.src)}"><img src="${esc(plan.src)}" alt="${esc(plan.title || data.title + ' plan ' + (index+1))}" loading="lazy" decoding="async" fetchpriority="low" decoding="async" sizes="(max-width:480px) 100vw, (max-width:768px) 50vw, (max-width:1100px) 33vw, 25vw" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`:`<div class="why-item floor-plan-card"><div><strong>${esc(plan.title || 'Plan')}</strong><p>${esc(plan.note || '')}</p></div></div>`).join('');
       const documentsHtml=data.documents.map(doc=>`<li>${doc.href?`<a href="${esc(doc.href)}" target="_blank" rel="noopener noreferrer">${esc(doc.title)}</a>`:esc(doc.title)}</li>`).join('');
-      const curatedLuxuryHtml=renderCuratedLuxury(item,data);
+      const curatedLuxuryHtml=finalCuratedRender(item,data);
       const featuresHtml='';
       const fullSectionsHtml='';
       const sourceLinksHtml='';
@@ -2215,6 +2352,7 @@ function sectionTitle(key){
           <div class="price">${esc(data.price)}</div>
           <div class="price-soft">Costa Blanca Invest</div>
           <div class="luxury-param-line">${paramsHtml}</div>
+          ${data.leads.map(text=>`<p class="lead">${esc(text)}</p>`).join('')}
         </div>
         ${curatedLuxuryHtml}
         ${featuresHtml}
