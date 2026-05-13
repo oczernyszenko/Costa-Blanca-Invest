@@ -698,21 +698,73 @@ h1 {
 }
 
 
-/* FINAL SEO DESCRIPTION — no card, no title */
-.curated-seo-description{
-  display:block;
-  max-width:980px;
-  margin:34px auto 0;
-  padding:0;
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  color:var(--text-soft);
-  font-size:18px;
-  line-height:1.9;
-  text-align:left;
+
+/* PRODUCTION CLEAN PATCH 2026-05-13
+   Removes page-wide beige/radial fill, decorative stripes and heavy shine.
+   Keeps share, OG, JSON logic, gallery/lightbox, WhatsApp and mobile logic intact. */
+html,
+body,
+.page {
+  background: #ffffff !important;
+  background-image: none !important;
 }
-@media(max-width:768px){.curated-seo-description{margin-top:24px;font-size:15px;line-height:1.78}}
+
+body::before,
+body::after,
+.page::before,
+.page::after,
+.container::before,
+.container::after,
+.section-card::before,
+.section-card::after,
+.cta-box::before,
+.cta-box::after,
+.luxury-price-card::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+  background: none !important;
+}
+
+.hero-card,
+.section-card,
+.cta-box,
+.contact-box {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+.section-card h2::after,
+.cta-box h2::after {
+  display: none !important;
+  content: none !important;
+}
+
+.seo-description-editorial {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.82;
+  text-align: left;
+}
+
+.clean-keyfacts-section,
+.clean-specification-section {
+  margin-top: 32px !important;
+}
+
+@media(max-width:768px){
+  .seo-description-editorial{
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.72;
+  }
+}
 
 </style>
 </head>
@@ -1901,12 +1953,16 @@ function sectionTitle(key){
     }
 
     function finalDescription(item, data){
+      const lang = currentLang || 'pl';
       return (
-        item.beautifulMultilang?.[currentLang]?.premiumDescription ||
-        item.translations?.[currentLang]?.premiumDescription ||
-        item[`premiumUniqueDescription${currentLang.toUpperCase()}`] ||
-        item.premiumUniqueDescriptionRu ||
-        item.premiumUniqueDescription ||
+        item.editorialSeoDescription?.[lang] ||
+        item.seoDescriptionMultilang?.[lang] ||
+        item.translations?.[lang]?.pageDescription ||
+        item.translations?.[lang]?.premiumDescription ||
+        item.beautifulMultilang?.[lang]?.premiumDescription ||
+        item.seoFinalMultilang?.[lang]?.description ||
+        item.seoFinal?.seoDescription ||
+        item.seoDescription ||
         data.desc ||
         ''
       );
@@ -1977,20 +2033,40 @@ function sectionTitle(key){
     function finalCuratedRender(item, data){
       item = item || {};
       data = data || {};
+      const lang = currentLang || 'pl';
       const desc = finalDescription(item, data);
-      const specs = finalSpecs(item);
-      const specsTitle = currentLang === 'ru' ? 'Ключевые параметры' : currentLang === 'en' ? 'Key details' : currentLang === 'es' ? 'Datos principales' : 'Kluczowe parametry';
+
+      const keyTitle = lang === 'ru' ? 'Ключевые параметры' : lang === 'en' ? 'Key facts' : lang === 'es' ? 'Datos clave' : 'Kluczowe parametry';
+      const specTitle = lang === 'ru' ? 'Что включено' : lang === 'en' ? 'What is included' : lang === 'es' ? 'Qué está incluido' : 'Co zawiera cena';
+
+      const normalizeEntry = (entry) => {
+        if(!entry) return null;
+        if(typeof entry === 'string') return {label:'', value:entry};
+        return {
+          label: entry.label || entry.title || entry.key || '',
+          value: entry.value || entry.text || entry.description || ''
+        };
+      };
+
+      const fromMultilang = (field) => arr(item?.[field]?.[lang], []).map(normalizeEntry).filter(x => x && (x.label || x.value));
+      const keyFacts = fromMultilang('keyFactsMultilang');
+      const specs = fromMultilang('specificationMultilang');
+      const fallbackSpecs = finalSpecs(item);
+
+      const keyFactsHtml = (keyFacts.length ? keyFacts : fallbackSpecs).filter(x => x && (x.label || x.value));
+      const specsHtml = specs.filter(x => x && (x.label || x.value));
 
       return `
-        ${desc ? `<p class="seo-description curated-seo-description">${esc(desc)}</p>` : ''}
+        ${desc ? `<p class="seo-description seo-description-editorial">${esc(desc)}</p>` : ''}
 
-        ${specs.length ? `<section class="curated-luxury-section">
-          <div class="curated-luxury-grid">
-            <div class="curated-luxury-card">
-              <h3>${esc(specsTitle)}</h3>
-              ${finalList(specs)}
-            </div>
-          </div>
+        ${keyFactsHtml.length ? `<section class="section-card clean-keyfacts-section">
+          <h2>${esc(keyTitle)}</h2>
+          ${finalList(keyFactsHtml)}
+        </section>` : ''}
+
+        ${specsHtml.length ? `<section class="section-card clean-specification-section">
+          <h2>${esc(specTitle)}</h2>
+          ${finalList(specsHtml)}
         </section>` : ''}
 
         ${finalFloorPlans(data.floorPlans)}
@@ -2158,7 +2234,7 @@ function sectionTitle(key){
       const gallery=data.images.map((src,index)=>`<div class="gallery-item" data-media-src="${esc(src)}"><img src="${esc(src)}" alt="${esc(data.title)} ${index+1}" loading="lazy" decoding="async" fetchpriority="low" decoding="async" sizes="(max-width:480px) 100vw, (max-width:768px) 50vw, (max-width:1100px) 33vw, 25vw" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`).join('');
       const floorPlansHtml=data.floorPlans.map((plan,index)=>plan.src?`<div class="gallery-item" data-media-src="${esc(plan.src)}"><img src="${esc(plan.src)}" alt="${esc(plan.title || data.title + ' plan ' + (index+1))}" loading="lazy" decoding="async" fetchpriority="low" decoding="async" sizes="(max-width:480px) 100vw, (max-width:768px) 50vw, (max-width:1100px) 33vw, 25vw" onerror="window.handleBrokenImage&&window.handleBrokenImage(this)"></div>`:`<div class="why-item floor-plan-card"><div><strong>${esc(plan.title || 'Plan')}</strong><p>${esc(plan.note || '')}</p></div></div>`).join('');
       const documentsHtml=data.documents.map(doc=>`<li>${doc.href?`<a href="${esc(doc.href)}" target="_blank" rel="noopener noreferrer">${esc(doc.title)}</a>`:esc(doc.title)}</li>`).join('');
-      const curatedLuxuryHtml=renderCuratedLuxury(item,data);
+      const curatedLuxuryHtml=finalCuratedRender(item,data);
       const featuresHtml='';
       const fullSectionsHtml='';
       const sourceLinksHtml='';
@@ -2215,6 +2291,7 @@ function sectionTitle(key){
           <div class="price">${esc(data.price)}</div>
           <div class="price-soft">Costa Blanca Invest</div>
           <div class="luxury-param-line">${paramsHtml}</div>
+          ${data.leads.map(text=>`<p class="lead">${esc(text)}</p>`).join('')}
         </div>
         ${curatedLuxuryHtml}
         ${featuresHtml}
