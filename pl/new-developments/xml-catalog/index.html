@@ -725,14 +725,6 @@ body{background:#fff!important;}
 @media(max-width:768px){.hero-overlay{gap:14px}.hero-price-box{min-width:0;width:100%;max-width:100%}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}.curated-description{font-size:15px;line-height:1.78}.curated-spec-list li{grid-template-columns:1fr;gap:4px}.section-card,.cta-box{padding:22px}}
 @media(max-width:560px){.gallery-grid{grid-template-columns:1fr!important}.gallery-item{aspect-ratio:1.08/1!important;border-radius:22px!important}.hero-media,.hero-media img{min-height:300px!important}.section-card,.cta-box{border-radius:20px;padding:18px}.curated-luxury-card{border-radius:22px;padding:18px}.curated-value,.curated-label{font-size:13px}}
 
-
-
-/* 2026-05-13 PRODUCTION MIDDLE PATCH — original hero/share/contact kept */
-.curated-luxury-grid{grid-template-columns:1fr!important;}
-.curated-luxury-card{max-width:980px;margin:0 auto;width:100%;}
-.curated-description{display:none!important;}
-.luxury-param-line{display:none!important;}
-
 </style>
 </head>
 <body>
@@ -1847,28 +1839,37 @@ function sectionTitle(key){
         if(value) list.push({label: finalLabel(key), value: localizeValue(String(value))});
       };
 
+      /* Delivery first */
+      add('delivery', finalFirstUseful(item.deliveryYear, item.construction?.deliveryYear, item.year_build, item.completion_date, item.metainmoVerified?.deliveryYear));
       add('area', finalArea(item));
       add('bedrooms', finalFirstUseful(item.bedroomsRange, item.bedrooms, item.specs?.bedrooms, item.metainmoVerified?.bedroomsRange));
       add('bathrooms', finalFirstUseful(item.bathrooms, item.specs?.bathrooms));
       add('terrace', finalFirstUseful(item.terrace, item.terraceArea, item.specs?.terraceArea));
       add('parking', finalFirstUseful(item.parking, item.specs?.parking, item.garage_included));
-      add('delivery', finalFirstUseful(item.deliveryYear, item.construction?.deliveryYear, item.year_build, item.completion_date, item.metainmoVerified?.deliveryYear));
-      add('beach', finalFirstUseful(item.location?.distanceToBeach, item.distance_beach, item.metainmoVerified?.distanceToBeach));
+      add('pool', finalFirstUseful(item.pool, item.specs?.pool));
+      add('beach', finalFirstUseful(item.location?.distanceToBeach, item.location?.distanceToSea, item.distance_beach, item.metainmoVerified?.distanceToBeach));
       add('priceM2', finalFirstUseful(item.pricePerM2FromText, item.metainmoVerified?.pricePerM2FromText));
 
-      return list.filter((x, i, a) => a.findIndex(y => y.label === x.label && y.value === x.value) === i).slice(0, 10);
+      /* Fallback: if specs are empty in JSON, use existing keyFactsMultilang */
+      const facts = item.keyFactsMultilang?.[currentLang] || item.keyFactsMultilang?.pl || [];
+      facts.forEach(fact => {
+        const label = fact?.label || fact?.key || '';
+        const value = fact?.value || '';
+        if(label && value) list.push({label, value: localizeValue(String(value))});
+      });
+
+      return list
+        .filter(x => x.label && x.value)
+        .filter((x, i, a) => a.findIndex(y => normalize(y.label) === normalize(x.label) && normalize(y.value) === normalize(x.value)) === i)
+        .slice(0, 10);
     }
 
     function finalDescription(item, data){
+      /* Render only ONE long SEO article on the public page.
+         Duplicate reserve fields stay in JSON, but are not printed here. */
       const candidates = [
-        item.editorialSeoDescription?.[currentLang],
-        item.seoDescriptionMultilang?.[currentLang],
         item.translations?.[currentLang]?.pageDescription,
-        item.translations?.pl?.pageDescription,
-        item.contentEnhanced?.seoArticle?.[currentLang],
-        item.contentEnhanced?.seoArticle,
-        data.seoDescription2,
-        data.seoDescription
+        item.translations?.pl?.pageDescription
       ];
       const bad = /(starannie wybrana nieruchomość|warto analizować przez pryzmat|Atuty projektu|Cena:\s|Lokalizacja:\s)/i;
       return candidates
@@ -1941,16 +1942,22 @@ function sectionTitle(key){
     function finalCuratedRender(item, data){
       item = item || {};
       data = data || {};
-      const specs = getCleanKeyFacts(item, data.meta, data.price);
+      const desc = finalDescription(item, data);
+      const specs = finalSpecs(item);
+      const aboutTitle = currentLang === 'ru' ? 'О проекте' : currentLang === 'en' ? 'About the development' : currentLang === 'es' ? 'Sobre el proyecto' : 'O inwestycji';
       const specsTitle = currentLang === 'ru' ? 'Ключевые параметры' : currentLang === 'en' ? 'Key details' : currentLang === 'es' ? 'Datos principales' : 'Kluczowe parametry';
 
-      const main = specs.length ? `
+      const main = (desc || specs.length) ? `
         <section class="curated-luxury-section">
           <div class="curated-luxury-grid">
-            <div class="curated-luxury-card">
+            ${desc ? `<div class="curated-luxury-card">
+              <h2>${esc(aboutTitle)}</h2>
+              <p class="curated-description">${esc(desc)}</p>
+            </div>` : ''}
+            ${specs.length ? `<div class="curated-luxury-card">
               <h3>${esc(specsTitle)}</h3>
               ${finalList(specs)}
-            </div>
+            </div>` : ''}
           </div>
         </section>` : '';
 
@@ -1991,56 +1998,6 @@ function sectionTitle(key){
       return `<div class="property-code-small">${esc(label)}: ${esc(code)}</div>`;
     }
 
-
-    function cleanShortIntro(item, x, title, meta, price){
-      const intro = firstUseful(
-        x.shortIntro,
-        item.shortIntro?.[currentLang],
-        item.shortIntro?.pl,
-        x.hero_subtext,
-        x.desc,
-        item.desc
-      );
-      const bad = /(starannie wybrana nieruchomość|warto analizować przez pryzmat|Atuty projektu|Cena:\s|Lokalizacja:\s)/i;
-      if(intro && !bad.test(String(intro))) return String(intro).trim();
-      return fallbackDesc(item,title,meta,price);
-    }
-
-    function getCleanKeyFacts(item, meta, price){
-      const specs = item.specs || {};
-      const construction = item.construction || {};
-      const translated = item.keyFactsMultilang?.[currentLang] || item.keyFactsMultilang?.pl || [];
-      const rows = [];
-      const add = (key, label, value) => {
-        if(value !== undefined && value !== null && String(value).trim() !== ''){
-          rows.push({key, label, value:String(value).trim()});
-        }
-      };
-      const label = (key) => translateParamLabel(key);
-      add('delivery', label('delivery'), firstUseful(construction.deliveryDate, construction.deliveryYear, item.deliveryDate, item.deliveryYear));
-      add('location', label('location'), meta || item.location?.address);
-      add('price', label('price'), price || item.pricing?.priceText);
-      add('area', label('area'), firstUseful(item.propertyAreaRange, item.builtAreaText, item.area, specs.builtArea, item.metainmoVerified?.propertyAreaRange, item.metainmoVerified?.builtAreaText));
-      add('bedrooms', label('bedrooms'), firstUseful(item.bedroomsRange, item.bedrooms, specs.bedrooms, item.metainmoVerified?.bedroomsRange, item.metainmoVerified?.bedrooms));
-      add('bathrooms', label('bathrooms'), firstUseful(item.bathrooms, specs.bathrooms, item.metainmoVerified?.bathrooms));
-      add('type', label('type'), firstUseful(item.type, specs.propertyType, item.chip));
-      add('terrace', label('terrace'), firstUseful(item.terrace, item.terraceArea, specs.terraceArea));
-      const map = new Map(rows.map(r => [getParamKey(r.key || r.label), r]));
-      if(Array.isArray(translated)){
-        translated.forEach(f => {
-          if(!f || !f.value) return;
-          const key = getParamKey(f.key || f.label || '');
-          if(!map.has(key)) map.set(key, {key:f.key || key, label:f.label || translateParamLabel(key), value:f.value});
-        });
-      }
-      const order = ['delivery','location','price','area','bedrooms','bathrooms','type','terrace'];
-      return Array.from(map.values()).sort((a,b)=>{
-        const ai = order.indexOf(getParamKey(a.key || a.label));
-        const bi = order.indexOf(getParamKey(b.key || b.label));
-        return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
-      });
-    }
-
     function buildData(item){
       const x=getTranslation(item);
       const ui=UI[currentLang]||UI.pl;
@@ -2054,7 +2011,8 @@ function sectionTitle(key){
       const title=x.page_h1 || x.hero_title || x.title || item.h1 || item.title || item.slug || '';
       const meta=localizeValue(x.subtitle || x.meta || item.meta || safeLocation(item.location) || item.city || item?.location?.address || item?.params?.Lokalizacja || '', 'Lokalizacja');
       const price=localizeValue(x.price_range || x.price || item.price || item?.pricing?.priceText || '', 'Cena');
-      const desc=cleanShortIntro(item, x, title, meta, price);
+      const rawDesc=x.shortIntro || item.shortIntro?.[currentLang] || x.hero_subtext || x.desc || item.contentEnhanced?.shortDescription || item.desc || x.meta_description || seoDescription || '';
+      const desc=rawDesc || fallbackDesc(item,title,meta,price);
       const [p1,p2]=splitPrice(price);
       const paramsObj=getUnifiedParams(item, meta, price);
 
@@ -2069,7 +2027,14 @@ function sectionTitle(key){
         .slice(0,6)
         .map(([k,v]) => [translateParamLabel(k), localizeValue(v,k)]);
 
-      const leads = desc ? [desc] : [];
+      const translatedLeads = arr(x.lead,[]).filter(Boolean);
+      const fallbackLeads = arr(item.lead,[]).filter(Boolean);
+      const baseLeads = translatedLeads.length ? translatedLeads : fallbackLeads;
+      const leads = [];
+      [...baseLeads, desc].filter(Boolean).forEach(text => {
+        const cleanText = String(text || '').trim();
+        if (cleanText && !leads.includes(cleanText) && leads.length < 1) leads.push(cleanText);
+      });
 
       const defaultWhy = [
         {title: ui.params_title, text: meta || 'Costa Blanca'},
@@ -2082,7 +2047,10 @@ function sectionTitle(key){
       const defaultSpecs = [
         `${translateParamLabel('Cena')}: ${price}.`,
         `${translateParamLabel('Lokalizacja')}: ${meta}.`,
-        ...paramEntries.map(([label,value]) => `${label}: ${value}.`)
+        ...paramEntries.map(([label,value]) => `${label}: ${value}.`),
+        seoDescription2 || desc,
+        ui.contact_intro,
+        'Costa Blanca Invest'
       ].filter(Boolean);
       const specs = defaultSpecs.filter((value, index, self) => self.indexOf(value) === index).slice(0,8);
 
